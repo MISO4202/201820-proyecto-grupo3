@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="blockchain" nsURI="blockchain" nsPrefix="www.example.org/blockchain">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="blockchain" nsURI="http://www.example.org/blockchain" nsPrefix="blockchain">
   <eClassifiers xsi:type="ecore:EClass" name="Aplicacion">
     <eStructuralFeatures xsi:type="ecore:EReference" name="smartcontract" upperBound="-1"
         eType="#//SmartContract" containment="true"/>
@@ -12,6 +12,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Atributo">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoDato" eType="#//Dato"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SmartContract">
     <eStructuralFeatures xsi:type="ecore:EReference" name="contratos" upperBound="-1"
@@ -21,6 +22,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="estado" lowerBound="1"
         upperBound="-1" eType="#//Estado" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="direccion" upperBound="-1"
+        eType="#//Direccion" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Operacion">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parametros" upperBound="-1"
