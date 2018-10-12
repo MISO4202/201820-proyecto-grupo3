@@ -1,0 +1,68 @@
+//Correr las validaciones
+"SmartContract únicos ".print();
+validarSmartContractUnicos().println();
+"Entidades únicas ".print();
+validarEntidadesUnicas().println();
+
+"Validaciones SmartContracts".println();
+for(sc in SmartContract.all)
+{
+	sc.name.println();
+	"Operaciones únicas ".print();
+	sc.validarOperacionesUnicas().println();
+	"Estados únicos ".print();
+	sc.validarEstadosUnicos().println();
+	"Al menos un estado de seguridad ".print();
+	sc.validarAlMenosUnEstadoDeSeguridad().println();
+}
+
+"Validaciones Entidades".println();
+for(e in Entidad.all)
+{
+	e.name.println();
+	"Atributos únicos ".print();
+	e.validarAtributosUnicos().println();
+}
+
+"Validaciones Operaciones".println();
+for(o in Operacion.all)
+{
+	o.name.println();
+	"Parámetros únicos ".print();
+	o.validarParametrosUnicos().println();
+}
+
+//Validar que 2 SmartContract no tienen el mismo nombre
+operation validarSmartContractUnicos() : Boolean{
+	return SmartContract.all.name.size() == SmartContract.all.name.asSet().size();
+}
+
+// Validar que las operaciones de un SmartContract no tienen el mismo nombre
+operation SmartContract validarOperacionesUnicas() : Boolean{
+	return self.operaciones.name.size() == self.operaciones.name.asSet().size();
+}
+
+// Validar que los nombres de los parametros de una funcion son diferentes
+operation Operacion validarParametrosUnicos() : Boolean{
+	return self.parametros.name.size() == self.parametros.name.asSet().size();
+}
+
+// Validar que todos los estados de un SmartContract son unicos
+operation SmartContract validarEstadosUnicos(): Boolean{
+	return self.estado.name.size() == self.estado.name.asSet().size();
+}
+
+// Validar que al menos un estado de un SmartContract es de seguridad
+operation SmartContract validarAlMenosUnEstadoDeSeguridad() : Boolean{
+	return self.estado.exists(e | e.isKindOf(Seguridad));
+}
+
+// Validar que las entidades son unicas
+operation validarEntidadesUnicas() : Boolean{
+	return Entidad.all.name.size() == Entidad.all.name.asSet().size();
+}
+
+// Validar que los atributos de una entidad son únicos
+operation Entidad validarAtributosUnicos() : Boolean{
+	return self.atributos.name.size() == self.atributos.name.asSet().size();
+}
