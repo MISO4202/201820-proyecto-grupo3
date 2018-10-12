@@ -691,7 +691,7 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_PNZKAM0EEeibbKpFqNyZfA" type="4001" element="_PNMVsM0EEeibbKpFqNyZfA" source="_K90LMM0EEeibbKpFqNyZfA" target="_0g7ucM0DEeibbKpFqNyZfA">
           <children xmi:type="notation:Node" xmi:id="_PNZKBM0EEeibbKpFqNyZfA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PNZKBc0EEeibbKpFqNyZfA" x="-18" y="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PNZKBc0EEeibbKpFqNyZfA" x="1" y="8"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_PNZKBs0EEeibbKpFqNyZfA" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PNZKB80EEeibbKpFqNyZfA" x="-6" y="10"/>
@@ -720,22 +720,6 @@
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iEqVg80FEeibbKpFqNyZfA" points="[60, 16, 497, 61]$[60, 81, 497, 126]$[-525, 81, -88, 126]$[-525, -30, -88, 15]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iErjoM0FEeibbKpFqNyZfA" id="(0.0,0.8490566037735849)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iErjoc0FEeibbKpFqNyZfA" id="(1.0,0.8469387755102041)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_6o0xYM0REeibbKpFqNyZfA" type="4001" element="_6oh2cM0REeibbKpFqNyZfA" source="_3-zE0Mz1EeihF5LrpFrXuw" target="_0g7ucM0DEeibbKpFqNyZfA">
-          <children xmi:type="notation:Node" xmi:id="_6o0xZM0REeibbKpFqNyZfA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6o0xZc0REeibbKpFqNyZfA" x="29" y="12"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_6o0xZs0REeibbKpFqNyZfA" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6o0xZ80REeibbKpFqNyZfA" x="13" y="10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_6o0xaM0REeibbKpFqNyZfA" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6o0xac0REeibbKpFqNyZfA" x="-13" y="10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_6o0xYc0REeibbKpFqNyZfA" routing="Rectilinear"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_6o0xYs0REeibbKpFqNyZfA" fontColor="7490599" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_6o0xY80REeibbKpFqNyZfA" points="[-90, 0, 77, -115]$[-90, 115, 77, 0]$[-167, 115, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6o0xas0REeibbKpFqNyZfA" id="(0.7203791469194313,1.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6o0xa80REeibbKpFqNyZfA" id="(1.0,0.6122448979591837)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>
@@ -796,7 +780,7 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_3-mQgMz1EeihF5LrpFrXuw" name="SmartContract" tooltipText="" outgoingEdges="_byCvoMz_EeibbKpFqNyZfA _xoDZoMz_EeibbKpFqNyZfA _f9THwM0CEeibbKpFqNyZfA _6oh2cM0REeibbKpFqNyZfA" incomingEdges="_iDPygM0AEeibbKpFqNyZfA" width="12" height="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_3-mQgMz1EeihF5LrpFrXuw" name="SmartContract" tooltipText="" outgoingEdges="_byCvoMz_EeibbKpFqNyZfA _xoDZoMz_EeibbKpFqNyZfA _f9THwM0CEeibbKpFqNyZfA" incomingEdges="_iDPygM0AEeibbKpFqNyZfA" width="12" height="10">
       <target xmi:type="ecore:EClass" href="metamodels/blockchain.ecore#//SmartContract"/>
       <semanticElements xmi:type="ecore:EClass" href="metamodels/blockchain.ecore#//SmartContract"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -828,9 +812,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_byCvoMz_EeibbKpFqNyZfA" name="[0..*] contratos" sourceNode="_3-mQgMz1EeihF5LrpFrXuw" targetNode="_kv61IMz1EeihF5LrpFrXuw">
-      <target xmi:type="ecore:EReference" href="metamodels/blockchain.ecore#//SmartContract/contratos"/>
-      <semanticElements xmi:type="ecore:EReference" href="metamodels/blockchain.ecore#//SmartContract/contratos"/>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_byCvoMz_EeibbKpFqNyZfA" name="[0..*] entidades" sourceNode="_3-mQgMz1EeihF5LrpFrXuw" targetNode="_kv61IMz1EeihF5LrpFrXuw">
+      <target xmi:type="ecore:EReference" href="metamodels/blockchain.ecore#//SmartContract/entidades"/>
+      <semanticElements xmi:type="ecore:EReference" href="metamodels/blockchain.ecore#//SmartContract/entidades"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_byDWsMz_EeibbKpFqNyZfA" description="_WyjW0Mz_EeibbKpFqNyZfA" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_byDWscz_EeibbKpFqNyZfA" showIcon="false">
           <customFeatures>labelSize</customFeatures>
@@ -1007,7 +991,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_0guTEM0DEeibbKpFqNyZfA" name="Direccion" tooltipText="" incomingEdges="_PNMVsM0EEeibbKpFqNyZfA _6oh2cM0REeibbKpFqNyZfA" width="12" height="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_0guTEM0DEeibbKpFqNyZfA" name="Direccion" tooltipText="" incomingEdges="_PNMVsM0EEeibbKpFqNyZfA" width="12" height="10">
       <target xmi:type="ecore:EClass" href="metamodels/blockchain.ecore#//Direccion"/>
       <semanticElements xmi:type="ecore:EClass" href="metamodels/blockchain.ecore#//Direccion"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1069,19 +1053,6 @@
           <customFeatures>labelSize</customFeatures>
         </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_iEUXQ80FEeibbKpFqNyZfA" showIcon="false" labelColor="39,76,114">
-          <customFeatures>labelSize</customFeatures>
-        </endLabelStyle>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_6oh2cM0REeibbKpFqNyZfA" name="[0..*] direccion" sourceNode="_3-mQgMz1EeihF5LrpFrXuw" targetNode="_0guTEM0DEeibbKpFqNyZfA">
-      <target xmi:type="ecore:EReference" href="metamodels/blockchain.ecore#//SmartContract/direccion"/>
-      <semanticElements xmi:type="ecore:EReference" href="metamodels/blockchain.ecore#//SmartContract/direccion"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6oh2cc0REeibbKpFqNyZfA" description="_WyjW0Mz_EeibbKpFqNyZfA" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_6oh2cs0REeibbKpFqNyZfA" showIcon="false">
-          <customFeatures>labelSize</customFeatures>
-        </centerLabelStyle>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_6oh2c80REeibbKpFqNyZfA" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
         </endLabelStyle>
       </ownedStyle>

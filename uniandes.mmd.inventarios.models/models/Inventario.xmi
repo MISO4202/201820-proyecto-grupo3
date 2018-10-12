@@ -22,7 +22,6 @@
     </operaciones>
     <estado name="Administrador"/>
     <estado name="Almacen"/>
-    <estado xsi:type="blockchain:Seguridad" name="Administrador" direcciones="//@smartcontract.0/@direccion.0"/>
-    <direccion valor="Origen"/>
+    <estado xsi:type="blockchain:Seguridad" name="Administrador"/>
   </smartcontract>
 </blockchain:Aplicacion>

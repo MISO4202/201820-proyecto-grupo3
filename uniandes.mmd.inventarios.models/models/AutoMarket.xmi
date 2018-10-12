@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blockchain:Aplicacion xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:blockchain="http://www.example.org/blockchain" xsi:schemaLocation="http://www.example.org/blockchain ../../uniandes.mdd.inventarios.metamodels/metamodels/blockchain.ecore">
+  <smartcontract name="AutoMarket">
+    <contratos name="Vehiculo">
+      <atributos name="Marca"/>
+      <atributos name="Modelo"/>
+      <atributos name="Linea"/>
+      <atributos name="Cilindraje"/>
+      <atributos name="Placa"/>
+      <atributos name="Precio"/>
+    </contratos>
+    <operaciones name="Editar Vehiculo" validador="//@smartcontract.0/@estado.2">
+      <parametros name="Vehiculo"/>
+    </operaciones>
+    <operaciones name="Crear Vehiculo" validador="//@smartcontract.0/@estado.2">
+      <parametros name="Vehiculo"/>
+    </operaciones>
+    <operaciones name="Borrar Vehiculo" validador="//@smartcontract.0/@estado.2">
+      <parametros name="Vehiculo"/>
+    </operaciones>
+    <operaciones name="Consultar Vehiculo">
+      <parametros name="Vehiculo"/>
+    </operaciones>
+    <operaciones name="CalcularCostosVenta">
+      <parametros name="Vehiculo"/>
+    </operaciones>
+    <estado name="Administrador"/>
+    <estado name="Vitrina"/>
+    <estado xsi:type="blockchain:Seguridad" name="Administrador"/>
+  </smartcontract>
+</blockchain:Aplicacion>

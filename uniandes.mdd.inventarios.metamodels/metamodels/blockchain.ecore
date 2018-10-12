@@ -15,15 +15,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoDato" eType="#//Dato"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SmartContract">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contratos" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entidades" upperBound="-1"
         eType="#//Entidad" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="operaciones" upperBound="-1"
         eType="#//Operacion" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="estado" lowerBound="1"
         upperBound="-1" eType="#//Estado" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="direccion" upperBound="-1"
-        eType="#//Direccion" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Operacion">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parametros" upperBound="-1"
