@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<blockchain:Aplicacion xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:blockchain="http://www.example.org/blockchain" xsi:schemaLocation="http://www.example.org/blockchain ../../uniandes.mdd.inventarios.metamodels/metamodels/blockchain.ecore">
+<blockchain:Aplicacion xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:blockchain="http://www.example.org/blockchain">
   <smartcontract name="AutoMarket">
     <entidades name="Vehiculo">
       <atributos name="Marca"/>
