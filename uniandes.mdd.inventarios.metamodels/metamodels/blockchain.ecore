@@ -28,7 +28,7 @@
         eType="#//Parametro" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="validador" eType="#//Seguridad"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoDato" eType="#//Dato"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="retorno" eType="#//Dato"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Parametro">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -48,6 +48,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Seguridad" eSuperTypes="#//Estado">
     <eStructuralFeatures xsi:type="ecore:EReference" name="direcciones" lowerBound="1"
-        upperBound="-1" eType="#//Direccion"/>
+        upperBound="-1" eType="#//Direccion" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

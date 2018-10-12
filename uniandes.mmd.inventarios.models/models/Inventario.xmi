@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blockchain:Aplicacion xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:blockchain="http://www.example.org/blockchain" xsi:schemaLocation="http://www.example.org/blockchain ../../uniandes.mdd.inventarios.metamodels/metamodels/blockchain.ecore">
   <smartcontract name="InventarioPiezas">
-    <contratos name="Pieza">
+    <entidades name="Pieza">
       <atributos name="Nombre"/>
       <atributos name="Codigo"/>
       <atributos name="PrecioCosto"/>
       <atributos name="PrecioVenta"/>
       <atributos name="Cantidad"/>
-    </contratos>
+    </entidades>
     <operaciones name="CrearPieza" validador="//@smartcontract.0/@estado.2">
       <parametros name="Pieza"/>
     </operaciones>
@@ -20,8 +20,14 @@
     <operaciones name="VerPieza">
       <parametros name="Pieza"/>
     </operaciones>
+    <operaciones name="CalcularImpuestosPieza">
+      <parametros name="Pieza"/>
+      <parametros name="valorImpuesto"/>
+    </operaciones>
     <estado name="Administrador"/>
     <estado name="Almacen"/>
-    <estado xsi:type="blockchain:Seguridad" name="Administrador"/>
+    <estado xsi:type="blockchain:Seguridad" name="Administrador">
+      <direcciones/>
+    </estado>
   </smartcontract>
 </blockchain:Aplicacion>
