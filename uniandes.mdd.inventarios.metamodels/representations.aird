@@ -594,11 +594,27 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_j4EiwdG5Eeivk-1fK-zTpA" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_j4EiwtG5Eeivk-1fK-zTpA"/>
             </children>
+            <children xmi:type="notation:Node" xmi:id="_6GdrYNIYEeiJCsb-JQL8lA" type="3010" element="_6F2nYNIYEeiJCsb-JQL8lA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_6GdrYdIYEeiJCsb-JQL8lA" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_6GdrYtIYEeiJCsb-JQL8lA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_8C14gNIYEeiJCsb-JQL8lA" type="3010" element="_8CTtANIYEeiJCsb-JQL8lA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_8C14gdIYEeiJCsb-JQL8lA" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_8C14gtIYEeiJCsb-JQL8lA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__rjroNIYEeiJCsb-JQL8lA" type="3010" element="__rOUcNIYEeiJCsb-JQL8lA">
+              <styles xmi:type="notation:FontStyle" xmi:id="__rjrodIYEeiJCsb-JQL8lA" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="__rjrotIYEeiJCsb-JQL8lA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Bqk9ENIZEeiJCsb-JQL8lA" type="3010" element="_BqT3UNIZEeiJCsb-JQL8lA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_Bqk9EdIZEeiJCsb-JQL8lA" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Bqk9EtIZEeiJCsb-JQL8lA"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_nGncBdGxEeivk-1fK-zTpA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_nGncBtGxEeivk-1fK-zTpA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_nGncAdGxEeivk-1fK-zTpA" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nGncAtGxEeivk-1fK-zTpA" x="-90" y="150" width="143" height="115"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nGncAtGxEeivk-1fK-zTpA" x="-90" y="150" width="143" height="153"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_21XM0NGxEeivk-1fK-zTpA" type="2003" element="_207H8NGxEeivk-1fK-zTpA">
           <children xmi:type="notation:Node" xmi:id="_21XM09GxEeivk-1fK-zTpA" type="5007"/>
@@ -627,7 +643,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_21XM1tGxEeivk-1fK-zTpA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_21XM0dGxEeivk-1fK-zTpA" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_21XM0tGxEeivk-1fK-zTpA" x="-90" y="290" width="143" height="115"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_21XM0tGxEeivk-1fK-zTpA" x="-90" y="330" width="153" height="132"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_lDy2YNG2Eeivk-1fK-zTpA" type="2003" element="_lDNAgNG2Eeivk-1fK-zTpA">
           <children xmi:type="notation:Node" xmi:id="_lDy2Y9G2Eeivk-1fK-zTpA" type="5007"/>
@@ -1536,6 +1552,38 @@
         <target xmi:type="ecore:EEnumLiteral" href="metamodels/blockchain.ecore#//OperadorCondicional/DIFERENTE"/>
         <semanticElements xmi:type="ecore:EEnumLiteral" href="metamodels/blockchain.ecore#//OperadorCondicional/DIFERENTE"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_j3n20dG5Eeivk-1fK-zTpA" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6F2nYNIYEeiJCsb-JQL8lA" name="MAYORQUE" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="metamodels/blockchain.ecore#//OperadorCondicional/MAYORQUE"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="metamodels/blockchain.ecore#//OperadorCondicional/MAYORQUE"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6F3OcNIYEeiJCsb-JQL8lA" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_8CTtANIYEeiJCsb-JQL8lA" name="MENORQUE" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="metamodels/blockchain.ecore#//OperadorCondicional/MENORQUE"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="metamodels/blockchain.ecore#//OperadorCondicional/MENORQUE"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_8CTtAdIYEeiJCsb-JQL8lA" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="__rOUcNIYEeiJCsb-JQL8lA" name="MAYORIGUAL" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="metamodels/blockchain.ecore#//OperadorCondicional/MAYORIGUAL"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="metamodels/blockchain.ecore#//OperadorCondicional/MAYORIGUAL"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="__rOUcdIYEeiJCsb-JQL8lA" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_BqT3UNIZEeiJCsb-JQL8lA" name="MENORIGUAL" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="metamodels/blockchain.ecore#//OperadorCondicional/MENORIGUAL"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="metamodels/blockchain.ecore#//OperadorCondicional/MENORIGUAL"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_BqT3UdIZEeiJCsb-JQL8lA" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>

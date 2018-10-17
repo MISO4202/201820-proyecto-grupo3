@@ -64,6 +64,10 @@
   <eClassifiers xsi:type="ecore:EEnum" name="OperadorCondicional">
     <eLiterals name="IGUAL"/>
     <eLiterals name="DIFERENTE" value="1"/>
+    <eLiterals name="MAYORQUE" value="2"/>
+    <eLiterals name="MENORQUE" value="3"/>
+    <eLiterals name="MAYORIGUAL" value="4"/>
+    <eLiterals name="MENORIGUAL" value="5"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Operador">
     <eLiterals name="MAS"/>
