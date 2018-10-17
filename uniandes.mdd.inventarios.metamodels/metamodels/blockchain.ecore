@@ -5,14 +5,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="smartcontract" upperBound="-1"
         eType="#//SmartContract" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Entidad">
+  <eClassifiers xsi:type="ecore:EClass" name="Entidad" eSuperTypes="#//TipoDato">
     <eStructuralFeatures xsi:type="ecore:EReference" name="atributos" upperBound="-1"
         eType="#//Atributo" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Atributo">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoDato" eType="#//Dato"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tipoDato" lowerBound="1"
+        eType="#//TipoDato"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SmartContract">
     <eStructuralFeatures xsi:type="ecore:EReference" name="entidades" upperBound="-1"
@@ -27,27 +28,73 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="parametros" upperBound="-1"
         eType="#//Parametro" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="validador" eType="#//Seguridad"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="retorno" eType="#//Dato"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sentencia" lowerBound="1"
+        upperBound="-1" eType="#//Sentencia" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Parametro">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoDato" eType="#//Dato"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Dato">
-    <eLiterals name="PRIMITIVO"/>
-    <eLiterals name="LISTA" value="1"/>
-    <eLiterals name="MAPA" value="2"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tipoDato" eType="#//TipoDato"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Estado">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoEstado" eType="#//Dato"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tipoDato" eType="#//TipoDato"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Direccion">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sentencia"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Condicional" eSuperTypes="#//Sentencia">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operador" eType="#//OperadorCondicional"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ladoIzquierdo" lowerBound="1"
+        eType="#//Sentencia"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ladoDerecho" lowerBound="1"
+        eType="#//Sentencia"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Seguridad" eSuperTypes="#//Estado">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="direcciones" lowerBound="1"
-        upperBound="-1" eType="#//Direccion" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Retorno" eSuperTypes="#//Sentencia">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="retorno" eType="#//Sentencia"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Asignacion" eSuperTypes="#//Sentencia">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ladoIzquierdo" lowerBound="1"
+        eType="#//Variable"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operador" eType="#//Operador"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expresion" lowerBound="1"
+        eType="#//Expresion"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Primitivo" eSuperTypes="#//TipoDato">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//DatoPrimitivo"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TipoDato"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="OperadorCondicional">
+    <eLiterals name="IGUAL"/>
+    <eLiterals name="DIFERENTE" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Operador">
+    <eLiterals name="MAS"/>
+    <eLiterals name="MENOS" value="1"/>
+    <eLiterals name="PRODUCTO" value="2"/>
+    <eLiterals name="DIVISION" value="3"/>
+    <eLiterals name="IGUAL" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Expresion" eSuperTypes="#//Sentencia">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operador" eType="#//Operador"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ladoIzquierdo" lowerBound="1"
+        eType="#//Sentencia"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ladoDerecho" lowerBound="1"
+        eType="#//Sentencia"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//Sentencia">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tipoDato" eType="#//TipoDato"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DatoPrimitivo">
+    <eLiterals name="STRING"/>
+    <eLiterals name="NUMERICO" value="1"/>
+    <eLiterals name="BOOLEAN" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Set" eSuperTypes="#//TipoDato">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tipoDato" lowerBound="1"
+        eType="#//TipoDato"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Map" eSuperTypes="#//TipoDato">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tipoDatoKey" lowerBound="1"
+        eType="#//TipoDato"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tipoDatoValue" lowerBound="1"
+        eType="#//TipoDato"/>
   </eClassifiers>
 </ecore:EPackage>
