@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blockchain:Aplicacion xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:blockchain="http://www.example.org/blockchain">
+  <smartcontract name="Conteo">
+    <entidades name="Persona">
+      <atributos name="nombre">
+        <tipodato xsi:type="blockchain:Primitivo"/>
+      </atributos>
+      <atributos name="edad">
+        <tipodato xsi:type="blockchain:Primitivo" tipo="NUMERICO"/>
+      </atributos>
+    </entidades>
+    <operaciones name="agregarPersona">
+      <parametros name="nombre" tipoDato="//@smartcontract.0/@entidades.0/@atributos.0/@tipodato"/>
+      <parametros name="edad" tipoDato="//@smartcontract.0/@entidades.0/@atributos.1/@tipodato"/>
+      <sentencia xsi:type="blockchain:Variable" tipoDato="//@smartcontract.0/@entidades.0" name="person"/>
+      <sentencia xsi:type="blockchain:Asignacion" ladoIzquierdo="//@smartcontract.0/@operaciones.0/@sentencia.0" operador="IGUAL"/>
+      <sentencia xsi:type="blockchain:Variable" tipoDato="//@smartcontract.0/@entidades.0/@atributos.1/@tipodato" name="a"/>
+    </operaciones>
+    <estado name="PersonasIncuidas">
+      <tipodato xsi:type="blockchain:Seq" tipoDato="//@smartcontract.0/@entidades.0"/>
+    </estado>
+  </smartcontract>
+</blockchain:Aplicacion>

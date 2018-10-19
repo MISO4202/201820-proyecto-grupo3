@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<blockchain:Aplicacion xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:blockchain="http://www.example.org/blockchain">
+<blockchain:Aplicacion xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:blockchain="http://www.example.org/blockchain">
   <smartcontract name="InventarioPiezas">
     <entidades name="Pieza">
       <atributos name="Nombre"/>
@@ -8,13 +8,13 @@
       <atributos name="PrecioVenta"/>
       <atributos name="Cantidad"/>
     </entidades>
-    <operaciones name="CrearPieza" validador="//@smartcontract.0/@estado.2">
+    <operaciones name="CrearPieza">
       <parametros name="Pieza"/>
     </operaciones>
-    <operaciones name="EditarPieza" validador="//@smartcontract.0/@estado.2">
+    <operaciones name="EditarPieza">
       <parametros name="Pieza"/>
     </operaciones>
-    <operaciones name="EditarCantidad" validador="//@smartcontract.0/@estado.2">
+    <operaciones name="EditarCantidad">
       <parametros name="Pieza"/>
     </operaciones>
     <operaciones name="VerPieza">
@@ -24,10 +24,5 @@
       <parametros name="Pieza"/>
       <parametros name="valorImpuesto"/>
     </operaciones>
-    <estado name="Administrador"/>
-    <estado name="Almacen"/>
-    <estado xsi:type="blockchain:Seguridad" name="Administrador">
-      <direcciones/>
-    </estado>
   </smartcontract>
 </blockchain:Aplicacion>
