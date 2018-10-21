@@ -1,68 +1,66 @@
-//Correr las validaciones
-"SmartContract únicos ".print();
-validarSmartContractUnicos().println();
-"Entidades únicas ".print();
-validarEntidadesUnicas().println();
-
-"Validaciones SmartContracts".println();
-for(sc in SmartContract.all)
+// Llamado de los métodos de verificación
+"Aplicación".println();
+"Smart contracts únicos: ".print();
+Aplicacion.all.first.smartContractsUnicos().println();
+for(smartContract in SmartContract.all)
 {
-	sc.name.println();
-	"Operaciones únicas ".print();
-	sc.validarOperacionesUnicas().println();
-	"Estados únicos ".print();
-	sc.validarEstadosUnicos().println();
-	"Al menos un estado de seguridad ".print();
-	sc.validarAlMenosUnEstadoDeSeguridad().println();
+	smartContract.name.println();
+	"Estados únicos: ".print();
+	smartContract.estadosUnicos().println();
+	"Entidades únicas: ".print();
+	smartContract.entidadesUnicas().println();
+	"Operaciones únicas: ".print();
+	smartContract.operacionesUnicas().println();
 }
-
-"Validaciones Entidades".println();
-for(e in Entidad.all)
+for(entidad in Entidad.all)
 {
-	e.name.println();
-	"Atributos únicos ".print();
-	e.validarAtributosUnicos().println();
+	entidad.name.println();
+	"Atributos únicos: ".print();
+	entidad.atributosUnicos().println();
 }
-
-"Validaciones Operaciones".println();
-for(o in Operacion.all)
+for(operacion in Operacion.all)
 {
-	o.name.println();
-	"Parámetros únicos ".print();
-	o.validarParametrosUnicos().println();
+	operacion.name.println();
+	"Parámetros únicos: ".print();
+	operacion.parametrosUnicos().println();
+	"Variables únicas: ".print();
+	operacion.variablesUnicas().println();
 }
 
-//Validar que 2 SmartContract no tienen el mismo nombre
-operation validarSmartContractUnicos() : Boolean{
-	return SmartContract.all.name.size() == SmartContract.all.name.asSet().size();
+// Los smart contracts no tienen se repiten
+operation Aplicacion smartContractsUnicos() : Boolean
+{
+	return self.smartcontract.size() == self.smartcontract.name.asSet().size();
 }
-
-// Validar que las operaciones de un SmartContract no tienen el mismo nombre
-operation SmartContract validarOperacionesUnicas() : Boolean{
-	return self.operaciones.name.size() == self.operaciones.name.asSet().size();
+// Los estados de un smart contract no se repiten
+operation SmartContract estadosUnicos() : Boolean
+{
+	return self.estado.size() == self.estado.name.asSet().size();
 }
-
-// Validar que los nombres de los parametros de una funcion son diferentes
-operation Operacion validarParametrosUnicos() : Boolean{
-	return self.parametros.name.size() == self.parametros.name.asSet().size();
+// Las entidades de un smart contract no se repiten
+operation SmartContract entidadesUnicas() : Boolean
+{
+	return self.entidades.size() == self.entidades.name.asSet().size();
 }
-
-// Validar que todos los estados de un SmartContract son unicos
-operation SmartContract validarEstadosUnicos(): Boolean{
-	return self.estado.name.size() == self.estado.name.asSet().size();
+// Las operaciones de un smart contract no se repiten
+operation SmartContract operacionesUnicas() : Boolean
+{
+	return self.operaciones.size() == self.operaciones.name.asSet().size();
 }
-
-// Validar que al menos un estado de un SmartContract es de seguridad
-operation SmartContract validarAlMenosUnEstadoDeSeguridad() : Boolean{
-	return self.estado.exists(e | e.isKindOf(Seguridad));
+// Los atributos de una entidad no se repiten
+operation Entidad artibutosUnicos() : Boolean
+{
+	return self.atributos.size() == self.atributos.name.asSet().size();
 }
-
-// Validar que las entidades son unicas
-operation validarEntidadesUnicas() : Boolean{
-	return Entidad.all.name.size() == Entidad.all.name.asSet().size();
+// Los parámetros de una operación no se repiten
+operation Operacion parametrosUnicos() : Boolean
+{
+	return self.parametros.size() == self.parametros.name.asSet().size();
 }
-
-// Validar que los atributos de una entidad son únicos
-operation Entidad validarAtributosUnicos() : Boolean{
-	return self.atributos.name.size() == self.atributos.name.asSet().size();
+// Las variables de una operación no se repiten
+operation Operacion variablesUnicas() : Boolean
+{
+	return self.sentencia.select(s | s.isKindOf(Variable)).size() 
+		== 
+		self.sentencia.select(s | s.isKindOf(Variable)).name.asSet().size();
 }
