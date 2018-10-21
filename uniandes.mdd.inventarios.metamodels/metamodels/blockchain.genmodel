@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/uniandes.mdd.inventarios.metamodels/src" modelPluginID="uniandes.mdd.inventarios.metamodels"
+    modelName="Blockchain" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>blockchain.ecore</foreignModel>
+  <genPackages prefix="Blockchain" disposableProviderFactory="true" ecorePackage="blockchain.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="blockchain.ecore#//OperadorLogico">
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//OperadorLogico/IGUAL_IGUAL"/>
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//OperadorLogico/DIFERENTE"/>
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//OperadorLogico/MAYORQUE"/>
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//OperadorLogico/MENORQUE"/>
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//OperadorLogico/MAYORIGUAL"/>
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//OperadorLogico/MENORIGUAL"/>
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//OperadorLogico/PUNTO"/>
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//OperadorLogico/AND"/>
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//OperadorLogico/OR"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="blockchain.ecore#//Operador">
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//Operador/MAS"/>
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//Operador/MENOS"/>
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//Operador/PRODUCTO"/>
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//Operador/DIVISION"/>
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//Operador/IGUAL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="blockchain.ecore#//DatoPrimitivo">
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//DatoPrimitivo/STRING"/>
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//DatoPrimitivo/NUMERICO"/>
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//DatoPrimitivo/BOOLEAN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="blockchain.ecore#//TipoCondicion">
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//TipoCondicion/IF"/>
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//TipoCondicion/ELSE"/>
+    </genEnums>
+    <genClasses ecoreClass="blockchain.ecore#//Aplicacion">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Aplicacion/smartcontract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Aplicacion/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Aplicacion/tipodato"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//Entidad">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Entidad/atributos"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Entidad/name"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//Atributo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Atributo/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Atributo/tipodato"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//SmartContract">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//SmartContract/entidades"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//SmartContract/operaciones"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//SmartContract/estado"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//SmartContract/name"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//Operacion">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Operacion/parametros"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Operacion/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Operacion/sentencia"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Operacion/retorno"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Operacion/esUserDefined"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//Parametro">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Parametro/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Parametro/tipodato"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//Estado">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Estado/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Estado/tipodato"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="blockchain.ecore#//Sentencia"/>
+    <genClasses ecoreClass="blockchain.ecore#//ExpresionLogica">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//ExpresionLogica/operador"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//Retorno"/>
+    <genClasses ecoreClass="blockchain.ecore#//Primitivo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Primitivo/tipo"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="blockchain.ecore#//TipoDato"/>
+    <genClasses ecoreClass="blockchain.ecore#//ExpresionAritmetica">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//ExpresionAritmetica/operador"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//Variable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Variable/tipodato"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Variable/name"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//Seq">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Seq/tipodato"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//Map">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Map/tipoDatoKey"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Map/tipoDatoValue"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//Condicional">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Condicional/tipoCondicional"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Condicional/expresionlogica"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="blockchain.ecore#//Expresion">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Expresion/ladoIzq"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Expresion/ladoDer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Expresion/id"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="blockchain.ecore#//ValorElementos"/>
+    <genClasses ecoreClass="blockchain.ecore#//ExpresionNumerica">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//ExpresionNumerica/value"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//ExpresionTexto">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//ExpresionTexto/value"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//ExpresionBoolean">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//ExpresionBoolean/value"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//ExpresionReferenciada">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//ExpresionReferenciada/tipodato"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

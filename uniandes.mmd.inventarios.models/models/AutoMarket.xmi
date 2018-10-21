@@ -9,15 +9,6 @@
       <atributos name="Placa"/>
       <atributos name="Precio"/>
     </entidades>
-    <operaciones name="Editar Vehiculo" validador="//@smartcontract.0/@estado.2">
-      <parametros name="Vehiculo"/>
-    </operaciones>
-    <operaciones name="Crear Vehiculo" validador="//@smartcontract.0/@estado.2">
-      <parametros name="Vehiculo"/>
-    </operaciones>
-    <operaciones name="Borrar Vehiculo" validador="//@smartcontract.0/@estado.2">
-      <parametros name="Vehiculo"/>
-    </operaciones>
     <operaciones name="Consultar Vehiculo">
       <parametros name="Vehiculo"/>
     </operaciones>
@@ -26,11 +17,6 @@
       <parametros name="ImpuestoVehiculo"/>
       <parametros name="ValorTraspaso"/>
       <parametros name="ComisionRunt"/>
-    </operaciones>
-    <operaciones name="CalcularComisionVendedor" validador="//@smartcontract.0/@estado.2">
-      <parametros name="PrecioVehiculo"/>
-      <parametros name="PorcentajeComision"/>
-      <parametros name="PorcentajeDescuento"/>
     </operaciones>
     <estado name="Administrador"/>
     <estado name="Vitrina"/>
