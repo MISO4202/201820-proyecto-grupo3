@@ -1,0 +1,101 @@
+using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Stratis.SmartContracts;
+using System.Collections.Generic;
+
+namespace SmartContract1.Tests
+{
+    
+    public class InventarioProductosAlmacen:SmartContract
+    {
+        /*
+         * These tests demonstrate testing of the core logic of the contract.
+         * 
+         * Of course, you will want to test your contracts with the resource tracking code injected,
+         * and executing on-chain, as they would be in a production environment. We are working on this
+         * and will provide access to such tools when they're ready.
+         */
+
+        public static readonly Address administrador;
+
+        public struct Producto
+        {
+            public uint id;
+            public string nombre;
+            public string descripcion;
+            public string marca;
+            public string precioCompra;
+            public string precioVenta;
+            public string proveedor;
+            public string categoria;
+        }
+
+        public Producto[] productos;
+
+        public struct Almacen
+        {
+            public Address id;
+            public string nombre;
+            public string direccion;
+            public string telefono;
+            public uint idGerente;
+            public Dictionary<uint,uint> cantidadProductos;
+        }
+
+        public Almacen[] almacenes;
+
+        public void InventarioProductosAlmacen()
+        {
+            administrador = Message.Sender;
+        }
+
+        public void AgregarAlmacen(Address _newAlmacen, string _nombre, string _direccion, string _telefono, uint _idGerente)
+        {
+            var nuevoAlmacen = new Almacen{
+                id= _newAlmacen,
+	    	    nombre= _nombre,
+	    	    direccion= _direccion,
+	    	    telefono= _telefono,
+	    	    idGerente= _idGerente
+            };
+            almacenes.push(nuevoAlmacen);
+        }
+
+        public void AgregarProducto(uint _id, string _nombre, string _descripcion, string _marca, string _precioCompra, string _precioVenta, string _proveedor, string _categoria)
+        {
+            var nuevoProducto = new Producto{
+                id= _id,
+	            nombre = _nombre,
+	            descripcion = _descripcion,
+                marca = _marca,
+                precioCompra = _precioCompra,
+                precioVenta = _precioVenta,
+                proveedor = _proveedor,
+                categoria = _categoria
+    
+            };
+
+            productos.push(nuevoAlmacen);
+        }
+
+        public void AgregarCantidadProductoAlmacen(uint _idProducto, unit _idAlmacen, unit _cantidad)
+        {
+            var almacen = almacenes[_idAlmacen];
+            if (!almacen.cantidadProductos.ContainsKey(_idProducto))
+            {
+                almacen.cantidadProductos[_idProducto] = 0;
+            }
+            almacen.cantidadProductos[_idProducto] = almacen.cantidadProductos[_idProducto] + _cantidad;
+        }
+
+        public void ReducirCantidadProductoAlmacen(uint _idProducto, unit _idAlmacen, unit _cantidad)
+        {
+            var almacen = almacenes[_idAlmacen];
+            if (almacen.cantidadProductos.ContainsKey(_idProducto))
+            {
+                almacen.cantidadProductos[_idProducto] = almacen.cantidadProductos[_idProducto] - _cantidad;
+            }
+        }
+
+    }
+}
