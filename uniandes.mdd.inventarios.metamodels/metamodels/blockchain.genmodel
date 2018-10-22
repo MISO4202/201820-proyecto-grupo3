@@ -110,7 +110,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//ExpresionBoolean/value"/>
     </genClasses>
     <genClasses ecoreClass="blockchain.ecore#//ExpresionReferenciada">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//ExpresionReferenciada/tipodato"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//ExpresionReferenciada/expReferenciada"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
