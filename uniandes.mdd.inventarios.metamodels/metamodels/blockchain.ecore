@@ -124,8 +124,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExpresionReferenciada" eSuperTypes="#//ValorElementos">
     <eStructuralFeatures xsi:type="ecore:EReference" name="expReferenciada" eType="#//Entidad"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="atributoRef" upperBound="-1"
-        eType="#//Atributo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributoRef" eType="#//Atributo"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -52,9 +52,11 @@
       <sentencia xsi:type="blockchain:ExpresionAritmetica" ladoIzq="//@smartcontract.0/@operaciones.2/@sentencia.17" ladoDer="//@smartcontract.0/@operaciones.2/@parametros.5" id="12" operador="IGUAL"/>
       <sentencia xsi:type="blockchain:ExpresionLogica" ladoIzq="//@smartcontract.0/@operaciones.2/@sentencia.0" ladoDer="//@smartcontract.0/@operaciones.2/@sentencia.18" id="5" operador="PUNTO"/>
       <sentencia xsi:type="blockchain:ExpresionReferenciada" atributoRef="//@smartcontract.0/@entidades.0/@atributos.5" id="7"/>
+      <sentencia xsi:type="blockchain:ExpresionAritmetica" ladoIzq="//@smartcontract.0/@estado.2" ladoDer="//@smartcontract.0/@operaciones.2/@sentencia.0" id="13" operador="IGUAL"/>
     </operaciones>
-    <estado name="VehiculoConsultado" tipodato="//@smartcontract.0/@entidades.0"/>
-    <estado name="CostoVenta" tipodato="//@tipodato.0"/>
+    <estado name="vehiculoConsultado" tipodato="//@smartcontract.0/@entidades.0"/>
+    <estado name="costoVenta" tipodato="//@tipodato.0"/>
+    <estado name="vehiculoCreado"/>
   </smartcontract>
   <tipodato xsi:type="blockchain:Primitivo" tipo="NUMERICO"/>
   <tipodato xsi:type="blockchain:Primitivo"/>
