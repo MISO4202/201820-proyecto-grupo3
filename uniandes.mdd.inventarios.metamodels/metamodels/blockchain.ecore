@@ -36,7 +36,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="retorno" eType="#//TipoDato"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="esUserDefined" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Parametro">
+  <eClassifiers xsi:type="ecore:EClass" name="Parametro" eSuperTypes="#//Sentencia">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tipodato" lowerBound="1"
         eType="#//TipoDato"/>
@@ -124,5 +124,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExpresionReferenciada" eSuperTypes="#//ValorElementos">
     <eStructuralFeatures xsi:type="ecore:EReference" name="expReferenciada" eType="#//Entidad"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributoRef" upperBound="-1"
+        eType="#//Atributo"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
 </ecore:EPackage>
