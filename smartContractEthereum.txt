@@ -13,7 +13,7 @@ contract InventarioProductosAlmacen{
     	string categoria;
     }
 
-    Producto[] public productos;
+    mapping (uint => Producto) public productos;
 
     struct Almacen{
     	address id;
@@ -24,7 +24,13 @@ contract InventarioProductosAlmacen{
     	mapping (uint => uint) cantidadProductos;
     }
 
-    Almacen[] public almacenes;
+    mapping (address => Almacen) public almacenes;
+    
+    
+    function getCantidad(address _almacen, uint _idProducto) public returns (uint) {
+        uint x = almacenes[_almacen].cantidadProductos[_idProducto];
+        return x;
+    }
 
 
     function agregarAlmacen(address _newAlamacen, string _nombre, string _direccion, string _telefono, uint _idGerente) public {
@@ -36,7 +42,7 @@ contract InventarioProductosAlmacen{
 	    	idGerente: _idGerente
     	});
 
-    	almacenes.push(nuevoAlmacen);
+    	almacenes[_newAlamacen] = nuevoAlmacen;
     }
 
     function agregarProducto(uint _id, string _nombre, string _descripcion, string _marca, string _precioCompra, string _precioVenta, string _proveedor, string _categoria) public {
@@ -51,15 +57,15 @@ contract InventarioProductosAlmacen{
 	    	categoria: _categoria
     	});
 
-    	productos.push(nuevoProducto);
+    	productos[_id] = nuevoProducto;
     }
 
-    function agregarCantidadProductoAAlamacen(uint _idProducto, uint _idAlmacen, uint _cantidad) public {
+    function agregarCantidadProductoAAlamacen(uint _idProducto, address _idAlmacen, uint _cantidad) public {
     	Almacen storage almacen = almacenes[_idAlmacen];
     	almacen.cantidadProductos[_idProducto] = almacen.cantidadProductos[_idProducto] + _cantidad;
     }
 
-    function reducirCantidadProductoAAlamacen(uint _idProducto, uint _idAlmacen, uint _cantidad) public {
+    function reducirCantidadProductoAAlamacen(uint _idProducto, address _idAlmacen, uint _cantidad) public {
     	Almacen storage almacen = almacenes[_idAlmacen];
     	if(almacen.cantidadProductos[_idProducto] > 0)
     	{
