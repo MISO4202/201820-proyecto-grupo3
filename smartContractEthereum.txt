@@ -1,0 +1,69 @@
+pragma solidity ^0.4.0;
+
+contract InventarioProductosAlmacen{
+    
+	struct Producto {
+        uint id;
+        string nombre;
+        string descripcion;
+        string marca;
+        string precioCompra;
+        string precioVenta;
+    	string proveedor;
+    	string categoria;
+    }
+
+    Producto[] public productos;
+
+    struct Almacen{
+    	address id;
+    	string nombre;
+    	string direccion;
+    	string telefono;
+    	uint idGerente;
+    	mapping (uint => uint) cantidadProductos;
+    }
+
+    Almacen[] public almacenes;
+
+
+    function agregarAlmacen(address _newAlamacen, string _nombre, string _direccion, string _telefono, uint _idGerente) public {
+    Almacen	memory nuevoAlmacen = Almacen({
+    		id: _newAlamacen,
+	    	nombre: _nombre,
+	    	direccion: _direccion,
+	    	telefono: _telefono,
+	    	idGerente: _idGerente
+    	});
+
+    	almacenes.push(nuevoAlmacen);
+    }
+
+    function agregarProducto(uint _id, string _nombre, string _descripcion, string _marca, string _precioCompra, string _precioVenta, string _proveedor, string _categoria) public {
+    	Producto memory nuevoProducto = Producto({
+    		id: _id,
+	        nombre: _nombre,
+	        descripcion: _descripcion,
+	        marca: _marca,
+	        precioCompra: _precioCompra,
+	        precioVenta: _precioVenta,
+	    	proveedor: _proveedor,
+	    	categoria: _categoria
+    	});
+
+    	productos.push(nuevoProducto);
+    }
+
+    function agregarCantidadProductoAAlamacen(uint _idProducto, uint _idAlmacen, uint _cantidad) public {
+    	Almacen storage almacen = almacenes[_idAlmacen];
+    	almacen.cantidadProductos[_idProducto] = almacen.cantidadProductos[_idProducto] + _cantidad;
+    }
+
+    function reducirCantidadProductoAAlamacen(uint _idProducto, uint _idAlmacen, uint _cantidad) public {
+    	Almacen storage almacen = almacenes[_idAlmacen];
+    	if(almacen.cantidadProductos[_idProducto] > 0)
+    	{
+    		almacen.cantidadProductos[_idProducto] = almacen.cantidadProductos[_idProducto] - _cantidad;
+    	}
+    }
+}
