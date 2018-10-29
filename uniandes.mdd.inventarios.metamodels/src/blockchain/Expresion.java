@@ -14,6 +14,7 @@ package blockchain;
  * <ul>
  *   <li>{@link blockchain.Expresion#getLadoIzq <em>Lado Izq</em>}</li>
  *   <li>{@link blockchain.Expresion#getLadoDer <em>Lado Der</em>}</li>
+ *   <li>{@link blockchain.Expresion#getId <em>Id</em>}</li>
  * </ul>
  *
  * @see blockchain.BlockchainPackage#getExpresion()
@@ -72,5 +73,31 @@ public interface Expresion extends Sentencia {
 	 * @generated
 	 */
 	void setLadoDer(Sentencia value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(int)
+	 * @see blockchain.BlockchainPackage#getExpresion_Id()
+	 * @model
+	 * @generated
+	 */
+	int getId();
+
+	/**
+	 * Sets the value of the '{@link blockchain.Expresion#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(int value);
 
 } // Expresion

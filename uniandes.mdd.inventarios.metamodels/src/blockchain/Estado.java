@@ -2,6 +2,8 @@
  */
 package blockchain;
 
+import org.eclipse.emf.ecore.EObject;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +22,7 @@ package blockchain;
  * @model
  * @generated
  */
-public interface Estado extends Sentencia {
+public interface Estado extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -48,26 +50,26 @@ public interface Estado extends Sentencia {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Tipodato</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Tipodato</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Tipodato</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tipodato</em>' containment reference.
+	 * @return the value of the '<em>Tipodato</em>' reference.
 	 * @see #setTipodato(TipoDato)
 	 * @see blockchain.BlockchainPackage#getEstado_Tipodato()
-	 * @model containment="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	TipoDato getTipodato();
 
 	/**
-	 * Sets the value of the '{@link blockchain.Estado#getTipodato <em>Tipodato</em>}' containment reference.
+	 * Sets the value of the '{@link blockchain.Estado#getTipodato <em>Tipodato</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tipodato</em>' containment reference.
+	 * @param value the new value of the '<em>Tipodato</em>' reference.
 	 * @see #getTipodato()
 	 * @generated
 	 */

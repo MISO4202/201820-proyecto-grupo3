@@ -106,7 +106,6 @@ public class BlockchainSwitch<T> extends Switch<T> {
 			case BlockchainPackage.ESTADO: {
 				Estado estado = (Estado)theEObject;
 				T result = caseEstado(estado);
-				if (result == null) result = caseSentencia(estado);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -121,18 +120,6 @@ public class BlockchainSwitch<T> extends Switch<T> {
 				T result = caseExpresionLogica(expresionLogica);
 				if (result == null) result = caseExpresion(expresionLogica);
 				if (result == null) result = caseSentencia(expresionLogica);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case BlockchainPackage.RETORNO: {
-				Retorno retorno = (Retorno)theEObject;
-				T result = caseRetorno(retorno);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case BlockchainPackage.ASIGNACION: {
-				Asignacion asignacion = (Asignacion)theEObject;
-				T result = caseAsignacion(asignacion);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -164,23 +151,17 @@ public class BlockchainSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case BlockchainPackage.SEQ: {
-				Seq seq = (Seq)theEObject;
-				T result = caseSeq(seq);
-				if (result == null) result = caseTipoDato(seq);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case BlockchainPackage.MAP: {
-				Map map = (Map)theEObject;
-				T result = caseMap(map);
-				if (result == null) result = caseTipoDato(map);
+			case BlockchainPackage.MAPA: {
+				Mapa mapa = (Mapa)theEObject;
+				T result = caseMapa(mapa);
+				if (result == null) result = caseTipoDato(mapa);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case BlockchainPackage.CONDICIONAL: {
 				Condicional condicional = (Condicional)theEObject;
 				T result = caseCondicional(condicional);
+				if (result == null) result = caseSentencia(condicional);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -227,6 +208,14 @@ public class BlockchainSwitch<T> extends Switch<T> {
 				T result = caseExpresionReferenciada(expresionReferenciada);
 				if (result == null) result = caseValorElementos(expresionReferenciada);
 				if (result == null) result = caseSentencia(expresionReferenciada);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BlockchainPackage.EXPRESION_RELACIONAL: {
+				ExpresionRelacional expresionRelacional = (ExpresionRelacional)theEObject;
+				T result = caseExpresionRelacional(expresionRelacional);
+				if (result == null) result = caseExpresion(expresionRelacional);
+				if (result == null) result = caseSentencia(expresionRelacional);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -370,36 +359,6 @@ public class BlockchainSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Retorno</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Retorno</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRetorno(Retorno object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Asignacion</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Asignacion</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAsignacion(Asignacion object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Primitivo</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -460,32 +419,17 @@ public class BlockchainSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Seq</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Mapa</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Seq</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Mapa</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSeq(Seq object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Map</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Map</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMap(Map object) {
+	public T caseMapa(Mapa object) {
 		return null;
 	}
 
@@ -591,6 +535,21 @@ public class BlockchainSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseExpresionReferenciada(ExpresionReferenciada object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Expresion Relacional</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Expresion Relacional</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExpresionRelacional(ExpresionRelacional object) {
 		return null;
 	}
 

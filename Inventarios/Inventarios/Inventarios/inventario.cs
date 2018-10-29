@@ -25,6 +25,7 @@ public class Inventario : SmartContract
         
     }
 
+
     public ISmartContractMapping<Producto> Productos
     {
         get

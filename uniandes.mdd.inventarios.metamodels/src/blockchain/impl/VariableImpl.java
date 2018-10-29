@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link blockchain.impl.VariableImpl#getTipoDato <em>Tipo Dato</em>}</li>
+ *   <li>{@link blockchain.impl.VariableImpl#getTipodato <em>Tipodato</em>}</li>
  *   <li>{@link blockchain.impl.VariableImpl#getName <em>Name</em>}</li>
  * </ul>
  *
@@ -29,14 +29,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class VariableImpl extends SentenciaImpl implements Variable {
 	/**
-	 * The cached value of the '{@link #getTipoDato() <em>Tipo Dato</em>}' reference.
+	 * The cached value of the '{@link #getTipodato() <em>Tipodato</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTipoDato()
+	 * @see #getTipodato()
 	 * @generated
 	 * @ordered
 	 */
-	protected TipoDato tipoDato;
+	protected TipoDato tipodato;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -82,16 +82,16 @@ public class VariableImpl extends SentenciaImpl implements Variable {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TipoDato getTipoDato() {
-		if (tipoDato != null && tipoDato.eIsProxy()) {
-			InternalEObject oldTipoDato = (InternalEObject)tipoDato;
-			tipoDato = (TipoDato)eResolveProxy(oldTipoDato);
-			if (tipoDato != oldTipoDato) {
+	public TipoDato getTipodato() {
+		if (tipodato != null && tipodato.eIsProxy()) {
+			InternalEObject oldTipodato = (InternalEObject)tipodato;
+			tipodato = (TipoDato)eResolveProxy(oldTipodato);
+			if (tipodato != oldTipodato) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BlockchainPackage.VARIABLE__TIPO_DATO, oldTipoDato, tipoDato));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BlockchainPackage.VARIABLE__TIPODATO, oldTipodato, tipodato));
 			}
 		}
-		return tipoDato;
+		return tipodato;
 	}
 
 	/**
@@ -99,8 +99,8 @@ public class VariableImpl extends SentenciaImpl implements Variable {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TipoDato basicGetTipoDato() {
-		return tipoDato;
+	public TipoDato basicGetTipodato() {
+		return tipodato;
 	}
 
 	/**
@@ -108,11 +108,11 @@ public class VariableImpl extends SentenciaImpl implements Variable {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTipoDato(TipoDato newTipoDato) {
-		TipoDato oldTipoDato = tipoDato;
-		tipoDato = newTipoDato;
+	public void setTipodato(TipoDato newTipodato) {
+		TipoDato oldTipodato = tipodato;
+		tipodato = newTipodato;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.VARIABLE__TIPO_DATO, oldTipoDato, tipoDato));
+			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.VARIABLE__TIPODATO, oldTipodato, tipodato));
 	}
 
 	/**
@@ -144,9 +144,9 @@ public class VariableImpl extends SentenciaImpl implements Variable {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case BlockchainPackage.VARIABLE__TIPO_DATO:
-				if (resolve) return getTipoDato();
-				return basicGetTipoDato();
+			case BlockchainPackage.VARIABLE__TIPODATO:
+				if (resolve) return getTipodato();
+				return basicGetTipodato();
 			case BlockchainPackage.VARIABLE__NAME:
 				return getName();
 		}
@@ -161,8 +161,8 @@ public class VariableImpl extends SentenciaImpl implements Variable {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case BlockchainPackage.VARIABLE__TIPO_DATO:
-				setTipoDato((TipoDato)newValue);
+			case BlockchainPackage.VARIABLE__TIPODATO:
+				setTipodato((TipoDato)newValue);
 				return;
 			case BlockchainPackage.VARIABLE__NAME:
 				setName((String)newValue);
@@ -179,8 +179,8 @@ public class VariableImpl extends SentenciaImpl implements Variable {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case BlockchainPackage.VARIABLE__TIPO_DATO:
-				setTipoDato((TipoDato)null);
+			case BlockchainPackage.VARIABLE__TIPODATO:
+				setTipodato((TipoDato)null);
 				return;
 			case BlockchainPackage.VARIABLE__NAME:
 				setName(NAME_EDEFAULT);
@@ -197,8 +197,8 @@ public class VariableImpl extends SentenciaImpl implements Variable {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case BlockchainPackage.VARIABLE__TIPO_DATO:
-				return tipoDato != null;
+			case BlockchainPackage.VARIABLE__TIPODATO:
+				return tipodato != null;
 			case BlockchainPackage.VARIABLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}

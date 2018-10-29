@@ -3,4 +3,5 @@
   <semanticResources>models/inventarioPiezas.xmi</semanticResources>
   <semanticResources>models/Inventario.xmi</semanticResources>
   <semanticResources>models/AutoMarket.xmi</semanticResources>
+  <semanticResources>models/Aplicacion.xmi</semanticResources>
 </viewpoint:DAnalysis>

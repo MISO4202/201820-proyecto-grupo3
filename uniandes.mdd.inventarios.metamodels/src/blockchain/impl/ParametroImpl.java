@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link blockchain.impl.ParametroImpl#getName <em>Name</em>}</li>
- *   <li>{@link blockchain.impl.ParametroImpl#getTipoDato <em>Tipo Dato</em>}</li>
+ *   <li>{@link blockchain.impl.ParametroImpl#getTipodato <em>Tipodato</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,14 +50,14 @@ public class ParametroImpl extends MinimalEObjectImpl.Container implements Param
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getTipoDato() <em>Tipo Dato</em>}' reference.
+	 * The cached value of the '{@link #getTipodato() <em>Tipodato</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTipoDato()
+	 * @see #getTipodato()
 	 * @generated
 	 * @ordered
 	 */
-	protected TipoDato tipoDato;
+	protected TipoDato tipodato;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,16 +104,16 @@ public class ParametroImpl extends MinimalEObjectImpl.Container implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TipoDato getTipoDato() {
-		if (tipoDato != null && tipoDato.eIsProxy()) {
-			InternalEObject oldTipoDato = (InternalEObject)tipoDato;
-			tipoDato = (TipoDato)eResolveProxy(oldTipoDato);
-			if (tipoDato != oldTipoDato) {
+	public TipoDato getTipodato() {
+		if (tipodato != null && tipodato.eIsProxy()) {
+			InternalEObject oldTipodato = (InternalEObject)tipodato;
+			tipodato = (TipoDato)eResolveProxy(oldTipodato);
+			if (tipodato != oldTipodato) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BlockchainPackage.PARAMETRO__TIPO_DATO, oldTipoDato, tipoDato));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BlockchainPackage.PARAMETRO__TIPODATO, oldTipodato, tipodato));
 			}
 		}
-		return tipoDato;
+		return tipodato;
 	}
 
 	/**
@@ -121,8 +121,8 @@ public class ParametroImpl extends MinimalEObjectImpl.Container implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TipoDato basicGetTipoDato() {
-		return tipoDato;
+	public TipoDato basicGetTipodato() {
+		return tipodato;
 	}
 
 	/**
@@ -130,11 +130,11 @@ public class ParametroImpl extends MinimalEObjectImpl.Container implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTipoDato(TipoDato newTipoDato) {
-		TipoDato oldTipoDato = tipoDato;
-		tipoDato = newTipoDato;
+	public void setTipodato(TipoDato newTipodato) {
+		TipoDato oldTipodato = tipodato;
+		tipodato = newTipodato;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.PARAMETRO__TIPO_DATO, oldTipoDato, tipoDato));
+			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.PARAMETRO__TIPODATO, oldTipodato, tipodato));
 	}
 
 	/**
@@ -147,9 +147,9 @@ public class ParametroImpl extends MinimalEObjectImpl.Container implements Param
 		switch (featureID) {
 			case BlockchainPackage.PARAMETRO__NAME:
 				return getName();
-			case BlockchainPackage.PARAMETRO__TIPO_DATO:
-				if (resolve) return getTipoDato();
-				return basicGetTipoDato();
+			case BlockchainPackage.PARAMETRO__TIPODATO:
+				if (resolve) return getTipodato();
+				return basicGetTipodato();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -165,8 +165,8 @@ public class ParametroImpl extends MinimalEObjectImpl.Container implements Param
 			case BlockchainPackage.PARAMETRO__NAME:
 				setName((String)newValue);
 				return;
-			case BlockchainPackage.PARAMETRO__TIPO_DATO:
-				setTipoDato((TipoDato)newValue);
+			case BlockchainPackage.PARAMETRO__TIPODATO:
+				setTipodato((TipoDato)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -183,8 +183,8 @@ public class ParametroImpl extends MinimalEObjectImpl.Container implements Param
 			case BlockchainPackage.PARAMETRO__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case BlockchainPackage.PARAMETRO__TIPO_DATO:
-				setTipoDato((TipoDato)null);
+			case BlockchainPackage.PARAMETRO__TIPODATO:
+				setTipodato((TipoDato)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -200,8 +200,8 @@ public class ParametroImpl extends MinimalEObjectImpl.Container implements Param
 		switch (featureID) {
 			case BlockchainPackage.PARAMETRO__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case BlockchainPackage.PARAMETRO__TIPO_DATO:
-				return tipoDato != null;
+			case BlockchainPackage.PARAMETRO__TIPODATO:
+				return tipodato != null;
 		}
 		return super.eIsSet(featureID);
 	}

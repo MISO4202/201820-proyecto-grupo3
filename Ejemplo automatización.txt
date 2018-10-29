@@ -1,0 +1,64 @@
+Aplicacion AplicacionBlockchain
+{
+    SmartContract AutoMarket
+    {
+        Entidad Vehiculo
+        {
+            STRING Marca
+            STRING Modelo
+            STRING Linea
+            NUMERICO Cilindraje
+            STRING Placa
+            NUMERICO Precio
+            BOOLEAN Nuevo
+            STRING Comentarios
+        }
+        MapaVehiculos Vehiculos
+        MapaVehiculos VehiculosCaros
+        MapaVehiculos VehiculosBaratos
+        Operacion ConsultarVehiculo (STRING Placa) : Vehiculo
+        {
+            return Vehiculos GET Placa
+        }
+        Operacion CalcularCostosVenta(NUMERICO PrecioVehiculo, NUMERICO ImpuestoVehiculo, NUMERICO ValorTraspaso, NUMERICO ComisionRunt) : NUMERICO
+        {
+             return ((((PrecioVehiculo * 0.19) + (PrecioVehiculo * ImpuestoVehiculo)) + ValorTraspaso ) + ComisionRunt)
+        }
+        Operacion CrearVehiculo(STRING Marca, STRING Modelo, STRING Linea, NUMERICO Cilindraje, STRING Placa, NUMERICO Precio)
+        {
+            Vehiculo vehiculo = new Vehiculo()
+            vehiculo.Marca = Marca
+            vehiculo.Modelo = Modelo
+            vehiculo.Linea = Linea
+            vehiculo.Cilindraje = Cilindraje
+            vehiculo.Placa = Placa
+            vehiculo.Precio = Precio
+            vehiculo.Nuevo = true
+            vehiculo.Comentarios = "Sin comentarios"
+            Vehiculos GET Placa = vehiculo
+            if(((Precio >= 100000000) OR (Marca == "Ferrari")) AND (Marca <> "Renault"))
+            {
+                VehiculosCaros GET Placa = vehiculo
+            }
+            else
+            {
+                VehiculosBaratos GET Placa = vehiculo
+            }
+        }
+        Operacion ActualizarVehiculo(NUMERICO Cilindraje, NUMERICO Precio)
+        {
+            Vehiculo vehiculo = Vehiculos GET Placa
+            vehiculo.Cilindraje = Cilindraje
+            vehiculo.Precio = Precio
+            vehiculo.Nuevo = false
+        }
+        Operacion BorrarVehiculo(STRING Placa)
+        {
+            Vehiculos DELETE Placa
+        }
+    }
+    TipoDato STRING : STRING
+    TipoDato NUMERICO : NUMERICO
+    TipoDato BOOLEAN : BOOLEAN
+    TipoDato MapaVehiculos : Map<String, Vehiculo>
+}

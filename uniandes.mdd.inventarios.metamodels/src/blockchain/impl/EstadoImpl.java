@@ -7,12 +7,11 @@ import blockchain.Estado;
 import blockchain.TipoDato;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class EstadoImpl extends SentenciaImpl implements Estado {
+public class EstadoImpl extends MinimalEObjectImpl.Container implements Estado {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,7 +49,7 @@ public class EstadoImpl extends SentenciaImpl implements Estado {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getTipodato() <em>Tipodato</em>}' containment reference.
+	 * The cached value of the '{@link #getTipodato() <em>Tipodato</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTipodato()
@@ -105,6 +104,14 @@ public class EstadoImpl extends SentenciaImpl implements Estado {
 	 * @generated
 	 */
 	public TipoDato getTipodato() {
+		if (tipodato != null && tipodato.eIsProxy()) {
+			InternalEObject oldTipodato = (InternalEObject)tipodato;
+			tipodato = (TipoDato)eResolveProxy(oldTipodato);
+			if (tipodato != oldTipodato) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BlockchainPackage.ESTADO__TIPODATO, oldTipodato, tipodato));
+			}
+		}
 		return tipodato;
 	}
 
@@ -113,14 +120,8 @@ public class EstadoImpl extends SentenciaImpl implements Estado {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTipodato(TipoDato newTipodato, NotificationChain msgs) {
-		TipoDato oldTipodato = tipodato;
-		tipodato = newTipodato;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BlockchainPackage.ESTADO__TIPODATO, oldTipodato, newTipodato);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public TipoDato basicGetTipodato() {
+		return tipodato;
 	}
 
 	/**
@@ -129,31 +130,10 @@ public class EstadoImpl extends SentenciaImpl implements Estado {
 	 * @generated
 	 */
 	public void setTipodato(TipoDato newTipodato) {
-		if (newTipodato != tipodato) {
-			NotificationChain msgs = null;
-			if (tipodato != null)
-				msgs = ((InternalEObject)tipodato).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BlockchainPackage.ESTADO__TIPODATO, null, msgs);
-			if (newTipodato != null)
-				msgs = ((InternalEObject)newTipodato).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BlockchainPackage.ESTADO__TIPODATO, null, msgs);
-			msgs = basicSetTipodato(newTipodato, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.ESTADO__TIPODATO, newTipodato, newTipodato));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case BlockchainPackage.ESTADO__TIPODATO:
-				return basicSetTipodato(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		TipoDato oldTipodato = tipodato;
+		tipodato = newTipodato;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.ESTADO__TIPODATO, oldTipodato, tipodato));
 	}
 
 	/**
@@ -167,7 +147,8 @@ public class EstadoImpl extends SentenciaImpl implements Estado {
 			case BlockchainPackage.ESTADO__NAME:
 				return getName();
 			case BlockchainPackage.ESTADO__TIPODATO:
-				return getTipodato();
+				if (resolve) return getTipodato();
+				return basicGetTipodato();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

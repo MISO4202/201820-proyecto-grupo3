@@ -66,7 +66,23 @@ public enum Operador implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	IGUAL(4, "IGUAL", "IGUAL");
+	IGUAL(4, "IGUAL", "IGUAL"), /**
+	 * The '<em><b>GET</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #GET_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	GET(5, "GET", "GET"), /**
+	 * The '<em><b>DELETE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #DELETE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	DELETE(6, "DELETE", "DELETE");
 
 	/**
 	 * The '<em><b>MAS</b></em>' literal value.
@@ -144,6 +160,36 @@ public enum Operador implements Enumerator {
 	public static final int IGUAL_VALUE = 4;
 
 	/**
+	 * The '<em><b>GET</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>GET</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #GET
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int GET_VALUE = 5;
+
+	/**
+	 * The '<em><b>DELETE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>DELETE</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #DELETE
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int DELETE_VALUE = 6;
+
+	/**
 	 * An array of all the '<em><b>Operador</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -156,6 +202,8 @@ public enum Operador implements Enumerator {
 			PRODUCTO,
 			DIVISION,
 			IGUAL,
+			GET,
+			DELETE,
 		};
 
 	/**
@@ -217,6 +265,8 @@ public enum Operador implements Enumerator {
 			case PRODUCTO_VALUE: return PRODUCTO;
 			case DIVISION_VALUE: return DIVISION;
 			case IGUAL_VALUE: return IGUAL;
+			case GET_VALUE: return GET;
+			case DELETE_VALUE: return DELETE;
 		}
 		return null;
 	}

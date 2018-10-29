@@ -65,18 +65,16 @@ public class BlockchainFactoryImpl extends EFactoryImpl implements BlockchainFac
 			case BlockchainPackage.PARAMETRO: return createParametro();
 			case BlockchainPackage.ESTADO: return createEstado();
 			case BlockchainPackage.EXPRESION_LOGICA: return createExpresionLogica();
-			case BlockchainPackage.RETORNO: return createRetorno();
-			case BlockchainPackage.ASIGNACION: return createAsignacion();
 			case BlockchainPackage.PRIMITIVO: return createPrimitivo();
 			case BlockchainPackage.EXPRESION_ARITMETICA: return createExpresionAritmetica();
 			case BlockchainPackage.VARIABLE: return createVariable();
-			case BlockchainPackage.SEQ: return createSeq();
-			case BlockchainPackage.MAP: return createMap();
+			case BlockchainPackage.MAPA: return createMapa();
 			case BlockchainPackage.CONDICIONAL: return createCondicional();
 			case BlockchainPackage.EXPRESION_NUMERICA: return createExpresionNumerica();
 			case BlockchainPackage.EXPRESION_TEXTO: return createExpresionTexto();
 			case BlockchainPackage.EXPRESION_BOOLEAN: return createExpresionBoolean();
 			case BlockchainPackage.EXPRESION_REFERENCIADA: return createExpresionReferenciada();
+			case BlockchainPackage.EXPRESION_RELACIONAL: return createExpresionRelacional();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -98,6 +96,8 @@ public class BlockchainFactoryImpl extends EFactoryImpl implements BlockchainFac
 				return createDatoPrimitivoFromString(eDataType, initialValue);
 			case BlockchainPackage.TIPO_CONDICION:
 				return createTipoCondicionFromString(eDataType, initialValue);
+			case BlockchainPackage.OPERADOR_RELACION:
+				return createOperadorRelacionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -119,6 +119,8 @@ public class BlockchainFactoryImpl extends EFactoryImpl implements BlockchainFac
 				return convertDatoPrimitivoToString(eDataType, instanceValue);
 			case BlockchainPackage.TIPO_CONDICION:
 				return convertTipoCondicionToString(eDataType, instanceValue);
+			case BlockchainPackage.OPERADOR_RELACION:
+				return convertOperadorRelacionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -209,26 +211,6 @@ public class BlockchainFactoryImpl extends EFactoryImpl implements BlockchainFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Retorno createRetorno() {
-		RetornoImpl retorno = new RetornoImpl();
-		return retorno;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Asignacion createAsignacion() {
-		AsignacionImpl asignacion = new AsignacionImpl();
-		return asignacion;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Primitivo createPrimitivo() {
 		PrimitivoImpl primitivo = new PrimitivoImpl();
 		return primitivo;
@@ -259,19 +241,9 @@ public class BlockchainFactoryImpl extends EFactoryImpl implements BlockchainFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Seq createSeq() {
-		SeqImpl seq = new SeqImpl();
-		return seq;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Map createMap() {
-		MapImpl map = new MapImpl();
-		return map;
+	public Mapa createMapa() {
+		MapaImpl mapa = new MapaImpl();
+		return mapa;
 	}
 
 	/**
@@ -322,6 +294,16 @@ public class BlockchainFactoryImpl extends EFactoryImpl implements BlockchainFac
 	public ExpresionReferenciada createExpresionReferenciada() {
 		ExpresionReferenciadaImpl expresionReferenciada = new ExpresionReferenciadaImpl();
 		return expresionReferenciada;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExpresionRelacional createExpresionRelacional() {
+		ExpresionRelacionalImpl expresionRelacional = new ExpresionRelacionalImpl();
+		return expresionRelacional;
 	}
 
 	/**
@@ -401,6 +383,26 @@ public class BlockchainFactoryImpl extends EFactoryImpl implements BlockchainFac
 	 * @generated
 	 */
 	public String convertTipoCondicionToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OperadorRelacion createOperadorRelacionFromString(EDataType eDataType, String initialValue) {
+		OperadorRelacion result = OperadorRelacion.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertOperadorRelacionToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

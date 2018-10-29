@@ -12,7 +12,7 @@ package blockchain;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link blockchain.Variable#getTipoDato <em>Tipo Dato</em>}</li>
+ *   <li>{@link blockchain.Variable#getTipodato <em>Tipodato</em>}</li>
  *   <li>{@link blockchain.Variable#getName <em>Name</em>}</li>
  * </ul>
  *
@@ -22,30 +22,30 @@ package blockchain;
  */
 public interface Variable extends Sentencia {
 	/**
-	 * Returns the value of the '<em><b>Tipo Dato</b></em>' reference.
+	 * Returns the value of the '<em><b>Tipodato</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Tipo Dato</em>' reference isn't clear,
+	 * If the meaning of the '<em>Tipodato</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tipo Dato</em>' reference.
-	 * @see #setTipoDato(TipoDato)
-	 * @see blockchain.BlockchainPackage#getVariable_TipoDato()
+	 * @return the value of the '<em>Tipodato</em>' reference.
+	 * @see #setTipodato(TipoDato)
+	 * @see blockchain.BlockchainPackage#getVariable_Tipodato()
 	 * @model required="true"
 	 * @generated
 	 */
-	TipoDato getTipoDato();
+	TipoDato getTipodato();
 
 	/**
-	 * Sets the value of the '{@link blockchain.Variable#getTipoDato <em>Tipo Dato</em>}' reference.
+	 * Sets the value of the '{@link blockchain.Variable#getTipodato <em>Tipodato</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tipo Dato</em>' reference.
-	 * @see #getTipoDato()
+	 * @param value the new value of the '<em>Tipodato</em>' reference.
+	 * @see #getTipodato()
 	 * @generated
 	 */
-	void setTipoDato(TipoDato value);
+	void setTipodato(TipoDato value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

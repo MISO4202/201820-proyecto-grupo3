@@ -104,14 +104,6 @@ public class BlockchainAdapterFactory extends AdapterFactoryImpl {
 				return createExpresionLogicaAdapter();
 			}
 			@Override
-			public Adapter caseRetorno(Retorno object) {
-				return createRetornoAdapter();
-			}
-			@Override
-			public Adapter caseAsignacion(Asignacion object) {
-				return createAsignacionAdapter();
-			}
-			@Override
 			public Adapter casePrimitivo(Primitivo object) {
 				return createPrimitivoAdapter();
 			}
@@ -128,12 +120,8 @@ public class BlockchainAdapterFactory extends AdapterFactoryImpl {
 				return createVariableAdapter();
 			}
 			@Override
-			public Adapter caseSeq(Seq object) {
-				return createSeqAdapter();
-			}
-			@Override
-			public Adapter caseMap(Map object) {
-				return createMapAdapter();
+			public Adapter caseMapa(Mapa object) {
+				return createMapaAdapter();
 			}
 			@Override
 			public Adapter caseCondicional(Condicional object) {
@@ -162,6 +150,10 @@ public class BlockchainAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseExpresionReferenciada(ExpresionReferenciada object) {
 				return createExpresionReferenciadaAdapter();
+			}
+			@Override
+			public Adapter caseExpresionRelacional(ExpresionRelacional object) {
+				return createExpresionRelacionalAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -310,34 +302,6 @@ public class BlockchainAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link blockchain.Retorno <em>Retorno</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see blockchain.Retorno
-	 * @generated
-	 */
-	public Adapter createRetornoAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link blockchain.Asignacion <em>Asignacion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see blockchain.Asignacion
-	 * @generated
-	 */
-	public Adapter createAsignacionAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link blockchain.Primitivo <em>Primitivo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -394,30 +358,16 @@ public class BlockchainAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link blockchain.Seq <em>Seq</em>}'.
+	 * Creates a new adapter for an object of class '{@link blockchain.Mapa <em>Mapa</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see blockchain.Seq
+	 * @see blockchain.Mapa
 	 * @generated
 	 */
-	public Adapter createSeqAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link blockchain.Map <em>Map</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see blockchain.Map
-	 * @generated
-	 */
-	public Adapter createMapAdapter() {
+	public Adapter createMapaAdapter() {
 		return null;
 	}
 
@@ -516,6 +466,20 @@ public class BlockchainAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createExpresionReferenciadaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link blockchain.ExpresionRelacional <em>Expresion Relacional</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see blockchain.ExpresionRelacional
+	 * @generated
+	 */
+	public Adapter createExpresionRelacionalAdapter() {
 		return null;
 	}
 

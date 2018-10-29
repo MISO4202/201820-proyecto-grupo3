@@ -11,7 +11,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Entidad" eSuperTypes="#//TipoDato">
     <eStructuralFeatures xsi:type="ecore:EReference" name="atributos" upperBound="-1"
         eType="#//Atributo" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Atributo">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -33,8 +32,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sentencia" upperBound="-1"
         eType="#//Sentencia" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="retorno" eType="#//TipoDato"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="esUserDefined" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="retorno" eType="#//TipoDato"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Parametro" eSuperTypes="#//Sentencia">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -50,11 +49,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="ExpresionLogica" eSuperTypes="#//Expresion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operador" eType="#//OperadorLogico"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Retorno" eSuperTypes="#//Sentencia"/>
   <eClassifiers xsi:type="ecore:EClass" name="Primitivo" eSuperTypes="#//TipoDato">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//DatoPrimitivo"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TipoDato" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TipoDato" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="OperadorLogico">
     <eLiterals name="IGUAL_IGUAL"/>
     <eLiterals name="DIFERENTE" value="1"/>
@@ -62,7 +62,6 @@
     <eLiterals name="MENORQUE" value="3"/>
     <eLiterals name="MAYORIGUAL" value="4"/>
     <eLiterals name="MENORIGUAL" value="5"/>
-    <eLiterals name="PUNTO" value="6"/>
     <eLiterals name="AND" value="7"/>
     <eLiterals name="OR" value="8"/>
   </eClassifiers>
@@ -72,6 +71,8 @@
     <eLiterals name="PRODUCTO" value="2"/>
     <eLiterals name="DIVISION" value="3"/>
     <eLiterals name="IGUAL" value="4"/>
+    <eLiterals name="GET" value="5"/>
+    <eLiterals name="DELETE" value="6"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExpresionAritmetica" eSuperTypes="#//Expresion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operador" eType="#//Operador"/>
@@ -86,11 +87,7 @@
     <eLiterals name="NUMERICO" value="1"/>
     <eLiterals name="BOOLEAN" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Seq" eSuperTypes="#//TipoDato">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tipodato" lowerBound="1"
-        eType="#//TipoDato"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Map" eSuperTypes="#//TipoDato">
+  <eClassifiers xsi:type="ecore:EClass" name="Mapa" eSuperTypes="#//TipoDato">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tipoDatoKey" lowerBound="1"
         eType="#//TipoDato"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tipoDatoValue" lowerBound="1"
@@ -99,7 +96,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="Condicional" eSuperTypes="#//Sentencia">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoCondicional" eType="#//TipoCondicion"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expresionlogica" lowerBound="1"
-        upperBound="-1" eType="#//ExpresionLogica" containment="true"/>
+        eType="#//ExpresionLogica" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sentencias" lowerBound="1"
+        upperBound="-1" eType="#//Sentencia" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="else" upperBound="-1" eType="#//Condicional"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TipoCondicion">
     <eLiterals name="IF"/>
@@ -123,8 +124,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExpresionReferenciada" eSuperTypes="#//ValorElementos">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="expReferenciada" eType="#//Entidad"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="atributoRef" eType="#//Atributo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entReferenciada" eType="#//Entidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atrReferenciado" eType="#//Atributo"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpresionRelacional" eSuperTypes="#//Expresion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operadorRelacional" eType="#//OperadorRelacion"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="OperadorRelacion">
+    <eLiterals name="PUNTO"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -35,8 +35,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link blockchain.impl.OperacionImpl#getParametros <em>Parametros</em>}</li>
  *   <li>{@link blockchain.impl.OperacionImpl#getName <em>Name</em>}</li>
  *   <li>{@link blockchain.impl.OperacionImpl#getSentencia <em>Sentencia</em>}</li>
- *   <li>{@link blockchain.impl.OperacionImpl#getRetorno <em>Retorno</em>}</li>
  *   <li>{@link blockchain.impl.OperacionImpl#isEsUserDefined <em>Es User Defined</em>}</li>
+ *   <li>{@link blockchain.impl.OperacionImpl#getRetorno <em>Retorno</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,16 +83,6 @@ public class OperacionImpl extends MinimalEObjectImpl.Container implements Opera
 	protected EList<Sentencia> sentencia;
 
 	/**
-	 * The cached value of the '{@link #getRetorno() <em>Retorno</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRetorno()
-	 * @generated
-	 * @ordered
-	 */
-	protected TipoDato retorno;
-
-	/**
 	 * The default value of the '{@link #isEsUserDefined() <em>Es User Defined</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -111,6 +101,16 @@ public class OperacionImpl extends MinimalEObjectImpl.Container implements Opera
 	 * @ordered
 	 */
 	protected boolean esUserDefined = ES_USER_DEFINED_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getRetorno() <em>Retorno</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRetorno()
+	 * @generated
+	 * @ordered
+	 */
+	protected TipoDato retorno;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -265,11 +265,11 @@ public class OperacionImpl extends MinimalEObjectImpl.Container implements Opera
 				return getName();
 			case BlockchainPackage.OPERACION__SENTENCIA:
 				return getSentencia();
+			case BlockchainPackage.OPERACION__ES_USER_DEFINED:
+				return isEsUserDefined();
 			case BlockchainPackage.OPERACION__RETORNO:
 				if (resolve) return getRetorno();
 				return basicGetRetorno();
-			case BlockchainPackage.OPERACION__ES_USER_DEFINED:
-				return isEsUserDefined();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -294,11 +294,11 @@ public class OperacionImpl extends MinimalEObjectImpl.Container implements Opera
 				getSentencia().clear();
 				getSentencia().addAll((Collection<? extends Sentencia>)newValue);
 				return;
-			case BlockchainPackage.OPERACION__RETORNO:
-				setRetorno((TipoDato)newValue);
-				return;
 			case BlockchainPackage.OPERACION__ES_USER_DEFINED:
 				setEsUserDefined((Boolean)newValue);
+				return;
+			case BlockchainPackage.OPERACION__RETORNO:
+				setRetorno((TipoDato)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -321,11 +321,11 @@ public class OperacionImpl extends MinimalEObjectImpl.Container implements Opera
 			case BlockchainPackage.OPERACION__SENTENCIA:
 				getSentencia().clear();
 				return;
-			case BlockchainPackage.OPERACION__RETORNO:
-				setRetorno((TipoDato)null);
-				return;
 			case BlockchainPackage.OPERACION__ES_USER_DEFINED:
 				setEsUserDefined(ES_USER_DEFINED_EDEFAULT);
+				return;
+			case BlockchainPackage.OPERACION__RETORNO:
+				setRetorno((TipoDato)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -345,10 +345,10 @@ public class OperacionImpl extends MinimalEObjectImpl.Container implements Opera
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case BlockchainPackage.OPERACION__SENTENCIA:
 				return sentencia != null && !sentencia.isEmpty();
-			case BlockchainPackage.OPERACION__RETORNO:
-				return retorno != null;
 			case BlockchainPackage.OPERACION__ES_USER_DEFINED:
 				return esUserDefined != ES_USER_DEFINED_EDEFAULT;
+			case BlockchainPackage.OPERACION__RETORNO:
+				return retorno != null;
 		}
 		return super.eIsSet(featureID);
 	}

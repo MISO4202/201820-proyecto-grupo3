@@ -7,8 +7,6 @@ import blockchain.BlockchainPackage;
 import blockchain.TipoDato;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -51,7 +49,7 @@ public class AtributoImpl extends MinimalEObjectImpl.Container implements Atribu
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getTipodato() <em>Tipodato</em>}' containment reference.
+	 * The cached value of the '{@link #getTipodato() <em>Tipodato</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTipodato()
@@ -106,6 +104,14 @@ public class AtributoImpl extends MinimalEObjectImpl.Container implements Atribu
 	 * @generated
 	 */
 	public TipoDato getTipodato() {
+		if (tipodato != null && tipodato.eIsProxy()) {
+			InternalEObject oldTipodato = (InternalEObject)tipodato;
+			tipodato = (TipoDato)eResolveProxy(oldTipodato);
+			if (tipodato != oldTipodato) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BlockchainPackage.ATRIBUTO__TIPODATO, oldTipodato, tipodato));
+			}
+		}
 		return tipodato;
 	}
 
@@ -114,14 +120,8 @@ public class AtributoImpl extends MinimalEObjectImpl.Container implements Atribu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTipodato(TipoDato newTipodato, NotificationChain msgs) {
-		TipoDato oldTipodato = tipodato;
-		tipodato = newTipodato;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BlockchainPackage.ATRIBUTO__TIPODATO, oldTipodato, newTipodato);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public TipoDato basicGetTipodato() {
+		return tipodato;
 	}
 
 	/**
@@ -130,31 +130,10 @@ public class AtributoImpl extends MinimalEObjectImpl.Container implements Atribu
 	 * @generated
 	 */
 	public void setTipodato(TipoDato newTipodato) {
-		if (newTipodato != tipodato) {
-			NotificationChain msgs = null;
-			if (tipodato != null)
-				msgs = ((InternalEObject)tipodato).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BlockchainPackage.ATRIBUTO__TIPODATO, null, msgs);
-			if (newTipodato != null)
-				msgs = ((InternalEObject)newTipodato).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BlockchainPackage.ATRIBUTO__TIPODATO, null, msgs);
-			msgs = basicSetTipodato(newTipodato, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.ATRIBUTO__TIPODATO, newTipodato, newTipodato));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case BlockchainPackage.ATRIBUTO__TIPODATO:
-				return basicSetTipodato(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		TipoDato oldTipodato = tipodato;
+		tipodato = newTipodato;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.ATRIBUTO__TIPODATO, oldTipodato, tipodato));
 	}
 
 	/**
@@ -168,7 +147,8 @@ public class AtributoImpl extends MinimalEObjectImpl.Container implements Atribu
 			case BlockchainPackage.ATRIBUTO__NAME:
 				return getName();
 			case BlockchainPackage.ATRIBUTO__TIPODATO:
-				return getTipodato();
+				if (resolve) return getTipodato();
+				return basicGetTipodato();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

@@ -94,24 +94,6 @@ public interface BlockchainFactory extends EFactory {
 	ExpresionLogica createExpresionLogica();
 
 	/**
-	 * Returns a new object of class '<em>Retorno</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Retorno</em>'.
-	 * @generated
-	 */
-	Retorno createRetorno();
-
-	/**
-	 * Returns a new object of class '<em>Asignacion</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Asignacion</em>'.
-	 * @generated
-	 */
-	Asignacion createAsignacion();
-
-	/**
 	 * Returns a new object of class '<em>Primitivo</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -139,22 +121,13 @@ public interface BlockchainFactory extends EFactory {
 	Variable createVariable();
 
 	/**
-	 * Returns a new object of class '<em>Seq</em>'.
+	 * Returns a new object of class '<em>Mapa</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Seq</em>'.
+	 * @return a new object of class '<em>Mapa</em>'.
 	 * @generated
 	 */
-	Seq createSeq();
-
-	/**
-	 * Returns a new object of class '<em>Map</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Map</em>'.
-	 * @generated
-	 */
-	Map createMap();
+	Mapa createMapa();
 
 	/**
 	 * Returns a new object of class '<em>Condicional</em>'.
@@ -200,6 +173,15 @@ public interface BlockchainFactory extends EFactory {
 	 * @generated
 	 */
 	ExpresionReferenciada createExpresionReferenciada();
+
+	/**
+	 * Returns a new object of class '<em>Expresion Relacional</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Expresion Relacional</em>'.
+	 * @generated
+	 */
+	ExpresionRelacional createExpresionRelacional();
 
 	/**
 	 * Returns the package supported by this factory.

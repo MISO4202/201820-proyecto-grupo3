@@ -79,16 +79,6 @@ public enum OperadorLogico implements Enumerator {
 	MENORIGUAL(5, "MENORIGUAL", "MENORIGUAL"),
 
 	/**
-	 * The '<em><b>PUNTO</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #PUNTO_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	PUNTO(6, "PUNTO", "PUNTO"),
-
-	/**
 	 * The '<em><b>AND</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -199,21 +189,6 @@ public enum OperadorLogico implements Enumerator {
 	public static final int MENORIGUAL_VALUE = 5;
 
 	/**
-	 * The '<em><b>PUNTO</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>PUNTO</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #PUNTO
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
-	public static final int PUNTO_VALUE = 6;
-
-	/**
 	 * The '<em><b>AND</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -257,7 +232,6 @@ public enum OperadorLogico implements Enumerator {
 			MENORQUE,
 			MAYORIGUAL,
 			MENORIGUAL,
-			PUNTO,
 			AND,
 			OR,
 		};
@@ -322,7 +296,6 @@ public enum OperadorLogico implements Enumerator {
 			case MENORQUE_VALUE: return MENORQUE;
 			case MAYORIGUAL_VALUE: return MAYORIGUAL;
 			case MENORIGUAL_VALUE: return MENORIGUAL;
-			case PUNTO_VALUE: return PUNTO;
 			case AND_VALUE: return AND;
 			case OR_VALUE: return OR;
 		}

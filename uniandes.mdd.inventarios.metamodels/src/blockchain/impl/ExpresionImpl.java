@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link blockchain.impl.ExpresionImpl#getLadoIzq <em>Lado Izq</em>}</li>
  *   <li>{@link blockchain.impl.ExpresionImpl#getLadoDer <em>Lado Der</em>}</li>
+ *   <li>{@link blockchain.impl.ExpresionImpl#getId <em>Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -47,6 +48,26 @@ public abstract class ExpresionImpl extends SentenciaImpl implements Expresion {
 	 * @ordered
 	 */
 	protected Sentencia ladoDer;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ID_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected int id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -148,6 +169,27 @@ public abstract class ExpresionImpl extends SentenciaImpl implements Expresion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(int newId) {
+		int oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.EXPRESION__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -157,6 +199,8 @@ public abstract class ExpresionImpl extends SentenciaImpl implements Expresion {
 			case BlockchainPackage.EXPRESION__LADO_DER:
 				if (resolve) return getLadoDer();
 				return basicGetLadoDer();
+			case BlockchainPackage.EXPRESION__ID:
+				return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -174,6 +218,9 @@ public abstract class ExpresionImpl extends SentenciaImpl implements Expresion {
 				return;
 			case BlockchainPackage.EXPRESION__LADO_DER:
 				setLadoDer((Sentencia)newValue);
+				return;
+			case BlockchainPackage.EXPRESION__ID:
+				setId((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -193,6 +240,9 @@ public abstract class ExpresionImpl extends SentenciaImpl implements Expresion {
 			case BlockchainPackage.EXPRESION__LADO_DER:
 				setLadoDer((Sentencia)null);
 				return;
+			case BlockchainPackage.EXPRESION__ID:
+				setId(ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -209,8 +259,26 @@ public abstract class ExpresionImpl extends SentenciaImpl implements Expresion {
 				return ladoIzq != null;
 			case BlockchainPackage.EXPRESION__LADO_DER:
 				return ladoDer != null;
+			case BlockchainPackage.EXPRESION__ID:
+				return id != ID_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ExpresionImpl

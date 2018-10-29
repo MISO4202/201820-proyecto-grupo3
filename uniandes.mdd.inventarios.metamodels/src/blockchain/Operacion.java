@@ -18,8 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link blockchain.Operacion#getParametros <em>Parametros</em>}</li>
  *   <li>{@link blockchain.Operacion#getName <em>Name</em>}</li>
  *   <li>{@link blockchain.Operacion#getSentencia <em>Sentencia</em>}</li>
- *   <li>{@link blockchain.Operacion#getRetorno <em>Retorno</em>}</li>
  *   <li>{@link blockchain.Operacion#isEsUserDefined <em>Es User Defined</em>}</li>
+ *   <li>{@link blockchain.Operacion#getRetorno <em>Retorno</em>}</li>
  * </ul>
  *
  * @see blockchain.BlockchainPackage#getOperacion()

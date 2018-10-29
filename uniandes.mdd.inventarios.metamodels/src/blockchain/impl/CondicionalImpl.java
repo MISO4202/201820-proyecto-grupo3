@@ -5,6 +5,7 @@ package blockchain.impl;
 import blockchain.BlockchainPackage;
 import blockchain.Condicional;
 import blockchain.ExpresionLogica;
+import blockchain.Sentencia;
 import blockchain.TipoCondicion;
 
 import java.util.Collection;
@@ -18,8 +19,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -33,11 +32,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link blockchain.impl.CondicionalImpl#getTipoCondicional <em>Tipo Condicional</em>}</li>
  *   <li>{@link blockchain.impl.CondicionalImpl#getExpresionlogica <em>Expresionlogica</em>}</li>
+ *   <li>{@link blockchain.impl.CondicionalImpl#getSentencias <em>Sentencias</em>}</li>
+ *   <li>{@link blockchain.impl.CondicionalImpl#getElse <em>Else</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class CondicionalImpl extends MinimalEObjectImpl.Container implements Condicional {
+public class CondicionalImpl extends SentenciaImpl implements Condicional {
 	/**
 	 * The default value of the '{@link #getTipoCondicional() <em>Tipo Condicional</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -59,14 +60,34 @@ public class CondicionalImpl extends MinimalEObjectImpl.Container implements Con
 	protected TipoCondicion tipoCondicional = TIPO_CONDICIONAL_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getExpresionlogica() <em>Expresionlogica</em>}' containment reference list.
+	 * The cached value of the '{@link #getExpresionlogica() <em>Expresionlogica</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getExpresionlogica()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ExpresionLogica> expresionlogica;
+	protected ExpresionLogica expresionlogica;
+
+	/**
+	 * The cached value of the '{@link #getSentencias() <em>Sentencias</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSentencias()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Sentencia> sentencias;
+
+	/**
+	 * The cached value of the '{@link #getElse() <em>Else</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getElse()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Condicional> else_;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,11 +134,66 @@ public class CondicionalImpl extends MinimalEObjectImpl.Container implements Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ExpresionLogica> getExpresionlogica() {
-		if (expresionlogica == null) {
-			expresionlogica = new EObjectContainmentEList<ExpresionLogica>(ExpresionLogica.class, this, BlockchainPackage.CONDICIONAL__EXPRESIONLOGICA);
-		}
+	public ExpresionLogica getExpresionlogica() {
 		return expresionlogica;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetExpresionlogica(ExpresionLogica newExpresionlogica, NotificationChain msgs) {
+		ExpresionLogica oldExpresionlogica = expresionlogica;
+		expresionlogica = newExpresionlogica;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BlockchainPackage.CONDICIONAL__EXPRESIONLOGICA, oldExpresionlogica, newExpresionlogica);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setExpresionlogica(ExpresionLogica newExpresionlogica) {
+		if (newExpresionlogica != expresionlogica) {
+			NotificationChain msgs = null;
+			if (expresionlogica != null)
+				msgs = ((InternalEObject)expresionlogica).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BlockchainPackage.CONDICIONAL__EXPRESIONLOGICA, null, msgs);
+			if (newExpresionlogica != null)
+				msgs = ((InternalEObject)newExpresionlogica).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BlockchainPackage.CONDICIONAL__EXPRESIONLOGICA, null, msgs);
+			msgs = basicSetExpresionlogica(newExpresionlogica, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.CONDICIONAL__EXPRESIONLOGICA, newExpresionlogica, newExpresionlogica));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Sentencia> getSentencias() {
+		if (sentencias == null) {
+			sentencias = new EObjectContainmentEList<Sentencia>(Sentencia.class, this, BlockchainPackage.CONDICIONAL__SENTENCIAS);
+		}
+		return sentencias;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Condicional> getElse() {
+		if (else_ == null) {
+			else_ = new EObjectContainmentEList<Condicional>(Condicional.class, this, BlockchainPackage.CONDICIONAL__ELSE);
+		}
+		return else_;
 	}
 
 	/**
@@ -129,7 +205,11 @@ public class CondicionalImpl extends MinimalEObjectImpl.Container implements Con
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case BlockchainPackage.CONDICIONAL__EXPRESIONLOGICA:
-				return ((InternalEList<?>)getExpresionlogica()).basicRemove(otherEnd, msgs);
+				return basicSetExpresionlogica(null, msgs);
+			case BlockchainPackage.CONDICIONAL__SENTENCIAS:
+				return ((InternalEList<?>)getSentencias()).basicRemove(otherEnd, msgs);
+			case BlockchainPackage.CONDICIONAL__ELSE:
+				return ((InternalEList<?>)getElse()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -146,6 +226,10 @@ public class CondicionalImpl extends MinimalEObjectImpl.Container implements Con
 				return getTipoCondicional();
 			case BlockchainPackage.CONDICIONAL__EXPRESIONLOGICA:
 				return getExpresionlogica();
+			case BlockchainPackage.CONDICIONAL__SENTENCIAS:
+				return getSentencias();
+			case BlockchainPackage.CONDICIONAL__ELSE:
+				return getElse();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -163,8 +247,15 @@ public class CondicionalImpl extends MinimalEObjectImpl.Container implements Con
 				setTipoCondicional((TipoCondicion)newValue);
 				return;
 			case BlockchainPackage.CONDICIONAL__EXPRESIONLOGICA:
-				getExpresionlogica().clear();
-				getExpresionlogica().addAll((Collection<? extends ExpresionLogica>)newValue);
+				setExpresionlogica((ExpresionLogica)newValue);
+				return;
+			case BlockchainPackage.CONDICIONAL__SENTENCIAS:
+				getSentencias().clear();
+				getSentencias().addAll((Collection<? extends Sentencia>)newValue);
+				return;
+			case BlockchainPackage.CONDICIONAL__ELSE:
+				getElse().clear();
+				getElse().addAll((Collection<? extends Condicional>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -182,7 +273,13 @@ public class CondicionalImpl extends MinimalEObjectImpl.Container implements Con
 				setTipoCondicional(TIPO_CONDICIONAL_EDEFAULT);
 				return;
 			case BlockchainPackage.CONDICIONAL__EXPRESIONLOGICA:
-				getExpresionlogica().clear();
+				setExpresionlogica((ExpresionLogica)null);
+				return;
+			case BlockchainPackage.CONDICIONAL__SENTENCIAS:
+				getSentencias().clear();
+				return;
+			case BlockchainPackage.CONDICIONAL__ELSE:
+				getElse().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -199,7 +296,11 @@ public class CondicionalImpl extends MinimalEObjectImpl.Container implements Con
 			case BlockchainPackage.CONDICIONAL__TIPO_CONDICIONAL:
 				return tipoCondicional != TIPO_CONDICIONAL_EDEFAULT;
 			case BlockchainPackage.CONDICIONAL__EXPRESIONLOGICA:
-				return expresionlogica != null && !expresionlogica.isEmpty();
+				return expresionlogica != null;
+			case BlockchainPackage.CONDICIONAL__SENTENCIAS:
+				return sentencias != null && !sentencias.isEmpty();
+			case BlockchainPackage.CONDICIONAL__ELSE:
+				return else_ != null && !else_.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
