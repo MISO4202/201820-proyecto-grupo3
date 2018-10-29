@@ -76,22 +76,21 @@ EBoolean returns ecore::EBoolean:
 	'true' | 'false';
 
 ExpresionLogica returns ExpresionLogica:
-	'ExpresionLogica'
-	'{'
-		('id' id=EInt)?
-		('operador' operador=OperadorLogico)?
-		'ladoIzq' ladoIzq=[Sentencia|EString]
-		'ladoDer' ladoDer=[Sentencia|EString]
-	'}';
+	'ExpLog'
+	('(')?
+	('id' id=EInt)?
+	ladoIzq=[Sentencia|EString]
+	(operador=OperadorLogico)+
+	ladoDer=[Sentencia|EString]
+	(')')?
+	;
 
 ExpresionAritmetica returns ExpresionAritmetica:
 		{ExpresionAritmetica}
 		('id' id=EInt)?
-		('(')*
 		ladoIzq=[Sentencia|EString]
 		(operador=Operador)+	
 		ladoDer=[Sentencia|EString]
-		(')')*
 	;
 
 Variable returns Variable:
@@ -113,23 +112,20 @@ Condicional returns Condicional:
 ExpresionNumerica returns ExpresionNumerica:
 	{ExpresionNumerica}
 	'ExpNum'
-	('id' id=EInt)?
 	(value=EDouble)?
 	;
 
 ExpresionTexto returns ExpresionTexto:
 	{ExpresionTexto}
-	'ExpresionTexto'
+	'ExpText'
 	'{'
-		('id' id=EInt)?
 		('value' value=EString)?
 	'}';
 
 ExpresionBoolean returns ExpresionBoolean:
 	{ExpresionBoolean}
-	('id' id=EInt)?
 	(value?='value')?
-	'ExpresionBoolean'
+	'ExpBool'
 	;
 
 ExpresionReferenciada returns ExpresionReferenciada:
@@ -141,12 +137,12 @@ ExpresionReferenciada returns ExpresionReferenciada:
 	;
 
 ExpresionRelacional returns ExpresionRelacional:
-	'ExpresionRelacional'
+	'ExpRel'
 	'{'
 		('id' id=EInt)?
-		('operadorRelacional' operadorRelacional=OperadorRelacion)?
-		'ladoIzq' ladoIzq=[Sentencia|EString]
-		'ladoDer' ladoDer=[Sentencia|EString]
+		ladoIzq=[Sentencia|EString]
+		(operadorRelacional=OperadorRelacion)?
+		ladoDer=[Sentencia|EString]
 	'}';
 
 EInt returns ecore::EInt:
@@ -185,3 +181,4 @@ enum DatoPrimitivo returns DatoPrimitivo:
 				STRING = 'STRING' | NUMERICO = 'NUMERICO' | BOOLEAN = 'BOOLEAN';
 			
 				
+

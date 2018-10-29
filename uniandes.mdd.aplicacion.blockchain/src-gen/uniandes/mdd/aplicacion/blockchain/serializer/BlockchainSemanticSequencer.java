@@ -213,7 +213,7 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     ExpresionBoolean returns ExpresionBoolean
 	 *
 	 * Constraint:
-	 *     (id=EInt? value?='value'?)
+	 *     value?='value'?
 	 */
 	protected void sequence_ExpresionBoolean(ISerializationContext context, ExpresionBoolean semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -226,7 +226,7 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     ExpresionLogica returns ExpresionLogica
 	 *
 	 * Constraint:
-	 *     (id=EInt? operador=OperadorLogico? ladoIzq=[Sentencia|EString] ladoDer=[Sentencia|EString])
+	 *     (id=EInt? ladoIzq=[Sentencia|EString] operador=OperadorLogico+ ladoDer=[Sentencia|EString])
 	 */
 	protected void sequence_ExpresionLogica(ISerializationContext context, ExpresionLogica semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -239,7 +239,7 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     ExpresionNumerica returns ExpresionNumerica
 	 *
 	 * Constraint:
-	 *     (id=EInt? value=EDouble?)
+	 *     value=EDouble?
 	 */
 	protected void sequence_ExpresionNumerica(ISerializationContext context, ExpresionNumerica semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -265,7 +265,7 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     ExpresionRelacional returns ExpresionRelacional
 	 *
 	 * Constraint:
-	 *     (id=EInt? operadorRelacional=OperadorRelacion? ladoIzq=[Sentencia|EString] ladoDer=[Sentencia|EString])
+	 *     (id=EInt? ladoIzq=[Sentencia|EString] operadorRelacional=OperadorRelacion? ladoDer=[Sentencia|EString])
 	 */
 	protected void sequence_ExpresionRelacional(ISerializationContext context, ExpresionRelacional semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -277,7 +277,7 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     ExpresionTexto returns ExpresionTexto
 	 *
 	 * Constraint:
-	 *     (id=EInt? value=EString?)
+	 *     value=EString?
 	 */
 	protected void sequence_ExpresionTexto(ISerializationContext context, ExpresionTexto semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

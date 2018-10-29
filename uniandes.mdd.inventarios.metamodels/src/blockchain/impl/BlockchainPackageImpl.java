@@ -617,6 +617,15 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getExpresionAritmetica_SubExpArit() {
+		return (EReference)expresionAritmeticaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVariable() {
 		return variableEClass;
 	}
@@ -983,6 +992,7 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 
 		expresionAritmeticaEClass = createEClass(EXPRESION_ARITMETICA);
 		createEAttribute(expresionAritmeticaEClass, EXPRESION_ARITMETICA__OPERADOR);
+		createEReference(expresionAritmeticaEClass, EXPRESION_ARITMETICA__SUB_EXP_ARIT);
 
 		variableEClass = createEClass(VARIABLE);
 		createEReference(variableEClass, VARIABLE__TIPODATO);
@@ -1122,6 +1132,7 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 
 		initEClass(expresionAritmeticaEClass, ExpresionAritmetica.class, "ExpresionAritmetica", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExpresionAritmetica_Operador(), this.getOperador(), "operador", null, 0, 1, ExpresionAritmetica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExpresionAritmetica_SubExpArit(), this.getExpresionAritmetica(), null, "subExpArit", null, 0, -1, ExpresionAritmetica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVariable_Tipodato(), this.getTipoDato(), null, "tipodato", null, 1, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

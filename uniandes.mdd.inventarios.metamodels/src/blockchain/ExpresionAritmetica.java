@@ -2,6 +2,8 @@
  */
 package blockchain;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -13,6 +15,7 @@ package blockchain;
  * </p>
  * <ul>
  *   <li>{@link blockchain.ExpresionAritmetica#getOperador <em>Operador</em>}</li>
+ *   <li>{@link blockchain.ExpresionAritmetica#getSubExpArit <em>Sub Exp Arit</em>}</li>
  * </ul>
  *
  * @see blockchain.BlockchainPackage#getExpresionAritmetica()
@@ -48,5 +51,21 @@ public interface ExpresionAritmetica extends Expresion {
 	 * @generated
 	 */
 	void setOperador(Operador value);
+
+	/**
+	 * Returns the value of the '<em><b>Sub Exp Arit</b></em>' reference list.
+	 * The list contents are of type {@link blockchain.ExpresionAritmetica}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Sub Exp Arit</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sub Exp Arit</em>' reference list.
+	 * @see blockchain.BlockchainPackage#getExpresionAritmetica_SubExpArit()
+	 * @model
+	 * @generated
+	 */
+	EList<ExpresionAritmetica> getSubExpArit();
 
 } // ExpresionAritmetica

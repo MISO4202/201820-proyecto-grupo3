@@ -21,16 +21,16 @@ import uniandes.mdd.aplicacion.blockchain.services.BlockchainGrammarAccess;
 public class BlockchainSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected BlockchainGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_ExpresionAritmetica_LeftParenthesisKeyword_2_a;
-	protected AbstractElementAlias match_ExpresionAritmetica_RightParenthesisKeyword_6_a;
+	protected AbstractElementAlias match_ExpresionLogica_LeftParenthesisKeyword_1_q;
+	protected AbstractElementAlias match_ExpresionLogica_RightParenthesisKeyword_6_q;
 	protected AbstractElementAlias match_Operacion_ReturnKeyword_9_q;
 	protected AbstractElementAlias match_Sentencia_EBooleanParserRuleCall_8_or_EStringParserRuleCall_7;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (BlockchainGrammarAccess) access;
-		match_ExpresionAritmetica_LeftParenthesisKeyword_2_a = new TokenAlias(true, true, grammarAccess.getExpresionAritmeticaAccess().getLeftParenthesisKeyword_2());
-		match_ExpresionAritmetica_RightParenthesisKeyword_6_a = new TokenAlias(true, true, grammarAccess.getExpresionAritmeticaAccess().getRightParenthesisKeyword_6());
+		match_ExpresionLogica_LeftParenthesisKeyword_1_q = new TokenAlias(false, true, grammarAccess.getExpresionLogicaAccess().getLeftParenthesisKeyword_1());
+		match_ExpresionLogica_RightParenthesisKeyword_6_q = new TokenAlias(false, true, grammarAccess.getExpresionLogicaAccess().getRightParenthesisKeyword_6());
 		match_Operacion_ReturnKeyword_9_q = new TokenAlias(false, true, grammarAccess.getOperacionAccess().getReturnKeyword_9());
 		match_Sentencia_EBooleanParserRuleCall_8_or_EStringParserRuleCall_7 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getSentenciaAccess().getEBooleanParserRuleCall_8()), new TokenAlias(false, false, grammarAccess.getSentenciaAccess().getEStringParserRuleCall_7()));
 	}
@@ -70,10 +70,10 @@ public class BlockchainSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_ExpresionAritmetica_LeftParenthesisKeyword_2_a.equals(syntax))
-				emit_ExpresionAritmetica_LeftParenthesisKeyword_2_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_ExpresionAritmetica_RightParenthesisKeyword_6_a.equals(syntax))
-				emit_ExpresionAritmetica_RightParenthesisKeyword_6_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			if (match_ExpresionLogica_LeftParenthesisKeyword_1_q.equals(syntax))
+				emit_ExpresionLogica_LeftParenthesisKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_ExpresionLogica_RightParenthesisKeyword_6_q.equals(syntax))
+				emit_ExpresionLogica_RightParenthesisKeyword_6_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Operacion_ReturnKeyword_9_q.equals(syntax))
 				emit_Operacion_ReturnKeyword_9_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Sentencia_EBooleanParserRuleCall_8_or_EStringParserRuleCall_7.equals(syntax))
@@ -84,24 +84,24 @@ public class BlockchainSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Ambiguous syntax:
-	 *     '('*
+	 *     '('?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) ladoIzq=[Sentencia|EString]
-	 *     id=EInt (ambiguity) ladoIzq=[Sentencia|EString]
+	 *     (rule start) 'ExpLog' (ambiguity) 'id' id=EInt
+	 *     (rule start) 'ExpLog' (ambiguity) ladoIzq=[Sentencia|EString]
 	 */
-	protected void emit_ExpresionAritmetica_LeftParenthesisKeyword_2_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_ExpresionLogica_LeftParenthesisKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Ambiguous syntax:
-	 *     ')'*
+	 *     ')'?
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     ladoDer=[Sentencia|EString] (ambiguity) (rule end)
 	 */
-	protected void emit_ExpresionAritmetica_RightParenthesisKeyword_6_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_ExpresionLogica_RightParenthesisKeyword_6_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -123,7 +123,7 @@ public class BlockchainSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     EBoolean | EString
+	 *     EString | EBoolean
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) (rule start)

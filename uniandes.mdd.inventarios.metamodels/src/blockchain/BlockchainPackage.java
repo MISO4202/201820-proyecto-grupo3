@@ -710,13 +710,22 @@ public interface BlockchainPackage extends EPackage {
 	int EXPRESION_ARITMETICA__OPERADOR = EXPRESION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Sub Exp Arit</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESION_ARITMETICA__SUB_EXP_ARIT = EXPRESION_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Expresion Aritmetica</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_ARITMETICA_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 1;
+	int EXPRESION_ARITMETICA_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Expresion Aritmetica</em>' class.
@@ -1612,6 +1621,17 @@ public interface BlockchainPackage extends EPackage {
 	EAttribute getExpresionAritmetica_Operador();
 
 	/**
+	 * Returns the meta object for the reference list '{@link blockchain.ExpresionAritmetica#getSubExpArit <em>Sub Exp Arit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Sub Exp Arit</em>'.
+	 * @see blockchain.ExpresionAritmetica#getSubExpArit()
+	 * @see #getExpresionAritmetica()
+	 * @generated
+	 */
+	EReference getExpresionAritmetica_SubExpArit();
+
+	/**
 	 * Returns the meta object for class '{@link blockchain.Variable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2285,6 +2305,14 @@ public interface BlockchainPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EXPRESION_ARITMETICA__OPERADOR = eINSTANCE.getExpresionAritmetica_Operador();
+
+		/**
+		 * The meta object literal for the '<em><b>Sub Exp Arit</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPRESION_ARITMETICA__SUB_EXP_ARIT = eINSTANCE.getExpresionAritmetica_SubExpArit();
 
 		/**
 		 * The meta object literal for the '{@link blockchain.impl.VariableImpl <em>Variable</em>}' class.
