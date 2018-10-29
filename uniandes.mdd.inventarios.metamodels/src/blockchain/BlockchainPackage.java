@@ -399,42 +399,6 @@ public interface BlockchainPackage extends EPackage {
 	int SENTENCIA = 7;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETRO__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Tipodato</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETRO__TIPODATO = 1;
-
-	/**
-	 * The number of structural features of the '<em>Parametro</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETRO_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Parametro</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETRO_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link blockchain.impl.EstadoImpl <em>Estado</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -445,58 +409,13 @@ public interface BlockchainPackage extends EPackage {
 	int ESTADO = 6;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESTADO__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Tipodato</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESTADO__TIPODATO = 1;
-
-	/**
-	 * The number of structural features of the '<em>Estado</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESTADO_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Estado</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESTADO_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Estado</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENTENCIA__ESTADO = 0;
-
-	/**
 	 * The number of structural features of the '<em>Sentencia</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SENTENCIA_FEATURE_COUNT = 1;
+	int SENTENCIA_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>Sentencia</em>' class.
@@ -508,6 +427,78 @@ public interface BlockchainPackage extends EPackage {
 	int SENTENCIA_OPERATION_COUNT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETRO__NAME = SENTENCIA_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Tipodato</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETRO__TIPODATO = SENTENCIA_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Parametro</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETRO_FEATURE_COUNT = SENTENCIA_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Parametro</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETRO_OPERATION_COUNT = SENTENCIA_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTADO__NAME = SENTENCIA_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Tipodato</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTADO__TIPODATO = SENTENCIA_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Estado</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTADO_FEATURE_COUNT = SENTENCIA_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Estado</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTADO_OPERATION_COUNT = SENTENCIA_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link blockchain.impl.ExpresionImpl <em>Expresion</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -516,15 +507,6 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 */
 	int EXPRESION = 15;
-
-	/**
-	 * The feature id for the '<em><b>Estado</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESION__ESTADO = SENTENCIA__ESTADO;
 
 	/**
 	 * The feature id for the '<em><b>Lado Izq</b></em>' reference.
@@ -580,15 +562,6 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 */
 	int EXPRESION_LOGICA = 8;
-
-	/**
-	 * The feature id for the '<em><b>Estado</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESION_LOGICA__ESTADO = EXPRESION__ESTADO;
 
 	/**
 	 * The feature id for the '<em><b>Lado Izq</b></em>' reference.
@@ -701,15 +674,6 @@ public interface BlockchainPackage extends EPackage {
 	int EXPRESION_ARITMETICA = 11;
 
 	/**
-	 * The feature id for the '<em><b>Estado</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESION_ARITMETICA__ESTADO = EXPRESION__ESTADO;
-
-	/**
 	 * The feature id for the '<em><b>Lado Izq</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -772,15 +736,6 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 */
 	int VARIABLE = 12;
-
-	/**
-	 * The feature id for the '<em><b>Estado</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE__ESTADO = SENTENCIA__ESTADO;
 
 	/**
 	 * The feature id for the '<em><b>Tipodato</b></em>' reference.
@@ -884,15 +839,6 @@ public interface BlockchainPackage extends EPackage {
 	int CONDICIONAL = 14;
 
 	/**
-	 * The feature id for the '<em><b>Estado</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDICIONAL__ESTADO = SENTENCIA__ESTADO;
-
-	/**
 	 * The feature id for the '<em><b>Tipo Condicional</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -957,13 +903,13 @@ public interface BlockchainPackage extends EPackage {
 	int VALOR_ELEMENTOS = 16;
 
 	/**
-	 * The feature id for the '<em><b>Estado</b></em>' reference list.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VALOR_ELEMENTOS__ESTADO = SENTENCIA__ESTADO;
+	int VALOR_ELEMENTOS__ID = SENTENCIA_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Valor Elementos</em>' class.
@@ -972,7 +918,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VALOR_ELEMENTOS_FEATURE_COUNT = SENTENCIA_FEATURE_COUNT + 0;
+	int VALOR_ELEMENTOS_FEATURE_COUNT = SENTENCIA_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Valor Elementos</em>' class.
@@ -994,13 +940,13 @@ public interface BlockchainPackage extends EPackage {
 	int EXPRESION_NUMERICA = 17;
 
 	/**
-	 * The feature id for the '<em><b>Estado</b></em>' reference list.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_NUMERICA__ESTADO = VALOR_ELEMENTOS__ESTADO;
+	int EXPRESION_NUMERICA__ID = VALOR_ELEMENTOS__ID;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1040,13 +986,13 @@ public interface BlockchainPackage extends EPackage {
 	int EXPRESION_TEXTO = 18;
 
 	/**
-	 * The feature id for the '<em><b>Estado</b></em>' reference list.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_TEXTO__ESTADO = VALOR_ELEMENTOS__ESTADO;
+	int EXPRESION_TEXTO__ID = VALOR_ELEMENTOS__ID;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1086,13 +1032,13 @@ public interface BlockchainPackage extends EPackage {
 	int EXPRESION_BOOLEAN = 19;
 
 	/**
-	 * The feature id for the '<em><b>Estado</b></em>' reference list.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_BOOLEAN__ESTADO = VALOR_ELEMENTOS__ESTADO;
+	int EXPRESION_BOOLEAN__ID = VALOR_ELEMENTOS__ID;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1132,13 +1078,13 @@ public interface BlockchainPackage extends EPackage {
 	int EXPRESION_REFERENCIADA = 20;
 
 	/**
-	 * The feature id for the '<em><b>Estado</b></em>' reference list.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_REFERENCIADA__ESTADO = VALOR_ELEMENTOS__ESTADO;
+	int EXPRESION_REFERENCIADA__ID = VALOR_ELEMENTOS__ID;
 
 	/**
 	 * The feature id for the '<em><b>Ent Referenciada</b></em>' reference.
@@ -1150,22 +1096,13 @@ public interface BlockchainPackage extends EPackage {
 	int EXPRESION_REFERENCIADA__ENT_REFERENCIADA = VALOR_ELEMENTOS_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESION_REFERENCIADA__ID = VALOR_ELEMENTOS_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Atr Referenciado</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_REFERENCIADA__ATR_REFERENCIADO = VALOR_ELEMENTOS_FEATURE_COUNT + 2;
+	int EXPRESION_REFERENCIADA__ATR_REFERENCIADO = VALOR_ELEMENTOS_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Expresion Referenciada</em>' class.
@@ -1174,7 +1111,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_REFERENCIADA_FEATURE_COUNT = VALOR_ELEMENTOS_FEATURE_COUNT + 3;
+	int EXPRESION_REFERENCIADA_FEATURE_COUNT = VALOR_ELEMENTOS_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Expresion Referenciada</em>' class.
@@ -1194,15 +1131,6 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 */
 	int EXPRESION_RELACIONAL = 21;
-
-	/**
-	 * The feature id for the '<em><b>Estado</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESION_RELACIONAL__ESTADO = EXPRESION__ESTADO;
 
 	/**
 	 * The feature id for the '<em><b>Lado Izq</b></em>' reference.
@@ -1600,17 +1528,6 @@ public interface BlockchainPackage extends EPackage {
 	EClass getSentencia();
 
 	/**
-	 * Returns the meta object for the reference list '{@link blockchain.Sentencia#getEstado <em>Estado</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Estado</em>'.
-	 * @see blockchain.Sentencia#getEstado()
-	 * @see #getSentencia()
-	 * @generated
-	 */
-	EReference getSentencia_Estado();
-
-	/**
 	 * Returns the meta object for class '{@link blockchain.ExpresionLogica <em>Expresion Logica</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1866,6 +1783,17 @@ public interface BlockchainPackage extends EPackage {
 	EClass getValorElementos();
 
 	/**
+	 * Returns the meta object for the attribute '{@link blockchain.ValorElementos#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see blockchain.ValorElementos#getId()
+	 * @see #getValorElementos()
+	 * @generated
+	 */
+	EAttribute getValorElementos_Id();
+
+	/**
 	 * Returns the meta object for class '{@link blockchain.ExpresionNumerica <em>Expresion Numerica</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1948,17 +1876,6 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getExpresionReferenciada_EntReferenciada();
-
-	/**
-	 * Returns the meta object for the attribute '{@link blockchain.ExpresionReferenciada#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see blockchain.ExpresionReferenciada#getId()
-	 * @see #getExpresionReferenciada()
-	 * @generated
-	 */
-	EAttribute getExpresionReferenciada_Id();
 
 	/**
 	 * Returns the meta object for the reference '{@link blockchain.ExpresionReferenciada#getAtrReferenciado <em>Atr Referenciado</em>}'.
@@ -2298,14 +2215,6 @@ public interface BlockchainPackage extends EPackage {
 		EClass SENTENCIA = eINSTANCE.getSentencia();
 
 		/**
-		 * The meta object literal for the '<em><b>Estado</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SENTENCIA__ESTADO = eINSTANCE.getSentencia_Estado();
-
-		/**
 		 * The meta object literal for the '{@link blockchain.impl.ExpresionLogicaImpl <em>Expresion Logica</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2516,6 +2425,14 @@ public interface BlockchainPackage extends EPackage {
 		EClass VALOR_ELEMENTOS = eINSTANCE.getValorElementos();
 
 		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VALOR_ELEMENTOS__ID = eINSTANCE.getValorElementos_Id();
+
+		/**
 		 * The meta object literal for the '{@link blockchain.impl.ExpresionNumericaImpl <em>Expresion Numerica</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2586,14 +2503,6 @@ public interface BlockchainPackage extends EPackage {
 		 * @generated
 		 */
 		EReference EXPRESION_REFERENCIADA__ENT_REFERENCIADA = eINSTANCE.getExpresionReferenciada_EntReferenciada();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXPRESION_REFERENCIADA__ID = eINSTANCE.getExpresionReferenciada_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Atr Referenciado</b></em>' reference feature.

@@ -100,12 +100,14 @@ public class BlockchainSwitch<T> extends Switch<T> {
 			case BlockchainPackage.PARAMETRO: {
 				Parametro parametro = (Parametro)theEObject;
 				T result = caseParametro(parametro);
+				if (result == null) result = caseSentencia(parametro);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case BlockchainPackage.ESTADO: {
 				Estado estado = (Estado)theEObject;
 				T result = caseEstado(estado);
+				if (result == null) result = caseSentencia(estado);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

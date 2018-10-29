@@ -113,7 +113,9 @@
         eType="#//Sentencia"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ValorElementos" abstract="true" eSuperTypes="#//Sentencia"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ValorElementos" abstract="true" eSuperTypes="#//Sentencia">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExpresionNumerica" eSuperTypes="#//ValorElementos">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
@@ -125,7 +127,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExpresionReferenciada" eSuperTypes="#//ValorElementos">
     <eStructuralFeatures xsi:type="ecore:EReference" name="entReferenciada" eType="#//Entidad"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="atrReferenciado" eType="#//Atributo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExpresionRelacional" eSuperTypes="#//Expresion">

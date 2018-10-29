@@ -13,7 +13,6 @@ package blockchain;
  * </p>
  * <ul>
  *   <li>{@link blockchain.ExpresionReferenciada#getEntReferenciada <em>Ent Referenciada</em>}</li>
- *   <li>{@link blockchain.ExpresionReferenciada#getId <em>Id</em>}</li>
  *   <li>{@link blockchain.ExpresionReferenciada#getAtrReferenciado <em>Atr Referenciado</em>}</li>
  * </ul>
  *
@@ -47,32 +46,6 @@ public interface ExpresionReferenciada extends ValorElementos {
 	 * @generated
 	 */
 	void setEntReferenciada(Entidad value);
-
-	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(int)
-	 * @see blockchain.BlockchainPackage#getExpresionReferenciada_Id()
-	 * @model
-	 * @generated
-	 */
-	int getId();
-
-	/**
-	 * Sets the value of the '{@link blockchain.ExpresionReferenciada#getId <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
-	 * @generated
-	 */
-	void setId(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Atr Referenciado</b></em>' reference.
