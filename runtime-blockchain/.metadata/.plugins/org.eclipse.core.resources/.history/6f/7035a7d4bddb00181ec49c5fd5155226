@@ -1,0 +1,38 @@
+Aplicacion AplicacionBlockchain
+{
+    SmartContract AutoMarket
+    {
+        Entidad Vehiculo
+        {
+          
+          String Marca
+          String Modelo
+          String Linea
+          Numerico Cilindraje
+          String Placa
+          Numerico Precio
+          Boolean Nuevo
+          String Comentarios
+        } 
+        Estado MapaVehiculos Vehiculos
+        Estado MapaVehiculos VehiculosCaros
+        Estado MapaVehiculos VehiculosBaratos
+        Operacion isUd=false ConsultarVehiculo (String Placa) : Vehiculo
+        {
+			return Vehiculos GET Placa
+        }
+        /*Operacion isUd=false CalcularCostosVenta(Numerico PrecioVehiculo, NUMERICO ImpuestoVehiculo, NUMERICO ValorTraspaso, NUMERICO ComisionRunt) : NUMERICO
+        {
+             return ((((PrecioVehiculo * 0.19) + (PrecioVehiculo * ImpuestoVehiculo)) + ValorTraspaso ) + ComisionRunt)
+        }*/
+        Operacion isUd=false CalcularCostosVenta(Numerico PrecioVehiculo, Numerico ImpuestoVehiculo, Numerico ValorTraspaso, Numerico ComisionRunt) : Numerico { 
+        	(PrecioVehiculo * '0.19')
+        	
+        	 
+        }
+    }
+	TipoDato STRING String
+	TipoDato NUMERICO Numerico
+	TipoDato BOOLEAN Boolean
+	TipoDato MapaVehiculos : Map <String,"AutoMarket.Vehiculo">   
+}

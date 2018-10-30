@@ -1,0 +1,30 @@
+Aplicacion AplicacionBlockchain
+{
+    SmartContract AutoMarket
+    {
+        Entidad Vehiculo
+        {
+          
+          String Marca
+          String Modelo
+          String Linea
+          Numerico Cilindraje
+          String Placa
+          Numerico Precio
+          Boolean Nuevo
+          String Comentarios
+        } 
+        Estado MapaVehiculos Vehiculos
+        Estado MapaVehiculos VehiculosCaros
+        Estado MapaVehiculos VehiculosBaratos
+        Operacion isUd=false ConsultarVehiculo (String "Placa") : Vehiculo
+        {
+            ExpArit Placa
+        }
+    }
+	TipoDato STRING String
+	TipoDato NUMERICO Numerico
+	TipoDato BOOLEAN Boolean
+	TipoDato MapaVehiculos : Map <String,"AutoMarket.Vehiculo"> 
+   
+}

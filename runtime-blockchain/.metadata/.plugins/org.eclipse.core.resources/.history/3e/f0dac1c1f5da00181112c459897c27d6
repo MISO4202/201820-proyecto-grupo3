@@ -1,0 +1,11 @@
+Aplicacion prueba { 
+	SmartContract Test {
+		Entidad hola{
+			
+		}
+		Estado 
+		
+	}
+	TipoDato STRING
+	TipoDato MapaHola :
+}

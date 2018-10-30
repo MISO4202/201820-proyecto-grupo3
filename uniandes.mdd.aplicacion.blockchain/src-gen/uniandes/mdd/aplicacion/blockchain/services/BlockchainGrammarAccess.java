@@ -804,14 +804,17 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cVarKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cNameEStringParserRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cEqualsSignKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Keyword cNewKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
 		
 		//Variable:
 		//	{Variable} tipodato=[TipoDato|EString]
 		//	'var'
-		//	name=EString;
+		//	name=EString ('=' 'new')?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Variable} tipodato=[TipoDato|EString] 'var' name=EString
+		//{Variable} tipodato=[TipoDato|EString] 'var' name=EString ('=' 'new')?
 		public Group getGroup() { return cGroup; }
 		
 		//{Variable}
@@ -834,6 +837,15 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//EString
 		public RuleCall getNameEStringParserRuleCall_3_0() { return cNameEStringParserRuleCall_3_0; }
+		
+		//('=' 'new')?
+		public Group getGroup_4() { return cGroup_4; }
+		
+		//'='
+		public Keyword getEqualsSignKeyword_4_0() { return cEqualsSignKeyword_4_0; }
+		
+		//'new'
+		public Keyword getNewKeyword_4_1() { return cNewKeyword_4_1; }
 	}
 	public class CondicionalElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.Condicional");
@@ -1858,7 +1870,7 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	//Variable:
 	//	{Variable} tipodato=[TipoDato|EString]
 	//	'var'
-	//	name=EString;
+	//	name=EString ('=' 'new')?;
 	public VariableElements getVariableAccess() {
 		return pVariable;
 	}

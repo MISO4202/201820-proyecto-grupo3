@@ -1359,6 +1359,16 @@ ruleVariable returns [EObject current=null]
 				}
 			)
 		)
+		(
+			otherlv_4='='
+			{
+				newLeafNode(otherlv_4, grammarAccess.getVariableAccess().getEqualsSignKeyword_4_0());
+			}
+			otherlv_5='new'
+			{
+				newLeafNode(otherlv_5, grammarAccess.getVariableAccess().getNewKeyword_4_1());
+			}
+		)?
 	)
 ;
 

@@ -95,9 +95,11 @@ ExpresionAritmetica returns ExpresionAritmetica:
 
 Variable returns Variable:
 	{Variable}
-	tipodato=[TipoDato|EString] 
-	'var'
+	tipodato=[TipoDato|EString]
+	'var' 
 	name=EString 
+	('=' 'new')?
+	
 	;
 
 Condicional returns Condicional:
