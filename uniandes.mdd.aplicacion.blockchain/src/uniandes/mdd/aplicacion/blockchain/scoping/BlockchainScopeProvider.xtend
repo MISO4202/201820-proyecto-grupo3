@@ -27,7 +27,7 @@ import blockchain.ExpresionNumerica
 class BlockchainScopeProvider extends AbstractBlockchainScopeProvider {
 	
 	override public IScope getScope(EObject context, EReference reference) {
-		if(context instanceof Expresion){
+	if(context instanceof Expresion){
 			val rootElement =EcoreUtil2.getRootContainer(context)
 			if(reference.EType == Parametro ){
 				val candidates= EcoreUtil2.getAllContentsOfType(rootElement, Parametro);

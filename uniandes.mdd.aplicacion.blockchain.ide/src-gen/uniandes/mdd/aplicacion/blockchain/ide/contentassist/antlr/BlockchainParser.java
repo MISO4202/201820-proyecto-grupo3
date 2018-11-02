@@ -67,7 +67,6 @@ public class BlockchainParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExpresionAritmeticaAccess().getGroup(), "rule__ExpresionAritmetica__Group__0");
 					put(grammarAccess.getExpresionAritmeticaAccess().getGroup_1(), "rule__ExpresionAritmetica__Group_1__0");
 					put(grammarAccess.getVariableAccess().getGroup(), "rule__Variable__Group__0");
-					put(grammarAccess.getVariableAccess().getGroup_4(), "rule__Variable__Group_4__0");
 					put(grammarAccess.getCondicionalAccess().getGroup(), "rule__Condicional__Group__0");
 					put(grammarAccess.getCondicionalAccess().getGroup_2(), "rule__Condicional__Group_2__0");
 					put(grammarAccess.getCondicionalAccess().getGroup_8(), "rule__Condicional__Group_8__0");

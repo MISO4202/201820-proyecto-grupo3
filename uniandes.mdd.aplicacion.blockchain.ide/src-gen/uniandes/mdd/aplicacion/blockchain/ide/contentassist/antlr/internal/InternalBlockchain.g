@@ -3430,7 +3430,6 @@ rule__Variable__Group__3
 	}
 :
 	rule__Variable__Group__3__Impl
-	rule__Variable__Group__4
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -3445,86 +3444,6 @@ rule__Variable__Group__3__Impl
 	{ before(grammarAccess.getVariableAccess().getNameAssignment_3()); }
 	(rule__Variable__NameAssignment_3)
 	{ after(grammarAccess.getVariableAccess().getNameAssignment_3()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Variable__Group__4
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__Variable__Group__4__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Variable__Group__4__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVariableAccess().getGroup_4()); }
-	(rule__Variable__Group_4__0)?
-	{ after(grammarAccess.getVariableAccess().getGroup_4()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__Variable__Group_4__0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__Variable__Group_4__0__Impl
-	rule__Variable__Group_4__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Variable__Group_4__0__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVariableAccess().getEqualsSignKeyword_4_0()); }
-	'='
-	{ after(grammarAccess.getVariableAccess().getEqualsSignKeyword_4_0()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Variable__Group_4__1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__Variable__Group_4__1__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Variable__Group_4__1__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVariableAccess().getNewKeyword_4_1()); }
-	'new'
-	{ after(grammarAccess.getVariableAccess().getNewKeyword_4_1()); }
 )
 ;
 finally {

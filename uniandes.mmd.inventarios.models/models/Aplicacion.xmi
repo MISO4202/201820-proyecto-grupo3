@@ -9,6 +9,8 @@
     <operaciones name="ConsultarVehiculo" retorno="//@smartcontract.0/@entidades.0">
       <parametros name="Placa" tipodato="//@tipodato.0"/>
       <sentencia xsi:type="blockchain:ExpresionAritmetica" ladoIzq="//@smartcontract.0/@estado.0" ladoDer="//@smartcontract.0/@operaciones.0/@parametros.0" operador="GET"/>
+      <sentencia xsi:type="blockchain:ExpresionNumerica" value="5.2"/>
+      <sentencia xsi:type="blockchain:ExpresionAritmetica" ladoIzq="//@smartcontract.0/@operaciones.0/@parametros.0" ladoDer="//@smartcontract.0/@operaciones.0/@sentencia.1" operador="IGUAL"/>
     </operaciones>
     <estado name="Vehiculos" tipodato="//@tipodato.3"/>
   </smartcontract>

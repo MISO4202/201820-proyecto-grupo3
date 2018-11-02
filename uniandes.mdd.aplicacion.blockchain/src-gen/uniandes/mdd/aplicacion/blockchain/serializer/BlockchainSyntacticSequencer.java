@@ -11,7 +11,6 @@ import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.GroupAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
@@ -26,7 +25,6 @@ public class BlockchainSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_ExpresionLogica_RightParenthesisKeyword_6_q;
 	protected AbstractElementAlias match_Operacion_ReturnKeyword_9_q;
 	protected AbstractElementAlias match_Sentencia_EBooleanParserRuleCall_8_or_EStringParserRuleCall_7;
-	protected AbstractElementAlias match_Variable___EqualsSignKeyword_4_0_NewKeyword_4_1__q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
@@ -35,7 +33,6 @@ public class BlockchainSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_ExpresionLogica_RightParenthesisKeyword_6_q = new TokenAlias(false, true, grammarAccess.getExpresionLogicaAccess().getRightParenthesisKeyword_6());
 		match_Operacion_ReturnKeyword_9_q = new TokenAlias(false, true, grammarAccess.getOperacionAccess().getReturnKeyword_9());
 		match_Sentencia_EBooleanParserRuleCall_8_or_EStringParserRuleCall_7 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getSentenciaAccess().getEBooleanParserRuleCall_8()), new TokenAlias(false, false, grammarAccess.getSentenciaAccess().getEStringParserRuleCall_7()));
-		match_Variable___EqualsSignKeyword_4_0_NewKeyword_4_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getVariableAccess().getEqualsSignKeyword_4_0()), new TokenAlias(false, false, grammarAccess.getVariableAccess().getNewKeyword_4_1()));
 	}
 	
 	@Override
@@ -81,8 +78,6 @@ public class BlockchainSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_Operacion_ReturnKeyword_9_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Sentencia_EBooleanParserRuleCall_8_or_EStringParserRuleCall_7.equals(syntax))
 				emit_Sentencia_EBooleanParserRuleCall_8_or_EStringParserRuleCall_7(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Variable___EqualsSignKeyword_4_0_NewKeyword_4_1__q.equals(syntax))
-				emit_Variable___EqualsSignKeyword_4_0_NewKeyword_4_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -134,17 +129,6 @@ public class BlockchainSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) (ambiguity) (rule start)
 	 */
 	protected void emit_Sentencia_EBooleanParserRuleCall_8_or_EStringParserRuleCall_7(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     ('=' 'new')?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name=EString (ambiguity) (rule end)
-	 */
-	protected void emit_Variable___EqualsSignKeyword_4_0_NewKeyword_4_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

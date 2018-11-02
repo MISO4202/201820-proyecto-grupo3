@@ -29,6 +29,7 @@
       <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//DatoPrimitivo/STRING"/>
       <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//DatoPrimitivo/NUMERICO"/>
       <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//DatoPrimitivo/BOOLEAN"/>
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//DatoPrimitivo/ADDRESS"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="blockchain.ecore#//TipoCondicion">
       <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//TipoCondicion/IF"/>

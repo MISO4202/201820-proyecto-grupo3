@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalBlockchainParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'.'", "'true'", "'false'", "'E'", "'e'", "'=='", "'!='", "'>'", "'<'", "'>='", "'<='", "'&&'", "'||'", "'+'", "'-'", "'*'", "'/'", "'='", "'GET'", "'DELETE'", "'if'", "'else'", "'STRING'", "'NUMERICO'", "'BOOLEAN'", "'Aplicacion'", "'{'", "'}'", "','", "'TipoDato'", "'SmartContract'", "'Entidad'", "'Operacion'", "'('", "')'", "'return'", "'isUd='", "':'", "'Estado'", "'ExpLog'", "'id'", "'var'", "'new'", "'Condicional'", "'expresionlogica'", "'sentencias'", "'tipoCondicional'", "'ExpNum'", "'ExpRef'", "'ExpRel'", "'Map'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'.'", "'true'", "'false'", "'E'", "'e'", "'=='", "'!='", "'>'", "'<'", "'>='", "'<='", "'&&'", "'||'", "'+'", "'-'", "'*'", "'/'", "'='", "'GET'", "'DELETE'", "'if'", "'else'", "'STRING'", "'NUMERICO'", "'BOOLEAN'", "'Aplicacion'", "'{'", "'}'", "','", "'TipoDato'", "'SmartContract'", "'Entidad'", "'Operacion'", "'('", "')'", "'return'", "'isUd='", "':'", "'Estado'", "'ExpLog'", "'id'", "'var'", "'Condicional'", "'expresionlogica'", "'sentencias'", "'tipoCondicional'", "'ExpNum'", "'ExpRef'", "'ExpRel'", "'Map'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -44,7 +44,6 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
     public static final int T__53=53;
     public static final int T__54=54;
     public static final int T__60=60;
-    public static final int T__61=61;
     public static final int RULE_ID=5;
     public static final int T__26=26;
     public static final int T__27=27;
@@ -7672,7 +7671,7 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
             int alt26=2;
             int LA26_0 = input.LA(1);
 
-            if ( ((LA26_0>=RULE_STRING && LA26_0<=RULE_ID)||(LA26_0>=12 && LA26_0<=13)||(LA26_0>=49 && LA26_0<=51)||LA26_0==54||(LA26_0>=58 && LA26_0<=60)) ) {
+            if ( ((LA26_0>=RULE_STRING && LA26_0<=RULE_ID)||(LA26_0>=12 && LA26_0<=13)||(LA26_0>=49 && LA26_0<=51)||LA26_0==53||(LA26_0>=57 && LA26_0<=59)) ) {
                 alt26=1;
             }
             switch (alt26) {
@@ -8568,7 +8567,7 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
                 int alt28=2;
                 int LA28_0 = input.LA(1);
 
-                if ( ((LA28_0>=RULE_STRING && LA28_0<=RULE_ID)||(LA28_0>=12 && LA28_0<=13)||(LA28_0>=49 && LA28_0<=51)||LA28_0==54||(LA28_0>=58 && LA28_0<=60)) ) {
+                if ( ((LA28_0>=RULE_STRING && LA28_0<=RULE_ID)||(LA28_0>=12 && LA28_0<=13)||(LA28_0>=49 && LA28_0<=51)||LA28_0==53||(LA28_0>=57 && LA28_0<=59)) ) {
                     alt28=1;
                 }
 
@@ -10841,22 +10840,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Variable__Group__3"
-    // InternalBlockchain.g:3427:1: rule__Variable__Group__3 : rule__Variable__Group__3__Impl rule__Variable__Group__4 ;
+    // InternalBlockchain.g:3427:1: rule__Variable__Group__3 : rule__Variable__Group__3__Impl ;
     public final void rule__Variable__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3431:1: ( rule__Variable__Group__3__Impl rule__Variable__Group__4 )
-            // InternalBlockchain.g:3432:2: rule__Variable__Group__3__Impl rule__Variable__Group__4
+            // InternalBlockchain.g:3431:1: ( rule__Variable__Group__3__Impl )
+            // InternalBlockchain.g:3432:2: rule__Variable__Group__3__Impl
             {
-            pushFollow(FOLLOW_40);
-            rule__Variable__Group__3__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__Variable__Group__4();
+            rule__Variable__Group__3__Impl();
 
             state._fsp--;
 
@@ -10879,21 +10873,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Variable__Group__3__Impl"
-    // InternalBlockchain.g:3439:1: rule__Variable__Group__3__Impl : ( ( rule__Variable__NameAssignment_3 ) ) ;
+    // InternalBlockchain.g:3438:1: rule__Variable__Group__3__Impl : ( ( rule__Variable__NameAssignment_3 ) ) ;
     public final void rule__Variable__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3443:1: ( ( ( rule__Variable__NameAssignment_3 ) ) )
-            // InternalBlockchain.g:3444:1: ( ( rule__Variable__NameAssignment_3 ) )
+            // InternalBlockchain.g:3442:1: ( ( ( rule__Variable__NameAssignment_3 ) ) )
+            // InternalBlockchain.g:3443:1: ( ( rule__Variable__NameAssignment_3 ) )
             {
-            // InternalBlockchain.g:3444:1: ( ( rule__Variable__NameAssignment_3 ) )
-            // InternalBlockchain.g:3445:2: ( rule__Variable__NameAssignment_3 )
+            // InternalBlockchain.g:3443:1: ( ( rule__Variable__NameAssignment_3 ) )
+            // InternalBlockchain.g:3444:2: ( rule__Variable__NameAssignment_3 )
             {
              before(grammarAccess.getVariableAccess().getNameAssignment_3()); 
-            // InternalBlockchain.g:3446:2: ( rule__Variable__NameAssignment_3 )
-            // InternalBlockchain.g:3446:3: rule__Variable__NameAssignment_3
+            // InternalBlockchain.g:3445:2: ( rule__Variable__NameAssignment_3 )
+            // InternalBlockchain.g:3445:3: rule__Variable__NameAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__Variable__NameAssignment_3();
@@ -10925,251 +10919,15 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Variable__Group__3__Impl"
 
 
-    // $ANTLR start "rule__Variable__Group__4"
-    // InternalBlockchain.g:3454:1: rule__Variable__Group__4 : rule__Variable__Group__4__Impl ;
-    public final void rule__Variable__Group__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalBlockchain.g:3458:1: ( rule__Variable__Group__4__Impl )
-            // InternalBlockchain.g:3459:2: rule__Variable__Group__4__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Variable__Group__4__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Variable__Group__4"
-
-
-    // $ANTLR start "rule__Variable__Group__4__Impl"
-    // InternalBlockchain.g:3465:1: rule__Variable__Group__4__Impl : ( ( rule__Variable__Group_4__0 )? ) ;
-    public final void rule__Variable__Group__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalBlockchain.g:3469:1: ( ( ( rule__Variable__Group_4__0 )? ) )
-            // InternalBlockchain.g:3470:1: ( ( rule__Variable__Group_4__0 )? )
-            {
-            // InternalBlockchain.g:3470:1: ( ( rule__Variable__Group_4__0 )? )
-            // InternalBlockchain.g:3471:2: ( rule__Variable__Group_4__0 )?
-            {
-             before(grammarAccess.getVariableAccess().getGroup_4()); 
-            // InternalBlockchain.g:3472:2: ( rule__Variable__Group_4__0 )?
-            int alt35=2;
-            int LA35_0 = input.LA(1);
-
-            if ( (LA35_0==28) ) {
-                alt35=1;
-            }
-            switch (alt35) {
-                case 1 :
-                    // InternalBlockchain.g:3472:3: rule__Variable__Group_4__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Variable__Group_4__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getVariableAccess().getGroup_4()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Variable__Group__4__Impl"
-
-
-    // $ANTLR start "rule__Variable__Group_4__0"
-    // InternalBlockchain.g:3481:1: rule__Variable__Group_4__0 : rule__Variable__Group_4__0__Impl rule__Variable__Group_4__1 ;
-    public final void rule__Variable__Group_4__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalBlockchain.g:3485:1: ( rule__Variable__Group_4__0__Impl rule__Variable__Group_4__1 )
-            // InternalBlockchain.g:3486:2: rule__Variable__Group_4__0__Impl rule__Variable__Group_4__1
-            {
-            pushFollow(FOLLOW_41);
-            rule__Variable__Group_4__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Variable__Group_4__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Variable__Group_4__0"
-
-
-    // $ANTLR start "rule__Variable__Group_4__0__Impl"
-    // InternalBlockchain.g:3493:1: rule__Variable__Group_4__0__Impl : ( '=' ) ;
-    public final void rule__Variable__Group_4__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalBlockchain.g:3497:1: ( ( '=' ) )
-            // InternalBlockchain.g:3498:1: ( '=' )
-            {
-            // InternalBlockchain.g:3498:1: ( '=' )
-            // InternalBlockchain.g:3499:2: '='
-            {
-             before(grammarAccess.getVariableAccess().getEqualsSignKeyword_4_0()); 
-            match(input,28,FOLLOW_2); 
-             after(grammarAccess.getVariableAccess().getEqualsSignKeyword_4_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Variable__Group_4__0__Impl"
-
-
-    // $ANTLR start "rule__Variable__Group_4__1"
-    // InternalBlockchain.g:3508:1: rule__Variable__Group_4__1 : rule__Variable__Group_4__1__Impl ;
-    public final void rule__Variable__Group_4__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalBlockchain.g:3512:1: ( rule__Variable__Group_4__1__Impl )
-            // InternalBlockchain.g:3513:2: rule__Variable__Group_4__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Variable__Group_4__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Variable__Group_4__1"
-
-
-    // $ANTLR start "rule__Variable__Group_4__1__Impl"
-    // InternalBlockchain.g:3519:1: rule__Variable__Group_4__1__Impl : ( 'new' ) ;
-    public final void rule__Variable__Group_4__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalBlockchain.g:3523:1: ( ( 'new' ) )
-            // InternalBlockchain.g:3524:1: ( 'new' )
-            {
-            // InternalBlockchain.g:3524:1: ( 'new' )
-            // InternalBlockchain.g:3525:2: 'new'
-            {
-             before(grammarAccess.getVariableAccess().getNewKeyword_4_1()); 
-            match(input,53,FOLLOW_2); 
-             after(grammarAccess.getVariableAccess().getNewKeyword_4_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Variable__Group_4__1__Impl"
-
-
     // $ANTLR start "rule__Condicional__Group__0"
-    // InternalBlockchain.g:3535:1: rule__Condicional__Group__0 : rule__Condicional__Group__0__Impl rule__Condicional__Group__1 ;
+    // InternalBlockchain.g:3454:1: rule__Condicional__Group__0 : rule__Condicional__Group__0__Impl rule__Condicional__Group__1 ;
     public final void rule__Condicional__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3539:1: ( rule__Condicional__Group__0__Impl rule__Condicional__Group__1 )
-            // InternalBlockchain.g:3540:2: rule__Condicional__Group__0__Impl rule__Condicional__Group__1
+            // InternalBlockchain.g:3458:1: ( rule__Condicional__Group__0__Impl rule__Condicional__Group__1 )
+            // InternalBlockchain.g:3459:2: rule__Condicional__Group__0__Impl rule__Condicional__Group__1
             {
             pushFollow(FOLLOW_5);
             rule__Condicional__Group__0__Impl();
@@ -11200,20 +10958,20 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__0__Impl"
-    // InternalBlockchain.g:3547:1: rule__Condicional__Group__0__Impl : ( 'Condicional' ) ;
+    // InternalBlockchain.g:3466:1: rule__Condicional__Group__0__Impl : ( 'Condicional' ) ;
     public final void rule__Condicional__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3551:1: ( ( 'Condicional' ) )
-            // InternalBlockchain.g:3552:1: ( 'Condicional' )
+            // InternalBlockchain.g:3470:1: ( ( 'Condicional' ) )
+            // InternalBlockchain.g:3471:1: ( 'Condicional' )
             {
-            // InternalBlockchain.g:3552:1: ( 'Condicional' )
-            // InternalBlockchain.g:3553:2: 'Condicional'
+            // InternalBlockchain.g:3471:1: ( 'Condicional' )
+            // InternalBlockchain.g:3472:2: 'Condicional'
             {
              before(grammarAccess.getCondicionalAccess().getCondicionalKeyword_0()); 
-            match(input,54,FOLLOW_2); 
+            match(input,53,FOLLOW_2); 
              after(grammarAccess.getCondicionalAccess().getCondicionalKeyword_0()); 
 
             }
@@ -11237,16 +10995,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__1"
-    // InternalBlockchain.g:3562:1: rule__Condicional__Group__1 : rule__Condicional__Group__1__Impl rule__Condicional__Group__2 ;
+    // InternalBlockchain.g:3481:1: rule__Condicional__Group__1 : rule__Condicional__Group__1__Impl rule__Condicional__Group__2 ;
     public final void rule__Condicional__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3566:1: ( rule__Condicional__Group__1__Impl rule__Condicional__Group__2 )
-            // InternalBlockchain.g:3567:2: rule__Condicional__Group__1__Impl rule__Condicional__Group__2
+            // InternalBlockchain.g:3485:1: ( rule__Condicional__Group__1__Impl rule__Condicional__Group__2 )
+            // InternalBlockchain.g:3486:2: rule__Condicional__Group__1__Impl rule__Condicional__Group__2
             {
-            pushFollow(FOLLOW_42);
+            pushFollow(FOLLOW_40);
             rule__Condicional__Group__1__Impl();
 
             state._fsp--;
@@ -11275,17 +11033,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__1__Impl"
-    // InternalBlockchain.g:3574:1: rule__Condicional__Group__1__Impl : ( '{' ) ;
+    // InternalBlockchain.g:3493:1: rule__Condicional__Group__1__Impl : ( '{' ) ;
     public final void rule__Condicional__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3578:1: ( ( '{' ) )
-            // InternalBlockchain.g:3579:1: ( '{' )
+            // InternalBlockchain.g:3497:1: ( ( '{' ) )
+            // InternalBlockchain.g:3498:1: ( '{' )
             {
-            // InternalBlockchain.g:3579:1: ( '{' )
-            // InternalBlockchain.g:3580:2: '{'
+            // InternalBlockchain.g:3498:1: ( '{' )
+            // InternalBlockchain.g:3499:2: '{'
             {
              before(grammarAccess.getCondicionalAccess().getLeftCurlyBracketKeyword_1()); 
             match(input,37,FOLLOW_2); 
@@ -11312,16 +11070,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__2"
-    // InternalBlockchain.g:3589:1: rule__Condicional__Group__2 : rule__Condicional__Group__2__Impl rule__Condicional__Group__3 ;
+    // InternalBlockchain.g:3508:1: rule__Condicional__Group__2 : rule__Condicional__Group__2__Impl rule__Condicional__Group__3 ;
     public final void rule__Condicional__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3593:1: ( rule__Condicional__Group__2__Impl rule__Condicional__Group__3 )
-            // InternalBlockchain.g:3594:2: rule__Condicional__Group__2__Impl rule__Condicional__Group__3
+            // InternalBlockchain.g:3512:1: ( rule__Condicional__Group__2__Impl rule__Condicional__Group__3 )
+            // InternalBlockchain.g:3513:2: rule__Condicional__Group__2__Impl rule__Condicional__Group__3
             {
-            pushFollow(FOLLOW_42);
+            pushFollow(FOLLOW_40);
             rule__Condicional__Group__2__Impl();
 
             state._fsp--;
@@ -11350,29 +11108,29 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__2__Impl"
-    // InternalBlockchain.g:3601:1: rule__Condicional__Group__2__Impl : ( ( rule__Condicional__Group_2__0 )? ) ;
+    // InternalBlockchain.g:3520:1: rule__Condicional__Group__2__Impl : ( ( rule__Condicional__Group_2__0 )? ) ;
     public final void rule__Condicional__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3605:1: ( ( ( rule__Condicional__Group_2__0 )? ) )
-            // InternalBlockchain.g:3606:1: ( ( rule__Condicional__Group_2__0 )? )
+            // InternalBlockchain.g:3524:1: ( ( ( rule__Condicional__Group_2__0 )? ) )
+            // InternalBlockchain.g:3525:1: ( ( rule__Condicional__Group_2__0 )? )
             {
-            // InternalBlockchain.g:3606:1: ( ( rule__Condicional__Group_2__0 )? )
-            // InternalBlockchain.g:3607:2: ( rule__Condicional__Group_2__0 )?
+            // InternalBlockchain.g:3525:1: ( ( rule__Condicional__Group_2__0 )? )
+            // InternalBlockchain.g:3526:2: ( rule__Condicional__Group_2__0 )?
             {
              before(grammarAccess.getCondicionalAccess().getGroup_2()); 
-            // InternalBlockchain.g:3608:2: ( rule__Condicional__Group_2__0 )?
-            int alt36=2;
-            int LA36_0 = input.LA(1);
+            // InternalBlockchain.g:3527:2: ( rule__Condicional__Group_2__0 )?
+            int alt35=2;
+            int LA35_0 = input.LA(1);
 
-            if ( (LA36_0==57) ) {
-                alt36=1;
+            if ( (LA35_0==56) ) {
+                alt35=1;
             }
-            switch (alt36) {
+            switch (alt35) {
                 case 1 :
-                    // InternalBlockchain.g:3608:3: rule__Condicional__Group_2__0
+                    // InternalBlockchain.g:3527:3: rule__Condicional__Group_2__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Condicional__Group_2__0();
@@ -11408,16 +11166,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__3"
-    // InternalBlockchain.g:3616:1: rule__Condicional__Group__3 : rule__Condicional__Group__3__Impl rule__Condicional__Group__4 ;
+    // InternalBlockchain.g:3535:1: rule__Condicional__Group__3 : rule__Condicional__Group__3__Impl rule__Condicional__Group__4 ;
     public final void rule__Condicional__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3620:1: ( rule__Condicional__Group__3__Impl rule__Condicional__Group__4 )
-            // InternalBlockchain.g:3621:2: rule__Condicional__Group__3__Impl rule__Condicional__Group__4
+            // InternalBlockchain.g:3539:1: ( rule__Condicional__Group__3__Impl rule__Condicional__Group__4 )
+            // InternalBlockchain.g:3540:2: rule__Condicional__Group__3__Impl rule__Condicional__Group__4
             {
-            pushFollow(FOLLOW_43);
+            pushFollow(FOLLOW_41);
             rule__Condicional__Group__3__Impl();
 
             state._fsp--;
@@ -11446,20 +11204,20 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__3__Impl"
-    // InternalBlockchain.g:3628:1: rule__Condicional__Group__3__Impl : ( 'expresionlogica' ) ;
+    // InternalBlockchain.g:3547:1: rule__Condicional__Group__3__Impl : ( 'expresionlogica' ) ;
     public final void rule__Condicional__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3632:1: ( ( 'expresionlogica' ) )
-            // InternalBlockchain.g:3633:1: ( 'expresionlogica' )
+            // InternalBlockchain.g:3551:1: ( ( 'expresionlogica' ) )
+            // InternalBlockchain.g:3552:1: ( 'expresionlogica' )
             {
-            // InternalBlockchain.g:3633:1: ( 'expresionlogica' )
-            // InternalBlockchain.g:3634:2: 'expresionlogica'
+            // InternalBlockchain.g:3552:1: ( 'expresionlogica' )
+            // InternalBlockchain.g:3553:2: 'expresionlogica'
             {
              before(grammarAccess.getCondicionalAccess().getExpresionlogicaKeyword_3()); 
-            match(input,55,FOLLOW_2); 
+            match(input,54,FOLLOW_2); 
              after(grammarAccess.getCondicionalAccess().getExpresionlogicaKeyword_3()); 
 
             }
@@ -11483,16 +11241,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__4"
-    // InternalBlockchain.g:3643:1: rule__Condicional__Group__4 : rule__Condicional__Group__4__Impl rule__Condicional__Group__5 ;
+    // InternalBlockchain.g:3562:1: rule__Condicional__Group__4 : rule__Condicional__Group__4__Impl rule__Condicional__Group__5 ;
     public final void rule__Condicional__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3647:1: ( rule__Condicional__Group__4__Impl rule__Condicional__Group__5 )
-            // InternalBlockchain.g:3648:2: rule__Condicional__Group__4__Impl rule__Condicional__Group__5
+            // InternalBlockchain.g:3566:1: ( rule__Condicional__Group__4__Impl rule__Condicional__Group__5 )
+            // InternalBlockchain.g:3567:2: rule__Condicional__Group__4__Impl rule__Condicional__Group__5
             {
-            pushFollow(FOLLOW_44);
+            pushFollow(FOLLOW_42);
             rule__Condicional__Group__4__Impl();
 
             state._fsp--;
@@ -11521,21 +11279,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__4__Impl"
-    // InternalBlockchain.g:3655:1: rule__Condicional__Group__4__Impl : ( ( rule__Condicional__ExpresionlogicaAssignment_4 ) ) ;
+    // InternalBlockchain.g:3574:1: rule__Condicional__Group__4__Impl : ( ( rule__Condicional__ExpresionlogicaAssignment_4 ) ) ;
     public final void rule__Condicional__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3659:1: ( ( ( rule__Condicional__ExpresionlogicaAssignment_4 ) ) )
-            // InternalBlockchain.g:3660:1: ( ( rule__Condicional__ExpresionlogicaAssignment_4 ) )
+            // InternalBlockchain.g:3578:1: ( ( ( rule__Condicional__ExpresionlogicaAssignment_4 ) ) )
+            // InternalBlockchain.g:3579:1: ( ( rule__Condicional__ExpresionlogicaAssignment_4 ) )
             {
-            // InternalBlockchain.g:3660:1: ( ( rule__Condicional__ExpresionlogicaAssignment_4 ) )
-            // InternalBlockchain.g:3661:2: ( rule__Condicional__ExpresionlogicaAssignment_4 )
+            // InternalBlockchain.g:3579:1: ( ( rule__Condicional__ExpresionlogicaAssignment_4 ) )
+            // InternalBlockchain.g:3580:2: ( rule__Condicional__ExpresionlogicaAssignment_4 )
             {
              before(grammarAccess.getCondicionalAccess().getExpresionlogicaAssignment_4()); 
-            // InternalBlockchain.g:3662:2: ( rule__Condicional__ExpresionlogicaAssignment_4 )
-            // InternalBlockchain.g:3662:3: rule__Condicional__ExpresionlogicaAssignment_4
+            // InternalBlockchain.g:3581:2: ( rule__Condicional__ExpresionlogicaAssignment_4 )
+            // InternalBlockchain.g:3581:3: rule__Condicional__ExpresionlogicaAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__Condicional__ExpresionlogicaAssignment_4();
@@ -11568,14 +11326,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__5"
-    // InternalBlockchain.g:3670:1: rule__Condicional__Group__5 : rule__Condicional__Group__5__Impl rule__Condicional__Group__6 ;
+    // InternalBlockchain.g:3589:1: rule__Condicional__Group__5 : rule__Condicional__Group__5__Impl rule__Condicional__Group__6 ;
     public final void rule__Condicional__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3674:1: ( rule__Condicional__Group__5__Impl rule__Condicional__Group__6 )
-            // InternalBlockchain.g:3675:2: rule__Condicional__Group__5__Impl rule__Condicional__Group__6
+            // InternalBlockchain.g:3593:1: ( rule__Condicional__Group__5__Impl rule__Condicional__Group__6 )
+            // InternalBlockchain.g:3594:2: rule__Condicional__Group__5__Impl rule__Condicional__Group__6
             {
             pushFollow(FOLLOW_5);
             rule__Condicional__Group__5__Impl();
@@ -11606,20 +11364,20 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__5__Impl"
-    // InternalBlockchain.g:3682:1: rule__Condicional__Group__5__Impl : ( 'sentencias' ) ;
+    // InternalBlockchain.g:3601:1: rule__Condicional__Group__5__Impl : ( 'sentencias' ) ;
     public final void rule__Condicional__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3686:1: ( ( 'sentencias' ) )
-            // InternalBlockchain.g:3687:1: ( 'sentencias' )
+            // InternalBlockchain.g:3605:1: ( ( 'sentencias' ) )
+            // InternalBlockchain.g:3606:1: ( 'sentencias' )
             {
-            // InternalBlockchain.g:3687:1: ( 'sentencias' )
-            // InternalBlockchain.g:3688:2: 'sentencias'
+            // InternalBlockchain.g:3606:1: ( 'sentencias' )
+            // InternalBlockchain.g:3607:2: 'sentencias'
             {
              before(grammarAccess.getCondicionalAccess().getSentenciasKeyword_5()); 
-            match(input,56,FOLLOW_2); 
+            match(input,55,FOLLOW_2); 
              after(grammarAccess.getCondicionalAccess().getSentenciasKeyword_5()); 
 
             }
@@ -11643,14 +11401,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__6"
-    // InternalBlockchain.g:3697:1: rule__Condicional__Group__6 : rule__Condicional__Group__6__Impl rule__Condicional__Group__7 ;
+    // InternalBlockchain.g:3616:1: rule__Condicional__Group__6 : rule__Condicional__Group__6__Impl rule__Condicional__Group__7 ;
     public final void rule__Condicional__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3701:1: ( rule__Condicional__Group__6__Impl rule__Condicional__Group__7 )
-            // InternalBlockchain.g:3702:2: rule__Condicional__Group__6__Impl rule__Condicional__Group__7
+            // InternalBlockchain.g:3620:1: ( rule__Condicional__Group__6__Impl rule__Condicional__Group__7 )
+            // InternalBlockchain.g:3621:2: rule__Condicional__Group__6__Impl rule__Condicional__Group__7
             {
             pushFollow(FOLLOW_28);
             rule__Condicional__Group__6__Impl();
@@ -11681,17 +11439,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__6__Impl"
-    // InternalBlockchain.g:3709:1: rule__Condicional__Group__6__Impl : ( '{' ) ;
+    // InternalBlockchain.g:3628:1: rule__Condicional__Group__6__Impl : ( '{' ) ;
     public final void rule__Condicional__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3713:1: ( ( '{' ) )
-            // InternalBlockchain.g:3714:1: ( '{' )
+            // InternalBlockchain.g:3632:1: ( ( '{' ) )
+            // InternalBlockchain.g:3633:1: ( '{' )
             {
-            // InternalBlockchain.g:3714:1: ( '{' )
-            // InternalBlockchain.g:3715:2: '{'
+            // InternalBlockchain.g:3633:1: ( '{' )
+            // InternalBlockchain.g:3634:2: '{'
             {
              before(grammarAccess.getCondicionalAccess().getLeftCurlyBracketKeyword_6()); 
             match(input,37,FOLLOW_2); 
@@ -11718,16 +11476,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__7"
-    // InternalBlockchain.g:3724:1: rule__Condicional__Group__7 : rule__Condicional__Group__7__Impl rule__Condicional__Group__8 ;
+    // InternalBlockchain.g:3643:1: rule__Condicional__Group__7 : rule__Condicional__Group__7__Impl rule__Condicional__Group__8 ;
     public final void rule__Condicional__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3728:1: ( rule__Condicional__Group__7__Impl rule__Condicional__Group__8 )
-            // InternalBlockchain.g:3729:2: rule__Condicional__Group__7__Impl rule__Condicional__Group__8
+            // InternalBlockchain.g:3647:1: ( rule__Condicional__Group__7__Impl rule__Condicional__Group__8 )
+            // InternalBlockchain.g:3648:2: rule__Condicional__Group__7__Impl rule__Condicional__Group__8
             {
-            pushFollow(FOLLOW_45);
+            pushFollow(FOLLOW_43);
             rule__Condicional__Group__7__Impl();
 
             state._fsp--;
@@ -11756,21 +11514,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__7__Impl"
-    // InternalBlockchain.g:3736:1: rule__Condicional__Group__7__Impl : ( ( rule__Condicional__SentenciasAssignment_7 ) ) ;
+    // InternalBlockchain.g:3655:1: rule__Condicional__Group__7__Impl : ( ( rule__Condicional__SentenciasAssignment_7 ) ) ;
     public final void rule__Condicional__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3740:1: ( ( ( rule__Condicional__SentenciasAssignment_7 ) ) )
-            // InternalBlockchain.g:3741:1: ( ( rule__Condicional__SentenciasAssignment_7 ) )
+            // InternalBlockchain.g:3659:1: ( ( ( rule__Condicional__SentenciasAssignment_7 ) ) )
+            // InternalBlockchain.g:3660:1: ( ( rule__Condicional__SentenciasAssignment_7 ) )
             {
-            // InternalBlockchain.g:3741:1: ( ( rule__Condicional__SentenciasAssignment_7 ) )
-            // InternalBlockchain.g:3742:2: ( rule__Condicional__SentenciasAssignment_7 )
+            // InternalBlockchain.g:3660:1: ( ( rule__Condicional__SentenciasAssignment_7 ) )
+            // InternalBlockchain.g:3661:2: ( rule__Condicional__SentenciasAssignment_7 )
             {
              before(grammarAccess.getCondicionalAccess().getSentenciasAssignment_7()); 
-            // InternalBlockchain.g:3743:2: ( rule__Condicional__SentenciasAssignment_7 )
-            // InternalBlockchain.g:3743:3: rule__Condicional__SentenciasAssignment_7
+            // InternalBlockchain.g:3662:2: ( rule__Condicional__SentenciasAssignment_7 )
+            // InternalBlockchain.g:3662:3: rule__Condicional__SentenciasAssignment_7
             {
             pushFollow(FOLLOW_2);
             rule__Condicional__SentenciasAssignment_7();
@@ -11803,16 +11561,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__8"
-    // InternalBlockchain.g:3751:1: rule__Condicional__Group__8 : rule__Condicional__Group__8__Impl rule__Condicional__Group__9 ;
+    // InternalBlockchain.g:3670:1: rule__Condicional__Group__8 : rule__Condicional__Group__8__Impl rule__Condicional__Group__9 ;
     public final void rule__Condicional__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3755:1: ( rule__Condicional__Group__8__Impl rule__Condicional__Group__9 )
-            // InternalBlockchain.g:3756:2: rule__Condicional__Group__8__Impl rule__Condicional__Group__9
+            // InternalBlockchain.g:3674:1: ( rule__Condicional__Group__8__Impl rule__Condicional__Group__9 )
+            // InternalBlockchain.g:3675:2: rule__Condicional__Group__8__Impl rule__Condicional__Group__9
             {
-            pushFollow(FOLLOW_45);
+            pushFollow(FOLLOW_43);
             rule__Condicional__Group__8__Impl();
 
             state._fsp--;
@@ -11841,33 +11599,33 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__8__Impl"
-    // InternalBlockchain.g:3763:1: rule__Condicional__Group__8__Impl : ( ( rule__Condicional__Group_8__0 )* ) ;
+    // InternalBlockchain.g:3682:1: rule__Condicional__Group__8__Impl : ( ( rule__Condicional__Group_8__0 )* ) ;
     public final void rule__Condicional__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3767:1: ( ( ( rule__Condicional__Group_8__0 )* ) )
-            // InternalBlockchain.g:3768:1: ( ( rule__Condicional__Group_8__0 )* )
+            // InternalBlockchain.g:3686:1: ( ( ( rule__Condicional__Group_8__0 )* ) )
+            // InternalBlockchain.g:3687:1: ( ( rule__Condicional__Group_8__0 )* )
             {
-            // InternalBlockchain.g:3768:1: ( ( rule__Condicional__Group_8__0 )* )
-            // InternalBlockchain.g:3769:2: ( rule__Condicional__Group_8__0 )*
+            // InternalBlockchain.g:3687:1: ( ( rule__Condicional__Group_8__0 )* )
+            // InternalBlockchain.g:3688:2: ( rule__Condicional__Group_8__0 )*
             {
              before(grammarAccess.getCondicionalAccess().getGroup_8()); 
-            // InternalBlockchain.g:3770:2: ( rule__Condicional__Group_8__0 )*
-            loop37:
+            // InternalBlockchain.g:3689:2: ( rule__Condicional__Group_8__0 )*
+            loop36:
             do {
-                int alt37=2;
-                int LA37_0 = input.LA(1);
+                int alt36=2;
+                int LA36_0 = input.LA(1);
 
-                if ( (LA37_0==39) ) {
-                    alt37=1;
+                if ( (LA36_0==39) ) {
+                    alt36=1;
                 }
 
 
-                switch (alt37) {
+                switch (alt36) {
             	case 1 :
-            	    // InternalBlockchain.g:3770:3: rule__Condicional__Group_8__0
+            	    // InternalBlockchain.g:3689:3: rule__Condicional__Group_8__0
             	    {
             	    pushFollow(FOLLOW_9);
             	    rule__Condicional__Group_8__0();
@@ -11879,7 +11637,7 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
             	    break;
 
             	default :
-            	    break loop37;
+            	    break loop36;
                 }
             } while (true);
 
@@ -11906,16 +11664,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__9"
-    // InternalBlockchain.g:3778:1: rule__Condicional__Group__9 : rule__Condicional__Group__9__Impl rule__Condicional__Group__10 ;
+    // InternalBlockchain.g:3697:1: rule__Condicional__Group__9 : rule__Condicional__Group__9__Impl rule__Condicional__Group__10 ;
     public final void rule__Condicional__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3782:1: ( rule__Condicional__Group__9__Impl rule__Condicional__Group__10 )
-            // InternalBlockchain.g:3783:2: rule__Condicional__Group__9__Impl rule__Condicional__Group__10
+            // InternalBlockchain.g:3701:1: ( rule__Condicional__Group__9__Impl rule__Condicional__Group__10 )
+            // InternalBlockchain.g:3702:2: rule__Condicional__Group__9__Impl rule__Condicional__Group__10
             {
-            pushFollow(FOLLOW_46);
+            pushFollow(FOLLOW_44);
             rule__Condicional__Group__9__Impl();
 
             state._fsp--;
@@ -11944,17 +11702,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__9__Impl"
-    // InternalBlockchain.g:3790:1: rule__Condicional__Group__9__Impl : ( '}' ) ;
+    // InternalBlockchain.g:3709:1: rule__Condicional__Group__9__Impl : ( '}' ) ;
     public final void rule__Condicional__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3794:1: ( ( '}' ) )
-            // InternalBlockchain.g:3795:1: ( '}' )
+            // InternalBlockchain.g:3713:1: ( ( '}' ) )
+            // InternalBlockchain.g:3714:1: ( '}' )
             {
-            // InternalBlockchain.g:3795:1: ( '}' )
-            // InternalBlockchain.g:3796:2: '}'
+            // InternalBlockchain.g:3714:1: ( '}' )
+            // InternalBlockchain.g:3715:2: '}'
             {
              before(grammarAccess.getCondicionalAccess().getRightCurlyBracketKeyword_9()); 
             match(input,38,FOLLOW_2); 
@@ -11981,16 +11739,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__10"
-    // InternalBlockchain.g:3805:1: rule__Condicional__Group__10 : rule__Condicional__Group__10__Impl rule__Condicional__Group__11 ;
+    // InternalBlockchain.g:3724:1: rule__Condicional__Group__10 : rule__Condicional__Group__10__Impl rule__Condicional__Group__11 ;
     public final void rule__Condicional__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3809:1: ( rule__Condicional__Group__10__Impl rule__Condicional__Group__11 )
-            // InternalBlockchain.g:3810:2: rule__Condicional__Group__10__Impl rule__Condicional__Group__11
+            // InternalBlockchain.g:3728:1: ( rule__Condicional__Group__10__Impl rule__Condicional__Group__11 )
+            // InternalBlockchain.g:3729:2: rule__Condicional__Group__10__Impl rule__Condicional__Group__11
             {
-            pushFollow(FOLLOW_46);
+            pushFollow(FOLLOW_44);
             rule__Condicional__Group__10__Impl();
 
             state._fsp--;
@@ -12019,29 +11777,29 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__10__Impl"
-    // InternalBlockchain.g:3817:1: rule__Condicional__Group__10__Impl : ( ( rule__Condicional__Group_10__0 )? ) ;
+    // InternalBlockchain.g:3736:1: rule__Condicional__Group__10__Impl : ( ( rule__Condicional__Group_10__0 )? ) ;
     public final void rule__Condicional__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3821:1: ( ( ( rule__Condicional__Group_10__0 )? ) )
-            // InternalBlockchain.g:3822:1: ( ( rule__Condicional__Group_10__0 )? )
+            // InternalBlockchain.g:3740:1: ( ( ( rule__Condicional__Group_10__0 )? ) )
+            // InternalBlockchain.g:3741:1: ( ( rule__Condicional__Group_10__0 )? )
             {
-            // InternalBlockchain.g:3822:1: ( ( rule__Condicional__Group_10__0 )? )
-            // InternalBlockchain.g:3823:2: ( rule__Condicional__Group_10__0 )?
+            // InternalBlockchain.g:3741:1: ( ( rule__Condicional__Group_10__0 )? )
+            // InternalBlockchain.g:3742:2: ( rule__Condicional__Group_10__0 )?
             {
              before(grammarAccess.getCondicionalAccess().getGroup_10()); 
-            // InternalBlockchain.g:3824:2: ( rule__Condicional__Group_10__0 )?
-            int alt38=2;
-            int LA38_0 = input.LA(1);
+            // InternalBlockchain.g:3743:2: ( rule__Condicional__Group_10__0 )?
+            int alt37=2;
+            int LA37_0 = input.LA(1);
 
-            if ( (LA38_0==32) ) {
-                alt38=1;
+            if ( (LA37_0==32) ) {
+                alt37=1;
             }
-            switch (alt38) {
+            switch (alt37) {
                 case 1 :
-                    // InternalBlockchain.g:3824:3: rule__Condicional__Group_10__0
+                    // InternalBlockchain.g:3743:3: rule__Condicional__Group_10__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Condicional__Group_10__0();
@@ -12077,14 +11835,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__11"
-    // InternalBlockchain.g:3832:1: rule__Condicional__Group__11 : rule__Condicional__Group__11__Impl ;
+    // InternalBlockchain.g:3751:1: rule__Condicional__Group__11 : rule__Condicional__Group__11__Impl ;
     public final void rule__Condicional__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3836:1: ( rule__Condicional__Group__11__Impl )
-            // InternalBlockchain.g:3837:2: rule__Condicional__Group__11__Impl
+            // InternalBlockchain.g:3755:1: ( rule__Condicional__Group__11__Impl )
+            // InternalBlockchain.g:3756:2: rule__Condicional__Group__11__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Condicional__Group__11__Impl();
@@ -12110,17 +11868,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group__11__Impl"
-    // InternalBlockchain.g:3843:1: rule__Condicional__Group__11__Impl : ( '}' ) ;
+    // InternalBlockchain.g:3762:1: rule__Condicional__Group__11__Impl : ( '}' ) ;
     public final void rule__Condicional__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3847:1: ( ( '}' ) )
-            // InternalBlockchain.g:3848:1: ( '}' )
+            // InternalBlockchain.g:3766:1: ( ( '}' ) )
+            // InternalBlockchain.g:3767:1: ( '}' )
             {
-            // InternalBlockchain.g:3848:1: ( '}' )
-            // InternalBlockchain.g:3849:2: '}'
+            // InternalBlockchain.g:3767:1: ( '}' )
+            // InternalBlockchain.g:3768:2: '}'
             {
              before(grammarAccess.getCondicionalAccess().getRightCurlyBracketKeyword_11()); 
             match(input,38,FOLLOW_2); 
@@ -12147,16 +11905,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_2__0"
-    // InternalBlockchain.g:3859:1: rule__Condicional__Group_2__0 : rule__Condicional__Group_2__0__Impl rule__Condicional__Group_2__1 ;
+    // InternalBlockchain.g:3778:1: rule__Condicional__Group_2__0 : rule__Condicional__Group_2__0__Impl rule__Condicional__Group_2__1 ;
     public final void rule__Condicional__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3863:1: ( rule__Condicional__Group_2__0__Impl rule__Condicional__Group_2__1 )
-            // InternalBlockchain.g:3864:2: rule__Condicional__Group_2__0__Impl rule__Condicional__Group_2__1
+            // InternalBlockchain.g:3782:1: ( rule__Condicional__Group_2__0__Impl rule__Condicional__Group_2__1 )
+            // InternalBlockchain.g:3783:2: rule__Condicional__Group_2__0__Impl rule__Condicional__Group_2__1
             {
-            pushFollow(FOLLOW_47);
+            pushFollow(FOLLOW_45);
             rule__Condicional__Group_2__0__Impl();
 
             state._fsp--;
@@ -12185,20 +11943,20 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_2__0__Impl"
-    // InternalBlockchain.g:3871:1: rule__Condicional__Group_2__0__Impl : ( 'tipoCondicional' ) ;
+    // InternalBlockchain.g:3790:1: rule__Condicional__Group_2__0__Impl : ( 'tipoCondicional' ) ;
     public final void rule__Condicional__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3875:1: ( ( 'tipoCondicional' ) )
-            // InternalBlockchain.g:3876:1: ( 'tipoCondicional' )
+            // InternalBlockchain.g:3794:1: ( ( 'tipoCondicional' ) )
+            // InternalBlockchain.g:3795:1: ( 'tipoCondicional' )
             {
-            // InternalBlockchain.g:3876:1: ( 'tipoCondicional' )
-            // InternalBlockchain.g:3877:2: 'tipoCondicional'
+            // InternalBlockchain.g:3795:1: ( 'tipoCondicional' )
+            // InternalBlockchain.g:3796:2: 'tipoCondicional'
             {
              before(grammarAccess.getCondicionalAccess().getTipoCondicionalKeyword_2_0()); 
-            match(input,57,FOLLOW_2); 
+            match(input,56,FOLLOW_2); 
              after(grammarAccess.getCondicionalAccess().getTipoCondicionalKeyword_2_0()); 
 
             }
@@ -12222,14 +11980,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_2__1"
-    // InternalBlockchain.g:3886:1: rule__Condicional__Group_2__1 : rule__Condicional__Group_2__1__Impl ;
+    // InternalBlockchain.g:3805:1: rule__Condicional__Group_2__1 : rule__Condicional__Group_2__1__Impl ;
     public final void rule__Condicional__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3890:1: ( rule__Condicional__Group_2__1__Impl )
-            // InternalBlockchain.g:3891:2: rule__Condicional__Group_2__1__Impl
+            // InternalBlockchain.g:3809:1: ( rule__Condicional__Group_2__1__Impl )
+            // InternalBlockchain.g:3810:2: rule__Condicional__Group_2__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Condicional__Group_2__1__Impl();
@@ -12255,21 +12013,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_2__1__Impl"
-    // InternalBlockchain.g:3897:1: rule__Condicional__Group_2__1__Impl : ( ( rule__Condicional__TipoCondicionalAssignment_2_1 ) ) ;
+    // InternalBlockchain.g:3816:1: rule__Condicional__Group_2__1__Impl : ( ( rule__Condicional__TipoCondicionalAssignment_2_1 ) ) ;
     public final void rule__Condicional__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3901:1: ( ( ( rule__Condicional__TipoCondicionalAssignment_2_1 ) ) )
-            // InternalBlockchain.g:3902:1: ( ( rule__Condicional__TipoCondicionalAssignment_2_1 ) )
+            // InternalBlockchain.g:3820:1: ( ( ( rule__Condicional__TipoCondicionalAssignment_2_1 ) ) )
+            // InternalBlockchain.g:3821:1: ( ( rule__Condicional__TipoCondicionalAssignment_2_1 ) )
             {
-            // InternalBlockchain.g:3902:1: ( ( rule__Condicional__TipoCondicionalAssignment_2_1 ) )
-            // InternalBlockchain.g:3903:2: ( rule__Condicional__TipoCondicionalAssignment_2_1 )
+            // InternalBlockchain.g:3821:1: ( ( rule__Condicional__TipoCondicionalAssignment_2_1 ) )
+            // InternalBlockchain.g:3822:2: ( rule__Condicional__TipoCondicionalAssignment_2_1 )
             {
              before(grammarAccess.getCondicionalAccess().getTipoCondicionalAssignment_2_1()); 
-            // InternalBlockchain.g:3904:2: ( rule__Condicional__TipoCondicionalAssignment_2_1 )
-            // InternalBlockchain.g:3904:3: rule__Condicional__TipoCondicionalAssignment_2_1
+            // InternalBlockchain.g:3823:2: ( rule__Condicional__TipoCondicionalAssignment_2_1 )
+            // InternalBlockchain.g:3823:3: rule__Condicional__TipoCondicionalAssignment_2_1
             {
             pushFollow(FOLLOW_2);
             rule__Condicional__TipoCondicionalAssignment_2_1();
@@ -12302,14 +12060,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_8__0"
-    // InternalBlockchain.g:3913:1: rule__Condicional__Group_8__0 : rule__Condicional__Group_8__0__Impl rule__Condicional__Group_8__1 ;
+    // InternalBlockchain.g:3832:1: rule__Condicional__Group_8__0 : rule__Condicional__Group_8__0__Impl rule__Condicional__Group_8__1 ;
     public final void rule__Condicional__Group_8__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3917:1: ( rule__Condicional__Group_8__0__Impl rule__Condicional__Group_8__1 )
-            // InternalBlockchain.g:3918:2: rule__Condicional__Group_8__0__Impl rule__Condicional__Group_8__1
+            // InternalBlockchain.g:3836:1: ( rule__Condicional__Group_8__0__Impl rule__Condicional__Group_8__1 )
+            // InternalBlockchain.g:3837:2: rule__Condicional__Group_8__0__Impl rule__Condicional__Group_8__1
             {
             pushFollow(FOLLOW_28);
             rule__Condicional__Group_8__0__Impl();
@@ -12340,17 +12098,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_8__0__Impl"
-    // InternalBlockchain.g:3925:1: rule__Condicional__Group_8__0__Impl : ( ',' ) ;
+    // InternalBlockchain.g:3844:1: rule__Condicional__Group_8__0__Impl : ( ',' ) ;
     public final void rule__Condicional__Group_8__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3929:1: ( ( ',' ) )
-            // InternalBlockchain.g:3930:1: ( ',' )
+            // InternalBlockchain.g:3848:1: ( ( ',' ) )
+            // InternalBlockchain.g:3849:1: ( ',' )
             {
-            // InternalBlockchain.g:3930:1: ( ',' )
-            // InternalBlockchain.g:3931:2: ','
+            // InternalBlockchain.g:3849:1: ( ',' )
+            // InternalBlockchain.g:3850:2: ','
             {
              before(grammarAccess.getCondicionalAccess().getCommaKeyword_8_0()); 
             match(input,39,FOLLOW_2); 
@@ -12377,14 +12135,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_8__1"
-    // InternalBlockchain.g:3940:1: rule__Condicional__Group_8__1 : rule__Condicional__Group_8__1__Impl ;
+    // InternalBlockchain.g:3859:1: rule__Condicional__Group_8__1 : rule__Condicional__Group_8__1__Impl ;
     public final void rule__Condicional__Group_8__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3944:1: ( rule__Condicional__Group_8__1__Impl )
-            // InternalBlockchain.g:3945:2: rule__Condicional__Group_8__1__Impl
+            // InternalBlockchain.g:3863:1: ( rule__Condicional__Group_8__1__Impl )
+            // InternalBlockchain.g:3864:2: rule__Condicional__Group_8__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Condicional__Group_8__1__Impl();
@@ -12410,21 +12168,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_8__1__Impl"
-    // InternalBlockchain.g:3951:1: rule__Condicional__Group_8__1__Impl : ( ( rule__Condicional__SentenciasAssignment_8_1 ) ) ;
+    // InternalBlockchain.g:3870:1: rule__Condicional__Group_8__1__Impl : ( ( rule__Condicional__SentenciasAssignment_8_1 ) ) ;
     public final void rule__Condicional__Group_8__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3955:1: ( ( ( rule__Condicional__SentenciasAssignment_8_1 ) ) )
-            // InternalBlockchain.g:3956:1: ( ( rule__Condicional__SentenciasAssignment_8_1 ) )
+            // InternalBlockchain.g:3874:1: ( ( ( rule__Condicional__SentenciasAssignment_8_1 ) ) )
+            // InternalBlockchain.g:3875:1: ( ( rule__Condicional__SentenciasAssignment_8_1 ) )
             {
-            // InternalBlockchain.g:3956:1: ( ( rule__Condicional__SentenciasAssignment_8_1 ) )
-            // InternalBlockchain.g:3957:2: ( rule__Condicional__SentenciasAssignment_8_1 )
+            // InternalBlockchain.g:3875:1: ( ( rule__Condicional__SentenciasAssignment_8_1 ) )
+            // InternalBlockchain.g:3876:2: ( rule__Condicional__SentenciasAssignment_8_1 )
             {
              before(grammarAccess.getCondicionalAccess().getSentenciasAssignment_8_1()); 
-            // InternalBlockchain.g:3958:2: ( rule__Condicional__SentenciasAssignment_8_1 )
-            // InternalBlockchain.g:3958:3: rule__Condicional__SentenciasAssignment_8_1
+            // InternalBlockchain.g:3877:2: ( rule__Condicional__SentenciasAssignment_8_1 )
+            // InternalBlockchain.g:3877:3: rule__Condicional__SentenciasAssignment_8_1
             {
             pushFollow(FOLLOW_2);
             rule__Condicional__SentenciasAssignment_8_1();
@@ -12457,14 +12215,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_10__0"
-    // InternalBlockchain.g:3967:1: rule__Condicional__Group_10__0 : rule__Condicional__Group_10__0__Impl rule__Condicional__Group_10__1 ;
+    // InternalBlockchain.g:3886:1: rule__Condicional__Group_10__0 : rule__Condicional__Group_10__0__Impl rule__Condicional__Group_10__1 ;
     public final void rule__Condicional__Group_10__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3971:1: ( rule__Condicional__Group_10__0__Impl rule__Condicional__Group_10__1 )
-            // InternalBlockchain.g:3972:2: rule__Condicional__Group_10__0__Impl rule__Condicional__Group_10__1
+            // InternalBlockchain.g:3890:1: ( rule__Condicional__Group_10__0__Impl rule__Condicional__Group_10__1 )
+            // InternalBlockchain.g:3891:2: rule__Condicional__Group_10__0__Impl rule__Condicional__Group_10__1
             {
             pushFollow(FOLLOW_5);
             rule__Condicional__Group_10__0__Impl();
@@ -12495,17 +12253,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_10__0__Impl"
-    // InternalBlockchain.g:3979:1: rule__Condicional__Group_10__0__Impl : ( 'else' ) ;
+    // InternalBlockchain.g:3898:1: rule__Condicional__Group_10__0__Impl : ( 'else' ) ;
     public final void rule__Condicional__Group_10__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3983:1: ( ( 'else' ) )
-            // InternalBlockchain.g:3984:1: ( 'else' )
+            // InternalBlockchain.g:3902:1: ( ( 'else' ) )
+            // InternalBlockchain.g:3903:1: ( 'else' )
             {
-            // InternalBlockchain.g:3984:1: ( 'else' )
-            // InternalBlockchain.g:3985:2: 'else'
+            // InternalBlockchain.g:3903:1: ( 'else' )
+            // InternalBlockchain.g:3904:2: 'else'
             {
              before(grammarAccess.getCondicionalAccess().getElseKeyword_10_0()); 
             match(input,32,FOLLOW_2); 
@@ -12532,16 +12290,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_10__1"
-    // InternalBlockchain.g:3994:1: rule__Condicional__Group_10__1 : rule__Condicional__Group_10__1__Impl rule__Condicional__Group_10__2 ;
+    // InternalBlockchain.g:3913:1: rule__Condicional__Group_10__1 : rule__Condicional__Group_10__1__Impl rule__Condicional__Group_10__2 ;
     public final void rule__Condicional__Group_10__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:3998:1: ( rule__Condicional__Group_10__1__Impl rule__Condicional__Group_10__2 )
-            // InternalBlockchain.g:3999:2: rule__Condicional__Group_10__1__Impl rule__Condicional__Group_10__2
+            // InternalBlockchain.g:3917:1: ( rule__Condicional__Group_10__1__Impl rule__Condicional__Group_10__2 )
+            // InternalBlockchain.g:3918:2: rule__Condicional__Group_10__1__Impl rule__Condicional__Group_10__2
             {
-            pushFollow(FOLLOW_48);
+            pushFollow(FOLLOW_46);
             rule__Condicional__Group_10__1__Impl();
 
             state._fsp--;
@@ -12570,17 +12328,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_10__1__Impl"
-    // InternalBlockchain.g:4006:1: rule__Condicional__Group_10__1__Impl : ( '{' ) ;
+    // InternalBlockchain.g:3925:1: rule__Condicional__Group_10__1__Impl : ( '{' ) ;
     public final void rule__Condicional__Group_10__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4010:1: ( ( '{' ) )
-            // InternalBlockchain.g:4011:1: ( '{' )
+            // InternalBlockchain.g:3929:1: ( ( '{' ) )
+            // InternalBlockchain.g:3930:1: ( '{' )
             {
-            // InternalBlockchain.g:4011:1: ( '{' )
-            // InternalBlockchain.g:4012:2: '{'
+            // InternalBlockchain.g:3930:1: ( '{' )
+            // InternalBlockchain.g:3931:2: '{'
             {
              before(grammarAccess.getCondicionalAccess().getLeftCurlyBracketKeyword_10_1()); 
             match(input,37,FOLLOW_2); 
@@ -12607,16 +12365,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_10__2"
-    // InternalBlockchain.g:4021:1: rule__Condicional__Group_10__2 : rule__Condicional__Group_10__2__Impl rule__Condicional__Group_10__3 ;
+    // InternalBlockchain.g:3940:1: rule__Condicional__Group_10__2 : rule__Condicional__Group_10__2__Impl rule__Condicional__Group_10__3 ;
     public final void rule__Condicional__Group_10__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4025:1: ( rule__Condicional__Group_10__2__Impl rule__Condicional__Group_10__3 )
-            // InternalBlockchain.g:4026:2: rule__Condicional__Group_10__2__Impl rule__Condicional__Group_10__3
+            // InternalBlockchain.g:3944:1: ( rule__Condicional__Group_10__2__Impl rule__Condicional__Group_10__3 )
+            // InternalBlockchain.g:3945:2: rule__Condicional__Group_10__2__Impl rule__Condicional__Group_10__3
             {
-            pushFollow(FOLLOW_45);
+            pushFollow(FOLLOW_43);
             rule__Condicional__Group_10__2__Impl();
 
             state._fsp--;
@@ -12645,21 +12403,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_10__2__Impl"
-    // InternalBlockchain.g:4033:1: rule__Condicional__Group_10__2__Impl : ( ( rule__Condicional__ElseAssignment_10_2 ) ) ;
+    // InternalBlockchain.g:3952:1: rule__Condicional__Group_10__2__Impl : ( ( rule__Condicional__ElseAssignment_10_2 ) ) ;
     public final void rule__Condicional__Group_10__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4037:1: ( ( ( rule__Condicional__ElseAssignment_10_2 ) ) )
-            // InternalBlockchain.g:4038:1: ( ( rule__Condicional__ElseAssignment_10_2 ) )
+            // InternalBlockchain.g:3956:1: ( ( ( rule__Condicional__ElseAssignment_10_2 ) ) )
+            // InternalBlockchain.g:3957:1: ( ( rule__Condicional__ElseAssignment_10_2 ) )
             {
-            // InternalBlockchain.g:4038:1: ( ( rule__Condicional__ElseAssignment_10_2 ) )
-            // InternalBlockchain.g:4039:2: ( rule__Condicional__ElseAssignment_10_2 )
+            // InternalBlockchain.g:3957:1: ( ( rule__Condicional__ElseAssignment_10_2 ) )
+            // InternalBlockchain.g:3958:2: ( rule__Condicional__ElseAssignment_10_2 )
             {
              before(grammarAccess.getCondicionalAccess().getElseAssignment_10_2()); 
-            // InternalBlockchain.g:4040:2: ( rule__Condicional__ElseAssignment_10_2 )
-            // InternalBlockchain.g:4040:3: rule__Condicional__ElseAssignment_10_2
+            // InternalBlockchain.g:3959:2: ( rule__Condicional__ElseAssignment_10_2 )
+            // InternalBlockchain.g:3959:3: rule__Condicional__ElseAssignment_10_2
             {
             pushFollow(FOLLOW_2);
             rule__Condicional__ElseAssignment_10_2();
@@ -12692,16 +12450,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_10__3"
-    // InternalBlockchain.g:4048:1: rule__Condicional__Group_10__3 : rule__Condicional__Group_10__3__Impl rule__Condicional__Group_10__4 ;
+    // InternalBlockchain.g:3967:1: rule__Condicional__Group_10__3 : rule__Condicional__Group_10__3__Impl rule__Condicional__Group_10__4 ;
     public final void rule__Condicional__Group_10__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4052:1: ( rule__Condicional__Group_10__3__Impl rule__Condicional__Group_10__4 )
-            // InternalBlockchain.g:4053:2: rule__Condicional__Group_10__3__Impl rule__Condicional__Group_10__4
+            // InternalBlockchain.g:3971:1: ( rule__Condicional__Group_10__3__Impl rule__Condicional__Group_10__4 )
+            // InternalBlockchain.g:3972:2: rule__Condicional__Group_10__3__Impl rule__Condicional__Group_10__4
             {
-            pushFollow(FOLLOW_45);
+            pushFollow(FOLLOW_43);
             rule__Condicional__Group_10__3__Impl();
 
             state._fsp--;
@@ -12730,33 +12488,33 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_10__3__Impl"
-    // InternalBlockchain.g:4060:1: rule__Condicional__Group_10__3__Impl : ( ( rule__Condicional__Group_10_3__0 )* ) ;
+    // InternalBlockchain.g:3979:1: rule__Condicional__Group_10__3__Impl : ( ( rule__Condicional__Group_10_3__0 )* ) ;
     public final void rule__Condicional__Group_10__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4064:1: ( ( ( rule__Condicional__Group_10_3__0 )* ) )
-            // InternalBlockchain.g:4065:1: ( ( rule__Condicional__Group_10_3__0 )* )
+            // InternalBlockchain.g:3983:1: ( ( ( rule__Condicional__Group_10_3__0 )* ) )
+            // InternalBlockchain.g:3984:1: ( ( rule__Condicional__Group_10_3__0 )* )
             {
-            // InternalBlockchain.g:4065:1: ( ( rule__Condicional__Group_10_3__0 )* )
-            // InternalBlockchain.g:4066:2: ( rule__Condicional__Group_10_3__0 )*
+            // InternalBlockchain.g:3984:1: ( ( rule__Condicional__Group_10_3__0 )* )
+            // InternalBlockchain.g:3985:2: ( rule__Condicional__Group_10_3__0 )*
             {
              before(grammarAccess.getCondicionalAccess().getGroup_10_3()); 
-            // InternalBlockchain.g:4067:2: ( rule__Condicional__Group_10_3__0 )*
-            loop39:
+            // InternalBlockchain.g:3986:2: ( rule__Condicional__Group_10_3__0 )*
+            loop38:
             do {
-                int alt39=2;
-                int LA39_0 = input.LA(1);
+                int alt38=2;
+                int LA38_0 = input.LA(1);
 
-                if ( (LA39_0==39) ) {
-                    alt39=1;
+                if ( (LA38_0==39) ) {
+                    alt38=1;
                 }
 
 
-                switch (alt39) {
+                switch (alt38) {
             	case 1 :
-            	    // InternalBlockchain.g:4067:3: rule__Condicional__Group_10_3__0
+            	    // InternalBlockchain.g:3986:3: rule__Condicional__Group_10_3__0
             	    {
             	    pushFollow(FOLLOW_9);
             	    rule__Condicional__Group_10_3__0();
@@ -12768,7 +12526,7 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
             	    break;
 
             	default :
-            	    break loop39;
+            	    break loop38;
                 }
             } while (true);
 
@@ -12795,14 +12553,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_10__4"
-    // InternalBlockchain.g:4075:1: rule__Condicional__Group_10__4 : rule__Condicional__Group_10__4__Impl ;
+    // InternalBlockchain.g:3994:1: rule__Condicional__Group_10__4 : rule__Condicional__Group_10__4__Impl ;
     public final void rule__Condicional__Group_10__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4079:1: ( rule__Condicional__Group_10__4__Impl )
-            // InternalBlockchain.g:4080:2: rule__Condicional__Group_10__4__Impl
+            // InternalBlockchain.g:3998:1: ( rule__Condicional__Group_10__4__Impl )
+            // InternalBlockchain.g:3999:2: rule__Condicional__Group_10__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Condicional__Group_10__4__Impl();
@@ -12828,17 +12586,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_10__4__Impl"
-    // InternalBlockchain.g:4086:1: rule__Condicional__Group_10__4__Impl : ( '}' ) ;
+    // InternalBlockchain.g:4005:1: rule__Condicional__Group_10__4__Impl : ( '}' ) ;
     public final void rule__Condicional__Group_10__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4090:1: ( ( '}' ) )
-            // InternalBlockchain.g:4091:1: ( '}' )
+            // InternalBlockchain.g:4009:1: ( ( '}' ) )
+            // InternalBlockchain.g:4010:1: ( '}' )
             {
-            // InternalBlockchain.g:4091:1: ( '}' )
-            // InternalBlockchain.g:4092:2: '}'
+            // InternalBlockchain.g:4010:1: ( '}' )
+            // InternalBlockchain.g:4011:2: '}'
             {
              before(grammarAccess.getCondicionalAccess().getRightCurlyBracketKeyword_10_4()); 
             match(input,38,FOLLOW_2); 
@@ -12865,16 +12623,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_10_3__0"
-    // InternalBlockchain.g:4102:1: rule__Condicional__Group_10_3__0 : rule__Condicional__Group_10_3__0__Impl rule__Condicional__Group_10_3__1 ;
+    // InternalBlockchain.g:4021:1: rule__Condicional__Group_10_3__0 : rule__Condicional__Group_10_3__0__Impl rule__Condicional__Group_10_3__1 ;
     public final void rule__Condicional__Group_10_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4106:1: ( rule__Condicional__Group_10_3__0__Impl rule__Condicional__Group_10_3__1 )
-            // InternalBlockchain.g:4107:2: rule__Condicional__Group_10_3__0__Impl rule__Condicional__Group_10_3__1
+            // InternalBlockchain.g:4025:1: ( rule__Condicional__Group_10_3__0__Impl rule__Condicional__Group_10_3__1 )
+            // InternalBlockchain.g:4026:2: rule__Condicional__Group_10_3__0__Impl rule__Condicional__Group_10_3__1
             {
-            pushFollow(FOLLOW_48);
+            pushFollow(FOLLOW_46);
             rule__Condicional__Group_10_3__0__Impl();
 
             state._fsp--;
@@ -12903,17 +12661,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_10_3__0__Impl"
-    // InternalBlockchain.g:4114:1: rule__Condicional__Group_10_3__0__Impl : ( ',' ) ;
+    // InternalBlockchain.g:4033:1: rule__Condicional__Group_10_3__0__Impl : ( ',' ) ;
     public final void rule__Condicional__Group_10_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4118:1: ( ( ',' ) )
-            // InternalBlockchain.g:4119:1: ( ',' )
+            // InternalBlockchain.g:4037:1: ( ( ',' ) )
+            // InternalBlockchain.g:4038:1: ( ',' )
             {
-            // InternalBlockchain.g:4119:1: ( ',' )
-            // InternalBlockchain.g:4120:2: ','
+            // InternalBlockchain.g:4038:1: ( ',' )
+            // InternalBlockchain.g:4039:2: ','
             {
              before(grammarAccess.getCondicionalAccess().getCommaKeyword_10_3_0()); 
             match(input,39,FOLLOW_2); 
@@ -12940,14 +12698,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_10_3__1"
-    // InternalBlockchain.g:4129:1: rule__Condicional__Group_10_3__1 : rule__Condicional__Group_10_3__1__Impl ;
+    // InternalBlockchain.g:4048:1: rule__Condicional__Group_10_3__1 : rule__Condicional__Group_10_3__1__Impl ;
     public final void rule__Condicional__Group_10_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4133:1: ( rule__Condicional__Group_10_3__1__Impl )
-            // InternalBlockchain.g:4134:2: rule__Condicional__Group_10_3__1__Impl
+            // InternalBlockchain.g:4052:1: ( rule__Condicional__Group_10_3__1__Impl )
+            // InternalBlockchain.g:4053:2: rule__Condicional__Group_10_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Condicional__Group_10_3__1__Impl();
@@ -12973,21 +12731,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__Group_10_3__1__Impl"
-    // InternalBlockchain.g:4140:1: rule__Condicional__Group_10_3__1__Impl : ( ( rule__Condicional__ElseAssignment_10_3_1 ) ) ;
+    // InternalBlockchain.g:4059:1: rule__Condicional__Group_10_3__1__Impl : ( ( rule__Condicional__ElseAssignment_10_3_1 ) ) ;
     public final void rule__Condicional__Group_10_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4144:1: ( ( ( rule__Condicional__ElseAssignment_10_3_1 ) ) )
-            // InternalBlockchain.g:4145:1: ( ( rule__Condicional__ElseAssignment_10_3_1 ) )
+            // InternalBlockchain.g:4063:1: ( ( ( rule__Condicional__ElseAssignment_10_3_1 ) ) )
+            // InternalBlockchain.g:4064:1: ( ( rule__Condicional__ElseAssignment_10_3_1 ) )
             {
-            // InternalBlockchain.g:4145:1: ( ( rule__Condicional__ElseAssignment_10_3_1 ) )
-            // InternalBlockchain.g:4146:2: ( rule__Condicional__ElseAssignment_10_3_1 )
+            // InternalBlockchain.g:4064:1: ( ( rule__Condicional__ElseAssignment_10_3_1 ) )
+            // InternalBlockchain.g:4065:2: ( rule__Condicional__ElseAssignment_10_3_1 )
             {
              before(grammarAccess.getCondicionalAccess().getElseAssignment_10_3_1()); 
-            // InternalBlockchain.g:4147:2: ( rule__Condicional__ElseAssignment_10_3_1 )
-            // InternalBlockchain.g:4147:3: rule__Condicional__ElseAssignment_10_3_1
+            // InternalBlockchain.g:4066:2: ( rule__Condicional__ElseAssignment_10_3_1 )
+            // InternalBlockchain.g:4066:3: rule__Condicional__ElseAssignment_10_3_1
             {
             pushFollow(FOLLOW_2);
             rule__Condicional__ElseAssignment_10_3_1();
@@ -13020,16 +12778,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionNumerica__Group__0"
-    // InternalBlockchain.g:4156:1: rule__ExpresionNumerica__Group__0 : rule__ExpresionNumerica__Group__0__Impl rule__ExpresionNumerica__Group__1 ;
+    // InternalBlockchain.g:4075:1: rule__ExpresionNumerica__Group__0 : rule__ExpresionNumerica__Group__0__Impl rule__ExpresionNumerica__Group__1 ;
     public final void rule__ExpresionNumerica__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4160:1: ( rule__ExpresionNumerica__Group__0__Impl rule__ExpresionNumerica__Group__1 )
-            // InternalBlockchain.g:4161:2: rule__ExpresionNumerica__Group__0__Impl rule__ExpresionNumerica__Group__1
+            // InternalBlockchain.g:4079:1: ( rule__ExpresionNumerica__Group__0__Impl rule__ExpresionNumerica__Group__1 )
+            // InternalBlockchain.g:4080:2: rule__ExpresionNumerica__Group__0__Impl rule__ExpresionNumerica__Group__1
             {
-            pushFollow(FOLLOW_49);
+            pushFollow(FOLLOW_47);
             rule__ExpresionNumerica__Group__0__Impl();
 
             state._fsp--;
@@ -13058,21 +12816,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionNumerica__Group__0__Impl"
-    // InternalBlockchain.g:4168:1: rule__ExpresionNumerica__Group__0__Impl : ( () ) ;
+    // InternalBlockchain.g:4087:1: rule__ExpresionNumerica__Group__0__Impl : ( () ) ;
     public final void rule__ExpresionNumerica__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4172:1: ( ( () ) )
-            // InternalBlockchain.g:4173:1: ( () )
+            // InternalBlockchain.g:4091:1: ( ( () ) )
+            // InternalBlockchain.g:4092:1: ( () )
             {
-            // InternalBlockchain.g:4173:1: ( () )
-            // InternalBlockchain.g:4174:2: ()
+            // InternalBlockchain.g:4092:1: ( () )
+            // InternalBlockchain.g:4093:2: ()
             {
              before(grammarAccess.getExpresionNumericaAccess().getExpresionNumericaAction_0()); 
-            // InternalBlockchain.g:4175:2: ()
-            // InternalBlockchain.g:4175:3: 
+            // InternalBlockchain.g:4094:2: ()
+            // InternalBlockchain.g:4094:3: 
             {
             }
 
@@ -13095,16 +12853,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionNumerica__Group__1"
-    // InternalBlockchain.g:4183:1: rule__ExpresionNumerica__Group__1 : rule__ExpresionNumerica__Group__1__Impl rule__ExpresionNumerica__Group__2 ;
+    // InternalBlockchain.g:4102:1: rule__ExpresionNumerica__Group__1 : rule__ExpresionNumerica__Group__1__Impl rule__ExpresionNumerica__Group__2 ;
     public final void rule__ExpresionNumerica__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4187:1: ( rule__ExpresionNumerica__Group__1__Impl rule__ExpresionNumerica__Group__2 )
-            // InternalBlockchain.g:4188:2: rule__ExpresionNumerica__Group__1__Impl rule__ExpresionNumerica__Group__2
+            // InternalBlockchain.g:4106:1: ( rule__ExpresionNumerica__Group__1__Impl rule__ExpresionNumerica__Group__2 )
+            // InternalBlockchain.g:4107:2: rule__ExpresionNumerica__Group__1__Impl rule__ExpresionNumerica__Group__2
             {
-            pushFollow(FOLLOW_50);
+            pushFollow(FOLLOW_48);
             rule__ExpresionNumerica__Group__1__Impl();
 
             state._fsp--;
@@ -13133,20 +12891,20 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionNumerica__Group__1__Impl"
-    // InternalBlockchain.g:4195:1: rule__ExpresionNumerica__Group__1__Impl : ( 'ExpNum' ) ;
+    // InternalBlockchain.g:4114:1: rule__ExpresionNumerica__Group__1__Impl : ( 'ExpNum' ) ;
     public final void rule__ExpresionNumerica__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4199:1: ( ( 'ExpNum' ) )
-            // InternalBlockchain.g:4200:1: ( 'ExpNum' )
+            // InternalBlockchain.g:4118:1: ( ( 'ExpNum' ) )
+            // InternalBlockchain.g:4119:1: ( 'ExpNum' )
             {
-            // InternalBlockchain.g:4200:1: ( 'ExpNum' )
-            // InternalBlockchain.g:4201:2: 'ExpNum'
+            // InternalBlockchain.g:4119:1: ( 'ExpNum' )
+            // InternalBlockchain.g:4120:2: 'ExpNum'
             {
              before(grammarAccess.getExpresionNumericaAccess().getExpNumKeyword_1()); 
-            match(input,58,FOLLOW_2); 
+            match(input,57,FOLLOW_2); 
              after(grammarAccess.getExpresionNumericaAccess().getExpNumKeyword_1()); 
 
             }
@@ -13170,14 +12928,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionNumerica__Group__2"
-    // InternalBlockchain.g:4210:1: rule__ExpresionNumerica__Group__2 : rule__ExpresionNumerica__Group__2__Impl ;
+    // InternalBlockchain.g:4129:1: rule__ExpresionNumerica__Group__2 : rule__ExpresionNumerica__Group__2__Impl ;
     public final void rule__ExpresionNumerica__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4214:1: ( rule__ExpresionNumerica__Group__2__Impl )
-            // InternalBlockchain.g:4215:2: rule__ExpresionNumerica__Group__2__Impl
+            // InternalBlockchain.g:4133:1: ( rule__ExpresionNumerica__Group__2__Impl )
+            // InternalBlockchain.g:4134:2: rule__ExpresionNumerica__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ExpresionNumerica__Group__2__Impl();
@@ -13203,29 +12961,29 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionNumerica__Group__2__Impl"
-    // InternalBlockchain.g:4221:1: rule__ExpresionNumerica__Group__2__Impl : ( ( rule__ExpresionNumerica__ValueAssignment_2 )? ) ;
+    // InternalBlockchain.g:4140:1: rule__ExpresionNumerica__Group__2__Impl : ( ( rule__ExpresionNumerica__ValueAssignment_2 )? ) ;
     public final void rule__ExpresionNumerica__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4225:1: ( ( ( rule__ExpresionNumerica__ValueAssignment_2 )? ) )
-            // InternalBlockchain.g:4226:1: ( ( rule__ExpresionNumerica__ValueAssignment_2 )? )
+            // InternalBlockchain.g:4144:1: ( ( ( rule__ExpresionNumerica__ValueAssignment_2 )? ) )
+            // InternalBlockchain.g:4145:1: ( ( rule__ExpresionNumerica__ValueAssignment_2 )? )
             {
-            // InternalBlockchain.g:4226:1: ( ( rule__ExpresionNumerica__ValueAssignment_2 )? )
-            // InternalBlockchain.g:4227:2: ( rule__ExpresionNumerica__ValueAssignment_2 )?
+            // InternalBlockchain.g:4145:1: ( ( rule__ExpresionNumerica__ValueAssignment_2 )? )
+            // InternalBlockchain.g:4146:2: ( rule__ExpresionNumerica__ValueAssignment_2 )?
             {
              before(grammarAccess.getExpresionNumericaAccess().getValueAssignment_2()); 
-            // InternalBlockchain.g:4228:2: ( rule__ExpresionNumerica__ValueAssignment_2 )?
-            int alt40=2;
-            int LA40_0 = input.LA(1);
+            // InternalBlockchain.g:4147:2: ( rule__ExpresionNumerica__ValueAssignment_2 )?
+            int alt39=2;
+            int LA39_0 = input.LA(1);
 
-            if ( (LA40_0==RULE_INT||LA40_0==11||LA40_0==25) ) {
-                alt40=1;
+            if ( (LA39_0==RULE_INT||LA39_0==11||LA39_0==25) ) {
+                alt39=1;
             }
-            switch (alt40) {
+            switch (alt39) {
                 case 1 :
-                    // InternalBlockchain.g:4228:3: rule__ExpresionNumerica__ValueAssignment_2
+                    // InternalBlockchain.g:4147:3: rule__ExpresionNumerica__ValueAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__ExpresionNumerica__ValueAssignment_2();
@@ -13261,16 +13019,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionReferenciada__Group__0"
-    // InternalBlockchain.g:4237:1: rule__ExpresionReferenciada__Group__0 : rule__ExpresionReferenciada__Group__0__Impl rule__ExpresionReferenciada__Group__1 ;
+    // InternalBlockchain.g:4156:1: rule__ExpresionReferenciada__Group__0 : rule__ExpresionReferenciada__Group__0__Impl rule__ExpresionReferenciada__Group__1 ;
     public final void rule__ExpresionReferenciada__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4241:1: ( rule__ExpresionReferenciada__Group__0__Impl rule__ExpresionReferenciada__Group__1 )
-            // InternalBlockchain.g:4242:2: rule__ExpresionReferenciada__Group__0__Impl rule__ExpresionReferenciada__Group__1
+            // InternalBlockchain.g:4160:1: ( rule__ExpresionReferenciada__Group__0__Impl rule__ExpresionReferenciada__Group__1 )
+            // InternalBlockchain.g:4161:2: rule__ExpresionReferenciada__Group__0__Impl rule__ExpresionReferenciada__Group__1
             {
-            pushFollow(FOLLOW_51);
+            pushFollow(FOLLOW_49);
             rule__ExpresionReferenciada__Group__0__Impl();
 
             state._fsp--;
@@ -13299,21 +13057,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionReferenciada__Group__0__Impl"
-    // InternalBlockchain.g:4249:1: rule__ExpresionReferenciada__Group__0__Impl : ( () ) ;
+    // InternalBlockchain.g:4168:1: rule__ExpresionReferenciada__Group__0__Impl : ( () ) ;
     public final void rule__ExpresionReferenciada__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4253:1: ( ( () ) )
-            // InternalBlockchain.g:4254:1: ( () )
+            // InternalBlockchain.g:4172:1: ( ( () ) )
+            // InternalBlockchain.g:4173:1: ( () )
             {
-            // InternalBlockchain.g:4254:1: ( () )
-            // InternalBlockchain.g:4255:2: ()
+            // InternalBlockchain.g:4173:1: ( () )
+            // InternalBlockchain.g:4174:2: ()
             {
              before(grammarAccess.getExpresionReferenciadaAccess().getExpresionReferenciadaAction_0()); 
-            // InternalBlockchain.g:4256:2: ()
-            // InternalBlockchain.g:4256:3: 
+            // InternalBlockchain.g:4175:2: ()
+            // InternalBlockchain.g:4175:3: 
             {
             }
 
@@ -13336,14 +13094,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionReferenciada__Group__1"
-    // InternalBlockchain.g:4264:1: rule__ExpresionReferenciada__Group__1 : rule__ExpresionReferenciada__Group__1__Impl rule__ExpresionReferenciada__Group__2 ;
+    // InternalBlockchain.g:4183:1: rule__ExpresionReferenciada__Group__1 : rule__ExpresionReferenciada__Group__1__Impl rule__ExpresionReferenciada__Group__2 ;
     public final void rule__ExpresionReferenciada__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4268:1: ( rule__ExpresionReferenciada__Group__1__Impl rule__ExpresionReferenciada__Group__2 )
-            // InternalBlockchain.g:4269:2: rule__ExpresionReferenciada__Group__1__Impl rule__ExpresionReferenciada__Group__2
+            // InternalBlockchain.g:4187:1: ( rule__ExpresionReferenciada__Group__1__Impl rule__ExpresionReferenciada__Group__2 )
+            // InternalBlockchain.g:4188:2: rule__ExpresionReferenciada__Group__1__Impl rule__ExpresionReferenciada__Group__2
             {
             pushFollow(FOLLOW_36);
             rule__ExpresionReferenciada__Group__1__Impl();
@@ -13374,20 +13132,20 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionReferenciada__Group__1__Impl"
-    // InternalBlockchain.g:4276:1: rule__ExpresionReferenciada__Group__1__Impl : ( 'ExpRef' ) ;
+    // InternalBlockchain.g:4195:1: rule__ExpresionReferenciada__Group__1__Impl : ( 'ExpRef' ) ;
     public final void rule__ExpresionReferenciada__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4280:1: ( ( 'ExpRef' ) )
-            // InternalBlockchain.g:4281:1: ( 'ExpRef' )
+            // InternalBlockchain.g:4199:1: ( ( 'ExpRef' ) )
+            // InternalBlockchain.g:4200:1: ( 'ExpRef' )
             {
-            // InternalBlockchain.g:4281:1: ( 'ExpRef' )
-            // InternalBlockchain.g:4282:2: 'ExpRef'
+            // InternalBlockchain.g:4200:1: ( 'ExpRef' )
+            // InternalBlockchain.g:4201:2: 'ExpRef'
             {
              before(grammarAccess.getExpresionReferenciadaAccess().getExpRefKeyword_1()); 
-            match(input,59,FOLLOW_2); 
+            match(input,58,FOLLOW_2); 
              after(grammarAccess.getExpresionReferenciadaAccess().getExpRefKeyword_1()); 
 
             }
@@ -13411,14 +13169,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionReferenciada__Group__2"
-    // InternalBlockchain.g:4291:1: rule__ExpresionReferenciada__Group__2 : rule__ExpresionReferenciada__Group__2__Impl rule__ExpresionReferenciada__Group__3 ;
+    // InternalBlockchain.g:4210:1: rule__ExpresionReferenciada__Group__2 : rule__ExpresionReferenciada__Group__2__Impl rule__ExpresionReferenciada__Group__3 ;
     public final void rule__ExpresionReferenciada__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4295:1: ( rule__ExpresionReferenciada__Group__2__Impl rule__ExpresionReferenciada__Group__3 )
-            // InternalBlockchain.g:4296:2: rule__ExpresionReferenciada__Group__2__Impl rule__ExpresionReferenciada__Group__3
+            // InternalBlockchain.g:4214:1: ( rule__ExpresionReferenciada__Group__2__Impl rule__ExpresionReferenciada__Group__3 )
+            // InternalBlockchain.g:4215:2: rule__ExpresionReferenciada__Group__2__Impl rule__ExpresionReferenciada__Group__3
             {
             pushFollow(FOLLOW_36);
             rule__ExpresionReferenciada__Group__2__Impl();
@@ -13449,40 +13207,40 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionReferenciada__Group__2__Impl"
-    // InternalBlockchain.g:4303:1: rule__ExpresionReferenciada__Group__2__Impl : ( ( rule__ExpresionReferenciada__Group_2__0 )? ) ;
+    // InternalBlockchain.g:4222:1: rule__ExpresionReferenciada__Group__2__Impl : ( ( rule__ExpresionReferenciada__Group_2__0 )? ) ;
     public final void rule__ExpresionReferenciada__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4307:1: ( ( ( rule__ExpresionReferenciada__Group_2__0 )? ) )
-            // InternalBlockchain.g:4308:1: ( ( rule__ExpresionReferenciada__Group_2__0 )? )
+            // InternalBlockchain.g:4226:1: ( ( ( rule__ExpresionReferenciada__Group_2__0 )? ) )
+            // InternalBlockchain.g:4227:1: ( ( rule__ExpresionReferenciada__Group_2__0 )? )
             {
-            // InternalBlockchain.g:4308:1: ( ( rule__ExpresionReferenciada__Group_2__0 )? )
-            // InternalBlockchain.g:4309:2: ( rule__ExpresionReferenciada__Group_2__0 )?
+            // InternalBlockchain.g:4227:1: ( ( rule__ExpresionReferenciada__Group_2__0 )? )
+            // InternalBlockchain.g:4228:2: ( rule__ExpresionReferenciada__Group_2__0 )?
             {
              before(grammarAccess.getExpresionReferenciadaAccess().getGroup_2()); 
-            // InternalBlockchain.g:4310:2: ( rule__ExpresionReferenciada__Group_2__0 )?
-            int alt41=2;
-            int LA41_0 = input.LA(1);
+            // InternalBlockchain.g:4229:2: ( rule__ExpresionReferenciada__Group_2__0 )?
+            int alt40=2;
+            int LA40_0 = input.LA(1);
 
-            if ( (LA41_0==51) ) {
-                int LA41_1 = input.LA(2);
+            if ( (LA40_0==51) ) {
+                int LA40_1 = input.LA(2);
 
-                if ( (LA41_1==25) ) {
-                    int LA41_3 = input.LA(3);
+                if ( (LA40_1==25) ) {
+                    int LA40_3 = input.LA(3);
 
-                    if ( (LA41_3==RULE_INT) ) {
-                        alt41=1;
+                    if ( (LA40_3==RULE_INT) ) {
+                        alt40=1;
                     }
                 }
-                else if ( (LA41_1==RULE_INT) ) {
-                    alt41=1;
+                else if ( (LA40_1==RULE_INT) ) {
+                    alt40=1;
                 }
             }
-            switch (alt41) {
+            switch (alt40) {
                 case 1 :
-                    // InternalBlockchain.g:4310:3: rule__ExpresionReferenciada__Group_2__0
+                    // InternalBlockchain.g:4229:3: rule__ExpresionReferenciada__Group_2__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__ExpresionReferenciada__Group_2__0();
@@ -13518,14 +13276,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionReferenciada__Group__3"
-    // InternalBlockchain.g:4318:1: rule__ExpresionReferenciada__Group__3 : rule__ExpresionReferenciada__Group__3__Impl rule__ExpresionReferenciada__Group__4 ;
+    // InternalBlockchain.g:4237:1: rule__ExpresionReferenciada__Group__3 : rule__ExpresionReferenciada__Group__3__Impl rule__ExpresionReferenciada__Group__4 ;
     public final void rule__ExpresionReferenciada__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4322:1: ( rule__ExpresionReferenciada__Group__3__Impl rule__ExpresionReferenciada__Group__4 )
-            // InternalBlockchain.g:4323:2: rule__ExpresionReferenciada__Group__3__Impl rule__ExpresionReferenciada__Group__4
+            // InternalBlockchain.g:4241:1: ( rule__ExpresionReferenciada__Group__3__Impl rule__ExpresionReferenciada__Group__4 )
+            // InternalBlockchain.g:4242:2: rule__ExpresionReferenciada__Group__3__Impl rule__ExpresionReferenciada__Group__4
             {
             pushFollow(FOLLOW_36);
             rule__ExpresionReferenciada__Group__3__Impl();
@@ -13556,32 +13314,32 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionReferenciada__Group__3__Impl"
-    // InternalBlockchain.g:4330:1: rule__ExpresionReferenciada__Group__3__Impl : ( ( rule__ExpresionReferenciada__EntReferenciadaAssignment_3 )? ) ;
+    // InternalBlockchain.g:4249:1: rule__ExpresionReferenciada__Group__3__Impl : ( ( rule__ExpresionReferenciada__EntReferenciadaAssignment_3 )? ) ;
     public final void rule__ExpresionReferenciada__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4334:1: ( ( ( rule__ExpresionReferenciada__EntReferenciadaAssignment_3 )? ) )
-            // InternalBlockchain.g:4335:1: ( ( rule__ExpresionReferenciada__EntReferenciadaAssignment_3 )? )
+            // InternalBlockchain.g:4253:1: ( ( ( rule__ExpresionReferenciada__EntReferenciadaAssignment_3 )? ) )
+            // InternalBlockchain.g:4254:1: ( ( rule__ExpresionReferenciada__EntReferenciadaAssignment_3 )? )
             {
-            // InternalBlockchain.g:4335:1: ( ( rule__ExpresionReferenciada__EntReferenciadaAssignment_3 )? )
-            // InternalBlockchain.g:4336:2: ( rule__ExpresionReferenciada__EntReferenciadaAssignment_3 )?
+            // InternalBlockchain.g:4254:1: ( ( rule__ExpresionReferenciada__EntReferenciadaAssignment_3 )? )
+            // InternalBlockchain.g:4255:2: ( rule__ExpresionReferenciada__EntReferenciadaAssignment_3 )?
             {
              before(grammarAccess.getExpresionReferenciadaAccess().getEntReferenciadaAssignment_3()); 
-            // InternalBlockchain.g:4337:2: ( rule__ExpresionReferenciada__EntReferenciadaAssignment_3 )?
-            int alt42=2;
-            int LA42_0 = input.LA(1);
+            // InternalBlockchain.g:4256:2: ( rule__ExpresionReferenciada__EntReferenciadaAssignment_3 )?
+            int alt41=2;
+            int LA41_0 = input.LA(1);
 
-            if ( (LA42_0==RULE_STRING) ) {
-                alt42=1;
+            if ( (LA41_0==RULE_STRING) ) {
+                alt41=1;
             }
-            else if ( (LA42_0==RULE_ID) ) {
-                alt42=1;
+            else if ( (LA41_0==RULE_ID) ) {
+                alt41=1;
             }
-            switch (alt42) {
+            switch (alt41) {
                 case 1 :
-                    // InternalBlockchain.g:4337:3: rule__ExpresionReferenciada__EntReferenciadaAssignment_3
+                    // InternalBlockchain.g:4256:3: rule__ExpresionReferenciada__EntReferenciadaAssignment_3
                     {
                     pushFollow(FOLLOW_2);
                     rule__ExpresionReferenciada__EntReferenciadaAssignment_3();
@@ -13617,14 +13375,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionReferenciada__Group__4"
-    // InternalBlockchain.g:4345:1: rule__ExpresionReferenciada__Group__4 : rule__ExpresionReferenciada__Group__4__Impl ;
+    // InternalBlockchain.g:4264:1: rule__ExpresionReferenciada__Group__4 : rule__ExpresionReferenciada__Group__4__Impl ;
     public final void rule__ExpresionReferenciada__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4349:1: ( rule__ExpresionReferenciada__Group__4__Impl )
-            // InternalBlockchain.g:4350:2: rule__ExpresionReferenciada__Group__4__Impl
+            // InternalBlockchain.g:4268:1: ( rule__ExpresionReferenciada__Group__4__Impl )
+            // InternalBlockchain.g:4269:2: rule__ExpresionReferenciada__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ExpresionReferenciada__Group__4__Impl();
@@ -13650,32 +13408,32 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionReferenciada__Group__4__Impl"
-    // InternalBlockchain.g:4356:1: rule__ExpresionReferenciada__Group__4__Impl : ( ( rule__ExpresionReferenciada__AtrReferenciadoAssignment_4 )? ) ;
+    // InternalBlockchain.g:4275:1: rule__ExpresionReferenciada__Group__4__Impl : ( ( rule__ExpresionReferenciada__AtrReferenciadoAssignment_4 )? ) ;
     public final void rule__ExpresionReferenciada__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4360:1: ( ( ( rule__ExpresionReferenciada__AtrReferenciadoAssignment_4 )? ) )
-            // InternalBlockchain.g:4361:1: ( ( rule__ExpresionReferenciada__AtrReferenciadoAssignment_4 )? )
+            // InternalBlockchain.g:4279:1: ( ( ( rule__ExpresionReferenciada__AtrReferenciadoAssignment_4 )? ) )
+            // InternalBlockchain.g:4280:1: ( ( rule__ExpresionReferenciada__AtrReferenciadoAssignment_4 )? )
             {
-            // InternalBlockchain.g:4361:1: ( ( rule__ExpresionReferenciada__AtrReferenciadoAssignment_4 )? )
-            // InternalBlockchain.g:4362:2: ( rule__ExpresionReferenciada__AtrReferenciadoAssignment_4 )?
+            // InternalBlockchain.g:4280:1: ( ( rule__ExpresionReferenciada__AtrReferenciadoAssignment_4 )? )
+            // InternalBlockchain.g:4281:2: ( rule__ExpresionReferenciada__AtrReferenciadoAssignment_4 )?
             {
              before(grammarAccess.getExpresionReferenciadaAccess().getAtrReferenciadoAssignment_4()); 
-            // InternalBlockchain.g:4363:2: ( rule__ExpresionReferenciada__AtrReferenciadoAssignment_4 )?
-            int alt43=2;
-            int LA43_0 = input.LA(1);
+            // InternalBlockchain.g:4282:2: ( rule__ExpresionReferenciada__AtrReferenciadoAssignment_4 )?
+            int alt42=2;
+            int LA42_0 = input.LA(1);
 
-            if ( (LA43_0==RULE_STRING) ) {
-                alt43=1;
+            if ( (LA42_0==RULE_STRING) ) {
+                alt42=1;
             }
-            else if ( (LA43_0==RULE_ID) ) {
-                alt43=1;
+            else if ( (LA42_0==RULE_ID) ) {
+                alt42=1;
             }
-            switch (alt43) {
+            switch (alt42) {
                 case 1 :
-                    // InternalBlockchain.g:4363:3: rule__ExpresionReferenciada__AtrReferenciadoAssignment_4
+                    // InternalBlockchain.g:4282:3: rule__ExpresionReferenciada__AtrReferenciadoAssignment_4
                     {
                     pushFollow(FOLLOW_2);
                     rule__ExpresionReferenciada__AtrReferenciadoAssignment_4();
@@ -13711,14 +13469,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionReferenciada__Group_2__0"
-    // InternalBlockchain.g:4372:1: rule__ExpresionReferenciada__Group_2__0 : rule__ExpresionReferenciada__Group_2__0__Impl rule__ExpresionReferenciada__Group_2__1 ;
+    // InternalBlockchain.g:4291:1: rule__ExpresionReferenciada__Group_2__0 : rule__ExpresionReferenciada__Group_2__0__Impl rule__ExpresionReferenciada__Group_2__1 ;
     public final void rule__ExpresionReferenciada__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4376:1: ( rule__ExpresionReferenciada__Group_2__0__Impl rule__ExpresionReferenciada__Group_2__1 )
-            // InternalBlockchain.g:4377:2: rule__ExpresionReferenciada__Group_2__0__Impl rule__ExpresionReferenciada__Group_2__1
+            // InternalBlockchain.g:4295:1: ( rule__ExpresionReferenciada__Group_2__0__Impl rule__ExpresionReferenciada__Group_2__1 )
+            // InternalBlockchain.g:4296:2: rule__ExpresionReferenciada__Group_2__0__Impl rule__ExpresionReferenciada__Group_2__1
             {
             pushFollow(FOLLOW_35);
             rule__ExpresionReferenciada__Group_2__0__Impl();
@@ -13749,17 +13507,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionReferenciada__Group_2__0__Impl"
-    // InternalBlockchain.g:4384:1: rule__ExpresionReferenciada__Group_2__0__Impl : ( 'id' ) ;
+    // InternalBlockchain.g:4303:1: rule__ExpresionReferenciada__Group_2__0__Impl : ( 'id' ) ;
     public final void rule__ExpresionReferenciada__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4388:1: ( ( 'id' ) )
-            // InternalBlockchain.g:4389:1: ( 'id' )
+            // InternalBlockchain.g:4307:1: ( ( 'id' ) )
+            // InternalBlockchain.g:4308:1: ( 'id' )
             {
-            // InternalBlockchain.g:4389:1: ( 'id' )
-            // InternalBlockchain.g:4390:2: 'id'
+            // InternalBlockchain.g:4308:1: ( 'id' )
+            // InternalBlockchain.g:4309:2: 'id'
             {
              before(grammarAccess.getExpresionReferenciadaAccess().getIdKeyword_2_0()); 
             match(input,51,FOLLOW_2); 
@@ -13786,14 +13544,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionReferenciada__Group_2__1"
-    // InternalBlockchain.g:4399:1: rule__ExpresionReferenciada__Group_2__1 : rule__ExpresionReferenciada__Group_2__1__Impl ;
+    // InternalBlockchain.g:4318:1: rule__ExpresionReferenciada__Group_2__1 : rule__ExpresionReferenciada__Group_2__1__Impl ;
     public final void rule__ExpresionReferenciada__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4403:1: ( rule__ExpresionReferenciada__Group_2__1__Impl )
-            // InternalBlockchain.g:4404:2: rule__ExpresionReferenciada__Group_2__1__Impl
+            // InternalBlockchain.g:4322:1: ( rule__ExpresionReferenciada__Group_2__1__Impl )
+            // InternalBlockchain.g:4323:2: rule__ExpresionReferenciada__Group_2__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ExpresionReferenciada__Group_2__1__Impl();
@@ -13819,21 +13577,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionReferenciada__Group_2__1__Impl"
-    // InternalBlockchain.g:4410:1: rule__ExpresionReferenciada__Group_2__1__Impl : ( ( rule__ExpresionReferenciada__IdAssignment_2_1 ) ) ;
+    // InternalBlockchain.g:4329:1: rule__ExpresionReferenciada__Group_2__1__Impl : ( ( rule__ExpresionReferenciada__IdAssignment_2_1 ) ) ;
     public final void rule__ExpresionReferenciada__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4414:1: ( ( ( rule__ExpresionReferenciada__IdAssignment_2_1 ) ) )
-            // InternalBlockchain.g:4415:1: ( ( rule__ExpresionReferenciada__IdAssignment_2_1 ) )
+            // InternalBlockchain.g:4333:1: ( ( ( rule__ExpresionReferenciada__IdAssignment_2_1 ) ) )
+            // InternalBlockchain.g:4334:1: ( ( rule__ExpresionReferenciada__IdAssignment_2_1 ) )
             {
-            // InternalBlockchain.g:4415:1: ( ( rule__ExpresionReferenciada__IdAssignment_2_1 ) )
-            // InternalBlockchain.g:4416:2: ( rule__ExpresionReferenciada__IdAssignment_2_1 )
+            // InternalBlockchain.g:4334:1: ( ( rule__ExpresionReferenciada__IdAssignment_2_1 ) )
+            // InternalBlockchain.g:4335:2: ( rule__ExpresionReferenciada__IdAssignment_2_1 )
             {
              before(grammarAccess.getExpresionReferenciadaAccess().getIdAssignment_2_1()); 
-            // InternalBlockchain.g:4417:2: ( rule__ExpresionReferenciada__IdAssignment_2_1 )
-            // InternalBlockchain.g:4417:3: rule__ExpresionReferenciada__IdAssignment_2_1
+            // InternalBlockchain.g:4336:2: ( rule__ExpresionReferenciada__IdAssignment_2_1 )
+            // InternalBlockchain.g:4336:3: rule__ExpresionReferenciada__IdAssignment_2_1
             {
             pushFollow(FOLLOW_2);
             rule__ExpresionReferenciada__IdAssignment_2_1();
@@ -13866,14 +13624,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__Group__0"
-    // InternalBlockchain.g:4426:1: rule__ExpresionRelacional__Group__0 : rule__ExpresionRelacional__Group__0__Impl rule__ExpresionRelacional__Group__1 ;
+    // InternalBlockchain.g:4345:1: rule__ExpresionRelacional__Group__0 : rule__ExpresionRelacional__Group__0__Impl rule__ExpresionRelacional__Group__1 ;
     public final void rule__ExpresionRelacional__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4430:1: ( rule__ExpresionRelacional__Group__0__Impl rule__ExpresionRelacional__Group__1 )
-            // InternalBlockchain.g:4431:2: rule__ExpresionRelacional__Group__0__Impl rule__ExpresionRelacional__Group__1
+            // InternalBlockchain.g:4349:1: ( rule__ExpresionRelacional__Group__0__Impl rule__ExpresionRelacional__Group__1 )
+            // InternalBlockchain.g:4350:2: rule__ExpresionRelacional__Group__0__Impl rule__ExpresionRelacional__Group__1
             {
             pushFollow(FOLLOW_5);
             rule__ExpresionRelacional__Group__0__Impl();
@@ -13904,20 +13662,20 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__Group__0__Impl"
-    // InternalBlockchain.g:4438:1: rule__ExpresionRelacional__Group__0__Impl : ( 'ExpRel' ) ;
+    // InternalBlockchain.g:4357:1: rule__ExpresionRelacional__Group__0__Impl : ( 'ExpRel' ) ;
     public final void rule__ExpresionRelacional__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4442:1: ( ( 'ExpRel' ) )
-            // InternalBlockchain.g:4443:1: ( 'ExpRel' )
+            // InternalBlockchain.g:4361:1: ( ( 'ExpRel' ) )
+            // InternalBlockchain.g:4362:1: ( 'ExpRel' )
             {
-            // InternalBlockchain.g:4443:1: ( 'ExpRel' )
-            // InternalBlockchain.g:4444:2: 'ExpRel'
+            // InternalBlockchain.g:4362:1: ( 'ExpRel' )
+            // InternalBlockchain.g:4363:2: 'ExpRel'
             {
              before(grammarAccess.getExpresionRelacionalAccess().getExpRelKeyword_0()); 
-            match(input,60,FOLLOW_2); 
+            match(input,59,FOLLOW_2); 
              after(grammarAccess.getExpresionRelacionalAccess().getExpRelKeyword_0()); 
 
             }
@@ -13941,14 +13699,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__Group__1"
-    // InternalBlockchain.g:4453:1: rule__ExpresionRelacional__Group__1 : rule__ExpresionRelacional__Group__1__Impl rule__ExpresionRelacional__Group__2 ;
+    // InternalBlockchain.g:4372:1: rule__ExpresionRelacional__Group__1 : rule__ExpresionRelacional__Group__1__Impl rule__ExpresionRelacional__Group__2 ;
     public final void rule__ExpresionRelacional__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4457:1: ( rule__ExpresionRelacional__Group__1__Impl rule__ExpresionRelacional__Group__2 )
-            // InternalBlockchain.g:4458:2: rule__ExpresionRelacional__Group__1__Impl rule__ExpresionRelacional__Group__2
+            // InternalBlockchain.g:4376:1: ( rule__ExpresionRelacional__Group__1__Impl rule__ExpresionRelacional__Group__2 )
+            // InternalBlockchain.g:4377:2: rule__ExpresionRelacional__Group__1__Impl rule__ExpresionRelacional__Group__2
             {
             pushFollow(FOLLOW_36);
             rule__ExpresionRelacional__Group__1__Impl();
@@ -13979,17 +13737,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__Group__1__Impl"
-    // InternalBlockchain.g:4465:1: rule__ExpresionRelacional__Group__1__Impl : ( '{' ) ;
+    // InternalBlockchain.g:4384:1: rule__ExpresionRelacional__Group__1__Impl : ( '{' ) ;
     public final void rule__ExpresionRelacional__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4469:1: ( ( '{' ) )
-            // InternalBlockchain.g:4470:1: ( '{' )
+            // InternalBlockchain.g:4388:1: ( ( '{' ) )
+            // InternalBlockchain.g:4389:1: ( '{' )
             {
-            // InternalBlockchain.g:4470:1: ( '{' )
-            // InternalBlockchain.g:4471:2: '{'
+            // InternalBlockchain.g:4389:1: ( '{' )
+            // InternalBlockchain.g:4390:2: '{'
             {
              before(grammarAccess.getExpresionRelacionalAccess().getLeftCurlyBracketKeyword_1()); 
             match(input,37,FOLLOW_2); 
@@ -14016,14 +13774,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__Group__2"
-    // InternalBlockchain.g:4480:1: rule__ExpresionRelacional__Group__2 : rule__ExpresionRelacional__Group__2__Impl rule__ExpresionRelacional__Group__3 ;
+    // InternalBlockchain.g:4399:1: rule__ExpresionRelacional__Group__2 : rule__ExpresionRelacional__Group__2__Impl rule__ExpresionRelacional__Group__3 ;
     public final void rule__ExpresionRelacional__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4484:1: ( rule__ExpresionRelacional__Group__2__Impl rule__ExpresionRelacional__Group__3 )
-            // InternalBlockchain.g:4485:2: rule__ExpresionRelacional__Group__2__Impl rule__ExpresionRelacional__Group__3
+            // InternalBlockchain.g:4403:1: ( rule__ExpresionRelacional__Group__2__Impl rule__ExpresionRelacional__Group__3 )
+            // InternalBlockchain.g:4404:2: rule__ExpresionRelacional__Group__2__Impl rule__ExpresionRelacional__Group__3
             {
             pushFollow(FOLLOW_36);
             rule__ExpresionRelacional__Group__2__Impl();
@@ -14054,29 +13812,29 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__Group__2__Impl"
-    // InternalBlockchain.g:4492:1: rule__ExpresionRelacional__Group__2__Impl : ( ( rule__ExpresionRelacional__Group_2__0 )? ) ;
+    // InternalBlockchain.g:4411:1: rule__ExpresionRelacional__Group__2__Impl : ( ( rule__ExpresionRelacional__Group_2__0 )? ) ;
     public final void rule__ExpresionRelacional__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4496:1: ( ( ( rule__ExpresionRelacional__Group_2__0 )? ) )
-            // InternalBlockchain.g:4497:1: ( ( rule__ExpresionRelacional__Group_2__0 )? )
+            // InternalBlockchain.g:4415:1: ( ( ( rule__ExpresionRelacional__Group_2__0 )? ) )
+            // InternalBlockchain.g:4416:1: ( ( rule__ExpresionRelacional__Group_2__0 )? )
             {
-            // InternalBlockchain.g:4497:1: ( ( rule__ExpresionRelacional__Group_2__0 )? )
-            // InternalBlockchain.g:4498:2: ( rule__ExpresionRelacional__Group_2__0 )?
+            // InternalBlockchain.g:4416:1: ( ( rule__ExpresionRelacional__Group_2__0 )? )
+            // InternalBlockchain.g:4417:2: ( rule__ExpresionRelacional__Group_2__0 )?
             {
              before(grammarAccess.getExpresionRelacionalAccess().getGroup_2()); 
-            // InternalBlockchain.g:4499:2: ( rule__ExpresionRelacional__Group_2__0 )?
-            int alt44=2;
-            int LA44_0 = input.LA(1);
+            // InternalBlockchain.g:4418:2: ( rule__ExpresionRelacional__Group_2__0 )?
+            int alt43=2;
+            int LA43_0 = input.LA(1);
 
-            if ( (LA44_0==51) ) {
-                alt44=1;
+            if ( (LA43_0==51) ) {
+                alt43=1;
             }
-            switch (alt44) {
+            switch (alt43) {
                 case 1 :
-                    // InternalBlockchain.g:4499:3: rule__ExpresionRelacional__Group_2__0
+                    // InternalBlockchain.g:4418:3: rule__ExpresionRelacional__Group_2__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__ExpresionRelacional__Group_2__0();
@@ -14112,16 +13870,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__Group__3"
-    // InternalBlockchain.g:4507:1: rule__ExpresionRelacional__Group__3 : rule__ExpresionRelacional__Group__3__Impl rule__ExpresionRelacional__Group__4 ;
+    // InternalBlockchain.g:4426:1: rule__ExpresionRelacional__Group__3 : rule__ExpresionRelacional__Group__3__Impl rule__ExpresionRelacional__Group__4 ;
     public final void rule__ExpresionRelacional__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4511:1: ( rule__ExpresionRelacional__Group__3__Impl rule__ExpresionRelacional__Group__4 )
-            // InternalBlockchain.g:4512:2: rule__ExpresionRelacional__Group__3__Impl rule__ExpresionRelacional__Group__4
+            // InternalBlockchain.g:4430:1: ( rule__ExpresionRelacional__Group__3__Impl rule__ExpresionRelacional__Group__4 )
+            // InternalBlockchain.g:4431:2: rule__ExpresionRelacional__Group__3__Impl rule__ExpresionRelacional__Group__4
             {
-            pushFollow(FOLLOW_52);
+            pushFollow(FOLLOW_50);
             rule__ExpresionRelacional__Group__3__Impl();
 
             state._fsp--;
@@ -14150,21 +13908,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__Group__3__Impl"
-    // InternalBlockchain.g:4519:1: rule__ExpresionRelacional__Group__3__Impl : ( ( rule__ExpresionRelacional__LadoIzqAssignment_3 ) ) ;
+    // InternalBlockchain.g:4438:1: rule__ExpresionRelacional__Group__3__Impl : ( ( rule__ExpresionRelacional__LadoIzqAssignment_3 ) ) ;
     public final void rule__ExpresionRelacional__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4523:1: ( ( ( rule__ExpresionRelacional__LadoIzqAssignment_3 ) ) )
-            // InternalBlockchain.g:4524:1: ( ( rule__ExpresionRelacional__LadoIzqAssignment_3 ) )
+            // InternalBlockchain.g:4442:1: ( ( ( rule__ExpresionRelacional__LadoIzqAssignment_3 ) ) )
+            // InternalBlockchain.g:4443:1: ( ( rule__ExpresionRelacional__LadoIzqAssignment_3 ) )
             {
-            // InternalBlockchain.g:4524:1: ( ( rule__ExpresionRelacional__LadoIzqAssignment_3 ) )
-            // InternalBlockchain.g:4525:2: ( rule__ExpresionRelacional__LadoIzqAssignment_3 )
+            // InternalBlockchain.g:4443:1: ( ( rule__ExpresionRelacional__LadoIzqAssignment_3 ) )
+            // InternalBlockchain.g:4444:2: ( rule__ExpresionRelacional__LadoIzqAssignment_3 )
             {
              before(grammarAccess.getExpresionRelacionalAccess().getLadoIzqAssignment_3()); 
-            // InternalBlockchain.g:4526:2: ( rule__ExpresionRelacional__LadoIzqAssignment_3 )
-            // InternalBlockchain.g:4526:3: rule__ExpresionRelacional__LadoIzqAssignment_3
+            // InternalBlockchain.g:4445:2: ( rule__ExpresionRelacional__LadoIzqAssignment_3 )
+            // InternalBlockchain.g:4445:3: rule__ExpresionRelacional__LadoIzqAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__ExpresionRelacional__LadoIzqAssignment_3();
@@ -14197,16 +13955,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__Group__4"
-    // InternalBlockchain.g:4534:1: rule__ExpresionRelacional__Group__4 : rule__ExpresionRelacional__Group__4__Impl rule__ExpresionRelacional__Group__5 ;
+    // InternalBlockchain.g:4453:1: rule__ExpresionRelacional__Group__4 : rule__ExpresionRelacional__Group__4__Impl rule__ExpresionRelacional__Group__5 ;
     public final void rule__ExpresionRelacional__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4538:1: ( rule__ExpresionRelacional__Group__4__Impl rule__ExpresionRelacional__Group__5 )
-            // InternalBlockchain.g:4539:2: rule__ExpresionRelacional__Group__4__Impl rule__ExpresionRelacional__Group__5
+            // InternalBlockchain.g:4457:1: ( rule__ExpresionRelacional__Group__4__Impl rule__ExpresionRelacional__Group__5 )
+            // InternalBlockchain.g:4458:2: rule__ExpresionRelacional__Group__4__Impl rule__ExpresionRelacional__Group__5
             {
-            pushFollow(FOLLOW_52);
+            pushFollow(FOLLOW_50);
             rule__ExpresionRelacional__Group__4__Impl();
 
             state._fsp--;
@@ -14235,29 +13993,29 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__Group__4__Impl"
-    // InternalBlockchain.g:4546:1: rule__ExpresionRelacional__Group__4__Impl : ( ( rule__ExpresionRelacional__OperadorRelacionalAssignment_4 )? ) ;
+    // InternalBlockchain.g:4465:1: rule__ExpresionRelacional__Group__4__Impl : ( ( rule__ExpresionRelacional__OperadorRelacionalAssignment_4 )? ) ;
     public final void rule__ExpresionRelacional__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4550:1: ( ( ( rule__ExpresionRelacional__OperadorRelacionalAssignment_4 )? ) )
-            // InternalBlockchain.g:4551:1: ( ( rule__ExpresionRelacional__OperadorRelacionalAssignment_4 )? )
+            // InternalBlockchain.g:4469:1: ( ( ( rule__ExpresionRelacional__OperadorRelacionalAssignment_4 )? ) )
+            // InternalBlockchain.g:4470:1: ( ( rule__ExpresionRelacional__OperadorRelacionalAssignment_4 )? )
             {
-            // InternalBlockchain.g:4551:1: ( ( rule__ExpresionRelacional__OperadorRelacionalAssignment_4 )? )
-            // InternalBlockchain.g:4552:2: ( rule__ExpresionRelacional__OperadorRelacionalAssignment_4 )?
+            // InternalBlockchain.g:4470:1: ( ( rule__ExpresionRelacional__OperadorRelacionalAssignment_4 )? )
+            // InternalBlockchain.g:4471:2: ( rule__ExpresionRelacional__OperadorRelacionalAssignment_4 )?
             {
              before(grammarAccess.getExpresionRelacionalAccess().getOperadorRelacionalAssignment_4()); 
-            // InternalBlockchain.g:4553:2: ( rule__ExpresionRelacional__OperadorRelacionalAssignment_4 )?
-            int alt45=2;
-            int LA45_0 = input.LA(1);
+            // InternalBlockchain.g:4472:2: ( rule__ExpresionRelacional__OperadorRelacionalAssignment_4 )?
+            int alt44=2;
+            int LA44_0 = input.LA(1);
 
-            if ( (LA45_0==11) ) {
-                alt45=1;
+            if ( (LA44_0==11) ) {
+                alt44=1;
             }
-            switch (alt45) {
+            switch (alt44) {
                 case 1 :
-                    // InternalBlockchain.g:4553:3: rule__ExpresionRelacional__OperadorRelacionalAssignment_4
+                    // InternalBlockchain.g:4472:3: rule__ExpresionRelacional__OperadorRelacionalAssignment_4
                     {
                     pushFollow(FOLLOW_2);
                     rule__ExpresionRelacional__OperadorRelacionalAssignment_4();
@@ -14293,16 +14051,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__Group__5"
-    // InternalBlockchain.g:4561:1: rule__ExpresionRelacional__Group__5 : rule__ExpresionRelacional__Group__5__Impl rule__ExpresionRelacional__Group__6 ;
+    // InternalBlockchain.g:4480:1: rule__ExpresionRelacional__Group__5 : rule__ExpresionRelacional__Group__5__Impl rule__ExpresionRelacional__Group__6 ;
     public final void rule__ExpresionRelacional__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4565:1: ( rule__ExpresionRelacional__Group__5__Impl rule__ExpresionRelacional__Group__6 )
-            // InternalBlockchain.g:4566:2: rule__ExpresionRelacional__Group__5__Impl rule__ExpresionRelacional__Group__6
+            // InternalBlockchain.g:4484:1: ( rule__ExpresionRelacional__Group__5__Impl rule__ExpresionRelacional__Group__6 )
+            // InternalBlockchain.g:4485:2: rule__ExpresionRelacional__Group__5__Impl rule__ExpresionRelacional__Group__6
             {
-            pushFollow(FOLLOW_53);
+            pushFollow(FOLLOW_51);
             rule__ExpresionRelacional__Group__5__Impl();
 
             state._fsp--;
@@ -14331,21 +14089,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__Group__5__Impl"
-    // InternalBlockchain.g:4573:1: rule__ExpresionRelacional__Group__5__Impl : ( ( rule__ExpresionRelacional__LadoDerAssignment_5 ) ) ;
+    // InternalBlockchain.g:4492:1: rule__ExpresionRelacional__Group__5__Impl : ( ( rule__ExpresionRelacional__LadoDerAssignment_5 ) ) ;
     public final void rule__ExpresionRelacional__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4577:1: ( ( ( rule__ExpresionRelacional__LadoDerAssignment_5 ) ) )
-            // InternalBlockchain.g:4578:1: ( ( rule__ExpresionRelacional__LadoDerAssignment_5 ) )
+            // InternalBlockchain.g:4496:1: ( ( ( rule__ExpresionRelacional__LadoDerAssignment_5 ) ) )
+            // InternalBlockchain.g:4497:1: ( ( rule__ExpresionRelacional__LadoDerAssignment_5 ) )
             {
-            // InternalBlockchain.g:4578:1: ( ( rule__ExpresionRelacional__LadoDerAssignment_5 ) )
-            // InternalBlockchain.g:4579:2: ( rule__ExpresionRelacional__LadoDerAssignment_5 )
+            // InternalBlockchain.g:4497:1: ( ( rule__ExpresionRelacional__LadoDerAssignment_5 ) )
+            // InternalBlockchain.g:4498:2: ( rule__ExpresionRelacional__LadoDerAssignment_5 )
             {
              before(grammarAccess.getExpresionRelacionalAccess().getLadoDerAssignment_5()); 
-            // InternalBlockchain.g:4580:2: ( rule__ExpresionRelacional__LadoDerAssignment_5 )
-            // InternalBlockchain.g:4580:3: rule__ExpresionRelacional__LadoDerAssignment_5
+            // InternalBlockchain.g:4499:2: ( rule__ExpresionRelacional__LadoDerAssignment_5 )
+            // InternalBlockchain.g:4499:3: rule__ExpresionRelacional__LadoDerAssignment_5
             {
             pushFollow(FOLLOW_2);
             rule__ExpresionRelacional__LadoDerAssignment_5();
@@ -14378,14 +14136,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__Group__6"
-    // InternalBlockchain.g:4588:1: rule__ExpresionRelacional__Group__6 : rule__ExpresionRelacional__Group__6__Impl ;
+    // InternalBlockchain.g:4507:1: rule__ExpresionRelacional__Group__6 : rule__ExpresionRelacional__Group__6__Impl ;
     public final void rule__ExpresionRelacional__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4592:1: ( rule__ExpresionRelacional__Group__6__Impl )
-            // InternalBlockchain.g:4593:2: rule__ExpresionRelacional__Group__6__Impl
+            // InternalBlockchain.g:4511:1: ( rule__ExpresionRelacional__Group__6__Impl )
+            // InternalBlockchain.g:4512:2: rule__ExpresionRelacional__Group__6__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ExpresionRelacional__Group__6__Impl();
@@ -14411,17 +14169,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__Group__6__Impl"
-    // InternalBlockchain.g:4599:1: rule__ExpresionRelacional__Group__6__Impl : ( '}' ) ;
+    // InternalBlockchain.g:4518:1: rule__ExpresionRelacional__Group__6__Impl : ( '}' ) ;
     public final void rule__ExpresionRelacional__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4603:1: ( ( '}' ) )
-            // InternalBlockchain.g:4604:1: ( '}' )
+            // InternalBlockchain.g:4522:1: ( ( '}' ) )
+            // InternalBlockchain.g:4523:1: ( '}' )
             {
-            // InternalBlockchain.g:4604:1: ( '}' )
-            // InternalBlockchain.g:4605:2: '}'
+            // InternalBlockchain.g:4523:1: ( '}' )
+            // InternalBlockchain.g:4524:2: '}'
             {
              before(grammarAccess.getExpresionRelacionalAccess().getRightCurlyBracketKeyword_6()); 
             match(input,38,FOLLOW_2); 
@@ -14448,14 +14206,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__Group_2__0"
-    // InternalBlockchain.g:4615:1: rule__ExpresionRelacional__Group_2__0 : rule__ExpresionRelacional__Group_2__0__Impl rule__ExpresionRelacional__Group_2__1 ;
+    // InternalBlockchain.g:4534:1: rule__ExpresionRelacional__Group_2__0 : rule__ExpresionRelacional__Group_2__0__Impl rule__ExpresionRelacional__Group_2__1 ;
     public final void rule__ExpresionRelacional__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4619:1: ( rule__ExpresionRelacional__Group_2__0__Impl rule__ExpresionRelacional__Group_2__1 )
-            // InternalBlockchain.g:4620:2: rule__ExpresionRelacional__Group_2__0__Impl rule__ExpresionRelacional__Group_2__1
+            // InternalBlockchain.g:4538:1: ( rule__ExpresionRelacional__Group_2__0__Impl rule__ExpresionRelacional__Group_2__1 )
+            // InternalBlockchain.g:4539:2: rule__ExpresionRelacional__Group_2__0__Impl rule__ExpresionRelacional__Group_2__1
             {
             pushFollow(FOLLOW_35);
             rule__ExpresionRelacional__Group_2__0__Impl();
@@ -14486,17 +14244,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__Group_2__0__Impl"
-    // InternalBlockchain.g:4627:1: rule__ExpresionRelacional__Group_2__0__Impl : ( 'id' ) ;
+    // InternalBlockchain.g:4546:1: rule__ExpresionRelacional__Group_2__0__Impl : ( 'id' ) ;
     public final void rule__ExpresionRelacional__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4631:1: ( ( 'id' ) )
-            // InternalBlockchain.g:4632:1: ( 'id' )
+            // InternalBlockchain.g:4550:1: ( ( 'id' ) )
+            // InternalBlockchain.g:4551:1: ( 'id' )
             {
-            // InternalBlockchain.g:4632:1: ( 'id' )
-            // InternalBlockchain.g:4633:2: 'id'
+            // InternalBlockchain.g:4551:1: ( 'id' )
+            // InternalBlockchain.g:4552:2: 'id'
             {
              before(grammarAccess.getExpresionRelacionalAccess().getIdKeyword_2_0()); 
             match(input,51,FOLLOW_2); 
@@ -14523,14 +14281,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__Group_2__1"
-    // InternalBlockchain.g:4642:1: rule__ExpresionRelacional__Group_2__1 : rule__ExpresionRelacional__Group_2__1__Impl ;
+    // InternalBlockchain.g:4561:1: rule__ExpresionRelacional__Group_2__1 : rule__ExpresionRelacional__Group_2__1__Impl ;
     public final void rule__ExpresionRelacional__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4646:1: ( rule__ExpresionRelacional__Group_2__1__Impl )
-            // InternalBlockchain.g:4647:2: rule__ExpresionRelacional__Group_2__1__Impl
+            // InternalBlockchain.g:4565:1: ( rule__ExpresionRelacional__Group_2__1__Impl )
+            // InternalBlockchain.g:4566:2: rule__ExpresionRelacional__Group_2__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ExpresionRelacional__Group_2__1__Impl();
@@ -14556,21 +14314,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__Group_2__1__Impl"
-    // InternalBlockchain.g:4653:1: rule__ExpresionRelacional__Group_2__1__Impl : ( ( rule__ExpresionRelacional__IdAssignment_2_1 ) ) ;
+    // InternalBlockchain.g:4572:1: rule__ExpresionRelacional__Group_2__1__Impl : ( ( rule__ExpresionRelacional__IdAssignment_2_1 ) ) ;
     public final void rule__ExpresionRelacional__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4657:1: ( ( ( rule__ExpresionRelacional__IdAssignment_2_1 ) ) )
-            // InternalBlockchain.g:4658:1: ( ( rule__ExpresionRelacional__IdAssignment_2_1 ) )
+            // InternalBlockchain.g:4576:1: ( ( ( rule__ExpresionRelacional__IdAssignment_2_1 ) ) )
+            // InternalBlockchain.g:4577:1: ( ( rule__ExpresionRelacional__IdAssignment_2_1 ) )
             {
-            // InternalBlockchain.g:4658:1: ( ( rule__ExpresionRelacional__IdAssignment_2_1 ) )
-            // InternalBlockchain.g:4659:2: ( rule__ExpresionRelacional__IdAssignment_2_1 )
+            // InternalBlockchain.g:4577:1: ( ( rule__ExpresionRelacional__IdAssignment_2_1 ) )
+            // InternalBlockchain.g:4578:2: ( rule__ExpresionRelacional__IdAssignment_2_1 )
             {
              before(grammarAccess.getExpresionRelacionalAccess().getIdAssignment_2_1()); 
-            // InternalBlockchain.g:4660:2: ( rule__ExpresionRelacional__IdAssignment_2_1 )
-            // InternalBlockchain.g:4660:3: rule__ExpresionRelacional__IdAssignment_2_1
+            // InternalBlockchain.g:4579:2: ( rule__ExpresionRelacional__IdAssignment_2_1 )
+            // InternalBlockchain.g:4579:3: rule__ExpresionRelacional__IdAssignment_2_1
             {
             pushFollow(FOLLOW_2);
             rule__ExpresionRelacional__IdAssignment_2_1();
@@ -14603,14 +14361,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EInt__Group__0"
-    // InternalBlockchain.g:4669:1: rule__EInt__Group__0 : rule__EInt__Group__0__Impl rule__EInt__Group__1 ;
+    // InternalBlockchain.g:4588:1: rule__EInt__Group__0 : rule__EInt__Group__0__Impl rule__EInt__Group__1 ;
     public final void rule__EInt__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4673:1: ( rule__EInt__Group__0__Impl rule__EInt__Group__1 )
-            // InternalBlockchain.g:4674:2: rule__EInt__Group__0__Impl rule__EInt__Group__1
+            // InternalBlockchain.g:4592:1: ( rule__EInt__Group__0__Impl rule__EInt__Group__1 )
+            // InternalBlockchain.g:4593:2: rule__EInt__Group__0__Impl rule__EInt__Group__1
             {
             pushFollow(FOLLOW_35);
             rule__EInt__Group__0__Impl();
@@ -14641,29 +14399,29 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EInt__Group__0__Impl"
-    // InternalBlockchain.g:4681:1: rule__EInt__Group__0__Impl : ( ( '-' )? ) ;
+    // InternalBlockchain.g:4600:1: rule__EInt__Group__0__Impl : ( ( '-' )? ) ;
     public final void rule__EInt__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4685:1: ( ( ( '-' )? ) )
-            // InternalBlockchain.g:4686:1: ( ( '-' )? )
+            // InternalBlockchain.g:4604:1: ( ( ( '-' )? ) )
+            // InternalBlockchain.g:4605:1: ( ( '-' )? )
             {
-            // InternalBlockchain.g:4686:1: ( ( '-' )? )
-            // InternalBlockchain.g:4687:2: ( '-' )?
+            // InternalBlockchain.g:4605:1: ( ( '-' )? )
+            // InternalBlockchain.g:4606:2: ( '-' )?
             {
              before(grammarAccess.getEIntAccess().getHyphenMinusKeyword_0()); 
-            // InternalBlockchain.g:4688:2: ( '-' )?
-            int alt46=2;
-            int LA46_0 = input.LA(1);
+            // InternalBlockchain.g:4607:2: ( '-' )?
+            int alt45=2;
+            int LA45_0 = input.LA(1);
 
-            if ( (LA46_0==25) ) {
-                alt46=1;
+            if ( (LA45_0==25) ) {
+                alt45=1;
             }
-            switch (alt46) {
+            switch (alt45) {
                 case 1 :
-                    // InternalBlockchain.g:4688:3: '-'
+                    // InternalBlockchain.g:4607:3: '-'
                     {
                     match(input,25,FOLLOW_2); 
 
@@ -14695,14 +14453,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EInt__Group__1"
-    // InternalBlockchain.g:4696:1: rule__EInt__Group__1 : rule__EInt__Group__1__Impl ;
+    // InternalBlockchain.g:4615:1: rule__EInt__Group__1 : rule__EInt__Group__1__Impl ;
     public final void rule__EInt__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4700:1: ( rule__EInt__Group__1__Impl )
-            // InternalBlockchain.g:4701:2: rule__EInt__Group__1__Impl
+            // InternalBlockchain.g:4619:1: ( rule__EInt__Group__1__Impl )
+            // InternalBlockchain.g:4620:2: rule__EInt__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__EInt__Group__1__Impl();
@@ -14728,17 +14486,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EInt__Group__1__Impl"
-    // InternalBlockchain.g:4707:1: rule__EInt__Group__1__Impl : ( RULE_INT ) ;
+    // InternalBlockchain.g:4626:1: rule__EInt__Group__1__Impl : ( RULE_INT ) ;
     public final void rule__EInt__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4711:1: ( ( RULE_INT ) )
-            // InternalBlockchain.g:4712:1: ( RULE_INT )
+            // InternalBlockchain.g:4630:1: ( ( RULE_INT ) )
+            // InternalBlockchain.g:4631:1: ( RULE_INT )
             {
-            // InternalBlockchain.g:4712:1: ( RULE_INT )
-            // InternalBlockchain.g:4713:2: RULE_INT
+            // InternalBlockchain.g:4631:1: ( RULE_INT )
+            // InternalBlockchain.g:4632:2: RULE_INT
             {
              before(grammarAccess.getEIntAccess().getINTTerminalRuleCall_1()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -14765,16 +14523,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EDouble__Group__0"
-    // InternalBlockchain.g:4723:1: rule__EDouble__Group__0 : rule__EDouble__Group__0__Impl rule__EDouble__Group__1 ;
+    // InternalBlockchain.g:4642:1: rule__EDouble__Group__0 : rule__EDouble__Group__0__Impl rule__EDouble__Group__1 ;
     public final void rule__EDouble__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4727:1: ( rule__EDouble__Group__0__Impl rule__EDouble__Group__1 )
-            // InternalBlockchain.g:4728:2: rule__EDouble__Group__0__Impl rule__EDouble__Group__1
+            // InternalBlockchain.g:4646:1: ( rule__EDouble__Group__0__Impl rule__EDouble__Group__1 )
+            // InternalBlockchain.g:4647:2: rule__EDouble__Group__0__Impl rule__EDouble__Group__1
             {
-            pushFollow(FOLLOW_50);
+            pushFollow(FOLLOW_48);
             rule__EDouble__Group__0__Impl();
 
             state._fsp--;
@@ -14803,29 +14561,29 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EDouble__Group__0__Impl"
-    // InternalBlockchain.g:4735:1: rule__EDouble__Group__0__Impl : ( ( '-' )? ) ;
+    // InternalBlockchain.g:4654:1: rule__EDouble__Group__0__Impl : ( ( '-' )? ) ;
     public final void rule__EDouble__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4739:1: ( ( ( '-' )? ) )
-            // InternalBlockchain.g:4740:1: ( ( '-' )? )
+            // InternalBlockchain.g:4658:1: ( ( ( '-' )? ) )
+            // InternalBlockchain.g:4659:1: ( ( '-' )? )
             {
-            // InternalBlockchain.g:4740:1: ( ( '-' )? )
-            // InternalBlockchain.g:4741:2: ( '-' )?
+            // InternalBlockchain.g:4659:1: ( ( '-' )? )
+            // InternalBlockchain.g:4660:2: ( '-' )?
             {
              before(grammarAccess.getEDoubleAccess().getHyphenMinusKeyword_0()); 
-            // InternalBlockchain.g:4742:2: ( '-' )?
-            int alt47=2;
-            int LA47_0 = input.LA(1);
+            // InternalBlockchain.g:4661:2: ( '-' )?
+            int alt46=2;
+            int LA46_0 = input.LA(1);
 
-            if ( (LA47_0==25) ) {
-                alt47=1;
+            if ( (LA46_0==25) ) {
+                alt46=1;
             }
-            switch (alt47) {
+            switch (alt46) {
                 case 1 :
-                    // InternalBlockchain.g:4742:3: '-'
+                    // InternalBlockchain.g:4661:3: '-'
                     {
                     match(input,25,FOLLOW_2); 
 
@@ -14857,16 +14615,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EDouble__Group__1"
-    // InternalBlockchain.g:4750:1: rule__EDouble__Group__1 : rule__EDouble__Group__1__Impl rule__EDouble__Group__2 ;
+    // InternalBlockchain.g:4669:1: rule__EDouble__Group__1 : rule__EDouble__Group__1__Impl rule__EDouble__Group__2 ;
     public final void rule__EDouble__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4754:1: ( rule__EDouble__Group__1__Impl rule__EDouble__Group__2 )
-            // InternalBlockchain.g:4755:2: rule__EDouble__Group__1__Impl rule__EDouble__Group__2
+            // InternalBlockchain.g:4673:1: ( rule__EDouble__Group__1__Impl rule__EDouble__Group__2 )
+            // InternalBlockchain.g:4674:2: rule__EDouble__Group__1__Impl rule__EDouble__Group__2
             {
-            pushFollow(FOLLOW_50);
+            pushFollow(FOLLOW_48);
             rule__EDouble__Group__1__Impl();
 
             state._fsp--;
@@ -14895,29 +14653,29 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EDouble__Group__1__Impl"
-    // InternalBlockchain.g:4762:1: rule__EDouble__Group__1__Impl : ( ( RULE_INT )? ) ;
+    // InternalBlockchain.g:4681:1: rule__EDouble__Group__1__Impl : ( ( RULE_INT )? ) ;
     public final void rule__EDouble__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4766:1: ( ( ( RULE_INT )? ) )
-            // InternalBlockchain.g:4767:1: ( ( RULE_INT )? )
+            // InternalBlockchain.g:4685:1: ( ( ( RULE_INT )? ) )
+            // InternalBlockchain.g:4686:1: ( ( RULE_INT )? )
             {
-            // InternalBlockchain.g:4767:1: ( ( RULE_INT )? )
-            // InternalBlockchain.g:4768:2: ( RULE_INT )?
+            // InternalBlockchain.g:4686:1: ( ( RULE_INT )? )
+            // InternalBlockchain.g:4687:2: ( RULE_INT )?
             {
              before(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_1()); 
-            // InternalBlockchain.g:4769:2: ( RULE_INT )?
-            int alt48=2;
-            int LA48_0 = input.LA(1);
+            // InternalBlockchain.g:4688:2: ( RULE_INT )?
+            int alt47=2;
+            int LA47_0 = input.LA(1);
 
-            if ( (LA48_0==RULE_INT) ) {
-                alt48=1;
+            if ( (LA47_0==RULE_INT) ) {
+                alt47=1;
             }
-            switch (alt48) {
+            switch (alt47) {
                 case 1 :
-                    // InternalBlockchain.g:4769:3: RULE_INT
+                    // InternalBlockchain.g:4688:3: RULE_INT
                     {
                     match(input,RULE_INT,FOLLOW_2); 
 
@@ -14949,16 +14707,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EDouble__Group__2"
-    // InternalBlockchain.g:4777:1: rule__EDouble__Group__2 : rule__EDouble__Group__2__Impl rule__EDouble__Group__3 ;
+    // InternalBlockchain.g:4696:1: rule__EDouble__Group__2 : rule__EDouble__Group__2__Impl rule__EDouble__Group__3 ;
     public final void rule__EDouble__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4781:1: ( rule__EDouble__Group__2__Impl rule__EDouble__Group__3 )
-            // InternalBlockchain.g:4782:2: rule__EDouble__Group__2__Impl rule__EDouble__Group__3
+            // InternalBlockchain.g:4700:1: ( rule__EDouble__Group__2__Impl rule__EDouble__Group__3 )
+            // InternalBlockchain.g:4701:2: rule__EDouble__Group__2__Impl rule__EDouble__Group__3
             {
-            pushFollow(FOLLOW_54);
+            pushFollow(FOLLOW_52);
             rule__EDouble__Group__2__Impl();
 
             state._fsp--;
@@ -14987,17 +14745,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EDouble__Group__2__Impl"
-    // InternalBlockchain.g:4789:1: rule__EDouble__Group__2__Impl : ( '.' ) ;
+    // InternalBlockchain.g:4708:1: rule__EDouble__Group__2__Impl : ( '.' ) ;
     public final void rule__EDouble__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4793:1: ( ( '.' ) )
-            // InternalBlockchain.g:4794:1: ( '.' )
+            // InternalBlockchain.g:4712:1: ( ( '.' ) )
+            // InternalBlockchain.g:4713:1: ( '.' )
             {
-            // InternalBlockchain.g:4794:1: ( '.' )
-            // InternalBlockchain.g:4795:2: '.'
+            // InternalBlockchain.g:4713:1: ( '.' )
+            // InternalBlockchain.g:4714:2: '.'
             {
              before(grammarAccess.getEDoubleAccess().getFullStopKeyword_2()); 
             match(input,11,FOLLOW_2); 
@@ -15024,16 +14782,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EDouble__Group__3"
-    // InternalBlockchain.g:4804:1: rule__EDouble__Group__3 : rule__EDouble__Group__3__Impl rule__EDouble__Group__4 ;
+    // InternalBlockchain.g:4723:1: rule__EDouble__Group__3 : rule__EDouble__Group__3__Impl rule__EDouble__Group__4 ;
     public final void rule__EDouble__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4808:1: ( rule__EDouble__Group__3__Impl rule__EDouble__Group__4 )
-            // InternalBlockchain.g:4809:2: rule__EDouble__Group__3__Impl rule__EDouble__Group__4
+            // InternalBlockchain.g:4727:1: ( rule__EDouble__Group__3__Impl rule__EDouble__Group__4 )
+            // InternalBlockchain.g:4728:2: rule__EDouble__Group__3__Impl rule__EDouble__Group__4
             {
-            pushFollow(FOLLOW_55);
+            pushFollow(FOLLOW_53);
             rule__EDouble__Group__3__Impl();
 
             state._fsp--;
@@ -15062,17 +14820,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EDouble__Group__3__Impl"
-    // InternalBlockchain.g:4816:1: rule__EDouble__Group__3__Impl : ( RULE_INT ) ;
+    // InternalBlockchain.g:4735:1: rule__EDouble__Group__3__Impl : ( RULE_INT ) ;
     public final void rule__EDouble__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4820:1: ( ( RULE_INT ) )
-            // InternalBlockchain.g:4821:1: ( RULE_INT )
+            // InternalBlockchain.g:4739:1: ( ( RULE_INT ) )
+            // InternalBlockchain.g:4740:1: ( RULE_INT )
             {
-            // InternalBlockchain.g:4821:1: ( RULE_INT )
-            // InternalBlockchain.g:4822:2: RULE_INT
+            // InternalBlockchain.g:4740:1: ( RULE_INT )
+            // InternalBlockchain.g:4741:2: RULE_INT
             {
              before(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_3()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -15099,14 +14857,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EDouble__Group__4"
-    // InternalBlockchain.g:4831:1: rule__EDouble__Group__4 : rule__EDouble__Group__4__Impl ;
+    // InternalBlockchain.g:4750:1: rule__EDouble__Group__4 : rule__EDouble__Group__4__Impl ;
     public final void rule__EDouble__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4835:1: ( rule__EDouble__Group__4__Impl )
-            // InternalBlockchain.g:4836:2: rule__EDouble__Group__4__Impl
+            // InternalBlockchain.g:4754:1: ( rule__EDouble__Group__4__Impl )
+            // InternalBlockchain.g:4755:2: rule__EDouble__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__EDouble__Group__4__Impl();
@@ -15132,29 +14890,29 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EDouble__Group__4__Impl"
-    // InternalBlockchain.g:4842:1: rule__EDouble__Group__4__Impl : ( ( rule__EDouble__Group_4__0 )? ) ;
+    // InternalBlockchain.g:4761:1: rule__EDouble__Group__4__Impl : ( ( rule__EDouble__Group_4__0 )? ) ;
     public final void rule__EDouble__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4846:1: ( ( ( rule__EDouble__Group_4__0 )? ) )
-            // InternalBlockchain.g:4847:1: ( ( rule__EDouble__Group_4__0 )? )
+            // InternalBlockchain.g:4765:1: ( ( ( rule__EDouble__Group_4__0 )? ) )
+            // InternalBlockchain.g:4766:1: ( ( rule__EDouble__Group_4__0 )? )
             {
-            // InternalBlockchain.g:4847:1: ( ( rule__EDouble__Group_4__0 )? )
-            // InternalBlockchain.g:4848:2: ( rule__EDouble__Group_4__0 )?
+            // InternalBlockchain.g:4766:1: ( ( rule__EDouble__Group_4__0 )? )
+            // InternalBlockchain.g:4767:2: ( rule__EDouble__Group_4__0 )?
             {
              before(grammarAccess.getEDoubleAccess().getGroup_4()); 
-            // InternalBlockchain.g:4849:2: ( rule__EDouble__Group_4__0 )?
-            int alt49=2;
-            int LA49_0 = input.LA(1);
+            // InternalBlockchain.g:4768:2: ( rule__EDouble__Group_4__0 )?
+            int alt48=2;
+            int LA48_0 = input.LA(1);
 
-            if ( ((LA49_0>=14 && LA49_0<=15)) ) {
-                alt49=1;
+            if ( ((LA48_0>=14 && LA48_0<=15)) ) {
+                alt48=1;
             }
-            switch (alt49) {
+            switch (alt48) {
                 case 1 :
-                    // InternalBlockchain.g:4849:3: rule__EDouble__Group_4__0
+                    // InternalBlockchain.g:4768:3: rule__EDouble__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__EDouble__Group_4__0();
@@ -15190,14 +14948,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EDouble__Group_4__0"
-    // InternalBlockchain.g:4858:1: rule__EDouble__Group_4__0 : rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1 ;
+    // InternalBlockchain.g:4777:1: rule__EDouble__Group_4__0 : rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1 ;
     public final void rule__EDouble__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4862:1: ( rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1 )
-            // InternalBlockchain.g:4863:2: rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1
+            // InternalBlockchain.g:4781:1: ( rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1 )
+            // InternalBlockchain.g:4782:2: rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1
             {
             pushFollow(FOLLOW_35);
             rule__EDouble__Group_4__0__Impl();
@@ -15228,21 +14986,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EDouble__Group_4__0__Impl"
-    // InternalBlockchain.g:4870:1: rule__EDouble__Group_4__0__Impl : ( ( rule__EDouble__Alternatives_4_0 ) ) ;
+    // InternalBlockchain.g:4789:1: rule__EDouble__Group_4__0__Impl : ( ( rule__EDouble__Alternatives_4_0 ) ) ;
     public final void rule__EDouble__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4874:1: ( ( ( rule__EDouble__Alternatives_4_0 ) ) )
-            // InternalBlockchain.g:4875:1: ( ( rule__EDouble__Alternatives_4_0 ) )
+            // InternalBlockchain.g:4793:1: ( ( ( rule__EDouble__Alternatives_4_0 ) ) )
+            // InternalBlockchain.g:4794:1: ( ( rule__EDouble__Alternatives_4_0 ) )
             {
-            // InternalBlockchain.g:4875:1: ( ( rule__EDouble__Alternatives_4_0 ) )
-            // InternalBlockchain.g:4876:2: ( rule__EDouble__Alternatives_4_0 )
+            // InternalBlockchain.g:4794:1: ( ( rule__EDouble__Alternatives_4_0 ) )
+            // InternalBlockchain.g:4795:2: ( rule__EDouble__Alternatives_4_0 )
             {
              before(grammarAccess.getEDoubleAccess().getAlternatives_4_0()); 
-            // InternalBlockchain.g:4877:2: ( rule__EDouble__Alternatives_4_0 )
-            // InternalBlockchain.g:4877:3: rule__EDouble__Alternatives_4_0
+            // InternalBlockchain.g:4796:2: ( rule__EDouble__Alternatives_4_0 )
+            // InternalBlockchain.g:4796:3: rule__EDouble__Alternatives_4_0
             {
             pushFollow(FOLLOW_2);
             rule__EDouble__Alternatives_4_0();
@@ -15275,14 +15033,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EDouble__Group_4__1"
-    // InternalBlockchain.g:4885:1: rule__EDouble__Group_4__1 : rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2 ;
+    // InternalBlockchain.g:4804:1: rule__EDouble__Group_4__1 : rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2 ;
     public final void rule__EDouble__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4889:1: ( rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2 )
-            // InternalBlockchain.g:4890:2: rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2
+            // InternalBlockchain.g:4808:1: ( rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2 )
+            // InternalBlockchain.g:4809:2: rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2
             {
             pushFollow(FOLLOW_35);
             rule__EDouble__Group_4__1__Impl();
@@ -15313,29 +15071,29 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EDouble__Group_4__1__Impl"
-    // InternalBlockchain.g:4897:1: rule__EDouble__Group_4__1__Impl : ( ( '-' )? ) ;
+    // InternalBlockchain.g:4816:1: rule__EDouble__Group_4__1__Impl : ( ( '-' )? ) ;
     public final void rule__EDouble__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4901:1: ( ( ( '-' )? ) )
-            // InternalBlockchain.g:4902:1: ( ( '-' )? )
+            // InternalBlockchain.g:4820:1: ( ( ( '-' )? ) )
+            // InternalBlockchain.g:4821:1: ( ( '-' )? )
             {
-            // InternalBlockchain.g:4902:1: ( ( '-' )? )
-            // InternalBlockchain.g:4903:2: ( '-' )?
+            // InternalBlockchain.g:4821:1: ( ( '-' )? )
+            // InternalBlockchain.g:4822:2: ( '-' )?
             {
              before(grammarAccess.getEDoubleAccess().getHyphenMinusKeyword_4_1()); 
-            // InternalBlockchain.g:4904:2: ( '-' )?
-            int alt50=2;
-            int LA50_0 = input.LA(1);
+            // InternalBlockchain.g:4823:2: ( '-' )?
+            int alt49=2;
+            int LA49_0 = input.LA(1);
 
-            if ( (LA50_0==25) ) {
-                alt50=1;
+            if ( (LA49_0==25) ) {
+                alt49=1;
             }
-            switch (alt50) {
+            switch (alt49) {
                 case 1 :
-                    // InternalBlockchain.g:4904:3: '-'
+                    // InternalBlockchain.g:4823:3: '-'
                     {
                     match(input,25,FOLLOW_2); 
 
@@ -15367,14 +15125,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EDouble__Group_4__2"
-    // InternalBlockchain.g:4912:1: rule__EDouble__Group_4__2 : rule__EDouble__Group_4__2__Impl ;
+    // InternalBlockchain.g:4831:1: rule__EDouble__Group_4__2 : rule__EDouble__Group_4__2__Impl ;
     public final void rule__EDouble__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4916:1: ( rule__EDouble__Group_4__2__Impl )
-            // InternalBlockchain.g:4917:2: rule__EDouble__Group_4__2__Impl
+            // InternalBlockchain.g:4835:1: ( rule__EDouble__Group_4__2__Impl )
+            // InternalBlockchain.g:4836:2: rule__EDouble__Group_4__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__EDouble__Group_4__2__Impl();
@@ -15400,17 +15158,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__EDouble__Group_4__2__Impl"
-    // InternalBlockchain.g:4923:1: rule__EDouble__Group_4__2__Impl : ( RULE_INT ) ;
+    // InternalBlockchain.g:4842:1: rule__EDouble__Group_4__2__Impl : ( RULE_INT ) ;
     public final void rule__EDouble__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4927:1: ( ( RULE_INT ) )
-            // InternalBlockchain.g:4928:1: ( RULE_INT )
+            // InternalBlockchain.g:4846:1: ( ( RULE_INT ) )
+            // InternalBlockchain.g:4847:1: ( RULE_INT )
             {
-            // InternalBlockchain.g:4928:1: ( RULE_INT )
-            // InternalBlockchain.g:4929:2: RULE_INT
+            // InternalBlockchain.g:4847:1: ( RULE_INT )
+            // InternalBlockchain.g:4848:2: RULE_INT
             {
              before(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_4_2()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -15437,16 +15195,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Primitivo__Group__0"
-    // InternalBlockchain.g:4939:1: rule__Primitivo__Group__0 : rule__Primitivo__Group__0__Impl rule__Primitivo__Group__1 ;
+    // InternalBlockchain.g:4858:1: rule__Primitivo__Group__0 : rule__Primitivo__Group__0__Impl rule__Primitivo__Group__1 ;
     public final void rule__Primitivo__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4943:1: ( rule__Primitivo__Group__0__Impl rule__Primitivo__Group__1 )
-            // InternalBlockchain.g:4944:2: rule__Primitivo__Group__0__Impl rule__Primitivo__Group__1
+            // InternalBlockchain.g:4862:1: ( rule__Primitivo__Group__0__Impl rule__Primitivo__Group__1 )
+            // InternalBlockchain.g:4863:2: rule__Primitivo__Group__0__Impl rule__Primitivo__Group__1
             {
-            pushFollow(FOLLOW_56);
+            pushFollow(FOLLOW_54);
             rule__Primitivo__Group__0__Impl();
 
             state._fsp--;
@@ -15475,21 +15233,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Primitivo__Group__0__Impl"
-    // InternalBlockchain.g:4951:1: rule__Primitivo__Group__0__Impl : ( () ) ;
+    // InternalBlockchain.g:4870:1: rule__Primitivo__Group__0__Impl : ( () ) ;
     public final void rule__Primitivo__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4955:1: ( ( () ) )
-            // InternalBlockchain.g:4956:1: ( () )
+            // InternalBlockchain.g:4874:1: ( ( () ) )
+            // InternalBlockchain.g:4875:1: ( () )
             {
-            // InternalBlockchain.g:4956:1: ( () )
-            // InternalBlockchain.g:4957:2: ()
+            // InternalBlockchain.g:4875:1: ( () )
+            // InternalBlockchain.g:4876:2: ()
             {
              before(grammarAccess.getPrimitivoAccess().getPrimitivoAction_0()); 
-            // InternalBlockchain.g:4958:2: ()
-            // InternalBlockchain.g:4958:3: 
+            // InternalBlockchain.g:4877:2: ()
+            // InternalBlockchain.g:4877:3: 
             {
             }
 
@@ -15512,14 +15270,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Primitivo__Group__1"
-    // InternalBlockchain.g:4966:1: rule__Primitivo__Group__1 : rule__Primitivo__Group__1__Impl rule__Primitivo__Group__2 ;
+    // InternalBlockchain.g:4885:1: rule__Primitivo__Group__1 : rule__Primitivo__Group__1__Impl rule__Primitivo__Group__2 ;
     public final void rule__Primitivo__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4970:1: ( rule__Primitivo__Group__1__Impl rule__Primitivo__Group__2 )
-            // InternalBlockchain.g:4971:2: rule__Primitivo__Group__1__Impl rule__Primitivo__Group__2
+            // InternalBlockchain.g:4889:1: ( rule__Primitivo__Group__1__Impl rule__Primitivo__Group__2 )
+            // InternalBlockchain.g:4890:2: rule__Primitivo__Group__1__Impl rule__Primitivo__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__Primitivo__Group__1__Impl();
@@ -15550,26 +15308,26 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Primitivo__Group__1__Impl"
-    // InternalBlockchain.g:4978:1: rule__Primitivo__Group__1__Impl : ( ( ( rule__Primitivo__TipoAssignment_1 ) ) ( ( rule__Primitivo__TipoAssignment_1 )* ) ) ;
+    // InternalBlockchain.g:4897:1: rule__Primitivo__Group__1__Impl : ( ( ( rule__Primitivo__TipoAssignment_1 ) ) ( ( rule__Primitivo__TipoAssignment_1 )* ) ) ;
     public final void rule__Primitivo__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:4982:1: ( ( ( ( rule__Primitivo__TipoAssignment_1 ) ) ( ( rule__Primitivo__TipoAssignment_1 )* ) ) )
-            // InternalBlockchain.g:4983:1: ( ( ( rule__Primitivo__TipoAssignment_1 ) ) ( ( rule__Primitivo__TipoAssignment_1 )* ) )
+            // InternalBlockchain.g:4901:1: ( ( ( ( rule__Primitivo__TipoAssignment_1 ) ) ( ( rule__Primitivo__TipoAssignment_1 )* ) ) )
+            // InternalBlockchain.g:4902:1: ( ( ( rule__Primitivo__TipoAssignment_1 ) ) ( ( rule__Primitivo__TipoAssignment_1 )* ) )
             {
-            // InternalBlockchain.g:4983:1: ( ( ( rule__Primitivo__TipoAssignment_1 ) ) ( ( rule__Primitivo__TipoAssignment_1 )* ) )
-            // InternalBlockchain.g:4984:2: ( ( rule__Primitivo__TipoAssignment_1 ) ) ( ( rule__Primitivo__TipoAssignment_1 )* )
+            // InternalBlockchain.g:4902:1: ( ( ( rule__Primitivo__TipoAssignment_1 ) ) ( ( rule__Primitivo__TipoAssignment_1 )* ) )
+            // InternalBlockchain.g:4903:2: ( ( rule__Primitivo__TipoAssignment_1 ) ) ( ( rule__Primitivo__TipoAssignment_1 )* )
             {
-            // InternalBlockchain.g:4984:2: ( ( rule__Primitivo__TipoAssignment_1 ) )
-            // InternalBlockchain.g:4985:3: ( rule__Primitivo__TipoAssignment_1 )
+            // InternalBlockchain.g:4903:2: ( ( rule__Primitivo__TipoAssignment_1 ) )
+            // InternalBlockchain.g:4904:3: ( rule__Primitivo__TipoAssignment_1 )
             {
              before(grammarAccess.getPrimitivoAccess().getTipoAssignment_1()); 
-            // InternalBlockchain.g:4986:3: ( rule__Primitivo__TipoAssignment_1 )
-            // InternalBlockchain.g:4986:4: rule__Primitivo__TipoAssignment_1
+            // InternalBlockchain.g:4905:3: ( rule__Primitivo__TipoAssignment_1 )
+            // InternalBlockchain.g:4905:4: rule__Primitivo__TipoAssignment_1
             {
-            pushFollow(FOLLOW_57);
+            pushFollow(FOLLOW_55);
             rule__Primitivo__TipoAssignment_1();
 
             state._fsp--;
@@ -15581,26 +15339,26 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
             }
 
-            // InternalBlockchain.g:4989:2: ( ( rule__Primitivo__TipoAssignment_1 )* )
-            // InternalBlockchain.g:4990:3: ( rule__Primitivo__TipoAssignment_1 )*
+            // InternalBlockchain.g:4908:2: ( ( rule__Primitivo__TipoAssignment_1 )* )
+            // InternalBlockchain.g:4909:3: ( rule__Primitivo__TipoAssignment_1 )*
             {
              before(grammarAccess.getPrimitivoAccess().getTipoAssignment_1()); 
-            // InternalBlockchain.g:4991:3: ( rule__Primitivo__TipoAssignment_1 )*
-            loop51:
+            // InternalBlockchain.g:4910:3: ( rule__Primitivo__TipoAssignment_1 )*
+            loop50:
             do {
-                int alt51=2;
-                int LA51_0 = input.LA(1);
+                int alt50=2;
+                int LA50_0 = input.LA(1);
 
-                if ( ((LA51_0>=33 && LA51_0<=35)) ) {
-                    alt51=1;
+                if ( ((LA50_0>=33 && LA50_0<=35)) ) {
+                    alt50=1;
                 }
 
 
-                switch (alt51) {
+                switch (alt50) {
             	case 1 :
-            	    // InternalBlockchain.g:4991:4: rule__Primitivo__TipoAssignment_1
+            	    // InternalBlockchain.g:4910:4: rule__Primitivo__TipoAssignment_1
             	    {
-            	    pushFollow(FOLLOW_57);
+            	    pushFollow(FOLLOW_55);
             	    rule__Primitivo__TipoAssignment_1();
 
             	    state._fsp--;
@@ -15610,7 +15368,7 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
             	    break;
 
             	default :
-            	    break loop51;
+            	    break loop50;
                 }
             } while (true);
 
@@ -15640,14 +15398,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Primitivo__Group__2"
-    // InternalBlockchain.g:5000:1: rule__Primitivo__Group__2 : rule__Primitivo__Group__2__Impl ;
+    // InternalBlockchain.g:4919:1: rule__Primitivo__Group__2 : rule__Primitivo__Group__2__Impl ;
     public final void rule__Primitivo__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5004:1: ( rule__Primitivo__Group__2__Impl )
-            // InternalBlockchain.g:5005:2: rule__Primitivo__Group__2__Impl
+            // InternalBlockchain.g:4923:1: ( rule__Primitivo__Group__2__Impl )
+            // InternalBlockchain.g:4924:2: rule__Primitivo__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Primitivo__Group__2__Impl();
@@ -15673,21 +15431,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Primitivo__Group__2__Impl"
-    // InternalBlockchain.g:5011:1: rule__Primitivo__Group__2__Impl : ( ( rule__Primitivo__NameAssignment_2 ) ) ;
+    // InternalBlockchain.g:4930:1: rule__Primitivo__Group__2__Impl : ( ( rule__Primitivo__NameAssignment_2 ) ) ;
     public final void rule__Primitivo__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5015:1: ( ( ( rule__Primitivo__NameAssignment_2 ) ) )
-            // InternalBlockchain.g:5016:1: ( ( rule__Primitivo__NameAssignment_2 ) )
+            // InternalBlockchain.g:4934:1: ( ( ( rule__Primitivo__NameAssignment_2 ) ) )
+            // InternalBlockchain.g:4935:1: ( ( rule__Primitivo__NameAssignment_2 ) )
             {
-            // InternalBlockchain.g:5016:1: ( ( rule__Primitivo__NameAssignment_2 ) )
-            // InternalBlockchain.g:5017:2: ( rule__Primitivo__NameAssignment_2 )
+            // InternalBlockchain.g:4935:1: ( ( rule__Primitivo__NameAssignment_2 ) )
+            // InternalBlockchain.g:4936:2: ( rule__Primitivo__NameAssignment_2 )
             {
              before(grammarAccess.getPrimitivoAccess().getNameAssignment_2()); 
-            // InternalBlockchain.g:5018:2: ( rule__Primitivo__NameAssignment_2 )
-            // InternalBlockchain.g:5018:3: rule__Primitivo__NameAssignment_2
+            // InternalBlockchain.g:4937:2: ( rule__Primitivo__NameAssignment_2 )
+            // InternalBlockchain.g:4937:3: rule__Primitivo__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Primitivo__NameAssignment_2();
@@ -15720,16 +15478,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Mapa__Group__0"
-    // InternalBlockchain.g:5027:1: rule__Mapa__Group__0 : rule__Mapa__Group__0__Impl rule__Mapa__Group__1 ;
+    // InternalBlockchain.g:4946:1: rule__Mapa__Group__0 : rule__Mapa__Group__0__Impl rule__Mapa__Group__1 ;
     public final void rule__Mapa__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5031:1: ( rule__Mapa__Group__0__Impl rule__Mapa__Group__1 )
-            // InternalBlockchain.g:5032:2: rule__Mapa__Group__0__Impl rule__Mapa__Group__1
+            // InternalBlockchain.g:4950:1: ( rule__Mapa__Group__0__Impl rule__Mapa__Group__1 )
+            // InternalBlockchain.g:4951:2: rule__Mapa__Group__0__Impl rule__Mapa__Group__1
             {
-            pushFollow(FOLLOW_58);
+            pushFollow(FOLLOW_56);
             rule__Mapa__Group__0__Impl();
 
             state._fsp--;
@@ -15758,21 +15516,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Mapa__Group__0__Impl"
-    // InternalBlockchain.g:5039:1: rule__Mapa__Group__0__Impl : ( ( rule__Mapa__NameAssignment_0 ) ) ;
+    // InternalBlockchain.g:4958:1: rule__Mapa__Group__0__Impl : ( ( rule__Mapa__NameAssignment_0 ) ) ;
     public final void rule__Mapa__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5043:1: ( ( ( rule__Mapa__NameAssignment_0 ) ) )
-            // InternalBlockchain.g:5044:1: ( ( rule__Mapa__NameAssignment_0 ) )
+            // InternalBlockchain.g:4962:1: ( ( ( rule__Mapa__NameAssignment_0 ) ) )
+            // InternalBlockchain.g:4963:1: ( ( rule__Mapa__NameAssignment_0 ) )
             {
-            // InternalBlockchain.g:5044:1: ( ( rule__Mapa__NameAssignment_0 ) )
-            // InternalBlockchain.g:5045:2: ( rule__Mapa__NameAssignment_0 )
+            // InternalBlockchain.g:4963:1: ( ( rule__Mapa__NameAssignment_0 ) )
+            // InternalBlockchain.g:4964:2: ( rule__Mapa__NameAssignment_0 )
             {
              before(grammarAccess.getMapaAccess().getNameAssignment_0()); 
-            // InternalBlockchain.g:5046:2: ( rule__Mapa__NameAssignment_0 )
-            // InternalBlockchain.g:5046:3: rule__Mapa__NameAssignment_0
+            // InternalBlockchain.g:4965:2: ( rule__Mapa__NameAssignment_0 )
+            // InternalBlockchain.g:4965:3: rule__Mapa__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Mapa__NameAssignment_0();
@@ -15805,16 +15563,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Mapa__Group__1"
-    // InternalBlockchain.g:5054:1: rule__Mapa__Group__1 : rule__Mapa__Group__1__Impl rule__Mapa__Group__2 ;
+    // InternalBlockchain.g:4973:1: rule__Mapa__Group__1 : rule__Mapa__Group__1__Impl rule__Mapa__Group__2 ;
     public final void rule__Mapa__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5058:1: ( rule__Mapa__Group__1__Impl rule__Mapa__Group__2 )
-            // InternalBlockchain.g:5059:2: rule__Mapa__Group__1__Impl rule__Mapa__Group__2
+            // InternalBlockchain.g:4977:1: ( rule__Mapa__Group__1__Impl rule__Mapa__Group__2 )
+            // InternalBlockchain.g:4978:2: rule__Mapa__Group__1__Impl rule__Mapa__Group__2
             {
-            pushFollow(FOLLOW_59);
+            pushFollow(FOLLOW_57);
             rule__Mapa__Group__1__Impl();
 
             state._fsp--;
@@ -15843,17 +15601,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Mapa__Group__1__Impl"
-    // InternalBlockchain.g:5066:1: rule__Mapa__Group__1__Impl : ( ':' ) ;
+    // InternalBlockchain.g:4985:1: rule__Mapa__Group__1__Impl : ( ':' ) ;
     public final void rule__Mapa__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5070:1: ( ( ':' ) )
-            // InternalBlockchain.g:5071:1: ( ':' )
+            // InternalBlockchain.g:4989:1: ( ( ':' ) )
+            // InternalBlockchain.g:4990:1: ( ':' )
             {
-            // InternalBlockchain.g:5071:1: ( ':' )
-            // InternalBlockchain.g:5072:2: ':'
+            // InternalBlockchain.g:4990:1: ( ':' )
+            // InternalBlockchain.g:4991:2: ':'
             {
              before(grammarAccess.getMapaAccess().getColonKeyword_1()); 
             match(input,48,FOLLOW_2); 
@@ -15880,16 +15638,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Mapa__Group__2"
-    // InternalBlockchain.g:5081:1: rule__Mapa__Group__2 : rule__Mapa__Group__2__Impl rule__Mapa__Group__3 ;
+    // InternalBlockchain.g:5000:1: rule__Mapa__Group__2 : rule__Mapa__Group__2__Impl rule__Mapa__Group__3 ;
     public final void rule__Mapa__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5085:1: ( rule__Mapa__Group__2__Impl rule__Mapa__Group__3 )
-            // InternalBlockchain.g:5086:2: rule__Mapa__Group__2__Impl rule__Mapa__Group__3
+            // InternalBlockchain.g:5004:1: ( rule__Mapa__Group__2__Impl rule__Mapa__Group__3 )
+            // InternalBlockchain.g:5005:2: rule__Mapa__Group__2__Impl rule__Mapa__Group__3
             {
-            pushFollow(FOLLOW_60);
+            pushFollow(FOLLOW_58);
             rule__Mapa__Group__2__Impl();
 
             state._fsp--;
@@ -15918,20 +15676,20 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Mapa__Group__2__Impl"
-    // InternalBlockchain.g:5093:1: rule__Mapa__Group__2__Impl : ( 'Map' ) ;
+    // InternalBlockchain.g:5012:1: rule__Mapa__Group__2__Impl : ( 'Map' ) ;
     public final void rule__Mapa__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5097:1: ( ( 'Map' ) )
-            // InternalBlockchain.g:5098:1: ( 'Map' )
+            // InternalBlockchain.g:5016:1: ( ( 'Map' ) )
+            // InternalBlockchain.g:5017:1: ( 'Map' )
             {
-            // InternalBlockchain.g:5098:1: ( 'Map' )
-            // InternalBlockchain.g:5099:2: 'Map'
+            // InternalBlockchain.g:5017:1: ( 'Map' )
+            // InternalBlockchain.g:5018:2: 'Map'
             {
              before(grammarAccess.getMapaAccess().getMapKeyword_2()); 
-            match(input,61,FOLLOW_2); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getMapaAccess().getMapKeyword_2()); 
 
             }
@@ -15955,14 +15713,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Mapa__Group__3"
-    // InternalBlockchain.g:5108:1: rule__Mapa__Group__3 : rule__Mapa__Group__3__Impl rule__Mapa__Group__4 ;
+    // InternalBlockchain.g:5027:1: rule__Mapa__Group__3 : rule__Mapa__Group__3__Impl rule__Mapa__Group__4 ;
     public final void rule__Mapa__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5112:1: ( rule__Mapa__Group__3__Impl rule__Mapa__Group__4 )
-            // InternalBlockchain.g:5113:2: rule__Mapa__Group__3__Impl rule__Mapa__Group__4
+            // InternalBlockchain.g:5031:1: ( rule__Mapa__Group__3__Impl rule__Mapa__Group__4 )
+            // InternalBlockchain.g:5032:2: rule__Mapa__Group__3__Impl rule__Mapa__Group__4
             {
             pushFollow(FOLLOW_4);
             rule__Mapa__Group__3__Impl();
@@ -15993,17 +15751,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Mapa__Group__3__Impl"
-    // InternalBlockchain.g:5120:1: rule__Mapa__Group__3__Impl : ( '<' ) ;
+    // InternalBlockchain.g:5039:1: rule__Mapa__Group__3__Impl : ( '<' ) ;
     public final void rule__Mapa__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5124:1: ( ( '<' ) )
-            // InternalBlockchain.g:5125:1: ( '<' )
+            // InternalBlockchain.g:5043:1: ( ( '<' ) )
+            // InternalBlockchain.g:5044:1: ( '<' )
             {
-            // InternalBlockchain.g:5125:1: ( '<' )
-            // InternalBlockchain.g:5126:2: '<'
+            // InternalBlockchain.g:5044:1: ( '<' )
+            // InternalBlockchain.g:5045:2: '<'
             {
              before(grammarAccess.getMapaAccess().getLessThanSignKeyword_3()); 
             match(input,19,FOLLOW_2); 
@@ -16030,14 +15788,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Mapa__Group__4"
-    // InternalBlockchain.g:5135:1: rule__Mapa__Group__4 : rule__Mapa__Group__4__Impl rule__Mapa__Group__5 ;
+    // InternalBlockchain.g:5054:1: rule__Mapa__Group__4 : rule__Mapa__Group__4__Impl rule__Mapa__Group__5 ;
     public final void rule__Mapa__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5139:1: ( rule__Mapa__Group__4__Impl rule__Mapa__Group__5 )
-            // InternalBlockchain.g:5140:2: rule__Mapa__Group__4__Impl rule__Mapa__Group__5
+            // InternalBlockchain.g:5058:1: ( rule__Mapa__Group__4__Impl rule__Mapa__Group__5 )
+            // InternalBlockchain.g:5059:2: rule__Mapa__Group__4__Impl rule__Mapa__Group__5
             {
             pushFollow(FOLLOW_8);
             rule__Mapa__Group__4__Impl();
@@ -16068,21 +15826,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Mapa__Group__4__Impl"
-    // InternalBlockchain.g:5147:1: rule__Mapa__Group__4__Impl : ( ( rule__Mapa__TipoDatoKeyAssignment_4 ) ) ;
+    // InternalBlockchain.g:5066:1: rule__Mapa__Group__4__Impl : ( ( rule__Mapa__TipoDatoKeyAssignment_4 ) ) ;
     public final void rule__Mapa__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5151:1: ( ( ( rule__Mapa__TipoDatoKeyAssignment_4 ) ) )
-            // InternalBlockchain.g:5152:1: ( ( rule__Mapa__TipoDatoKeyAssignment_4 ) )
+            // InternalBlockchain.g:5070:1: ( ( ( rule__Mapa__TipoDatoKeyAssignment_4 ) ) )
+            // InternalBlockchain.g:5071:1: ( ( rule__Mapa__TipoDatoKeyAssignment_4 ) )
             {
-            // InternalBlockchain.g:5152:1: ( ( rule__Mapa__TipoDatoKeyAssignment_4 ) )
-            // InternalBlockchain.g:5153:2: ( rule__Mapa__TipoDatoKeyAssignment_4 )
+            // InternalBlockchain.g:5071:1: ( ( rule__Mapa__TipoDatoKeyAssignment_4 ) )
+            // InternalBlockchain.g:5072:2: ( rule__Mapa__TipoDatoKeyAssignment_4 )
             {
              before(grammarAccess.getMapaAccess().getTipoDatoKeyAssignment_4()); 
-            // InternalBlockchain.g:5154:2: ( rule__Mapa__TipoDatoKeyAssignment_4 )
-            // InternalBlockchain.g:5154:3: rule__Mapa__TipoDatoKeyAssignment_4
+            // InternalBlockchain.g:5073:2: ( rule__Mapa__TipoDatoKeyAssignment_4 )
+            // InternalBlockchain.g:5073:3: rule__Mapa__TipoDatoKeyAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__Mapa__TipoDatoKeyAssignment_4();
@@ -16115,14 +15873,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Mapa__Group__5"
-    // InternalBlockchain.g:5162:1: rule__Mapa__Group__5 : rule__Mapa__Group__5__Impl rule__Mapa__Group__6 ;
+    // InternalBlockchain.g:5081:1: rule__Mapa__Group__5 : rule__Mapa__Group__5__Impl rule__Mapa__Group__6 ;
     public final void rule__Mapa__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5166:1: ( rule__Mapa__Group__5__Impl rule__Mapa__Group__6 )
-            // InternalBlockchain.g:5167:2: rule__Mapa__Group__5__Impl rule__Mapa__Group__6
+            // InternalBlockchain.g:5085:1: ( rule__Mapa__Group__5__Impl rule__Mapa__Group__6 )
+            // InternalBlockchain.g:5086:2: rule__Mapa__Group__5__Impl rule__Mapa__Group__6
             {
             pushFollow(FOLLOW_4);
             rule__Mapa__Group__5__Impl();
@@ -16153,17 +15911,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Mapa__Group__5__Impl"
-    // InternalBlockchain.g:5174:1: rule__Mapa__Group__5__Impl : ( ',' ) ;
+    // InternalBlockchain.g:5093:1: rule__Mapa__Group__5__Impl : ( ',' ) ;
     public final void rule__Mapa__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5178:1: ( ( ',' ) )
-            // InternalBlockchain.g:5179:1: ( ',' )
+            // InternalBlockchain.g:5097:1: ( ( ',' ) )
+            // InternalBlockchain.g:5098:1: ( ',' )
             {
-            // InternalBlockchain.g:5179:1: ( ',' )
-            // InternalBlockchain.g:5180:2: ','
+            // InternalBlockchain.g:5098:1: ( ',' )
+            // InternalBlockchain.g:5099:2: ','
             {
              before(grammarAccess.getMapaAccess().getCommaKeyword_5()); 
             match(input,39,FOLLOW_2); 
@@ -16190,16 +15948,16 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Mapa__Group__6"
-    // InternalBlockchain.g:5189:1: rule__Mapa__Group__6 : rule__Mapa__Group__6__Impl rule__Mapa__Group__7 ;
+    // InternalBlockchain.g:5108:1: rule__Mapa__Group__6 : rule__Mapa__Group__6__Impl rule__Mapa__Group__7 ;
     public final void rule__Mapa__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5193:1: ( rule__Mapa__Group__6__Impl rule__Mapa__Group__7 )
-            // InternalBlockchain.g:5194:2: rule__Mapa__Group__6__Impl rule__Mapa__Group__7
+            // InternalBlockchain.g:5112:1: ( rule__Mapa__Group__6__Impl rule__Mapa__Group__7 )
+            // InternalBlockchain.g:5113:2: rule__Mapa__Group__6__Impl rule__Mapa__Group__7
             {
-            pushFollow(FOLLOW_61);
+            pushFollow(FOLLOW_59);
             rule__Mapa__Group__6__Impl();
 
             state._fsp--;
@@ -16228,21 +15986,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Mapa__Group__6__Impl"
-    // InternalBlockchain.g:5201:1: rule__Mapa__Group__6__Impl : ( ( rule__Mapa__TipoDatoValueAssignment_6 ) ) ;
+    // InternalBlockchain.g:5120:1: rule__Mapa__Group__6__Impl : ( ( rule__Mapa__TipoDatoValueAssignment_6 ) ) ;
     public final void rule__Mapa__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5205:1: ( ( ( rule__Mapa__TipoDatoValueAssignment_6 ) ) )
-            // InternalBlockchain.g:5206:1: ( ( rule__Mapa__TipoDatoValueAssignment_6 ) )
+            // InternalBlockchain.g:5124:1: ( ( ( rule__Mapa__TipoDatoValueAssignment_6 ) ) )
+            // InternalBlockchain.g:5125:1: ( ( rule__Mapa__TipoDatoValueAssignment_6 ) )
             {
-            // InternalBlockchain.g:5206:1: ( ( rule__Mapa__TipoDatoValueAssignment_6 ) )
-            // InternalBlockchain.g:5207:2: ( rule__Mapa__TipoDatoValueAssignment_6 )
+            // InternalBlockchain.g:5125:1: ( ( rule__Mapa__TipoDatoValueAssignment_6 ) )
+            // InternalBlockchain.g:5126:2: ( rule__Mapa__TipoDatoValueAssignment_6 )
             {
              before(grammarAccess.getMapaAccess().getTipoDatoValueAssignment_6()); 
-            // InternalBlockchain.g:5208:2: ( rule__Mapa__TipoDatoValueAssignment_6 )
-            // InternalBlockchain.g:5208:3: rule__Mapa__TipoDatoValueAssignment_6
+            // InternalBlockchain.g:5127:2: ( rule__Mapa__TipoDatoValueAssignment_6 )
+            // InternalBlockchain.g:5127:3: rule__Mapa__TipoDatoValueAssignment_6
             {
             pushFollow(FOLLOW_2);
             rule__Mapa__TipoDatoValueAssignment_6();
@@ -16275,14 +16033,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Mapa__Group__7"
-    // InternalBlockchain.g:5216:1: rule__Mapa__Group__7 : rule__Mapa__Group__7__Impl ;
+    // InternalBlockchain.g:5135:1: rule__Mapa__Group__7 : rule__Mapa__Group__7__Impl ;
     public final void rule__Mapa__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5220:1: ( rule__Mapa__Group__7__Impl )
-            // InternalBlockchain.g:5221:2: rule__Mapa__Group__7__Impl
+            // InternalBlockchain.g:5139:1: ( rule__Mapa__Group__7__Impl )
+            // InternalBlockchain.g:5140:2: rule__Mapa__Group__7__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Mapa__Group__7__Impl();
@@ -16308,17 +16066,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Mapa__Group__7__Impl"
-    // InternalBlockchain.g:5227:1: rule__Mapa__Group__7__Impl : ( '>' ) ;
+    // InternalBlockchain.g:5146:1: rule__Mapa__Group__7__Impl : ( '>' ) ;
     public final void rule__Mapa__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5231:1: ( ( '>' ) )
-            // InternalBlockchain.g:5232:1: ( '>' )
+            // InternalBlockchain.g:5150:1: ( ( '>' ) )
+            // InternalBlockchain.g:5151:1: ( '>' )
             {
-            // InternalBlockchain.g:5232:1: ( '>' )
-            // InternalBlockchain.g:5233:2: '>'
+            // InternalBlockchain.g:5151:1: ( '>' )
+            // InternalBlockchain.g:5152:2: '>'
             {
              before(grammarAccess.getMapaAccess().getGreaterThanSignKeyword_7()); 
             match(input,18,FOLLOW_2); 
@@ -16345,17 +16103,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Aplicacion__NameAssignment_2"
-    // InternalBlockchain.g:5243:1: rule__Aplicacion__NameAssignment_2 : ( ruleEString ) ;
+    // InternalBlockchain.g:5162:1: rule__Aplicacion__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__Aplicacion__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5247:1: ( ( ruleEString ) )
-            // InternalBlockchain.g:5248:2: ( ruleEString )
+            // InternalBlockchain.g:5166:1: ( ( ruleEString ) )
+            // InternalBlockchain.g:5167:2: ( ruleEString )
             {
-            // InternalBlockchain.g:5248:2: ( ruleEString )
-            // InternalBlockchain.g:5249:3: ruleEString
+            // InternalBlockchain.g:5167:2: ( ruleEString )
+            // InternalBlockchain.g:5168:3: ruleEString
             {
              before(grammarAccess.getAplicacionAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -16386,17 +16144,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Aplicacion__SmartcontractAssignment_4_0"
-    // InternalBlockchain.g:5258:1: rule__Aplicacion__SmartcontractAssignment_4_0 : ( ruleSmartContract ) ;
+    // InternalBlockchain.g:5177:1: rule__Aplicacion__SmartcontractAssignment_4_0 : ( ruleSmartContract ) ;
     public final void rule__Aplicacion__SmartcontractAssignment_4_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5262:1: ( ( ruleSmartContract ) )
-            // InternalBlockchain.g:5263:2: ( ruleSmartContract )
+            // InternalBlockchain.g:5181:1: ( ( ruleSmartContract ) )
+            // InternalBlockchain.g:5182:2: ( ruleSmartContract )
             {
-            // InternalBlockchain.g:5263:2: ( ruleSmartContract )
-            // InternalBlockchain.g:5264:3: ruleSmartContract
+            // InternalBlockchain.g:5182:2: ( ruleSmartContract )
+            // InternalBlockchain.g:5183:3: ruleSmartContract
             {
              before(grammarAccess.getAplicacionAccess().getSmartcontractSmartContractParserRuleCall_4_0_0()); 
             pushFollow(FOLLOW_2);
@@ -16427,17 +16185,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Aplicacion__SmartcontractAssignment_4_1_1"
-    // InternalBlockchain.g:5273:1: rule__Aplicacion__SmartcontractAssignment_4_1_1 : ( ruleSmartContract ) ;
+    // InternalBlockchain.g:5192:1: rule__Aplicacion__SmartcontractAssignment_4_1_1 : ( ruleSmartContract ) ;
     public final void rule__Aplicacion__SmartcontractAssignment_4_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5277:1: ( ( ruleSmartContract ) )
-            // InternalBlockchain.g:5278:2: ( ruleSmartContract )
+            // InternalBlockchain.g:5196:1: ( ( ruleSmartContract ) )
+            // InternalBlockchain.g:5197:2: ( ruleSmartContract )
             {
-            // InternalBlockchain.g:5278:2: ( ruleSmartContract )
-            // InternalBlockchain.g:5279:3: ruleSmartContract
+            // InternalBlockchain.g:5197:2: ( ruleSmartContract )
+            // InternalBlockchain.g:5198:3: ruleSmartContract
             {
              before(grammarAccess.getAplicacionAccess().getSmartcontractSmartContractParserRuleCall_4_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -16468,17 +16226,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Aplicacion__TipodatoAssignment_5_1"
-    // InternalBlockchain.g:5288:1: rule__Aplicacion__TipodatoAssignment_5_1 : ( ruleTipoDato ) ;
+    // InternalBlockchain.g:5207:1: rule__Aplicacion__TipodatoAssignment_5_1 : ( ruleTipoDato ) ;
     public final void rule__Aplicacion__TipodatoAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5292:1: ( ( ruleTipoDato ) )
-            // InternalBlockchain.g:5293:2: ( ruleTipoDato )
+            // InternalBlockchain.g:5211:1: ( ( ruleTipoDato ) )
+            // InternalBlockchain.g:5212:2: ( ruleTipoDato )
             {
-            // InternalBlockchain.g:5293:2: ( ruleTipoDato )
-            // InternalBlockchain.g:5294:3: ruleTipoDato
+            // InternalBlockchain.g:5212:2: ( ruleTipoDato )
+            // InternalBlockchain.g:5213:3: ruleTipoDato
             {
              before(grammarAccess.getAplicacionAccess().getTipodatoTipoDatoParserRuleCall_5_1_0()); 
             pushFollow(FOLLOW_2);
@@ -16509,17 +16267,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Aplicacion__TipodatoAssignment_5_2_1"
-    // InternalBlockchain.g:5303:1: rule__Aplicacion__TipodatoAssignment_5_2_1 : ( ruleTipoDato ) ;
+    // InternalBlockchain.g:5222:1: rule__Aplicacion__TipodatoAssignment_5_2_1 : ( ruleTipoDato ) ;
     public final void rule__Aplicacion__TipodatoAssignment_5_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5307:1: ( ( ruleTipoDato ) )
-            // InternalBlockchain.g:5308:2: ( ruleTipoDato )
+            // InternalBlockchain.g:5226:1: ( ( ruleTipoDato ) )
+            // InternalBlockchain.g:5227:2: ( ruleTipoDato )
             {
-            // InternalBlockchain.g:5308:2: ( ruleTipoDato )
-            // InternalBlockchain.g:5309:3: ruleTipoDato
+            // InternalBlockchain.g:5227:2: ( ruleTipoDato )
+            // InternalBlockchain.g:5228:3: ruleTipoDato
             {
              before(grammarAccess.getAplicacionAccess().getTipodatoTipoDatoParserRuleCall_5_2_1_0()); 
             pushFollow(FOLLOW_2);
@@ -16550,17 +16308,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SmartContract__NameAssignment_1"
-    // InternalBlockchain.g:5318:1: rule__SmartContract__NameAssignment_1 : ( ruleEString ) ;
+    // InternalBlockchain.g:5237:1: rule__SmartContract__NameAssignment_1 : ( ruleEString ) ;
     public final void rule__SmartContract__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5322:1: ( ( ruleEString ) )
-            // InternalBlockchain.g:5323:2: ( ruleEString )
+            // InternalBlockchain.g:5241:1: ( ( ruleEString ) )
+            // InternalBlockchain.g:5242:2: ( ruleEString )
             {
-            // InternalBlockchain.g:5323:2: ( ruleEString )
-            // InternalBlockchain.g:5324:3: ruleEString
+            // InternalBlockchain.g:5242:2: ( ruleEString )
+            // InternalBlockchain.g:5243:3: ruleEString
             {
              before(grammarAccess.getSmartContractAccess().getNameEStringParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -16591,17 +16349,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SmartContract__EntidadesAssignment_3_0"
-    // InternalBlockchain.g:5333:1: rule__SmartContract__EntidadesAssignment_3_0 : ( ruleEntidad ) ;
+    // InternalBlockchain.g:5252:1: rule__SmartContract__EntidadesAssignment_3_0 : ( ruleEntidad ) ;
     public final void rule__SmartContract__EntidadesAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5337:1: ( ( ruleEntidad ) )
-            // InternalBlockchain.g:5338:2: ( ruleEntidad )
+            // InternalBlockchain.g:5256:1: ( ( ruleEntidad ) )
+            // InternalBlockchain.g:5257:2: ( ruleEntidad )
             {
-            // InternalBlockchain.g:5338:2: ( ruleEntidad )
-            // InternalBlockchain.g:5339:3: ruleEntidad
+            // InternalBlockchain.g:5257:2: ( ruleEntidad )
+            // InternalBlockchain.g:5258:3: ruleEntidad
             {
              before(grammarAccess.getSmartContractAccess().getEntidadesEntidadParserRuleCall_3_0_0()); 
             pushFollow(FOLLOW_2);
@@ -16632,17 +16390,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SmartContract__EntidadesAssignment_3_1"
-    // InternalBlockchain.g:5348:1: rule__SmartContract__EntidadesAssignment_3_1 : ( ruleEntidad ) ;
+    // InternalBlockchain.g:5267:1: rule__SmartContract__EntidadesAssignment_3_1 : ( ruleEntidad ) ;
     public final void rule__SmartContract__EntidadesAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5352:1: ( ( ruleEntidad ) )
-            // InternalBlockchain.g:5353:2: ( ruleEntidad )
+            // InternalBlockchain.g:5271:1: ( ( ruleEntidad ) )
+            // InternalBlockchain.g:5272:2: ( ruleEntidad )
             {
-            // InternalBlockchain.g:5353:2: ( ruleEntidad )
-            // InternalBlockchain.g:5354:3: ruleEntidad
+            // InternalBlockchain.g:5272:2: ( ruleEntidad )
+            // InternalBlockchain.g:5273:3: ruleEntidad
             {
              before(grammarAccess.getSmartContractAccess().getEntidadesEntidadParserRuleCall_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -16673,17 +16431,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SmartContract__EstadoAssignment_4_0"
-    // InternalBlockchain.g:5363:1: rule__SmartContract__EstadoAssignment_4_0 : ( ruleEstado ) ;
+    // InternalBlockchain.g:5282:1: rule__SmartContract__EstadoAssignment_4_0 : ( ruleEstado ) ;
     public final void rule__SmartContract__EstadoAssignment_4_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5367:1: ( ( ruleEstado ) )
-            // InternalBlockchain.g:5368:2: ( ruleEstado )
+            // InternalBlockchain.g:5286:1: ( ( ruleEstado ) )
+            // InternalBlockchain.g:5287:2: ( ruleEstado )
             {
-            // InternalBlockchain.g:5368:2: ( ruleEstado )
-            // InternalBlockchain.g:5369:3: ruleEstado
+            // InternalBlockchain.g:5287:2: ( ruleEstado )
+            // InternalBlockchain.g:5288:3: ruleEstado
             {
              before(grammarAccess.getSmartContractAccess().getEstadoEstadoParserRuleCall_4_0_0()); 
             pushFollow(FOLLOW_2);
@@ -16714,17 +16472,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SmartContract__EstadoAssignment_4_1_1"
-    // InternalBlockchain.g:5378:1: rule__SmartContract__EstadoAssignment_4_1_1 : ( ruleEstado ) ;
+    // InternalBlockchain.g:5297:1: rule__SmartContract__EstadoAssignment_4_1_1 : ( ruleEstado ) ;
     public final void rule__SmartContract__EstadoAssignment_4_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5382:1: ( ( ruleEstado ) )
-            // InternalBlockchain.g:5383:2: ( ruleEstado )
+            // InternalBlockchain.g:5301:1: ( ( ruleEstado ) )
+            // InternalBlockchain.g:5302:2: ( ruleEstado )
             {
-            // InternalBlockchain.g:5383:2: ( ruleEstado )
-            // InternalBlockchain.g:5384:3: ruleEstado
+            // InternalBlockchain.g:5302:2: ( ruleEstado )
+            // InternalBlockchain.g:5303:3: ruleEstado
             {
              before(grammarAccess.getSmartContractAccess().getEstadoEstadoParserRuleCall_4_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -16755,17 +16513,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SmartContract__OperacionesAssignment_5_0"
-    // InternalBlockchain.g:5393:1: rule__SmartContract__OperacionesAssignment_5_0 : ( ruleOperacion ) ;
+    // InternalBlockchain.g:5312:1: rule__SmartContract__OperacionesAssignment_5_0 : ( ruleOperacion ) ;
     public final void rule__SmartContract__OperacionesAssignment_5_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5397:1: ( ( ruleOperacion ) )
-            // InternalBlockchain.g:5398:2: ( ruleOperacion )
+            // InternalBlockchain.g:5316:1: ( ( ruleOperacion ) )
+            // InternalBlockchain.g:5317:2: ( ruleOperacion )
             {
-            // InternalBlockchain.g:5398:2: ( ruleOperacion )
-            // InternalBlockchain.g:5399:3: ruleOperacion
+            // InternalBlockchain.g:5317:2: ( ruleOperacion )
+            // InternalBlockchain.g:5318:3: ruleOperacion
             {
              before(grammarAccess.getSmartContractAccess().getOperacionesOperacionParserRuleCall_5_0_0()); 
             pushFollow(FOLLOW_2);
@@ -16796,17 +16554,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SmartContract__OperacionesAssignment_5_1_1"
-    // InternalBlockchain.g:5408:1: rule__SmartContract__OperacionesAssignment_5_1_1 : ( ruleOperacion ) ;
+    // InternalBlockchain.g:5327:1: rule__SmartContract__OperacionesAssignment_5_1_1 : ( ruleOperacion ) ;
     public final void rule__SmartContract__OperacionesAssignment_5_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5412:1: ( ( ruleOperacion ) )
-            // InternalBlockchain.g:5413:2: ( ruleOperacion )
+            // InternalBlockchain.g:5331:1: ( ( ruleOperacion ) )
+            // InternalBlockchain.g:5332:2: ( ruleOperacion )
             {
-            // InternalBlockchain.g:5413:2: ( ruleOperacion )
-            // InternalBlockchain.g:5414:3: ruleOperacion
+            // InternalBlockchain.g:5332:2: ( ruleOperacion )
+            // InternalBlockchain.g:5333:3: ruleOperacion
             {
              before(grammarAccess.getSmartContractAccess().getOperacionesOperacionParserRuleCall_5_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -16837,17 +16595,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Entidad__NameAssignment_2"
-    // InternalBlockchain.g:5423:1: rule__Entidad__NameAssignment_2 : ( ruleEString ) ;
+    // InternalBlockchain.g:5342:1: rule__Entidad__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__Entidad__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5427:1: ( ( ruleEString ) )
-            // InternalBlockchain.g:5428:2: ( ruleEString )
+            // InternalBlockchain.g:5346:1: ( ( ruleEString ) )
+            // InternalBlockchain.g:5347:2: ( ruleEString )
             {
-            // InternalBlockchain.g:5428:2: ( ruleEString )
-            // InternalBlockchain.g:5429:3: ruleEString
+            // InternalBlockchain.g:5347:2: ( ruleEString )
+            // InternalBlockchain.g:5348:3: ruleEString
             {
              before(grammarAccess.getEntidadAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -16878,17 +16636,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Entidad__AtributosAssignment_4_0"
-    // InternalBlockchain.g:5438:1: rule__Entidad__AtributosAssignment_4_0 : ( ruleAtributo ) ;
+    // InternalBlockchain.g:5357:1: rule__Entidad__AtributosAssignment_4_0 : ( ruleAtributo ) ;
     public final void rule__Entidad__AtributosAssignment_4_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5442:1: ( ( ruleAtributo ) )
-            // InternalBlockchain.g:5443:2: ( ruleAtributo )
+            // InternalBlockchain.g:5361:1: ( ( ruleAtributo ) )
+            // InternalBlockchain.g:5362:2: ( ruleAtributo )
             {
-            // InternalBlockchain.g:5443:2: ( ruleAtributo )
-            // InternalBlockchain.g:5444:3: ruleAtributo
+            // InternalBlockchain.g:5362:2: ( ruleAtributo )
+            // InternalBlockchain.g:5363:3: ruleAtributo
             {
              before(grammarAccess.getEntidadAccess().getAtributosAtributoParserRuleCall_4_0_0()); 
             pushFollow(FOLLOW_2);
@@ -16919,17 +16677,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Entidad__AtributosAssignment_4_1"
-    // InternalBlockchain.g:5453:1: rule__Entidad__AtributosAssignment_4_1 : ( ruleAtributo ) ;
+    // InternalBlockchain.g:5372:1: rule__Entidad__AtributosAssignment_4_1 : ( ruleAtributo ) ;
     public final void rule__Entidad__AtributosAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5457:1: ( ( ruleAtributo ) )
-            // InternalBlockchain.g:5458:2: ( ruleAtributo )
+            // InternalBlockchain.g:5376:1: ( ( ruleAtributo ) )
+            // InternalBlockchain.g:5377:2: ( ruleAtributo )
             {
-            // InternalBlockchain.g:5458:2: ( ruleAtributo )
-            // InternalBlockchain.g:5459:3: ruleAtributo
+            // InternalBlockchain.g:5377:2: ( ruleAtributo )
+            // InternalBlockchain.g:5378:3: ruleAtributo
             {
              before(grammarAccess.getEntidadAccess().getAtributosAtributoParserRuleCall_4_1_0()); 
             pushFollow(FOLLOW_2);
@@ -16960,17 +16718,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operacion__EsUserDefinedAssignment_2_1"
-    // InternalBlockchain.g:5468:1: rule__Operacion__EsUserDefinedAssignment_2_1 : ( ruleEBoolean ) ;
+    // InternalBlockchain.g:5387:1: rule__Operacion__EsUserDefinedAssignment_2_1 : ( ruleEBoolean ) ;
     public final void rule__Operacion__EsUserDefinedAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5472:1: ( ( ruleEBoolean ) )
-            // InternalBlockchain.g:5473:2: ( ruleEBoolean )
+            // InternalBlockchain.g:5391:1: ( ( ruleEBoolean ) )
+            // InternalBlockchain.g:5392:2: ( ruleEBoolean )
             {
-            // InternalBlockchain.g:5473:2: ( ruleEBoolean )
-            // InternalBlockchain.g:5474:3: ruleEBoolean
+            // InternalBlockchain.g:5392:2: ( ruleEBoolean )
+            // InternalBlockchain.g:5393:3: ruleEBoolean
             {
              before(grammarAccess.getOperacionAccess().getEsUserDefinedEBooleanParserRuleCall_2_1_0()); 
             pushFollow(FOLLOW_2);
@@ -17001,17 +16759,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operacion__NameAssignment_3"
-    // InternalBlockchain.g:5483:1: rule__Operacion__NameAssignment_3 : ( ruleEString ) ;
+    // InternalBlockchain.g:5402:1: rule__Operacion__NameAssignment_3 : ( ruleEString ) ;
     public final void rule__Operacion__NameAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5487:1: ( ( ruleEString ) )
-            // InternalBlockchain.g:5488:2: ( ruleEString )
+            // InternalBlockchain.g:5406:1: ( ( ruleEString ) )
+            // InternalBlockchain.g:5407:2: ( ruleEString )
             {
-            // InternalBlockchain.g:5488:2: ( ruleEString )
-            // InternalBlockchain.g:5489:3: ruleEString
+            // InternalBlockchain.g:5407:2: ( ruleEString )
+            // InternalBlockchain.g:5408:3: ruleEString
             {
              before(grammarAccess.getOperacionAccess().getNameEStringParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -17042,17 +16800,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operacion__ParametrosAssignment_5_0"
-    // InternalBlockchain.g:5498:1: rule__Operacion__ParametrosAssignment_5_0 : ( ruleParametro ) ;
+    // InternalBlockchain.g:5417:1: rule__Operacion__ParametrosAssignment_5_0 : ( ruleParametro ) ;
     public final void rule__Operacion__ParametrosAssignment_5_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5502:1: ( ( ruleParametro ) )
-            // InternalBlockchain.g:5503:2: ( ruleParametro )
+            // InternalBlockchain.g:5421:1: ( ( ruleParametro ) )
+            // InternalBlockchain.g:5422:2: ( ruleParametro )
             {
-            // InternalBlockchain.g:5503:2: ( ruleParametro )
-            // InternalBlockchain.g:5504:3: ruleParametro
+            // InternalBlockchain.g:5422:2: ( ruleParametro )
+            // InternalBlockchain.g:5423:3: ruleParametro
             {
              before(grammarAccess.getOperacionAccess().getParametrosParametroParserRuleCall_5_0_0()); 
             pushFollow(FOLLOW_2);
@@ -17083,17 +16841,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operacion__ParametrosAssignment_5_1_1"
-    // InternalBlockchain.g:5513:1: rule__Operacion__ParametrosAssignment_5_1_1 : ( ruleParametro ) ;
+    // InternalBlockchain.g:5432:1: rule__Operacion__ParametrosAssignment_5_1_1 : ( ruleParametro ) ;
     public final void rule__Operacion__ParametrosAssignment_5_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5517:1: ( ( ruleParametro ) )
-            // InternalBlockchain.g:5518:2: ( ruleParametro )
+            // InternalBlockchain.g:5436:1: ( ( ruleParametro ) )
+            // InternalBlockchain.g:5437:2: ( ruleParametro )
             {
-            // InternalBlockchain.g:5518:2: ( ruleParametro )
-            // InternalBlockchain.g:5519:3: ruleParametro
+            // InternalBlockchain.g:5437:2: ( ruleParametro )
+            // InternalBlockchain.g:5438:3: ruleParametro
             {
              before(grammarAccess.getOperacionAccess().getParametrosParametroParserRuleCall_5_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -17124,21 +16882,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operacion__RetornoAssignment_7_1"
-    // InternalBlockchain.g:5528:1: rule__Operacion__RetornoAssignment_7_1 : ( ( ruleEString ) ) ;
+    // InternalBlockchain.g:5447:1: rule__Operacion__RetornoAssignment_7_1 : ( ( ruleEString ) ) ;
     public final void rule__Operacion__RetornoAssignment_7_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5532:1: ( ( ( ruleEString ) ) )
-            // InternalBlockchain.g:5533:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5451:1: ( ( ( ruleEString ) ) )
+            // InternalBlockchain.g:5452:2: ( ( ruleEString ) )
             {
-            // InternalBlockchain.g:5533:2: ( ( ruleEString ) )
-            // InternalBlockchain.g:5534:3: ( ruleEString )
+            // InternalBlockchain.g:5452:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5453:3: ( ruleEString )
             {
              before(grammarAccess.getOperacionAccess().getRetornoTipoDatoCrossReference_7_1_0()); 
-            // InternalBlockchain.g:5535:3: ( ruleEString )
-            // InternalBlockchain.g:5536:4: ruleEString
+            // InternalBlockchain.g:5454:3: ( ruleEString )
+            // InternalBlockchain.g:5455:4: ruleEString
             {
              before(grammarAccess.getOperacionAccess().getRetornoTipoDatoEStringParserRuleCall_7_1_0_1()); 
             pushFollow(FOLLOW_2);
@@ -17173,17 +16931,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operacion__SentenciaAssignment_10_0"
-    // InternalBlockchain.g:5547:1: rule__Operacion__SentenciaAssignment_10_0 : ( ruleSentencia ) ;
+    // InternalBlockchain.g:5466:1: rule__Operacion__SentenciaAssignment_10_0 : ( ruleSentencia ) ;
     public final void rule__Operacion__SentenciaAssignment_10_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5551:1: ( ( ruleSentencia ) )
-            // InternalBlockchain.g:5552:2: ( ruleSentencia )
+            // InternalBlockchain.g:5470:1: ( ( ruleSentencia ) )
+            // InternalBlockchain.g:5471:2: ( ruleSentencia )
             {
-            // InternalBlockchain.g:5552:2: ( ruleSentencia )
-            // InternalBlockchain.g:5553:3: ruleSentencia
+            // InternalBlockchain.g:5471:2: ( ruleSentencia )
+            // InternalBlockchain.g:5472:3: ruleSentencia
             {
              before(grammarAccess.getOperacionAccess().getSentenciaSentenciaParserRuleCall_10_0_0()); 
             pushFollow(FOLLOW_2);
@@ -17214,17 +16972,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operacion__SentenciaAssignment_10_1"
-    // InternalBlockchain.g:5562:1: rule__Operacion__SentenciaAssignment_10_1 : ( ruleSentencia ) ;
+    // InternalBlockchain.g:5481:1: rule__Operacion__SentenciaAssignment_10_1 : ( ruleSentencia ) ;
     public final void rule__Operacion__SentenciaAssignment_10_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5566:1: ( ( ruleSentencia ) )
-            // InternalBlockchain.g:5567:2: ( ruleSentencia )
+            // InternalBlockchain.g:5485:1: ( ( ruleSentencia ) )
+            // InternalBlockchain.g:5486:2: ( ruleSentencia )
             {
-            // InternalBlockchain.g:5567:2: ( ruleSentencia )
-            // InternalBlockchain.g:5568:3: ruleSentencia
+            // InternalBlockchain.g:5486:2: ( ruleSentencia )
+            // InternalBlockchain.g:5487:3: ruleSentencia
             {
              before(grammarAccess.getOperacionAccess().getSentenciaSentenciaParserRuleCall_10_1_0()); 
             pushFollow(FOLLOW_2);
@@ -17255,21 +17013,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Estado__TipodatoAssignment_1"
-    // InternalBlockchain.g:5577:1: rule__Estado__TipodatoAssignment_1 : ( ( RULE_ID ) ) ;
+    // InternalBlockchain.g:5496:1: rule__Estado__TipodatoAssignment_1 : ( ( RULE_ID ) ) ;
     public final void rule__Estado__TipodatoAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5581:1: ( ( ( RULE_ID ) ) )
-            // InternalBlockchain.g:5582:2: ( ( RULE_ID ) )
+            // InternalBlockchain.g:5500:1: ( ( ( RULE_ID ) ) )
+            // InternalBlockchain.g:5501:2: ( ( RULE_ID ) )
             {
-            // InternalBlockchain.g:5582:2: ( ( RULE_ID ) )
-            // InternalBlockchain.g:5583:3: ( RULE_ID )
+            // InternalBlockchain.g:5501:2: ( ( RULE_ID ) )
+            // InternalBlockchain.g:5502:3: ( RULE_ID )
             {
              before(grammarAccess.getEstadoAccess().getTipodatoTipoDatoCrossReference_1_0()); 
-            // InternalBlockchain.g:5584:3: ( RULE_ID )
-            // InternalBlockchain.g:5585:4: RULE_ID
+            // InternalBlockchain.g:5503:3: ( RULE_ID )
+            // InternalBlockchain.g:5504:4: RULE_ID
             {
              before(grammarAccess.getEstadoAccess().getTipodatoTipoDatoIDTerminalRuleCall_1_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -17300,17 +17058,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Estado__NameAssignment_2"
-    // InternalBlockchain.g:5596:1: rule__Estado__NameAssignment_2 : ( ruleEString ) ;
+    // InternalBlockchain.g:5515:1: rule__Estado__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__Estado__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5600:1: ( ( ruleEString ) )
-            // InternalBlockchain.g:5601:2: ( ruleEString )
+            // InternalBlockchain.g:5519:1: ( ( ruleEString ) )
+            // InternalBlockchain.g:5520:2: ( ruleEString )
             {
-            // InternalBlockchain.g:5601:2: ( ruleEString )
-            // InternalBlockchain.g:5602:3: ruleEString
+            // InternalBlockchain.g:5520:2: ( ruleEString )
+            // InternalBlockchain.g:5521:3: ruleEString
             {
              before(grammarAccess.getEstadoAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -17341,21 +17099,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Atributo__TipodatoAssignment_0"
-    // InternalBlockchain.g:5611:1: rule__Atributo__TipodatoAssignment_0 : ( ( ruleEString ) ) ;
+    // InternalBlockchain.g:5530:1: rule__Atributo__TipodatoAssignment_0 : ( ( ruleEString ) ) ;
     public final void rule__Atributo__TipodatoAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5615:1: ( ( ( ruleEString ) ) )
-            // InternalBlockchain.g:5616:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5534:1: ( ( ( ruleEString ) ) )
+            // InternalBlockchain.g:5535:2: ( ( ruleEString ) )
             {
-            // InternalBlockchain.g:5616:2: ( ( ruleEString ) )
-            // InternalBlockchain.g:5617:3: ( ruleEString )
+            // InternalBlockchain.g:5535:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5536:3: ( ruleEString )
             {
              before(grammarAccess.getAtributoAccess().getTipodatoTipoDatoCrossReference_0_0()); 
-            // InternalBlockchain.g:5618:3: ( ruleEString )
-            // InternalBlockchain.g:5619:4: ruleEString
+            // InternalBlockchain.g:5537:3: ( ruleEString )
+            // InternalBlockchain.g:5538:4: ruleEString
             {
              before(grammarAccess.getAtributoAccess().getTipodatoTipoDatoEStringParserRuleCall_0_0_1()); 
             pushFollow(FOLLOW_2);
@@ -17390,17 +17148,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Atributo__NameAssignment_1"
-    // InternalBlockchain.g:5630:1: rule__Atributo__NameAssignment_1 : ( ruleEString ) ;
+    // InternalBlockchain.g:5549:1: rule__Atributo__NameAssignment_1 : ( ruleEString ) ;
     public final void rule__Atributo__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5634:1: ( ( ruleEString ) )
-            // InternalBlockchain.g:5635:2: ( ruleEString )
+            // InternalBlockchain.g:5553:1: ( ( ruleEString ) )
+            // InternalBlockchain.g:5554:2: ( ruleEString )
             {
-            // InternalBlockchain.g:5635:2: ( ruleEString )
-            // InternalBlockchain.g:5636:3: ruleEString
+            // InternalBlockchain.g:5554:2: ( ruleEString )
+            // InternalBlockchain.g:5555:3: ruleEString
             {
              before(grammarAccess.getAtributoAccess().getNameEStringParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -17431,21 +17189,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Parametro__TipodatoAssignment_0"
-    // InternalBlockchain.g:5645:1: rule__Parametro__TipodatoAssignment_0 : ( ( ruleEString ) ) ;
+    // InternalBlockchain.g:5564:1: rule__Parametro__TipodatoAssignment_0 : ( ( ruleEString ) ) ;
     public final void rule__Parametro__TipodatoAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5649:1: ( ( ( ruleEString ) ) )
-            // InternalBlockchain.g:5650:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5568:1: ( ( ( ruleEString ) ) )
+            // InternalBlockchain.g:5569:2: ( ( ruleEString ) )
             {
-            // InternalBlockchain.g:5650:2: ( ( ruleEString ) )
-            // InternalBlockchain.g:5651:3: ( ruleEString )
+            // InternalBlockchain.g:5569:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5570:3: ( ruleEString )
             {
              before(grammarAccess.getParametroAccess().getTipodatoTipoDatoCrossReference_0_0()); 
-            // InternalBlockchain.g:5652:3: ( ruleEString )
-            // InternalBlockchain.g:5653:4: ruleEString
+            // InternalBlockchain.g:5571:3: ( ruleEString )
+            // InternalBlockchain.g:5572:4: ruleEString
             {
              before(grammarAccess.getParametroAccess().getTipodatoTipoDatoEStringParserRuleCall_0_0_1()); 
             pushFollow(FOLLOW_2);
@@ -17480,17 +17238,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Parametro__NameAssignment_1"
-    // InternalBlockchain.g:5664:1: rule__Parametro__NameAssignment_1 : ( ruleEString ) ;
+    // InternalBlockchain.g:5583:1: rule__Parametro__NameAssignment_1 : ( ruleEString ) ;
     public final void rule__Parametro__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5668:1: ( ( ruleEString ) )
-            // InternalBlockchain.g:5669:2: ( ruleEString )
+            // InternalBlockchain.g:5587:1: ( ( ruleEString ) )
+            // InternalBlockchain.g:5588:2: ( ruleEString )
             {
-            // InternalBlockchain.g:5669:2: ( ruleEString )
-            // InternalBlockchain.g:5670:3: ruleEString
+            // InternalBlockchain.g:5588:2: ( ruleEString )
+            // InternalBlockchain.g:5589:3: ruleEString
             {
              before(grammarAccess.getParametroAccess().getNameEStringParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -17521,17 +17279,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionLogica__IdAssignment_2_1"
-    // InternalBlockchain.g:5679:1: rule__ExpresionLogica__IdAssignment_2_1 : ( ruleEInt ) ;
+    // InternalBlockchain.g:5598:1: rule__ExpresionLogica__IdAssignment_2_1 : ( ruleEInt ) ;
     public final void rule__ExpresionLogica__IdAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5683:1: ( ( ruleEInt ) )
-            // InternalBlockchain.g:5684:2: ( ruleEInt )
+            // InternalBlockchain.g:5602:1: ( ( ruleEInt ) )
+            // InternalBlockchain.g:5603:2: ( ruleEInt )
             {
-            // InternalBlockchain.g:5684:2: ( ruleEInt )
-            // InternalBlockchain.g:5685:3: ruleEInt
+            // InternalBlockchain.g:5603:2: ( ruleEInt )
+            // InternalBlockchain.g:5604:3: ruleEInt
             {
              before(grammarAccess.getExpresionLogicaAccess().getIdEIntParserRuleCall_2_1_0()); 
             pushFollow(FOLLOW_2);
@@ -17562,21 +17320,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionLogica__LadoIzqAssignment_3"
-    // InternalBlockchain.g:5694:1: rule__ExpresionLogica__LadoIzqAssignment_3 : ( ( ruleEString ) ) ;
+    // InternalBlockchain.g:5613:1: rule__ExpresionLogica__LadoIzqAssignment_3 : ( ( ruleEString ) ) ;
     public final void rule__ExpresionLogica__LadoIzqAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5698:1: ( ( ( ruleEString ) ) )
-            // InternalBlockchain.g:5699:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5617:1: ( ( ( ruleEString ) ) )
+            // InternalBlockchain.g:5618:2: ( ( ruleEString ) )
             {
-            // InternalBlockchain.g:5699:2: ( ( ruleEString ) )
-            // InternalBlockchain.g:5700:3: ( ruleEString )
+            // InternalBlockchain.g:5618:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5619:3: ( ruleEString )
             {
              before(grammarAccess.getExpresionLogicaAccess().getLadoIzqSentenciaCrossReference_3_0()); 
-            // InternalBlockchain.g:5701:3: ( ruleEString )
-            // InternalBlockchain.g:5702:4: ruleEString
+            // InternalBlockchain.g:5620:3: ( ruleEString )
+            // InternalBlockchain.g:5621:4: ruleEString
             {
              before(grammarAccess.getExpresionLogicaAccess().getLadoIzqSentenciaEStringParserRuleCall_3_0_1()); 
             pushFollow(FOLLOW_2);
@@ -17611,17 +17369,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionLogica__OperadorAssignment_4"
-    // InternalBlockchain.g:5713:1: rule__ExpresionLogica__OperadorAssignment_4 : ( ruleOperadorLogico ) ;
+    // InternalBlockchain.g:5632:1: rule__ExpresionLogica__OperadorAssignment_4 : ( ruleOperadorLogico ) ;
     public final void rule__ExpresionLogica__OperadorAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5717:1: ( ( ruleOperadorLogico ) )
-            // InternalBlockchain.g:5718:2: ( ruleOperadorLogico )
+            // InternalBlockchain.g:5636:1: ( ( ruleOperadorLogico ) )
+            // InternalBlockchain.g:5637:2: ( ruleOperadorLogico )
             {
-            // InternalBlockchain.g:5718:2: ( ruleOperadorLogico )
-            // InternalBlockchain.g:5719:3: ruleOperadorLogico
+            // InternalBlockchain.g:5637:2: ( ruleOperadorLogico )
+            // InternalBlockchain.g:5638:3: ruleOperadorLogico
             {
              before(grammarAccess.getExpresionLogicaAccess().getOperadorOperadorLogicoEnumRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -17652,21 +17410,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionLogica__LadoDerAssignment_5"
-    // InternalBlockchain.g:5728:1: rule__ExpresionLogica__LadoDerAssignment_5 : ( ( ruleEString ) ) ;
+    // InternalBlockchain.g:5647:1: rule__ExpresionLogica__LadoDerAssignment_5 : ( ( ruleEString ) ) ;
     public final void rule__ExpresionLogica__LadoDerAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5732:1: ( ( ( ruleEString ) ) )
-            // InternalBlockchain.g:5733:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5651:1: ( ( ( ruleEString ) ) )
+            // InternalBlockchain.g:5652:2: ( ( ruleEString ) )
             {
-            // InternalBlockchain.g:5733:2: ( ( ruleEString ) )
-            // InternalBlockchain.g:5734:3: ( ruleEString )
+            // InternalBlockchain.g:5652:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5653:3: ( ruleEString )
             {
              before(grammarAccess.getExpresionLogicaAccess().getLadoDerSentenciaCrossReference_5_0()); 
-            // InternalBlockchain.g:5735:3: ( ruleEString )
-            // InternalBlockchain.g:5736:4: ruleEString
+            // InternalBlockchain.g:5654:3: ( ruleEString )
+            // InternalBlockchain.g:5655:4: ruleEString
             {
              before(grammarAccess.getExpresionLogicaAccess().getLadoDerSentenciaEStringParserRuleCall_5_0_1()); 
             pushFollow(FOLLOW_2);
@@ -17701,17 +17459,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionAritmetica__IdAssignment_1_1"
-    // InternalBlockchain.g:5747:1: rule__ExpresionAritmetica__IdAssignment_1_1 : ( ruleEInt ) ;
+    // InternalBlockchain.g:5666:1: rule__ExpresionAritmetica__IdAssignment_1_1 : ( ruleEInt ) ;
     public final void rule__ExpresionAritmetica__IdAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5751:1: ( ( ruleEInt ) )
-            // InternalBlockchain.g:5752:2: ( ruleEInt )
+            // InternalBlockchain.g:5670:1: ( ( ruleEInt ) )
+            // InternalBlockchain.g:5671:2: ( ruleEInt )
             {
-            // InternalBlockchain.g:5752:2: ( ruleEInt )
-            // InternalBlockchain.g:5753:3: ruleEInt
+            // InternalBlockchain.g:5671:2: ( ruleEInt )
+            // InternalBlockchain.g:5672:3: ruleEInt
             {
              before(grammarAccess.getExpresionAritmeticaAccess().getIdEIntParserRuleCall_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -17742,21 +17500,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionAritmetica__LadoIzqAssignment_2"
-    // InternalBlockchain.g:5762:1: rule__ExpresionAritmetica__LadoIzqAssignment_2 : ( ( ruleEString ) ) ;
+    // InternalBlockchain.g:5681:1: rule__ExpresionAritmetica__LadoIzqAssignment_2 : ( ( ruleEString ) ) ;
     public final void rule__ExpresionAritmetica__LadoIzqAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5766:1: ( ( ( ruleEString ) ) )
-            // InternalBlockchain.g:5767:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5685:1: ( ( ( ruleEString ) ) )
+            // InternalBlockchain.g:5686:2: ( ( ruleEString ) )
             {
-            // InternalBlockchain.g:5767:2: ( ( ruleEString ) )
-            // InternalBlockchain.g:5768:3: ( ruleEString )
+            // InternalBlockchain.g:5686:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5687:3: ( ruleEString )
             {
              before(grammarAccess.getExpresionAritmeticaAccess().getLadoIzqSentenciaCrossReference_2_0()); 
-            // InternalBlockchain.g:5769:3: ( ruleEString )
-            // InternalBlockchain.g:5770:4: ruleEString
+            // InternalBlockchain.g:5688:3: ( ruleEString )
+            // InternalBlockchain.g:5689:4: ruleEString
             {
              before(grammarAccess.getExpresionAritmeticaAccess().getLadoIzqSentenciaEStringParserRuleCall_2_0_1()); 
             pushFollow(FOLLOW_2);
@@ -17791,17 +17549,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionAritmetica__OperadorAssignment_3"
-    // InternalBlockchain.g:5781:1: rule__ExpresionAritmetica__OperadorAssignment_3 : ( ruleOperador ) ;
+    // InternalBlockchain.g:5700:1: rule__ExpresionAritmetica__OperadorAssignment_3 : ( ruleOperador ) ;
     public final void rule__ExpresionAritmetica__OperadorAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5785:1: ( ( ruleOperador ) )
-            // InternalBlockchain.g:5786:2: ( ruleOperador )
+            // InternalBlockchain.g:5704:1: ( ( ruleOperador ) )
+            // InternalBlockchain.g:5705:2: ( ruleOperador )
             {
-            // InternalBlockchain.g:5786:2: ( ruleOperador )
-            // InternalBlockchain.g:5787:3: ruleOperador
+            // InternalBlockchain.g:5705:2: ( ruleOperador )
+            // InternalBlockchain.g:5706:3: ruleOperador
             {
              before(grammarAccess.getExpresionAritmeticaAccess().getOperadorOperadorEnumRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -17832,21 +17590,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionAritmetica__LadoDerAssignment_4"
-    // InternalBlockchain.g:5796:1: rule__ExpresionAritmetica__LadoDerAssignment_4 : ( ( ruleEString ) ) ;
+    // InternalBlockchain.g:5715:1: rule__ExpresionAritmetica__LadoDerAssignment_4 : ( ( ruleEString ) ) ;
     public final void rule__ExpresionAritmetica__LadoDerAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5800:1: ( ( ( ruleEString ) ) )
-            // InternalBlockchain.g:5801:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5719:1: ( ( ( ruleEString ) ) )
+            // InternalBlockchain.g:5720:2: ( ( ruleEString ) )
             {
-            // InternalBlockchain.g:5801:2: ( ( ruleEString ) )
-            // InternalBlockchain.g:5802:3: ( ruleEString )
+            // InternalBlockchain.g:5720:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5721:3: ( ruleEString )
             {
              before(grammarAccess.getExpresionAritmeticaAccess().getLadoDerSentenciaCrossReference_4_0()); 
-            // InternalBlockchain.g:5803:3: ( ruleEString )
-            // InternalBlockchain.g:5804:4: ruleEString
+            // InternalBlockchain.g:5722:3: ( ruleEString )
+            // InternalBlockchain.g:5723:4: ruleEString
             {
              before(grammarAccess.getExpresionAritmeticaAccess().getLadoDerSentenciaEStringParserRuleCall_4_0_1()); 
             pushFollow(FOLLOW_2);
@@ -17881,21 +17639,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Variable__TipodatoAssignment_1"
-    // InternalBlockchain.g:5815:1: rule__Variable__TipodatoAssignment_1 : ( ( ruleEString ) ) ;
+    // InternalBlockchain.g:5734:1: rule__Variable__TipodatoAssignment_1 : ( ( ruleEString ) ) ;
     public final void rule__Variable__TipodatoAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5819:1: ( ( ( ruleEString ) ) )
-            // InternalBlockchain.g:5820:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5738:1: ( ( ( ruleEString ) ) )
+            // InternalBlockchain.g:5739:2: ( ( ruleEString ) )
             {
-            // InternalBlockchain.g:5820:2: ( ( ruleEString ) )
-            // InternalBlockchain.g:5821:3: ( ruleEString )
+            // InternalBlockchain.g:5739:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5740:3: ( ruleEString )
             {
              before(grammarAccess.getVariableAccess().getTipodatoTipoDatoCrossReference_1_0()); 
-            // InternalBlockchain.g:5822:3: ( ruleEString )
-            // InternalBlockchain.g:5823:4: ruleEString
+            // InternalBlockchain.g:5741:3: ( ruleEString )
+            // InternalBlockchain.g:5742:4: ruleEString
             {
              before(grammarAccess.getVariableAccess().getTipodatoTipoDatoEStringParserRuleCall_1_0_1()); 
             pushFollow(FOLLOW_2);
@@ -17930,17 +17688,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Variable__NameAssignment_3"
-    // InternalBlockchain.g:5834:1: rule__Variable__NameAssignment_3 : ( ruleEString ) ;
+    // InternalBlockchain.g:5753:1: rule__Variable__NameAssignment_3 : ( ruleEString ) ;
     public final void rule__Variable__NameAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5838:1: ( ( ruleEString ) )
-            // InternalBlockchain.g:5839:2: ( ruleEString )
+            // InternalBlockchain.g:5757:1: ( ( ruleEString ) )
+            // InternalBlockchain.g:5758:2: ( ruleEString )
             {
-            // InternalBlockchain.g:5839:2: ( ruleEString )
-            // InternalBlockchain.g:5840:3: ruleEString
+            // InternalBlockchain.g:5758:2: ( ruleEString )
+            // InternalBlockchain.g:5759:3: ruleEString
             {
              before(grammarAccess.getVariableAccess().getNameEStringParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -17971,17 +17729,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__TipoCondicionalAssignment_2_1"
-    // InternalBlockchain.g:5849:1: rule__Condicional__TipoCondicionalAssignment_2_1 : ( ruleTipoCondicion ) ;
+    // InternalBlockchain.g:5768:1: rule__Condicional__TipoCondicionalAssignment_2_1 : ( ruleTipoCondicion ) ;
     public final void rule__Condicional__TipoCondicionalAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5853:1: ( ( ruleTipoCondicion ) )
-            // InternalBlockchain.g:5854:2: ( ruleTipoCondicion )
+            // InternalBlockchain.g:5772:1: ( ( ruleTipoCondicion ) )
+            // InternalBlockchain.g:5773:2: ( ruleTipoCondicion )
             {
-            // InternalBlockchain.g:5854:2: ( ruleTipoCondicion )
-            // InternalBlockchain.g:5855:3: ruleTipoCondicion
+            // InternalBlockchain.g:5773:2: ( ruleTipoCondicion )
+            // InternalBlockchain.g:5774:3: ruleTipoCondicion
             {
              before(grammarAccess.getCondicionalAccess().getTipoCondicionalTipoCondicionEnumRuleCall_2_1_0()); 
             pushFollow(FOLLOW_2);
@@ -18012,17 +17770,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__ExpresionlogicaAssignment_4"
-    // InternalBlockchain.g:5864:1: rule__Condicional__ExpresionlogicaAssignment_4 : ( ruleExpresionLogica ) ;
+    // InternalBlockchain.g:5783:1: rule__Condicional__ExpresionlogicaAssignment_4 : ( ruleExpresionLogica ) ;
     public final void rule__Condicional__ExpresionlogicaAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5868:1: ( ( ruleExpresionLogica ) )
-            // InternalBlockchain.g:5869:2: ( ruleExpresionLogica )
+            // InternalBlockchain.g:5787:1: ( ( ruleExpresionLogica ) )
+            // InternalBlockchain.g:5788:2: ( ruleExpresionLogica )
             {
-            // InternalBlockchain.g:5869:2: ( ruleExpresionLogica )
-            // InternalBlockchain.g:5870:3: ruleExpresionLogica
+            // InternalBlockchain.g:5788:2: ( ruleExpresionLogica )
+            // InternalBlockchain.g:5789:3: ruleExpresionLogica
             {
              before(grammarAccess.getCondicionalAccess().getExpresionlogicaExpresionLogicaParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -18053,17 +17811,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__SentenciasAssignment_7"
-    // InternalBlockchain.g:5879:1: rule__Condicional__SentenciasAssignment_7 : ( ruleSentencia ) ;
+    // InternalBlockchain.g:5798:1: rule__Condicional__SentenciasAssignment_7 : ( ruleSentencia ) ;
     public final void rule__Condicional__SentenciasAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5883:1: ( ( ruleSentencia ) )
-            // InternalBlockchain.g:5884:2: ( ruleSentencia )
+            // InternalBlockchain.g:5802:1: ( ( ruleSentencia ) )
+            // InternalBlockchain.g:5803:2: ( ruleSentencia )
             {
-            // InternalBlockchain.g:5884:2: ( ruleSentencia )
-            // InternalBlockchain.g:5885:3: ruleSentencia
+            // InternalBlockchain.g:5803:2: ( ruleSentencia )
+            // InternalBlockchain.g:5804:3: ruleSentencia
             {
              before(grammarAccess.getCondicionalAccess().getSentenciasSentenciaParserRuleCall_7_0()); 
             pushFollow(FOLLOW_2);
@@ -18094,17 +17852,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__SentenciasAssignment_8_1"
-    // InternalBlockchain.g:5894:1: rule__Condicional__SentenciasAssignment_8_1 : ( ruleSentencia ) ;
+    // InternalBlockchain.g:5813:1: rule__Condicional__SentenciasAssignment_8_1 : ( ruleSentencia ) ;
     public final void rule__Condicional__SentenciasAssignment_8_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5898:1: ( ( ruleSentencia ) )
-            // InternalBlockchain.g:5899:2: ( ruleSentencia )
+            // InternalBlockchain.g:5817:1: ( ( ruleSentencia ) )
+            // InternalBlockchain.g:5818:2: ( ruleSentencia )
             {
-            // InternalBlockchain.g:5899:2: ( ruleSentencia )
-            // InternalBlockchain.g:5900:3: ruleSentencia
+            // InternalBlockchain.g:5818:2: ( ruleSentencia )
+            // InternalBlockchain.g:5819:3: ruleSentencia
             {
              before(grammarAccess.getCondicionalAccess().getSentenciasSentenciaParserRuleCall_8_1_0()); 
             pushFollow(FOLLOW_2);
@@ -18135,17 +17893,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__ElseAssignment_10_2"
-    // InternalBlockchain.g:5909:1: rule__Condicional__ElseAssignment_10_2 : ( ruleCondicional ) ;
+    // InternalBlockchain.g:5828:1: rule__Condicional__ElseAssignment_10_2 : ( ruleCondicional ) ;
     public final void rule__Condicional__ElseAssignment_10_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5913:1: ( ( ruleCondicional ) )
-            // InternalBlockchain.g:5914:2: ( ruleCondicional )
+            // InternalBlockchain.g:5832:1: ( ( ruleCondicional ) )
+            // InternalBlockchain.g:5833:2: ( ruleCondicional )
             {
-            // InternalBlockchain.g:5914:2: ( ruleCondicional )
-            // InternalBlockchain.g:5915:3: ruleCondicional
+            // InternalBlockchain.g:5833:2: ( ruleCondicional )
+            // InternalBlockchain.g:5834:3: ruleCondicional
             {
              before(grammarAccess.getCondicionalAccess().getElseCondicionalParserRuleCall_10_2_0()); 
             pushFollow(FOLLOW_2);
@@ -18176,17 +17934,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condicional__ElseAssignment_10_3_1"
-    // InternalBlockchain.g:5924:1: rule__Condicional__ElseAssignment_10_3_1 : ( ruleCondicional ) ;
+    // InternalBlockchain.g:5843:1: rule__Condicional__ElseAssignment_10_3_1 : ( ruleCondicional ) ;
     public final void rule__Condicional__ElseAssignment_10_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5928:1: ( ( ruleCondicional ) )
-            // InternalBlockchain.g:5929:2: ( ruleCondicional )
+            // InternalBlockchain.g:5847:1: ( ( ruleCondicional ) )
+            // InternalBlockchain.g:5848:2: ( ruleCondicional )
             {
-            // InternalBlockchain.g:5929:2: ( ruleCondicional )
-            // InternalBlockchain.g:5930:3: ruleCondicional
+            // InternalBlockchain.g:5848:2: ( ruleCondicional )
+            // InternalBlockchain.g:5849:3: ruleCondicional
             {
              before(grammarAccess.getCondicionalAccess().getElseCondicionalParserRuleCall_10_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -18217,17 +17975,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionNumerica__ValueAssignment_2"
-    // InternalBlockchain.g:5939:1: rule__ExpresionNumerica__ValueAssignment_2 : ( ruleEDouble ) ;
+    // InternalBlockchain.g:5858:1: rule__ExpresionNumerica__ValueAssignment_2 : ( ruleEDouble ) ;
     public final void rule__ExpresionNumerica__ValueAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5943:1: ( ( ruleEDouble ) )
-            // InternalBlockchain.g:5944:2: ( ruleEDouble )
+            // InternalBlockchain.g:5862:1: ( ( ruleEDouble ) )
+            // InternalBlockchain.g:5863:2: ( ruleEDouble )
             {
-            // InternalBlockchain.g:5944:2: ( ruleEDouble )
-            // InternalBlockchain.g:5945:3: ruleEDouble
+            // InternalBlockchain.g:5863:2: ( ruleEDouble )
+            // InternalBlockchain.g:5864:3: ruleEDouble
             {
              before(grammarAccess.getExpresionNumericaAccess().getValueEDoubleParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -18258,17 +18016,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionReferenciada__IdAssignment_2_1"
-    // InternalBlockchain.g:5954:1: rule__ExpresionReferenciada__IdAssignment_2_1 : ( ruleEInt ) ;
+    // InternalBlockchain.g:5873:1: rule__ExpresionReferenciada__IdAssignment_2_1 : ( ruleEInt ) ;
     public final void rule__ExpresionReferenciada__IdAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5958:1: ( ( ruleEInt ) )
-            // InternalBlockchain.g:5959:2: ( ruleEInt )
+            // InternalBlockchain.g:5877:1: ( ( ruleEInt ) )
+            // InternalBlockchain.g:5878:2: ( ruleEInt )
             {
-            // InternalBlockchain.g:5959:2: ( ruleEInt )
-            // InternalBlockchain.g:5960:3: ruleEInt
+            // InternalBlockchain.g:5878:2: ( ruleEInt )
+            // InternalBlockchain.g:5879:3: ruleEInt
             {
              before(grammarAccess.getExpresionReferenciadaAccess().getIdEIntParserRuleCall_2_1_0()); 
             pushFollow(FOLLOW_2);
@@ -18299,21 +18057,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionReferenciada__EntReferenciadaAssignment_3"
-    // InternalBlockchain.g:5969:1: rule__ExpresionReferenciada__EntReferenciadaAssignment_3 : ( ( ruleEString ) ) ;
+    // InternalBlockchain.g:5888:1: rule__ExpresionReferenciada__EntReferenciadaAssignment_3 : ( ( ruleEString ) ) ;
     public final void rule__ExpresionReferenciada__EntReferenciadaAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5973:1: ( ( ( ruleEString ) ) )
-            // InternalBlockchain.g:5974:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5892:1: ( ( ( ruleEString ) ) )
+            // InternalBlockchain.g:5893:2: ( ( ruleEString ) )
             {
-            // InternalBlockchain.g:5974:2: ( ( ruleEString ) )
-            // InternalBlockchain.g:5975:3: ( ruleEString )
+            // InternalBlockchain.g:5893:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5894:3: ( ruleEString )
             {
              before(grammarAccess.getExpresionReferenciadaAccess().getEntReferenciadaEntidadCrossReference_3_0()); 
-            // InternalBlockchain.g:5976:3: ( ruleEString )
-            // InternalBlockchain.g:5977:4: ruleEString
+            // InternalBlockchain.g:5895:3: ( ruleEString )
+            // InternalBlockchain.g:5896:4: ruleEString
             {
              before(grammarAccess.getExpresionReferenciadaAccess().getEntReferenciadaEntidadEStringParserRuleCall_3_0_1()); 
             pushFollow(FOLLOW_2);
@@ -18348,21 +18106,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionReferenciada__AtrReferenciadoAssignment_4"
-    // InternalBlockchain.g:5988:1: rule__ExpresionReferenciada__AtrReferenciadoAssignment_4 : ( ( ruleEString ) ) ;
+    // InternalBlockchain.g:5907:1: rule__ExpresionReferenciada__AtrReferenciadoAssignment_4 : ( ( ruleEString ) ) ;
     public final void rule__ExpresionReferenciada__AtrReferenciadoAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:5992:1: ( ( ( ruleEString ) ) )
-            // InternalBlockchain.g:5993:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5911:1: ( ( ( ruleEString ) ) )
+            // InternalBlockchain.g:5912:2: ( ( ruleEString ) )
             {
-            // InternalBlockchain.g:5993:2: ( ( ruleEString ) )
-            // InternalBlockchain.g:5994:3: ( ruleEString )
+            // InternalBlockchain.g:5912:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5913:3: ( ruleEString )
             {
              before(grammarAccess.getExpresionReferenciadaAccess().getAtrReferenciadoAtributoCrossReference_4_0()); 
-            // InternalBlockchain.g:5995:3: ( ruleEString )
-            // InternalBlockchain.g:5996:4: ruleEString
+            // InternalBlockchain.g:5914:3: ( ruleEString )
+            // InternalBlockchain.g:5915:4: ruleEString
             {
              before(grammarAccess.getExpresionReferenciadaAccess().getAtrReferenciadoAtributoEStringParserRuleCall_4_0_1()); 
             pushFollow(FOLLOW_2);
@@ -18397,17 +18155,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__IdAssignment_2_1"
-    // InternalBlockchain.g:6007:1: rule__ExpresionRelacional__IdAssignment_2_1 : ( ruleEInt ) ;
+    // InternalBlockchain.g:5926:1: rule__ExpresionRelacional__IdAssignment_2_1 : ( ruleEInt ) ;
     public final void rule__ExpresionRelacional__IdAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:6011:1: ( ( ruleEInt ) )
-            // InternalBlockchain.g:6012:2: ( ruleEInt )
+            // InternalBlockchain.g:5930:1: ( ( ruleEInt ) )
+            // InternalBlockchain.g:5931:2: ( ruleEInt )
             {
-            // InternalBlockchain.g:6012:2: ( ruleEInt )
-            // InternalBlockchain.g:6013:3: ruleEInt
+            // InternalBlockchain.g:5931:2: ( ruleEInt )
+            // InternalBlockchain.g:5932:3: ruleEInt
             {
              before(grammarAccess.getExpresionRelacionalAccess().getIdEIntParserRuleCall_2_1_0()); 
             pushFollow(FOLLOW_2);
@@ -18438,21 +18196,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__LadoIzqAssignment_3"
-    // InternalBlockchain.g:6022:1: rule__ExpresionRelacional__LadoIzqAssignment_3 : ( ( ruleEString ) ) ;
+    // InternalBlockchain.g:5941:1: rule__ExpresionRelacional__LadoIzqAssignment_3 : ( ( ruleEString ) ) ;
     public final void rule__ExpresionRelacional__LadoIzqAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:6026:1: ( ( ( ruleEString ) ) )
-            // InternalBlockchain.g:6027:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5945:1: ( ( ( ruleEString ) ) )
+            // InternalBlockchain.g:5946:2: ( ( ruleEString ) )
             {
-            // InternalBlockchain.g:6027:2: ( ( ruleEString ) )
-            // InternalBlockchain.g:6028:3: ( ruleEString )
+            // InternalBlockchain.g:5946:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5947:3: ( ruleEString )
             {
              before(grammarAccess.getExpresionRelacionalAccess().getLadoIzqSentenciaCrossReference_3_0()); 
-            // InternalBlockchain.g:6029:3: ( ruleEString )
-            // InternalBlockchain.g:6030:4: ruleEString
+            // InternalBlockchain.g:5948:3: ( ruleEString )
+            // InternalBlockchain.g:5949:4: ruleEString
             {
              before(grammarAccess.getExpresionRelacionalAccess().getLadoIzqSentenciaEStringParserRuleCall_3_0_1()); 
             pushFollow(FOLLOW_2);
@@ -18487,17 +18245,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__OperadorRelacionalAssignment_4"
-    // InternalBlockchain.g:6041:1: rule__ExpresionRelacional__OperadorRelacionalAssignment_4 : ( ruleOperadorRelacion ) ;
+    // InternalBlockchain.g:5960:1: rule__ExpresionRelacional__OperadorRelacionalAssignment_4 : ( ruleOperadorRelacion ) ;
     public final void rule__ExpresionRelacional__OperadorRelacionalAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:6045:1: ( ( ruleOperadorRelacion ) )
-            // InternalBlockchain.g:6046:2: ( ruleOperadorRelacion )
+            // InternalBlockchain.g:5964:1: ( ( ruleOperadorRelacion ) )
+            // InternalBlockchain.g:5965:2: ( ruleOperadorRelacion )
             {
-            // InternalBlockchain.g:6046:2: ( ruleOperadorRelacion )
-            // InternalBlockchain.g:6047:3: ruleOperadorRelacion
+            // InternalBlockchain.g:5965:2: ( ruleOperadorRelacion )
+            // InternalBlockchain.g:5966:3: ruleOperadorRelacion
             {
              before(grammarAccess.getExpresionRelacionalAccess().getOperadorRelacionalOperadorRelacionEnumRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -18528,21 +18286,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExpresionRelacional__LadoDerAssignment_5"
-    // InternalBlockchain.g:6056:1: rule__ExpresionRelacional__LadoDerAssignment_5 : ( ( ruleEString ) ) ;
+    // InternalBlockchain.g:5975:1: rule__ExpresionRelacional__LadoDerAssignment_5 : ( ( ruleEString ) ) ;
     public final void rule__ExpresionRelacional__LadoDerAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:6060:1: ( ( ( ruleEString ) ) )
-            // InternalBlockchain.g:6061:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5979:1: ( ( ( ruleEString ) ) )
+            // InternalBlockchain.g:5980:2: ( ( ruleEString ) )
             {
-            // InternalBlockchain.g:6061:2: ( ( ruleEString ) )
-            // InternalBlockchain.g:6062:3: ( ruleEString )
+            // InternalBlockchain.g:5980:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:5981:3: ( ruleEString )
             {
              before(grammarAccess.getExpresionRelacionalAccess().getLadoDerSentenciaCrossReference_5_0()); 
-            // InternalBlockchain.g:6063:3: ( ruleEString )
-            // InternalBlockchain.g:6064:4: ruleEString
+            // InternalBlockchain.g:5982:3: ( ruleEString )
+            // InternalBlockchain.g:5983:4: ruleEString
             {
              before(grammarAccess.getExpresionRelacionalAccess().getLadoDerSentenciaEStringParserRuleCall_5_0_1()); 
             pushFollow(FOLLOW_2);
@@ -18577,17 +18335,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Primitivo__TipoAssignment_1"
-    // InternalBlockchain.g:6075:1: rule__Primitivo__TipoAssignment_1 : ( ruleDatoPrimitivo ) ;
+    // InternalBlockchain.g:5994:1: rule__Primitivo__TipoAssignment_1 : ( ruleDatoPrimitivo ) ;
     public final void rule__Primitivo__TipoAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:6079:1: ( ( ruleDatoPrimitivo ) )
-            // InternalBlockchain.g:6080:2: ( ruleDatoPrimitivo )
+            // InternalBlockchain.g:5998:1: ( ( ruleDatoPrimitivo ) )
+            // InternalBlockchain.g:5999:2: ( ruleDatoPrimitivo )
             {
-            // InternalBlockchain.g:6080:2: ( ruleDatoPrimitivo )
-            // InternalBlockchain.g:6081:3: ruleDatoPrimitivo
+            // InternalBlockchain.g:5999:2: ( ruleDatoPrimitivo )
+            // InternalBlockchain.g:6000:3: ruleDatoPrimitivo
             {
              before(grammarAccess.getPrimitivoAccess().getTipoDatoPrimitivoEnumRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -18618,17 +18376,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Primitivo__NameAssignment_2"
-    // InternalBlockchain.g:6090:1: rule__Primitivo__NameAssignment_2 : ( ruleEString ) ;
+    // InternalBlockchain.g:6009:1: rule__Primitivo__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__Primitivo__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:6094:1: ( ( ruleEString ) )
-            // InternalBlockchain.g:6095:2: ( ruleEString )
+            // InternalBlockchain.g:6013:1: ( ( ruleEString ) )
+            // InternalBlockchain.g:6014:2: ( ruleEString )
             {
-            // InternalBlockchain.g:6095:2: ( ruleEString )
-            // InternalBlockchain.g:6096:3: ruleEString
+            // InternalBlockchain.g:6014:2: ( ruleEString )
+            // InternalBlockchain.g:6015:3: ruleEString
             {
              before(grammarAccess.getPrimitivoAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -18659,17 +18417,17 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Mapa__NameAssignment_0"
-    // InternalBlockchain.g:6105:1: rule__Mapa__NameAssignment_0 : ( ruleEString ) ;
+    // InternalBlockchain.g:6024:1: rule__Mapa__NameAssignment_0 : ( ruleEString ) ;
     public final void rule__Mapa__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:6109:1: ( ( ruleEString ) )
-            // InternalBlockchain.g:6110:2: ( ruleEString )
+            // InternalBlockchain.g:6028:1: ( ( ruleEString ) )
+            // InternalBlockchain.g:6029:2: ( ruleEString )
             {
-            // InternalBlockchain.g:6110:2: ( ruleEString )
-            // InternalBlockchain.g:6111:3: ruleEString
+            // InternalBlockchain.g:6029:2: ( ruleEString )
+            // InternalBlockchain.g:6030:3: ruleEString
             {
              before(grammarAccess.getMapaAccess().getNameEStringParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -18700,21 +18458,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Mapa__TipoDatoKeyAssignment_4"
-    // InternalBlockchain.g:6120:1: rule__Mapa__TipoDatoKeyAssignment_4 : ( ( ruleEString ) ) ;
+    // InternalBlockchain.g:6039:1: rule__Mapa__TipoDatoKeyAssignment_4 : ( ( ruleEString ) ) ;
     public final void rule__Mapa__TipoDatoKeyAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:6124:1: ( ( ( ruleEString ) ) )
-            // InternalBlockchain.g:6125:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:6043:1: ( ( ( ruleEString ) ) )
+            // InternalBlockchain.g:6044:2: ( ( ruleEString ) )
             {
-            // InternalBlockchain.g:6125:2: ( ( ruleEString ) )
-            // InternalBlockchain.g:6126:3: ( ruleEString )
+            // InternalBlockchain.g:6044:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:6045:3: ( ruleEString )
             {
              before(grammarAccess.getMapaAccess().getTipoDatoKeyTipoDatoCrossReference_4_0()); 
-            // InternalBlockchain.g:6127:3: ( ruleEString )
-            // InternalBlockchain.g:6128:4: ruleEString
+            // InternalBlockchain.g:6046:3: ( ruleEString )
+            // InternalBlockchain.g:6047:4: ruleEString
             {
              before(grammarAccess.getMapaAccess().getTipoDatoKeyTipoDatoEStringParserRuleCall_4_0_1()); 
             pushFollow(FOLLOW_2);
@@ -18749,21 +18507,21 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Mapa__TipoDatoValueAssignment_6"
-    // InternalBlockchain.g:6139:1: rule__Mapa__TipoDatoValueAssignment_6 : ( ( ruleEString ) ) ;
+    // InternalBlockchain.g:6058:1: rule__Mapa__TipoDatoValueAssignment_6 : ( ( ruleEString ) ) ;
     public final void rule__Mapa__TipoDatoValueAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:6143:1: ( ( ( ruleEString ) ) )
-            // InternalBlockchain.g:6144:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:6062:1: ( ( ( ruleEString ) ) )
+            // InternalBlockchain.g:6063:2: ( ( ruleEString ) )
             {
-            // InternalBlockchain.g:6144:2: ( ( ruleEString ) )
-            // InternalBlockchain.g:6145:3: ( ruleEString )
+            // InternalBlockchain.g:6063:2: ( ( ruleEString ) )
+            // InternalBlockchain.g:6064:3: ( ruleEString )
             {
              before(grammarAccess.getMapaAccess().getTipoDatoValueTipoDatoCrossReference_6_0()); 
-            // InternalBlockchain.g:6146:3: ( ruleEString )
-            // InternalBlockchain.g:6147:4: ruleEString
+            // InternalBlockchain.g:6065:3: ( ruleEString )
+            // InternalBlockchain.g:6066:4: ruleEString
             {
              before(grammarAccess.getMapaAccess().getTipoDatoValueTipoDatoEStringParserRuleCall_6_0_1()); 
             pushFollow(FOLLOW_2);
@@ -18802,15 +18560,15 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
     protected DFA2 dfa2 = new DFA2(this);
     protected DFA17 dfa17 = new DFA17(this);
     static final String dfa_1s = "\17\uffff";
-    static final String dfa_2s = "\1\uffff\2\14\14\uffff";
+    static final String dfa_2s = "\1\uffff\2\13\14\uffff";
     static final String dfa_3s = "\3\4\14\uffff";
-    static final String dfa_4s = "\3\74\14\uffff";
-    static final String dfa_5s = "\3\uffff\1\2\1\3\1\4\1\6\1\7\1\11\1\12\1\13\1\5\1\10\2\1";
+    static final String dfa_4s = "\3\73\14\uffff";
+    static final String dfa_5s = "\3\uffff\1\2\1\3\1\4\1\6\1\7\1\11\1\12\1\13\1\10\2\1\1\5";
     static final String dfa_6s = "\17\uffff}>";
     static final String[] dfa_7s = {
-            "\1\1\1\2\6\uffff\2\10\43\uffff\1\3\1\4\1\5\2\uffff\1\6\3\uffff\1\7\1\11\1\12",
-            "\1\15\1\16\6\uffff\2\14\12\uffff\7\5\7\uffff\2\14\11\uffff\3\14\1\13\1\uffff\1\14\3\uffff\3\14",
-            "\1\15\1\16\6\uffff\2\14\12\uffff\7\5\7\uffff\2\14\11\uffff\3\14\1\13\1\uffff\1\14\3\uffff\3\14",
+            "\1\1\1\2\6\uffff\2\10\43\uffff\1\3\1\4\1\5\1\uffff\1\6\3\uffff\1\7\1\11\1\12",
+            "\1\14\1\15\6\uffff\2\13\12\uffff\7\5\7\uffff\2\13\11\uffff\3\13\1\16\1\13\3\uffff\3\13",
+            "\1\14\1\15\6\uffff\2\13\12\uffff\7\5\7\uffff\2\13\11\uffff\3\13\1\16\1\13\3\uffff\3\13",
             "",
             "",
             "",
@@ -18919,10 +18677,10 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000100000000000L});
     public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000200000000030L});
     public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0001002000000000L});
-    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x1C4E404000003030L});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0E2E404000003030L});
     public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000000003000L});
-    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x1C4E000000003030L});
-    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x1C4E000000003032L});
+    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0E2E000000003030L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0E2E000000003032L});
     public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0008100000000030L});
     public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000000000FF0000L});
@@ -18933,27 +18691,25 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x000000007F000000L});
     public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x000000007F000002L});
     public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0020000000000000L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0280000000000000L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x000000C000000000L});
-    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000004100000000L});
-    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000000180000000L});
-    public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0140000000000000L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0004000000000000L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x000000C000000000L});
+    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000004100000000L});
+    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000000180000000L});
+    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0200000000000000L});
+    public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000000002000840L});
     public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0400000000000000L});
-    public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0000000002000840L});
-    public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0800000000000000L});
-    public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0000000000000830L});
-    public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x000000000000C000L});
-    public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0000000E00000000L});
-    public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0000000E00000002L});
-    public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0000000000000830L});
+    public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x000000000000C000L});
+    public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000E00000000L});
+    public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0000000E00000002L});
+    public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0000000000040000L});
 
 }

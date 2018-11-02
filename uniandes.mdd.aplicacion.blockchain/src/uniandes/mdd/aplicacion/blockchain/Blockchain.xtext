@@ -98,8 +98,7 @@ Variable returns Variable:
 	tipodato=[TipoDato|EString]
 	'var' 
 	name=EString 
-	('=' 'new')?
-	
+		
 	;
 
 Condicional returns Condicional:
@@ -180,7 +179,7 @@ Mapa returns Mapa:
 	;
 
 enum DatoPrimitivo returns DatoPrimitivo:
-				STRING = 'STRING' | NUMERICO = 'NUMERICO' | BOOLEAN = 'BOOLEAN';
+				STRING = 'String' | NUMERICO = 'Numerico' | BOOLEAN = 'Boolean';
 			
 				
 
