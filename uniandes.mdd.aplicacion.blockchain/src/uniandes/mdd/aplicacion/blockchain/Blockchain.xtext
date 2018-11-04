@@ -9,7 +9,7 @@ Aplicacion returns Aplicacion:
 	'Aplicacion'
 	name=EString
 	'{'
-		(smartcontract+=SmartContract ( "," smartcontract+=SmartContract)*)?
+		(smartcontract+=SmartContract)+
 		('TipoDato' tipodato+=TipoDato ( "," tipodato+=TipoDato)*)*
 	'}';
 

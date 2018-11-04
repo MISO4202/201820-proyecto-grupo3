@@ -12,8 +12,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="atributos" upperBound="-1"
         eType="#//Atributo" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Atributo">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Atributo" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tipodato" lowerBound="1"
         eType="#//TipoDato"/>
   </eClassifiers>
@@ -30,23 +29,22 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="parametros" upperBound="-1"
         eType="#//Parametro" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sentencia" upperBound="-1"
-        eType="#//Sentencia" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="esUserDefined" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="retorno" eType="#//TipoDato"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lineas" upperBound="-1"
+        eType="#//Linea" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Parametro" eSuperTypes="#//Sentencia">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Parametro" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tipodato" lowerBound="1"
         eType="#//TipoDato"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Estado" eSuperTypes="#//Sentencia">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Estado" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tipodato" lowerBound="1"
         eType="#//TipoDato"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Sentencia" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ExpresionLogica" eSuperTypes="#//Expresion">
+  <eClassifiers xsi:type="ecore:EClass" name="Sentencia" abstract="true" interface="true"
+      eSuperTypes="#//Linea"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpresionLogica" eSuperTypes="#//ExpresionBinaria">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operador" eType="#//OperadorLogico"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Primitivo" eSuperTypes="#//TipoDato">
@@ -74,13 +72,12 @@
     <eLiterals name="GET" value="5"/>
     <eLiterals name="DELETE" value="6"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExpresionAritmetica" eSuperTypes="#//Expresion">
+  <eClassifiers xsi:type="ecore:EClass" name="ExpresionAritmetica" eSuperTypes="#//ExpresionBinaria">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operador" eType="#//Operador"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//Sentencia">
+  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//Sentencia #//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tipodato" lowerBound="1"
         eType="#//TipoDato"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DatoPrimitivo">
     <eLiterals name="STRING"/>
@@ -96,10 +93,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Condicional" eSuperTypes="#//Sentencia">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoCondicional" eType="#//TipoCondicion"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="expresionlogica" lowerBound="1"
-        eType="#//ExpresionLogica" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sentencias" lowerBound="1"
-        upperBound="-1" eType="#//Sentencia" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="else" upperBound="-1" eType="#//Condicional"
         containment="true"/>
   </eClassifiers>
@@ -107,32 +100,36 @@
     <eLiterals name="IF"/>
     <eLiterals name="ELSE" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Expresion" abstract="true" eSuperTypes="#//Sentencia">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ladoIzq" lowerBound="1"
-        eType="#//Sentencia"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ladoDer" lowerBound="1"
-        eType="#//Sentencia"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ValorElementos" abstract="true" eSuperTypes="#//Sentencia"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ExpresionNumerica" eSuperTypes="#//ValorElementos">
+  <eClassifiers xsi:type="ecore:EClass" name="Expresion" abstract="true" interface="true"
+      eSuperTypes="#//Linea"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpresionNumerica" eSuperTypes="#//Expresion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExpresionTexto" eSuperTypes="#//ValorElementos">
+  <eClassifiers xsi:type="ecore:EClass" name="ExpresionTexto" eSuperTypes="#//Expresion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExpresionBoolean" eSuperTypes="#//ValorElementos">
+  <eClassifiers xsi:type="ecore:EClass" name="ExpresionBoolean" eSuperTypes="#//Expresion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExpresionReferenciada" eSuperTypes="#//ValorElementos">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entReferenciada" eType="#//Entidad"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="atrReferenciado" eType="#//Atributo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpresionReferenciada" eSuperTypes="#//Expresion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referencia" lowerBound="1"
+        eType="#//NamedElement"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExpresionRelacional" eSuperTypes="#//Expresion">
+  <eClassifiers xsi:type="ecore:EClass" name="ExpresionRelacional" eSuperTypes="#//ExpresionBinaria">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operadorRelacional" eType="#//OperadorRelacion"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="OperadorRelacion">
     <eLiterals name="PUNTO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpresionBinaria" abstract="true" eSuperTypes="#//Expresion">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="izq" lowerBound="1" eType="#//Expresion"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="der" lowerBound="1" eType="#//Expresion"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Linea" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//ID"/>
   </eClassifiers>
 </ecore:EPackage>
