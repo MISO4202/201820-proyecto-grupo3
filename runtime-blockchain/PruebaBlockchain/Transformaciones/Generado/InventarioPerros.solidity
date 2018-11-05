@@ -1,0 +1,31 @@
+pragma solidity ^0.4.0;
+
+contract Perrera {
+		struct Perro {
+			String Raza 
+			String Placa 
+			Numerico Edad 
+			Numerico Precio 
+			Boolean Nuevo 
+			String Comentarios 
+		}
+		mapping (MapaPerros => Perro) public Perros;
+		mapping (MapaPerros => Perro) public PerrosJovenes;
+		mapping (MapaPerros => Perro) public PerrosViejos;
+		function ConsultarPerro (String Placa){
+		
+		}
+		function CrearPerro (String Raza,String Placa,Numerico Edad,Numerico Precio){
+		
+		}
+		function ActualizarPerro (Numerico Edad,Numerico Precio){
+		
+		}
+		function BorrarPerro (String Placa){
+		
+		}
+ 
+}
+	
+
+ 

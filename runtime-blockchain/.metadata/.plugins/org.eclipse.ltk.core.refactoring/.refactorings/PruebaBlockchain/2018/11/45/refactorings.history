@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;Autos.blockchain&apos; to &apos;Models&apos;" description="Move &apos;Autos.blockchain&apos; to &apos;Models&apos;" destination="Models" element1="Autos.blockchain" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1541376423205" updateReferences="true"/>
+</session>

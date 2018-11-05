@@ -2,8 +2,6 @@
  */
 package blockchain;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Sentencia</b></em>'.
@@ -11,8 +9,8 @@ import org.eclipse.emf.ecore.EObject;
  *
  *
  * @see blockchain.BlockchainPackage#getSentencia()
- * @model abstract="true"
+ * @model interface="true" abstract="true"
  * @generated
  */
-public interface Sentencia extends EObject {
+public interface Sentencia extends Linea {
 } // Sentencia

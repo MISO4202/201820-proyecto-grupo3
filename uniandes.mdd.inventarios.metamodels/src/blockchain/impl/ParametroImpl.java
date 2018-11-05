@@ -21,33 +21,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link blockchain.impl.ParametroImpl#getName <em>Name</em>}</li>
  *   <li>{@link blockchain.impl.ParametroImpl#getTipodato <em>Tipodato</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ParametroImpl extends SentenciaImpl implements Parametro {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
+public class ParametroImpl extends NamedElementImpl implements Parametro {
 	/**
 	 * The cached value of the '{@link #getTipodato() <em>Tipodato</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -75,27 +54,6 @@ public class ParametroImpl extends SentenciaImpl implements Parametro {
 	@Override
 	protected EClass eStaticClass() {
 		return BlockchainPackage.Literals.PARAMETRO;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.PARAMETRO__NAME, oldName, name));
 	}
 
 	/**
@@ -144,8 +102,6 @@ public class ParametroImpl extends SentenciaImpl implements Parametro {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case BlockchainPackage.PARAMETRO__NAME:
-				return getName();
 			case BlockchainPackage.PARAMETRO__TIPODATO:
 				if (resolve) return getTipodato();
 				return basicGetTipodato();
@@ -161,9 +117,6 @@ public class ParametroImpl extends SentenciaImpl implements Parametro {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case BlockchainPackage.PARAMETRO__NAME:
-				setName((String)newValue);
-				return;
 			case BlockchainPackage.PARAMETRO__TIPODATO:
 				setTipodato((TipoDato)newValue);
 				return;
@@ -179,9 +132,6 @@ public class ParametroImpl extends SentenciaImpl implements Parametro {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case BlockchainPackage.PARAMETRO__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case BlockchainPackage.PARAMETRO__TIPODATO:
 				setTipodato((TipoDato)null);
 				return;
@@ -197,28 +147,10 @@ public class ParametroImpl extends SentenciaImpl implements Parametro {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case BlockchainPackage.PARAMETRO__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case BlockchainPackage.PARAMETRO__TIPODATO:
 				return tipodato != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ParametroImpl

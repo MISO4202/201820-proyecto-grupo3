@@ -82,6 +82,7 @@ public class BlockchainSwitch<T> extends Switch<T> {
 			case BlockchainPackage.ATRIBUTO: {
 				Atributo atributo = (Atributo)theEObject;
 				T result = caseAtributo(atributo);
+				if (result == null) result = caseNamedElement(atributo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -100,28 +101,30 @@ public class BlockchainSwitch<T> extends Switch<T> {
 			case BlockchainPackage.PARAMETRO: {
 				Parametro parametro = (Parametro)theEObject;
 				T result = caseParametro(parametro);
-				if (result == null) result = caseSentencia(parametro);
+				if (result == null) result = caseNamedElement(parametro);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case BlockchainPackage.ESTADO: {
 				Estado estado = (Estado)theEObject;
 				T result = caseEstado(estado);
-				if (result == null) result = caseSentencia(estado);
+				if (result == null) result = caseNamedElement(estado);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case BlockchainPackage.SENTENCIA: {
 				Sentencia sentencia = (Sentencia)theEObject;
 				T result = caseSentencia(sentencia);
+				if (result == null) result = caseLinea(sentencia);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case BlockchainPackage.EXPRESION_LOGICA: {
 				ExpresionLogica expresionLogica = (ExpresionLogica)theEObject;
 				T result = caseExpresionLogica(expresionLogica);
+				if (result == null) result = caseExpresionBinaria(expresionLogica);
 				if (result == null) result = caseExpresion(expresionLogica);
-				if (result == null) result = caseSentencia(expresionLogica);
+				if (result == null) result = caseLinea(expresionLogica);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -141,8 +144,9 @@ public class BlockchainSwitch<T> extends Switch<T> {
 			case BlockchainPackage.EXPRESION_ARITMETICA: {
 				ExpresionAritmetica expresionAritmetica = (ExpresionAritmetica)theEObject;
 				T result = caseExpresionAritmetica(expresionAritmetica);
+				if (result == null) result = caseExpresionBinaria(expresionAritmetica);
 				if (result == null) result = caseExpresion(expresionAritmetica);
-				if (result == null) result = caseSentencia(expresionAritmetica);
+				if (result == null) result = caseLinea(expresionAritmetica);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -150,6 +154,8 @@ public class BlockchainSwitch<T> extends Switch<T> {
 				Variable variable = (Variable)theEObject;
 				T result = caseVariable(variable);
 				if (result == null) result = caseSentencia(variable);
+				if (result == null) result = caseNamedElement(variable);
+				if (result == null) result = caseLinea(variable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -164,60 +170,75 @@ public class BlockchainSwitch<T> extends Switch<T> {
 				Condicional condicional = (Condicional)theEObject;
 				T result = caseCondicional(condicional);
 				if (result == null) result = caseSentencia(condicional);
+				if (result == null) result = caseLinea(condicional);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case BlockchainPackage.EXPRESION: {
 				Expresion expresion = (Expresion)theEObject;
 				T result = caseExpresion(expresion);
-				if (result == null) result = caseSentencia(expresion);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case BlockchainPackage.VALOR_ELEMENTOS: {
-				ValorElementos valorElementos = (ValorElementos)theEObject;
-				T result = caseValorElementos(valorElementos);
-				if (result == null) result = caseSentencia(valorElementos);
+				if (result == null) result = caseLinea(expresion);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case BlockchainPackage.EXPRESION_NUMERICA: {
 				ExpresionNumerica expresionNumerica = (ExpresionNumerica)theEObject;
 				T result = caseExpresionNumerica(expresionNumerica);
-				if (result == null) result = caseValorElementos(expresionNumerica);
-				if (result == null) result = caseSentencia(expresionNumerica);
+				if (result == null) result = caseExpresion(expresionNumerica);
+				if (result == null) result = caseLinea(expresionNumerica);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case BlockchainPackage.EXPRESION_TEXTO: {
 				ExpresionTexto expresionTexto = (ExpresionTexto)theEObject;
 				T result = caseExpresionTexto(expresionTexto);
-				if (result == null) result = caseValorElementos(expresionTexto);
-				if (result == null) result = caseSentencia(expresionTexto);
+				if (result == null) result = caseExpresion(expresionTexto);
+				if (result == null) result = caseLinea(expresionTexto);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case BlockchainPackage.EXPRESION_BOOLEAN: {
 				ExpresionBoolean expresionBoolean = (ExpresionBoolean)theEObject;
 				T result = caseExpresionBoolean(expresionBoolean);
-				if (result == null) result = caseValorElementos(expresionBoolean);
-				if (result == null) result = caseSentencia(expresionBoolean);
+				if (result == null) result = caseExpresion(expresionBoolean);
+				if (result == null) result = caseLinea(expresionBoolean);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case BlockchainPackage.EXPRESION_REFERENCIADA: {
 				ExpresionReferenciada expresionReferenciada = (ExpresionReferenciada)theEObject;
 				T result = caseExpresionReferenciada(expresionReferenciada);
-				if (result == null) result = caseValorElementos(expresionReferenciada);
-				if (result == null) result = caseSentencia(expresionReferenciada);
+				if (result == null) result = caseExpresion(expresionReferenciada);
+				if (result == null) result = caseLinea(expresionReferenciada);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case BlockchainPackage.EXPRESION_RELACIONAL: {
 				ExpresionRelacional expresionRelacional = (ExpresionRelacional)theEObject;
 				T result = caseExpresionRelacional(expresionRelacional);
+				if (result == null) result = caseExpresionBinaria(expresionRelacional);
 				if (result == null) result = caseExpresion(expresionRelacional);
-				if (result == null) result = caseSentencia(expresionRelacional);
+				if (result == null) result = caseLinea(expresionRelacional);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BlockchainPackage.EXPRESION_BINARIA: {
+				ExpresionBinaria expresionBinaria = (ExpresionBinaria)theEObject;
+				T result = caseExpresionBinaria(expresionBinaria);
+				if (result == null) result = caseExpresion(expresionBinaria);
+				if (result == null) result = caseLinea(expresionBinaria);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BlockchainPackage.LINEA: {
+				Linea linea = (Linea)theEObject;
+				T result = caseLinea(linea);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BlockchainPackage.NAMED_ELEMENT: {
+				NamedElement namedElement = (NamedElement)theEObject;
+				T result = caseNamedElement(namedElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -466,21 +487,6 @@ public class BlockchainSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Valor Elementos</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Valor Elementos</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseValorElementos(ValorElementos object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Expresion Numerica</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -552,6 +558,51 @@ public class BlockchainSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseExpresionRelacional(ExpresionRelacional object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Expresion Binaria</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Expresion Binaria</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExpresionBinaria(ExpresionBinaria object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Linea</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Linea</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLinea(Linea object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Named Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Named Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNamedElement(NamedElement object) {
 		return null;
 	}
 

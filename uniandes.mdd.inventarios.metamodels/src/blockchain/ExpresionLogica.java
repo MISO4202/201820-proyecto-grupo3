@@ -19,7 +19,7 @@ package blockchain;
  * @model
  * @generated
  */
-public interface ExpresionLogica extends Expresion {
+public interface ExpresionLogica extends ExpresionBinaria {
 	/**
 	 * Returns the value of the '<em><b>Operador</b></em>' attribute.
 	 * The literals are from the enumeration {@link blockchain.OperadorLogico}.

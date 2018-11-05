@@ -1,0 +1,36 @@
+pragma solidity ^0.4.0;
+
+contract AutoMarket {
+		struct Vehiculo {
+			String Marca 
+			String Modelo 
+			String Linea 
+			Numerico Cilindraje 
+			String Placa 
+			Numerico Precio 
+			Boolean Nuevo 
+			String Comentarios 
+		}
+		mapping (MapaVehiculos => Vehiculo) public Vehiculos;
+		mapping (MapaVehiculos => Vehiculo) public VehiculosCaros;
+		mapping (MapaVehiculos => Vehiculo) public VehiculosBaratos;
+		function ConsultarVehiculo (String Placa){
+		
+		}
+		function BorrarVehiculo (String Placa){
+		
+		}
+		function CalcularCostosVenta (Numerico PrecioVehiculo,Numerico ImpuestoVehiculo,Numerico ValorTraspaso,Numerico ComisionRunt){
+		
+		}
+		function CrearVehiculo (String Marca,String Modelo,String Linea,Numerico Cilindraje,String Placa,Numerico Precio){
+		
+		}
+		function ActualizarVehiculo (Numerico Cilindraje,Numerico Precio){
+		
+		}
+ 
+}
+	
+
+ 

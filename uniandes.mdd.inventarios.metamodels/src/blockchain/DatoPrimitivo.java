@@ -46,7 +46,15 @@ public enum DatoPrimitivo implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BOOLEAN(2, "BOOLEAN", "BOOLEAN");
+	BOOLEAN(2, "BOOLEAN", "BOOLEAN"), /**
+	 * The '<em><b>ADDRESS</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ADDRESS_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ADDRESS(3, "ADDRESS", "ADDRESS");
 
 	/**
 	 * The '<em><b>STRING</b></em>' literal value.
@@ -94,6 +102,21 @@ public enum DatoPrimitivo implements Enumerator {
 	public static final int BOOLEAN_VALUE = 2;
 
 	/**
+	 * The '<em><b>ADDRESS</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>ADDRESS</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #ADDRESS
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ADDRESS_VALUE = 3;
+
+	/**
 	 * An array of all the '<em><b>Dato Primitivo</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -104,6 +127,7 @@ public enum DatoPrimitivo implements Enumerator {
 			STRING,
 			NUMERICO,
 			BOOLEAN,
+			ADDRESS,
 		};
 
 	/**
@@ -163,6 +187,7 @@ public enum DatoPrimitivo implements Enumerator {
 			case STRING_VALUE: return STRING;
 			case NUMERICO_VALUE: return NUMERICO;
 			case BOOLEAN_VALUE: return BOOLEAN;
+			case ADDRESS_VALUE: return ADDRESS;
 		}
 		return null;
 	}

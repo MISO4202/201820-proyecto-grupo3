@@ -87,7 +87,7 @@
     <genClasses ecoreClass="blockchain.ecore#//Condicional">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Condicional/else"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Condicional/expresionlogica"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Condicional/linea"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Condicional/validador"/>
     </genClasses>
     <genClasses image="false" ecoreClass="blockchain.ecore#//Expresion"/>
     <genClasses ecoreClass="blockchain.ecore#//ExpresionNumerica">
@@ -106,12 +106,12 @@
     <genClasses ecoreClass="blockchain.ecore#//ExpresionRelacional">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//ExpresionRelacional/operadorRelacional"/>
     </genClasses>
-    <genClasses ecoreClass="blockchain.ecore#//ExpresionBinaria">
+    <genClasses image="false" ecoreClass="blockchain.ecore#//ExpresionBinaria">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//ExpresionBinaria/izq"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//ExpresionBinaria/der"/>
     </genClasses>
-    <genClasses ecoreClass="blockchain.ecore#//Linea"/>
-    <genClasses ecoreClass="blockchain.ecore#//NamedElement">
+    <genClasses image="false" ecoreClass="blockchain.ecore#//Linea"/>
+    <genClasses image="false" ecoreClass="blockchain.ecore#//NamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//NamedElement/name"/>
     </genClasses>
   </genPackages>

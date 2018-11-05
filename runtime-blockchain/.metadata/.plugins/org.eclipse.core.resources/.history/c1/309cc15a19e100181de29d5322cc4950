@@ -1,0 +1,35 @@
+Aplicacion Automarket{
+	SmartContract AutoMarket{
+		Entidad Vehiculo {
+			
+			string Marca
+          	string Modelo
+          	string Linea
+          	int Cilindraje
+          	string Placa
+          	int Precio
+          	bool Nuevo
+          	string Comentarios
+			
+		}
+		Estado MapaVehiculos Vehiculos
+        Estado MapaVehiculos VehiculosCaros
+        Estado MapaVehiculos VehiculosBaratos
+		Operacion isUd=false ConsultarVehiculo (string Placa) : Vehiculo { 		
+			ExpArit ExpRef {
+				Vehiculos
+			} GET ExpRef {
+				Placa
+			}	 
+		}
+		Operacion isUd=false CalcularCostos (int PrecioVehiculo,int ImpuestoVehiculo, int ValorTraspaso, int ComisionRunt) : int {
+			ExpArit (ExpArit (ExpRef{PrecioVehiculo} * ExpNum 0.19)+ ExpArit (ExpRef{PrecioVehiculo})*
+		}
+		
+	}
+	
+	tipodato String string
+	tipodato uint int
+	tipodato Boolean bool
+	tipodato Map <string,string> : MapaVehiculos
+}

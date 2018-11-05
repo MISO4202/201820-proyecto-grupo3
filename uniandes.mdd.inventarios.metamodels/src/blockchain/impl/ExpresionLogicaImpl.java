@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ExpresionLogicaImpl extends ExpresionImpl implements ExpresionLogica {
+public class ExpresionLogicaImpl extends ExpresionBinariaImpl implements ExpresionLogica {
 	/**
 	 * The default value of the '{@link #getOperador() <em>Operador</em>}' attribute.
 	 * <!-- begin-user-doc -->

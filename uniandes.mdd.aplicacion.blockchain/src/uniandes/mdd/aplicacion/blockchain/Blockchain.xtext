@@ -3,7 +3,6 @@ grammar uniandes.mdd.aplicacion.blockchain.Blockchain with org.eclipse.xtext.com
 
 import "http://www.example.org/blockchain" 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
-import "http://www.eclipse.org/emf/2003/XMLType" as type
 
 Aplicacion returns Aplicacion:
 	{Aplicacion}
@@ -18,12 +17,12 @@ Aplicacion returns Aplicacion:
 TipoDato returns TipoDato:
 	Entidad | Primitivo | Mapa;
 
-
 Linea returns Linea:
-	ExpresionLogica | ExpresionAritmetica | Variable |Condicional | ExpresionNumerica | ExpresionTexto | ExpresionBoolean | ExpresionReferenciada | ExpresionRelacional;
+	Expresion | Variable | Condicional;
 
 Expresion returns Expresion:
-	ExpresionLogica | ExpresionAritmetica | ExpresionNumerica | ExpresionTexto | ExpresionBoolean | ExpresionReferenciada | ExpresionRelacional;
+	ExpresionLogica | ExpresionAritmetica | ExpresionNumerica | ExpresionTexto | ExpresionBoolean| ExpresionReferenciada | ExpresionRelacional;
+
 
 
 NamedElement returns NamedElement:
@@ -52,17 +51,17 @@ Entidad returns Entidad:
 
 
 Operacion returns Operacion:
-	{Operacion}
-
+	//{Operacion}
 	'Operacion'
-	('isUd='esUserDefined?=EBoolean)+
+	('isUd='esUserDefined?=EBoolean)?
 	name=EString
 	'('
 	(parametros+=Parametro ( "," parametros+=Parametro)*)?
 	')'
 	(':' retorno=[TipoDato|EString])?
 	'{'
-		('return')? (lineas+=Linea)*
+		('return')? //(lineas+=Linea (lineas+=Linea*))?
+		('(')* lineas+=Linea* (')')*
 	'}';
 
 Estado returns Estado:
@@ -86,22 +85,21 @@ Parametro returns Parametro:
 EBoolean returns ecore::EBoolean:
 	'true' | 'false';
 
+
 ExpresionLogica returns ExpresionLogica:
 	'ExpLog'
-	//'{'
-		izq=Expresion
-		(operador=OperadorLogico)?
-		der=Expresion
-	//'}'
+	('(')* izq=Expresion (')')*
+	(operador=OperadorLogico)?
+	('(')* der=Expresion (')')*
+	
 	;
 
 ExpresionAritmetica returns ExpresionAritmetica:
+	{ExpresionAritmetica}
 	'ExpArit'
-	//'{'
-		izq=Expresion
-		(operador=Operador)?
-		der=Expresion
-	//'}'
+	('(')* izq=Expresion (')')*
+	(operador=Operador)?
+	('(')* der=Expresion (')')*
 	;
 
 Variable returns Variable:
@@ -111,21 +109,24 @@ Variable returns Variable:
 	;
 
 Condicional returns Condicional:
-	
-		 'if''('(expresionlogica=ExpresionLogica)')''{'
-		 	(linea+=Linea)+	
-		 '}'(else=Else)?
-		 
-	;
-	
-Else returns Condicional:
 		{Condicional}
-		'else''{'
-		 	(linea+=Linea)+	
+		 'if'(expresionlogica=ExpresionLogica)?  
+		 '{'
+		 	validador+=Linea*	
 		 '}'
-		
+		 ('else'(else=Else)?)?
+		 '{'?
+		 	validador+=Linea*
+		 '}'?
 	;
 
+Else returns Condicional:
+		 {Condicional}
+		 /*'{'
+		 	validador+=Linea*	
+		 '}'*/
+		;
+	
 ExpresionNumerica returns ExpresionNumerica:
 	{ExpresionNumerica}
 	'ExpNum'
@@ -135,9 +136,7 @@ ExpresionNumerica returns ExpresionNumerica:
 ExpresionTexto returns ExpresionTexto:
 	{ExpresionTexto}
 	'ExpTex'
-	//'{'
 		(value=EString)?
-	//'}'
 	;
 
 ExpresionBoolean returns ExpresionBoolean:
@@ -148,7 +147,10 @@ ExpresionBoolean returns ExpresionBoolean:
 
 ExpresionReferenciada returns ExpresionReferenciada:
 	'ExpRef'
+	'{'
+		('id' id=EInt)?
 		referencia=[NamedElement|EString]
+	'}'
 	;
 
 ExpresionRelacional returns ExpresionRelacional:

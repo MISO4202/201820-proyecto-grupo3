@@ -3,17 +3,12 @@
  */
 package uniandes.mdd.aplicacion.blockchain.ui;
 
-import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor;
-import uniandes.mdd.aplicacion.blockchain.ui.AbstractBlockchainUiModule;
 
 /**
  * Use this class to register components to be used within the Eclipse IDE.
  */
 @FinalFieldsConstructor
 @SuppressWarnings("all")
-public class BlockchainUiModule extends AbstractBlockchainUiModule {
-  public BlockchainUiModule(final AbstractUIPlugin plugin) {
-    super(plugin);
-  }
+public class BlockchainUiModule /* implements AbstractBlockchainUiModule  */{
 }

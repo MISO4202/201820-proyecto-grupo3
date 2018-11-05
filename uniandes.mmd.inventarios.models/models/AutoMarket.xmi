@@ -115,14 +115,14 @@
         <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@lineas.0"/>
       </lineas>
       <lineas xsi:type="blockchain:Condicional">
-        <else tipoCondicional="ELSE">
-          <linea xsi:type="blockchain:ExpresionAritmetica" operador="IGUAL">
+        <else>
+          <validador xsi:type="blockchain:ExpresionAritmetica" operador="IGUAL">
             <izq xsi:type="blockchain:ExpresionAritmetica" operador="GET">
               <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@estado.3"/>
               <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@parametros.4"/>
             </izq>
             <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@lineas.0"/>
-          </linea>
+          </validador>
         </else>
         <expresionlogica operador="AND">
           <izq xsi:type="blockchain:ExpresionLogica" operador="OR">
@@ -140,13 +140,13 @@
             <der xsi:type="blockchain:ExpresionTexto" value="Renault"/>
           </der>
         </expresionlogica>
-        <linea xsi:type="blockchain:ExpresionAritmetica" operador="IGUAL">
+        <validador xsi:type="blockchain:ExpresionAritmetica" operador="IGUAL">
           <izq xsi:type="blockchain:ExpresionAritmetica" operador="GET">
             <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@estado.2"/>
             <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@parametros.4"/>
           </izq>
           <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@lineas.0"/>
-        </linea>
+        </validador>
       </lineas>
     </operaciones>
     <operaciones name="ActualizarVehiculo">

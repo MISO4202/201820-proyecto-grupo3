@@ -2,16 +2,16 @@
  */
 package blockchain.impl;
 
-import blockchain.Atributo;
 import blockchain.BlockchainPackage;
-import blockchain.Entidad;
 import blockchain.ExpresionReferenciada;
+import blockchain.NamedElement;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,31 +21,40 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link blockchain.impl.ExpresionReferenciadaImpl#getEntReferenciada <em>Ent Referenciada</em>}</li>
- *   <li>{@link blockchain.impl.ExpresionReferenciadaImpl#getAtrReferenciado <em>Atr Referenciado</em>}</li>
+ *   <li>{@link blockchain.impl.ExpresionReferenciadaImpl#getId <em>Id</em>}</li>
+ *   <li>{@link blockchain.impl.ExpresionReferenciadaImpl#getReferencia <em>Referencia</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ExpresionReferenciadaImpl extends ValorElementosImpl implements ExpresionReferenciada {
+public class ExpresionReferenciadaImpl extends MinimalEObjectImpl.Container implements ExpresionReferenciada {
 	/**
-	 * The cached value of the '{@link #getEntReferenciada() <em>Ent Referenciada</em>}' reference.
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEntReferenciada()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected Entidad entReferenciada;
+	protected static final int ID_EDEFAULT = 0;
 	/**
-	 * The cached value of the '{@link #getAtrReferenciado() <em>Atr Referenciado</em>}' reference.
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAtrReferenciado()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected Atributo atrReferenciado;
+	protected int id = ID_EDEFAULT;
+	/**
+	 * The cached value of the '{@link #getReferencia() <em>Referencia</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReferencia()
+	 * @generated
+	 * @ordered
+	 */
+	protected NamedElement referencia;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -70,16 +79,37 @@ public class ExpresionReferenciadaImpl extends ValorElementosImpl implements Exp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entidad getEntReferenciada() {
-		if (entReferenciada != null && entReferenciada.eIsProxy()) {
-			InternalEObject oldEntReferenciada = (InternalEObject)entReferenciada;
-			entReferenciada = (Entidad)eResolveProxy(oldEntReferenciada);
-			if (entReferenciada != oldEntReferenciada) {
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(int newId) {
+		int oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.EXPRESION_REFERENCIADA__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NamedElement getReferencia() {
+		if (referencia != null && referencia.eIsProxy()) {
+			InternalEObject oldReferencia = (InternalEObject)referencia;
+			referencia = (NamedElement)eResolveProxy(oldReferencia);
+			if (referencia != oldReferencia) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BlockchainPackage.EXPRESION_REFERENCIADA__ENT_REFERENCIADA, oldEntReferenciada, entReferenciada));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BlockchainPackage.EXPRESION_REFERENCIADA__REFERENCIA, oldReferencia, referencia));
 			}
 		}
-		return entReferenciada;
+		return referencia;
 	}
 
 	/**
@@ -87,8 +117,8 @@ public class ExpresionReferenciadaImpl extends ValorElementosImpl implements Exp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entidad basicGetEntReferenciada() {
-		return entReferenciada;
+	public NamedElement basicGetReferencia() {
+		return referencia;
 	}
 
 	/**
@@ -96,49 +126,11 @@ public class ExpresionReferenciadaImpl extends ValorElementosImpl implements Exp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEntReferenciada(Entidad newEntReferenciada) {
-		Entidad oldEntReferenciada = entReferenciada;
-		entReferenciada = newEntReferenciada;
+	public void setReferencia(NamedElement newReferencia) {
+		NamedElement oldReferencia = referencia;
+		referencia = newReferencia;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.EXPRESION_REFERENCIADA__ENT_REFERENCIADA, oldEntReferenciada, entReferenciada));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Atributo getAtrReferenciado() {
-		if (atrReferenciado != null && atrReferenciado.eIsProxy()) {
-			InternalEObject oldAtrReferenciado = (InternalEObject)atrReferenciado;
-			atrReferenciado = (Atributo)eResolveProxy(oldAtrReferenciado);
-			if (atrReferenciado != oldAtrReferenciado) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BlockchainPackage.EXPRESION_REFERENCIADA__ATR_REFERENCIADO, oldAtrReferenciado, atrReferenciado));
-			}
-		}
-		return atrReferenciado;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Atributo basicGetAtrReferenciado() {
-		return atrReferenciado;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAtrReferenciado(Atributo newAtrReferenciado) {
-		Atributo oldAtrReferenciado = atrReferenciado;
-		atrReferenciado = newAtrReferenciado;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.EXPRESION_REFERENCIADA__ATR_REFERENCIADO, oldAtrReferenciado, atrReferenciado));
+			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.EXPRESION_REFERENCIADA__REFERENCIA, oldReferencia, referencia));
 	}
 
 	/**
@@ -149,12 +141,11 @@ public class ExpresionReferenciadaImpl extends ValorElementosImpl implements Exp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case BlockchainPackage.EXPRESION_REFERENCIADA__ENT_REFERENCIADA:
-				if (resolve) return getEntReferenciada();
-				return basicGetEntReferenciada();
-			case BlockchainPackage.EXPRESION_REFERENCIADA__ATR_REFERENCIADO:
-				if (resolve) return getAtrReferenciado();
-				return basicGetAtrReferenciado();
+			case BlockchainPackage.EXPRESION_REFERENCIADA__ID:
+				return getId();
+			case BlockchainPackage.EXPRESION_REFERENCIADA__REFERENCIA:
+				if (resolve) return getReferencia();
+				return basicGetReferencia();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -167,11 +158,11 @@ public class ExpresionReferenciadaImpl extends ValorElementosImpl implements Exp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case BlockchainPackage.EXPRESION_REFERENCIADA__ENT_REFERENCIADA:
-				setEntReferenciada((Entidad)newValue);
+			case BlockchainPackage.EXPRESION_REFERENCIADA__ID:
+				setId((Integer)newValue);
 				return;
-			case BlockchainPackage.EXPRESION_REFERENCIADA__ATR_REFERENCIADO:
-				setAtrReferenciado((Atributo)newValue);
+			case BlockchainPackage.EXPRESION_REFERENCIADA__REFERENCIA:
+				setReferencia((NamedElement)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -185,11 +176,11 @@ public class ExpresionReferenciadaImpl extends ValorElementosImpl implements Exp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case BlockchainPackage.EXPRESION_REFERENCIADA__ENT_REFERENCIADA:
-				setEntReferenciada((Entidad)null);
+			case BlockchainPackage.EXPRESION_REFERENCIADA__ID:
+				setId(ID_EDEFAULT);
 				return;
-			case BlockchainPackage.EXPRESION_REFERENCIADA__ATR_REFERENCIADO:
-				setAtrReferenciado((Atributo)null);
+			case BlockchainPackage.EXPRESION_REFERENCIADA__REFERENCIA:
+				setReferencia((NamedElement)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -203,12 +194,28 @@ public class ExpresionReferenciadaImpl extends ValorElementosImpl implements Exp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case BlockchainPackage.EXPRESION_REFERENCIADA__ENT_REFERENCIADA:
-				return entReferenciada != null;
-			case BlockchainPackage.EXPRESION_REFERENCIADA__ATR_REFERENCIADO:
-				return atrReferenciado != null;
+			case BlockchainPackage.EXPRESION_REFERENCIADA__ID:
+				return id != ID_EDEFAULT;
+			case BlockchainPackage.EXPRESION_REFERENCIADA__REFERENCIA:
+				return referencia != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ExpresionReferenciadaImpl

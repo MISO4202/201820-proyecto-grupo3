@@ -1,0 +1,34 @@
+Aplicacion autos {
+	
+	SmartContract Automarket{
+		Entidad carro{
+			
+			string Marca
+          	string Modelo
+          	string Linea
+          	int Cilindraje
+          	string Placa
+          	int Precio
+          	bool Nuevo
+          	string Comentarios
+			
+		}
+		Estado MapaVehiculos Vehiculos
+        Estado MapaVehiculos VehiculosCaros
+        Estado MapaVehiculos VehiculosBaratos
+        Operacion isUd=false ConsultarVehiculo (string Placa) : carro {
+        	var prueba
+        }
+        /*Operacion isUd=false ConsultarVehiculo (string Placa) : Vehiculo
+        {
+			return Vehiculos GET Placa
+        } */
+		
+	}
+	
+	tipodato String string
+	tipodato uint int
+	tipodato Boolean bool
+	tipodato Map <string, string> : MapaVehiculos 
+	
+}

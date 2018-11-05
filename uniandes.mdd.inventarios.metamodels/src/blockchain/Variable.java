@@ -13,14 +13,13 @@ package blockchain;
  * </p>
  * <ul>
  *   <li>{@link blockchain.Variable#getTipodato <em>Tipodato</em>}</li>
- *   <li>{@link blockchain.Variable#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see blockchain.BlockchainPackage#getVariable()
  * @model
  * @generated
  */
-public interface Variable extends Sentencia {
+public interface Variable extends Sentencia, NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Tipodato</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -46,31 +45,5 @@ public interface Variable extends Sentencia {
 	 * @generated
 	 */
 	void setTipodato(TipoDato value);
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see blockchain.BlockchainPackage#getVariable_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link blockchain.Variable#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
 
 } // Variable

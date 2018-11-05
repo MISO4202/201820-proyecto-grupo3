@@ -1,0 +1,6 @@
+[%
+	var app:Template:= TemplateFactory.load('toEthereumM2T.egl');
+	var nombreapp : String = Aplicacion.all.first().name; 
+	app.populate('app', nombreapp);
+	app.generate('./Generado/'+ nombreapp + '.solidity');
+%]

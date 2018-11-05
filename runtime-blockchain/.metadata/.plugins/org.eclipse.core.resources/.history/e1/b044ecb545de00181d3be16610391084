@@ -1,0 +1,15 @@
+pragma solidity ^0.4.0;
+
+contract [%=SmartContract.all.first().name%] {
+ 	[%for (ent in Entidad.all) { %]
+		struct [%=ent.name%] {
+		  [%for (attr in ent.atributos) { %]
+			[%=attr.tipodato.name%] [%=attr.name%] 
+		[%}%]
+		}
+		[%for (est in SmartContract.all.estado) { %]
+			[%=est.tipodato.name%] [%=est.name%]
+		[%}%]
+[%}%] 
+}
+ 

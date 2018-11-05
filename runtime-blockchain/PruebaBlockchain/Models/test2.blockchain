@@ -1,0 +1,36 @@
+Aplicacion test2 {
+	
+	smartcontract{
+		SmartContract blockchain{
+		 entidades{
+		 	Entidad test{
+		 		atributos {
+		 			Atributo placa {
+		 				tipodato string	
+		 			}
+		 		}	
+		 	}
+		 	
+		 }
+		 operaciones {
+		 	esUserDefined
+		 	Operacion consultaTest {
+		 		lineas {
+		 			ExpresionNumerica 55
+		 		}
+		 	}
+		 }
+		 estado { 
+		 	Estado prueba {
+		 		tipodato string
+		 	}
+		 }
+		}	
+	}
+	tipodato { 
+		Primitivo string {
+				tipo STRING
+		}
+	
+	}
+}

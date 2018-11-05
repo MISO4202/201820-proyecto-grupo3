@@ -12,13 +12,16 @@ import blockchain.Entidad;
 import blockchain.Estado;
 import blockchain.Expresion;
 import blockchain.ExpresionAritmetica;
+import blockchain.ExpresionBinaria;
 import blockchain.ExpresionBoolean;
 import blockchain.ExpresionLogica;
 import blockchain.ExpresionNumerica;
 import blockchain.ExpresionReferenciada;
 import blockchain.ExpresionRelacional;
 import blockchain.ExpresionTexto;
+import blockchain.Linea;
 import blockchain.Mapa;
+import blockchain.NamedElement;
 import blockchain.Operacion;
 import blockchain.Operador;
 import blockchain.OperadorLogico;
@@ -27,9 +30,7 @@ import blockchain.Parametro;
 import blockchain.Primitivo;
 import blockchain.Sentencia;
 import blockchain.SmartContract;
-import blockchain.TipoCondicion;
 import blockchain.TipoDato;
-import blockchain.ValorElementos;
 import blockchain.Variable;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -164,13 +165,6 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass valorElementosEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass expresionNumericaEClass = null;
 
 	/**
@@ -206,6 +200,27 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass expresionBinariaEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass lineaEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass namedElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum operadorLogicoEEnum = null;
 
 	/**
@@ -221,13 +236,6 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * @generated
 	 */
 	private EEnum datoPrimitivoEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum tipoCondicionEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -365,17 +373,8 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAtributo_Name() {
-		return (EAttribute)atributoEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getAtributo_Tipodato() {
-		return (EReference)atributoEClass.getEStructuralFeatures().get(1);
+		return (EReference)atributoEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -455,8 +454,8 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOperacion_Sentencia() {
-		return (EReference)operacionEClass.getEStructuralFeatures().get(2);
+	public EReference getOperacion_Retorno() {
+		return (EReference)operacionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -464,7 +463,7 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOperacion_Retorno() {
+	public EReference getOperacion_Lineas() {
 		return (EReference)operacionEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -474,7 +473,7 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * @generated
 	 */
 	public EAttribute getOperacion_EsUserDefined() {
-		return (EAttribute)operacionEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)operacionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -491,17 +490,8 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getParametro_Name() {
-		return (EAttribute)parametroEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getParametro_Tipodato() {
-		return (EReference)parametroEClass.getEStructuralFeatures().get(1);
+		return (EReference)parametroEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -518,17 +508,8 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEstado_Name() {
-		return (EAttribute)estadoEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getEstado_Tipodato() {
-		return (EReference)estadoEClass.getEStructuralFeatures().get(1);
+		return (EReference)estadoEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -617,15 +598,6 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getExpresionAritmetica_SubExpArit() {
-		return (EReference)expresionAritmeticaEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getVariable() {
 		return variableEClass;
 	}
@@ -637,15 +609,6 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 */
 	public EReference getVariable_Tipodato() {
 		return (EReference)variableEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getVariable_Name() {
-		return (EAttribute)variableEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -689,15 +652,6 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCondicional_TipoCondicional() {
-		return (EAttribute)condicionalEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getCondicional_Expresionlogica() {
 		return (EReference)condicionalEClass.getEStructuralFeatures().get(1);
 	}
@@ -707,7 +661,7 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCondicional_Sentencias() {
+	public EReference getCondicional_Validador() {
 		return (EReference)condicionalEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -717,7 +671,7 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * @generated
 	 */
 	public EReference getCondicional_Else() {
-		return (EReference)condicionalEClass.getEStructuralFeatures().get(3);
+		return (EReference)condicionalEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -727,51 +681,6 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 */
 	public EClass getExpresion() {
 		return expresionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getExpresion_LadoIzq() {
-		return (EReference)expresionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getExpresion_LadoDer() {
-		return (EReference)expresionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getExpresion_Id() {
-		return (EAttribute)expresionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getValorElementos() {
-		return valorElementosEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getValorElementos_Id() {
-		return (EAttribute)valorElementosEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -842,8 +751,8 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getExpresionReferenciada_EntReferenciada() {
-		return (EReference)expresionReferenciadaEClass.getEStructuralFeatures().get(0);
+	public EAttribute getExpresionReferenciada_Id() {
+		return (EAttribute)expresionReferenciadaEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -851,7 +760,7 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getExpresionReferenciada_AtrReferenciado() {
+	public EReference getExpresionReferenciada_Referencia() {
 		return (EReference)expresionReferenciadaEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -871,6 +780,60 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 */
 	public EAttribute getExpresionRelacional_OperadorRelacional() {
 		return (EAttribute)expresionRelacionalEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getExpresionBinaria() {
+		return expresionBinariaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getExpresionBinaria_Izq() {
+		return (EReference)expresionBinariaEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getExpresionBinaria_Der() {
+		return (EReference)expresionBinariaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLinea() {
+		return lineaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNamedElement() {
+		return namedElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNamedElement_Name() {
+		return (EAttribute)namedElementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -898,15 +861,6 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 */
 	public EEnum getDatoPrimitivo() {
 		return datoPrimitivoEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getTipoCondicion() {
-		return tipoCondicionEEnum;
 	}
 
 	/**
@@ -955,7 +909,6 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 		createEReference(entidadEClass, ENTIDAD__ATRIBUTOS);
 
 		atributoEClass = createEClass(ATRIBUTO);
-		createEAttribute(atributoEClass, ATRIBUTO__NAME);
 		createEReference(atributoEClass, ATRIBUTO__TIPODATO);
 
 		smartContractEClass = createEClass(SMART_CONTRACT);
@@ -967,16 +920,14 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 		operacionEClass = createEClass(OPERACION);
 		createEReference(operacionEClass, OPERACION__PARAMETROS);
 		createEAttribute(operacionEClass, OPERACION__NAME);
-		createEReference(operacionEClass, OPERACION__SENTENCIA);
 		createEAttribute(operacionEClass, OPERACION__ES_USER_DEFINED);
 		createEReference(operacionEClass, OPERACION__RETORNO);
+		createEReference(operacionEClass, OPERACION__LINEAS);
 
 		parametroEClass = createEClass(PARAMETRO);
-		createEAttribute(parametroEClass, PARAMETRO__NAME);
 		createEReference(parametroEClass, PARAMETRO__TIPODATO);
 
 		estadoEClass = createEClass(ESTADO);
-		createEAttribute(estadoEClass, ESTADO__NAME);
 		createEReference(estadoEClass, ESTADO__TIPODATO);
 
 		sentenciaEClass = createEClass(SENTENCIA);
@@ -992,29 +943,20 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 
 		expresionAritmeticaEClass = createEClass(EXPRESION_ARITMETICA);
 		createEAttribute(expresionAritmeticaEClass, EXPRESION_ARITMETICA__OPERADOR);
-		createEReference(expresionAritmeticaEClass, EXPRESION_ARITMETICA__SUB_EXP_ARIT);
 
 		variableEClass = createEClass(VARIABLE);
 		createEReference(variableEClass, VARIABLE__TIPODATO);
-		createEAttribute(variableEClass, VARIABLE__NAME);
 
 		mapaEClass = createEClass(MAPA);
 		createEReference(mapaEClass, MAPA__TIPO_DATO_KEY);
 		createEReference(mapaEClass, MAPA__TIPO_DATO_VALUE);
 
 		condicionalEClass = createEClass(CONDICIONAL);
-		createEAttribute(condicionalEClass, CONDICIONAL__TIPO_CONDICIONAL);
-		createEReference(condicionalEClass, CONDICIONAL__EXPRESIONLOGICA);
-		createEReference(condicionalEClass, CONDICIONAL__SENTENCIAS);
 		createEReference(condicionalEClass, CONDICIONAL__ELSE);
+		createEReference(condicionalEClass, CONDICIONAL__EXPRESIONLOGICA);
+		createEReference(condicionalEClass, CONDICIONAL__VALIDADOR);
 
 		expresionEClass = createEClass(EXPRESION);
-		createEReference(expresionEClass, EXPRESION__LADO_IZQ);
-		createEReference(expresionEClass, EXPRESION__LADO_DER);
-		createEAttribute(expresionEClass, EXPRESION__ID);
-
-		valorElementosEClass = createEClass(VALOR_ELEMENTOS);
-		createEAttribute(valorElementosEClass, VALOR_ELEMENTOS__ID);
 
 		expresionNumericaEClass = createEClass(EXPRESION_NUMERICA);
 		createEAttribute(expresionNumericaEClass, EXPRESION_NUMERICA__VALUE);
@@ -1026,17 +968,25 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 		createEAttribute(expresionBooleanEClass, EXPRESION_BOOLEAN__VALUE);
 
 		expresionReferenciadaEClass = createEClass(EXPRESION_REFERENCIADA);
-		createEReference(expresionReferenciadaEClass, EXPRESION_REFERENCIADA__ENT_REFERENCIADA);
-		createEReference(expresionReferenciadaEClass, EXPRESION_REFERENCIADA__ATR_REFERENCIADO);
+		createEAttribute(expresionReferenciadaEClass, EXPRESION_REFERENCIADA__ID);
+		createEReference(expresionReferenciadaEClass, EXPRESION_REFERENCIADA__REFERENCIA);
 
 		expresionRelacionalEClass = createEClass(EXPRESION_RELACIONAL);
 		createEAttribute(expresionRelacionalEClass, EXPRESION_RELACIONAL__OPERADOR_RELACIONAL);
+
+		expresionBinariaEClass = createEClass(EXPRESION_BINARIA);
+		createEReference(expresionBinariaEClass, EXPRESION_BINARIA__IZQ);
+		createEReference(expresionBinariaEClass, EXPRESION_BINARIA__DER);
+
+		lineaEClass = createEClass(LINEA);
+
+		namedElementEClass = createEClass(NAMED_ELEMENT);
+		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
 
 		// Create enums
 		operadorLogicoEEnum = createEEnum(OPERADOR_LOGICO);
 		operadorEEnum = createEEnum(OPERADOR);
 		datoPrimitivoEEnum = createEEnum(DATO_PRIMITIVO);
-		tipoCondicionEEnum = createEEnum(TIPO_CONDICION);
 		operadorRelacionEEnum = createEEnum(OPERADOR_RELACION);
 	}
 
@@ -1069,21 +1019,24 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 
 		// Add supertypes to classes
 		entidadEClass.getESuperTypes().add(this.getTipoDato());
-		parametroEClass.getESuperTypes().add(this.getSentencia());
-		estadoEClass.getESuperTypes().add(this.getSentencia());
-		expresionLogicaEClass.getESuperTypes().add(this.getExpresion());
+		atributoEClass.getESuperTypes().add(this.getNamedElement());
+		parametroEClass.getESuperTypes().add(this.getNamedElement());
+		estadoEClass.getESuperTypes().add(this.getNamedElement());
+		sentenciaEClass.getESuperTypes().add(this.getLinea());
+		expresionLogicaEClass.getESuperTypes().add(this.getExpresionBinaria());
 		primitivoEClass.getESuperTypes().add(this.getTipoDato());
-		expresionAritmeticaEClass.getESuperTypes().add(this.getExpresion());
+		expresionAritmeticaEClass.getESuperTypes().add(this.getExpresionBinaria());
 		variableEClass.getESuperTypes().add(this.getSentencia());
+		variableEClass.getESuperTypes().add(this.getNamedElement());
 		mapaEClass.getESuperTypes().add(this.getTipoDato());
 		condicionalEClass.getESuperTypes().add(this.getSentencia());
-		expresionEClass.getESuperTypes().add(this.getSentencia());
-		valorElementosEClass.getESuperTypes().add(this.getSentencia());
-		expresionNumericaEClass.getESuperTypes().add(this.getValorElementos());
-		expresionTextoEClass.getESuperTypes().add(this.getValorElementos());
-		expresionBooleanEClass.getESuperTypes().add(this.getValorElementos());
-		expresionReferenciadaEClass.getESuperTypes().add(this.getValorElementos());
-		expresionRelacionalEClass.getESuperTypes().add(this.getExpresion());
+		expresionEClass.getESuperTypes().add(this.getLinea());
+		expresionNumericaEClass.getESuperTypes().add(this.getExpresion());
+		expresionTextoEClass.getESuperTypes().add(this.getExpresion());
+		expresionBooleanEClass.getESuperTypes().add(this.getExpresion());
+		expresionReferenciadaEClass.getESuperTypes().add(this.getExpresion());
+		expresionRelacionalEClass.getESuperTypes().add(this.getExpresionBinaria());
+		expresionBinariaEClass.getESuperTypes().add(this.getExpresion());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(aplicacionEClass, Aplicacion.class, "Aplicacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1095,7 +1048,6 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 		initEReference(getEntidad_Atributos(), this.getAtributo(), null, "atributos", null, 0, -1, Entidad.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(atributoEClass, Atributo.class, "Atributo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAtributo_Name(), ecorePackage.getEString(), "name", null, 0, 1, Atributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAtributo_Tipodato(), this.getTipoDato(), null, "tipodato", null, 1, 1, Atributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(smartContractEClass, SmartContract.class, "SmartContract", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1107,19 +1059,17 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 		initEClass(operacionEClass, Operacion.class, "Operacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOperacion_Parametros(), this.getParametro(), null, "parametros", null, 0, -1, Operacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOperacion_Name(), ecorePackage.getEString(), "name", null, 0, 1, Operacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOperacion_Sentencia(), this.getSentencia(), null, "sentencia", null, 0, -1, Operacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOperacion_EsUserDefined(), ecorePackage.getEBoolean(), "esUserDefined", null, 0, 1, Operacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOperacion_Retorno(), this.getTipoDato(), null, "retorno", null, 0, 1, Operacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOperacion_Lineas(), this.getLinea(), null, "lineas", null, 0, -1, Operacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(parametroEClass, Parametro.class, "Parametro", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getParametro_Name(), ecorePackage.getEString(), "name", null, 0, 1, Parametro.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getParametro_Tipodato(), this.getTipoDato(), null, "tipodato", null, 1, 1, Parametro.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(estadoEClass, Estado.class, "Estado", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEstado_Name(), ecorePackage.getEString(), "name", null, 0, 1, Estado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEstado_Tipodato(), this.getTipoDato(), null, "tipodato", null, 1, 1, Estado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(sentenciaEClass, Sentencia.class, "Sentencia", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(sentenciaEClass, Sentencia.class, "Sentencia", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(expresionLogicaEClass, ExpresionLogica.class, "ExpresionLogica", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExpresionLogica_Operador(), this.getOperadorLogico(), "operador", null, 0, 1, ExpresionLogica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1132,29 +1082,20 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 
 		initEClass(expresionAritmeticaEClass, ExpresionAritmetica.class, "ExpresionAritmetica", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExpresionAritmetica_Operador(), this.getOperador(), "operador", null, 0, 1, ExpresionAritmetica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getExpresionAritmetica_SubExpArit(), this.getExpresionAritmetica(), null, "subExpArit", null, 0, -1, ExpresionAritmetica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVariable_Tipodato(), this.getTipoDato(), null, "tipodato", null, 1, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVariable_Name(), ecorePackage.getEString(), "name", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mapaEClass, Mapa.class, "Mapa", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMapa_TipoDatoKey(), this.getTipoDato(), null, "tipoDatoKey", null, 1, 1, Mapa.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMapa_TipoDatoValue(), this.getTipoDato(), null, "tipoDatoValue", null, 1, 1, Mapa.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(condicionalEClass, Condicional.class, "Condicional", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCondicional_TipoCondicional(), this.getTipoCondicion(), "tipoCondicional", null, 0, 1, Condicional.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCondicional_Else(), this.getCondicional(), null, "else", null, 0, 1, Condicional.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCondicional_Expresionlogica(), this.getExpresionLogica(), null, "expresionlogica", null, 1, 1, Condicional.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCondicional_Sentencias(), this.getSentencia(), null, "sentencias", null, 1, -1, Condicional.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCondicional_Else(), this.getCondicional(), null, "else", null, 0, -1, Condicional.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCondicional_Validador(), this.getLinea(), null, "validador", null, 0, -1, Condicional.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(expresionEClass, Expresion.class, "Expresion", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getExpresion_LadoIzq(), this.getSentencia(), null, "ladoIzq", null, 1, 1, Expresion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getExpresion_LadoDer(), this.getSentencia(), null, "ladoDer", null, 1, 1, Expresion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExpresion_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Expresion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(valorElementosEClass, ValorElementos.class, "ValorElementos", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getValorElementos_Id(), ecorePackage.getEInt(), "id", null, 0, 1, ValorElementos.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(expresionEClass, Expresion.class, "Expresion", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(expresionNumericaEClass, ExpresionNumerica.class, "ExpresionNumerica", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExpresionNumerica_Value(), ecorePackage.getEDouble(), "value", null, 0, 1, ExpresionNumerica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1166,11 +1107,20 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 		initEAttribute(getExpresionBoolean_Value(), ecorePackage.getEBoolean(), "value", null, 0, 1, ExpresionBoolean.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(expresionReferenciadaEClass, ExpresionReferenciada.class, "ExpresionReferenciada", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getExpresionReferenciada_EntReferenciada(), this.getEntidad(), null, "entReferenciada", null, 0, 1, ExpresionReferenciada.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getExpresionReferenciada_AtrReferenciado(), this.getAtributo(), null, "atrReferenciado", null, 0, 1, ExpresionReferenciada.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExpresionReferenciada_Id(), ecorePackage.getEInt(), "id", null, 0, 1, ExpresionReferenciada.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExpresionReferenciada_Referencia(), this.getNamedElement(), null, "referencia", null, 1, 1, ExpresionReferenciada.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(expresionRelacionalEClass, ExpresionRelacional.class, "ExpresionRelacional", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExpresionRelacional_OperadorRelacional(), this.getOperadorRelacion(), "operadorRelacional", null, 0, 1, ExpresionRelacional.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(expresionBinariaEClass, ExpresionBinaria.class, "ExpresionBinaria", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getExpresionBinaria_Izq(), this.getExpresion(), null, "izq", null, 1, 1, ExpresionBinaria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExpresionBinaria_Der(), this.getExpresion(), null, "der", null, 1, 1, ExpresionBinaria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(lineaEClass, Linea.class, "Linea", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(operadorLogicoEEnum, OperadorLogico.class, "OperadorLogico");
@@ -1196,10 +1146,7 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 		addEEnumLiteral(datoPrimitivoEEnum, DatoPrimitivo.STRING);
 		addEEnumLiteral(datoPrimitivoEEnum, DatoPrimitivo.NUMERICO);
 		addEEnumLiteral(datoPrimitivoEEnum, DatoPrimitivo.BOOLEAN);
-
-		initEEnum(tipoCondicionEEnum, TipoCondicion.class, "TipoCondicion");
-		addEEnumLiteral(tipoCondicionEEnum, TipoCondicion.IF);
-		addEEnumLiteral(tipoCondicionEEnum, TipoCondicion.ELSE);
+		addEEnumLiteral(datoPrimitivoEEnum, DatoPrimitivo.ADDRESS);
 
 		initEEnum(operadorRelacionEEnum, OperadorRelacion.class, "OperadorRelacion");
 		addEEnumLiteral(operadorRelacionEEnum, OperadorRelacion.PUNTO);

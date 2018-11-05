@@ -132,10 +132,6 @@ public class BlockchainAdapterFactory extends AdapterFactoryImpl {
 				return createExpresionAdapter();
 			}
 			@Override
-			public Adapter caseValorElementos(ValorElementos object) {
-				return createValorElementosAdapter();
-			}
-			@Override
 			public Adapter caseExpresionNumerica(ExpresionNumerica object) {
 				return createExpresionNumericaAdapter();
 			}
@@ -154,6 +150,18 @@ public class BlockchainAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseExpresionRelacional(ExpresionRelacional object) {
 				return createExpresionRelacionalAdapter();
+			}
+			@Override
+			public Adapter caseExpresionBinaria(ExpresionBinaria object) {
+				return createExpresionBinariaAdapter();
+			}
+			@Override
+			public Adapter caseLinea(Linea object) {
+				return createLineaAdapter();
+			}
+			@Override
+			public Adapter caseNamedElement(NamedElement object) {
+				return createNamedElementAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -400,20 +408,6 @@ public class BlockchainAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link blockchain.ValorElementos <em>Valor Elementos</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see blockchain.ValorElementos
-	 * @generated
-	 */
-	public Adapter createValorElementosAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link blockchain.ExpresionNumerica <em>Expresion Numerica</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -480,6 +474,48 @@ public class BlockchainAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createExpresionRelacionalAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link blockchain.ExpresionBinaria <em>Expresion Binaria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see blockchain.ExpresionBinaria
+	 * @generated
+	 */
+	public Adapter createExpresionBinariaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link blockchain.Linea <em>Linea</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see blockchain.Linea
+	 * @generated
+	 */
+	public Adapter createLineaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link blockchain.NamedElement <em>Named Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see blockchain.NamedElement
+	 * @generated
+	 */
+	public Adapter createNamedElementAdapter() {
 		return null;
 	}
 

@@ -3,11 +3,9 @@
  */
 package uniandes.mdd.aplicacion.blockchain;
 
-import uniandes.mdd.aplicacion.blockchain.AbstractBlockchainRuntimeModule;
-
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
 @SuppressWarnings("all")
-public class BlockchainRuntimeModule extends AbstractBlockchainRuntimeModule {
+public class BlockchainRuntimeModule /* implements AbstractBlockchainRuntimeModule  */{
 }

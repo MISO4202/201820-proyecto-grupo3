@@ -1,0 +1,5 @@
+Aplicacion Automarket {
+	
+	tipodato String string
+	tipodato uint int	
+}

@@ -19,7 +19,7 @@ package blockchain;
  * @model
  * @generated
  */
-public interface ExpresionNumerica extends ValorElementos {
+public interface ExpresionNumerica extends Expresion {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->

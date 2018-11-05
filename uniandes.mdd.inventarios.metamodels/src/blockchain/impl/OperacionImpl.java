@@ -3,9 +3,9 @@
 package blockchain.impl;
 
 import blockchain.BlockchainPackage;
+import blockchain.Linea;
 import blockchain.Operacion;
 import blockchain.Parametro;
-import blockchain.Sentencia;
 import blockchain.TipoDato;
 
 import java.util.Collection;
@@ -34,9 +34,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link blockchain.impl.OperacionImpl#getParametros <em>Parametros</em>}</li>
  *   <li>{@link blockchain.impl.OperacionImpl#getName <em>Name</em>}</li>
- *   <li>{@link blockchain.impl.OperacionImpl#getSentencia <em>Sentencia</em>}</li>
  *   <li>{@link blockchain.impl.OperacionImpl#isEsUserDefined <em>Es User Defined</em>}</li>
  *   <li>{@link blockchain.impl.OperacionImpl#getRetorno <em>Retorno</em>}</li>
+ *   <li>{@link blockchain.impl.OperacionImpl#getLineas <em>Lineas</em>}</li>
  * </ul>
  *
  * @generated
@@ -73,16 +73,6 @@ public class OperacionImpl extends MinimalEObjectImpl.Container implements Opera
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getSentencia() <em>Sentencia</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSentencia()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Sentencia> sentencia;
-
-	/**
 	 * The default value of the '{@link #isEsUserDefined() <em>Es User Defined</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -111,6 +101,16 @@ public class OperacionImpl extends MinimalEObjectImpl.Container implements Opera
 	 * @ordered
 	 */
 	protected TipoDato retorno;
+
+	/**
+	 * The cached value of the '{@link #getLineas() <em>Lineas</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLineas()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Linea> lineas;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -169,18 +169,6 @@ public class OperacionImpl extends MinimalEObjectImpl.Container implements Opera
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Sentencia> getSentencia() {
-		if (sentencia == null) {
-			sentencia = new EObjectContainmentEList<Sentencia>(Sentencia.class, this, BlockchainPackage.OPERACION__SENTENCIA);
-		}
-		return sentencia;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public TipoDato getRetorno() {
 		if (retorno != null && retorno.eIsProxy()) {
 			InternalEObject oldRetorno = (InternalEObject)retorno;
@@ -219,6 +207,18 @@ public class OperacionImpl extends MinimalEObjectImpl.Container implements Opera
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Linea> getLineas() {
+		if (lineas == null) {
+			lineas = new EObjectContainmentEList<Linea>(Linea.class, this, BlockchainPackage.OPERACION__LINEAS);
+		}
+		return lineas;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean isEsUserDefined() {
 		return esUserDefined;
 	}
@@ -245,8 +245,8 @@ public class OperacionImpl extends MinimalEObjectImpl.Container implements Opera
 		switch (featureID) {
 			case BlockchainPackage.OPERACION__PARAMETROS:
 				return ((InternalEList<?>)getParametros()).basicRemove(otherEnd, msgs);
-			case BlockchainPackage.OPERACION__SENTENCIA:
-				return ((InternalEList<?>)getSentencia()).basicRemove(otherEnd, msgs);
+			case BlockchainPackage.OPERACION__LINEAS:
+				return ((InternalEList<?>)getLineas()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -263,13 +263,13 @@ public class OperacionImpl extends MinimalEObjectImpl.Container implements Opera
 				return getParametros();
 			case BlockchainPackage.OPERACION__NAME:
 				return getName();
-			case BlockchainPackage.OPERACION__SENTENCIA:
-				return getSentencia();
 			case BlockchainPackage.OPERACION__ES_USER_DEFINED:
 				return isEsUserDefined();
 			case BlockchainPackage.OPERACION__RETORNO:
 				if (resolve) return getRetorno();
 				return basicGetRetorno();
+			case BlockchainPackage.OPERACION__LINEAS:
+				return getLineas();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -290,15 +290,15 @@ public class OperacionImpl extends MinimalEObjectImpl.Container implements Opera
 			case BlockchainPackage.OPERACION__NAME:
 				setName((String)newValue);
 				return;
-			case BlockchainPackage.OPERACION__SENTENCIA:
-				getSentencia().clear();
-				getSentencia().addAll((Collection<? extends Sentencia>)newValue);
-				return;
 			case BlockchainPackage.OPERACION__ES_USER_DEFINED:
 				setEsUserDefined((Boolean)newValue);
 				return;
 			case BlockchainPackage.OPERACION__RETORNO:
 				setRetorno((TipoDato)newValue);
+				return;
+			case BlockchainPackage.OPERACION__LINEAS:
+				getLineas().clear();
+				getLineas().addAll((Collection<? extends Linea>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -318,14 +318,14 @@ public class OperacionImpl extends MinimalEObjectImpl.Container implements Opera
 			case BlockchainPackage.OPERACION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case BlockchainPackage.OPERACION__SENTENCIA:
-				getSentencia().clear();
-				return;
 			case BlockchainPackage.OPERACION__ES_USER_DEFINED:
 				setEsUserDefined(ES_USER_DEFINED_EDEFAULT);
 				return;
 			case BlockchainPackage.OPERACION__RETORNO:
 				setRetorno((TipoDato)null);
+				return;
+			case BlockchainPackage.OPERACION__LINEAS:
+				getLineas().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -343,12 +343,12 @@ public class OperacionImpl extends MinimalEObjectImpl.Container implements Opera
 				return parametros != null && !parametros.isEmpty();
 			case BlockchainPackage.OPERACION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case BlockchainPackage.OPERACION__SENTENCIA:
-				return sentencia != null && !sentencia.isEmpty();
 			case BlockchainPackage.OPERACION__ES_USER_DEFINED:
 				return esUserDefined != ES_USER_DEFINED_EDEFAULT;
 			case BlockchainPackage.OPERACION__RETORNO:
 				return retorno != null;
+			case BlockchainPackage.OPERACION__LINEAS:
+				return lineas != null && !lineas.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

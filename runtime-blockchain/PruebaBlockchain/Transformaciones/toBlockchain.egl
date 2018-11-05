@@ -1,0 +1,13 @@
+[%
+	var app:Template:= TemplateFactory.load('toEthereumM2T.egl');
+	for(nameapp in Aplicacion.all.flatten()){
+		nameapp.name.println();
+		app.populate('app', nameapp.name);
+		app.generate('./Generado/'+ nameapp.name + '.solidity');
+	}
+	var app:Template:= TemplateFactory.load('toStratisM2T.egl');
+	for(nameapp in Aplicacion.all.flatten()){
+		app.populate('app', nameapp.name);
+		app.generate('./Generado/'+ nameapp.name + '.cs');
+	}	
+%]

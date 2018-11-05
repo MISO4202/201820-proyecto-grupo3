@@ -196,6 +196,43 @@ public interface BlockchainPackage extends EPackage {
 	int ENTIDAD_OPERATION_COUNT = TIPO_DATO_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link blockchain.impl.NamedElementImpl <em>Named Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see blockchain.impl.NamedElementImpl
+	 * @see blockchain.impl.BlockchainPackageImpl#getNamedElement()
+	 * @generated
+	 */
+	int NAMED_ELEMENT = 23;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_ELEMENT__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Named Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_ELEMENT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Named Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link blockchain.impl.AtributoImpl <em>Atributo</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -212,7 +249,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATRIBUTO__NAME = 0;
+	int ATRIBUTO__NAME = NAMED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Tipodato</b></em>' reference.
@@ -221,7 +258,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATRIBUTO__TIPODATO = 1;
+	int ATRIBUTO__TIPODATO = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Atributo</em>' class.
@@ -230,7 +267,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATRIBUTO_FEATURE_COUNT = 2;
+	int ATRIBUTO_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Atributo</em>' class.
@@ -239,7 +276,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATRIBUTO_OPERATION_COUNT = 0;
+	int ATRIBUTO_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link blockchain.impl.SmartContractImpl <em>Smart Contract</em>}' class.
@@ -334,22 +371,13 @@ public interface BlockchainPackage extends EPackage {
 	int OPERACION__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Sentencia</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERACION__SENTENCIA = 2;
-
-	/**
 	 * The feature id for the '<em><b>Es User Defined</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERACION__ES_USER_DEFINED = 3;
+	int OPERACION__ES_USER_DEFINED = 2;
 
 	/**
 	 * The feature id for the '<em><b>Retorno</b></em>' reference.
@@ -358,7 +386,16 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERACION__RETORNO = 4;
+	int OPERACION__RETORNO = 3;
+
+	/**
+	 * The feature id for the '<em><b>Lineas</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERACION__LINEAS = 4;
 
 	/**
 	 * The number of structural features of the '<em>Operacion</em>' class.
@@ -389,10 +426,10 @@ public interface BlockchainPackage extends EPackage {
 	int PARAMETRO = 5;
 
 	/**
-	 * The meta object id for the '{@link blockchain.impl.SentenciaImpl <em>Sentencia</em>}' class.
+	 * The meta object id for the '{@link blockchain.Sentencia <em>Sentencia</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see blockchain.impl.SentenciaImpl
+	 * @see blockchain.Sentencia
 	 * @see blockchain.impl.BlockchainPackageImpl#getSentencia()
 	 * @generated
 	 */
@@ -409,31 +446,13 @@ public interface BlockchainPackage extends EPackage {
 	int ESTADO = 6;
 
 	/**
-	 * The number of structural features of the '<em>Sentencia</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENTENCIA_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Sentencia</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENTENCIA_OPERATION_COUNT = 0;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETRO__NAME = SENTENCIA_FEATURE_COUNT + 0;
+	int PARAMETRO__NAME = NAMED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Tipodato</b></em>' reference.
@@ -442,7 +461,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETRO__TIPODATO = SENTENCIA_FEATURE_COUNT + 1;
+	int PARAMETRO__TIPODATO = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Parametro</em>' class.
@@ -451,7 +470,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETRO_FEATURE_COUNT = SENTENCIA_FEATURE_COUNT + 2;
+	int PARAMETRO_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Parametro</em>' class.
@@ -460,7 +479,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETRO_OPERATION_COUNT = SENTENCIA_OPERATION_COUNT + 0;
+	int PARAMETRO_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -469,7 +488,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTADO__NAME = SENTENCIA_FEATURE_COUNT + 0;
+	int ESTADO__NAME = NAMED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Tipodato</b></em>' reference.
@@ -478,7 +497,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTADO__TIPODATO = SENTENCIA_FEATURE_COUNT + 1;
+	int ESTADO__TIPODATO = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Estado</em>' class.
@@ -487,7 +506,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTADO_FEATURE_COUNT = SENTENCIA_FEATURE_COUNT + 2;
+	int ESTADO_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Estado</em>' class.
@@ -496,44 +515,63 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTADO_OPERATION_COUNT = SENTENCIA_OPERATION_COUNT + 0;
+	int ESTADO_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link blockchain.impl.ExpresionImpl <em>Expresion</em>}' class.
+	 * The meta object id for the '{@link blockchain.Linea <em>Linea</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see blockchain.impl.ExpresionImpl
+	 * @see blockchain.Linea
+	 * @see blockchain.impl.BlockchainPackageImpl#getLinea()
+	 * @generated
+	 */
+	int LINEA = 22;
+
+	/**
+	 * The number of structural features of the '<em>Linea</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINEA_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Linea</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINEA_OPERATION_COUNT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Sentencia</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENTENCIA_FEATURE_COUNT = LINEA_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Sentencia</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENTENCIA_OPERATION_COUNT = LINEA_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link blockchain.Expresion <em>Expresion</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see blockchain.Expresion
 	 * @see blockchain.impl.BlockchainPackageImpl#getExpresion()
 	 * @generated
 	 */
 	int EXPRESION = 15;
-
-	/**
-	 * The feature id for the '<em><b>Lado Izq</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESION__LADO_IZQ = SENTENCIA_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Lado Der</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESION__LADO_DER = SENTENCIA_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESION__ID = SENTENCIA_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Expresion</em>' class.
@@ -542,7 +580,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_FEATURE_COUNT = SENTENCIA_FEATURE_COUNT + 3;
+	int EXPRESION_FEATURE_COUNT = LINEA_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Expresion</em>' class.
@@ -551,7 +589,53 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_OPERATION_COUNT = SENTENCIA_OPERATION_COUNT + 0;
+	int EXPRESION_OPERATION_COUNT = LINEA_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link blockchain.impl.ExpresionBinariaImpl <em>Expresion Binaria</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see blockchain.impl.ExpresionBinariaImpl
+	 * @see blockchain.impl.BlockchainPackageImpl#getExpresionBinaria()
+	 * @generated
+	 */
+	int EXPRESION_BINARIA = 21;
+
+	/**
+	 * The feature id for the '<em><b>Izq</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESION_BINARIA__IZQ = EXPRESION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Der</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESION_BINARIA__DER = EXPRESION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Expresion Binaria</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESION_BINARIA_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Expresion Binaria</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESION_BINARIA_OPERATION_COUNT = EXPRESION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link blockchain.impl.ExpresionLogicaImpl <em>Expresion Logica</em>}' class.
@@ -564,31 +648,22 @@ public interface BlockchainPackage extends EPackage {
 	int EXPRESION_LOGICA = 8;
 
 	/**
-	 * The feature id for the '<em><b>Lado Izq</b></em>' reference.
+	 * The feature id for the '<em><b>Izq</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_LOGICA__LADO_IZQ = EXPRESION__LADO_IZQ;
+	int EXPRESION_LOGICA__IZQ = EXPRESION_BINARIA__IZQ;
 
 	/**
-	 * The feature id for the '<em><b>Lado Der</b></em>' reference.
+	 * The feature id for the '<em><b>Der</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_LOGICA__LADO_DER = EXPRESION__LADO_DER;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESION_LOGICA__ID = EXPRESION__ID;
+	int EXPRESION_LOGICA__DER = EXPRESION_BINARIA__DER;
 
 	/**
 	 * The feature id for the '<em><b>Operador</b></em>' attribute.
@@ -597,7 +672,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_LOGICA__OPERADOR = EXPRESION_FEATURE_COUNT + 0;
+	int EXPRESION_LOGICA__OPERADOR = EXPRESION_BINARIA_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Expresion Logica</em>' class.
@@ -606,7 +681,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_LOGICA_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 1;
+	int EXPRESION_LOGICA_FEATURE_COUNT = EXPRESION_BINARIA_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Expresion Logica</em>' class.
@@ -615,7 +690,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_LOGICA_OPERATION_COUNT = EXPRESION_OPERATION_COUNT + 0;
+	int EXPRESION_LOGICA_OPERATION_COUNT = EXPRESION_BINARIA_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link blockchain.impl.PrimitivoImpl <em>Primitivo</em>}' class.
@@ -674,31 +749,22 @@ public interface BlockchainPackage extends EPackage {
 	int EXPRESION_ARITMETICA = 11;
 
 	/**
-	 * The feature id for the '<em><b>Lado Izq</b></em>' reference.
+	 * The feature id for the '<em><b>Izq</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_ARITMETICA__LADO_IZQ = EXPRESION__LADO_IZQ;
+	int EXPRESION_ARITMETICA__IZQ = EXPRESION_BINARIA__IZQ;
 
 	/**
-	 * The feature id for the '<em><b>Lado Der</b></em>' reference.
+	 * The feature id for the '<em><b>Der</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_ARITMETICA__LADO_DER = EXPRESION__LADO_DER;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESION_ARITMETICA__ID = EXPRESION__ID;
+	int EXPRESION_ARITMETICA__DER = EXPRESION_BINARIA__DER;
 
 	/**
 	 * The feature id for the '<em><b>Operador</b></em>' attribute.
@@ -707,16 +773,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_ARITMETICA__OPERADOR = EXPRESION_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Sub Exp Arit</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESION_ARITMETICA__SUB_EXP_ARIT = EXPRESION_FEATURE_COUNT + 1;
+	int EXPRESION_ARITMETICA__OPERADOR = EXPRESION_BINARIA_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Expresion Aritmetica</em>' class.
@@ -725,7 +782,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_ARITMETICA_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 2;
+	int EXPRESION_ARITMETICA_FEATURE_COUNT = EXPRESION_BINARIA_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Expresion Aritmetica</em>' class.
@@ -734,7 +791,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_ARITMETICA_OPERATION_COUNT = EXPRESION_OPERATION_COUNT + 0;
+	int EXPRESION_ARITMETICA_OPERATION_COUNT = EXPRESION_BINARIA_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link blockchain.impl.VariableImpl <em>Variable</em>}' class.
@@ -747,22 +804,22 @@ public interface BlockchainPackage extends EPackage {
 	int VARIABLE = 12;
 
 	/**
-	 * The feature id for the '<em><b>Tipodato</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE__TIPODATO = SENTENCIA_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE__NAME = SENTENCIA_FEATURE_COUNT + 1;
+	int VARIABLE__NAME = SENTENCIA_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Tipodato</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__TIPODATO = SENTENCIA_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Variable</em>' class.
@@ -848,13 +905,13 @@ public interface BlockchainPackage extends EPackage {
 	int CONDICIONAL = 14;
 
 	/**
-	 * The feature id for the '<em><b>Tipo Condicional</b></em>' attribute.
+	 * The feature id for the '<em><b>Else</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONDICIONAL__TIPO_CONDICIONAL = SENTENCIA_FEATURE_COUNT + 0;
+	int CONDICIONAL__ELSE = SENTENCIA_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Expresionlogica</b></em>' containment reference.
@@ -866,22 +923,13 @@ public interface BlockchainPackage extends EPackage {
 	int CONDICIONAL__EXPRESIONLOGICA = SENTENCIA_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Sentencias</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Validador</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONDICIONAL__SENTENCIAS = SENTENCIA_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Else</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDICIONAL__ELSE = SENTENCIA_FEATURE_COUNT + 3;
+	int CONDICIONAL__VALIDADOR = SENTENCIA_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Condicional</em>' class.
@@ -890,7 +938,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONDICIONAL_FEATURE_COUNT = SENTENCIA_FEATURE_COUNT + 4;
+	int CONDICIONAL_FEATURE_COUNT = SENTENCIA_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Condicional</em>' class.
@@ -902,43 +950,6 @@ public interface BlockchainPackage extends EPackage {
 	int CONDICIONAL_OPERATION_COUNT = SENTENCIA_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link blockchain.impl.ValorElementosImpl <em>Valor Elementos</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see blockchain.impl.ValorElementosImpl
-	 * @see blockchain.impl.BlockchainPackageImpl#getValorElementos()
-	 * @generated
-	 */
-	int VALOR_ELEMENTOS = 16;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VALOR_ELEMENTOS__ID = SENTENCIA_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Valor Elementos</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VALOR_ELEMENTOS_FEATURE_COUNT = SENTENCIA_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Valor Elementos</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VALOR_ELEMENTOS_OPERATION_COUNT = SENTENCIA_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link blockchain.impl.ExpresionNumericaImpl <em>Expresion Numerica</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -946,16 +957,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getExpresionNumerica()
 	 * @generated
 	 */
-	int EXPRESION_NUMERICA = 17;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESION_NUMERICA__ID = VALOR_ELEMENTOS__ID;
+	int EXPRESION_NUMERICA = 16;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -964,7 +966,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_NUMERICA__VALUE = VALOR_ELEMENTOS_FEATURE_COUNT + 0;
+	int EXPRESION_NUMERICA__VALUE = EXPRESION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Expresion Numerica</em>' class.
@@ -973,7 +975,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_NUMERICA_FEATURE_COUNT = VALOR_ELEMENTOS_FEATURE_COUNT + 1;
+	int EXPRESION_NUMERICA_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Expresion Numerica</em>' class.
@@ -982,7 +984,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_NUMERICA_OPERATION_COUNT = VALOR_ELEMENTOS_OPERATION_COUNT + 0;
+	int EXPRESION_NUMERICA_OPERATION_COUNT = EXPRESION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link blockchain.impl.ExpresionTextoImpl <em>Expresion Texto</em>}' class.
@@ -992,16 +994,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getExpresionTexto()
 	 * @generated
 	 */
-	int EXPRESION_TEXTO = 18;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESION_TEXTO__ID = VALOR_ELEMENTOS__ID;
+	int EXPRESION_TEXTO = 17;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1010,7 +1003,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_TEXTO__VALUE = VALOR_ELEMENTOS_FEATURE_COUNT + 0;
+	int EXPRESION_TEXTO__VALUE = EXPRESION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Expresion Texto</em>' class.
@@ -1019,7 +1012,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_TEXTO_FEATURE_COUNT = VALOR_ELEMENTOS_FEATURE_COUNT + 1;
+	int EXPRESION_TEXTO_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Expresion Texto</em>' class.
@@ -1028,7 +1021,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_TEXTO_OPERATION_COUNT = VALOR_ELEMENTOS_OPERATION_COUNT + 0;
+	int EXPRESION_TEXTO_OPERATION_COUNT = EXPRESION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link blockchain.impl.ExpresionBooleanImpl <em>Expresion Boolean</em>}' class.
@@ -1038,16 +1031,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getExpresionBoolean()
 	 * @generated
 	 */
-	int EXPRESION_BOOLEAN = 19;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESION_BOOLEAN__ID = VALOR_ELEMENTOS__ID;
+	int EXPRESION_BOOLEAN = 18;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1056,7 +1040,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_BOOLEAN__VALUE = VALOR_ELEMENTOS_FEATURE_COUNT + 0;
+	int EXPRESION_BOOLEAN__VALUE = EXPRESION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Expresion Boolean</em>' class.
@@ -1065,7 +1049,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_BOOLEAN_FEATURE_COUNT = VALOR_ELEMENTOS_FEATURE_COUNT + 1;
+	int EXPRESION_BOOLEAN_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Expresion Boolean</em>' class.
@@ -1074,7 +1058,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_BOOLEAN_OPERATION_COUNT = VALOR_ELEMENTOS_OPERATION_COUNT + 0;
+	int EXPRESION_BOOLEAN_OPERATION_COUNT = EXPRESION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link blockchain.impl.ExpresionReferenciadaImpl <em>Expresion Referenciada</em>}' class.
@@ -1084,7 +1068,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getExpresionReferenciada()
 	 * @generated
 	 */
-	int EXPRESION_REFERENCIADA = 20;
+	int EXPRESION_REFERENCIADA = 19;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1093,25 +1077,16 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_REFERENCIADA__ID = VALOR_ELEMENTOS__ID;
+	int EXPRESION_REFERENCIADA__ID = EXPRESION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Ent Referenciada</b></em>' reference.
+	 * The feature id for the '<em><b>Referencia</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_REFERENCIADA__ENT_REFERENCIADA = VALOR_ELEMENTOS_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Atr Referenciado</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESION_REFERENCIADA__ATR_REFERENCIADO = VALOR_ELEMENTOS_FEATURE_COUNT + 1;
+	int EXPRESION_REFERENCIADA__REFERENCIA = EXPRESION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Expresion Referenciada</em>' class.
@@ -1120,7 +1095,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_REFERENCIADA_FEATURE_COUNT = VALOR_ELEMENTOS_FEATURE_COUNT + 2;
+	int EXPRESION_REFERENCIADA_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Expresion Referenciada</em>' class.
@@ -1129,7 +1104,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_REFERENCIADA_OPERATION_COUNT = VALOR_ELEMENTOS_OPERATION_COUNT + 0;
+	int EXPRESION_REFERENCIADA_OPERATION_COUNT = EXPRESION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link blockchain.impl.ExpresionRelacionalImpl <em>Expresion Relacional</em>}' class.
@@ -1139,34 +1114,25 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getExpresionRelacional()
 	 * @generated
 	 */
-	int EXPRESION_RELACIONAL = 21;
+	int EXPRESION_RELACIONAL = 20;
 
 	/**
-	 * The feature id for the '<em><b>Lado Izq</b></em>' reference.
+	 * The feature id for the '<em><b>Izq</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_RELACIONAL__LADO_IZQ = EXPRESION__LADO_IZQ;
+	int EXPRESION_RELACIONAL__IZQ = EXPRESION_BINARIA__IZQ;
 
 	/**
-	 * The feature id for the '<em><b>Lado Der</b></em>' reference.
+	 * The feature id for the '<em><b>Der</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_RELACIONAL__LADO_DER = EXPRESION__LADO_DER;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESION_RELACIONAL__ID = EXPRESION__ID;
+	int EXPRESION_RELACIONAL__DER = EXPRESION_BINARIA__DER;
 
 	/**
 	 * The feature id for the '<em><b>Operador Relacional</b></em>' attribute.
@@ -1175,7 +1141,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_RELACIONAL__OPERADOR_RELACIONAL = EXPRESION_FEATURE_COUNT + 0;
+	int EXPRESION_RELACIONAL__OPERADOR_RELACIONAL = EXPRESION_BINARIA_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Expresion Relacional</em>' class.
@@ -1184,7 +1150,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_RELACIONAL_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 1;
+	int EXPRESION_RELACIONAL_FEATURE_COUNT = EXPRESION_BINARIA_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Expresion Relacional</em>' class.
@@ -1193,7 +1159,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_RELACIONAL_OPERATION_COUNT = EXPRESION_OPERATION_COUNT + 0;
+	int EXPRESION_RELACIONAL_OPERATION_COUNT = EXPRESION_BINARIA_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link blockchain.OperadorLogico <em>Operador Logico</em>}' enum.
@@ -1203,7 +1169,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getOperadorLogico()
 	 * @generated
 	 */
-	int OPERADOR_LOGICO = 22;
+	int OPERADOR_LOGICO = 24;
 
 	/**
 	 * The meta object id for the '{@link blockchain.Operador <em>Operador</em>}' enum.
@@ -1213,7 +1179,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getOperador()
 	 * @generated
 	 */
-	int OPERADOR = 23;
+	int OPERADOR = 25;
 
 	/**
 	 * The meta object id for the '{@link blockchain.DatoPrimitivo <em>Dato Primitivo</em>}' enum.
@@ -1223,18 +1189,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getDatoPrimitivo()
 	 * @generated
 	 */
-	int DATO_PRIMITIVO = 24;
-
-	/**
-	 * The meta object id for the '{@link blockchain.TipoCondicion <em>Tipo Condicion</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see blockchain.TipoCondicion
-	 * @see blockchain.impl.BlockchainPackageImpl#getTipoCondicion()
-	 * @generated
-	 */
-	int TIPO_CONDICION = 25;
-
+	int DATO_PRIMITIVO = 26;
 
 	/**
 	 * The meta object id for the '{@link blockchain.OperadorRelacion <em>Operador Relacion</em>}' enum.
@@ -1244,7 +1199,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getOperadorRelacion()
 	 * @generated
 	 */
-	int OPERADOR_RELACION = 26;
+	int OPERADOR_RELACION = 27;
 
 
 	/**
@@ -1320,17 +1275,6 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getAtributo();
-
-	/**
-	 * Returns the meta object for the attribute '{@link blockchain.Atributo#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see blockchain.Atributo#getName()
-	 * @see #getAtributo()
-	 * @generated
-	 */
-	EAttribute getAtributo_Name();
 
 	/**
 	 * Returns the meta object for the reference '{@link blockchain.Atributo#getTipodato <em>Tipodato</em>}'.
@@ -1430,17 +1374,6 @@ public interface BlockchainPackage extends EPackage {
 	EAttribute getOperacion_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link blockchain.Operacion#getSentencia <em>Sentencia</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sentencia</em>'.
-	 * @see blockchain.Operacion#getSentencia()
-	 * @see #getOperacion()
-	 * @generated
-	 */
-	EReference getOperacion_Sentencia();
-
-	/**
 	 * Returns the meta object for the reference '{@link blockchain.Operacion#getRetorno <em>Retorno</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1450,6 +1383,17 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getOperacion_Retorno();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link blockchain.Operacion#getLineas <em>Lineas</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Lineas</em>'.
+	 * @see blockchain.Operacion#getLineas()
+	 * @see #getOperacion()
+	 * @generated
+	 */
+	EReference getOperacion_Lineas();
 
 	/**
 	 * Returns the meta object for the attribute '{@link blockchain.Operacion#isEsUserDefined <em>Es User Defined</em>}'.
@@ -1473,17 +1417,6 @@ public interface BlockchainPackage extends EPackage {
 	EClass getParametro();
 
 	/**
-	 * Returns the meta object for the attribute '{@link blockchain.Parametro#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see blockchain.Parametro#getName()
-	 * @see #getParametro()
-	 * @generated
-	 */
-	EAttribute getParametro_Name();
-
-	/**
 	 * Returns the meta object for the reference '{@link blockchain.Parametro#getTipodato <em>Tipodato</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1503,17 +1436,6 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEstado();
-
-	/**
-	 * Returns the meta object for the attribute '{@link blockchain.Estado#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see blockchain.Estado#getName()
-	 * @see #getEstado()
-	 * @generated
-	 */
-	EAttribute getEstado_Name();
 
 	/**
 	 * Returns the meta object for the reference '{@link blockchain.Estado#getTipodato <em>Tipodato</em>}'.
@@ -1621,17 +1543,6 @@ public interface BlockchainPackage extends EPackage {
 	EAttribute getExpresionAritmetica_Operador();
 
 	/**
-	 * Returns the meta object for the reference list '{@link blockchain.ExpresionAritmetica#getSubExpArit <em>Sub Exp Arit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Sub Exp Arit</em>'.
-	 * @see blockchain.ExpresionAritmetica#getSubExpArit()
-	 * @see #getExpresionAritmetica()
-	 * @generated
-	 */
-	EReference getExpresionAritmetica_SubExpArit();
-
-	/**
 	 * Returns the meta object for class '{@link blockchain.Variable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1651,17 +1562,6 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVariable_Tipodato();
-
-	/**
-	 * Returns the meta object for the attribute '{@link blockchain.Variable#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see blockchain.Variable#getName()
-	 * @see #getVariable()
-	 * @generated
-	 */
-	EAttribute getVariable_Name();
 
 	/**
 	 * Returns the meta object for class '{@link blockchain.Mapa <em>Mapa</em>}'.
@@ -1706,17 +1606,6 @@ public interface BlockchainPackage extends EPackage {
 	EClass getCondicional();
 
 	/**
-	 * Returns the meta object for the attribute '{@link blockchain.Condicional#getTipoCondicional <em>Tipo Condicional</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Tipo Condicional</em>'.
-	 * @see blockchain.Condicional#getTipoCondicional()
-	 * @see #getCondicional()
-	 * @generated
-	 */
-	EAttribute getCondicional_TipoCondicional();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link blockchain.Condicional#getExpresionlogica <em>Expresionlogica</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1728,21 +1617,21 @@ public interface BlockchainPackage extends EPackage {
 	EReference getCondicional_Expresionlogica();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link blockchain.Condicional#getSentencias <em>Sentencias</em>}'.
+	 * Returns the meta object for the containment reference list '{@link blockchain.Condicional#getValidador <em>Validador</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sentencias</em>'.
-	 * @see blockchain.Condicional#getSentencias()
+	 * @return the meta object for the containment reference list '<em>Validador</em>'.
+	 * @see blockchain.Condicional#getValidador()
 	 * @see #getCondicional()
 	 * @generated
 	 */
-	EReference getCondicional_Sentencias();
+	EReference getCondicional_Validador();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link blockchain.Condicional#getElse <em>Else</em>}'.
+	 * Returns the meta object for the containment reference '{@link blockchain.Condicional#getElse <em>Else</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Else</em>'.
+	 * @return the meta object for the containment reference '<em>Else</em>'.
 	 * @see blockchain.Condicional#getElse()
 	 * @see #getCondicional()
 	 * @generated
@@ -1758,60 +1647,6 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getExpresion();
-
-	/**
-	 * Returns the meta object for the reference '{@link blockchain.Expresion#getLadoIzq <em>Lado Izq</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Lado Izq</em>'.
-	 * @see blockchain.Expresion#getLadoIzq()
-	 * @see #getExpresion()
-	 * @generated
-	 */
-	EReference getExpresion_LadoIzq();
-
-	/**
-	 * Returns the meta object for the reference '{@link blockchain.Expresion#getLadoDer <em>Lado Der</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Lado Der</em>'.
-	 * @see blockchain.Expresion#getLadoDer()
-	 * @see #getExpresion()
-	 * @generated
-	 */
-	EReference getExpresion_LadoDer();
-
-	/**
-	 * Returns the meta object for the attribute '{@link blockchain.Expresion#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see blockchain.Expresion#getId()
-	 * @see #getExpresion()
-	 * @generated
-	 */
-	EAttribute getExpresion_Id();
-
-	/**
-	 * Returns the meta object for class '{@link blockchain.ValorElementos <em>Valor Elementos</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Valor Elementos</em>'.
-	 * @see blockchain.ValorElementos
-	 * @generated
-	 */
-	EClass getValorElementos();
-
-	/**
-	 * Returns the meta object for the attribute '{@link blockchain.ValorElementos#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see blockchain.ValorElementos#getId()
-	 * @see #getValorElementos()
-	 * @generated
-	 */
-	EAttribute getValorElementos_Id();
 
 	/**
 	 * Returns the meta object for class '{@link blockchain.ExpresionNumerica <em>Expresion Numerica</em>}'.
@@ -1887,26 +1722,26 @@ public interface BlockchainPackage extends EPackage {
 	EClass getExpresionReferenciada();
 
 	/**
-	 * Returns the meta object for the reference '{@link blockchain.ExpresionReferenciada#getEntReferenciada <em>Ent Referenciada</em>}'.
+	 * Returns the meta object for the attribute '{@link blockchain.ExpresionReferenciada#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Ent Referenciada</em>'.
-	 * @see blockchain.ExpresionReferenciada#getEntReferenciada()
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see blockchain.ExpresionReferenciada#getId()
 	 * @see #getExpresionReferenciada()
 	 * @generated
 	 */
-	EReference getExpresionReferenciada_EntReferenciada();
+	EAttribute getExpresionReferenciada_Id();
 
 	/**
-	 * Returns the meta object for the reference '{@link blockchain.ExpresionReferenciada#getAtrReferenciado <em>Atr Referenciado</em>}'.
+	 * Returns the meta object for the reference '{@link blockchain.ExpresionReferenciada#getReferencia <em>Referencia</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Atr Referenciado</em>'.
-	 * @see blockchain.ExpresionReferenciada#getAtrReferenciado()
+	 * @return the meta object for the reference '<em>Referencia</em>'.
+	 * @see blockchain.ExpresionReferenciada#getReferencia()
 	 * @see #getExpresionReferenciada()
 	 * @generated
 	 */
-	EReference getExpresionReferenciada_AtrReferenciado();
+	EReference getExpresionReferenciada_Referencia();
 
 	/**
 	 * Returns the meta object for class '{@link blockchain.ExpresionRelacional <em>Expresion Relacional</em>}'.
@@ -1928,6 +1763,69 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getExpresionRelacional_OperadorRelacional();
+
+	/**
+	 * Returns the meta object for class '{@link blockchain.ExpresionBinaria <em>Expresion Binaria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Expresion Binaria</em>'.
+	 * @see blockchain.ExpresionBinaria
+	 * @generated
+	 */
+	EClass getExpresionBinaria();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link blockchain.ExpresionBinaria#getIzq <em>Izq</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Izq</em>'.
+	 * @see blockchain.ExpresionBinaria#getIzq()
+	 * @see #getExpresionBinaria()
+	 * @generated
+	 */
+	EReference getExpresionBinaria_Izq();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link blockchain.ExpresionBinaria#getDer <em>Der</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Der</em>'.
+	 * @see blockchain.ExpresionBinaria#getDer()
+	 * @see #getExpresionBinaria()
+	 * @generated
+	 */
+	EReference getExpresionBinaria_Der();
+
+	/**
+	 * Returns the meta object for class '{@link blockchain.Linea <em>Linea</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Linea</em>'.
+	 * @see blockchain.Linea
+	 * @generated
+	 */
+	EClass getLinea();
+
+	/**
+	 * Returns the meta object for class '{@link blockchain.NamedElement <em>Named Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Named Element</em>'.
+	 * @see blockchain.NamedElement
+	 * @generated
+	 */
+	EClass getNamedElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link blockchain.NamedElement#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see blockchain.NamedElement#getName()
+	 * @see #getNamedElement()
+	 * @generated
+	 */
+	EAttribute getNamedElement_Name();
 
 	/**
 	 * Returns the meta object for enum '{@link blockchain.OperadorLogico <em>Operador Logico</em>}'.
@@ -1958,16 +1856,6 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getDatoPrimitivo();
-
-	/**
-	 * Returns the meta object for enum '{@link blockchain.TipoCondicion <em>Tipo Condicion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Tipo Condicion</em>'.
-	 * @see blockchain.TipoCondicion
-	 * @generated
-	 */
-	EEnum getTipoCondicion();
 
 	/**
 	 * Returns the meta object for enum '{@link blockchain.OperadorRelacion <em>Operador Relacion</em>}'.
@@ -2065,14 +1953,6 @@ public interface BlockchainPackage extends EPackage {
 		EClass ATRIBUTO = eINSTANCE.getAtributo();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ATRIBUTO__NAME = eINSTANCE.getAtributo_Name();
-
-		/**
 		 * The meta object literal for the '<em><b>Tipodato</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2149,20 +2029,20 @@ public interface BlockchainPackage extends EPackage {
 		EAttribute OPERACION__NAME = eINSTANCE.getOperacion_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Sentencia</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OPERACION__SENTENCIA = eINSTANCE.getOperacion_Sentencia();
-
-		/**
 		 * The meta object literal for the '<em><b>Retorno</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference OPERACION__RETORNO = eINSTANCE.getOperacion_Retorno();
+
+		/**
+		 * The meta object literal for the '<em><b>Lineas</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OPERACION__LINEAS = eINSTANCE.getOperacion_Lineas();
 
 		/**
 		 * The meta object literal for the '<em><b>Es User Defined</b></em>' attribute feature.
@@ -2183,14 +2063,6 @@ public interface BlockchainPackage extends EPackage {
 		EClass PARAMETRO = eINSTANCE.getParametro();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PARAMETRO__NAME = eINSTANCE.getParametro_Name();
-
-		/**
 		 * The meta object literal for the '<em><b>Tipodato</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2209,14 +2081,6 @@ public interface BlockchainPackage extends EPackage {
 		EClass ESTADO = eINSTANCE.getEstado();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ESTADO__NAME = eINSTANCE.getEstado_Name();
-
-		/**
 		 * The meta object literal for the '<em><b>Tipodato</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2225,10 +2089,10 @@ public interface BlockchainPackage extends EPackage {
 		EReference ESTADO__TIPODATO = eINSTANCE.getEstado_Tipodato();
 
 		/**
-		 * The meta object literal for the '{@link blockchain.impl.SentenciaImpl <em>Sentencia</em>}' class.
+		 * The meta object literal for the '{@link blockchain.Sentencia <em>Sentencia</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see blockchain.impl.SentenciaImpl
+		 * @see blockchain.Sentencia
 		 * @see blockchain.impl.BlockchainPackageImpl#getSentencia()
 		 * @generated
 		 */
@@ -2307,14 +2171,6 @@ public interface BlockchainPackage extends EPackage {
 		EAttribute EXPRESION_ARITMETICA__OPERADOR = eINSTANCE.getExpresionAritmetica_Operador();
 
 		/**
-		 * The meta object literal for the '<em><b>Sub Exp Arit</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXPRESION_ARITMETICA__SUB_EXP_ARIT = eINSTANCE.getExpresionAritmetica_SubExpArit();
-
-		/**
 		 * The meta object literal for the '{@link blockchain.impl.VariableImpl <em>Variable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2331,14 +2187,6 @@ public interface BlockchainPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VARIABLE__TIPODATO = eINSTANCE.getVariable_Tipodato();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VARIABLE__NAME = eINSTANCE.getVariable_Name();
 
 		/**
 		 * The meta object literal for the '{@link blockchain.impl.MapaImpl <em>Mapa</em>}' class.
@@ -2377,14 +2225,6 @@ public interface BlockchainPackage extends EPackage {
 		EClass CONDICIONAL = eINSTANCE.getCondicional();
 
 		/**
-		 * The meta object literal for the '<em><b>Tipo Condicional</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CONDICIONAL__TIPO_CONDICIONAL = eINSTANCE.getCondicional_TipoCondicional();
-
-		/**
 		 * The meta object literal for the '<em><b>Expresionlogica</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2393,15 +2233,15 @@ public interface BlockchainPackage extends EPackage {
 		EReference CONDICIONAL__EXPRESIONLOGICA = eINSTANCE.getCondicional_Expresionlogica();
 
 		/**
-		 * The meta object literal for the '<em><b>Sentencias</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Validador</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONDICIONAL__SENTENCIAS = eINSTANCE.getCondicional_Sentencias();
+		EReference CONDICIONAL__VALIDADOR = eINSTANCE.getCondicional_Validador();
 
 		/**
-		 * The meta object literal for the '<em><b>Else</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Else</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2409,56 +2249,14 @@ public interface BlockchainPackage extends EPackage {
 		EReference CONDICIONAL__ELSE = eINSTANCE.getCondicional_Else();
 
 		/**
-		 * The meta object literal for the '{@link blockchain.impl.ExpresionImpl <em>Expresion</em>}' class.
+		 * The meta object literal for the '{@link blockchain.Expresion <em>Expresion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see blockchain.impl.ExpresionImpl
+		 * @see blockchain.Expresion
 		 * @see blockchain.impl.BlockchainPackageImpl#getExpresion()
 		 * @generated
 		 */
 		EClass EXPRESION = eINSTANCE.getExpresion();
-
-		/**
-		 * The meta object literal for the '<em><b>Lado Izq</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXPRESION__LADO_IZQ = eINSTANCE.getExpresion_LadoIzq();
-
-		/**
-		 * The meta object literal for the '<em><b>Lado Der</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXPRESION__LADO_DER = eINSTANCE.getExpresion_LadoDer();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXPRESION__ID = eINSTANCE.getExpresion_Id();
-
-		/**
-		 * The meta object literal for the '{@link blockchain.impl.ValorElementosImpl <em>Valor Elementos</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see blockchain.impl.ValorElementosImpl
-		 * @see blockchain.impl.BlockchainPackageImpl#getValorElementos()
-		 * @generated
-		 */
-		EClass VALOR_ELEMENTOS = eINSTANCE.getValorElementos();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VALOR_ELEMENTOS__ID = eINSTANCE.getValorElementos_Id();
 
 		/**
 		 * The meta object literal for the '{@link blockchain.impl.ExpresionNumericaImpl <em>Expresion Numerica</em>}' class.
@@ -2525,20 +2323,20 @@ public interface BlockchainPackage extends EPackage {
 		EClass EXPRESION_REFERENCIADA = eINSTANCE.getExpresionReferenciada();
 
 		/**
-		 * The meta object literal for the '<em><b>Ent Referenciada</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EXPRESION_REFERENCIADA__ENT_REFERENCIADA = eINSTANCE.getExpresionReferenciada_EntReferenciada();
+		EAttribute EXPRESION_REFERENCIADA__ID = eINSTANCE.getExpresionReferenciada_Id();
 
 		/**
-		 * The meta object literal for the '<em><b>Atr Referenciado</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Referencia</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EXPRESION_REFERENCIADA__ATR_REFERENCIADO = eINSTANCE.getExpresionReferenciada_AtrReferenciado();
+		EReference EXPRESION_REFERENCIADA__REFERENCIA = eINSTANCE.getExpresionReferenciada_Referencia();
 
 		/**
 		 * The meta object literal for the '{@link blockchain.impl.ExpresionRelacionalImpl <em>Expresion Relacional</em>}' class.
@@ -2557,6 +2355,60 @@ public interface BlockchainPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EXPRESION_RELACIONAL__OPERADOR_RELACIONAL = eINSTANCE.getExpresionRelacional_OperadorRelacional();
+
+		/**
+		 * The meta object literal for the '{@link blockchain.impl.ExpresionBinariaImpl <em>Expresion Binaria</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see blockchain.impl.ExpresionBinariaImpl
+		 * @see blockchain.impl.BlockchainPackageImpl#getExpresionBinaria()
+		 * @generated
+		 */
+		EClass EXPRESION_BINARIA = eINSTANCE.getExpresionBinaria();
+
+		/**
+		 * The meta object literal for the '<em><b>Izq</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPRESION_BINARIA__IZQ = eINSTANCE.getExpresionBinaria_Izq();
+
+		/**
+		 * The meta object literal for the '<em><b>Der</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPRESION_BINARIA__DER = eINSTANCE.getExpresionBinaria_Der();
+
+		/**
+		 * The meta object literal for the '{@link blockchain.Linea <em>Linea</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see blockchain.Linea
+		 * @see blockchain.impl.BlockchainPackageImpl#getLinea()
+		 * @generated
+		 */
+		EClass LINEA = eINSTANCE.getLinea();
+
+		/**
+		 * The meta object literal for the '{@link blockchain.impl.NamedElementImpl <em>Named Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see blockchain.impl.NamedElementImpl
+		 * @see blockchain.impl.BlockchainPackageImpl#getNamedElement()
+		 * @generated
+		 */
+		EClass NAMED_ELEMENT = eINSTANCE.getNamedElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NAMED_ELEMENT__NAME = eINSTANCE.getNamedElement_Name();
 
 		/**
 		 * The meta object literal for the '{@link blockchain.OperadorLogico <em>Operador Logico</em>}' enum.
@@ -2587,16 +2439,6 @@ public interface BlockchainPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum DATO_PRIMITIVO = eINSTANCE.getDatoPrimitivo();
-
-		/**
-		 * The meta object literal for the '{@link blockchain.TipoCondicion <em>Tipo Condicion</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see blockchain.TipoCondicion
-		 * @see blockchain.impl.BlockchainPackageImpl#getTipoCondicion()
-		 * @generated
-		 */
-		EEnum TIPO_CONDICION = eINSTANCE.getTipoCondicion();
 
 		/**
 		 * The meta object literal for the '{@link blockchain.OperadorRelacion <em>Operador Relacion</em>}' enum.

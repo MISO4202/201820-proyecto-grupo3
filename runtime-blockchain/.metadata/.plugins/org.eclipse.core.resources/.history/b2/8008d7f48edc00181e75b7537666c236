@@ -1,0 +1,63 @@
+Aplicacion AplicacionBlockchain
+{
+    SmartContract AutoMarket
+    {
+        Entidad Vehiculo
+        {
+          String Marca
+          String Modelo
+          String Linea
+          Numerico Cilindraje
+          String Placa
+          Numerico Precio
+          Boolean Nuevo
+          String Comentarios
+        } 
+        Estado MapaVehiculos Vehiculos
+        Estado MapaVehiculos VehiculosCaros
+        Estado MapaVehiculos VehiculosBaratos
+        Operacion isUd=false ConsultarVehiculo (String Placa) : Vehiculo
+        {
+			return Vehiculos GET Placa
+        }
+        Operacion isUd=false BorrarVehiculo(String Placa)
+        {
+        	Numerico var sdfd
+            return Vehiculos DELETE Placa
+        }
+        Operacion isUd=false CalcularCostosVenta(Numerico PrecioVehiculo, Numerico ImpuestoVehiculo, Numerico ValorTraspaso, Numerico ComisionRunt) : Numerico { 
+        	//return ((((PrecioVehiculo * 0.19) + (PrecioVehiculo * ImpuestoVehiculo)) + ValorTraspaso ) + ComisionRunt)  
+        }
+        Operacion isUd=false CrearVehiculo(String Marca, String Modelo, String Linea, Numerico Cilindraje, String Placa, Numerico Precio)
+        {
+           /*Vehiculo vehiculo = new Vehiculo()
+            vehiculo.Marca = Marca
+            vehiculo.Modelo = Modelo
+            vehiculo.Linea = Linea
+            vehiculo.Cilindraje = Cilindraje
+            vehiculo.Placa = Placa
+            vehiculo.Precio = Precio
+            vehiculo.Nuevo = true
+            vehiculo.Comentarios = "Sin comentarios"
+            Vehiculos GET Placa = vehiculo
+            if(((Precio >= 100000000) OR (Marca == "Ferrari")) AND (Marca <> "Renault"))
+            {
+                VehiculosCaros GET Placa = vehiculo
+            }else
+            {
+                VehiculosBaratos GET Placa = vehiculo
+            }*/
+        }
+        Operacion isUd=false ActualizarVehiculo(Numerico Cilindraje, Numerico Precio)
+        {
+            /*Vehiculo vehiculo = Vehiculos GET Placa
+            vehiculo.Cilindraje = Cilindraje
+            vehiculo.Precio = Precio
+            vehiculo.Nuevo = false*/
+        }
+    }
+	TipoDato STRING String
+	TipoDato NUMERICO Numerico
+	TipoDato BOOLEAN Boolean
+	TipoDato MapaVehiculos : Map <String,"AutoMarket.Vehiculo">   
+}

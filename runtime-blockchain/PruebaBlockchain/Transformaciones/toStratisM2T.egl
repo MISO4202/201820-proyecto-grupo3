@@ -1,0 +1,40 @@
+using Stratis.SmartContracts;
+using System.Linq;
+using System;
+
+
+[%
+for (smc in SmartContract.all) { %]
+public class [%=smc.name%] : SmartContract 
+{
+ 	[%for (ent in smc.entidades) { %]
+	public struct [%=ent.name%] {
+	[%for (attr in ent.atributos) { %]
+		public [%=attr.tipodato.name%] [%=attr.name%]; 
+		[%}%]
+		}
+		public Inventario(ISmartContractState smartContractState, ulong durationBlocks)
+    	: base(smartContractState)
+    	{
+        
+    	}
+		[%for (est in smc.estado) { %]
+		public ISmartContractMapping<[%=ent.name%]> [%=est.name%]
+    	{
+        	get
+        	{
+            	return PersistentState.GetStructMapping<[%=ent.name%]>>("[%=est.name%]");
+        	}
+    	}
+		[%}%]
+		[%for (ope in smc.operaciones) { %]	
+		public void [%=ope.name%] ([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %][%=par.tipodato.name%] [%=par.name%][%i++;%][%if(i<>cantpar){%],[%}%][%}%]){
+		
+		}
+		[%}%]
+[%}%] 
+}
+	
+[%}%]
+
+ 

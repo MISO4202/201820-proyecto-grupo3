@@ -1,0 +1,28 @@
+Aplicacion Automarket{
+	SmartContract AutoMarket{
+		Entidad Vehiculo {
+			
+			string Marca
+          	string Modelo
+          	string Linea
+          	int Cilindraje
+          	string Placa
+          	int Precio
+          	bool Nuevo
+          	string Comentarios
+			
+		}
+		Operacion isUd=false Conas (int num): int{
+			
+		}
+		
+		Estado MapaVehiculos Vehiculos
+        Estado MapaVehiculos VehiculosCaros
+        Estado MapaVehiculos VehiculosBaratos
+	}
+	
+	tipodato String string
+	tipodato uint int
+	tipodato Boolean bool
+	tipodato Map <string,string> : MapaVehiculos
+}

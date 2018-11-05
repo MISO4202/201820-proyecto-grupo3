@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ExpresionRelacionalImpl extends ExpresionImpl implements ExpresionRelacional {
+public class ExpresionRelacionalImpl extends ExpresionBinariaImpl implements ExpresionRelacional {
 	/**
 	 * The default value of the '{@link #getOperadorRelacional() <em>Operador Relacional</em>}' attribute.
 	 * <!-- begin-user-doc -->

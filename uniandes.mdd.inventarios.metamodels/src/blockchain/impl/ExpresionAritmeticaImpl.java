@@ -5,15 +5,10 @@ package blockchain.impl;
 import blockchain.BlockchainPackage;
 import blockchain.ExpresionAritmetica;
 import blockchain.Operador;
-
-import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,12 +19,11 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * </p>
  * <ul>
  *   <li>{@link blockchain.impl.ExpresionAritmeticaImpl#getOperador <em>Operador</em>}</li>
- *   <li>{@link blockchain.impl.ExpresionAritmeticaImpl#getSubExpArit <em>Sub Exp Arit</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ExpresionAritmeticaImpl extends ExpresionImpl implements ExpresionAritmetica {
+public class ExpresionAritmeticaImpl extends ExpresionBinariaImpl implements ExpresionAritmetica {
 	/**
 	 * The default value of the '{@link #getOperador() <em>Operador</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -49,16 +43,6 @@ public class ExpresionAritmeticaImpl extends ExpresionImpl implements ExpresionA
 	 * @ordered
 	 */
 	protected Operador operador = OPERADOR_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getSubExpArit() <em>Sub Exp Arit</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSubExpArit()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ExpresionAritmetica> subExpArit;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -105,25 +89,11 @@ public class ExpresionAritmeticaImpl extends ExpresionImpl implements ExpresionA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ExpresionAritmetica> getSubExpArit() {
-		if (subExpArit == null) {
-			subExpArit = new EObjectResolvingEList<ExpresionAritmetica>(ExpresionAritmetica.class, this, BlockchainPackage.EXPRESION_ARITMETICA__SUB_EXP_ARIT);
-		}
-		return subExpArit;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case BlockchainPackage.EXPRESION_ARITMETICA__OPERADOR:
 				return getOperador();
-			case BlockchainPackage.EXPRESION_ARITMETICA__SUB_EXP_ARIT:
-				return getSubExpArit();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -140,10 +110,6 @@ public class ExpresionAritmeticaImpl extends ExpresionImpl implements ExpresionA
 			case BlockchainPackage.EXPRESION_ARITMETICA__OPERADOR:
 				setOperador((Operador)newValue);
 				return;
-			case BlockchainPackage.EXPRESION_ARITMETICA__SUB_EXP_ARIT:
-				getSubExpArit().clear();
-				getSubExpArit().addAll((Collection<? extends ExpresionAritmetica>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -159,9 +125,6 @@ public class ExpresionAritmeticaImpl extends ExpresionImpl implements ExpresionA
 			case BlockchainPackage.EXPRESION_ARITMETICA__OPERADOR:
 				setOperador(OPERADOR_EDEFAULT);
 				return;
-			case BlockchainPackage.EXPRESION_ARITMETICA__SUB_EXP_ARIT:
-				getSubExpArit().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -176,8 +139,6 @@ public class ExpresionAritmeticaImpl extends ExpresionImpl implements ExpresionA
 		switch (featureID) {
 			case BlockchainPackage.EXPRESION_ARITMETICA__OPERADOR:
 				return operador != OPERADOR_EDEFAULT;
-			case BlockchainPackage.EXPRESION_ARITMETICA__SUB_EXP_ARIT:
-				return subExpArit != null && !subExpArit.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

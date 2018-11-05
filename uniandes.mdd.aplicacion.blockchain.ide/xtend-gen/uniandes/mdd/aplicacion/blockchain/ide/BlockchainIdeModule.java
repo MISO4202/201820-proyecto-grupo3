@@ -3,11 +3,9 @@
  */
 package uniandes.mdd.aplicacion.blockchain.ide;
 
-import uniandes.mdd.aplicacion.blockchain.ide.AbstractBlockchainIdeModule;
-
 /**
  * Use this class to register ide components.
  */
 @SuppressWarnings("all")
-public class BlockchainIdeModule extends AbstractBlockchainIdeModule {
+public class BlockchainIdeModule /* implements AbstractBlockchainIdeModule  */{
 }

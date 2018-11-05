@@ -1,0 +1,22 @@
+Aplicacion Automarket {
+	SmartContract AutoMarket{
+		Entidad Vehiculo {
+			
+			string Marca
+          	string Modelo
+          	string Linea
+          	int Cilindraje
+          	string Placa
+          	int Precio
+          	bool Nuevo
+          	string Comentarios
+          	
+		}
+		
+		Estado MapaVehiculo Vehiculos
+	}
+	tipodato String string
+	tipodato uint int
+	tipodato Boolean bool
+	tipodato MapaVehiculo : Map<string,string>	
+}

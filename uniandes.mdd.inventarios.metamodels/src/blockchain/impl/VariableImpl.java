@@ -3,6 +3,7 @@
 package blockchain.impl;
 
 import blockchain.BlockchainPackage;
+import blockchain.NamedElement;
 import blockchain.TipoDato;
 import blockchain.Variable;
 
@@ -12,6 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,23 +23,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link blockchain.impl.VariableImpl#getTipodato <em>Tipodato</em>}</li>
  *   <li>{@link blockchain.impl.VariableImpl#getName <em>Name</em>}</li>
+ *   <li>{@link blockchain.impl.VariableImpl#getTipodato <em>Tipodato</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VariableImpl extends SentenciaImpl implements Variable {
-	/**
-	 * The cached value of the '{@link #getTipodato() <em>Tipodato</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTipodato()
-	 * @generated
-	 * @ordered
-	 */
-	protected TipoDato tipodato;
-
+public class VariableImpl extends MinimalEObjectImpl.Container implements Variable {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -57,6 +49,16 @@ public class VariableImpl extends SentenciaImpl implements Variable {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTipodato() <em>Tipodato</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTipodato()
+	 * @generated
+	 * @ordered
+	 */
+	protected TipoDato tipodato;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -144,11 +146,11 @@ public class VariableImpl extends SentenciaImpl implements Variable {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case BlockchainPackage.VARIABLE__NAME:
+				return getName();
 			case BlockchainPackage.VARIABLE__TIPODATO:
 				if (resolve) return getTipodato();
 				return basicGetTipodato();
-			case BlockchainPackage.VARIABLE__NAME:
-				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -161,11 +163,11 @@ public class VariableImpl extends SentenciaImpl implements Variable {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case BlockchainPackage.VARIABLE__TIPODATO:
-				setTipodato((TipoDato)newValue);
-				return;
 			case BlockchainPackage.VARIABLE__NAME:
 				setName((String)newValue);
+				return;
+			case BlockchainPackage.VARIABLE__TIPODATO:
+				setTipodato((TipoDato)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -179,11 +181,11 @@ public class VariableImpl extends SentenciaImpl implements Variable {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case BlockchainPackage.VARIABLE__TIPODATO:
-				setTipodato((TipoDato)null);
-				return;
 			case BlockchainPackage.VARIABLE__NAME:
 				setName(NAME_EDEFAULT);
+				return;
+			case BlockchainPackage.VARIABLE__TIPODATO:
+				setTipodato((TipoDato)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -197,12 +199,44 @@ public class VariableImpl extends SentenciaImpl implements Variable {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case BlockchainPackage.VARIABLE__TIPODATO:
-				return tipodato != null;
 			case BlockchainPackage.VARIABLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case BlockchainPackage.VARIABLE__TIPODATO:
+				return tipodato != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == NamedElement.class) {
+			switch (derivedFeatureID) {
+				case BlockchainPackage.VARIABLE__NAME: return BlockchainPackage.NAMED_ELEMENT__NAME;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == NamedElement.class) {
+			switch (baseFeatureID) {
+				case BlockchainPackage.NAMED_ELEMENT__NAME: return BlockchainPackage.VARIABLE__NAME;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**

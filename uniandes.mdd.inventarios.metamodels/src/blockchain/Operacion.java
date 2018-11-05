@@ -17,9 +17,9 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link blockchain.Operacion#getParametros <em>Parametros</em>}</li>
  *   <li>{@link blockchain.Operacion#getName <em>Name</em>}</li>
- *   <li>{@link blockchain.Operacion#getSentencia <em>Sentencia</em>}</li>
  *   <li>{@link blockchain.Operacion#isEsUserDefined <em>Es User Defined</em>}</li>
  *   <li>{@link blockchain.Operacion#getRetorno <em>Retorno</em>}</li>
+ *   <li>{@link blockchain.Operacion#getLineas <em>Lineas</em>}</li>
  * </ul>
  *
  * @see blockchain.BlockchainPackage#getOperacion()
@@ -70,22 +70,6 @@ public interface Operacion extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Sentencia</b></em>' containment reference list.
-	 * The list contents are of type {@link blockchain.Sentencia}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Sentencia</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sentencia</em>' containment reference list.
-	 * @see blockchain.BlockchainPackage#getOperacion_Sentencia()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Sentencia> getSentencia();
-
-	/**
 	 * Returns the value of the '<em><b>Retorno</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -110,6 +94,22 @@ public interface Operacion extends EObject {
 	 * @generated
 	 */
 	void setRetorno(TipoDato value);
+
+	/**
+	 * Returns the value of the '<em><b>Lineas</b></em>' containment reference list.
+	 * The list contents are of type {@link blockchain.Linea}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lineas</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lineas</em>' containment reference list.
+	 * @see blockchain.BlockchainPackage#getOperacion_Lineas()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Linea> getLineas();
 
 	/**
 	 * Returns the value of the '<em><b>Es User Defined</b></em>' attribute.

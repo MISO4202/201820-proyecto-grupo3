@@ -94,8 +94,6 @@ public class BlockchainFactoryImpl extends EFactoryImpl implements BlockchainFac
 				return createOperadorFromString(eDataType, initialValue);
 			case BlockchainPackage.DATO_PRIMITIVO:
 				return createDatoPrimitivoFromString(eDataType, initialValue);
-			case BlockchainPackage.TIPO_CONDICION:
-				return createTipoCondicionFromString(eDataType, initialValue);
 			case BlockchainPackage.OPERADOR_RELACION:
 				return createOperadorRelacionFromString(eDataType, initialValue);
 			default:
@@ -117,8 +115,6 @@ public class BlockchainFactoryImpl extends EFactoryImpl implements BlockchainFac
 				return convertOperadorToString(eDataType, instanceValue);
 			case BlockchainPackage.DATO_PRIMITIVO:
 				return convertDatoPrimitivoToString(eDataType, instanceValue);
-			case BlockchainPackage.TIPO_CONDICION:
-				return convertTipoCondicionToString(eDataType, instanceValue);
 			case BlockchainPackage.OPERADOR_RELACION:
 				return convertOperadorRelacionToString(eDataType, instanceValue);
 			default:
@@ -363,26 +359,6 @@ public class BlockchainFactoryImpl extends EFactoryImpl implements BlockchainFac
 	 * @generated
 	 */
 	public String convertDatoPrimitivoToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TipoCondicion createTipoCondicionFromString(EDataType eDataType, String initialValue) {
-		TipoCondicion result = TipoCondicion.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertTipoCondicionToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

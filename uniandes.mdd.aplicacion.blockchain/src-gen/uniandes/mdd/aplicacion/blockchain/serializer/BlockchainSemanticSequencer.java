@@ -156,7 +156,7 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Condicional returns Condicional
 	 *
 	 * Constraint:
-	 *     (expresionlogica=ExpresionLogica linea+=Linea+ else=Else?)
+	 *     (expresionlogica=ExpresionLogica? validador+=Linea* validador+=Linea*)
 	 */
 	protected void sequence_Condicional(ISerializationContext context, Condicional semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -168,7 +168,7 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Else returns Condicional
 	 *
 	 * Constraint:
-	 *     linea+=Linea+
+	 *     validador+=Linea+
 	 */
 	protected void sequence_Else(ISerializationContext context, Condicional semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -273,16 +273,10 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     ExpresionReferenciada returns ExpresionReferenciada
 	 *
 	 * Constraint:
-	 *     referencia=[NamedElement|EString]
+	 *     (id=EInt? referencia=[NamedElement|EString])
 	 */
 	protected void sequence_ExpresionReferenciada(ISerializationContext context, ExpresionReferenciada semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, BlockchainPackage.Literals.EXPRESION_REFERENCIADA__REFERENCIA) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BlockchainPackage.Literals.EXPRESION_REFERENCIADA__REFERENCIA));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getExpresionReferenciadaAccess().getReferenciaNamedElementEStringParserRuleCall_1_0_1(), semanticObject.eGet(BlockchainPackage.Literals.EXPRESION_REFERENCIADA__REFERENCIA, false));
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -344,7 +338,7 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Operacion returns Operacion
 	 *
 	 * Constraint:
-	 *     (esUserDefined?=EBoolean+ name=EString (parametros+=Parametro parametros+=Parametro*)? retorno=[TipoDato|EString]? lineas+=Linea*)
+	 *     (esUserDefined?=EBoolean? name=EString (parametros+=Parametro parametros+=Parametro*)? retorno=[TipoDato|EString]? lineas+=Linea*)
 	 */
 	protected void sequence_Operacion(ISerializationContext context, Operacion semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
