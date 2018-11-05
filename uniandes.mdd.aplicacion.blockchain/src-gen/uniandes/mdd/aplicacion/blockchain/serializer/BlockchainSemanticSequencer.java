@@ -56,8 +56,16 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 				sequence_Atributo(context, (Atributo) semanticObject); 
 				return; 
 			case BlockchainPackage.CONDICIONAL:
-				sequence_Condicional(context, (Condicional) semanticObject); 
-				return; 
+				if (rule == grammarAccess.getLineaRule()
+						|| rule == grammarAccess.getCondicionalRule()) {
+					sequence_Condicional(context, (Condicional) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getElseRule()) {
+					sequence_Else(context, (Condicional) semanticObject); 
+					return; 
+				}
+				else break;
 			case BlockchainPackage.ENTIDAD:
 				sequence_Entidad(context, (Entidad) semanticObject); 
 				return; 
@@ -113,7 +121,7 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Aplicacion returns Aplicacion
 	 *
 	 * Constraint:
-	 *     (name=EString (smartcontract+=SmartContract smartcontract+=SmartContract*)? (tipodato+=TipoDato tipodato+=TipoDato*)*)
+	 *     (name=EString (smartcontract+=SmartContract smartcontract+=SmartContract*)? tipodato+=TipoDato*)
 	 */
 	protected void sequence_Aplicacion(ISerializationContext context, Aplicacion semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -122,6 +130,7 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     NamedElement returns Atributo
 	 *     Atributo returns Atributo
 	 *
 	 * Constraint:
@@ -131,8 +140,8 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, BlockchainPackage.Literals.ATRIBUTO__TIPODATO) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BlockchainPackage.Literals.ATRIBUTO__TIPODATO));
-			if (transientValues.isValueTransient(semanticObject, BlockchainPackage.Literals.ATRIBUTO__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BlockchainPackage.Literals.ATRIBUTO__NAME));
+			if (transientValues.isValueTransient(semanticObject, BlockchainPackage.Literals.NAMED_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BlockchainPackage.Literals.NAMED_ELEMENT__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getAtributoAccess().getTipodatoTipoDatoEStringParserRuleCall_0_0_1(), semanticObject.eGet(BlockchainPackage.Literals.ATRIBUTO__TIPODATO, false));
@@ -143,19 +152,25 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Sentencia returns Condicional
+	 *     Linea returns Condicional
 	 *     Condicional returns Condicional
 	 *
 	 * Constraint:
-	 *     (
-	 *         tipoCondicional=TipoCondicion? 
-	 *         expresionlogica=ExpresionLogica 
-	 *         sentencias+=Sentencia 
-	 *         sentencias+=Sentencia* 
-	 *         (else+=Condicional else+=Condicional*)?
-	 *     )
+	 *     (expresionlogica=ExpresionLogica linea+=Linea+ else=Else?)
 	 */
 	protected void sequence_Condicional(ISerializationContext context, Condicional semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Else returns Condicional
+	 *
+	 * Constraint:
+	 *     linea+=Linea+
+	 */
+	protected void sequence_Else(ISerializationContext context, Condicional semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -166,7 +181,7 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Entidad returns Entidad
 	 *
 	 * Constraint:
-	 *     (name=EString (atributos+=Atributo atributos+=Atributo*)*)
+	 *     (name=EString (atributos+=Atributo atributos+=Atributo*)?)
 	 */
 	protected void sequence_Entidad(ISerializationContext context, Entidad semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -175,21 +190,21 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Sentencia returns Estado
+	 *     NamedElement returns Estado
 	 *     Estado returns Estado
 	 *
 	 * Constraint:
-	 *     (tipodato=[TipoDato|ID] name=EString)
+	 *     (tipodato=[TipoDato|EString] name=EString)
 	 */
 	protected void sequence_Estado(ISerializationContext context, Estado semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, BlockchainPackage.Literals.ESTADO__TIPODATO) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BlockchainPackage.Literals.ESTADO__TIPODATO));
-			if (transientValues.isValueTransient(semanticObject, BlockchainPackage.Literals.ESTADO__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BlockchainPackage.Literals.ESTADO__NAME));
+			if (transientValues.isValueTransient(semanticObject, BlockchainPackage.Literals.NAMED_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BlockchainPackage.Literals.NAMED_ELEMENT__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getEstadoAccess().getTipodatoTipoDatoIDTerminalRuleCall_1_0_1(), semanticObject.eGet(BlockchainPackage.Literals.ESTADO__TIPODATO, false));
+		feeder.accept(grammarAccess.getEstadoAccess().getTipodatoTipoDatoEStringParserRuleCall_1_0_1(), semanticObject.eGet(BlockchainPackage.Literals.ESTADO__TIPODATO, false));
 		feeder.accept(grammarAccess.getEstadoAccess().getNameEStringParserRuleCall_2_0(), semanticObject.getName());
 		feeder.finish();
 	}
@@ -197,11 +212,12 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Sentencia returns ExpresionAritmetica
+	 *     Linea returns ExpresionAritmetica
+	 *     Expresion returns ExpresionAritmetica
 	 *     ExpresionAritmetica returns ExpresionAritmetica
 	 *
 	 * Constraint:
-	 *     (id=EInt? ladoIzq=[Sentencia|EString] operador=Operador+ ladoDer=[Sentencia|EString])
+	 *     (izq=Expresion operador=Operador? der=Expresion)
 	 */
 	protected void sequence_ExpresionAritmetica(ISerializationContext context, ExpresionAritmetica semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -210,10 +226,12 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     Linea returns ExpresionBoolean
+	 *     Expresion returns ExpresionBoolean
 	 *     ExpresionBoolean returns ExpresionBoolean
 	 *
 	 * Constraint:
-	 *     value?='value'?
+	 *     value?=EBoolean?
 	 */
 	protected void sequence_ExpresionBoolean(ISerializationContext context, ExpresionBoolean semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -222,11 +240,12 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Sentencia returns ExpresionLogica
+	 *     Linea returns ExpresionLogica
+	 *     Expresion returns ExpresionLogica
 	 *     ExpresionLogica returns ExpresionLogica
 	 *
 	 * Constraint:
-	 *     (id=EInt? ladoIzq=[Sentencia|EString] operador=OperadorLogico+ ladoDer=[Sentencia|EString])
+	 *     (izq=Expresion operador=OperadorLogico? der=Expresion)
 	 */
 	protected void sequence_ExpresionLogica(ISerializationContext context, ExpresionLogica semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -235,7 +254,8 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Sentencia returns ExpresionNumerica
+	 *     Linea returns ExpresionNumerica
+	 *     Expresion returns ExpresionNumerica
 	 *     ExpresionNumerica returns ExpresionNumerica
 	 *
 	 * Constraint:
@@ -248,24 +268,32 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Sentencia returns ExpresionReferenciada
+	 *     Linea returns ExpresionReferenciada
+	 *     Expresion returns ExpresionReferenciada
 	 *     ExpresionReferenciada returns ExpresionReferenciada
 	 *
 	 * Constraint:
-	 *     (id=EInt? entReferenciada=[Entidad|EString]? atrReferenciado=[Atributo|EString]?)
+	 *     referencia=[NamedElement|EString]
 	 */
 	protected void sequence_ExpresionReferenciada(ISerializationContext context, ExpresionReferenciada semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, BlockchainPackage.Literals.EXPRESION_REFERENCIADA__REFERENCIA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BlockchainPackage.Literals.EXPRESION_REFERENCIADA__REFERENCIA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getExpresionReferenciadaAccess().getReferenciaNamedElementEStringParserRuleCall_1_0_1(), semanticObject.eGet(BlockchainPackage.Literals.EXPRESION_REFERENCIADA__REFERENCIA, false));
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     Sentencia returns ExpresionRelacional
+	 *     Linea returns ExpresionRelacional
+	 *     Expresion returns ExpresionRelacional
 	 *     ExpresionRelacional returns ExpresionRelacional
 	 *
 	 * Constraint:
-	 *     (id=EInt? ladoIzq=[Sentencia|EString] operadorRelacional=OperadorRelacion? ladoDer=[Sentencia|EString])
+	 *     (izq=Expresion operadorRelacional=OperadorRelacion? der=Expresion)
 	 */
 	protected void sequence_ExpresionRelacional(ISerializationContext context, ExpresionRelacional semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -274,6 +302,8 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     Linea returns ExpresionTexto
+	 *     Expresion returns ExpresionTexto
 	 *     ExpresionTexto returns ExpresionTexto
 	 *
 	 * Constraint:
@@ -290,21 +320,21 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Mapa returns Mapa
 	 *
 	 * Constraint:
-	 *     (name=EString tipoDatoKey=[TipoDato|EString] tipoDatoValue=[TipoDato|EString])
+	 *     (tipoDatoKey=[TipoDato|EString] tipoDatoValue=[TipoDato|EString] name=EString)
 	 */
 	protected void sequence_Mapa(ISerializationContext context, Mapa semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, BlockchainPackage.Literals.TIPO_DATO__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BlockchainPackage.Literals.TIPO_DATO__NAME));
 			if (transientValues.isValueTransient(semanticObject, BlockchainPackage.Literals.MAPA__TIPO_DATO_KEY) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BlockchainPackage.Literals.MAPA__TIPO_DATO_KEY));
 			if (transientValues.isValueTransient(semanticObject, BlockchainPackage.Literals.MAPA__TIPO_DATO_VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BlockchainPackage.Literals.MAPA__TIPO_DATO_VALUE));
+			if (transientValues.isValueTransient(semanticObject, BlockchainPackage.Literals.TIPO_DATO__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BlockchainPackage.Literals.TIPO_DATO__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMapaAccess().getNameEStringParserRuleCall_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getMapaAccess().getTipoDatoKeyTipoDatoEStringParserRuleCall_4_0_1(), semanticObject.eGet(BlockchainPackage.Literals.MAPA__TIPO_DATO_KEY, false));
-		feeder.accept(grammarAccess.getMapaAccess().getTipoDatoValueTipoDatoEStringParserRuleCall_6_0_1(), semanticObject.eGet(BlockchainPackage.Literals.MAPA__TIPO_DATO_VALUE, false));
+		feeder.accept(grammarAccess.getMapaAccess().getTipoDatoKeyTipoDatoEStringParserRuleCall_2_0_1(), semanticObject.eGet(BlockchainPackage.Literals.MAPA__TIPO_DATO_KEY, false));
+		feeder.accept(grammarAccess.getMapaAccess().getTipoDatoValueTipoDatoEStringParserRuleCall_4_0_1(), semanticObject.eGet(BlockchainPackage.Literals.MAPA__TIPO_DATO_VALUE, false));
+		feeder.accept(grammarAccess.getMapaAccess().getNameEStringParserRuleCall_7_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
@@ -314,13 +344,7 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Operacion returns Operacion
 	 *
 	 * Constraint:
-	 *     (
-	 *         esUserDefined?=EBoolean+ 
-	 *         name=EString 
-	 *         (parametros+=Parametro parametros+=Parametro*)? 
-	 *         retorno=[TipoDato|EString]? 
-	 *         (sentencia+=Sentencia sentencia+=Sentencia*)?
-	 *     )
+	 *     (esUserDefined?=EBoolean+ name=EString (parametros+=Parametro parametros+=Parametro*)? retorno=[TipoDato|EString]? lineas+=Linea*)
 	 */
 	protected void sequence_Operacion(ISerializationContext context, Operacion semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -329,7 +353,7 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Sentencia returns Parametro
+	 *     NamedElement returns Parametro
 	 *     Parametro returns Parametro
 	 *
 	 * Constraint:
@@ -339,8 +363,8 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, BlockchainPackage.Literals.PARAMETRO__TIPODATO) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BlockchainPackage.Literals.PARAMETRO__TIPODATO));
-			if (transientValues.isValueTransient(semanticObject, BlockchainPackage.Literals.PARAMETRO__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BlockchainPackage.Literals.PARAMETRO__NAME));
+			if (transientValues.isValueTransient(semanticObject, BlockchainPackage.Literals.NAMED_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BlockchainPackage.Literals.NAMED_ELEMENT__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getParametroAccess().getTipodatoTipoDatoEStringParserRuleCall_0_0_1(), semanticObject.eGet(BlockchainPackage.Literals.PARAMETRO__TIPODATO, false));
@@ -355,7 +379,7 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Primitivo returns Primitivo
 	 *
 	 * Constraint:
-	 *     (tipo=DatoPrimitivo+ name=EString)
+	 *     (tipo=DatoPrimitivo? name=EString)
 	 */
 	protected void sequence_Primitivo(ISerializationContext context, Primitivo semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -367,7 +391,7 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     SmartContract returns SmartContract
 	 *
 	 * Constraint:
-	 *     (name=EString (entidades+=Entidad entidades+=Entidad*)* (estado+=Estado estado+=Estado*)* (operaciones+=Operacion operaciones+=Operacion*)*)
+	 *     (name=EString (entidades+=Entidad entidades+=Entidad*)? (estado+=Estado estado+=Estado*)? (operaciones+=Operacion operaciones+=Operacion*)?)
 	 */
 	protected void sequence_SmartContract(ISerializationContext context, SmartContract semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -376,23 +400,15 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Sentencia returns Variable
+	 *     Linea returns Variable
+	 *     NamedElement returns Variable
 	 *     Variable returns Variable
 	 *
 	 * Constraint:
-	 *     (tipodato=[TipoDato|EString] name=EString)
+	 *     (tipodato=[TipoDato|EString] name=EString?)
 	 */
 	protected void sequence_Variable(ISerializationContext context, Variable semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, BlockchainPackage.Literals.VARIABLE__TIPODATO) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BlockchainPackage.Literals.VARIABLE__TIPODATO));
-			if (transientValues.isValueTransient(semanticObject, BlockchainPackage.Literals.VARIABLE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BlockchainPackage.Literals.VARIABLE__NAME));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVariableAccess().getTipodatoTipoDatoEStringParserRuleCall_1_0_1(), semanticObject.eGet(BlockchainPackage.Literals.VARIABLE__TIPODATO, false));
-		feeder.accept(grammarAccess.getVariableAccess().getNameEStringParserRuleCall_3_0(), semanticObject.getName());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

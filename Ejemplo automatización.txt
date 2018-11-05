@@ -26,7 +26,7 @@ Aplicacion AplicacionBlockchain
         }
         Operacion CrearVehiculo(STRING Marca, STRING Modelo, STRING Linea, NUMERICO Cilindraje, STRING Placa, NUMERICO Precio)
         {
-            Vehiculo vehiculo = new Vehiculo()
+            Vehiculo vehiculo
             vehiculo.Marca = Marca
             vehiculo.Modelo = Modelo
             vehiculo.Linea = Linea
@@ -45,9 +45,10 @@ Aplicacion AplicacionBlockchain
                 VehiculosBaratos GET Placa = vehiculo
             }
         }
-        Operacion ActualizarVehiculo(NUMERICO Cilindraje, NUMERICO Precio)
+        Operacion ActualizarVehiculo(String Placa,NUMERICO Cilindraje, NUMERICO Precio)
         {
-            Vehiculo vehiculo = Vehiculos GET Placa
+            Vehiculo vehiculo 
+	    vehiculo = Vehiculos GET Placa
             vehiculo.Cilindraje = Cilindraje
             vehiculo.Precio = Precio
             vehiculo.Nuevo = false

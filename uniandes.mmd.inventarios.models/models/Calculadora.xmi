@@ -9,16 +9,6 @@
       <parametros name="Nombre" tipodato="//@tipodato.0"/>
       <parametros name="Edad" tipodato="//@tipodato.2"/>
       <parametros name="Person" tipodato="//@smartcontract.0/@entidades.0"/>
-      <sentencia xsi:type="blockchain:Variable" tipodato="//@tipodato.2" name="a"/>
-      <sentencia xsi:type="blockchain:Variable" tipodato="//@tipodato.2" name="b"/>
-      <sentencia xsi:type="blockchain:Variable" tipodato="//@tipodato.2" name="c"/>
-      <sentencia xsi:type="blockchain:Variable" tipodato="//@tipodato.2" name="d"/>
-      <sentencia xsi:type="blockchain:Condicional">
-        <expresionlogica ladoIzq="//@smartcontract.0/@operaciones.0/@sentencia.0" ladoDer="//@smartcontract.0/@operaciones.0/@sentencia.1" id="1"/>
-        <expresionlogica ladoIzq="//@smartcontract.0/@operaciones.0/@sentencia.3" ladoDer="//@smartcontract.0/@operaciones.0/@sentencia.2" id="2" operador="DIFERENTE"/>
-        <expresionlogica ladoIzq="//@smartcontract.0/@operaciones.0/@sentencia.4/@expresionlogica.1" ladoDer="//@smartcontract.0/@operaciones.0/@sentencia.4/@expresionlogica.0" id="3" operador="OR"/>
-      </sentencia>
-      <sentencia xsi:type="blockchain:ExpresionReferenciada" tipodato="//@smartcontract.0/@entidades.0"/>
     </operaciones>
   </smartcontract>
   <tipodato xsi:type="blockchain:Primitivo"/>

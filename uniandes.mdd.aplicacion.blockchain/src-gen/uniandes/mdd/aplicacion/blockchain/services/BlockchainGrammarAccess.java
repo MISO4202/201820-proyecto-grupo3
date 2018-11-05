@@ -38,31 +38,24 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
 		private final Assignment cSmartcontractAssignment_4_0 = (Assignment)cGroup_4.eContents().get(0);
 		private final RuleCall cSmartcontractSmartContractParserRuleCall_4_0_0 = (RuleCall)cSmartcontractAssignment_4_0.eContents().get(0);
-		private final Group cGroup_4_1 = (Group)cGroup_4.eContents().get(1);
-		private final Keyword cCommaKeyword_4_1_0 = (Keyword)cGroup_4_1.eContents().get(0);
-		private final Assignment cSmartcontractAssignment_4_1_1 = (Assignment)cGroup_4_1.eContents().get(1);
-		private final RuleCall cSmartcontractSmartContractParserRuleCall_4_1_1_0 = (RuleCall)cSmartcontractAssignment_4_1_1.eContents().get(0);
+		private final Assignment cSmartcontractAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cSmartcontractSmartContractParserRuleCall_4_1_0 = (RuleCall)cSmartcontractAssignment_4_1.eContents().get(0);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cTipoDatoKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Keyword cTipodatoKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
 		private final Assignment cTipodatoAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
 		private final RuleCall cTipodatoTipoDatoParserRuleCall_5_1_0 = (RuleCall)cTipodatoAssignment_5_1.eContents().get(0);
-		private final Group cGroup_5_2 = (Group)cGroup_5.eContents().get(2);
-		private final Keyword cCommaKeyword_5_2_0 = (Keyword)cGroup_5_2.eContents().get(0);
-		private final Assignment cTipodatoAssignment_5_2_1 = (Assignment)cGroup_5_2.eContents().get(1);
-		private final RuleCall cTipodatoTipoDatoParserRuleCall_5_2_1_0 = (RuleCall)cTipodatoAssignment_5_2_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Aplicacion:
 		//	{Aplicacion}
 		//	'Aplicacion'
 		//	name=EString
-		//	'{' (smartcontract+=SmartContract ("," smartcontract+=SmartContract)*)? ('TipoDato' tipodato+=TipoDato (","
-		//	tipodato+=TipoDato)*)*
+		//	'{' (smartcontract+=SmartContract smartcontract+=SmartContract*)? ('tipodato' tipodato+=TipoDato)*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Aplicacion} 'Aplicacion' name=EString '{' (smartcontract+=SmartContract ("," smartcontract+=SmartContract)*)?
-		//('TipoDato' tipodato+=TipoDato ("," tipodato+=TipoDato)*)* '}'
+		//{Aplicacion} 'Aplicacion' name=EString '{' (smartcontract+=SmartContract smartcontract+=SmartContract*)? ('tipodato'
+		//tipodato+=TipoDato)* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{Aplicacion}
@@ -80,7 +73,7 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 		
-		//(smartcontract+=SmartContract ("," smartcontract+=SmartContract)*)?
+		//(smartcontract+=SmartContract smartcontract+=SmartContract*)?
 		public Group getGroup_4() { return cGroup_4; }
 		
 		//smartcontract+=SmartContract
@@ -89,41 +82,23 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		//SmartContract
 		public RuleCall getSmartcontractSmartContractParserRuleCall_4_0_0() { return cSmartcontractSmartContractParserRuleCall_4_0_0; }
 		
-		//("," smartcontract+=SmartContract)*
-		public Group getGroup_4_1() { return cGroup_4_1; }
-		
-		//","
-		public Keyword getCommaKeyword_4_1_0() { return cCommaKeyword_4_1_0; }
-		
-		//smartcontract+=SmartContract
-		public Assignment getSmartcontractAssignment_4_1_1() { return cSmartcontractAssignment_4_1_1; }
+		//smartcontract+=SmartContract*
+		public Assignment getSmartcontractAssignment_4_1() { return cSmartcontractAssignment_4_1; }
 		
 		//SmartContract
-		public RuleCall getSmartcontractSmartContractParserRuleCall_4_1_1_0() { return cSmartcontractSmartContractParserRuleCall_4_1_1_0; }
+		public RuleCall getSmartcontractSmartContractParserRuleCall_4_1_0() { return cSmartcontractSmartContractParserRuleCall_4_1_0; }
 		
-		//('TipoDato' tipodato+=TipoDato ("," tipodato+=TipoDato)*)*
+		//('tipodato' tipodato+=TipoDato)*
 		public Group getGroup_5() { return cGroup_5; }
 		
-		//'TipoDato'
-		public Keyword getTipoDatoKeyword_5_0() { return cTipoDatoKeyword_5_0; }
+		//'tipodato'
+		public Keyword getTipodatoKeyword_5_0() { return cTipodatoKeyword_5_0; }
 		
 		//tipodato+=TipoDato
 		public Assignment getTipodatoAssignment_5_1() { return cTipodatoAssignment_5_1; }
 		
 		//TipoDato
 		public RuleCall getTipodatoTipoDatoParserRuleCall_5_1_0() { return cTipodatoTipoDatoParserRuleCall_5_1_0; }
-		
-		//("," tipodato+=TipoDato)*
-		public Group getGroup_5_2() { return cGroup_5_2; }
-		
-		//","
-		public Keyword getCommaKeyword_5_2_0() { return cCommaKeyword_5_2_0; }
-		
-		//tipodato+=TipoDato
-		public Assignment getTipodatoAssignment_5_2_1() { return cTipodatoAssignment_5_2_1; }
-		
-		//TipoDato
-		public RuleCall getTipodatoTipoDatoParserRuleCall_5_2_1_0() { return cTipodatoTipoDatoParserRuleCall_5_2_1_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
@@ -151,62 +126,122 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		//Mapa
 		public RuleCall getMapaParserRuleCall_2() { return cMapaParserRuleCall_2; }
 	}
-	public class SentenciaElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.Sentencia");
+	public class LineaElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.Linea");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cParametroParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cEstadoParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cExpresionLogicaParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cExpresionAritmeticaParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cVariableParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cCondicionalParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
-		private final RuleCall cExpresionNumericaParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
-		private final RuleCall cEStringParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
-		private final RuleCall cEBooleanParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
-		private final RuleCall cExpresionReferenciadaParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
-		private final RuleCall cExpresionRelacionalParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cExpresionLogicaParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cExpresionAritmeticaParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cVariableParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cCondicionalParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cExpresionNumericaParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cExpresionTextoParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cExpresionBooleanParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cExpresionReferenciadaParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cExpresionRelacionalParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
 		
-		//Sentencia:
-		//	Parametro | Estado | ExpresionLogica | ExpresionAritmetica | Variable | Condicional | ExpresionNumerica | EString |
-		//	EBoolean | ExpresionReferenciada | ExpresionRelacional;
+		//Linea:
+		//	ExpresionLogica | ExpresionAritmetica | Variable | Condicional | ExpresionNumerica | ExpresionTexto |
+		//	ExpresionBoolean | ExpresionReferenciada | ExpresionRelacional;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//Parametro | Estado | ExpresionLogica | ExpresionAritmetica | Variable | Condicional | ExpresionNumerica | EString |
-		//EBoolean | ExpresionReferenciada | ExpresionRelacional
+		//ExpresionLogica | ExpresionAritmetica | Variable | Condicional | ExpresionNumerica | ExpresionTexto | ExpresionBoolean |
+		//ExpresionReferenciada | ExpresionRelacional
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//Parametro
-		public RuleCall getParametroParserRuleCall_0() { return cParametroParserRuleCall_0; }
-		
-		//Estado
-		public RuleCall getEstadoParserRuleCall_1() { return cEstadoParserRuleCall_1; }
-		
 		//ExpresionLogica
-		public RuleCall getExpresionLogicaParserRuleCall_2() { return cExpresionLogicaParserRuleCall_2; }
+		public RuleCall getExpresionLogicaParserRuleCall_0() { return cExpresionLogicaParserRuleCall_0; }
 		
 		//ExpresionAritmetica
-		public RuleCall getExpresionAritmeticaParserRuleCall_3() { return cExpresionAritmeticaParserRuleCall_3; }
+		public RuleCall getExpresionAritmeticaParserRuleCall_1() { return cExpresionAritmeticaParserRuleCall_1; }
 		
 		//Variable
-		public RuleCall getVariableParserRuleCall_4() { return cVariableParserRuleCall_4; }
+		public RuleCall getVariableParserRuleCall_2() { return cVariableParserRuleCall_2; }
 		
 		//Condicional
-		public RuleCall getCondicionalParserRuleCall_5() { return cCondicionalParserRuleCall_5; }
+		public RuleCall getCondicionalParserRuleCall_3() { return cCondicionalParserRuleCall_3; }
 		
 		//ExpresionNumerica
-		public RuleCall getExpresionNumericaParserRuleCall_6() { return cExpresionNumericaParserRuleCall_6; }
+		public RuleCall getExpresionNumericaParserRuleCall_4() { return cExpresionNumericaParserRuleCall_4; }
 		
-		//EString
-		public RuleCall getEStringParserRuleCall_7() { return cEStringParserRuleCall_7; }
+		//ExpresionTexto
+		public RuleCall getExpresionTextoParserRuleCall_5() { return cExpresionTextoParserRuleCall_5; }
 		
-		//EBoolean
-		public RuleCall getEBooleanParserRuleCall_8() { return cEBooleanParserRuleCall_8; }
+		//ExpresionBoolean
+		public RuleCall getExpresionBooleanParserRuleCall_6() { return cExpresionBooleanParserRuleCall_6; }
 		
 		//ExpresionReferenciada
-		public RuleCall getExpresionReferenciadaParserRuleCall_9() { return cExpresionReferenciadaParserRuleCall_9; }
+		public RuleCall getExpresionReferenciadaParserRuleCall_7() { return cExpresionReferenciadaParserRuleCall_7; }
 		
 		//ExpresionRelacional
-		public RuleCall getExpresionRelacionalParserRuleCall_10() { return cExpresionRelacionalParserRuleCall_10; }
+		public RuleCall getExpresionRelacionalParserRuleCall_8() { return cExpresionRelacionalParserRuleCall_8; }
+	}
+	public class ExpresionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.Expresion");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cExpresionLogicaParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cExpresionAritmeticaParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cExpresionNumericaParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cExpresionTextoParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cExpresionBooleanParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cExpresionReferenciadaParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cExpresionRelacionalParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		
+		//Expresion:
+		//	ExpresionLogica | ExpresionAritmetica | ExpresionNumerica | ExpresionTexto | ExpresionBoolean | ExpresionReferenciada
+		//	| ExpresionRelacional;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//ExpresionLogica | ExpresionAritmetica | ExpresionNumerica | ExpresionTexto | ExpresionBoolean | ExpresionReferenciada |
+		//ExpresionRelacional
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//ExpresionLogica
+		public RuleCall getExpresionLogicaParserRuleCall_0() { return cExpresionLogicaParserRuleCall_0; }
+		
+		//ExpresionAritmetica
+		public RuleCall getExpresionAritmeticaParserRuleCall_1() { return cExpresionAritmeticaParserRuleCall_1; }
+		
+		//ExpresionNumerica
+		public RuleCall getExpresionNumericaParserRuleCall_2() { return cExpresionNumericaParserRuleCall_2; }
+		
+		//ExpresionTexto
+		public RuleCall getExpresionTextoParserRuleCall_3() { return cExpresionTextoParserRuleCall_3; }
+		
+		//ExpresionBoolean
+		public RuleCall getExpresionBooleanParserRuleCall_4() { return cExpresionBooleanParserRuleCall_4; }
+		
+		//ExpresionReferenciada
+		public RuleCall getExpresionReferenciadaParserRuleCall_5() { return cExpresionReferenciadaParserRuleCall_5; }
+		
+		//ExpresionRelacional
+		public RuleCall getExpresionRelacionalParserRuleCall_6() { return cExpresionRelacionalParserRuleCall_6; }
+	}
+	public class NamedElementElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.NamedElement");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cAtributoParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cParametroParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cEstadoParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cVariableParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		
+		//NamedElement:
+		//	Atributo | Parametro | Estado | Variable;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//Atributo | Parametro | Estado | Variable
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//Atributo
+		public RuleCall getAtributoParserRuleCall_0() { return cAtributoParserRuleCall_0; }
+		
+		//Parametro
+		public RuleCall getParametroParserRuleCall_1() { return cParametroParserRuleCall_1; }
+		
+		//Estado
+		public RuleCall getEstadoParserRuleCall_2() { return cEstadoParserRuleCall_2; }
+		
+		//Variable
+		public RuleCall getVariableParserRuleCall_3() { return cVariableParserRuleCall_3; }
 	}
 	public class SmartContractElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.SmartContract");
@@ -223,29 +258,25 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
 		private final Assignment cEstadoAssignment_4_0 = (Assignment)cGroup_4.eContents().get(0);
 		private final RuleCall cEstadoEstadoParserRuleCall_4_0_0 = (RuleCall)cEstadoAssignment_4_0.eContents().get(0);
-		private final Group cGroup_4_1 = (Group)cGroup_4.eContents().get(1);
-		private final Keyword cCommaKeyword_4_1_0 = (Keyword)cGroup_4_1.eContents().get(0);
-		private final Assignment cEstadoAssignment_4_1_1 = (Assignment)cGroup_4_1.eContents().get(1);
-		private final RuleCall cEstadoEstadoParserRuleCall_4_1_1_0 = (RuleCall)cEstadoAssignment_4_1_1.eContents().get(0);
+		private final Assignment cEstadoAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cEstadoEstadoParserRuleCall_4_1_0 = (RuleCall)cEstadoAssignment_4_1.eContents().get(0);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final Assignment cOperacionesAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
 		private final RuleCall cOperacionesOperacionParserRuleCall_5_0_0 = (RuleCall)cOperacionesAssignment_5_0.eContents().get(0);
-		private final Group cGroup_5_1 = (Group)cGroup_5.eContents().get(1);
-		private final Keyword cCommaKeyword_5_1_0 = (Keyword)cGroup_5_1.eContents().get(0);
-		private final Assignment cOperacionesAssignment_5_1_1 = (Assignment)cGroup_5_1.eContents().get(1);
-		private final RuleCall cOperacionesOperacionParserRuleCall_5_1_1_0 = (RuleCall)cOperacionesAssignment_5_1_1.eContents().get(0);
+		private final Assignment cOperacionesAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cOperacionesOperacionParserRuleCall_5_1_0 = (RuleCall)cOperacionesAssignment_5_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//SmartContract:
 		//	'SmartContract'
 		//	name=EString
-		//	'{' (entidades+=Entidad entidades+=Entidad*)* (estado+=Estado ("," estado+=Estado)*)* (operaciones+=Operacion (","
-		//	operaciones+=Operacion)*)*
+		//	'{' (entidades+=Entidad entidades+=Entidad*)? (estado+=Estado estado+=Estado*)? (operaciones+=Operacion
+		//	operaciones+=Operacion*)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'SmartContract' name=EString '{' (entidades+=Entidad entidades+=Entidad*)* (estado+=Estado ("," estado+=Estado)*)*
-		//(operaciones+=Operacion ("," operaciones+=Operacion)*)* '}'
+		//'SmartContract' name=EString '{' (entidades+=Entidad entidades+=Entidad*)? (estado+=Estado estado+=Estado*)?
+		//(operaciones+=Operacion operaciones+=Operacion*)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'SmartContract'
@@ -260,7 +291,7 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//(entidades+=Entidad entidades+=Entidad*)*
+		//(entidades+=Entidad entidades+=Entidad*)?
 		public Group getGroup_3() { return cGroup_3; }
 		
 		//entidades+=Entidad
@@ -275,7 +306,7 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		//Entidad
 		public RuleCall getEntidadesEntidadParserRuleCall_3_1_0() { return cEntidadesEntidadParserRuleCall_3_1_0; }
 		
-		//(estado+=Estado ("," estado+=Estado)*)*
+		//(estado+=Estado estado+=Estado*)?
 		public Group getGroup_4() { return cGroup_4; }
 		
 		//estado+=Estado
@@ -284,19 +315,13 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		//Estado
 		public RuleCall getEstadoEstadoParserRuleCall_4_0_0() { return cEstadoEstadoParserRuleCall_4_0_0; }
 		
-		//("," estado+=Estado)*
-		public Group getGroup_4_1() { return cGroup_4_1; }
-		
-		//","
-		public Keyword getCommaKeyword_4_1_0() { return cCommaKeyword_4_1_0; }
-		
-		//estado+=Estado
-		public Assignment getEstadoAssignment_4_1_1() { return cEstadoAssignment_4_1_1; }
+		//estado+=Estado*
+		public Assignment getEstadoAssignment_4_1() { return cEstadoAssignment_4_1; }
 		
 		//Estado
-		public RuleCall getEstadoEstadoParserRuleCall_4_1_1_0() { return cEstadoEstadoParserRuleCall_4_1_1_0; }
+		public RuleCall getEstadoEstadoParserRuleCall_4_1_0() { return cEstadoEstadoParserRuleCall_4_1_0; }
 		
-		//(operaciones+=Operacion ("," operaciones+=Operacion)*)*
+		//(operaciones+=Operacion operaciones+=Operacion*)?
 		public Group getGroup_5() { return cGroup_5; }
 		
 		//operaciones+=Operacion
@@ -305,17 +330,11 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		//Operacion
 		public RuleCall getOperacionesOperacionParserRuleCall_5_0_0() { return cOperacionesOperacionParserRuleCall_5_0_0; }
 		
-		//("," operaciones+=Operacion)*
-		public Group getGroup_5_1() { return cGroup_5_1; }
-		
-		//","
-		public Keyword getCommaKeyword_5_1_0() { return cCommaKeyword_5_1_0; }
-		
-		//operaciones+=Operacion
-		public Assignment getOperacionesAssignment_5_1_1() { return cOperacionesAssignment_5_1_1; }
+		//operaciones+=Operacion*
+		public Assignment getOperacionesAssignment_5_1() { return cOperacionesAssignment_5_1; }
 		
 		//Operacion
-		public RuleCall getOperacionesOperacionParserRuleCall_5_1_1_0() { return cOperacionesOperacionParserRuleCall_5_1_1_0; }
+		public RuleCall getOperacionesOperacionParserRuleCall_5_1_0() { return cOperacionesOperacionParserRuleCall_5_1_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
@@ -358,11 +377,11 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		//	{Entidad}
 		//	'Entidad'
 		//	name=EString
-		//	'{' (atributos+=Atributo atributos+=Atributo*)*
+		//	'{' (atributos+=Atributo atributos+=Atributo*)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Entidad} 'Entidad' name=EString '{' (atributos+=Atributo atributos+=Atributo*)* '}'
+		//{Entidad} 'Entidad' name=EString '{' (atributos+=Atributo atributos+=Atributo*)? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{Entidad}
@@ -380,7 +399,7 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 		
-		//(atributos+=Atributo atributos+=Atributo*)*
+		//(atributos+=Atributo atributos+=Atributo*)?
 		public Group getGroup_4() { return cGroup_4; }
 		
 		//atributos+=Atributo
@@ -425,11 +444,8 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRetornoTipoDatoEStringParserRuleCall_7_1_0_1 = (RuleCall)cRetornoTipoDatoCrossReference_7_1_0.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		private final Keyword cReturnKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
-		private final Assignment cSentenciaAssignment_10_0 = (Assignment)cGroup_10.eContents().get(0);
-		private final RuleCall cSentenciaSentenciaParserRuleCall_10_0_0 = (RuleCall)cSentenciaAssignment_10_0.eContents().get(0);
-		private final Assignment cSentenciaAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
-		private final RuleCall cSentenciaSentenciaParserRuleCall_10_1_0 = (RuleCall)cSentenciaAssignment_10_1.eContents().get(0);
+		private final Assignment cLineasAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cLineasLineaParserRuleCall_10_0 = (RuleCall)cLineasAssignment_10.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
 		//Operacion:
@@ -439,13 +455,12 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		//	'(' (parametros+=Parametro ("," parametros+=Parametro)*)?
 		//	')' (':' retorno=[TipoDato|EString])?
 		//	'{'
-		//	'return'? (sentencia+=Sentencia sentencia+=Sentencia*)?
+		//	'return'? lineas+=Linea*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{Operacion} 'Operacion' ('isUd=' esUserDefined?=EBoolean)+ name=EString '(' (parametros+=Parametro (","
-		//parametros+=Parametro)*)? ')' (':' retorno=[TipoDato|EString])? '{' 'return'? (sentencia+=Sentencia
-		//sentencia+=Sentencia*)? '}'
+		//parametros+=Parametro)*)? ')' (':' retorno=[TipoDato|EString])? '{' 'return'? lineas+=Linea* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{Operacion}
@@ -520,20 +535,11 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		//'return'?
 		public Keyword getReturnKeyword_9() { return cReturnKeyword_9; }
 		
-		//(sentencia+=Sentencia sentencia+=Sentencia*)?
-		public Group getGroup_10() { return cGroup_10; }
+		//lineas+=Linea*
+		public Assignment getLineasAssignment_10() { return cLineasAssignment_10; }
 		
-		//sentencia+=Sentencia
-		public Assignment getSentenciaAssignment_10_0() { return cSentenciaAssignment_10_0; }
-		
-		//Sentencia
-		public RuleCall getSentenciaSentenciaParserRuleCall_10_0_0() { return cSentenciaSentenciaParserRuleCall_10_0_0; }
-		
-		//sentencia+=Sentencia*
-		public Assignment getSentenciaAssignment_10_1() { return cSentenciaAssignment_10_1; }
-		
-		//Sentencia
-		public RuleCall getSentenciaSentenciaParserRuleCall_10_1_0() { return cSentenciaSentenciaParserRuleCall_10_1_0; }
+		//Linea
+		public RuleCall getLineasLineaParserRuleCall_10_0() { return cLineasLineaParserRuleCall_10_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
@@ -544,29 +550,29 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEstadoKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cTipodatoAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final CrossReference cTipodatoTipoDatoCrossReference_1_0 = (CrossReference)cTipodatoAssignment_1.eContents().get(0);
-		private final RuleCall cTipodatoTipoDatoIDTerminalRuleCall_1_0_1 = (RuleCall)cTipodatoTipoDatoCrossReference_1_0.eContents().get(1);
+		private final RuleCall cTipodatoTipoDatoEStringParserRuleCall_1_0_1 = (RuleCall)cTipodatoTipoDatoCrossReference_1_0.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		
 		//Estado:
 		//	'Estado'
-		//	tipodato=[TipoDato] name=EString;
+		//	tipodato=[TipoDato|EString] name=EString;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Estado' tipodato=[TipoDato] name=EString
+		//'Estado' tipodato=[TipoDato|EString] name=EString
 		public Group getGroup() { return cGroup; }
 		
 		//'Estado'
 		public Keyword getEstadoKeyword_0() { return cEstadoKeyword_0; }
 		
-		//tipodato=[TipoDato]
+		//tipodato=[TipoDato|EString]
 		public Assignment getTipodatoAssignment_1() { return cTipodatoAssignment_1; }
 		
-		//[TipoDato]
+		//[TipoDato|EString]
 		public CrossReference getTipodatoTipoDatoCrossReference_1_0() { return cTipodatoTipoDatoCrossReference_1_0; }
 		
-		//ID
-		public RuleCall getTipodatoTipoDatoIDTerminalRuleCall_1_0_1() { return cTipodatoTipoDatoIDTerminalRuleCall_1_0_1; }
+		//EString
+		public RuleCall getTipodatoTipoDatoEStringParserRuleCall_1_0_1() { return cTipodatoTipoDatoEStringParserRuleCall_1_0_1; }
 		
 		//name=EString
 		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
@@ -659,163 +665,116 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.ExpresionLogica");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cExpLogKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cIdKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cIdAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cIdEIntParserRuleCall_2_1_0 = (RuleCall)cIdAssignment_2_1.eContents().get(0);
-		private final Assignment cLadoIzqAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final CrossReference cLadoIzqSentenciaCrossReference_3_0 = (CrossReference)cLadoIzqAssignment_3.eContents().get(0);
-		private final RuleCall cLadoIzqSentenciaEStringParserRuleCall_3_0_1 = (RuleCall)cLadoIzqSentenciaCrossReference_3_0.eContents().get(1);
-		private final Assignment cOperadorAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cOperadorOperadorLogicoEnumRuleCall_4_0 = (RuleCall)cOperadorAssignment_4.eContents().get(0);
-		private final Assignment cLadoDerAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final CrossReference cLadoDerSentenciaCrossReference_5_0 = (CrossReference)cLadoDerAssignment_5.eContents().get(0);
-		private final RuleCall cLadoDerSentenciaEStringParserRuleCall_5_0_1 = (RuleCall)cLadoDerSentenciaCrossReference_5_0.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cIzqAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cIzqExpresionParserRuleCall_1_0 = (RuleCall)cIzqAssignment_1.eContents().get(0);
+		private final Assignment cOperadorAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cOperadorOperadorLogicoEnumRuleCall_2_0 = (RuleCall)cOperadorAssignment_2.eContents().get(0);
+		private final Assignment cDerAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cDerExpresionParserRuleCall_3_0 = (RuleCall)cDerAssignment_3.eContents().get(0);
 		
 		//ExpresionLogica:
 		//	'ExpLog'
-		//	'('? ('id' id=EInt)?
-		//	ladoIzq=[Sentencia|EString] operador=OperadorLogico+
-		//	ladoDer=[Sentencia|EString] ')'?;
+		//	//'{'
+		//	izq=Expresion
+		//	operador=OperadorLogico?
+		//	der=Expresion
+		//	//'}'
+		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'ExpLog' '('? ('id' id=EInt)? ladoIzq=[Sentencia|EString] operador=OperadorLogico+ ladoDer=[Sentencia|EString] ')'?
+		//'ExpLog' //'{'
+		//izq=Expresion operador=OperadorLogico? der=Expresion
 		public Group getGroup() { return cGroup; }
 		
 		//'ExpLog'
 		public Keyword getExpLogKeyword_0() { return cExpLogKeyword_0; }
 		
-		//'('?
-		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
+		////'{'
+		//izq=Expresion
+		public Assignment getIzqAssignment_1() { return cIzqAssignment_1; }
 		
-		//('id' id=EInt)?
-		public Group getGroup_2() { return cGroup_2; }
+		//Expresion
+		public RuleCall getIzqExpresionParserRuleCall_1_0() { return cIzqExpresionParserRuleCall_1_0; }
 		
-		//'id'
-		public Keyword getIdKeyword_2_0() { return cIdKeyword_2_0; }
-		
-		//id=EInt
-		public Assignment getIdAssignment_2_1() { return cIdAssignment_2_1; }
-		
-		//EInt
-		public RuleCall getIdEIntParserRuleCall_2_1_0() { return cIdEIntParserRuleCall_2_1_0; }
-		
-		//ladoIzq=[Sentencia|EString]
-		public Assignment getLadoIzqAssignment_3() { return cLadoIzqAssignment_3; }
-		
-		//[Sentencia|EString]
-		public CrossReference getLadoIzqSentenciaCrossReference_3_0() { return cLadoIzqSentenciaCrossReference_3_0; }
-		
-		//EString
-		public RuleCall getLadoIzqSentenciaEStringParserRuleCall_3_0_1() { return cLadoIzqSentenciaEStringParserRuleCall_3_0_1; }
-		
-		//operador=OperadorLogico+
-		public Assignment getOperadorAssignment_4() { return cOperadorAssignment_4; }
+		//operador=OperadorLogico?
+		public Assignment getOperadorAssignment_2() { return cOperadorAssignment_2; }
 		
 		//OperadorLogico
-		public RuleCall getOperadorOperadorLogicoEnumRuleCall_4_0() { return cOperadorOperadorLogicoEnumRuleCall_4_0; }
+		public RuleCall getOperadorOperadorLogicoEnumRuleCall_2_0() { return cOperadorOperadorLogicoEnumRuleCall_2_0; }
 		
-		//ladoDer=[Sentencia|EString]
-		public Assignment getLadoDerAssignment_5() { return cLadoDerAssignment_5; }
+		//der=Expresion
+		public Assignment getDerAssignment_3() { return cDerAssignment_3; }
 		
-		//[Sentencia|EString]
-		public CrossReference getLadoDerSentenciaCrossReference_5_0() { return cLadoDerSentenciaCrossReference_5_0; }
-		
-		//EString
-		public RuleCall getLadoDerSentenciaEStringParserRuleCall_5_0_1() { return cLadoDerSentenciaEStringParserRuleCall_5_0_1; }
-		
-		//')'?
-		public Keyword getRightParenthesisKeyword_6() { return cRightParenthesisKeyword_6; }
+		//Expresion
+		public RuleCall getDerExpresionParserRuleCall_3_0() { return cDerExpresionParserRuleCall_3_0; }
 	}
 	public class ExpresionAritmeticaElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.ExpresionAritmetica");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cExpresionAritmeticaAction_0 = (Action)cGroup.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cIdKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cIdAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cIdEIntParserRuleCall_1_1_0 = (RuleCall)cIdAssignment_1_1.eContents().get(0);
-		private final Assignment cLadoIzqAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cLadoIzqSentenciaCrossReference_2_0 = (CrossReference)cLadoIzqAssignment_2.eContents().get(0);
-		private final RuleCall cLadoIzqSentenciaEStringParserRuleCall_2_0_1 = (RuleCall)cLadoIzqSentenciaCrossReference_2_0.eContents().get(1);
-		private final Assignment cOperadorAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cOperadorOperadorEnumRuleCall_3_0 = (RuleCall)cOperadorAssignment_3.eContents().get(0);
-		private final Assignment cLadoDerAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final CrossReference cLadoDerSentenciaCrossReference_4_0 = (CrossReference)cLadoDerAssignment_4.eContents().get(0);
-		private final RuleCall cLadoDerSentenciaEStringParserRuleCall_4_0_1 = (RuleCall)cLadoDerSentenciaCrossReference_4_0.eContents().get(1);
+		private final Keyword cExpAritKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cIzqAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cIzqExpresionParserRuleCall_1_0 = (RuleCall)cIzqAssignment_1.eContents().get(0);
+		private final Assignment cOperadorAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cOperadorOperadorEnumRuleCall_2_0 = (RuleCall)cOperadorAssignment_2.eContents().get(0);
+		private final Assignment cDerAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cDerExpresionParserRuleCall_3_0 = (RuleCall)cDerAssignment_3.eContents().get(0);
 		
 		//ExpresionAritmetica:
-		//	{ExpresionAritmetica} ('id' id=EInt)?
-		//	ladoIzq=[Sentencia|EString] operador=Operador+
-		//	ladoDer=[Sentencia|EString];
+		//	'ExpArit'
+		//	//'{'
+		//	izq=Expresion
+		//	operador=Operador?
+		//	der=Expresion
+		//	//'}'
+		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{ExpresionAritmetica} ('id' id=EInt)? ladoIzq=[Sentencia|EString] operador=Operador+ ladoDer=[Sentencia|EString]
+		//'ExpArit' //'{'
+		//izq=Expresion operador=Operador? der=Expresion
 		public Group getGroup() { return cGroup; }
 		
-		//{ExpresionAritmetica}
-		public Action getExpresionAritmeticaAction_0() { return cExpresionAritmeticaAction_0; }
+		//'ExpArit'
+		public Keyword getExpAritKeyword_0() { return cExpAritKeyword_0; }
 		
-		//('id' id=EInt)?
-		public Group getGroup_1() { return cGroup_1; }
+		////'{'
+		//izq=Expresion
+		public Assignment getIzqAssignment_1() { return cIzqAssignment_1; }
 		
-		//'id'
-		public Keyword getIdKeyword_1_0() { return cIdKeyword_1_0; }
+		//Expresion
+		public RuleCall getIzqExpresionParserRuleCall_1_0() { return cIzqExpresionParserRuleCall_1_0; }
 		
-		//id=EInt
-		public Assignment getIdAssignment_1_1() { return cIdAssignment_1_1; }
-		
-		//EInt
-		public RuleCall getIdEIntParserRuleCall_1_1_0() { return cIdEIntParserRuleCall_1_1_0; }
-		
-		//ladoIzq=[Sentencia|EString]
-		public Assignment getLadoIzqAssignment_2() { return cLadoIzqAssignment_2; }
-		
-		//[Sentencia|EString]
-		public CrossReference getLadoIzqSentenciaCrossReference_2_0() { return cLadoIzqSentenciaCrossReference_2_0; }
-		
-		//EString
-		public RuleCall getLadoIzqSentenciaEStringParserRuleCall_2_0_1() { return cLadoIzqSentenciaEStringParserRuleCall_2_0_1; }
-		
-		//operador=Operador+
-		public Assignment getOperadorAssignment_3() { return cOperadorAssignment_3; }
+		//operador=Operador?
+		public Assignment getOperadorAssignment_2() { return cOperadorAssignment_2; }
 		
 		//Operador
-		public RuleCall getOperadorOperadorEnumRuleCall_3_0() { return cOperadorOperadorEnumRuleCall_3_0; }
+		public RuleCall getOperadorOperadorEnumRuleCall_2_0() { return cOperadorOperadorEnumRuleCall_2_0; }
 		
-		//ladoDer=[Sentencia|EString]
-		public Assignment getLadoDerAssignment_4() { return cLadoDerAssignment_4; }
+		//der=Expresion
+		public Assignment getDerAssignment_3() { return cDerAssignment_3; }
 		
-		//[Sentencia|EString]
-		public CrossReference getLadoDerSentenciaCrossReference_4_0() { return cLadoDerSentenciaCrossReference_4_0; }
-		
-		//EString
-		public RuleCall getLadoDerSentenciaEStringParserRuleCall_4_0_1() { return cLadoDerSentenciaEStringParserRuleCall_4_0_1; }
+		//Expresion
+		public RuleCall getDerExpresionParserRuleCall_3_0() { return cDerExpresionParserRuleCall_3_0; }
 	}
 	public class VariableElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.Variable");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cVariableAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cVarKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cTipodatoAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final CrossReference cTipodatoTipoDatoCrossReference_1_0 = (CrossReference)cTipodatoAssignment_1.eContents().get(0);
 		private final RuleCall cTipodatoTipoDatoEStringParserRuleCall_1_0_1 = (RuleCall)cTipodatoTipoDatoCrossReference_1_0.eContents().get(1);
-		private final Keyword cVarKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cNameEStringParserRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		
 		//Variable:
-		//	{Variable} tipodato=[TipoDato|EString]
 		//	'var'
-		//	name=EString;
+		//	tipodato=[TipoDato|EString] name=EString?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Variable} tipodato=[TipoDato|EString] 'var' name=EString
+		//'var' tipodato=[TipoDato|EString] name=EString?
 		public Group getGroup() { return cGroup; }
 		
-		//{Variable}
-		public Action getVariableAction_0() { return cVariableAction_0; }
+		//'var'
+		public Keyword getVarKeyword_0() { return cVarKeyword_0; }
 		
 		//tipodato=[TipoDato|EString]
 		public Assignment getTipodatoAssignment_1() { return cTipodatoAssignment_1; }
@@ -826,148 +785,106 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getTipodatoTipoDatoEStringParserRuleCall_1_0_1() { return cTipodatoTipoDatoEStringParserRuleCall_1_0_1; }
 		
-		//'var'
-		public Keyword getVarKeyword_2() { return cVarKeyword_2; }
-		
-		//name=EString
-		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
+		//name=EString?
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 		
 		//EString
-		public RuleCall getNameEStringParserRuleCall_3_0() { return cNameEStringParserRuleCall_3_0; }
+		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
 	}
 	public class CondicionalElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.Condicional");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cCondicionalKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cTipoCondicionalKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cTipoCondicionalAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cTipoCondicionalTipoCondicionEnumRuleCall_2_1_0 = (RuleCall)cTipoCondicionalAssignment_2_1.eContents().get(0);
-		private final Keyword cExpresionlogicaKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cExpresionlogicaAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cExpresionlogicaExpresionLogicaParserRuleCall_4_0 = (RuleCall)cExpresionlogicaAssignment_4.eContents().get(0);
-		private final Keyword cSentenciasKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Keyword cLeftCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Assignment cSentenciasAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cSentenciasSentenciaParserRuleCall_7_0 = (RuleCall)cSentenciasAssignment_7.eContents().get(0);
-		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
-		private final Keyword cCommaKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
-		private final Assignment cSentenciasAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
-		private final RuleCall cSentenciasSentenciaParserRuleCall_8_1_0 = (RuleCall)cSentenciasAssignment_8_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
-		private final Keyword cElseKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_10_1 = (Keyword)cGroup_10.eContents().get(1);
-		private final Assignment cElseAssignment_10_2 = (Assignment)cGroup_10.eContents().get(2);
-		private final RuleCall cElseCondicionalParserRuleCall_10_2_0 = (RuleCall)cElseAssignment_10_2.eContents().get(0);
-		private final Group cGroup_10_3 = (Group)cGroup_10.eContents().get(3);
-		private final Keyword cCommaKeyword_10_3_0 = (Keyword)cGroup_10_3.eContents().get(0);
-		private final Assignment cElseAssignment_10_3_1 = (Assignment)cGroup_10_3.eContents().get(1);
-		private final RuleCall cElseCondicionalParserRuleCall_10_3_1_0 = (RuleCall)cElseAssignment_10_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_10_4 = (Keyword)cGroup_10.eContents().get(4);
-		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Keyword cIfKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cExpresionlogicaAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cExpresionlogicaExpresionLogicaParserRuleCall_2_0 = (RuleCall)cExpresionlogicaAssignment_2.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cLineaAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cLineaLineaParserRuleCall_5_0 = (RuleCall)cLineaAssignment_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cElseAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cElseElseParserRuleCall_7_0 = (RuleCall)cElseAssignment_7.eContents().get(0);
 		
 		//Condicional:
-		//	'Condicional'
-		//	'{' ('tipoCondicional' tipoCondicional=TipoCondicion)?
-		//	'expresionlogica' expresionlogica=ExpresionLogica
-		//	'sentencias' '{' sentencias+=Sentencia ("," sentencias+=Sentencia)* '}' ('else' '{' else+=Condicional (","
-		//	else+=Condicional)* '}')?
+		//	'if' '(' expresionlogica=ExpresionLogica ')' '{'
+		//	linea+=Linea+
+		//	'}' else=Else?;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'if' '(' expresionlogica=ExpresionLogica ')' '{' linea+=Linea+ '}' else=Else?
+		public Group getGroup() { return cGroup; }
+		
+		//'if'
+		public Keyword getIfKeyword_0() { return cIfKeyword_0; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
+		
+		//expresionlogica=ExpresionLogica
+		public Assignment getExpresionlogicaAssignment_2() { return cExpresionlogicaAssignment_2; }
+		
+		//ExpresionLogica
+		public RuleCall getExpresionlogicaExpresionLogicaParserRuleCall_2_0() { return cExpresionlogicaExpresionLogicaParserRuleCall_2_0; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
+		
+		//linea+=Linea+
+		public Assignment getLineaAssignment_5() { return cLineaAssignment_5; }
+		
+		//Linea
+		public RuleCall getLineaLineaParserRuleCall_5_0() { return cLineaLineaParserRuleCall_5_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		
+		//else=Else?
+		public Assignment getElseAssignment_7() { return cElseAssignment_7; }
+		
+		//Else
+		public RuleCall getElseElseParserRuleCall_7_0() { return cElseElseParserRuleCall_7_0; }
+	}
+	public class ElseElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.Else");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cCondicionalAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cElseKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cLineaAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineaLineaParserRuleCall_3_0 = (RuleCall)cLineaAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//Else Condicional:
+		//	{Condicional}
+		//	'else' '{'
+		//	linea+=Linea+
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Condicional' '{' ('tipoCondicional' tipoCondicional=TipoCondicion)? 'expresionlogica' expresionlogica=ExpresionLogica
-		//'sentencias' '{' sentencias+=Sentencia ("," sentencias+=Sentencia)* '}' ('else' '{' else+=Condicional (","
-		//else+=Condicional)* '}')? '}'
+		//{Condicional} 'else' '{' linea+=Linea+ '}'
 		public Group getGroup() { return cGroup; }
 		
-		//'Condicional'
-		public Keyword getCondicionalKeyword_0() { return cCondicionalKeyword_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
-		
-		//('tipoCondicional' tipoCondicional=TipoCondicion)?
-		public Group getGroup_2() { return cGroup_2; }
-		
-		//'tipoCondicional'
-		public Keyword getTipoCondicionalKeyword_2_0() { return cTipoCondicionalKeyword_2_0; }
-		
-		//tipoCondicional=TipoCondicion
-		public Assignment getTipoCondicionalAssignment_2_1() { return cTipoCondicionalAssignment_2_1; }
-		
-		//TipoCondicion
-		public RuleCall getTipoCondicionalTipoCondicionEnumRuleCall_2_1_0() { return cTipoCondicionalTipoCondicionEnumRuleCall_2_1_0; }
-		
-		//'expresionlogica'
-		public Keyword getExpresionlogicaKeyword_3() { return cExpresionlogicaKeyword_3; }
-		
-		//expresionlogica=ExpresionLogica
-		public Assignment getExpresionlogicaAssignment_4() { return cExpresionlogicaAssignment_4; }
-		
-		//ExpresionLogica
-		public RuleCall getExpresionlogicaExpresionLogicaParserRuleCall_4_0() { return cExpresionlogicaExpresionLogicaParserRuleCall_4_0; }
-		
-		//'sentencias'
-		public Keyword getSentenciasKeyword_5() { return cSentenciasKeyword_5; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_6() { return cLeftCurlyBracketKeyword_6; }
-		
-		//sentencias+=Sentencia
-		public Assignment getSentenciasAssignment_7() { return cSentenciasAssignment_7; }
-		
-		//Sentencia
-		public RuleCall getSentenciasSentenciaParserRuleCall_7_0() { return cSentenciasSentenciaParserRuleCall_7_0; }
-		
-		//("," sentencias+=Sentencia)*
-		public Group getGroup_8() { return cGroup_8; }
-		
-		//","
-		public Keyword getCommaKeyword_8_0() { return cCommaKeyword_8_0; }
-		
-		//sentencias+=Sentencia
-		public Assignment getSentenciasAssignment_8_1() { return cSentenciasAssignment_8_1; }
-		
-		//Sentencia
-		public RuleCall getSentenciasSentenciaParserRuleCall_8_1_0() { return cSentenciasSentenciaParserRuleCall_8_1_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
-		
-		//('else' '{' else+=Condicional ("," else+=Condicional)* '}')?
-		public Group getGroup_10() { return cGroup_10; }
+		//{Condicional}
+		public Action getCondicionalAction_0() { return cCondicionalAction_0; }
 		
 		//'else'
-		public Keyword getElseKeyword_10_0() { return cElseKeyword_10_0; }
+		public Keyword getElseKeyword_1() { return cElseKeyword_1; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_10_1() { return cLeftCurlyBracketKeyword_10_1; }
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//else+=Condicional
-		public Assignment getElseAssignment_10_2() { return cElseAssignment_10_2; }
+		//linea+=Linea+
+		public Assignment getLineaAssignment_3() { return cLineaAssignment_3; }
 		
-		//Condicional
-		public RuleCall getElseCondicionalParserRuleCall_10_2_0() { return cElseCondicionalParserRuleCall_10_2_0; }
-		
-		//("," else+=Condicional)*
-		public Group getGroup_10_3() { return cGroup_10_3; }
-		
-		//","
-		public Keyword getCommaKeyword_10_3_0() { return cCommaKeyword_10_3_0; }
-		
-		//else+=Condicional
-		public Assignment getElseAssignment_10_3_1() { return cElseAssignment_10_3_1; }
-		
-		//Condicional
-		public RuleCall getElseCondicionalParserRuleCall_10_3_1_0() { return cElseCondicionalParserRuleCall_10_3_1_0; }
+		//Linea
+		public RuleCall getLineaLineaParserRuleCall_3_0() { return cLineaLineaParserRuleCall_3_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_10_4() { return cRightCurlyBracketKeyword_10_4; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 	public class ExpresionNumericaElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.ExpresionNumerica");
@@ -1002,232 +919,134 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.ExpresionTexto");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cExpresionTextoAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cExpTextKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cValueKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cValueAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cValueEStringParserRuleCall_3_1_0 = (RuleCall)cValueAssignment_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cExpTexKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValueEStringParserRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
 		
 		//ExpresionTexto:
 		//	{ExpresionTexto}
-		//	'ExpText'
-		//	'{' ('value' value=EString)?
-		//	'}';
+		//	'ExpTex'
+		//	//'{'
+		//	value=EString?
+		//	//'}'
+		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{ExpresionTexto} 'ExpText' '{' ('value' value=EString)? '}'
+		//{ExpresionTexto} 'ExpTex' //'{'
+		//value=EString?
 		public Group getGroup() { return cGroup; }
 		
 		//{ExpresionTexto}
 		public Action getExpresionTextoAction_0() { return cExpresionTextoAction_0; }
 		
-		//'ExpText'
-		public Keyword getExpTextKeyword_1() { return cExpTextKeyword_1; }
+		//'ExpTex'
+		public Keyword getExpTexKeyword_1() { return cExpTexKeyword_1; }
 		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
-		
-		//('value' value=EString)?
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//'value'
-		public Keyword getValueKeyword_3_0() { return cValueKeyword_3_0; }
-		
-		//value=EString
-		public Assignment getValueAssignment_3_1() { return cValueAssignment_3_1; }
+		////'{'
+		//value=EString?
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
 		
 		//EString
-		public RuleCall getValueEStringParserRuleCall_3_1_0() { return cValueEStringParserRuleCall_3_1_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public RuleCall getValueEStringParserRuleCall_2_0() { return cValueEStringParserRuleCall_2_0; }
 	}
 	public class ExpresionBooleanElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.ExpresionBoolean");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cExpresionBooleanAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Keyword cValueValueKeyword_1_0 = (Keyword)cValueAssignment_1.eContents().get(0);
-		private final Keyword cExpBoolKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cExpBoolKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValueEBooleanParserRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
 		
 		//ExpresionBoolean:
-		//	{ExpresionBoolean} value?='value'?
-		//	'ExpBool';
+		//	{ExpresionBoolean}
+		//	'ExpBool'
+		//	value?=EBoolean?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{ExpresionBoolean} value?='value'? 'ExpBool'
+		//{ExpresionBoolean} 'ExpBool' value?=EBoolean?
 		public Group getGroup() { return cGroup; }
 		
 		//{ExpresionBoolean}
 		public Action getExpresionBooleanAction_0() { return cExpresionBooleanAction_0; }
 		
-		//value?='value'?
-		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
-		
-		//'value'
-		public Keyword getValueValueKeyword_1_0() { return cValueValueKeyword_1_0; }
-		
 		//'ExpBool'
-		public Keyword getExpBoolKeyword_2() { return cExpBoolKeyword_2; }
+		public Keyword getExpBoolKeyword_1() { return cExpBoolKeyword_1; }
+		
+		//value?=EBoolean?
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+		
+		//EBoolean
+		public RuleCall getValueEBooleanParserRuleCall_2_0() { return cValueEBooleanParserRuleCall_2_0; }
 	}
 	public class ExpresionReferenciadaElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.ExpresionReferenciada");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cExpresionReferenciadaAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cExpRefKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cIdKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cIdAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cIdEIntParserRuleCall_2_1_0 = (RuleCall)cIdAssignment_2_1.eContents().get(0);
-		private final Assignment cEntReferenciadaAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final CrossReference cEntReferenciadaEntidadCrossReference_3_0 = (CrossReference)cEntReferenciadaAssignment_3.eContents().get(0);
-		private final RuleCall cEntReferenciadaEntidadEStringParserRuleCall_3_0_1 = (RuleCall)cEntReferenciadaEntidadCrossReference_3_0.eContents().get(1);
-		private final Assignment cAtrReferenciadoAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final CrossReference cAtrReferenciadoAtributoCrossReference_4_0 = (CrossReference)cAtrReferenciadoAssignment_4.eContents().get(0);
-		private final RuleCall cAtrReferenciadoAtributoEStringParserRuleCall_4_0_1 = (RuleCall)cAtrReferenciadoAtributoCrossReference_4_0.eContents().get(1);
+		private final Keyword cExpRefKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cReferenciaAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cReferenciaNamedElementCrossReference_1_0 = (CrossReference)cReferenciaAssignment_1.eContents().get(0);
+		private final RuleCall cReferenciaNamedElementEStringParserRuleCall_1_0_1 = (RuleCall)cReferenciaNamedElementCrossReference_1_0.eContents().get(1);
 		
 		//ExpresionReferenciada:
-		//	{ExpresionReferenciada}
-		//	'ExpRef' ('id' id=EInt)?
-		//	entReferenciada=[Entidad|EString]?
-		//	atrReferenciado=[Atributo|EString]?;
+		//	'ExpRef'
+		//	referencia=[NamedElement|EString];
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{ExpresionReferenciada} 'ExpRef' ('id' id=EInt)? entReferenciada=[Entidad|EString]? atrReferenciado=[Atributo|EString]?
+		//'ExpRef' referencia=[NamedElement|EString]
 		public Group getGroup() { return cGroup; }
 		
-		//{ExpresionReferenciada}
-		public Action getExpresionReferenciadaAction_0() { return cExpresionReferenciadaAction_0; }
-		
 		//'ExpRef'
-		public Keyword getExpRefKeyword_1() { return cExpRefKeyword_1; }
+		public Keyword getExpRefKeyword_0() { return cExpRefKeyword_0; }
 		
-		//('id' id=EInt)?
-		public Group getGroup_2() { return cGroup_2; }
+		//referencia=[NamedElement|EString]
+		public Assignment getReferenciaAssignment_1() { return cReferenciaAssignment_1; }
 		
-		//'id'
-		public Keyword getIdKeyword_2_0() { return cIdKeyword_2_0; }
-		
-		//id=EInt
-		public Assignment getIdAssignment_2_1() { return cIdAssignment_2_1; }
-		
-		//EInt
-		public RuleCall getIdEIntParserRuleCall_2_1_0() { return cIdEIntParserRuleCall_2_1_0; }
-		
-		//entReferenciada=[Entidad|EString]?
-		public Assignment getEntReferenciadaAssignment_3() { return cEntReferenciadaAssignment_3; }
-		
-		//[Entidad|EString]
-		public CrossReference getEntReferenciadaEntidadCrossReference_3_0() { return cEntReferenciadaEntidadCrossReference_3_0; }
+		//[NamedElement|EString]
+		public CrossReference getReferenciaNamedElementCrossReference_1_0() { return cReferenciaNamedElementCrossReference_1_0; }
 		
 		//EString
-		public RuleCall getEntReferenciadaEntidadEStringParserRuleCall_3_0_1() { return cEntReferenciadaEntidadEStringParserRuleCall_3_0_1; }
-		
-		//atrReferenciado=[Atributo|EString]?
-		public Assignment getAtrReferenciadoAssignment_4() { return cAtrReferenciadoAssignment_4; }
-		
-		//[Atributo|EString]
-		public CrossReference getAtrReferenciadoAtributoCrossReference_4_0() { return cAtrReferenciadoAtributoCrossReference_4_0; }
-		
-		//EString
-		public RuleCall getAtrReferenciadoAtributoEStringParserRuleCall_4_0_1() { return cAtrReferenciadoAtributoEStringParserRuleCall_4_0_1; }
+		public RuleCall getReferenciaNamedElementEStringParserRuleCall_1_0_1() { return cReferenciaNamedElementEStringParserRuleCall_1_0_1; }
 	}
 	public class ExpresionRelacionalElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.ExpresionRelacional");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cExpRelKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cIdKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cIdAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cIdEIntParserRuleCall_2_1_0 = (RuleCall)cIdAssignment_2_1.eContents().get(0);
-		private final Assignment cLadoIzqAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final CrossReference cLadoIzqSentenciaCrossReference_3_0 = (CrossReference)cLadoIzqAssignment_3.eContents().get(0);
-		private final RuleCall cLadoIzqSentenciaEStringParserRuleCall_3_0_1 = (RuleCall)cLadoIzqSentenciaCrossReference_3_0.eContents().get(1);
-		private final Assignment cOperadorRelacionalAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cOperadorRelacionalOperadorRelacionEnumRuleCall_4_0 = (RuleCall)cOperadorRelacionalAssignment_4.eContents().get(0);
-		private final Assignment cLadoDerAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final CrossReference cLadoDerSentenciaCrossReference_5_0 = (CrossReference)cLadoDerAssignment_5.eContents().get(0);
-		private final RuleCall cLadoDerSentenciaEStringParserRuleCall_5_0_1 = (RuleCall)cLadoDerSentenciaCrossReference_5_0.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cIzqAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cIzqExpresionParserRuleCall_1_0 = (RuleCall)cIzqAssignment_1.eContents().get(0);
+		private final Assignment cOperadorRelacionalAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cOperadorRelacionalOperadorRelacionEnumRuleCall_2_0 = (RuleCall)cOperadorRelacionalAssignment_2.eContents().get(0);
+		private final Assignment cDerAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cDerExpresionParserRuleCall_3_0 = (RuleCall)cDerAssignment_3.eContents().get(0);
 		
 		//ExpresionRelacional:
 		//	'ExpRel'
-		//	'{' ('id' id=EInt)?
-		//	ladoIzq=[Sentencia|EString] operadorRelacional=OperadorRelacion?
-		//	ladoDer=[Sentencia|EString]
-		//	'}';
+		//	izq=Expresion
+		//	operadorRelacional=OperadorRelacion?
+		//	der=Expresion;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'ExpRel' '{' ('id' id=EInt)? ladoIzq=[Sentencia|EString] operadorRelacional=OperadorRelacion?
-		//ladoDer=[Sentencia|EString] '}'
+		//'ExpRel' izq=Expresion operadorRelacional=OperadorRelacion? der=Expresion
 		public Group getGroup() { return cGroup; }
 		
 		//'ExpRel'
 		public Keyword getExpRelKeyword_0() { return cExpRelKeyword_0; }
 		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		//izq=Expresion
+		public Assignment getIzqAssignment_1() { return cIzqAssignment_1; }
 		
-		//('id' id=EInt)?
-		public Group getGroup_2() { return cGroup_2; }
-		
-		//'id'
-		public Keyword getIdKeyword_2_0() { return cIdKeyword_2_0; }
-		
-		//id=EInt
-		public Assignment getIdAssignment_2_1() { return cIdAssignment_2_1; }
-		
-		//EInt
-		public RuleCall getIdEIntParserRuleCall_2_1_0() { return cIdEIntParserRuleCall_2_1_0; }
-		
-		//ladoIzq=[Sentencia|EString]
-		public Assignment getLadoIzqAssignment_3() { return cLadoIzqAssignment_3; }
-		
-		//[Sentencia|EString]
-		public CrossReference getLadoIzqSentenciaCrossReference_3_0() { return cLadoIzqSentenciaCrossReference_3_0; }
-		
-		//EString
-		public RuleCall getLadoIzqSentenciaEStringParserRuleCall_3_0_1() { return cLadoIzqSentenciaEStringParserRuleCall_3_0_1; }
+		//Expresion
+		public RuleCall getIzqExpresionParserRuleCall_1_0() { return cIzqExpresionParserRuleCall_1_0; }
 		
 		//operadorRelacional=OperadorRelacion?
-		public Assignment getOperadorRelacionalAssignment_4() { return cOperadorRelacionalAssignment_4; }
+		public Assignment getOperadorRelacionalAssignment_2() { return cOperadorRelacionalAssignment_2; }
 		
 		//OperadorRelacion
-		public RuleCall getOperadorRelacionalOperadorRelacionEnumRuleCall_4_0() { return cOperadorRelacionalOperadorRelacionEnumRuleCall_4_0; }
+		public RuleCall getOperadorRelacionalOperadorRelacionEnumRuleCall_2_0() { return cOperadorRelacionalOperadorRelacionEnumRuleCall_2_0; }
 		
-		//ladoDer=[Sentencia|EString]
-		public Assignment getLadoDerAssignment_5() { return cLadoDerAssignment_5; }
+		//der=Expresion
+		public Assignment getDerAssignment_3() { return cDerAssignment_3; }
 		
-		//[Sentencia|EString]
-		public CrossReference getLadoDerSentenciaCrossReference_5_0() { return cLadoDerSentenciaCrossReference_5_0; }
-		
-		//EString
-		public RuleCall getLadoDerSentenciaEStringParserRuleCall_5_0_1() { return cLadoDerSentenciaEStringParserRuleCall_5_0_1; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
-	}
-	public class EIntElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.EInt");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cHyphenMinusKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		
-		//EInt ecore::EInt:
-		//	'-'? INT;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'-'? INT
-		public Group getGroup() { return cGroup; }
-		
-		//'-'?
-		public Keyword getHyphenMinusKeyword_0() { return cHyphenMinusKeyword_0; }
-		
-		//INT
-		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
+		//Expresion
+		public RuleCall getDerExpresionParserRuleCall_3_0() { return cDerExpresionParserRuleCall_3_0; }
 	}
 	public class EDoubleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.EDouble");
@@ -1280,6 +1099,25 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getINTTerminalRuleCall_4_2() { return cINTTerminalRuleCall_4_2; }
 	}
+	public class EIntElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.EInt");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cHyphenMinusKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		
+		//EInt ecore::EInt:
+		//	'-'? INT;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'-'? INT
+		public Group getGroup() { return cGroup; }
+		
+		//'-'?
+		public Keyword getHyphenMinusKeyword_0() { return cHyphenMinusKeyword_0; }
+		
+		//INT
+		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
+	}
 	public class PrimitivoElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.Primitivo");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -1290,17 +1128,17 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		
 		//Primitivo:
-		//	{Primitivo} tipo=DatoPrimitivo+
+		//	{Primitivo} tipo=DatoPrimitivo?
 		//	name=EString;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Primitivo} tipo=DatoPrimitivo+ name=EString
+		//{Primitivo} tipo=DatoPrimitivo? name=EString
 		public Group getGroup() { return cGroup; }
 		
 		//{Primitivo}
 		public Action getPrimitivoAction_0() { return cPrimitivoAction_0; }
 		
-		//tipo=DatoPrimitivo+
+		//tipo=DatoPrimitivo?
 		public Assignment getTipoAssignment_1() { return cTipoAssignment_1; }
 		
 		//DatoPrimitivo
@@ -1315,69 +1153,70 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	public class MapaElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.Mapa");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameEStringParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cMapKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cLessThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cTipoDatoKeyAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final CrossReference cTipoDatoKeyTipoDatoCrossReference_4_0 = (CrossReference)cTipoDatoKeyAssignment_4.eContents().get(0);
-		private final RuleCall cTipoDatoKeyTipoDatoEStringParserRuleCall_4_0_1 = (RuleCall)cTipoDatoKeyTipoDatoCrossReference_4_0.eContents().get(1);
-		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cTipoDatoValueAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final CrossReference cTipoDatoValueTipoDatoCrossReference_6_0 = (CrossReference)cTipoDatoValueAssignment_6.eContents().get(0);
-		private final RuleCall cTipoDatoValueTipoDatoEStringParserRuleCall_6_0_1 = (RuleCall)cTipoDatoValueTipoDatoCrossReference_6_0.eContents().get(1);
-		private final Keyword cGreaterThanSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cMapKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLessThanSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cTipoDatoKeyAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cTipoDatoKeyTipoDatoCrossReference_2_0 = (CrossReference)cTipoDatoKeyAssignment_2.eContents().get(0);
+		private final RuleCall cTipoDatoKeyTipoDatoEStringParserRuleCall_2_0_1 = (RuleCall)cTipoDatoKeyTipoDatoCrossReference_2_0.eContents().get(1);
+		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cTipoDatoValueAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cTipoDatoValueTipoDatoCrossReference_4_0 = (CrossReference)cTipoDatoValueAssignment_4.eContents().get(0);
+		private final RuleCall cTipoDatoValueTipoDatoEStringParserRuleCall_4_0_1 = (RuleCall)cTipoDatoValueTipoDatoCrossReference_4_0.eContents().get(1);
+		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cColonKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cNameAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cNameEStringParserRuleCall_7_0 = (RuleCall)cNameAssignment_7.eContents().get(0);
 		
 		//Mapa:
-		//	name=EString
-		//	':' 'Map'
+		//	'Map'
 		//	'<'
 		//	tipoDatoKey=[TipoDato|EString]
-		//	',' tipoDatoValue=[TipoDato|EString] '>';
+		//	',' tipoDatoValue=[TipoDato|EString] '>'
+		//	':'
+		//	name=EString;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//name=EString ':' 'Map' '<' tipoDatoKey=[TipoDato|EString] ',' tipoDatoValue=[TipoDato|EString] '>'
+		//'Map' '<' tipoDatoKey=[TipoDato|EString] ',' tipoDatoValue=[TipoDato|EString] '>' ':' name=EString
 		public Group getGroup() { return cGroup; }
 		
-		//name=EString
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-		
-		//EString
-		public RuleCall getNameEStringParserRuleCall_0_0() { return cNameEStringParserRuleCall_0_0; }
-		
-		//':'
-		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
-		
 		//'Map'
-		public Keyword getMapKeyword_2() { return cMapKeyword_2; }
+		public Keyword getMapKeyword_0() { return cMapKeyword_0; }
 		
 		//'<'
-		public Keyword getLessThanSignKeyword_3() { return cLessThanSignKeyword_3; }
+		public Keyword getLessThanSignKeyword_1() { return cLessThanSignKeyword_1; }
 		
 		//tipoDatoKey=[TipoDato|EString]
-		public Assignment getTipoDatoKeyAssignment_4() { return cTipoDatoKeyAssignment_4; }
+		public Assignment getTipoDatoKeyAssignment_2() { return cTipoDatoKeyAssignment_2; }
 		
 		//[TipoDato|EString]
-		public CrossReference getTipoDatoKeyTipoDatoCrossReference_4_0() { return cTipoDatoKeyTipoDatoCrossReference_4_0; }
+		public CrossReference getTipoDatoKeyTipoDatoCrossReference_2_0() { return cTipoDatoKeyTipoDatoCrossReference_2_0; }
 		
 		//EString
-		public RuleCall getTipoDatoKeyTipoDatoEStringParserRuleCall_4_0_1() { return cTipoDatoKeyTipoDatoEStringParserRuleCall_4_0_1; }
+		public RuleCall getTipoDatoKeyTipoDatoEStringParserRuleCall_2_0_1() { return cTipoDatoKeyTipoDatoEStringParserRuleCall_2_0_1; }
 		
 		//','
-		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
+		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
 		
 		//tipoDatoValue=[TipoDato|EString]
-		public Assignment getTipoDatoValueAssignment_6() { return cTipoDatoValueAssignment_6; }
+		public Assignment getTipoDatoValueAssignment_4() { return cTipoDatoValueAssignment_4; }
 		
 		//[TipoDato|EString]
-		public CrossReference getTipoDatoValueTipoDatoCrossReference_6_0() { return cTipoDatoValueTipoDatoCrossReference_6_0; }
+		public CrossReference getTipoDatoValueTipoDatoCrossReference_4_0() { return cTipoDatoValueTipoDatoCrossReference_4_0; }
 		
 		//EString
-		public RuleCall getTipoDatoValueTipoDatoEStringParserRuleCall_6_0_1() { return cTipoDatoValueTipoDatoEStringParserRuleCall_6_0_1; }
+		public RuleCall getTipoDatoValueTipoDatoEStringParserRuleCall_4_0_1() { return cTipoDatoValueTipoDatoEStringParserRuleCall_4_0_1; }
 		
 		//'>'
-		public Keyword getGreaterThanSignKeyword_7() { return cGreaterThanSignKeyword_7; }
+		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
+		
+		//':'
+		public Keyword getColonKeyword_6() { return cColonKeyword_6; }
+		
+		//name=EString
+		public Assignment getNameAssignment_7() { return cNameAssignment_7; }
+		
+		//EString
+		public RuleCall getNameEStringParserRuleCall_7_0() { return cNameEStringParserRuleCall_7_0; }
 	}
 	
 	public class OperadorLogicoElements extends AbstractEnumRuleElementFinder {
@@ -1523,33 +1362,6 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		//'DELETE'
 		public Keyword getDELETEDELETEKeyword_6_0() { return cDELETEDELETEKeyword_6_0; }
 	}
-	public class TipoCondicionElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.TipoCondicion");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cIFEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cIFIfKeyword_0_0 = (Keyword)cIFEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cELSEEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cELSEElseKeyword_1_0 = (Keyword)cELSEEnumLiteralDeclaration_1.eContents().get(0);
-		
-		//enum TipoCondicion:
-		//	IF='if' | ELSE='else';
-		public EnumRule getRule() { return rule; }
-		
-		//IF='if' | ELSE='else'
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//IF='if'
-		public EnumLiteralDeclaration getIFEnumLiteralDeclaration_0() { return cIFEnumLiteralDeclaration_0; }
-		
-		//'if'
-		public Keyword getIFIfKeyword_0_0() { return cIFIfKeyword_0_0; }
-		
-		//ELSE='else'
-		public EnumLiteralDeclaration getELSEEnumLiteralDeclaration_1() { return cELSEEnumLiteralDeclaration_1; }
-		
-		//'else'
-		public Keyword getELSEElseKeyword_1_0() { return cELSEElseKeyword_1_0; }
-	}
 	public class OperadorRelacionElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.OperadorRelacion");
 		private final EnumLiteralDeclaration cPUNTOEnumLiteralDeclaration = (EnumLiteralDeclaration)rule.eContents().get(1);
@@ -1569,41 +1381,51 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.DatoPrimitivo");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cSTRINGEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cSTRINGSTRINGKeyword_0_0 = (Keyword)cSTRINGEnumLiteralDeclaration_0.eContents().get(0);
+		private final Keyword cSTRINGStringKeyword_0_0 = (Keyword)cSTRINGEnumLiteralDeclaration_0.eContents().get(0);
 		private final EnumLiteralDeclaration cNUMERICOEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cNUMERICONUMERICOKeyword_1_0 = (Keyword)cNUMERICOEnumLiteralDeclaration_1.eContents().get(0);
+		private final Keyword cNUMERICOUintKeyword_1_0 = (Keyword)cNUMERICOEnumLiteralDeclaration_1.eContents().get(0);
 		private final EnumLiteralDeclaration cBOOLEANEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cBOOLEANBOOLEANKeyword_2_0 = (Keyword)cBOOLEANEnumLiteralDeclaration_2.eContents().get(0);
+		private final Keyword cBOOLEANBooleanKeyword_2_0 = (Keyword)cBOOLEANEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cADDRESSEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cADDRESSAddressKeyword_3_0 = (Keyword)cADDRESSEnumLiteralDeclaration_3.eContents().get(0);
 		
 		//enum DatoPrimitivo:
-		//	STRING | NUMERICO | BOOLEAN;
+		//	STRING='String' | NUMERICO='uint' | BOOLEAN='Boolean' | ADDRESS='address';
 		public EnumRule getRule() { return rule; }
 		
-		//STRING | NUMERICO | BOOLEAN
+		//STRING='String' | NUMERICO='uint' | BOOLEAN='Boolean' | ADDRESS='address'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//STRING
+		//STRING='String'
 		public EnumLiteralDeclaration getSTRINGEnumLiteralDeclaration_0() { return cSTRINGEnumLiteralDeclaration_0; }
 		
-		//'STRING'
-		public Keyword getSTRINGSTRINGKeyword_0_0() { return cSTRINGSTRINGKeyword_0_0; }
+		//'String'
+		public Keyword getSTRINGStringKeyword_0_0() { return cSTRINGStringKeyword_0_0; }
 		
-		//NUMERICO
+		//NUMERICO='uint'
 		public EnumLiteralDeclaration getNUMERICOEnumLiteralDeclaration_1() { return cNUMERICOEnumLiteralDeclaration_1; }
 		
-		//'NUMERICO'
-		public Keyword getNUMERICONUMERICOKeyword_1_0() { return cNUMERICONUMERICOKeyword_1_0; }
+		//'uint'
+		public Keyword getNUMERICOUintKeyword_1_0() { return cNUMERICOUintKeyword_1_0; }
 		
-		//BOOLEAN
+		//BOOLEAN='Boolean'
 		public EnumLiteralDeclaration getBOOLEANEnumLiteralDeclaration_2() { return cBOOLEANEnumLiteralDeclaration_2; }
 		
-		//'BOOLEAN'
-		public Keyword getBOOLEANBOOLEANKeyword_2_0() { return cBOOLEANBOOLEANKeyword_2_0; }
+		//'Boolean'
+		public Keyword getBOOLEANBooleanKeyword_2_0() { return cBOOLEANBooleanKeyword_2_0; }
+		
+		//ADDRESS='address'
+		public EnumLiteralDeclaration getADDRESSEnumLiteralDeclaration_3() { return cADDRESSEnumLiteralDeclaration_3; }
+		
+		//'address'
+		public Keyword getADDRESSAddressKeyword_3_0() { return cADDRESSAddressKeyword_3_0; }
 	}
 	
 	private final AplicacionElements pAplicacion;
 	private final TipoDatoElements pTipoDato;
-	private final SentenciaElements pSentencia;
+	private final LineaElements pLinea;
+	private final ExpresionElements pExpresion;
+	private final NamedElementElements pNamedElement;
 	private final SmartContractElements pSmartContract;
 	private final EStringElements pEString;
 	private final EntidadElements pEntidad;
@@ -1616,16 +1438,16 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	private final ExpresionAritmeticaElements pExpresionAritmetica;
 	private final VariableElements pVariable;
 	private final CondicionalElements pCondicional;
+	private final ElseElements pElse;
 	private final ExpresionNumericaElements pExpresionNumerica;
 	private final ExpresionTextoElements pExpresionTexto;
 	private final ExpresionBooleanElements pExpresionBoolean;
 	private final ExpresionReferenciadaElements pExpresionReferenciada;
 	private final ExpresionRelacionalElements pExpresionRelacional;
-	private final EIntElements pEInt;
 	private final OperadorLogicoElements eOperadorLogico;
 	private final OperadorElements eOperador;
-	private final TipoCondicionElements eTipoCondicion;
 	private final EDoubleElements pEDouble;
+	private final EIntElements pEInt;
 	private final OperadorRelacionElements eOperadorRelacion;
 	private final PrimitivoElements pPrimitivo;
 	private final MapaElements pMapa;
@@ -1642,7 +1464,9 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		this.gaTerminals = gaTerminals;
 		this.pAplicacion = new AplicacionElements();
 		this.pTipoDato = new TipoDatoElements();
-		this.pSentencia = new SentenciaElements();
+		this.pLinea = new LineaElements();
+		this.pExpresion = new ExpresionElements();
+		this.pNamedElement = new NamedElementElements();
 		this.pSmartContract = new SmartContractElements();
 		this.pEString = new EStringElements();
 		this.pEntidad = new EntidadElements();
@@ -1655,16 +1479,16 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		this.pExpresionAritmetica = new ExpresionAritmeticaElements();
 		this.pVariable = new VariableElements();
 		this.pCondicional = new CondicionalElements();
+		this.pElse = new ElseElements();
 		this.pExpresionNumerica = new ExpresionNumericaElements();
 		this.pExpresionTexto = new ExpresionTextoElements();
 		this.pExpresionBoolean = new ExpresionBooleanElements();
 		this.pExpresionReferenciada = new ExpresionReferenciadaElements();
 		this.pExpresionRelacional = new ExpresionRelacionalElements();
-		this.pEInt = new EIntElements();
 		this.eOperadorLogico = new OperadorLogicoElements();
 		this.eOperador = new OperadorElements();
-		this.eTipoCondicion = new TipoCondicionElements();
 		this.pEDouble = new EDoubleElements();
+		this.pEInt = new EIntElements();
 		this.eOperadorRelacion = new OperadorRelacionElements();
 		this.pPrimitivo = new PrimitivoElements();
 		this.pMapa = new MapaElements();
@@ -1702,8 +1526,7 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	//	{Aplicacion}
 	//	'Aplicacion'
 	//	name=EString
-	//	'{' (smartcontract+=SmartContract ("," smartcontract+=SmartContract)*)? ('TipoDato' tipodato+=TipoDato (","
-	//	tipodato+=TipoDato)*)*
+	//	'{' (smartcontract+=SmartContract smartcontract+=SmartContract*)? ('tipodato' tipodato+=TipoDato)*
 	//	'}';
 	public AplicacionElements getAplicacionAccess() {
 		return pAplicacion;
@@ -1723,22 +1546,43 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		return getTipoDatoAccess().getRule();
 	}
 	
-	//Sentencia:
-	//	Parametro | Estado | ExpresionLogica | ExpresionAritmetica | Variable | Condicional | ExpresionNumerica | EString |
-	//	EBoolean | ExpresionReferenciada | ExpresionRelacional;
-	public SentenciaElements getSentenciaAccess() {
-		return pSentencia;
+	//Linea:
+	//	ExpresionLogica | ExpresionAritmetica | Variable | Condicional | ExpresionNumerica | ExpresionTexto |
+	//	ExpresionBoolean | ExpresionReferenciada | ExpresionRelacional;
+	public LineaElements getLineaAccess() {
+		return pLinea;
 	}
 	
-	public ParserRule getSentenciaRule() {
-		return getSentenciaAccess().getRule();
+	public ParserRule getLineaRule() {
+		return getLineaAccess().getRule();
+	}
+	
+	//Expresion:
+	//	ExpresionLogica | ExpresionAritmetica | ExpresionNumerica | ExpresionTexto | ExpresionBoolean | ExpresionReferenciada
+	//	| ExpresionRelacional;
+	public ExpresionElements getExpresionAccess() {
+		return pExpresion;
+	}
+	
+	public ParserRule getExpresionRule() {
+		return getExpresionAccess().getRule();
+	}
+	
+	//NamedElement:
+	//	Atributo | Parametro | Estado | Variable;
+	public NamedElementElements getNamedElementAccess() {
+		return pNamedElement;
+	}
+	
+	public ParserRule getNamedElementRule() {
+		return getNamedElementAccess().getRule();
 	}
 	
 	//SmartContract:
 	//	'SmartContract'
 	//	name=EString
-	//	'{' (entidades+=Entidad entidades+=Entidad*)* (estado+=Estado ("," estado+=Estado)*)* (operaciones+=Operacion (","
-	//	operaciones+=Operacion)*)*
+	//	'{' (entidades+=Entidad entidades+=Entidad*)? (estado+=Estado estado+=Estado*)? (operaciones+=Operacion
+	//	operaciones+=Operacion*)?
 	//	'}';
 	public SmartContractElements getSmartContractAccess() {
 		return pSmartContract;
@@ -1762,7 +1606,7 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	//	{Entidad}
 	//	'Entidad'
 	//	name=EString
-	//	'{' (atributos+=Atributo atributos+=Atributo*)*
+	//	'{' (atributos+=Atributo atributos+=Atributo*)?
 	//	'}';
 	public EntidadElements getEntidadAccess() {
 		return pEntidad;
@@ -1779,7 +1623,7 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	//	'(' (parametros+=Parametro ("," parametros+=Parametro)*)?
 	//	')' (':' retorno=[TipoDato|EString])?
 	//	'{'
-	//	'return'? (sentencia+=Sentencia sentencia+=Sentencia*)?
+	//	'return'? lineas+=Linea*
 	//	'}';
 	public OperacionElements getOperacionAccess() {
 		return pOperacion;
@@ -1791,7 +1635,7 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Estado:
 	//	'Estado'
-	//	tipodato=[TipoDato] name=EString;
+	//	tipodato=[TipoDato|EString] name=EString;
 	public EstadoElements getEstadoAccess() {
 		return pEstado;
 	}
@@ -1832,9 +1676,12 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//ExpresionLogica:
 	//	'ExpLog'
-	//	'('? ('id' id=EInt)?
-	//	ladoIzq=[Sentencia|EString] operador=OperadorLogico+
-	//	ladoDer=[Sentencia|EString] ')'?;
+	//	//'{'
+	//	izq=Expresion
+	//	operador=OperadorLogico?
+	//	der=Expresion
+	//	//'}'
+	//;
 	public ExpresionLogicaElements getExpresionLogicaAccess() {
 		return pExpresionLogica;
 	}
@@ -1844,9 +1691,13 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//ExpresionAritmetica:
-	//	{ExpresionAritmetica} ('id' id=EInt)?
-	//	ladoIzq=[Sentencia|EString] operador=Operador+
-	//	ladoDer=[Sentencia|EString];
+	//	'ExpArit'
+	//	//'{'
+	//	izq=Expresion
+	//	operador=Operador?
+	//	der=Expresion
+	//	//'}'
+	//;
 	public ExpresionAritmeticaElements getExpresionAritmeticaAccess() {
 		return pExpresionAritmetica;
 	}
@@ -1856,9 +1707,8 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Variable:
-	//	{Variable} tipodato=[TipoDato|EString]
 	//	'var'
-	//	name=EString;
+	//	tipodato=[TipoDato|EString] name=EString?;
 	public VariableElements getVariableAccess() {
 		return pVariable;
 	}
@@ -1868,18 +1718,28 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Condicional:
-	//	'Condicional'
-	//	'{' ('tipoCondicional' tipoCondicional=TipoCondicion)?
-	//	'expresionlogica' expresionlogica=ExpresionLogica
-	//	'sentencias' '{' sentencias+=Sentencia ("," sentencias+=Sentencia)* '}' ('else' '{' else+=Condicional (","
-	//	else+=Condicional)* '}')?
-	//	'}';
+	//	'if' '(' expresionlogica=ExpresionLogica ')' '{'
+	//	linea+=Linea+
+	//	'}' else=Else?;
 	public CondicionalElements getCondicionalAccess() {
 		return pCondicional;
 	}
 	
 	public ParserRule getCondicionalRule() {
 		return getCondicionalAccess().getRule();
+	}
+	
+	//Else Condicional:
+	//	{Condicional}
+	//	'else' '{'
+	//	linea+=Linea+
+	//	'}';
+	public ElseElements getElseAccess() {
+		return pElse;
+	}
+	
+	public ParserRule getElseRule() {
+		return getElseAccess().getRule();
 	}
 	
 	//ExpresionNumerica:
@@ -1896,9 +1756,11 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//ExpresionTexto:
 	//	{ExpresionTexto}
-	//	'ExpText'
-	//	'{' ('value' value=EString)?
-	//	'}';
+	//	'ExpTex'
+	//	//'{'
+	//	value=EString?
+	//	//'}'
+	//;
 	public ExpresionTextoElements getExpresionTextoAccess() {
 		return pExpresionTexto;
 	}
@@ -1908,8 +1770,9 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//ExpresionBoolean:
-	//	{ExpresionBoolean} value?='value'?
-	//	'ExpBool';
+	//	{ExpresionBoolean}
+	//	'ExpBool'
+	//	value?=EBoolean?;
 	public ExpresionBooleanElements getExpresionBooleanAccess() {
 		return pExpresionBoolean;
 	}
@@ -1919,10 +1782,8 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//ExpresionReferenciada:
-	//	{ExpresionReferenciada}
-	//	'ExpRef' ('id' id=EInt)?
-	//	entReferenciada=[Entidad|EString]?
-	//	atrReferenciado=[Atributo|EString]?;
+	//	'ExpRef'
+	//	referencia=[NamedElement|EString];
 	public ExpresionReferenciadaElements getExpresionReferenciadaAccess() {
 		return pExpresionReferenciada;
 	}
@@ -1933,26 +1794,15 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//ExpresionRelacional:
 	//	'ExpRel'
-	//	'{' ('id' id=EInt)?
-	//	ladoIzq=[Sentencia|EString] operadorRelacional=OperadorRelacion?
-	//	ladoDer=[Sentencia|EString]
-	//	'}';
+	//	izq=Expresion
+	//	operadorRelacional=OperadorRelacion?
+	//	der=Expresion;
 	public ExpresionRelacionalElements getExpresionRelacionalAccess() {
 		return pExpresionRelacional;
 	}
 	
 	public ParserRule getExpresionRelacionalRule() {
 		return getExpresionRelacionalAccess().getRule();
-	}
-	
-	//EInt ecore::EInt:
-	//	'-'? INT;
-	public EIntElements getEIntAccess() {
-		return pEInt;
-	}
-	
-	public ParserRule getEIntRule() {
-		return getEIntAccess().getRule();
 	}
 	
 	//enum OperadorLogico:
@@ -1976,16 +1826,6 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		return getOperadorAccess().getRule();
 	}
 	
-	//enum TipoCondicion:
-	//	IF='if' | ELSE='else';
-	public TipoCondicionElements getTipoCondicionAccess() {
-		return eTipoCondicion;
-	}
-	
-	public EnumRule getTipoCondicionRule() {
-		return getTipoCondicionAccess().getRule();
-	}
-	
 	//EDouble ecore::EDouble:
 	//	'-'? INT? '.' INT (('E' | 'e') '-'? INT)?;
 	public EDoubleElements getEDoubleAccess() {
@@ -1994,6 +1834,16 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getEDoubleRule() {
 		return getEDoubleAccess().getRule();
+	}
+	
+	//EInt ecore::EInt:
+	//	'-'? INT;
+	public EIntElements getEIntAccess() {
+		return pEInt;
+	}
+	
+	public ParserRule getEIntRule() {
+		return getEIntAccess().getRule();
 	}
 	
 	//enum OperadorRelacion:
@@ -2007,7 +1857,7 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Primitivo:
-	//	{Primitivo} tipo=DatoPrimitivo+
+	//	{Primitivo} tipo=DatoPrimitivo?
 	//	name=EString;
 	public PrimitivoElements getPrimitivoAccess() {
 		return pPrimitivo;
@@ -2018,11 +1868,12 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Mapa:
-	//	name=EString
-	//	':' 'Map'
+	//	'Map'
 	//	'<'
 	//	tipoDatoKey=[TipoDato|EString]
-	//	',' tipoDatoValue=[TipoDato|EString] '>';
+	//	',' tipoDatoValue=[TipoDato|EString] '>'
+	//	':'
+	//	name=EString;
 	public MapaElements getMapaAccess() {
 		return pMapa;
 	}
@@ -2032,7 +1883,7 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//enum DatoPrimitivo:
-	//	STRING | NUMERICO | BOOLEAN;
+	//	STRING='String' | NUMERICO='uint' | BOOLEAN='Boolean' | ADDRESS='address';
 	public DatoPrimitivoElements getDatoPrimitivoAccess() {
 		return eDatoPrimitivo;
 	}

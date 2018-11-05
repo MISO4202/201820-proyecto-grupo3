@@ -92,13 +92,12 @@
         eType="#//TipoDato"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Condicional" eSuperTypes="#//Sentencia">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoCondicional" eType="#//TipoCondicion"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="else" upperBound="-1" eType="#//Condicional"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="else" eType="#//Condicional"
         containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="TipoCondicion">
-    <eLiterals name="IF"/>
-    <eLiterals name="ELSE" value="1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expresionlogica" lowerBound="1"
+        eType="#//ExpresionLogica" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linea" upperBound="-1"
+        eType="#//Linea" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expresion" abstract="true" interface="true"
       eSuperTypes="#//Linea"/>

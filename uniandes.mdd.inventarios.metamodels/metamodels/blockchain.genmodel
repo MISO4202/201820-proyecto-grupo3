@@ -31,10 +31,6 @@
       <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//DatoPrimitivo/BOOLEAN"/>
       <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//DatoPrimitivo/ADDRESS"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="blockchain.ecore#//TipoCondicion">
-      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//TipoCondicion/IF"/>
-      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//TipoCondicion/ELSE"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="blockchain.ecore#//OperadorRelacion">
       <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//OperadorRelacion/PUNTO"/>
     </genEnums>
@@ -89,8 +85,9 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Mapa/tipoDatoValue"/>
     </genClasses>
     <genClasses ecoreClass="blockchain.ecore#//Condicional">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Condicional/tipoCondicional"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Condicional/else"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Condicional/expresionlogica"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Condicional/linea"/>
     </genClasses>
     <genClasses image="false" ecoreClass="blockchain.ecore#//Expresion"/>
     <genClasses ecoreClass="blockchain.ecore#//ExpresionNumerica">

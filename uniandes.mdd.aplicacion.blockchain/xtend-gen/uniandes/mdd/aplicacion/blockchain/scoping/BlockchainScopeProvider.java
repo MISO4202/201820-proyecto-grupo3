@@ -3,19 +3,6 @@
  */
 package uniandes.mdd.aplicacion.blockchain.scoping;
 
-import blockchain.Estado;
-import blockchain.Expresion;
-import blockchain.ExpresionAritmetica;
-import blockchain.ExpresionNumerica;
-import blockchain.Parametro;
-import com.google.common.base.Objects;
-import java.util.List;
-import org.eclipse.emf.ecore.EClassifier;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EReference;
-import org.eclipse.xtext.EcoreUtil2;
-import org.eclipse.xtext.scoping.IScope;
-import org.eclipse.xtext.scoping.Scopes;
 import uniandes.mdd.aplicacion.blockchain.scoping.AbstractBlockchainScopeProvider;
 
 /**
@@ -26,33 +13,4 @@ import uniandes.mdd.aplicacion.blockchain.scoping.AbstractBlockchainScopeProvide
  */
 @SuppressWarnings("all")
 public class BlockchainScopeProvider extends AbstractBlockchainScopeProvider {
-  @Override
-  public IScope getScope(final EObject context, final EReference reference) {
-    if ((context instanceof Expresion)) {
-      final EObject rootElement = EcoreUtil2.getRootContainer(context);
-      EClassifier _eType = reference.getEType();
-      boolean _equals = Objects.equal(_eType, Parametro.class);
-      if (_equals) {
-        final List<Parametro> candidates = EcoreUtil2.<Parametro>getAllContentsOfType(rootElement, Parametro.class);
-        return Scopes.scopeFor(candidates);
-      } else {
-        EClassifier _eType_1 = reference.getEType();
-        boolean _equals_1 = Objects.equal(_eType_1, Estado.class);
-        if (_equals_1) {
-          final List<Estado> candidates_1 = EcoreUtil2.<Estado>getAllContentsOfType(rootElement, Estado.class);
-          return Scopes.scopeFor(candidates_1);
-        }
-      }
-    }
-    if ((context instanceof ExpresionAritmetica)) {
-      final EObject rootElement_1 = EcoreUtil2.getRootContainer(context);
-      EClassifier _eType_2 = reference.getEType();
-      boolean _equals_2 = Objects.equal(_eType_2, ExpresionNumerica.class);
-      if (_equals_2) {
-        final List<Expresion> candidates_2 = EcoreUtil2.<Expresion>getAllContentsOfType(rootElement_1, Expresion.class);
-        return Scopes.scopeFor(candidates_2);
-      }
-    }
-    return super.getScope(context, reference);
-  }
 }

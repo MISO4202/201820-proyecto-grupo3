@@ -8,23 +8,39 @@
       <atributos name="Cilindraje" tipodato="//@tipodato.0"/>
       <atributos name="Placa" tipodato="//@tipodato.1"/>
       <atributos name="Precio" tipodato="//@tipodato.0"/>
+      <atributos name="Nuevo" tipodato="//@tipodato.2"/>
+      <atributos name="Comentarios" tipodato="//@tipodato.1"/>
     </entidades>
     <operaciones name="Consultar Vehiculo">
-      <parametros name="Vehiculo" tipodato="//@smartcontract.0/@entidades.0"/>
-      <sentencia xsi:type="blockchain:ExpresionAritmetica" ladoIzq="//@smartcontract.0/@estado.0" ladoDer="//@smartcontract.0/@operaciones.0/@parametros.0" operador="IGUAL"/>
+      <parametros name="Placa" tipodato="//@tipodato.1"/>
+      <lineas xsi:type="blockchain:ExpresionAritmetica" operador="GET">
+        <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@estado.0"/>
+        <der xsi:type="blockchain:ExpresionReferenciada" id="1" referencia="//@smartcontract.0/@operaciones.0/@parametros.0"/>
+      </lineas>
     </operaciones>
     <operaciones name="CalcularCostosVenta">
       <parametros name="PrecioVehiculo" tipodato="//@tipodato.0"/>
       <parametros name="ImpuestoVehiculo" tipodato="//@tipodato.0"/>
       <parametros name="ValorTraspaso" tipodato="//@tipodato.0"/>
       <parametros name="ComisionRunt"/>
-      <sentencia xsi:type="blockchain:ExpresionNumerica" value="0.19"/>
-      <sentencia xsi:type="blockchain:ExpresionAritmetica" ladoIzq="//@smartcontract.0/@operaciones.1/@parametros.0" ladoDer="//@smartcontract.0/@operaciones.1/@sentencia.0" id="1" operador="PRODUCTO"/>
-      <sentencia xsi:type="blockchain:ExpresionAritmetica" ladoIzq="//@smartcontract.0/@operaciones.1/@parametros.0" ladoDer="//@smartcontract.0/@operaciones.1/@parametros.1" id="2" operador="PRODUCTO"/>
-      <sentencia xsi:type="blockchain:ExpresionAritmetica" ladoIzq="//@smartcontract.0/@operaciones.1/@sentencia.2" ladoDer="//@smartcontract.0/@operaciones.1/@sentencia.1" id="3"/>
-      <sentencia xsi:type="blockchain:ExpresionAritmetica" ladoIzq="//@smartcontract.0/@operaciones.1/@sentencia.3" ladoDer="//@smartcontract.0/@operaciones.1/@parametros.2" id="4"/>
-      <sentencia xsi:type="blockchain:ExpresionAritmetica" ladoIzq="//@smartcontract.0/@operaciones.1/@sentencia.4" ladoDer="//@smartcontract.0/@operaciones.1/@parametros.3" id="5"/>
-      <sentencia xsi:type="blockchain:ExpresionAritmetica" ladoIzq="//@smartcontract.0/@estado.1" ladoDer="//@smartcontract.0/@operaciones.1/@sentencia.5" id="6" operador="IGUAL"/>
+      <lineas xsi:type="blockchain:ExpresionAritmetica">
+        <izq xsi:type="blockchain:ExpresionAritmetica">
+          <izq xsi:type="blockchain:ExpresionAritmetica">
+            <izq xsi:type="blockchain:ExpresionAritmetica">
+              <izq xsi:type="blockchain:ExpresionAritmetica" operador="PRODUCTO">
+                <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.1/@parametros.1"/>
+                <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.1/@parametros.0"/>
+              </izq>
+              <der xsi:type="blockchain:ExpresionAritmetica" operador="PRODUCTO">
+                <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.1/@parametros.0"/>
+                <der xsi:type="blockchain:ExpresionNumerica" value="0.19"/>
+              </der>
+            </izq>
+          </izq>
+          <der xsi:type="blockchain:ExpresionReferenciada" id="3" referencia="//@smartcontract.0/@operaciones.1/@parametros.2"/>
+        </izq>
+        <der xsi:type="blockchain:ExpresionReferenciada" id="2" referencia="//@smartcontract.0/@operaciones.1/@parametros.3"/>
+      </lineas>
     </operaciones>
     <operaciones name="CrearVehiculo">
       <parametros name="Marca" tipodato="//@tipodato.1"/>
@@ -33,40 +49,147 @@
       <parametros name="Cilindraje" tipodato="//@tipodato.0"/>
       <parametros name="Placa" tipodato="//@tipodato.1"/>
       <parametros name="Precio" tipodato="//@tipodato.0"/>
-      <sentencia xsi:type="blockchain:ExpresionReferenciada" entReferenciada="//@smartcontract.0/@entidades.0" id="1"/>
-      <sentencia xsi:type="blockchain:ExpresionAritmetica" ladoIzq="//@smartcontract.0/@operaciones.2/@sentencia.2" ladoDer="//@smartcontract.0/@operaciones.2/@parametros.0" id="7" operador="IGUAL"/>
-      <sentencia xsi:type="blockchain:ExpresionLogica" ladoIzq="//@smartcontract.0/@operaciones.2/@sentencia.0" ladoDer="//@smartcontract.0/@operaciones.2/@sentencia.3" id="1"/>
-      <sentencia xsi:type="blockchain:ExpresionReferenciada" id="2"/>
-      <sentencia xsi:type="blockchain:ExpresionAritmetica" ladoIzq="//@smartcontract.0/@operaciones.2/@sentencia.5" ladoDer="//@smartcontract.0/@operaciones.2/@parametros.1" id="8" operador="IGUAL"/>
-      <sentencia xsi:type="blockchain:ExpresionLogica" ladoIzq="//@smartcontract.0/@operaciones.2/@sentencia.0" ladoDer="//@smartcontract.0/@operaciones.2/@sentencia.6" id="2"/>
-      <sentencia xsi:type="blockchain:ExpresionReferenciada" id="3"/>
-      <sentencia xsi:type="blockchain:ExpresionAritmetica" ladoIzq="//@smartcontract.0/@operaciones.2/@sentencia.8" ladoDer="//@smartcontract.0/@operaciones.2/@parametros.2" id="9" operador="IGUAL"/>
-      <sentencia xsi:type="blockchain:ExpresionLogica" ladoIzq="//@smartcontract.0/@operaciones.2/@sentencia.0" ladoDer="//@smartcontract.0/@operaciones.2/@sentencia.9" id="3"/>
-      <sentencia xsi:type="blockchain:ExpresionReferenciada" id="4"/>
-      <sentencia xsi:type="blockchain:ExpresionAritmetica" ladoIzq="//@smartcontract.0/@operaciones.2/@sentencia.11" ladoDer="//@smartcontract.0/@operaciones.2/@parametros.3" id="10" operador="IGUAL"/>
-      <sentencia xsi:type="blockchain:ExpresionLogica" ladoIzq="//@smartcontract.0/@operaciones.2/@sentencia.0" ladoDer="//@smartcontract.0/@operaciones.2/@sentencia.12" id="4"/>
-      <sentencia xsi:type="blockchain:ExpresionReferenciada" id="5"/>
-      <sentencia xsi:type="blockchain:ExpresionAritmetica" ladoIzq="//@smartcontract.0/@operaciones.2/@sentencia.14" ladoDer="//@smartcontract.0/@operaciones.2/@parametros.4" id="11" operador="IGUAL"/>
-      <sentencia xsi:type="blockchain:ExpresionLogica" ladoIzq="//@smartcontract.0/@operaciones.2/@sentencia.0" ladoDer="//@smartcontract.0/@operaciones.2/@sentencia.15" id="5"/>
-      <sentencia xsi:type="blockchain:ExpresionReferenciada" id="6"/>
-      <sentencia xsi:type="blockchain:ExpresionAritmetica" ladoIzq="//@smartcontract.0/@operaciones.2/@sentencia.17" ladoDer="//@smartcontract.0/@operaciones.2/@parametros.5" id="12" operador="IGUAL"/>
-      <sentencia xsi:type="blockchain:ExpresionLogica" ladoIzq="//@smartcontract.0/@operaciones.2/@sentencia.0" ladoDer="//@smartcontract.0/@operaciones.2/@sentencia.18" id="5"/>
-      <sentencia xsi:type="blockchain:ExpresionReferenciada" id="7"/>
-      <sentencia xsi:type="blockchain:ExpresionAritmetica" ladoIzq="//@smartcontract.0/@estado.2" ladoDer="//@smartcontract.0/@operaciones.2/@sentencia.0" id="13" operador="IGUAL"/>
+      <parametros name="Nuevo" tipodato="//@tipodato.2"/>
+      <lineas xsi:type="blockchain:Variable" name="VehiculoNuevo" tipodato="//@smartcontract.0/@entidades.0"/>
+      <lineas xsi:type="blockchain:ExpresionAritmetica" operador="IGUAL">
+        <izq xsi:type="blockchain:ExpresionRelacional">
+          <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@lineas.0"/>
+          <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@entidades.0/@atributos.0"/>
+        </izq>
+        <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.3/@parametros.0"/>
+      </lineas>
+      <lineas xsi:type="blockchain:ExpresionAritmetica" operador="IGUAL">
+        <izq xsi:type="blockchain:ExpresionRelacional">
+          <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@lineas.0"/>
+          <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@entidades.0/@atributos.1"/>
+        </izq>
+        <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@parametros.1"/>
+      </lineas>
+      <lineas xsi:type="blockchain:ExpresionAritmetica" operador="IGUAL">
+        <izq xsi:type="blockchain:ExpresionRelacional">
+          <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@lineas.0"/>
+          <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@entidades.0/@atributos.4"/>
+        </izq>
+        <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@parametros.4"/>
+      </lineas>
+      <lineas xsi:type="blockchain:ExpresionAritmetica" operador="IGUAL">
+        <izq xsi:type="blockchain:ExpresionRelacional">
+          <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@lineas.0"/>
+          <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@entidades.0/@atributos.2"/>
+        </izq>
+        <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@parametros.2"/>
+      </lineas>
+      <lineas xsi:type="blockchain:ExpresionAritmetica" operador="IGUAL">
+        <izq xsi:type="blockchain:ExpresionRelacional">
+          <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@lineas.0"/>
+          <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@entidades.0/@atributos.3"/>
+        </izq>
+        <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@entidades.0/@atributos.3"/>
+      </lineas>
+      <lineas xsi:type="blockchain:ExpresionAritmetica" operador="IGUAL">
+        <izq xsi:type="blockchain:ExpresionRelacional">
+          <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@lineas.0"/>
+          <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@entidades.0/@atributos.5"/>
+        </izq>
+        <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@entidades.0/@atributos.5"/>
+      </lineas>
+      <lineas xsi:type="blockchain:ExpresionAritmetica" operador="IGUAL">
+        <izq xsi:type="blockchain:ExpresionRelacional">
+          <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@lineas.0"/>
+          <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@entidades.0/@atributos.6"/>
+        </izq>
+        <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@parametros.6"/>
+      </lineas>
+      <lineas xsi:type="blockchain:ExpresionAritmetica" operador="IGUAL">
+        <izq xsi:type="blockchain:ExpresionRelacional">
+          <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@lineas.0"/>
+          <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@entidades.0/@atributos.7"/>
+        </izq>
+        <der xsi:type="blockchain:ExpresionTexto" value="Sin comentarios"/>
+      </lineas>
+      <lineas xsi:type="blockchain:ExpresionAritmetica" operador="IGUAL">
+        <izq xsi:type="blockchain:ExpresionAritmetica" operador="GET">
+          <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@estado.0"/>
+          <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@parametros.4"/>
+        </izq>
+        <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@lineas.0"/>
+      </lineas>
+      <lineas xsi:type="blockchain:Condicional">
+        <else tipoCondicional="ELSE">
+          <linea xsi:type="blockchain:ExpresionAritmetica" operador="IGUAL">
+            <izq xsi:type="blockchain:ExpresionAritmetica" operador="GET">
+              <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@estado.3"/>
+              <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@parametros.4"/>
+            </izq>
+            <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@lineas.0"/>
+          </linea>
+        </else>
+        <expresionlogica operador="AND">
+          <izq xsi:type="blockchain:ExpresionLogica" operador="OR">
+            <izq xsi:type="blockchain:ExpresionLogica" operador="MAYORIGUAL">
+              <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@parametros.5"/>
+              <der xsi:type="blockchain:ExpresionNumerica" value="1.0E8"/>
+            </izq>
+            <der xsi:type="blockchain:ExpresionLogica">
+              <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@parametros.4"/>
+              <der xsi:type="blockchain:ExpresionTexto" value="Ferrari"/>
+            </der>
+          </izq>
+          <der xsi:type="blockchain:ExpresionLogica" operador="DIFERENTE">
+            <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.3/@parametros.0"/>
+            <der xsi:type="blockchain:ExpresionTexto" value="Renault"/>
+          </der>
+        </expresionlogica>
+        <linea xsi:type="blockchain:ExpresionAritmetica" operador="IGUAL">
+          <izq xsi:type="blockchain:ExpresionAritmetica" operador="GET">
+            <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@estado.2"/>
+            <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@parametros.4"/>
+          </izq>
+          <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@lineas.0"/>
+        </linea>
+      </lineas>
     </operaciones>
-    <operaciones name="CrearMarca">
-      <parametros name="Marca" tipodato="//@tipodato.1"/>
-      <sentencia xsi:type="blockchain:Variable" tipodato="//@smartcontract.0/@entidades.0" name="brand"/>
-      <sentencia xsi:type="blockchain:ExpresionRelacional" ladoIzq="//@smartcontract.0/@operaciones.3/@sentencia.0" ladoDer="//@smartcontract.0/@operaciones.3/@sentencia.2" id="1"/>
-      <sentencia xsi:type="blockchain:ExpresionReferenciada" id="20" atrReferenciado="//@smartcontract.0/@entidades.0/@atributos.0"/>
-      <sentencia xsi:type="blockchain:ExpresionAritmetica" ladoIzq="//@smartcontract.0/@operaciones.3/@sentencia.1" ladoDer="//@smartcontract.0/@operaciones.3/@parametros.0" operador="IGUAL"/>
+    <operaciones name="ActualizarVehiculo">
+      <parametros name="Cilindraje" tipodato="//@tipodato.0"/>
+      <parametros name="Placa" tipodato="//@tipodato.1"/>
+      <parametros name="Precio" tipodato="//@tipodato.0"/>
+      <lineas xsi:type="blockchain:Variable" name="vehiculo" tipodato="//@smartcontract.0/@entidades.0"/>
+      <lineas xsi:type="blockchain:ExpresionAritmetica" operador="GET">
+        <izq xsi:type="blockchain:ExpresionAritmetica" operador="IGUAL">
+          <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.3/@lineas.0"/>
+          <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@estado.0"/>
+        </izq>
+        <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.3/@parametros.1"/>
+      </lineas>
+      <lineas xsi:type="blockchain:ExpresionAritmetica" operador="IGUAL">
+        <izq xsi:type="blockchain:ExpresionRelacional">
+          <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.3/@lineas.0"/>
+          <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.3/@parametros.0"/>
+        </izq>
+        <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.3/@parametros.0"/>
+      </lineas>
+      <lineas xsi:type="blockchain:ExpresionAritmetica" operador="IGUAL">
+        <izq xsi:type="blockchain:ExpresionRelacional">
+          <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.3/@lineas.0"/>
+          <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.3/@parametros.2"/>
+        </izq>
+        <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.3/@parametros.2"/>
+      </lineas>
+      <lineas xsi:type="blockchain:ExpresionAritmetica" operador="IGUAL">
+        <izq xsi:type="blockchain:ExpresionRelacional">
+          <izq xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.3/@lineas.0"/>
+          <der xsi:type="blockchain:ExpresionReferenciada" referencia="//@smartcontract.0/@operaciones.2/@parametros.6"/>
+        </izq>
+        <der xsi:type="blockchain:ExpresionBoolean"/>
+      </lineas>
     </operaciones>
-    <estado name="vehiculoConsultado" tipodato="//@smartcontract.0/@entidades.0"/>
+    <estado name="Vehiculos" tipodato="//@tipodato.3"/>
     <estado name="costoVenta" tipodato="//@tipodato.0"/>
-    <estado name="vehiculoCreado"/>
+    <estado name="VehiculosCaros" tipodato="//@tipodato.3"/>
+    <estado name="VehiculosBaratos" tipodato="//@tipodato.3"/>
   </smartcontract>
-  <tipodato xsi:type="blockchain:Primitivo" tipo="NUMERICO"/>
-  <tipodato xsi:type="blockchain:Primitivo"/>
-  <tipodato xsi:type="blockchain:Primitivo" tipo="BOOLEAN"/>
-  <tipodato xsi:type="blockchain:Mapa" tipoDatoKey="//@tipodato.0" tipoDatoValue="//@smartcontract.0/@entidades.0" name="Mapa1"/>
+  <tipodato xsi:type="blockchain:Primitivo" name="Numerico" tipo="NUMERICO"/>
+  <tipodato xsi:type="blockchain:Primitivo" name="String"/>
+  <tipodato xsi:type="blockchain:Primitivo" name="Boolean" tipo="BOOLEAN"/>
+  <tipodato xsi:type="blockchain:Mapa" name="MapaVehiculos" tipoDatoKey="//@tipodato.1" tipoDatoValue="//@smartcontract.0/@entidades.0"/>
 </blockchain:Aplicacion>

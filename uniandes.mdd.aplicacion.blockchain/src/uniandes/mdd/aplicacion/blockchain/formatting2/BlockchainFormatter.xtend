@@ -41,5 +41,5 @@ class BlockchainFormatter extends AbstractFormatter2 {
 		}
 	}
 	
-	// TODO: implement for Entidad, Operacion, Condicional
+	// TODO: implement for Entidad, Operacion, ExpresionLogica, ExpresionAritmetica, Condicional, ExpresionRelacional
 }

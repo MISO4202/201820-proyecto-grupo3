@@ -4,20 +4,6 @@
 package uniandes.mdd.aplicacion.blockchain.scoping
 
 
-import org.eclipse.emf.ecore.EObject
-import org.eclipse.emf.ecore.EReference
-import blockchain.Sentencia
-import java.util.LinkedList
-import org.eclipse.xtext.scoping.IScope
-import blockchain.Expresion
-import blockchain.Operacion
-import org.eclipse.xtext.scoping.Scopes
-import blockchain.Parametro
-import blockchain.ExpresionAritmetica
-import org.eclipse.xtext.EcoreUtil2
-import blockchain.Estado
-import blockchain.ExpresionNumerica
-
 /**
  * This class contains custom scoping description.
  * 
@@ -25,30 +11,5 @@ import blockchain.ExpresionNumerica
  * on how and when to use it.
  */
 class BlockchainScopeProvider extends AbstractBlockchainScopeProvider {
-	
-	override public IScope getScope(EObject context, EReference reference) {
-	if(context instanceof Expresion){
-			val rootElement =EcoreUtil2.getRootContainer(context)
-			if(reference.EType == Parametro ){
-				val candidates= EcoreUtil2.getAllContentsOfType(rootElement, Parametro);
-				return Scopes.scopeFor(candidates);
-			}else if (reference.EType == Estado){
-				val candidates= EcoreUtil2.getAllContentsOfType(rootElement, Estado);
-				return Scopes.scopeFor(candidates);				
-			}/*else if (reference.EType == ExpresionNumerica){
-				val candidates= EcoreUtil2.getAllContentsOfType(rootElement, ExpresionNumerica);
-				return Scopes.scopeFor(candidates);	
-			}*/	
-			
-		}
-		if(context instanceof ExpresionAritmetica){
-			val rootElement =EcoreUtil2.getRootContainer(context)
-			if(reference.EType == ExpresionNumerica){
-				val candidates= EcoreUtil2.getAllContentsOfType(rootElement,Expresion);
-				return Scopes.scopeFor(candidates);
-			}			
-		}
-		return super.getScope(context, reference)
-	}
 
 }

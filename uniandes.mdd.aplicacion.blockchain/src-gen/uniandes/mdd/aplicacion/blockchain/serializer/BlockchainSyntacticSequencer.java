@@ -10,7 +10,6 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
@@ -21,26 +20,18 @@ import uniandes.mdd.aplicacion.blockchain.services.BlockchainGrammarAccess;
 public class BlockchainSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected BlockchainGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_ExpresionLogica_LeftParenthesisKeyword_1_q;
-	protected AbstractElementAlias match_ExpresionLogica_RightParenthesisKeyword_6_q;
 	protected AbstractElementAlias match_Operacion_ReturnKeyword_9_q;
-	protected AbstractElementAlias match_Sentencia_EBooleanParserRuleCall_8_or_EStringParserRuleCall_7;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (BlockchainGrammarAccess) access;
-		match_ExpresionLogica_LeftParenthesisKeyword_1_q = new TokenAlias(false, true, grammarAccess.getExpresionLogicaAccess().getLeftParenthesisKeyword_1());
-		match_ExpresionLogica_RightParenthesisKeyword_6_q = new TokenAlias(false, true, grammarAccess.getExpresionLogicaAccess().getRightParenthesisKeyword_6());
 		match_Operacion_ReturnKeyword_9_q = new TokenAlias(false, true, grammarAccess.getOperacionAccess().getReturnKeyword_9());
-		match_Sentencia_EBooleanParserRuleCall_8_or_EStringParserRuleCall_7 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getSentenciaAccess().getEBooleanParserRuleCall_8()), new TokenAlias(false, false, grammarAccess.getSentenciaAccess().getEStringParserRuleCall_7()));
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (ruleCall.getRule() == grammarAccess.getEBooleanRule())
 			return getEBooleanToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getEStringRule())
-			return getEStringToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
@@ -54,81 +45,31 @@ public class BlockchainSyntacticSequencer extends AbstractSyntacticSequencer {
 		return "true";
 	}
 	
-	/**
-	 * EString returns ecore::EString:
-	 * 	STRING | ID;
-	 */
-	protected String getEStringToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "\"\"";
-	}
-	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		if (transition.getAmbiguousSyntaxes().isEmpty()) return;
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_ExpresionLogica_LeftParenthesisKeyword_1_q.equals(syntax))
-				emit_ExpresionLogica_LeftParenthesisKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_ExpresionLogica_RightParenthesisKeyword_6_q.equals(syntax))
-				emit_ExpresionLogica_RightParenthesisKeyword_6_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Operacion_ReturnKeyword_9_q.equals(syntax))
+			if (match_Operacion_ReturnKeyword_9_q.equals(syntax))
 				emit_Operacion_ReturnKeyword_9_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Sentencia_EBooleanParserRuleCall_8_or_EStringParserRuleCall_7.equals(syntax))
-				emit_Sentencia_EBooleanParserRuleCall_8_or_EStringParserRuleCall_7(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
 	/**
 	 * Ambiguous syntax:
-	 *     '('?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) 'ExpLog' (ambiguity) 'id' id=EInt
-	 *     (rule start) 'ExpLog' (ambiguity) ladoIzq=[Sentencia|EString]
-	 */
-	protected void emit_ExpresionLogica_LeftParenthesisKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     ')'?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     ladoDer=[Sentencia|EString] (ambiguity) (rule end)
-	 */
-	protected void emit_ExpresionLogica_RightParenthesisKeyword_6_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
 	 *     'return'?
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     name=EString '(' ')' '{' (ambiguity) '}' (rule end)
-	 *     name=EString '(' ')' '{' (ambiguity) sentencia+=Sentencia
+	 *     name=EString '(' ')' '{' (ambiguity) lineas+=Linea
 	 *     parametros+=Parametro ')' '{' (ambiguity) '}' (rule end)
-	 *     parametros+=Parametro ')' '{' (ambiguity) sentencia+=Sentencia
+	 *     parametros+=Parametro ')' '{' (ambiguity) lineas+=Linea
 	 *     retorno=[TipoDato|EString] '{' (ambiguity) '}' (rule end)
-	 *     retorno=[TipoDato|EString] '{' (ambiguity) sentencia+=Sentencia
+	 *     retorno=[TipoDato|EString] '{' (ambiguity) lineas+=Linea
 	 */
 	protected void emit_Operacion_ReturnKeyword_9_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     EString | EBoolean
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (rule start)
-	 */
-	protected void emit_Sentencia_EBooleanParserRuleCall_8_or_EStringParserRuleCall_7(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
