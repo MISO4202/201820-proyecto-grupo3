@@ -806,25 +806,16 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValidadorAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cValidadorLineaParserRuleCall_4_0 = (RuleCall)cValidadorAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Keyword cElseKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Keyword cLeftCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Assignment cValidadorAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cValidadorLineaParserRuleCall_8_0 = (RuleCall)cValidadorAssignment_8.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//Condicional:
 		//	{Condicional}
 		//	'if' expresionlogica=ExpresionLogica?
 		//	'{'
 		//	validador+=Linea*
-		//	'}'
-		//	'else'?
-		//	'{'?
-		//	validador+=Linea*
-		//	'}'?;
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Condicional} 'if' expresionlogica=ExpresionLogica? '{' validador+=Linea* '}' 'else'? '{'? validador+=Linea* '}'?
+		//{Condicional} 'if' expresionlogica=ExpresionLogica? '{' validador+=Linea* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{Condicional}
@@ -850,50 +841,40 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
-		
-		//'else'?
-		public Keyword getElseKeyword_6() { return cElseKeyword_6; }
-		
-		//'{'?
-		public Keyword getLeftCurlyBracketKeyword_7() { return cLeftCurlyBracketKeyword_7; }
-		
-		//validador+=Linea*
-		public Assignment getValidadorAssignment_8() { return cValidadorAssignment_8; }
-		
-		//Linea
-		public RuleCall getValidadorLineaParserRuleCall_8_0() { return cValidadorLineaParserRuleCall_8_0; }
-		
-		//'}'?
-		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 	public class ElseElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.Else");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cValidadorAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cValidadorLineaParserRuleCall_1_0 = (RuleCall)cValidadorAssignment_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Action cCondicionalAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValidadorAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValidadorLineaParserRuleCall_2_0 = (RuleCall)cValidadorAssignment_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//Else Condicional:
+		//	{Condicional}
 		//	'{'
 		//	validador+=Linea*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'{' validador+=Linea* '}'
+		//{Condicional} '{' validador+=Linea* '}'
 		public Group getGroup() { return cGroup; }
 		
+		//{Condicional}
+		public Action getCondicionalAction_0() { return cCondicionalAction_0; }
+		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_0() { return cLeftCurlyBracketKeyword_0; }
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
 		//validador+=Linea*
-		public Assignment getValidadorAssignment_1() { return cValidadorAssignment_1; }
+		public Assignment getValidadorAssignment_2() { return cValidadorAssignment_2; }
 		
 		//Linea
-		public RuleCall getValidadorLineaParserRuleCall_1_0() { return cValidadorLineaParserRuleCall_1_0; }
+		public RuleCall getValidadorLineaParserRuleCall_2_0() { return cValidadorLineaParserRuleCall_2_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_2() { return cRightCurlyBracketKeyword_2; }
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 	public class ExpresionNumericaElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.ExpresionNumerica");
@@ -1741,11 +1722,7 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	//	'if' expresionlogica=ExpresionLogica?
 	//	'{'
 	//	validador+=Linea*
-	//	'}'
-	//	'else'?
-	//	'{'?
-	//	validador+=Linea*
-	//	'}'?;
+	//	'}';
 	public CondicionalElements getCondicionalAccess() {
 		return pCondicional;
 	}
@@ -1755,6 +1732,7 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Else Condicional:
+	//	{Condicional}
 	//	'{'
 	//	validador+=Linea*
 	//	'}';

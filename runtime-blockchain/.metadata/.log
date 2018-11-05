@@ -2059,3 +2059,830 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-11-05 16:07:31.906 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data C:\dev/../runtime-blockchain -dev file:C:/dev/.metadata/.plugins/org.eclipse.pde.core/blockchain/dev.properties -os win32 -ws win32 -arch x86 -consoleLog
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-11-05 16:07:34.567
+!MESSAGE Both 'AutomatizacionTaller1Entrega4' and 'Entrega3' register a package for 'http://www.uniandes.edu.co/entrega3'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-11-05 16:07:34.585
+!MESSAGE Both 'co.edu.uniandes.entrega4.aplicacion.ui' and 'co.edu.uniandes.par1.aplicacion.ui' register an extension parser for 'aplicacion'
+
+!ENTRY org.eclipse.ui 2 0 2018-11-05 16:07:34.992
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-11-05 16:07:34.992
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.emf.facet.custom.ui', id='org.eclipse.emf.facet.ui.loadCustomization', categoryId='org.eclipse.emf.facet.widgets.table.command.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-11-05 16:07:34.992
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.emf.facet.efacet.ui', id='org.eclipse.emf.facet.efacet.ui.loadFacet', categoryId='org.eclipse.emf.facet.widgets.table.command.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-11-05 16:07:34.992
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.emf.facet.efacet.ui', id='org.eclipse.emf.facet.efacet.ui.saveStructuralFeatureInstanceModel', categoryId='org.eclipse.emf.facet.widgets.table.command.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-11-05 16:07:34.992
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.emf.facet.efacet.ui', id='org.eclipse.emf.facet.efacet.ui.setStructuralFeatureInstanceResource', categoryId='org.eclipse.emf.facet.widgets.table.command.category'
+
+!ENTRY org.eclipse.ui 2 0 2018-11-05 16:07:35.406
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-11-05 16:07:35.406
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.emf.facet.custom.ui', id='org.eclipse.emf.facet.ui.loadCustomization', categoryId='org.eclipse.emf.facet.widgets.table.command.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-11-05 16:07:35.406
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.emf.facet.efacet.ui', id='org.eclipse.emf.facet.efacet.ui.loadFacet', categoryId='org.eclipse.emf.facet.widgets.table.command.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-11-05 16:07:35.406
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.emf.facet.efacet.ui', id='org.eclipse.emf.facet.efacet.ui.saveStructuralFeatureInstanceModel', categoryId='org.eclipse.emf.facet.widgets.table.command.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-11-05 16:07:35.407
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.emf.facet.efacet.ui', id='org.eclipse.emf.facet.efacet.ui.setStructuralFeatureInstanceResource', categoryId='org.eclipse.emf.facet.widgets.table.command.category'
+
+!ENTRY org.eclipse.jface 2 0 2018-11-05 16:07:37.331
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-11-05 16:07:37.331
+!MESSAGE A conflict occurred for CTRL+SHIFT+V:
+Binding(CTRL+SHIFT+V,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.command.OpenFromClipboard,Open from Clipboard,
+		Opens a Java element or a Java stack trace from clipboard,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@fa8762,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+V,
+	ParameterizedCommand(Command(org.jkiss.dbeaver.core.edit.paste.special,Advanced Paste,
+		Paste with extra settings,
+		Category(org.jkiss.dbeaver.core.util,Utility,Utility Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@cd00bc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-11-05 16:07:37.331
+!MESSAGE A conflict occurred for CTRL+SHIFT+A:
+Binding(CTRL+SHIFT+A,
+	ParameterizedCommand(Command(org.eclipse.pde.ui.openPluginArtifact,Open Plug-in Artifact,
+		Open a plug-in artifact in the manifest editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@35c23c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+A,
+	ParameterizedCommand(Command(org.jkiss.dbeaver.core.navigator.set.active,Set active,
+		Set object active ,
+		Category(org.jkiss.dbeaver.core.navigator,Database Navigator,Database Navigator Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@149067d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 4 4 2018-11-05 16:07:39.370
+!MESSAGE Unable to create part
+!SUBENTRY 1 org.eclipse.ui 4 1 2018-11-05 16:07:39.370
+!MESSAGE Plug-in uniandes.mdd.aplicacion.blockchain.ui was unable to load class uniandes.mdd.aplicacion.blockchain.ui.BlockchainExecutableExtensionFactory.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Plug-in uniandes.mdd.aplicacion.blockchain.ui was unable to load class uniandes.mdd.aplicacion.blockchain.ui.BlockchainExecutableExtensionFactory.
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.throwException(RegistryStrategyOSGI.java:194)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:176)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin.lambda$0(WorkbenchPlugin.java:288)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:285)
+	at org.eclipse.ui.internal.registry.EditorDescriptor.createEditor(EditorDescriptor.java:232)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:329)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPart(CompatibilityPart.java:293)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor.createPart(CompatibilityEditor.java:63)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:331)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:990)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:955)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:124)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:399)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:318)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:105)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:74)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:56)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:129)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:992)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:661)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1293)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:97)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:679)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:546)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:530)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:70)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:992)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:661)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:137)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:137)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:49)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:79)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:97)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:61)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:679)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:137)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:704)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1076)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+Caused by: java.lang.ClassNotFoundException: uniandes.mdd.aplicacion.blockchain.ui.BlockchainExecutableExtensionFactory cannot be found by uniandes.mdd.aplicacion.blockchain.ui_1.0.0.qualifier
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:484)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:564)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	... 125 more
+!SUBENTRY 2 org.eclipse.equinox.registry 4 1 2018-11-05 16:07:39.372
+!MESSAGE Plug-in uniandes.mdd.aplicacion.blockchain.ui was unable to load class uniandes.mdd.aplicacion.blockchain.ui.BlockchainExecutableExtensionFactory.
+!STACK 0
+java.lang.ClassNotFoundException: uniandes.mdd.aplicacion.blockchain.ui.BlockchainExecutableExtensionFactory cannot be found by uniandes.mdd.aplicacion.blockchain.ui_1.0.0.qualifier
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:484)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:564)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin.lambda$0(WorkbenchPlugin.java:288)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:285)
+	at org.eclipse.ui.internal.registry.EditorDescriptor.createEditor(EditorDescriptor.java:232)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:329)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPart(CompatibilityPart.java:293)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor.createPart(CompatibilityEditor.java:63)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:331)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:990)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:955)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:124)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:399)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:318)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:105)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:74)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:56)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:129)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:992)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:661)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1293)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:97)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:679)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:546)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:530)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:70)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:992)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:661)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:137)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:137)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:49)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:79)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:97)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:61)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:679)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:137)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:704)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1076)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+
+!ENTRY org.apache.log4j 2 0 2018-11-05 16:07:40.563
+!MESSAGE org.eclipse.xtext.internal.ExtensionResourceServiceProviderRegistryReader  - Both 'co.edu.uniandes.entrega4.aplicacion.ui' and 'co.edu.uniandes.par1.aplicacion.ui' register a content parser for 'aplicacion'
+
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-11-05 16:07:40.793
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ale_v'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.apache.log4j 4 0 2018-11-05 16:07:41.074
+!MESSAGE org.eclipse.xtext.internal.ResourceServiceProviderDescriptor  - Plug-in uniandes.mdd.aplicacion.blockchain.ui was unable to load class uniandes.mdd.aplicacion.blockchain.ui.BlockchainExecutableExtensionFactory.
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: Plug-in uniandes.mdd.aplicacion.blockchain.ui was unable to load class uniandes.mdd.aplicacion.blockchain.ui.BlockchainExecutableExtensionFactory.
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.throwException(RegistryStrategyOSGI.java:194)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:176)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.xtext.internal.ResourceServiceProviderDescriptor.getExtension(ResourceServiceProviderDescriptor.java:46)
+	at org.eclipse.xtext.internal.AbstractResourceServiceProviderDescriptor.get(AbstractResourceServiceProviderDescriptor.java:20)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl$InternalData.getServiceProvider(ResourceServiceProviderRegistryImpl.java:46)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl.getResourceServiceProvider(ResourceServiceProviderRegistryImpl.java:109)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl.getResourceServiceProvider(ResourceServiceProviderRegistryImpl.java:129)
+	at org.eclipse.xtext.ui.resource.UriValidator.isValid(UriValidator.java:27)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperImpl.isValidUri(Storage2UriMapperImpl.java:247)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperImpl.getUri(Storage2UriMapperImpl.java:233)
+	at org.eclipse.xtext.builder.impl.ToBeBuiltComputer.getUri(ToBeBuiltComputer.java:345)
+	at org.eclipse.xtext.builder.impl.ToBeBuiltComputer.updateStorage(ToBeBuiltComputer.java:287)
+	at org.eclipse.xtext.builder.impl.XtextBuilder$3.visit(XtextBuilder.java:257)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:64)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:75)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:48)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:263)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:161)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:142)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:232)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.lang.ClassNotFoundException: uniandes.mdd.aplicacion.blockchain.ui.BlockchainExecutableExtensionFactory cannot be found by uniandes.mdd.aplicacion.blockchain.ui_1.0.0.qualifier
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:484)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:564)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	... 31 more
+!SUBENTRY 1 org.eclipse.equinox.registry 4 1 2018-11-05 16:07:41.074
+!MESSAGE Plug-in uniandes.mdd.aplicacion.blockchain.ui was unable to load class uniandes.mdd.aplicacion.blockchain.ui.BlockchainExecutableExtensionFactory.
+!STACK 0
+java.lang.ClassNotFoundException: uniandes.mdd.aplicacion.blockchain.ui.BlockchainExecutableExtensionFactory cannot be found by uniandes.mdd.aplicacion.blockchain.ui_1.0.0.qualifier
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:484)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:564)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.xtext.internal.ResourceServiceProviderDescriptor.getExtension(ResourceServiceProviderDescriptor.java:46)
+	at org.eclipse.xtext.internal.AbstractResourceServiceProviderDescriptor.get(AbstractResourceServiceProviderDescriptor.java:20)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl$InternalData.getServiceProvider(ResourceServiceProviderRegistryImpl.java:46)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl.getResourceServiceProvider(ResourceServiceProviderRegistryImpl.java:109)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl.getResourceServiceProvider(ResourceServiceProviderRegistryImpl.java:129)
+	at org.eclipse.xtext.ui.resource.UriValidator.isValid(UriValidator.java:27)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperImpl.isValidUri(Storage2UriMapperImpl.java:247)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperImpl.getUri(Storage2UriMapperImpl.java:233)
+	at org.eclipse.xtext.builder.impl.ToBeBuiltComputer.getUri(ToBeBuiltComputer.java:345)
+	at org.eclipse.xtext.builder.impl.ToBeBuiltComputer.updateStorage(ToBeBuiltComputer.java:287)
+	at org.eclipse.xtext.builder.impl.XtextBuilder$3.visit(XtextBuilder.java:257)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:64)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:75)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:48)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:263)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:161)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:142)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:232)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.apache.log4j 4 0 2018-11-05 16:07:41.088
+!MESSAGE org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl  - Erroneous resource service provider registered for 'platform:/resource/PruebaBlockchain/AutoMarket.blockchain'. Removing it from the registry.
+
+!STACK 0
+java.lang.ClassCastException: The type null is not a valid interface org.eclipse.xtext.resource.IResourceServiceProvider or interface org.eclipse.xtext.resource.IResourceServiceProvider$Provider contributed by uniandes.mdd.aplicacion.blockchain.ui[1424]
+	at org.eclipse.xtext.internal.AbstractResourceServiceProviderDescriptor.get(AbstractResourceServiceProviderDescriptor.java:35)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl$InternalData.getServiceProvider(ResourceServiceProviderRegistryImpl.java:46)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl.getResourceServiceProvider(ResourceServiceProviderRegistryImpl.java:109)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl.getResourceServiceProvider(ResourceServiceProviderRegistryImpl.java:129)
+	at org.eclipse.xtext.ui.resource.UriValidator.isValid(UriValidator.java:27)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperImpl.isValidUri(Storage2UriMapperImpl.java:247)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperImpl.getUri(Storage2UriMapperImpl.java:233)
+	at org.eclipse.xtext.builder.impl.ToBeBuiltComputer.getUri(ToBeBuiltComputer.java:345)
+	at org.eclipse.xtext.builder.impl.ToBeBuiltComputer.updateStorage(ToBeBuiltComputer.java:287)
+	at org.eclipse.xtext.builder.impl.XtextBuilder$3.visit(XtextBuilder.java:257)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:64)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:75)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:48)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:263)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:161)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:142)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:232)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.ui 4 4 2018-11-05 16:07:50.287
+!MESSAGE Unable to create part
+!SUBENTRY 1 org.eclipse.ui 4 1 2018-11-05 16:07:50.288
+!MESSAGE Plug-in uniandes.mdd.aplicacion.blockchain.ui was unable to load class uniandes.mdd.aplicacion.blockchain.ui.BlockchainExecutableExtensionFactory.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Plug-in uniandes.mdd.aplicacion.blockchain.ui was unable to load class uniandes.mdd.aplicacion.blockchain.ui.BlockchainExecutableExtensionFactory.
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.throwException(RegistryStrategyOSGI.java:194)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:176)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin.lambda$0(WorkbenchPlugin.java:288)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:285)
+	at org.eclipse.ui.internal.registry.EditorDescriptor.createEditor(EditorDescriptor.java:232)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:329)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPart(CompatibilityPart.java:293)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor.createPart(CompatibilityEditor.java:63)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:331)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:990)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:955)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:124)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:399)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:318)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:105)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:74)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:56)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:129)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:992)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:661)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$1.handleEvent(PartServiceImpl.java:104)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:233)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:144)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4889)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:212)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:201)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:52)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:60)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:173)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.showElementInWindow(ModelServiceImpl.java:620)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.bringToTop(ModelServiceImpl.java:584)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.delegateBringToTop(PartServiceImpl.java:769)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.bringToTop(PartServiceImpl.java:401)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1188)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:3261)
+	at org.eclipse.ui.internal.WorkbenchPage.access$25(WorkbenchPage.java:3176)
+	at org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:3158)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3153)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3117)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3107)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:563)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:518)
+	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:360)
+	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:167)
+	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:279)
+	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:244)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchRun(SelectionDispatchAction.java:271)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.run(SelectionDispatchAction.java:249)
+	at org.eclipse.jdt.internal.ui.navigator.OpenAndExpand.run(OpenAndExpand.java:50)
+	at org.eclipse.ui.actions.RetargetAction.run(RetargetAction.java:216)
+	at org.eclipse.ui.navigator.CommonNavigatorManager$2.open(CommonNavigatorManager.java:191)
+	at org.eclipse.ui.OpenAndLinkWithEditorHelper$InternalListener.open(OpenAndLinkWithEditorHelper.java:46)
+	at org.eclipse.jface.viewers.StructuredViewer$2.run(StructuredViewer.java:851)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:44)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.StructuredViewer.fireOpen(StructuredViewer.java:848)
+	at org.eclipse.jface.viewers.StructuredViewer.handleOpen(StructuredViewer.java:1163)
+	at org.eclipse.ui.navigator.CommonViewer.handleOpen(CommonViewer.java:451)
+	at org.eclipse.jface.util.OpenStrategy.fireOpenEvent(OpenStrategy.java:273)
+	at org.eclipse.jface.util.OpenStrategy.access$2(OpenStrategy.java:268)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:308)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+Caused by: java.lang.ClassNotFoundException: uniandes.mdd.aplicacion.blockchain.ui.BlockchainExecutableExtensionFactory cannot be found by uniandes.mdd.aplicacion.blockchain.ui_1.0.0.qualifier
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:484)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:564)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	... 113 more
+!SUBENTRY 2 org.eclipse.equinox.registry 4 1 2018-11-05 16:07:50.291
+!MESSAGE Plug-in uniandes.mdd.aplicacion.blockchain.ui was unable to load class uniandes.mdd.aplicacion.blockchain.ui.BlockchainExecutableExtensionFactory.
+!STACK 0
+java.lang.ClassNotFoundException: uniandes.mdd.aplicacion.blockchain.ui.BlockchainExecutableExtensionFactory cannot be found by uniandes.mdd.aplicacion.blockchain.ui_1.0.0.qualifier
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:484)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:564)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin.lambda$0(WorkbenchPlugin.java:288)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:285)
+	at org.eclipse.ui.internal.registry.EditorDescriptor.createEditor(EditorDescriptor.java:232)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:329)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPart(CompatibilityPart.java:293)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor.createPart(CompatibilityEditor.java:63)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:331)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:990)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:955)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:124)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:399)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:318)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:105)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:74)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:56)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:129)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:992)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:661)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$1.handleEvent(PartServiceImpl.java:104)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:233)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:144)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4889)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:212)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:201)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:52)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:60)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:173)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.showElementInWindow(ModelServiceImpl.java:620)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.bringToTop(ModelServiceImpl.java:584)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.delegateBringToTop(PartServiceImpl.java:769)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.bringToTop(PartServiceImpl.java:401)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1188)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:3261)
+	at org.eclipse.ui.internal.WorkbenchPage.access$25(WorkbenchPage.java:3176)
+	at org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:3158)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3153)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3117)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3107)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:563)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:518)
+	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:360)
+	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:167)
+	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:279)
+	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:244)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchRun(SelectionDispatchAction.java:271)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.run(SelectionDispatchAction.java:249)
+	at org.eclipse.jdt.internal.ui.navigator.OpenAndExpand.run(OpenAndExpand.java:50)
+	at org.eclipse.ui.actions.RetargetAction.run(RetargetAction.java:216)
+	at org.eclipse.ui.navigator.CommonNavigatorManager$2.open(CommonNavigatorManager.java:191)
+	at org.eclipse.ui.OpenAndLinkWithEditorHelper$InternalListener.open(OpenAndLinkWithEditorHelper.java:46)
+	at org.eclipse.jface.viewers.StructuredViewer$2.run(StructuredViewer.java:851)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:44)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.StructuredViewer.fireOpen(StructuredViewer.java:848)
+	at org.eclipse.jface.viewers.StructuredViewer.handleOpen(StructuredViewer.java:1163)
+	at org.eclipse.ui.navigator.CommonViewer.handleOpen(CommonViewer.java:451)
+	at org.eclipse.jface.util.OpenStrategy.fireOpenEvent(OpenStrategy.java:273)
+	at org.eclipse.jface.util.OpenStrategy.access$2(OpenStrategy.java:268)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:308)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+!SESSION 2018-11-05 16:10:22.663 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data C:\dev/../runtime-blockchain -dev file:C:/dev/.metadata/.plugins/org.eclipse.pde.core/blockchain/dev.properties -os win32 -ws win32 -arch x86 -consoleLog
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-11-05 16:10:25.745
+!MESSAGE Both 'AutomatizacionTaller1Entrega4' and 'Entrega3' register a package for 'http://www.uniandes.edu.co/entrega3'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-11-05 16:10:25.772
+!MESSAGE Both 'co.edu.uniandes.entrega4.aplicacion.ui' and 'co.edu.uniandes.par1.aplicacion.ui' register an extension parser for 'aplicacion'
+
+!ENTRY org.eclipse.ui 2 0 2018-11-05 16:10:26.222
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-11-05 16:10:26.222
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.emf.facet.custom.ui', id='org.eclipse.emf.facet.ui.loadCustomization', categoryId='org.eclipse.emf.facet.widgets.table.command.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-11-05 16:10:26.225
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.emf.facet.efacet.ui', id='org.eclipse.emf.facet.efacet.ui.loadFacet', categoryId='org.eclipse.emf.facet.widgets.table.command.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-11-05 16:10:26.225
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.emf.facet.efacet.ui', id='org.eclipse.emf.facet.efacet.ui.saveStructuralFeatureInstanceModel', categoryId='org.eclipse.emf.facet.widgets.table.command.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-11-05 16:10:26.225
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.emf.facet.efacet.ui', id='org.eclipse.emf.facet.efacet.ui.setStructuralFeatureInstanceResource', categoryId='org.eclipse.emf.facet.widgets.table.command.category'
+
+!ENTRY org.eclipse.ui 2 0 2018-11-05 16:10:26.647
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-11-05 16:10:26.647
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.emf.facet.custom.ui', id='org.eclipse.emf.facet.ui.loadCustomization', categoryId='org.eclipse.emf.facet.widgets.table.command.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-11-05 16:10:26.649
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.emf.facet.efacet.ui', id='org.eclipse.emf.facet.efacet.ui.loadFacet', categoryId='org.eclipse.emf.facet.widgets.table.command.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-11-05 16:10:26.649
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.emf.facet.efacet.ui', id='org.eclipse.emf.facet.efacet.ui.saveStructuralFeatureInstanceModel', categoryId='org.eclipse.emf.facet.widgets.table.command.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-11-05 16:10:26.649
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.emf.facet.efacet.ui', id='org.eclipse.emf.facet.efacet.ui.setStructuralFeatureInstanceResource', categoryId='org.eclipse.emf.facet.widgets.table.command.category'
+
+!ENTRY org.eclipse.jface 2 0 2018-11-05 16:10:28.520
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-11-05 16:10:28.520
+!MESSAGE A conflict occurred for CTRL+SHIFT+V:
+Binding(CTRL+SHIFT+V,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.command.OpenFromClipboard,Open from Clipboard,
+		Opens a Java element or a Java stack trace from clipboard,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1fe4c3e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+V,
+	ParameterizedCommand(Command(org.jkiss.dbeaver.core.edit.paste.special,Advanced Paste,
+		Paste with extra settings,
+		Category(org.jkiss.dbeaver.core.util,Utility,Utility Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@8042a5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-11-05 16:10:28.521
+!MESSAGE A conflict occurred for CTRL+SHIFT+A:
+Binding(CTRL+SHIFT+A,
+	ParameterizedCommand(Command(org.eclipse.pde.ui.openPluginArtifact,Open Plug-in Artifact,
+		Open a plug-in artifact in the manifest editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1e6cb16,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+A,
+	ParameterizedCommand(Command(org.jkiss.dbeaver.core.navigator.set.active,Set active,
+		Set object active ,
+		Category(org.jkiss.dbeaver.core.navigator,Database Navigator,Database Navigator Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1ee825c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-11-05 16:10:33.166
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ale_v'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.apache.log4j 2 0 2018-11-05 16:10:34.852
+!MESSAGE org.eclipse.xtext.internal.ExtensionResourceServiceProviderRegistryReader  - Both 'co.edu.uniandes.entrega4.aplicacion.ui' and 'co.edu.uniandes.par1.aplicacion.ui' register a content parser for 'aplicacion'
+

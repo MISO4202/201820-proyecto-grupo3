@@ -156,7 +156,7 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Condicional returns Condicional
 	 *
 	 * Constraint:
-	 *     (expresionlogica=ExpresionLogica? validador+=Linea* validador+=Linea*)
+	 *     (expresionlogica=ExpresionLogica? validador+=Linea*)
 	 */
 	protected void sequence_Condicional(ISerializationContext context, Condicional semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -168,7 +168,7 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Else returns Condicional
 	 *
 	 * Constraint:
-	 *     validador+=Linea+
+	 *     validador+=Linea*
 	 */
 	protected void sequence_Else(ISerializationContext context, Condicional semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -3,8 +3,12 @@
  */
 package uniandes.mdd.aplicacion.blockchain.ide;
 
+import com.google.inject.Guice;
 import com.google.inject.Injector;
+import org.eclipse.xtext.util.Modules2;
+import uniandes.mdd.aplicacion.blockchain.BlockchainRuntimeModule;
 import uniandes.mdd.aplicacion.blockchain.BlockchainStandaloneSetup;
+import uniandes.mdd.aplicacion.blockchain.ide.BlockchainIdeModule;
 
 /**
  * Initialization support for running Xtext languages as language servers.
@@ -13,8 +17,8 @@ import uniandes.mdd.aplicacion.blockchain.BlockchainStandaloneSetup;
 public class BlockchainIdeSetup extends BlockchainStandaloneSetup {
   @Override
   public Injector createInjector() {
-    throw new Error("Unresolved compilation problems:"
-      + "\nType mismatch: cannot convert from BlockchainRuntimeModule to Module"
-      + "\nType mismatch: cannot convert from BlockchainIdeModule to Module");
+    BlockchainRuntimeModule _blockchainRuntimeModule = new BlockchainRuntimeModule();
+    BlockchainIdeModule _blockchainIdeModule = new BlockchainIdeModule();
+    return Guice.createInjector(Modules2.mixin(_blockchainRuntimeModule, _blockchainIdeModule));
   }
 }

@@ -6,14 +6,14 @@ using System;
 public class AutoMarket : SmartContract 
 {
 	public struct Vehiculo {
-		public String Marca; 
-		public String Modelo; 
-		public String Linea; 
-		public Numerico Cilindraje; 
-		public String Placa; 
-		public Numerico Precio; 
-		public Boolean Nuevo; 
-		public String Comentarios; 
+		public string Marca; 
+		public string Modelo; 
+		public string Linea; 
+		public int Cilindraje; 
+		public string Placa; 
+		public int Precio; 
+		public bool Nuevo; 
+		public string Comentarios; 
 		}
 		public Inventario(ISmartContractState smartContractState, ulong durationBlocks)
     	: base(smartContractState)
@@ -42,23 +42,19 @@ public class AutoMarket : SmartContract
         	}
     	}
 	
-		public void ConsultarVehiculo (String Placa){
+		public void ConsultarVehiculo (string Placa){
 		
 		}
 	
-		public void BorrarVehiculo (String Placa){
+		public void CalcularCostos (int PrecioVehiculo,int ImpuestoVehiculo,int ValorTraspaso,int ComisionRunt){
 		
 		}
 	
-		public void CalcularCostosVenta (Numerico PrecioVehiculo,Numerico ImpuestoVehiculo,Numerico ValorTraspaso,Numerico ComisionRunt){
+		public void CrearVehiculo (string Marca,string Modelo,string Linea,string Placa,int Cilindraje,int Precio){
 		
 		}
 	
-		public void CrearVehiculo (String Marca,String Modelo,String Linea,Numerico Cilindraje,String Placa,Numerico Precio){
-		
-		}
-	
-		public void ActualizarVehiculo (Numerico Cilindraje,Numerico Precio){
+		public void ActualizarVehiculo (string Placa,int Cilindraje,int Precio){
 		
 		}
  

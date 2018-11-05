@@ -3,13 +3,14 @@
  */
 package uniandes.mdd.aplicacion.blockchain;
 
+import uniandes.mdd.aplicacion.blockchain.BlockchainStandaloneSetupGenerated;
+
 /**
  * Initialization support for running Xtext languages without Equinox extension registry.
  */
 @SuppressWarnings("all")
-public class BlockchainStandaloneSetup /* implements BlockchainStandaloneSetupGenerated  */{
+public class BlockchainStandaloneSetup extends BlockchainStandaloneSetupGenerated {
   public static void doSetup() {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method createInjectorAndDoEMFRegistration() is undefined for the type BlockchainStandaloneSetup");
+    new BlockchainStandaloneSetup().createInjectorAndDoEMFRegistration();
   }
 }

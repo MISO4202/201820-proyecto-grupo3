@@ -37,8 +37,6 @@ Aplicacion Automarket{
 				&& ExpLog(ExpRef{Marca}!=ExpTex "Renault"))
 			{
 				ExpArit (ExpArit ExpRef {VehiculosCaros} GET ExpRef {Placa}) = ExpRef {vehiculo}
-			}else{
-				
 			}
 		}
 		Operacion isUd=false ActualizarVehiculo (string Placa, int Cilindraje, int Precio){

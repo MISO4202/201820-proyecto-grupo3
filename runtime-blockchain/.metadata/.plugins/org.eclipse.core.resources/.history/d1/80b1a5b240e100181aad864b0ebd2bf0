@@ -1,0 +1,26 @@
+pragma solidity ^0.4.0;
+
+[%for (smc in SmartContract.all) { %]
+contract [%=smc.name%] {
+ 	[%for (ent in smc.entidades) { %]
+		struct [%=ent.name%] {
+		  [%for (attr in ent.atributos) { %]
+			[%=attr.tipodato.name%] [%=attr.name%] 
+		[%}%]
+		}
+		[%for (est in smc.estado) { %]
+		mapping ([%=est.tipodato.name%] => [%=ent.name%]) public [%=est.name%];
+		[%}%]
+		[%for (ope in smc.operaciones) { %]
+		function [%=ope.name%] ([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %][%=par.tipodato.name%] [%=par.name%][%i++;%][%if(i<>cantpar){%],[%}%][%}%]){
+			[%for (line in ope.lineas) { %]
+				[%=line%]
+			[%}%]
+		}
+		[%}%]
+[%}%] 
+}
+	
+[%}%]
+
+ 

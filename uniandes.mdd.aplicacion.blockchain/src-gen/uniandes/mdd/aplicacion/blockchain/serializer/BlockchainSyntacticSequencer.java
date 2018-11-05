@@ -20,9 +20,6 @@ import uniandes.mdd.aplicacion.blockchain.services.BlockchainGrammarAccess;
 public class BlockchainSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected BlockchainGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Condicional_ElseKeyword_6_q;
-	protected AbstractElementAlias match_Condicional_LeftCurlyBracketKeyword_7_q;
-	protected AbstractElementAlias match_Condicional_RightCurlyBracketKeyword_9_q;
 	protected AbstractElementAlias match_ExpresionAritmetica_LeftParenthesisKeyword_2_a;
 	protected AbstractElementAlias match_ExpresionAritmetica_LeftParenthesisKeyword_6_a;
 	protected AbstractElementAlias match_ExpresionAritmetica_RightParenthesisKeyword_4_a;
@@ -38,9 +35,6 @@ public class BlockchainSyntacticSequencer extends AbstractSyntacticSequencer {
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (BlockchainGrammarAccess) access;
-		match_Condicional_ElseKeyword_6_q = new TokenAlias(false, true, grammarAccess.getCondicionalAccess().getElseKeyword_6());
-		match_Condicional_LeftCurlyBracketKeyword_7_q = new TokenAlias(false, true, grammarAccess.getCondicionalAccess().getLeftCurlyBracketKeyword_7());
-		match_Condicional_RightCurlyBracketKeyword_9_q = new TokenAlias(false, true, grammarAccess.getCondicionalAccess().getRightCurlyBracketKeyword_9());
 		match_ExpresionAritmetica_LeftParenthesisKeyword_2_a = new TokenAlias(true, true, grammarAccess.getExpresionAritmeticaAccess().getLeftParenthesisKeyword_2());
 		match_ExpresionAritmetica_LeftParenthesisKeyword_6_a = new TokenAlias(true, true, grammarAccess.getExpresionAritmeticaAccess().getLeftParenthesisKeyword_6());
 		match_ExpresionAritmetica_RightParenthesisKeyword_4_a = new TokenAlias(true, true, grammarAccess.getExpresionAritmeticaAccess().getRightParenthesisKeyword_4());
@@ -77,13 +71,7 @@ public class BlockchainSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Condicional_ElseKeyword_6_q.equals(syntax))
-				emit_Condicional_ElseKeyword_6_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Condicional_LeftCurlyBracketKeyword_7_q.equals(syntax))
-				emit_Condicional_LeftCurlyBracketKeyword_7_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Condicional_RightCurlyBracketKeyword_9_q.equals(syntax))
-				emit_Condicional_RightCurlyBracketKeyword_9_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_ExpresionAritmetica_LeftParenthesisKeyword_2_a.equals(syntax))
+			if (match_ExpresionAritmetica_LeftParenthesisKeyword_2_a.equals(syntax))
 				emit_ExpresionAritmetica_LeftParenthesisKeyword_2_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_ExpresionAritmetica_LeftParenthesisKeyword_6_a.equals(syntax))
 				emit_ExpresionAritmetica_LeftParenthesisKeyword_6_a(semanticObject, getLastNavigableState(), syntaxNodes);
@@ -109,52 +97,6 @@ public class BlockchainSyntacticSequencer extends AbstractSyntacticSequencer {
 		}
 	}
 
-	/**
-	 * Ambiguous syntax:
-	 *     'else'?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) 'if' '{' '}' (ambiguity) '{'? '}'? (rule start)
-	 *     (rule start) 'if' '{' '}' (ambiguity) '{'? validador+=Linea
-	 *     expresionlogica=ExpresionLogica '{' '}' (ambiguity) '{'? '}'? (rule end)
-	 *     expresionlogica=ExpresionLogica '{' '}' (ambiguity) '{'? validador+=Linea
-	 *     validador+=Linea '}' (ambiguity) '{'? '}'? (rule end)
-	 *     validador+=Linea '}' (ambiguity) '{'? validador+=Linea
-	 */
-	protected void emit_Condicional_ElseKeyword_6_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '{'?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) 'if' '{' '}' 'else'? (ambiguity) '}'? (rule start)
-	 *     (rule start) 'if' '{' '}' 'else'? (ambiguity) validador+=Linea
-	 *     expresionlogica=ExpresionLogica '{' '}' 'else'? (ambiguity) '}'? (rule end)
-	 *     expresionlogica=ExpresionLogica '{' '}' 'else'? (ambiguity) validador+=Linea
-	 *     validador+=Linea '}' 'else'? (ambiguity) '}'? (rule end)
-	 *     validador+=Linea '}' 'else'? (ambiguity) validador+=Linea
-	 */
-	protected void emit_Condicional_LeftCurlyBracketKeyword_7_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '}'?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) 'if' '{' '}' 'else'? '{'? (ambiguity) (rule start)
-	 *     expresionlogica=ExpresionLogica '{' '}' 'else'? '{'? (ambiguity) (rule end)
-	 *     validador+=Linea '}' 'else'? '{'? (ambiguity) (rule end)
-	 *     validador+=Linea (ambiguity) (rule end)
-	 */
-	protected void emit_Condicional_RightCurlyBracketKeyword_9_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 	/**
 	 * Ambiguous syntax:
 	 *     '('*

@@ -114,17 +114,13 @@ Condicional returns Condicional:
 		 '{'
 		 	validador+=Linea*	
 		 '}'
-		 ('else'(else=Else)?)?
-		 '{'?
-		 	validador+=Linea*
-		 '}'?
 	;
 
 Else returns Condicional:
 		 {Condicional}
-		 /*'{'
+		 '{'
 		 	validador+=Linea*	
-		 '}'*/
+		 '}'
 		;
 	
 ExpresionNumerica returns ExpresionNumerica:

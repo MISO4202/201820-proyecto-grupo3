@@ -13,7 +13,10 @@ contract [%=smc.name%] {
 		[%}%]
 		[%for (ope in smc.operaciones) { %]
 		function [%=ope.name%] ([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %][%=par.tipodato.name%] [%=par.name%][%i++;%][%if(i<>cantpar){%],[%}%][%}%]){
-		
+		[%for (line in ope.lineas) {%] 
+			[%=line%]		  				  	
+				
+		[%}%]
 		}
 		[%}%]
 [%}%] 

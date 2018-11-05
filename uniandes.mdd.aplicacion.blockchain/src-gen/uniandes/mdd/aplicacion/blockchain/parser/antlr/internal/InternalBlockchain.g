@@ -1385,43 +1385,6 @@ ruleCondicional returns [EObject current=null]
 		{
 			newLeafNode(otherlv_5, grammarAccess.getCondicionalAccess().getRightCurlyBracketKeyword_5());
 		}
-		(
-			otherlv_6='else'
-			{
-				newLeafNode(otherlv_6, grammarAccess.getCondicionalAccess().getElseKeyword_6());
-			}
-		)?
-		(
-			otherlv_7='{'
-			{
-				newLeafNode(otherlv_7, grammarAccess.getCondicionalAccess().getLeftCurlyBracketKeyword_7());
-			}
-		)?
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getCondicionalAccess().getValidadorLineaParserRuleCall_8_0());
-				}
-				lv_validador_8_0=ruleLinea
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getCondicionalRule());
-					}
-					add(
-						$current,
-						"validador",
-						lv_validador_8_0,
-						"uniandes.mdd.aplicacion.blockchain.Blockchain.Linea");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)*
-		(
-			otherlv_9='}'
-			{
-				newLeafNode(otherlv_9, grammarAccess.getCondicionalAccess().getRightCurlyBracketKeyword_9());
-			}
-		)?
 	)
 ;
 
