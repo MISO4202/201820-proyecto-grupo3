@@ -69,12 +69,13 @@ public class BlockchainFactoryImpl extends EFactoryImpl implements BlockchainFac
 			case BlockchainPackage.EXPRESION_ARITMETICA: return createExpresionAritmetica();
 			case BlockchainPackage.VARIABLE: return createVariable();
 			case BlockchainPackage.MAPA: return createMapa();
-			case BlockchainPackage.CONDICIONAL: return createCondicional();
+			case BlockchainPackage.IF: return createIf();
 			case BlockchainPackage.EXPRESION_NUMERICA: return createExpresionNumerica();
 			case BlockchainPackage.EXPRESION_TEXTO: return createExpresionTexto();
 			case BlockchainPackage.EXPRESION_BOOLEAN: return createExpresionBoolean();
 			case BlockchainPackage.EXPRESION_REFERENCIADA: return createExpresionReferenciada();
 			case BlockchainPackage.EXPRESION_RELACIONAL: return createExpresionRelacional();
+			case BlockchainPackage.ELSE: return createElse();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -247,9 +248,9 @@ public class BlockchainFactoryImpl extends EFactoryImpl implements BlockchainFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Condicional createCondicional() {
-		CondicionalImpl condicional = new CondicionalImpl();
-		return condicional;
+	public If createIf() {
+		IfImpl if_ = new IfImpl();
+		return if_;
 	}
 
 	/**
@@ -300,6 +301,16 @@ public class BlockchainFactoryImpl extends EFactoryImpl implements BlockchainFac
 	public ExpresionRelacional createExpresionRelacional() {
 		ExpresionRelacionalImpl expresionRelacional = new ExpresionRelacionalImpl();
 		return expresionRelacional;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Else createElse() {
+		ElseImpl else_ = new ElseImpl();
+		return else_;
 	}
 
 	/**

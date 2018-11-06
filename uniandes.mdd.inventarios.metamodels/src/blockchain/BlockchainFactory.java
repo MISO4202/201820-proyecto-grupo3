@@ -130,13 +130,13 @@ public interface BlockchainFactory extends EFactory {
 	Mapa createMapa();
 
 	/**
-	 * Returns a new object of class '<em>Condicional</em>'.
+	 * Returns a new object of class '<em>If</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Condicional</em>'.
+	 * @return a new object of class '<em>If</em>'.
 	 * @generated
 	 */
-	Condicional createCondicional();
+	If createIf();
 
 	/**
 	 * Returns a new object of class '<em>Expresion Numerica</em>'.
@@ -182,6 +182,15 @@ public interface BlockchainFactory extends EFactory {
 	 * @generated
 	 */
 	ExpresionRelacional createExpresionRelacional();
+
+	/**
+	 * Returns a new object of class '<em>Else</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Else</em>'.
+	 * @generated
+	 */
+	Else createElse();
 
 	/**
 	 * Returns the package supported by this factory.

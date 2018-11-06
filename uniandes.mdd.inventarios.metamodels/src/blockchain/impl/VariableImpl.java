@@ -84,6 +84,27 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.VARIABLE__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TipoDato getTipodato() {
 		if (tipodato != null && tipodato.eIsProxy()) {
 			InternalEObject oldTipodato = (InternalEObject)tipodato;
@@ -115,27 +136,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 		tipodato = newTipodato;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.VARIABLE__TIPODATO, oldTipodato, tipodato));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.VARIABLE__NAME, oldName, name));
 	}
 
 	/**

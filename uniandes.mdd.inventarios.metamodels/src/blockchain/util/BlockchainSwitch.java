@@ -166,11 +166,11 @@ public class BlockchainSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case BlockchainPackage.CONDICIONAL: {
-				Condicional condicional = (Condicional)theEObject;
-				T result = caseCondicional(condicional);
-				if (result == null) result = caseSentencia(condicional);
-				if (result == null) result = caseLinea(condicional);
+			case BlockchainPackage.IF: {
+				If if_ = (If)theEObject;
+				T result = caseIf(if_);
+				if (result == null) result = caseSentencia(if_);
+				if (result == null) result = caseLinea(if_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -239,6 +239,12 @@ public class BlockchainSwitch<T> extends Switch<T> {
 			case BlockchainPackage.NAMED_ELEMENT: {
 				NamedElement namedElement = (NamedElement)theEObject;
 				T result = caseNamedElement(namedElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BlockchainPackage.ELSE: {
+				Else else_ = (Else)theEObject;
+				T result = caseElse(else_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -457,17 +463,17 @@ public class BlockchainSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Condicional</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>If</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Condicional</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>If</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCondicional(Condicional object) {
+	public T caseIf(If object) {
 		return null;
 	}
 
@@ -603,6 +609,21 @@ public class BlockchainSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseNamedElement(NamedElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Else</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Else</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseElse(Else object) {
 		return null;
 	}
 

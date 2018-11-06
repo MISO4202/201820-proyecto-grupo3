@@ -124,8 +124,8 @@ public class BlockchainAdapterFactory extends AdapterFactoryImpl {
 				return createMapaAdapter();
 			}
 			@Override
-			public Adapter caseCondicional(Condicional object) {
-				return createCondicionalAdapter();
+			public Adapter caseIf(If object) {
+				return createIfAdapter();
 			}
 			@Override
 			public Adapter caseExpresion(Expresion object) {
@@ -162,6 +162,10 @@ public class BlockchainAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseNamedElement(NamedElement object) {
 				return createNamedElementAdapter();
+			}
+			@Override
+			public Adapter caseElse(Else object) {
+				return createElseAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -380,16 +384,16 @@ public class BlockchainAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link blockchain.Condicional <em>Condicional</em>}'.
+	 * Creates a new adapter for an object of class '{@link blockchain.If <em>If</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see blockchain.Condicional
+	 * @see blockchain.If
 	 * @generated
 	 */
-	public Adapter createCondicionalAdapter() {
+	public Adapter createIfAdapter() {
 		return null;
 	}
 
@@ -516,6 +520,20 @@ public class BlockchainAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createNamedElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link blockchain.Else <em>Else</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see blockchain.Else
+	 * @generated
+	 */
+	public Adapter createElseAdapter() {
 		return null;
 	}
 

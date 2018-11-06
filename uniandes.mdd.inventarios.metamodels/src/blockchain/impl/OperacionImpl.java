@@ -169,6 +169,27 @@ public class OperacionImpl extends MinimalEObjectImpl.Container implements Opera
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isEsUserDefined() {
+		return esUserDefined;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEsUserDefined(boolean newEsUserDefined) {
+		boolean oldEsUserDefined = esUserDefined;
+		esUserDefined = newEsUserDefined;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.OPERACION__ES_USER_DEFINED, oldEsUserDefined, esUserDefined));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TipoDato getRetorno() {
 		if (retorno != null && retorno.eIsProxy()) {
 			InternalEObject oldRetorno = (InternalEObject)retorno;
@@ -212,27 +233,6 @@ public class OperacionImpl extends MinimalEObjectImpl.Container implements Opera
 			lineas = new EObjectContainmentEList<Linea>(Linea.class, this, BlockchainPackage.OPERACION__LINEAS);
 		}
 		return lineas;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isEsUserDefined() {
-		return esUserDefined;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEsUserDefined(boolean newEsUserDefined) {
-		boolean oldEsUserDefined = esUserDefined;
-		esUserDefined = newEsUserDefined;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.OPERACION__ES_USER_DEFINED, oldEsUserDefined, esUserDefined));
 	}
 
 	/**

@@ -5,6 +5,7 @@ package blockchain.impl;
 import blockchain.BlockchainPackage;
 import blockchain.ExpresionReferenciada;
 import blockchain.NamedElement;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -37,6 +38,7 @@ public class ExpresionReferenciadaImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected static final int ID_EDEFAULT = 0;
+
 	/**
 	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -46,6 +48,7 @@ public class ExpresionReferenciadaImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected int id = ID_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getReferencia() <em>Referencia</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -55,6 +58,7 @@ public class ExpresionReferenciadaImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected NamedElement referencia;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

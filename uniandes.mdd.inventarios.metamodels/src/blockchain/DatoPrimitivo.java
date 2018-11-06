@@ -46,7 +46,9 @@ public enum DatoPrimitivo implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BOOLEAN(2, "BOOLEAN", "BOOLEAN"), /**
+	BOOLEAN(2, "BOOLEAN", "BOOLEAN"),
+
+	/**
 	 * The '<em><b>ADDRESS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

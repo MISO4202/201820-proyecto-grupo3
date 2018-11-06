@@ -66,7 +66,9 @@ public enum Operador implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	IGUAL(4, "IGUAL", "IGUAL"), /**
+	IGUAL(4, "IGUAL", "IGUAL"),
+
+	/**
 	 * The '<em><b>GET</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -74,7 +76,9 @@ public enum Operador implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	GET(5, "GET", "GET"), /**
+	GET(5, "GET", "GET"),
+
+	/**
 	 * The '<em><b>DELETE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

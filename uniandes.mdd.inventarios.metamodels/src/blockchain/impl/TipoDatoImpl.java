@@ -6,6 +6,7 @@ import blockchain.BlockchainPackage;
 import blockchain.TipoDato;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -34,6 +35,7 @@ public abstract class TipoDatoImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -43,6 +45,7 @@ public abstract class TipoDatoImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

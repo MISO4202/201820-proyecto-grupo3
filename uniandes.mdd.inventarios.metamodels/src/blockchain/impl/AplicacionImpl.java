@@ -5,8 +5,8 @@ package blockchain.impl;
 import blockchain.Aplicacion;
 import blockchain.BlockchainPackage;
 import blockchain.SmartContract;
-
 import blockchain.TipoDato;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -58,6 +58,7 @@ public class AplicacionImpl extends MinimalEObjectImpl.Container implements Apli
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

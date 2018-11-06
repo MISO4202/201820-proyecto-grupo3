@@ -14,5 +14,4 @@ package blockchain;
  * @generated
  */
 public interface Expresion extends Linea {
-
 } // Expresion

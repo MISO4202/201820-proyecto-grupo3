@@ -70,6 +70,32 @@ public interface Operacion extends EObject {
 	void setName(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Es User Defined</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Es User Defined</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Es User Defined</em>' attribute.
+	 * @see #setEsUserDefined(boolean)
+	 * @see blockchain.BlockchainPackage#getOperacion_EsUserDefined()
+	 * @model
+	 * @generated
+	 */
+	boolean isEsUserDefined();
+
+	/**
+	 * Sets the value of the '{@link blockchain.Operacion#isEsUserDefined <em>Es User Defined</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Es User Defined</em>' attribute.
+	 * @see #isEsUserDefined()
+	 * @generated
+	 */
+	void setEsUserDefined(boolean value);
+
+	/**
 	 * Returns the value of the '<em><b>Retorno</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -110,31 +136,5 @@ public interface Operacion extends EObject {
 	 * @generated
 	 */
 	EList<Linea> getLineas();
-
-	/**
-	 * Returns the value of the '<em><b>Es User Defined</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Es User Defined</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Es User Defined</em>' attribute.
-	 * @see #setEsUserDefined(boolean)
-	 * @see blockchain.BlockchainPackage#getOperacion_EsUserDefined()
-	 * @model
-	 * @generated
-	 */
-	boolean isEsUserDefined();
-
-	/**
-	 * Sets the value of the '{@link blockchain.Operacion#isEsUserDefined <em>Es User Defined</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Es User Defined</em>' attribute.
-	 * @see #isEsUserDefined()
-	 * @generated
-	 */
-	void setEsUserDefined(boolean value);
 
 } // Operacion

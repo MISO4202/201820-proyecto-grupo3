@@ -2,6 +2,7 @@
  */
 package blockchain;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Estado</b></em>'.
@@ -23,7 +24,7 @@ public interface Estado extends NamedElement {
 	 * Returns the value of the '<em><b>Tipodato</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Tipodato</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Tipodato</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

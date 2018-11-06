@@ -426,26 +426,6 @@ public interface BlockchainPackage extends EPackage {
 	int PARAMETRO = 5;
 
 	/**
-	 * The meta object id for the '{@link blockchain.Sentencia <em>Sentencia</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see blockchain.Sentencia
-	 * @see blockchain.impl.BlockchainPackageImpl#getSentencia()
-	 * @generated
-	 */
-	int SENTENCIA = 7;
-
-	/**
-	 * The meta object id for the '{@link blockchain.impl.EstadoImpl <em>Estado</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see blockchain.impl.EstadoImpl
-	 * @see blockchain.impl.BlockchainPackageImpl#getEstado()
-	 * @generated
-	 */
-	int ESTADO = 6;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -480,6 +460,16 @@ public interface BlockchainPackage extends EPackage {
 	 * @ordered
 	 */
 	int PARAMETRO_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link blockchain.impl.EstadoImpl <em>Estado</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see blockchain.impl.EstadoImpl
+	 * @see blockchain.impl.BlockchainPackageImpl#getEstado()
+	 * @generated
+	 */
+	int ESTADO = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -544,6 +534,16 @@ public interface BlockchainPackage extends EPackage {
 	 * @ordered
 	 */
 	int LINEA_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link blockchain.Sentencia <em>Sentencia</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see blockchain.Sentencia
+	 * @see blockchain.impl.BlockchainPackageImpl#getSentencia()
+	 * @generated
+	 */
+	int SENTENCIA = 7;
 
 	/**
 	 * The number of structural features of the '<em>Sentencia</em>' class.
@@ -895,23 +895,14 @@ public interface BlockchainPackage extends EPackage {
 	int MAPA_OPERATION_COUNT = TIPO_DATO_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link blockchain.impl.CondicionalImpl <em>Condicional</em>}' class.
+	 * The meta object id for the '{@link blockchain.impl.IfImpl <em>If</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see blockchain.impl.CondicionalImpl
-	 * @see blockchain.impl.BlockchainPackageImpl#getCondicional()
+	 * @see blockchain.impl.IfImpl
+	 * @see blockchain.impl.BlockchainPackageImpl#getIf()
 	 * @generated
 	 */
-	int CONDICIONAL = 14;
-
-	/**
-	 * The feature id for the '<em><b>Else</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDICIONAL__ELSE = SENTENCIA_FEATURE_COUNT + 0;
+	int IF = 14;
 
 	/**
 	 * The feature id for the '<em><b>Expresionlogica</b></em>' containment reference.
@@ -920,34 +911,43 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONDICIONAL__EXPRESIONLOGICA = SENTENCIA_FEATURE_COUNT + 1;
+	int IF__EXPRESIONLOGICA = SENTENCIA_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Validador</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Lineas</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONDICIONAL__VALIDADOR = SENTENCIA_FEATURE_COUNT + 2;
+	int IF__LINEAS = SENTENCIA_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Condicional</em>' class.
+	 * The feature id for the '<em><b>Else</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONDICIONAL_FEATURE_COUNT = SENTENCIA_FEATURE_COUNT + 3;
+	int IF__ELSE = SENTENCIA_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Condicional</em>' class.
+	 * The number of structural features of the '<em>If</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONDICIONAL_OPERATION_COUNT = SENTENCIA_OPERATION_COUNT + 0;
+	int IF_FEATURE_COUNT = SENTENCIA_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>If</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF_OPERATION_COUNT = SENTENCIA_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link blockchain.impl.ExpresionNumericaImpl <em>Expresion Numerica</em>}' class.
@@ -1162,6 +1162,43 @@ public interface BlockchainPackage extends EPackage {
 	int EXPRESION_RELACIONAL_OPERATION_COUNT = EXPRESION_BINARIA_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link blockchain.impl.ElseImpl <em>Else</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see blockchain.impl.ElseImpl
+	 * @see blockchain.impl.BlockchainPackageImpl#getElse()
+	 * @generated
+	 */
+	int ELSE = 24;
+
+	/**
+	 * The feature id for the '<em><b>Lineas</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELSE__LINEAS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Else</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELSE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Else</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELSE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link blockchain.OperadorLogico <em>Operador Logico</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1169,7 +1206,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getOperadorLogico()
 	 * @generated
 	 */
-	int OPERADOR_LOGICO = 24;
+	int OPERADOR_LOGICO = 25;
 
 	/**
 	 * The meta object id for the '{@link blockchain.Operador <em>Operador</em>}' enum.
@@ -1179,7 +1216,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getOperador()
 	 * @generated
 	 */
-	int OPERADOR = 25;
+	int OPERADOR = 26;
 
 	/**
 	 * The meta object id for the '{@link blockchain.DatoPrimitivo <em>Dato Primitivo</em>}' enum.
@@ -1189,7 +1226,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getDatoPrimitivo()
 	 * @generated
 	 */
-	int DATO_PRIMITIVO = 26;
+	int DATO_PRIMITIVO = 27;
 
 	/**
 	 * The meta object id for the '{@link blockchain.OperadorRelacion <em>Operador Relacion</em>}' enum.
@@ -1199,7 +1236,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getOperadorRelacion()
 	 * @generated
 	 */
-	int OPERADOR_RELACION = 27;
+	int OPERADOR_RELACION = 28;
 
 
 	/**
@@ -1374,6 +1411,17 @@ public interface BlockchainPackage extends EPackage {
 	EAttribute getOperacion_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link blockchain.Operacion#isEsUserDefined <em>Es User Defined</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Es User Defined</em>'.
+	 * @see blockchain.Operacion#isEsUserDefined()
+	 * @see #getOperacion()
+	 * @generated
+	 */
+	EAttribute getOperacion_EsUserDefined();
+
+	/**
 	 * Returns the meta object for the reference '{@link blockchain.Operacion#getRetorno <em>Retorno</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1394,17 +1442,6 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getOperacion_Lineas();
-
-	/**
-	 * Returns the meta object for the attribute '{@link blockchain.Operacion#isEsUserDefined <em>Es User Defined</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Es User Defined</em>'.
-	 * @see blockchain.Operacion#isEsUserDefined()
-	 * @see #getOperacion()
-	 * @generated
-	 */
-	EAttribute getOperacion_EsUserDefined();
 
 	/**
 	 * Returns the meta object for class '{@link blockchain.Parametro <em>Parametro</em>}'.
@@ -1596,47 +1633,47 @@ public interface BlockchainPackage extends EPackage {
 	EReference getMapa_TipoDatoValue();
 
 	/**
-	 * Returns the meta object for class '{@link blockchain.Condicional <em>Condicional</em>}'.
+	 * Returns the meta object for class '{@link blockchain.If <em>If</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Condicional</em>'.
-	 * @see blockchain.Condicional
+	 * @return the meta object for class '<em>If</em>'.
+	 * @see blockchain.If
 	 * @generated
 	 */
-	EClass getCondicional();
+	EClass getIf();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link blockchain.Condicional#getExpresionlogica <em>Expresionlogica</em>}'.
+	 * Returns the meta object for the containment reference '{@link blockchain.If#getExpresionlogica <em>Expresionlogica</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expresionlogica</em>'.
-	 * @see blockchain.Condicional#getExpresionlogica()
-	 * @see #getCondicional()
+	 * @see blockchain.If#getExpresionlogica()
+	 * @see #getIf()
 	 * @generated
 	 */
-	EReference getCondicional_Expresionlogica();
+	EReference getIf_Expresionlogica();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link blockchain.Condicional#getValidador <em>Validador</em>}'.
+	 * Returns the meta object for the containment reference list '{@link blockchain.If#getLineas <em>Lineas</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Validador</em>'.
-	 * @see blockchain.Condicional#getValidador()
-	 * @see #getCondicional()
+	 * @return the meta object for the containment reference list '<em>Lineas</em>'.
+	 * @see blockchain.If#getLineas()
+	 * @see #getIf()
 	 * @generated
 	 */
-	EReference getCondicional_Validador();
+	EReference getIf_Lineas();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link blockchain.Condicional#getElse <em>Else</em>}'.
+	 * Returns the meta object for the containment reference '{@link blockchain.If#getElse <em>Else</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Else</em>'.
-	 * @see blockchain.Condicional#getElse()
-	 * @see #getCondicional()
+	 * @see blockchain.If#getElse()
+	 * @see #getIf()
 	 * @generated
 	 */
-	EReference getCondicional_Else();
+	EReference getIf_Else();
 
 	/**
 	 * Returns the meta object for class '{@link blockchain.Expresion <em>Expresion</em>}'.
@@ -1826,6 +1863,27 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getNamedElement_Name();
+
+	/**
+	 * Returns the meta object for class '{@link blockchain.Else <em>Else</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Else</em>'.
+	 * @see blockchain.Else
+	 * @generated
+	 */
+	EClass getElse();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link blockchain.Else#getLineas <em>Lineas</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Lineas</em>'.
+	 * @see blockchain.Else#getLineas()
+	 * @see #getElse()
+	 * @generated
+	 */
+	EReference getElse_Lineas();
 
 	/**
 	 * Returns the meta object for enum '{@link blockchain.OperadorLogico <em>Operador Logico</em>}'.
@@ -2029,6 +2087,14 @@ public interface BlockchainPackage extends EPackage {
 		EAttribute OPERACION__NAME = eINSTANCE.getOperacion_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Es User Defined</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OPERACION__ES_USER_DEFINED = eINSTANCE.getOperacion_EsUserDefined();
+
+		/**
 		 * The meta object literal for the '<em><b>Retorno</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2043,14 +2109,6 @@ public interface BlockchainPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OPERACION__LINEAS = eINSTANCE.getOperacion_Lineas();
-
-		/**
-		 * The meta object literal for the '<em><b>Es User Defined</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute OPERACION__ES_USER_DEFINED = eINSTANCE.getOperacion_EsUserDefined();
 
 		/**
 		 * The meta object literal for the '{@link blockchain.impl.ParametroImpl <em>Parametro</em>}' class.
@@ -2215,14 +2273,14 @@ public interface BlockchainPackage extends EPackage {
 		EReference MAPA__TIPO_DATO_VALUE = eINSTANCE.getMapa_TipoDatoValue();
 
 		/**
-		 * The meta object literal for the '{@link blockchain.impl.CondicionalImpl <em>Condicional</em>}' class.
+		 * The meta object literal for the '{@link blockchain.impl.IfImpl <em>If</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see blockchain.impl.CondicionalImpl
-		 * @see blockchain.impl.BlockchainPackageImpl#getCondicional()
+		 * @see blockchain.impl.IfImpl
+		 * @see blockchain.impl.BlockchainPackageImpl#getIf()
 		 * @generated
 		 */
-		EClass CONDICIONAL = eINSTANCE.getCondicional();
+		EClass IF = eINSTANCE.getIf();
 
 		/**
 		 * The meta object literal for the '<em><b>Expresionlogica</b></em>' containment reference feature.
@@ -2230,15 +2288,15 @@ public interface BlockchainPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONDICIONAL__EXPRESIONLOGICA = eINSTANCE.getCondicional_Expresionlogica();
+		EReference IF__EXPRESIONLOGICA = eINSTANCE.getIf_Expresionlogica();
 
 		/**
-		 * The meta object literal for the '<em><b>Validador</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Lineas</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONDICIONAL__VALIDADOR = eINSTANCE.getCondicional_Validador();
+		EReference IF__LINEAS = eINSTANCE.getIf_Lineas();
 
 		/**
 		 * The meta object literal for the '<em><b>Else</b></em>' containment reference feature.
@@ -2246,7 +2304,7 @@ public interface BlockchainPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONDICIONAL__ELSE = eINSTANCE.getCondicional_Else();
+		EReference IF__ELSE = eINSTANCE.getIf_Else();
 
 		/**
 		 * The meta object literal for the '{@link blockchain.Expresion <em>Expresion</em>}' class.
@@ -2409,6 +2467,24 @@ public interface BlockchainPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute NAMED_ELEMENT__NAME = eINSTANCE.getNamedElement_Name();
+
+		/**
+		 * The meta object literal for the '{@link blockchain.impl.ElseImpl <em>Else</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see blockchain.impl.ElseImpl
+		 * @see blockchain.impl.BlockchainPackageImpl#getElse()
+		 * @generated
+		 */
+		EClass ELSE = eINSTANCE.getElse();
+
+		/**
+		 * The meta object literal for the '<em><b>Lineas</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ELSE__LINEAS = eINSTANCE.getElse_Lineas();
 
 		/**
 		 * The meta object literal for the '{@link blockchain.OperadorLogico <em>Operador Logico</em>}' enum.

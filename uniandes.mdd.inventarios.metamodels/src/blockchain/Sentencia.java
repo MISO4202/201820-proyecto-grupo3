@@ -2,6 +2,7 @@
  */
 package blockchain;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Sentencia</b></em>'.

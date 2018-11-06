@@ -84,10 +84,10 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Mapa/tipoDatoKey"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Mapa/tipoDatoValue"/>
     </genClasses>
-    <genClasses ecoreClass="blockchain.ecore#//Condicional">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Condicional/else"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Condicional/expresionlogica"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Condicional/validador"/>
+    <genClasses ecoreClass="blockchain.ecore#//If">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//If/expresionlogica"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//If/lineas"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//If/else"/>
     </genClasses>
     <genClasses image="false" ecoreClass="blockchain.ecore#//Expresion"/>
     <genClasses ecoreClass="blockchain.ecore#//ExpresionNumerica">
@@ -113,6 +113,9 @@
     <genClasses image="false" ecoreClass="blockchain.ecore#//Linea"/>
     <genClasses image="false" ecoreClass="blockchain.ecore#//NamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//Else">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Else/lineas"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

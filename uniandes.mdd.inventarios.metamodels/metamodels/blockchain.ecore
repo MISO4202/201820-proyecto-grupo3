@@ -91,13 +91,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="tipoDatoValue" lowerBound="1"
         eType="#//TipoDato"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Condicional" eSuperTypes="#//Sentencia">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="else" eType="#//Condicional"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="If" eSuperTypes="#//Sentencia">
     <eStructuralFeatures xsi:type="ecore:EReference" name="expresionlogica" lowerBound="1"
         eType="#//ExpresionLogica" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="validador" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lineas" upperBound="-1"
         eType="#//Linea" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="else" eType="#//Else" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expresion" abstract="true" interface="true"
       eSuperTypes="#//Linea"/>
@@ -130,5 +129,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="Linea" abstract="true" interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Else">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lineas" upperBound="-1"
+        eType="#//Linea" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

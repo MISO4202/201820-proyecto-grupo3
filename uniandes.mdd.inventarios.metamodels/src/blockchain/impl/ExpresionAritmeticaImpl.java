@@ -5,7 +5,9 @@ package blockchain.impl;
 import blockchain.BlockchainPackage;
 import blockchain.ExpresionAritmetica;
 import blockchain.Operador;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -103,7 +105,6 @@ public class ExpresionAritmeticaImpl extends ExpresionBinariaImpl implements Exp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
