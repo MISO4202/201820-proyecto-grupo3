@@ -1,14 +1,12 @@
 pragma solidity ^0.4.0;
 
-
-
 [%for (smc in SmartContract.all) { %]
 contract [%=smc.name%] {
  	[%for (ent in smc.entidades) { %]
 		struct [%=ent.name%] {
 		  [%for (attr in ent.atributos) { 
 		    if(attr.tipodato.name=='int'){%]
-		    [%='uint'%] [%=attr.name%][%}else{%]
+		    uint [%=attr.name%][%}else{%]
 		    [%=attr.tipodato.name%] [%=attr.name%][%}
 		  %]
 			 
@@ -19,135 +17,10 @@ contract [%=smc.name%] {
 		[%}%]
 		[%for (ope in smc.operaciones) { %]
 		function [%=ope.name%] ([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %][%=par.tipodato.name%] [%=par.name%][%i++;%][%if(i<>cantpar){%],[%}%][%}%]){
-			[%for (line in ope.lineas) {%]
-				[%if(line.isTypeOf(ExpresionAritmetica)){
- 						var der=line.Der;
- 						if(der.isTypeOf(ExpresionReferenciada)){
- 		 					der=line.Der.referencia.name;
- 						}else if(der.isTypeOf(ExpresionNumerica) or der.isTypeOf(ExpresionTexto)or der.isTypeOf(ExpresionBoolean)){
- 		 					der=line.Der.value;
- 						}else if(der.isTypeOf(Variable)){
- 							der=line.Der.name;
- 						}
- 						var izq=line.Izq;
- 		 				if(izq.isTypeOf(ExpresionReferenciada)){
- 		 					izq=line.Izq.referencia.name;
- 		 				}else if(izq.isTypeOf(ExpresionNumerica) or izq.isTypeOf(ExpresionTexto)or izq.isTypeOf(ExpresionBoolean)){
- 		 					izq=line.Izq.value;
- 		 				}else if(izq.isTypeOf(Variable)){
- 		 					izq=line.Izq.name;
- 		 				}
- 						%]
- 						[%=izq%] [%=line.operador%] [%=getDer(line)%]
-				[%}else if(line.isTypeOf(ExpresionLogica)){
-						var der=line.Der;
- 						if(der.isTypeOf(ExpresionReferenciada)){
- 		 					der=line.Der.referencia.name;
- 						}else if(der.isTypeOf(ExpresionNumerica) or der.isTypeOf(ExpresionTexto)or der.isTypeOf(ExpresionBoolean)){
- 		 					der=line.Der.value;
- 						}else if(der.isTypeOf(Variable)){
- 							der=line.Der.name;
- 						}%]
- 						 [%=line.operador%] [%=getDer(line)%]
-				[%}else if(line.isTypeOf(ExpresionRelacional)){
-						var der=line.Der;
- 						if(der.isTypeOf(ExpresionReferenciada)){
- 		 					der=line.Der.referencia.name;
-	 					}else if(der.isTypeOf(ExpresionNumerica) or der.isTypeOf(ExpresionTexto)or der.isTypeOf(ExpresionBoolean)){
- 		 					der=line.Der.value;
- 						}else if(der.isTypeOf(Variable)){
-	 						der=line.Der.name;
- 						}%]
- 						 [%=line.operador%] [%=getDer(line)%]
- 				[%}
 			
-			%]
-									
-			[%}%]
 		}
 		[%}%]
 [%}%] 
 }
 	
 [%}%]
-
-[%
-
-operation getDer (line:Linea) : String {
-				if(line.isTypeOf(ExpresionAritmetica)){
- 						var der=line.der;
- 						var dere="";
- 						if(der.isTypeOf(ExpresionReferenciada)){
- 		 					dere=line.Der.referencia.name;
- 						}else if(der.isTypeOf(ExpresionNumerica) or der.isTypeOf(ExpresionTexto)or der.isTypeOf(ExpresionBoolean)){
- 		 					dere=line.Der.value;
- 						}else if(der.isTypeOf(Variable)){
- 							dere=line.Der.name;
- 						}
- 						dere.println();
- 						return dere;
-				}else if(line.isTypeOf(ExpresionLogica)){
-						var der=line.der;
- 						var dere="";
- 						if(der.isTypeOf(ExpresionReferenciada)){
- 		 					dere=line.Der.referencia.name;
- 						}else if(der.isTypeOf(ExpresionNumerica) or der.isTypeOf(ExpresionTexto)or der.isTypeOf(ExpresionBoolean)){
- 		 					dere=line.Der.value;
- 						}else if(der.isTypeOf(Variable)){
- 							dere=line.Der.name;
- 						}	
- 						dere.println();
- 						return dere;
-				}else if(line.isTypeOf(ExpresionRelacional)){
-						var der=line.der;
- 						var dere="";
- 						if(der.isTypeOf(ExpresionReferenciada)){
- 		 					dere=line.Der.referencia.name;
-	 					}else if(der.isTypeOf(ExpresionNumerica) or der.isTypeOf(ExpresionTexto)or der.isTypeOf(ExpresionBoolean)){
- 		 					dere=line.Der.value;
- 						}else if(der.isTypeOf(Variable)){
-	 						dere=line.Der.name;
- 						}
- 						dere.println();
- 						return dere;
- 				}
- 				//return "prueba";
- 			
-}
-
-operation getIzq (Linea:Linea) : String {
-				if(Linea.isTypeOf(ExpresionAritmetica)){
- 					var izq=Linea.Izq;
- 		 			if(izq.isTypeOf(ExpresionReferenciada)){
- 		 				izq=Linea.Izq.referencia.name;
- 		 			}else if(izq.isTypeOf(ExpresionNumerica) or izq.isTypeOf(ExpresionTexto)or izq.isTypeOf(ExpresionBoolean)){
- 		 				izq=Linea.Izq.value;
- 		 			}else if(izq.isTypeOf(Variable)){
- 		 				izq=Linea.Izq.name;
- 		 			}
- 		 			%]
- 		 			[%=izq%] [%=Linea.operador%] [%=der%]
-				[%}else if(Linea.isTypeOf(ExpresionLogica)){
- 					var izq=Linea.Izq;
- 		 			if(izq.isTypeOf(ExpresionReferenciada)){
- 		 				izq=Linea.Izq.referencia.name;
- 		 			}else if(izq.isTypeOf(ExpresionNumerica) or izq.isTypeOf(ExpresionTexto)or izq.isTypeOf(ExpresionBoolean)){
- 		 				izq=Linea.Izq.value;
- 		 			}else if(izq.isTypeOf(Variable)){
- 		 				izq=Linea.Izq.name;
- 		 			}%]
- 		 			[%=izq%] [%=Linea.operador%] [%=der%]	
-				[%}else if(Linea.isTypeOf(ExpresionRelacional)){
- 					var izq=Linea.Izq;
- 		 			if(izq.isTypeOf(ExpresionReferenciada)){
- 		 				izq=Linea.Izq.referencia.name;
- 		 			}else if(izq.isTypeOf(ExpresionNumerica) or izq.isTypeOf(ExpresionTexto)or izq.isTypeOf(ExpresionBoolean)){
- 		 				izq=Linea.Izq.value;
- 		 			}else if(izq.isTypeOf(Variable)){
- 		 				izq=Linea.Izq.name;
- 		 			}%]
- 		 			[%=izq%] [%=Linea.operador%] [%=der%]	
-				[%}
-}
-%]
-
