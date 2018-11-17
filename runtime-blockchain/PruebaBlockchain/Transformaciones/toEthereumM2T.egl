@@ -4,12 +4,12 @@ pragma solidity ^0.4.0;
 contract [%=smc.name%] {
  	[%for (ent in smc.entidades) { %]
 		struct [%=ent.name%] {
-		  [%for (attr in ent.atributos) { 
+		  [%for (attr in ent.atributos) {
 		    if(attr.tipodato.name=='int'){%]
-		    uint [%=attr.name%][%}else{%]
+		    [%='uint'%] [%=attr.name%][%}else{%]
 		    [%=attr.tipodato.name%] [%=attr.name%][%}
 		  %]
-			 
+
 		[%}%]
 		}
 		[%for (est in smc.estado) { %]
@@ -17,10 +17,67 @@ contract [%=smc.name%] {
 		[%}%]
 		[%for (ope in smc.operaciones) { %]
 		function [%=ope.name%] ([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %][%=par.tipodato.name%] [%=par.name%][%i++;%][%if(i<>cantpar){%],[%}%][%}%]){
-			
+			[%for (line in ope.lineas) {
+				var izq; var der; var ope;%]
+				[%=getLine(line)%]
+				[%=line.select(l |l.isKindOf(ExpresionBinaria)).flatten()%]
+			[%}%]
 		}
 		[%}%]
-[%}%] 
-}
-	
 [%}%]
+}
+
+[%}%]
+
+[%
+operation getValue (line:Linea) : String {
+	if(line.isTypeOf(ExpresionNumerica) or line.isTypeOf(ExpresionTexto) or line.isTypeOf(ExpresionBoolean)){
+		return line.value.asString();
+	}else if(line.isTypeOf(ExpresionReferenciada)){
+		return line.referencia.name;
+	}else if(line.isTypeOf(Variable)){
+	    return line.name;
+	}
+}
+
+operation getOperador(line:Linea) : String{
+		var ope;
+		if(line.isTypeOf(ExpresionAritmetica)){
+	  			ope=line.operador.asString();
+	  	}else if (line.isTypeOf(ExpresionLogica)){
+	  			ope=line.OperadorLogico.asString();
+	  	}else if(line.isTypeOf(ExpresionRelacional)){
+	  			ope=".";
+	  	}
+	  	return ope;
+}
+
+operation getLine(line:Linea) : String {
+	var der; var der1; var der2;
+	var izq; var ope;
+	var linea; var rama;
+	if(line.isTypeOf(ExpresionBinaria)){
+		linea=line.select(l |l.isKindOf(Expresion)).flatten();
+		for(val in linea){
+	  		if(val.Izq.isKindOf(ExpresionBinaria)){
+	  			rama=val.Izq;
+	  			for(ri in rama){
+	  	  			der1=getValue(ri);
+			  	  	ope=getOperador(ri);
+	  	  			izq=ri.Izq;
+	  	  			der+=izq + " "+ ope+ " " + der1;
+	  			}
+	  		}else{
+	  			izq=getValue(val.Izq);
+	  		}
+	  		der+=getValue(val.Der);
+	  		ope=getOperador(val);
+	  		der2=izq+" "+ope+ " "+der;
+	  		der2.println();
+		}
+
+	}
+	return der2;
+
+}
+%]
