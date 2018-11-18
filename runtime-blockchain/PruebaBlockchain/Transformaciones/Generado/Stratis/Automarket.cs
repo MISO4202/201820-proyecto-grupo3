@@ -43,22 +43,60 @@ public class AutoMarket : SmartContract
     	}
 	
 		public void ConsultarVehiculo (string Placa){
-		
+			Vehiculos[Placa]; 
+				
 		}
 	
 		public void CalcularCostos (int PrecioVehiculo,int ImpuestoVehiculo,int ValorTraspaso,int ComisionRunt){
-		
+			    PrecioVehiculo * 0.19  +  PrecioVehiculo * ImpuestoVehiculo   + ValorTraspaso  + ComisionRunt ; 
+				
 		}
 	
 		public void CrearVehiculo (string Marca,string Modelo,string Linea,string Placa,int Cilindraje,int Precio){
-		
+			memory vehiculo = Vehiculo;				 
+				
+			  vehiculo . Marca  = Marca ; 
+				
+			  vehiculo . Modelo  = Modelo ; 
+				
+			  vehiculo . Linea  = Linea ; 
+				
+			  vehiculo . Cilindraje  = Cilindraje ; 
+				
+			  vehiculo . Placa  = Placa ; 
+				
+			  vehiculo . Precio  = Precio ; 
+				
+			  vehiculo . Nuevo  = true ; 
+				
+			  vehiculo . Comentarios  =  "SinComentarios" ; 
+				
+			  Vehiculos[Placa] = vehiculo ; 
+				
+			if(   Precio >= 1.0E8  ||   Marca ==  "Ferrari"  &&  Marca !=  "Renault"   ){
+					 VehiculosCaros[Placa] = vehiculo 
+			}else{	
+					 VehiculosBaratos[Placa] = vehiculo 
+	
+			}	 	
+				
 		}
 	
 		public void ActualizarVehiculo (string Placa,int Cilindraje,int Precio){
-		
+			memory vehiculo = Vehiculo;				 
+				
+			  vehiculo . Cilindraje  = Cilindraje ; 
+				
+			  vehiculo . Placa  = Placa ; 
+				
+			  vehiculo . Precio  = Precio ; 
+				
+			  vehiculo . Nuevo  = true ; 
+				
+			  Vehiculos[Placa] = vehiculo ; 
+				
 		}
  
 }
 	
 
- 

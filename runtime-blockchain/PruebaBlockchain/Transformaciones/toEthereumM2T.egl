@@ -18,19 +18,19 @@ contract [%=smc.name%] {
 		mapping ([%=attrId.tipodato.name%] => [%=est.tipodato.name%] ) public [%=est.name%];
 		[%}%]
 		[%for (ope in smc.operaciones) { %]
-		function [%=ope.name%] ([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %][%=par.tipodato.name%] [%=par.name%][%i++;%][%if(i<>cantpar){%],[%}%][%}%]){
+		function [%=ope.name%] ([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %][%=par.tipodato.name%] [%=par.name%][%i++;%][%if(i<>cantpar){%],[%}%][%}%])[%if(ope.retorno.size()>0){%] [%=getRetorno(ope)%][%} %]{
 			[%for (line in ope.lineas) {
 				var izq; var der; var ope;
 				 if(line.isKindOf(ExpresionBinaria)){%]
-			[%=getExpresionBinariaAux(line)%]; 
+			[%=getExpresion(line)%]; 
 				 [%}else if(line.isTypeOf(If)){%]
-			if( [%=getExpresionBinariaAux(line.expresionlogica)%]){
+			if( [%=getExpresion(line.expresionlogica)%]){
 				[%for (body in line.lineas){%]
-					[%=getExpresionBinariaAux(body)%]
+					[%=getExpresion(body)%]
 				[%}%]
 			}[%if(line.elseLines.size()>0){%]else{	
 				[%for (body in line.elseLines.lineas){%]
-					[%=getExpresionBinariaAux(body)%]
+					[%=getExpresion(body)%]
 				[%}%]	
 			[%}%]
 			}	 	
@@ -48,6 +48,18 @@ contract [%=smc.name%] {
 [%}%]
 
 [%
+
+operation getRetorno(ope: Operacion) : String{
+  if(ope.retorno.isUndefined()){
+  	return "";
+  }else{
+  	if(ope.retorno.isTypeOf(Primitivo)){
+  		return ": " + ope.retorno.tipo.asString() + " ";
+  	}else{
+  		return ": " + ope.retorno.name.asString() + " ";
+  	}
+  }
+}
 operation getValue (line:Linea) : String {
 	if(line.isTypeOf(ExpresionNumerica) or line.isTypeOf(ExpresionTexto) or line.isTypeOf(ExpresionBoolean)){
 		if(line.isTypeOf(ExpresionTexto)){
@@ -74,37 +86,19 @@ operation getOperador(line:Linea) : String{
 	  	return ope;
 }
 
-operation  getExpresionBinariaAux (line: Linea) : String {
+operation  getExpresion (line: Linea) : String {
 	if(not(line.isKindOf(ExpresionBinaria))){
 		return getValue(line);
 	}else{
 		if(getOperador(line)=="PUT"){
-			return " "+ getExpresionBinariaAux(line.Izq)+ "[" + getExpresionBinariaAux(line.Der)+"]";
+			return " "+ getExpresion(line.Izq)+ "[" + getExpresion(line.Der)+"]";
 		}else if(getOperador(line)=="GET"){
-			return getExpresionBinariaAux(line.Izq)+ "[" + getExpresionBinariaAux(line.Der)+"]";
+			return getExpresion(line.Izq)+ "[" + getExpresion(line.Der)+"]";
 		}else{
-			return " "+ getExpresionBinariaAux(line.Izq)+" "+ getOperador(line)+" "+getExpresionBinariaAux(line.Der)+" ";
+			return " "+ getExpresion(line.Izq)+" "+ getOperador(line)+" "+getExpresion(line.Der)+" ";
 		}
 		
 	}	
-}
-
-operation getExpresionIf (line:If) : Linea {
-	if(line.isTypeOf(If)){
-		line.expresionlogica.println();
-		return line.lineas.println();
-	}
-}
-
-operation  getExpresionValue (line : Linea) :  String {
-	if(line.isTypeOf(ExpresionNumerica) or line.isTypeOf(ExpresionTexto) or line.isTypeOf(ExpresionBoolean)){
-		return line.value.asString();
-	}else if(line.isTypeOf(ExpresionReferenciada))
-	{
-		return line.referencia.name;
-	}else{
-		return "";
-	}
 }
 
 %]

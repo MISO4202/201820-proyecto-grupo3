@@ -1,6 +1,7 @@
 import "truffle/Assert.sol";
 import "truffle/DeployedAddresses.sol";
-import "\\Automarket.sol"
+import "../contracts/Automarket.sol";
+
 
 contract TestAutoMarket {
 	function testConsultarVehiculo (){

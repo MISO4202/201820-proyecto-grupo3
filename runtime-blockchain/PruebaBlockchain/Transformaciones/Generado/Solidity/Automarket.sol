@@ -11,21 +11,61 @@ contract AutoMarket {
 		    bool Nuevo			 
 		    string Comentarios			 
 		}
-		mapping (MapaVehiculos => Vehiculo) public Vehiculos;
-		mapping (MapaVehiculos => Vehiculo) public VehiculosCaros;
-		mapping (MapaVehiculos => Vehiculo) public VehiculosBaratos;
-		function ConsultarVehiculo (string Placa){
-			
+		mapping (string => MapaVehiculos ) public Vehiculos;
+		mapping (string => MapaVehiculos ) public VehiculosCaros;
+		mapping (string => MapaVehiculos ) public VehiculosBaratos;
+		function ConsultarVehiculo (string Placa) : Vehiculo {
+			Vehiculos[Placa]; 
+				
 		}
-		function CalcularCostos (int PrecioVehiculo,int ImpuestoVehiculo,int ValorTraspaso,int ComisionRunt){
-			
+		function CalcularCostos (int PrecioVehiculo,int ImpuestoVehiculo,int ValorTraspaso,int ComisionRunt) : uint {
+			    PrecioVehiculo * 0.19  +  PrecioVehiculo * ImpuestoVehiculo   + ValorTraspaso  + ComisionRunt ; 
+				
 		}
-		function CrearVehiculo (string Marca,string Modelo,string Linea,string Placa,int Cilindraje,int Precio){
-			
+		function CrearVehiculo (string Marca,string Modelo,string Linea,string Placa,int Cilindraje,int Precio) {
+			memory vehiculo = Vehiculo;				 
+				
+			  vehiculo . Marca  = Marca ; 
+				
+			  vehiculo . Modelo  = Modelo ; 
+				
+			  vehiculo . Linea  = Linea ; 
+				
+			  vehiculo . Cilindraje  = Cilindraje ; 
+				
+			  vehiculo . Placa  = Placa ; 
+				
+			  vehiculo . Precio  = Precio ; 
+				
+			  vehiculo . Nuevo  = true ; 
+				
+			  vehiculo . Comentarios  =  "SinComentarios" ; 
+				
+			  Vehiculos[Placa] = vehiculo ; 
+				
+			if(   Precio >= 1.0E8  ||   Marca ==  "Ferrari"  &&  Marca !=  "Renault"   ){
+					 VehiculosCaros[Placa] = vehiculo 
+			}else{	
+					 VehiculosBaratos[Placa] = vehiculo 
+	
+			}	 	
+				
 		}
-		function ActualizarVehiculo (string Placa,int Cilindraje,int Precio){
-			
+		function ActualizarVehiculo (string Placa,int Cilindraje,int Precio) {
+			memory vehiculo = Vehiculo;				 
+				
+			  vehiculo . Cilindraje  = Cilindraje ; 
+				
+			  vehiculo . Placa  = Placa ; 
+				
+			  vehiculo . Precio  = Precio ; 
+				
+			  vehiculo . Nuevo  = true ; 
+				
+			  Vehiculos[Placa] = vehiculo ; 
+				
 		}
  
 }
 	
+

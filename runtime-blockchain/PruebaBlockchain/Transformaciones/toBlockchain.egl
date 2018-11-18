@@ -2,7 +2,6 @@
 	var app:Template:= TemplateFactory.load('toEthereumM2T.egl');
 	//Generación de los archivos Solidity
 	for(nameapp in Aplicacion.all.flatten()){
-		nameapp.name.println();
 		app.populate('app', nameapp.name);
 		app.generate('./Generado/Solidity/'+ nameapp.name + '.sol');
 	}
