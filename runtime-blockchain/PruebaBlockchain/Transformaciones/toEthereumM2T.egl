@@ -23,7 +23,18 @@ contract [%=smc.name%] {
 				var izq; var der; var ope;
 				 if(line.isKindOf(ExpresionBinaria)){%]
 			[%=getExpresionBinariaAux(line)%]; 
-				 [%}else{%]
+				 [%}else if(line.isTypeOf(If)){%]
+			if( [%=getExpresionBinariaAux(line.expresionlogica)%]){
+				[%for (body in line.lineas){%]
+					[%=getExpresionBinariaAux(body)%]
+				[%}%]
+			}[%if(line.elseLines.size()>0){%]else{	
+				[%for (body in line.elseLines.lineas){%]
+					[%=getExpresionBinariaAux(body)%]
+				[%}%]	
+			[%}%]
+			}	 	
+			[%}else{%]
 			[%=getValue(line)%];				 
 				 [%}
 				%]
@@ -56,7 +67,7 @@ operation getOperador(line:Linea) : String{
 		if(line.isTypeOf(ExpresionAritmetica)){
 				ope=line.operador.asString();
 	  	}else if (line.isTypeOf(ExpresionLogica)){
-	  			ope=line.OperadorLogico.asString();
+	  			ope=line.operador.asString();
 	  	}else if(line.isTypeOf(ExpresionRelacional)){
 	  			ope=".";
 	  	} 
@@ -76,6 +87,13 @@ operation  getExpresionBinariaAux (line: Linea) : String {
 		}
 		
 	}	
+}
+
+operation getExpresionIf (line:If) : Linea {
+	if(line.isTypeOf(If)){
+		line.expresionlogica.println();
+		return line.lineas.println();
+	}
 }
 
 operation  getExpresionValue (line : Linea) :  String {
