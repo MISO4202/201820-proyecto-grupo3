@@ -398,15 +398,6 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAtributo_IsId() {
-		return (EAttribute)atributoEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSmartContract() {
 		return smartContractEClass;
 	}
@@ -971,7 +962,6 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 
 		atributoEClass = createEClass(ATRIBUTO);
 		createEReference(atributoEClass, ATRIBUTO__TIPODATO);
-		createEAttribute(atributoEClass, ATRIBUTO__IS_ID);
 
 		smartContractEClass = createEClass(SMART_CONTRACT);
 		createEReference(smartContractEClass, SMART_CONTRACT__ENTIDADES);
@@ -1118,7 +1108,6 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 
 		initEClass(atributoEClass, Atributo.class, "Atributo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAtributo_Tipodato(), this.getTipoDato(), null, "tipodato", null, 1, 1, Atributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAtributo_IsId(), ecorePackage.getEBoolean(), "isId", null, 0, 1, Atributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(smartContractEClass, SmartContract.class, "SmartContract", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSmartContract_Entidades(), this.getEntidad(), null, "entidades", null, 0, -1, SmartContract.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

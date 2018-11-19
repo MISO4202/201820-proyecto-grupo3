@@ -134,10 +134,19 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Atributo returns Atributo
 	 *
 	 * Constraint:
-	 *     (tipodato=[TipoDato|EString] isId=EBoolean? name=EString)
+	 *     (tipodato=[TipoDato|EString] name=EString)
 	 */
 	protected void sequence_Atributo(ISerializationContext context, Atributo semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, BlockchainPackage.Literals.ATRIBUTO__TIPODATO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BlockchainPackage.Literals.ATRIBUTO__TIPODATO));
+			if (transientValues.isValueTransient(semanticObject, BlockchainPackage.Literals.NAMED_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BlockchainPackage.Literals.NAMED_ELEMENT__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAtributoAccess().getTipodatoTipoDatoEStringParserRuleCall_0_0_1(), semanticObject.eGet(BlockchainPackage.Literals.ATRIBUTO__TIPODATO, false));
+		feeder.accept(grammarAccess.getAtributoAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
+		feeder.finish();
 	}
 	
 	

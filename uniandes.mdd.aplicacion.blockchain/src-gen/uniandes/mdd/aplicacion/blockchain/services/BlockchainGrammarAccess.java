@@ -560,19 +560,14 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTipodatoAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final CrossReference cTipodatoTipoDatoCrossReference_0_0 = (CrossReference)cTipodatoAssignment_0.eContents().get(0);
 		private final RuleCall cTipodatoTipoDatoEStringParserRuleCall_0_0_1 = (RuleCall)cTipodatoTipoDatoCrossReference_0_0.eContents().get(1);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cIsIdKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cIsIdAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cIsIdEBooleanParserRuleCall_1_1_0 = (RuleCall)cIsIdAssignment_1_1.eContents().get(0);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		
 		//Atributo:
-		//	tipodato=[TipoDato|EString] ('isId=' isId=EBoolean)?
-		//	name=EString;
+		//	tipodato=[TipoDato|EString] name=EString;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//tipodato=[TipoDato|EString] ('isId=' isId=EBoolean)? name=EString
+		//tipodato=[TipoDato|EString] name=EString
 		public Group getGroup() { return cGroup; }
 		
 		//tipodato=[TipoDato|EString]
@@ -584,23 +579,11 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getTipodatoTipoDatoEStringParserRuleCall_0_0_1() { return cTipodatoTipoDatoEStringParserRuleCall_0_0_1; }
 		
-		//('isId=' isId=EBoolean)?
-		public Group getGroup_1() { return cGroup_1; }
-		
-		//'isId='
-		public Keyword getIsIdKeyword_1_0() { return cIsIdKeyword_1_0; }
-		
-		//isId=EBoolean
-		public Assignment getIsIdAssignment_1_1() { return cIsIdAssignment_1_1; }
-		
-		//EBoolean
-		public RuleCall getIsIdEBooleanParserRuleCall_1_1_0() { return cIsIdEBooleanParserRuleCall_1_1_0; }
-		
 		//name=EString
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 		
 		//EString
-		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
+		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
 	}
 	public class ParametroElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.Parametro");
@@ -1711,8 +1694,7 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Atributo:
-	//	tipodato=[TipoDato|EString] ('isId=' isId=EBoolean)?
-	//	name=EString;
+	//	tipodato=[TipoDato|EString] name=EString;
 	public AtributoElements getAtributoAccess() {
 		return pAtributo;
 	}

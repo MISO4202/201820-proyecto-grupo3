@@ -15,7 +15,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Atributo" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tipodato" lowerBound="1"
         eType="#//TipoDato"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SmartContract">
     <eStructuralFeatures xsi:type="ecore:EReference" name="entidades" upperBound="-1"

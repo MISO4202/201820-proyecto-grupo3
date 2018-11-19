@@ -2627,7 +2627,6 @@ rule__Atributo__Group__1
 	}
 :
 	rule__Atributo__Group__1__Impl
-	rule__Atributo__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -2639,89 +2638,9 @@ rule__Atributo__Group__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getAtributoAccess().getGroup_1()); }
-	(rule__Atributo__Group_1__0)?
-	{ after(grammarAccess.getAtributoAccess().getGroup_1()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Atributo__Group__2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__Atributo__Group__2__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Atributo__Group__2__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getAtributoAccess().getNameAssignment_2()); }
-	(rule__Atributo__NameAssignment_2)
-	{ after(grammarAccess.getAtributoAccess().getNameAssignment_2()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__Atributo__Group_1__0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__Atributo__Group_1__0__Impl
-	rule__Atributo__Group_1__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Atributo__Group_1__0__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getAtributoAccess().getIsIdKeyword_1_0()); }
-	'isId='
-	{ after(grammarAccess.getAtributoAccess().getIsIdKeyword_1_0()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Atributo__Group_1__1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__Atributo__Group_1__1__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Atributo__Group_1__1__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getAtributoAccess().getIsIdAssignment_1_1()); }
-	(rule__Atributo__IsIdAssignment_1_1)
-	{ after(grammarAccess.getAtributoAccess().getIsIdAssignment_1_1()); }
+	{ before(grammarAccess.getAtributoAccess().getNameAssignment_1()); }
+	(rule__Atributo__NameAssignment_1)
+	{ after(grammarAccess.getAtributoAccess().getNameAssignment_1()); }
 )
 ;
 finally {
@@ -5165,30 +5084,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Atributo__IsIdAssignment_1_1
+rule__Atributo__NameAssignment_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getAtributoAccess().getIsIdEBooleanParserRuleCall_1_1_0()); }
-		ruleEBoolean
-		{ after(grammarAccess.getAtributoAccess().getIsIdEBooleanParserRuleCall_1_1_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Atributo__NameAssignment_2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getAtributoAccess().getNameEStringParserRuleCall_2_0()); }
+		{ before(grammarAccess.getAtributoAccess().getNameEStringParserRuleCall_1_0()); }
 		ruleEString
-		{ after(grammarAccess.getAtributoAccess().getNameEStringParserRuleCall_2_0()); }
+		{ after(grammarAccess.getAtributoAccess().getNameEStringParserRuleCall_1_0()); }
 	)
 ;
 finally {

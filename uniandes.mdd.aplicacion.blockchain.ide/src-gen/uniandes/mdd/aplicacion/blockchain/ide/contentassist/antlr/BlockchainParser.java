@@ -57,7 +57,6 @@ public class BlockchainParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOperacionAccess().getGroup_6(), "rule__Operacion__Group_6__0");
 					put(grammarAccess.getEstadoAccess().getGroup(), "rule__Estado__Group__0");
 					put(grammarAccess.getAtributoAccess().getGroup(), "rule__Atributo__Group__0");
-					put(grammarAccess.getAtributoAccess().getGroup_1(), "rule__Atributo__Group_1__0");
 					put(grammarAccess.getParametroAccess().getGroup(), "rule__Parametro__Group__0");
 					put(grammarAccess.getExpresionLogicaAccess().getGroup(), "rule__ExpresionLogica__Group__0");
 					put(grammarAccess.getExpresionAritmeticaAccess().getGroup(), "rule__ExpresionAritmetica__Group__0");
@@ -99,8 +98,7 @@ public class BlockchainParser extends AbstractContentAssistParser {
 					put(grammarAccess.getEstadoAccess().getTipodatoAssignment_1(), "rule__Estado__TipodatoAssignment_1");
 					put(grammarAccess.getEstadoAccess().getNameAssignment_2(), "rule__Estado__NameAssignment_2");
 					put(grammarAccess.getAtributoAccess().getTipodatoAssignment_0(), "rule__Atributo__TipodatoAssignment_0");
-					put(grammarAccess.getAtributoAccess().getIsIdAssignment_1_1(), "rule__Atributo__IsIdAssignment_1_1");
-					put(grammarAccess.getAtributoAccess().getNameAssignment_2(), "rule__Atributo__NameAssignment_2");
+					put(grammarAccess.getAtributoAccess().getNameAssignment_1(), "rule__Atributo__NameAssignment_1");
 					put(grammarAccess.getParametroAccess().getTipodatoAssignment_0(), "rule__Parametro__TipodatoAssignment_0");
 					put(grammarAccess.getParametroAccess().getNameAssignment_1(), "rule__Parametro__NameAssignment_1");
 					put(grammarAccess.getExpresionLogicaAccess().getIzqAssignment_2(), "rule__ExpresionLogica__IzqAssignment_2");

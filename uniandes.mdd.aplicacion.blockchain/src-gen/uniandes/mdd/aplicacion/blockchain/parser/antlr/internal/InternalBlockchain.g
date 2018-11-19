@@ -937,36 +937,11 @@ ruleAtributo returns [EObject current=null]
 			)
 		)
 		(
-			otherlv_1='isId='
-			{
-				newLeafNode(otherlv_1, grammarAccess.getAtributoAccess().getIsIdKeyword_1_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getAtributoAccess().getIsIdEBooleanParserRuleCall_1_1_0());
-					}
-					lv_isId_2_0=ruleEBoolean
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getAtributoRule());
-						}
-						set(
-							$current,
-							"isId",
-							lv_isId_2_0,
-							"uniandes.mdd.aplicacion.blockchain.Blockchain.EBoolean");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
 			(
 				{
-					newCompositeNode(grammarAccess.getAtributoAccess().getNameEStringParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getAtributoAccess().getNameEStringParserRuleCall_1_0());
 				}
-				lv_name_3_0=ruleEString
+				lv_name_1_0=ruleEString
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getAtributoRule());
@@ -974,7 +949,7 @@ ruleAtributo returns [EObject current=null]
 					set(
 						$current,
 						"name",
-						lv_name_3_0,
+						lv_name_1_0,
 						"uniandes.mdd.aplicacion.blockchain.Blockchain.EString");
 					afterParserOrEnumRuleCall();
 				}

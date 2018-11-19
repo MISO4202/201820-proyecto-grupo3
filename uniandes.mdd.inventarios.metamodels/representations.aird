@@ -457,10 +457,6 @@
         <children xmi:type="notation:Node" xmi:id="_ozFvoMz1EeihF5LrpFrXuw" type="2003" element="_oy47UMz1EeihF5LrpFrXuw">
           <children xmi:type="notation:Node" xmi:id="_ozGWsMz1EeihF5LrpFrXuw" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_ozGWscz1EeihF5LrpFrXuw" type="7004">
-            <children xmi:type="notation:Node" xmi:id="_xiNO4OrQEeiMGZW9o5_Big" type="3010" element="_xhKGAOrQEeiMGZW9o5_Big">
-              <styles xmi:type="notation:FontStyle" xmi:id="_xiNO4erQEeiMGZW9o5_Big" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_xiNO4urQEeiMGZW9o5_Big"/>
-            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_ozGWssz1EeihF5LrpFrXuw"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_ozGWs8z1EeihF5LrpFrXuw"/>
           </children>
@@ -1577,14 +1573,6 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_xhKGAOrQEeiMGZW9o5_Big" name="isId : EBoolean = false" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="metamodels/blockchain.ecore#//Atributo/isId"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="metamodels/blockchain.ecore#//Atributo/isId"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_zpWhkOrQEeiMGZW9o5_Big" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
-      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_3-mQgMz1EeihF5LrpFrXuw" name="SmartContract" tooltipText="" outgoingEdges="_byCvoMz_EeibbKpFqNyZfA _xoDZoMz_EeibbKpFqNyZfA _f9THwM0CEeibbKpFqNyZfA" incomingEdges="_iDPygM0AEeibbKpFqNyZfA" width="12" height="10">
       <target xmi:type="ecore:EClass" href="metamodels/blockchain.ecore#//SmartContract"/>

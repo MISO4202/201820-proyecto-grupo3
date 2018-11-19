@@ -45,7 +45,6 @@
     </genClasses>
     <genClasses ecoreClass="blockchain.ecore#//Atributo">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Atributo/tipodato"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Atributo/isId"/>
     </genClasses>
     <genClasses ecoreClass="blockchain.ecore#//SmartContract">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//SmartContract/entidades"/>

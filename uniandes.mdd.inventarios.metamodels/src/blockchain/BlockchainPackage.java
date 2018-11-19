@@ -261,22 +261,13 @@ public interface BlockchainPackage extends EPackage {
 	int ATRIBUTO__TIPODATO = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Is Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATRIBUTO__IS_ID = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Atributo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATRIBUTO_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int ATRIBUTO_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Atributo</em>' class.
@@ -1371,17 +1362,6 @@ public interface BlockchainPackage extends EPackage {
 	EReference getAtributo_Tipodato();
 
 	/**
-	 * Returns the meta object for the attribute '{@link blockchain.Atributo#isIsId <em>Is Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Id</em>'.
-	 * @see blockchain.Atributo#isIsId()
-	 * @see #getAtributo()
-	 * @generated
-	 */
-	EAttribute getAtributo_IsId();
-
-	/**
 	 * Returns the meta object for class '{@link blockchain.SmartContract <em>Smart Contract</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2095,14 +2075,6 @@ public interface BlockchainPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ATRIBUTO__TIPODATO = eINSTANCE.getAtributo_Tipodato();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ATRIBUTO__IS_ID = eINSTANCE.getAtributo_IsId();
 
 		/**
 		 * The meta object literal for the '{@link blockchain.impl.SmartContractImpl <em>Smart Contract</em>}' class.

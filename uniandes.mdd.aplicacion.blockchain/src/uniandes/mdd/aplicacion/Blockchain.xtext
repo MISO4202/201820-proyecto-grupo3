@@ -72,7 +72,6 @@ Estado returns Estado:
 Atributo returns Atributo:
 	
 	tipodato=[TipoDato|EString]
-	('isId='(isId=EBoolean))?
 	name=EString
 	;
 
