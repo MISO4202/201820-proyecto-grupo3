@@ -15,6 +15,7 @@
 '=='=46
 '>'=45
 '>='=48
+'ADDRESS'=62
 'Aplicacion'=11
 'Boolean'=61
 'DELETE'=57
@@ -34,7 +35,6 @@
 'PUT'=58
 'SmartContract'=15
 'String'=59
-'address'=62
 'e'=42
 'else'=31
 'false'=26

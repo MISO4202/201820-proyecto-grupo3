@@ -1101,7 +1101,7 @@ rule__DatoPrimitivo__Alternatives
 	|
 	(
 		{ before(grammarAccess.getDatoPrimitivoAccess().getADDRESSEnumLiteralDeclaration_3()); }
-		('address')
+		('ADDRESS')
 		{ after(grammarAccess.getDatoPrimitivoAccess().getADDRESSEnumLiteralDeclaration_3()); }
 	)
 ;

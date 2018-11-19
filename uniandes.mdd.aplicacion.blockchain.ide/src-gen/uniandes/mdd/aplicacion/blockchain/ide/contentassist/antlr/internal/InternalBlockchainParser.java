@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalBlockchainParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'.'", "'true'", "'false'", "'E'", "'e'", "'=='", "'!='", "'>'", "'<'", "'>='", "'<='", "'&&'", "'||'", "'+'", "'-'", "'*'", "'/'", "'='", "'GET'", "'DELETE'", "'PUT'", "'String'", "'uint'", "'Boolean'", "'address'", "'Aplicacion'", "'{'", "'}'", "'tipodato'", "'SmartContract'", "'Entidad'", "'Operacion'", "'('", "')'", "'isUd='", "','", "':'", "'Estado'", "'isId='", "'ExpLog'", "'ExpArit'", "'var'", "'if'", "'else'", "'ExpNum'", "'ExpTex'", "'ExpBool'", "'ExpRef'", "'id'", "'ExpRel'", "'return'", "'Map'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'.'", "'true'", "'false'", "'E'", "'e'", "'=='", "'!='", "'>'", "'<'", "'>='", "'<='", "'&&'", "'||'", "'+'", "'-'", "'*'", "'/'", "'='", "'GET'", "'DELETE'", "'PUT'", "'String'", "'uint'", "'Boolean'", "'ADDRESS'", "'Aplicacion'", "'{'", "'}'", "'tipodato'", "'SmartContract'", "'Entidad'", "'Operacion'", "'('", "')'", "'isUd='", "','", "':'", "'Estado'", "'isId='", "'ExpLog'", "'ExpArit'", "'var'", "'if'", "'else'", "'ExpNum'", "'ExpTex'", "'ExpBool'", "'ExpRef'", "'id'", "'ExpRel'", "'return'", "'Map'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -3535,13 +3535,13 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DatoPrimitivo__Alternatives"
-    // InternalBlockchain.g:1079:1: rule__DatoPrimitivo__Alternatives : ( ( ( 'String' ) ) | ( ( 'uint' ) ) | ( ( 'Boolean' ) ) | ( ( 'address' ) ) );
+    // InternalBlockchain.g:1079:1: rule__DatoPrimitivo__Alternatives : ( ( ( 'String' ) ) | ( ( 'uint' ) ) | ( ( 'Boolean' ) ) | ( ( 'ADDRESS' ) ) );
     public final void rule__DatoPrimitivo__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBlockchain.g:1083:1: ( ( ( 'String' ) ) | ( ( 'uint' ) ) | ( ( 'Boolean' ) ) | ( ( 'address' ) ) )
+            // InternalBlockchain.g:1083:1: ( ( ( 'String' ) ) | ( ( 'uint' ) ) | ( ( 'Boolean' ) ) | ( ( 'ADDRESS' ) ) )
             int alt9=4;
             switch ( input.LA(1) ) {
             case 32:
@@ -3636,14 +3636,14 @@ public class InternalBlockchainParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 4 :
-                    // InternalBlockchain.g:1102:2: ( ( 'address' ) )
+                    // InternalBlockchain.g:1102:2: ( ( 'ADDRESS' ) )
                     {
-                    // InternalBlockchain.g:1102:2: ( ( 'address' ) )
-                    // InternalBlockchain.g:1103:3: ( 'address' )
+                    // InternalBlockchain.g:1102:2: ( ( 'ADDRESS' ) )
+                    // InternalBlockchain.g:1103:3: ( 'ADDRESS' )
                     {
                      before(grammarAccess.getDatoPrimitivoAccess().getADDRESSEnumLiteralDeclaration_3()); 
-                    // InternalBlockchain.g:1104:3: ( 'address' )
-                    // InternalBlockchain.g:1104:4: 'address'
+                    // InternalBlockchain.g:1104:3: ( 'ADDRESS' )
+                    // InternalBlockchain.g:1104:4: 'ADDRESS'
                     {
                     match(input,35,FOLLOW_2); 
 

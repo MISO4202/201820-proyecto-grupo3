@@ -1458,13 +1458,13 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumLiteralDeclaration cBOOLEANEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
 		private final Keyword cBOOLEANBooleanKeyword_2_0 = (Keyword)cBOOLEANEnumLiteralDeclaration_2.eContents().get(0);
 		private final EnumLiteralDeclaration cADDRESSEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
-		private final Keyword cADDRESSAddressKeyword_3_0 = (Keyword)cADDRESSEnumLiteralDeclaration_3.eContents().get(0);
+		private final Keyword cADDRESSADDRESSKeyword_3_0 = (Keyword)cADDRESSEnumLiteralDeclaration_3.eContents().get(0);
 		
 		//enum DatoPrimitivo:
-		//	STRING='String' | NUMERICO='uint' | BOOLEAN='Boolean' | ADDRESS='address';
+		//	STRING='String' | NUMERICO='uint' | BOOLEAN='Boolean' | ADDRESS;
 		public EnumRule getRule() { return rule; }
 		
-		//STRING='String' | NUMERICO='uint' | BOOLEAN='Boolean' | ADDRESS='address'
+		//STRING='String' | NUMERICO='uint' | BOOLEAN='Boolean' | ADDRESS
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//STRING='String'
@@ -1485,11 +1485,11 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		//'Boolean'
 		public Keyword getBOOLEANBooleanKeyword_2_0() { return cBOOLEANBooleanKeyword_2_0; }
 		
-		//ADDRESS='address'
+		//ADDRESS
 		public EnumLiteralDeclaration getADDRESSEnumLiteralDeclaration_3() { return cADDRESSEnumLiteralDeclaration_3; }
 		
-		//'address'
-		public Keyword getADDRESSAddressKeyword_3_0() { return cADDRESSAddressKeyword_3_0; }
+		//'ADDRESS'
+		public Keyword getADDRESSADDRESSKeyword_3_0() { return cADDRESSADDRESSKeyword_3_0; }
 	}
 	
 	private final AplicacionElements pAplicacion;
@@ -1959,7 +1959,7 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//enum DatoPrimitivo:
-	//	STRING='String' | NUMERICO='uint' | BOOLEAN='Boolean' | ADDRESS='address';
+	//	STRING='String' | NUMERICO='uint' | BOOLEAN='Boolean' | ADDRESS;
 	public DatoPrimitivoElements getDatoPrimitivoAccess() {
 		return eDatoPrimitivo;
 	}

@@ -2,32 +2,33 @@ pragma solidity ^0.4.0;
 
 contract AutoMarket {
 		struct Vehiculo {
-		    string Marca			 
-		    string Modelo			 
-		    string Linea			 
+		    string Marca;			 
+		    string Modelo;			 
+		    string Linea;			 
 		    uint Cilindraje			 
-		    string Placa			 
+		    address Placa;			 
 		    uint Precio			 
-		    bool Nuevo			 
-		    string Comentarios			 
+		    bool Nuevo;			 
+		    string Comentarios;			 
 		}
-		mapping (string => MapaVehiculos ) public Vehiculos;
-		mapping (string => MapaVehiculos ) public VehiculosCaros;
-		mapping (string => MapaVehiculos ) public VehiculosBaratos;
+		mapping (address => string) publicVehiculos;
+		mapping (address => string) publicVehiculosCaros;
+		mapping (address => string) publicVehiculosBaratos;
+		string prueba;
 		function ConsultarVehiculo (string Placa) : Vehiculo {
-			return Vehiculos[Placa];	
+			return  Vehiculos[Placa] . Marca ;	
 				
 								 
 				
 		}
 		function CalcularCostos (int PrecioVehiculo,int ImpuestoVehiculo,int ValorTraspaso,int ComisionRunt) : uint {
-			return     PrecioVehiculo * 0.19  +  PrecioVehiculo * ImpuestoVehiculo   + ValorTraspaso  + ComisionRunt ;	
+			return ( ( ( ( PrecioVehiculo * 0.19 ) + ( PrecioVehiculo * ImpuestoVehiculo ) ) + ValorTraspaso ) + ComisionRunt );	
 				
 								 
 				
 		}
 		function CrearVehiculo (string Marca,string Modelo,string Linea,string Placa,int Cilindraje,int Precio) {
-			memory vehiculo = Vehiculo;
+			Vehiculo memory vehiculo;
 				
 			  vehiculo . Marca  = Marca ; 
 				
@@ -47,7 +48,7 @@ contract AutoMarket {
 				
 			  Vehiculos[Placa] = vehiculo ; 
 				
-			if(   Precio >= 1.0E8  ||   Marca ==  "Ferrari"  &&  Marca !=  "Renault"   ){
+			if( ( ( Precio >= 1.0E8 ) || ( ( Marca ==  "Ferrari" ) && ( Marca !=  "Renault" ) ) )){
 				 VehiculosCaros[Placa] = vehiculo ;
 			}else{	
 				 VehiculosBaratos[Placa] = vehiculo ;
@@ -56,7 +57,7 @@ contract AutoMarket {
 				
 		}
 		function ActualizarVehiculo (string Placa,int Cilindraje,int Precio) {
-			memory vehiculo = Vehiculo;
+			Vehiculo memory vehiculo;
 				
 			  vehiculo . Cilindraje  = Cilindraje ; 
 				

@@ -6,7 +6,7 @@ Aplicacion Automarket{
           	string Modelo
           	string Linea
           	int Cilindraje
-          	string isId=true Placa
+          	address Placa
           	int Precio
           	bool Nuevo
           	string Comentarios
@@ -15,8 +15,9 @@ Aplicacion Automarket{
 		Estado MapaVehiculos Vehiculos
         Estado MapaVehiculos VehiculosCaros
         Estado MapaVehiculos VehiculosBaratos
+        Estado string prueba
 		Operacion isUd=false ConsultarVehiculo (string Placa) : Vehiculo { 		
-			return {ExpArit ExpRef {Vehiculos} GET ExpRef {Placa}}	 
+			return {ExpRel ExpArit ExpRef {Vehiculos} GET ExpRef {Placa} . ExpRef{"Vehiculo.Marca"}}	 
 		}
 		Operacion isUd=false CalcularCostos (int PrecioVehiculo,int ImpuestoVehiculo, int ValorTraspaso, int ComisionRunt) : int {
 			return {ExpArit (ExpArit (ExpArit (ExpArit ExpRef{PrecioVehiculo} * ExpNum 0.19)+ (ExpArit (ExpRef{PrecioVehiculo} * ExpRef{ImpuestoVehiculo}))
@@ -54,7 +55,8 @@ Aplicacion Automarket{
 
 	}
 	tipodato String string
+	tipodato ADDRESS address
 	tipodato uint int
 	tipodato Boolean bool
-	tipodato Map <string,string> : MapaVehiculos
+	tipodato Map <address,string> : MapaVehiculos
 }

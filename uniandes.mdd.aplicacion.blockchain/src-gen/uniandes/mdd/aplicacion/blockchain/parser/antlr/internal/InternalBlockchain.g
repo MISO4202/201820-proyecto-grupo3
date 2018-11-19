@@ -2291,7 +2291,7 @@ ruleDatoPrimitivo returns [Enumerator current=null]
 		)
 		    |
 		(
-			enumLiteral_3='address'
+			enumLiteral_3='ADDRESS'
 			{
 				$current = grammarAccess.getDatoPrimitivoAccess().getADDRESSEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_3, grammarAccess.getDatoPrimitivoAccess().getADDRESSEnumLiteralDeclaration_3());

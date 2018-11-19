@@ -21,7 +21,7 @@ Linea returns Linea:
 	Expresion | Variable | Condicional | Retorno;
 
 Expresion returns Expresion:
-	ExpresionLogica | ExpresionAritmetica | ExpresionNumerica | ExpresionTexto | ExpresionBoolean| ExpresionReferenciada | ExpresionRelacional;
+	ExpresionLogica | ExpresionAritmetica | ExpresionNumerica | ExpresionTexto | ExpresionBoolean| ExpresionReferenciada | ExpresionRelacional ;
 
 
 
@@ -157,10 +157,9 @@ ExpresionRelacional returns ExpresionRelacional:
 	;
 
 Retorno returns Retorno:
-
 	'return'
 	'{'
-	(lineaRetorno+=Linea)*
+		(lineaRetorno+=Linea)*
 	'}';
 
 enum OperadorLogico returns OperadorLogico:
@@ -196,4 +195,4 @@ Mapa returns Mapa:
 
 
 enum DatoPrimitivo returns DatoPrimitivo:
-				STRING = 'String' | NUMERICO = 'uint' | BOOLEAN = 'Boolean' | ADDRESS = 'address';
+				STRING = 'String' | NUMERICO = 'uint' | BOOLEAN = 'Boolean' | ADDRESS = 'ADDRESS';

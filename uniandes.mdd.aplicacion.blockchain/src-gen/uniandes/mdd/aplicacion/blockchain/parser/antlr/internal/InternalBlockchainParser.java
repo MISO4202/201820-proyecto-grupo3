@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalBlockchainParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Aplicacion'", "'{'", "'tipodato'", "'}'", "'SmartContract'", "'Entidad'", "'Operacion'", "'isUd='", "'('", "','", "')'", "':'", "'Estado'", "'isId='", "'true'", "'false'", "'ExpLog'", "'ExpArit'", "'var'", "'if'", "'else'", "'ExpNum'", "'ExpTex'", "'ExpBool'", "'ExpRef'", "'id'", "'ExpRel'", "'return'", "'-'", "'.'", "'E'", "'e'", "'Map'", "'<'", "'>'", "'=='", "'!='", "'>='", "'<='", "'&&'", "'||'", "'+'", "'*'", "'/'", "'='", "'GET'", "'DELETE'", "'PUT'", "'String'", "'uint'", "'Boolean'", "'address'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Aplicacion'", "'{'", "'tipodato'", "'}'", "'SmartContract'", "'Entidad'", "'Operacion'", "'isUd='", "'('", "','", "')'", "':'", "'Estado'", "'isId='", "'true'", "'false'", "'ExpLog'", "'ExpArit'", "'var'", "'if'", "'else'", "'ExpNum'", "'ExpTex'", "'ExpBool'", "'ExpRef'", "'id'", "'ExpRel'", "'return'", "'-'", "'.'", "'E'", "'e'", "'Map'", "'<'", "'>'", "'=='", "'!='", "'>='", "'<='", "'&&'", "'||'", "'+'", "'*'", "'/'", "'='", "'GET'", "'DELETE'", "'PUT'", "'String'", "'uint'", "'Boolean'", "'ADDRESS'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -6084,7 +6084,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDatoPrimitivo"
-    // InternalBlockchain.g:2261:1: ruleDatoPrimitivo returns [Enumerator current=null] : ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'uint' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'address' ) ) ;
+    // InternalBlockchain.g:2261:1: ruleDatoPrimitivo returns [Enumerator current=null] : ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'uint' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'ADDRESS' ) ) ;
     public final Enumerator ruleDatoPrimitivo() throws RecognitionException {
         Enumerator current = null;
 
@@ -6097,10 +6097,10 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:2267:2: ( ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'uint' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'address' ) ) )
-            // InternalBlockchain.g:2268:2: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'uint' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'address' ) )
+            // InternalBlockchain.g:2267:2: ( ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'uint' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'ADDRESS' ) ) )
+            // InternalBlockchain.g:2268:2: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'uint' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'ADDRESS' ) )
             {
-            // InternalBlockchain.g:2268:2: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'uint' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'address' ) )
+            // InternalBlockchain.g:2268:2: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'uint' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'ADDRESS' ) )
             int alt55=4;
             switch ( input.LA(1) ) {
             case 59:
@@ -6183,10 +6183,10 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalBlockchain.g:2293:3: (enumLiteral_3= 'address' )
+                    // InternalBlockchain.g:2293:3: (enumLiteral_3= 'ADDRESS' )
                     {
-                    // InternalBlockchain.g:2293:3: (enumLiteral_3= 'address' )
-                    // InternalBlockchain.g:2294:4: enumLiteral_3= 'address'
+                    // InternalBlockchain.g:2293:3: (enumLiteral_3= 'ADDRESS' )
+                    // InternalBlockchain.g:2294:4: enumLiteral_3= 'ADDRESS'
                     {
                     enumLiteral_3=(Token)match(input,62,FOLLOW_2); 
 
