@@ -41,13 +41,6 @@ public class AutoMarket : SmartContract
             	return PersistentState.GetStructMapping<Vehiculo>>("VehiculosBaratos");
         	}
     	}
-		public ISmartContractMapping<Vehiculo> prueba
-    	{
-        	get
-        	{
-            	return PersistentState.GetStructMapping<Vehiculo>>("prueba");
-        	}
-    	}
 	
 		public void ConsultarVehiculo (string Placa){
 			;				 

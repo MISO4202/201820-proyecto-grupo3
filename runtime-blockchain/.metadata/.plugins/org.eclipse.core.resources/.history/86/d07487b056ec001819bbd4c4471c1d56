@@ -75,7 +75,11 @@ operation getRetorno(ope: Operacion) : String{
   if(ope.retorno.isUndefined()){
   	return "";
   }else{
-  	return ": " + ope.retorno.name.asString() + " ";
+  	if(ope.retorno.isTypeOf(Primitivo)){
+  		return ": " + ope.retorno.tipo.asString() + " ";
+  	}else{
+  		return ": " + ope.retorno.name.asString() + " ";
+  	}
   }
 }
 operation getValue (line:Linea) : String {

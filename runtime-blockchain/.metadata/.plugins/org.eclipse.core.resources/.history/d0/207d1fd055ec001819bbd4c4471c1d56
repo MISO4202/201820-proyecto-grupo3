@@ -15,6 +15,7 @@ Aplicacion Automarket{
 		Estado MapaVehiculos Vehiculos
         Estado MapaVehiculos VehiculosCaros
         Estado MapaVehiculos VehiculosBaratos
+        Estado string prueba
 		Operacion isUd=false ConsultarVehiculo (string Placa) : Vehiculo { 		
 			return {ExpRel ExpArit ExpRef {Vehiculos} GET ExpRef {Placa} . ExpRef{"Vehiculo.Marca"}}	 
 		}

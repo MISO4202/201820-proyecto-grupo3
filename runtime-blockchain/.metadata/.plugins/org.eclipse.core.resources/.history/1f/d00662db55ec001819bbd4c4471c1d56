@@ -12,7 +12,8 @@ contract [%=smc.name%] {
 			 
 		[%}%]
 		}
-		[%for (est in smc.estado) {  
+		[%for (est in smc.estado) { 
+		var attrId=ent.atributos.select(at | at.isId=true).first(); 
 		%]
 		[%=getEstado(est)%]
 		[%}%]
@@ -75,7 +76,11 @@ operation getRetorno(ope: Operacion) : String{
   if(ope.retorno.isUndefined()){
   	return "";
   }else{
-  	return ": " + ope.retorno.name.asString() + " ";
+  	if(ope.retorno.isTypeOf(Primitivo)){
+  		return ": " + ope.retorno.tipo.asString() + " ";
+  	}else{
+  		return ": " + ope.retorno.name.asString() + " ";
+  	}
   }
 }
 operation getValue (line:Linea) : String {
