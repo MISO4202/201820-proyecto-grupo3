@@ -58,5 +58,5 @@ Aplicacion Automarket{
 	tipodato ADDRESS address
 	tipodato uint int
 	tipodato Boolean bool
-	tipodato Map <address,"AutoMarket.Vehiculo"> : MapaVehiculos
+	tipodato Map <address,string> : MapaVehiculos
 }

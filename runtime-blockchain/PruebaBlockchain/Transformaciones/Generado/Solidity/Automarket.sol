@@ -11,9 +11,9 @@ contract AutoMarket {
 		    bool Nuevo;			 
 		    string Comentarios;			 
 		}
-		mapping (address => string) publicVehiculos;
-		mapping (address => string) publicVehiculosCaros;
-		mapping (address => string) publicVehiculosBaratos;
+		mapping (address => Vehiculo) publicVehiculos;
+		mapping (address => Vehiculo) publicVehiculosCaros;
+		mapping (address => Vehiculo) publicVehiculosBaratos;
 		string prueba;
 		function ConsultarVehiculo (string Placa) : Vehiculo {
 			return  Vehiculos[Placa] . Marca ;	
