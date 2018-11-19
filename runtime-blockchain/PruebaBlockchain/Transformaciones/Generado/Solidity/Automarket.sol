@@ -14,13 +14,13 @@ contract AutoMarket {
 		mapping (address => Vehiculo) publicVehiculos;
 		mapping (address => Vehiculo) publicVehiculosCaros;
 		mapping (address => Vehiculo) publicVehiculosBaratos;
-		function ConsultarVehiculo (string Placa) : Vehiculo {
+		function ConsultarVehiculo (string Placa) public returns (Vehiculo){
 			return  Vehiculos[Placa] . Marca ;	
 				
 								 
 				
 		}
-		function CalcularCostos (int PrecioVehiculo,int ImpuestoVehiculo,int ValorTraspaso,int ComisionRunt) : int {
+		function CalcularCostos (int PrecioVehiculo,int ImpuestoVehiculo,int ValorTraspaso,int ComisionRunt) public returns (int){
 			return ( ( ( ( PrecioVehiculo * 0.19 ) + ( PrecioVehiculo * ImpuestoVehiculo ) ) + ValorTraspaso ) + ComisionRunt );	
 				
 								 

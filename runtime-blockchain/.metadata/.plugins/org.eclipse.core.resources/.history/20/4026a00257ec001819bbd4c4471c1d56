@@ -75,7 +75,7 @@ operation getRetorno(ope: Operacion) : String{
   if(ope.retorno.isUndefined()){
   	return "";
   }else{
-  	return "public returns (" + ope.retorno.name.asString() + ")";
+  	return "public returns " + ope.retorno.name.asString() + " ";
   }
 }
 operation getValue (line:Linea) : String {
