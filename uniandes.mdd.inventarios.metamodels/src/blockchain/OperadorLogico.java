@@ -26,7 +26,7 @@ public enum OperadorLogico implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	IGUAL_IGUAL(0, "IGUAL_IGUAL", "IGUAL_IGUAL"),
+	IGUAL_IGUAL(0, "IGUAL_IGUAL", "=="),
 
 	/**
 	 * The '<em><b>DIFERENTE</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum OperadorLogico implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DIFERENTE(1, "DIFERENTE", "DIFERENTE"),
+	DIFERENTE(1, "DIFERENTE", "!="),
 
 	/**
 	 * The '<em><b>MAYORQUE</b></em>' literal object.
@@ -46,7 +46,7 @@ public enum OperadorLogico implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MAYORQUE(2, "MAYORQUE", "MAYORQUE"),
+	MAYORQUE(2, "MAYORQUE", ">"),
 
 	/**
 	 * The '<em><b>MENORQUE</b></em>' literal object.
@@ -56,7 +56,7 @@ public enum OperadorLogico implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MENORQUE(3, "MENORQUE", "MENORQUE"),
+	MENORQUE(3, "MENORQUE", "<"),
 
 	/**
 	 * The '<em><b>MAYORIGUAL</b></em>' literal object.
@@ -66,7 +66,7 @@ public enum OperadorLogico implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MAYORIGUAL(4, "MAYORIGUAL", "MAYORIGUAL"),
+	MAYORIGUAL(4, "MAYORIGUAL", ">="),
 
 	/**
 	 * The '<em><b>MENORIGUAL</b></em>' literal object.
@@ -76,7 +76,7 @@ public enum OperadorLogico implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MENORIGUAL(5, "MENORIGUAL", "MENORIGUAL"),
+	MENORIGUAL(5, "MENORIGUAL", "<="),
 
 	/**
 	 * The '<em><b>AND</b></em>' literal object.
@@ -86,7 +86,7 @@ public enum OperadorLogico implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	AND(7, "AND", "AND"),
+	AND(7, "AND", "&&"),
 
 	/**
 	 * The '<em><b>OR</b></em>' literal object.
@@ -96,7 +96,7 @@ public enum OperadorLogico implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	OR(8, "OR", "OR");
+	OR(8, "OR", "||");
 
 	/**
 	 * The '<em><b>IGUAL IGUAL</b></em>' literal value.
@@ -107,7 +107,7 @@ public enum OperadorLogico implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #IGUAL_IGUAL
-	 * @model
+	 * @model literal="=="
 	 * @generated
 	 * @ordered
 	 */
@@ -122,7 +122,7 @@ public enum OperadorLogico implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #DIFERENTE
-	 * @model
+	 * @model literal="!="
 	 * @generated
 	 * @ordered
 	 */
@@ -137,7 +137,7 @@ public enum OperadorLogico implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MAYORQUE
-	 * @model
+	 * @model literal="&gt;"
 	 * @generated
 	 * @ordered
 	 */
@@ -152,7 +152,7 @@ public enum OperadorLogico implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MENORQUE
-	 * @model
+	 * @model literal="&lt;"
 	 * @generated
 	 * @ordered
 	 */
@@ -167,7 +167,7 @@ public enum OperadorLogico implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MAYORIGUAL
-	 * @model
+	 * @model literal="&gt;="
 	 * @generated
 	 * @ordered
 	 */
@@ -182,7 +182,7 @@ public enum OperadorLogico implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MENORIGUAL
-	 * @model
+	 * @model literal="&lt;="
 	 * @generated
 	 * @ordered
 	 */
@@ -197,7 +197,7 @@ public enum OperadorLogico implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #AND
-	 * @model
+	 * @model literal="&amp;&amp;"
 	 * @generated
 	 * @ordered
 	 */
@@ -212,7 +212,7 @@ public enum OperadorLogico implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #OR
-	 * @model
+	 * @model literal="||"
 	 * @generated
 	 * @ordered
 	 */

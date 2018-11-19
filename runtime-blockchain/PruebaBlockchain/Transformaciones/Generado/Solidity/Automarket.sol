@@ -15,15 +15,17 @@ contract AutoMarket {
 		mapping (string => MapaVehiculos ) public VehiculosCaros;
 		mapping (string => MapaVehiculos ) public VehiculosBaratos;
 		function ConsultarVehiculo (string Placa) : Vehiculo {
-			Vehiculos[Placa]; 
+			return Vehiculos[Placa];	
+				
+								 
 				
 		}
 		function CalcularCostos (int PrecioVehiculo,int ImpuestoVehiculo,int ValorTraspaso,int ComisionRunt) : uint {
-			    PrecioVehiculo * 0.19  +  PrecioVehiculo * ImpuestoVehiculo   + ValorTraspaso  + ComisionRunt ; 
-				
+			return     PrecioVehiculo * 0.19  +  PrecioVehiculo * ImpuestoVehiculo   + ValorTraspaso  + ComisionRunt ;	
+						
 		}
 		function CrearVehiculo (string Marca,string Modelo,string Linea,string Placa,int Cilindraje,int Precio) {
-			memory vehiculo = Vehiculo;				 
+			memory vehiculo = Vehiculo;
 				
 			  vehiculo . Marca  = Marca ; 
 				
@@ -44,15 +46,15 @@ contract AutoMarket {
 			  Vehiculos[Placa] = vehiculo ; 
 				
 			if(   Precio >= 1.0E8  ||   Marca ==  "Ferrari"  &&  Marca !=  "Renault"   ){
-					 VehiculosCaros[Placa] = vehiculo 
+				 VehiculosCaros[Placa] = vehiculo ;
 			}else{	
-					 VehiculosBaratos[Placa] = vehiculo 
+				 VehiculosBaratos[Placa] = vehiculo ;
 	
 			}	 	
 				
 		}
 		function ActualizarVehiculo (string Placa,int Cilindraje,int Precio) {
-			memory vehiculo = Vehiculo;				 
+			memory vehiculo = Vehiculo;
 				
 			  vehiculo . Cilindraje  = Cilindraje ; 
 				

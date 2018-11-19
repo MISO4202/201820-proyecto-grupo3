@@ -261,13 +261,22 @@ public interface BlockchainPackage extends EPackage {
 	int ATRIBUTO__TIPODATO = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Is Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO__IS_ID = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Atributo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATRIBUTO_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int ATRIBUTO_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Atributo</em>' class.
@@ -923,13 +932,13 @@ public interface BlockchainPackage extends EPackage {
 	int IF__LINEAS = SENTENCIA_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Else</b></em>' containment reference.
+	 * The feature id for the '<em><b>Else Lines</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IF__ELSE = SENTENCIA_FEATURE_COUNT + 2;
+	int IF__ELSE_LINES = SENTENCIA_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>If</em>' class.
@@ -1199,6 +1208,43 @@ public interface BlockchainPackage extends EPackage {
 	int ELSE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link blockchain.impl.RetornoImpl <em>Retorno</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see blockchain.impl.RetornoImpl
+	 * @see blockchain.impl.BlockchainPackageImpl#getRetorno()
+	 * @generated
+	 */
+	int RETORNO = 25;
+
+	/**
+	 * The feature id for the '<em><b>Linea Retorno</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETORNO__LINEA_RETORNO = SENTENCIA_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Retorno</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETORNO_FEATURE_COUNT = SENTENCIA_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Retorno</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETORNO_OPERATION_COUNT = SENTENCIA_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link blockchain.OperadorLogico <em>Operador Logico</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1206,7 +1252,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getOperadorLogico()
 	 * @generated
 	 */
-	int OPERADOR_LOGICO = 25;
+	int OPERADOR_LOGICO = 26;
 
 	/**
 	 * The meta object id for the '{@link blockchain.Operador <em>Operador</em>}' enum.
@@ -1216,7 +1262,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getOperador()
 	 * @generated
 	 */
-	int OPERADOR = 26;
+	int OPERADOR = 27;
 
 	/**
 	 * The meta object id for the '{@link blockchain.DatoPrimitivo <em>Dato Primitivo</em>}' enum.
@@ -1226,7 +1272,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getDatoPrimitivo()
 	 * @generated
 	 */
-	int DATO_PRIMITIVO = 27;
+	int DATO_PRIMITIVO = 28;
 
 	/**
 	 * The meta object id for the '{@link blockchain.OperadorRelacion <em>Operador Relacion</em>}' enum.
@@ -1236,7 +1282,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getOperadorRelacion()
 	 * @generated
 	 */
-	int OPERADOR_RELACION = 28;
+	int OPERADOR_RELACION = 29;
 
 
 	/**
@@ -1323,6 +1369,17 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAtributo_Tipodato();
+
+	/**
+	 * Returns the meta object for the attribute '{@link blockchain.Atributo#isIsId <em>Is Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Id</em>'.
+	 * @see blockchain.Atributo#isIsId()
+	 * @see #getAtributo()
+	 * @generated
+	 */
+	EAttribute getAtributo_IsId();
 
 	/**
 	 * Returns the meta object for class '{@link blockchain.SmartContract <em>Smart Contract</em>}'.
@@ -1665,15 +1722,15 @@ public interface BlockchainPackage extends EPackage {
 	EReference getIf_Lineas();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link blockchain.If#getElse <em>Else</em>}'.
+	 * Returns the meta object for the containment reference '{@link blockchain.If#getElseLines <em>Else Lines</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Else</em>'.
-	 * @see blockchain.If#getElse()
+	 * @return the meta object for the containment reference '<em>Else Lines</em>'.
+	 * @see blockchain.If#getElseLines()
 	 * @see #getIf()
 	 * @generated
 	 */
-	EReference getIf_Else();
+	EReference getIf_ElseLines();
 
 	/**
 	 * Returns the meta object for class '{@link blockchain.Expresion <em>Expresion</em>}'.
@@ -1886,6 +1943,27 @@ public interface BlockchainPackage extends EPackage {
 	EReference getElse_Lineas();
 
 	/**
+	 * Returns the meta object for class '{@link blockchain.Retorno <em>Retorno</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Retorno</em>'.
+	 * @see blockchain.Retorno
+	 * @generated
+	 */
+	EClass getRetorno();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link blockchain.Retorno#getLineaRetorno <em>Linea Retorno</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Linea Retorno</em>'.
+	 * @see blockchain.Retorno#getLineaRetorno()
+	 * @see #getRetorno()
+	 * @generated
+	 */
+	EReference getRetorno_LineaRetorno();
+
+	/**
 	 * Returns the meta object for enum '{@link blockchain.OperadorLogico <em>Operador Logico</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2017,6 +2095,14 @@ public interface BlockchainPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ATRIBUTO__TIPODATO = eINSTANCE.getAtributo_Tipodato();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATRIBUTO__IS_ID = eINSTANCE.getAtributo_IsId();
 
 		/**
 		 * The meta object literal for the '{@link blockchain.impl.SmartContractImpl <em>Smart Contract</em>}' class.
@@ -2299,12 +2385,12 @@ public interface BlockchainPackage extends EPackage {
 		EReference IF__LINEAS = eINSTANCE.getIf_Lineas();
 
 		/**
-		 * The meta object literal for the '<em><b>Else</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Else Lines</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference IF__ELSE = eINSTANCE.getIf_Else();
+		EReference IF__ELSE_LINES = eINSTANCE.getIf_ElseLines();
 
 		/**
 		 * The meta object literal for the '{@link blockchain.Expresion <em>Expresion</em>}' class.
@@ -2485,6 +2571,24 @@ public interface BlockchainPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ELSE__LINEAS = eINSTANCE.getElse_Lineas();
+
+		/**
+		 * The meta object literal for the '{@link blockchain.impl.RetornoImpl <em>Retorno</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see blockchain.impl.RetornoImpl
+		 * @see blockchain.impl.BlockchainPackageImpl#getRetorno()
+		 * @generated
+		 */
+		EClass RETORNO = eINSTANCE.getRetorno();
+
+		/**
+		 * The meta object literal for the '<em><b>Linea Retorno</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RETORNO__LINEA_RETORNO = eINSTANCE.getRetorno_LineaRetorno();
 
 		/**
 		 * The meta object literal for the '{@link blockchain.OperadorLogico <em>Operador Logico</em>}' enum.

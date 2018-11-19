@@ -29,6 +29,7 @@ import blockchain.OperadorLogico;
 import blockchain.OperadorRelacion;
 import blockchain.Parametro;
 import blockchain.Primitivo;
+import blockchain.Retorno;
 import blockchain.Sentencia;
 import blockchain.SmartContract;
 import blockchain.TipoDato;
@@ -229,6 +230,13 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass retornoEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum operadorLogicoEEnum = null;
 
 	/**
@@ -383,6 +391,15 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 */
 	public EReference getAtributo_Tipodato() {
 		return (EReference)atributoEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAtributo_IsId() {
+		return (EAttribute)atributoEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -678,7 +695,7 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIf_Else() {
+	public EReference getIf_ElseLines() {
 		return (EReference)ifEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -867,6 +884,24 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getRetorno() {
+		return retornoEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRetorno_LineaRetorno() {
+		return (EReference)retornoEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getOperadorLogico() {
 		return operadorLogicoEEnum;
 	}
@@ -936,6 +971,7 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 
 		atributoEClass = createEClass(ATRIBUTO);
 		createEReference(atributoEClass, ATRIBUTO__TIPODATO);
+		createEAttribute(atributoEClass, ATRIBUTO__IS_ID);
 
 		smartContractEClass = createEClass(SMART_CONTRACT);
 		createEReference(smartContractEClass, SMART_CONTRACT__ENTIDADES);
@@ -980,7 +1016,7 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 		ifEClass = createEClass(IF);
 		createEReference(ifEClass, IF__EXPRESIONLOGICA);
 		createEReference(ifEClass, IF__LINEAS);
-		createEReference(ifEClass, IF__ELSE);
+		createEReference(ifEClass, IF__ELSE_LINES);
 
 		expresionEClass = createEClass(EXPRESION);
 
@@ -1011,6 +1047,9 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 
 		elseEClass = createEClass(ELSE);
 		createEReference(elseEClass, ELSE__LINEAS);
+
+		retornoEClass = createEClass(RETORNO);
+		createEReference(retornoEClass, RETORNO__LINEA_RETORNO);
 
 		// Create enums
 		operadorLogicoEEnum = createEEnum(OPERADOR_LOGICO);
@@ -1066,6 +1105,7 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 		expresionReferenciadaEClass.getESuperTypes().add(this.getExpresion());
 		expresionRelacionalEClass.getESuperTypes().add(this.getExpresionBinaria());
 		expresionBinariaEClass.getESuperTypes().add(this.getExpresion());
+		retornoEClass.getESuperTypes().add(this.getSentencia());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(aplicacionEClass, Aplicacion.class, "Aplicacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1078,6 +1118,7 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 
 		initEClass(atributoEClass, Atributo.class, "Atributo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAtributo_Tipodato(), this.getTipoDato(), null, "tipodato", null, 1, 1, Atributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAtributo_IsId(), ecorePackage.getEBoolean(), "isId", null, 0, 1, Atributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(smartContractEClass, SmartContract.class, "SmartContract", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSmartContract_Entidades(), this.getEntidad(), null, "entidades", null, 0, -1, SmartContract.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1122,7 +1163,7 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 		initEClass(ifEClass, If.class, "If", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIf_Expresionlogica(), this.getExpresionLogica(), null, "expresionlogica", null, 1, 1, If.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIf_Lineas(), this.getLinea(), null, "lineas", null, 0, -1, If.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIf_Else(), this.getElse(), null, "else", null, 0, 1, If.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIf_ElseLines(), this.getElse(), null, "elseLines", null, 0, 1, If.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(expresionEClass, Expresion.class, "Expresion", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1154,6 +1195,9 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 		initEClass(elseEClass, Else.class, "Else", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getElse_Lineas(), this.getLinea(), null, "lineas", null, 0, -1, Else.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(retornoEClass, Retorno.class, "Retorno", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRetorno_LineaRetorno(), this.getLinea(), null, "lineaRetorno", null, 0, -1, Retorno.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(operadorLogicoEEnum, OperadorLogico.class, "OperadorLogico");
 		addEEnumLiteral(operadorLogicoEEnum, OperadorLogico.IGUAL_IGUAL);
@@ -1173,6 +1217,7 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 		addEEnumLiteral(operadorEEnum, Operador.IGUAL);
 		addEEnumLiteral(operadorEEnum, Operador.GET);
 		addEEnumLiteral(operadorEEnum, Operador.DELETE);
+		addEEnumLiteral(operadorEEnum, Operador.PUT);
 
 		initEEnum(datoPrimitivoEEnum, DatoPrimitivo.class, "DatoPrimitivo");
 		addEEnumLiteral(datoPrimitivoEEnum, DatoPrimitivo.STRING);

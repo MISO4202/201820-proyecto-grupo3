@@ -1,5 +1,0 @@
-[%
-	var app:Template:= TemplateFactory.load('blockchainM2T.egl');
-	var nombreapp : String = Aplicacion.all.first().name; 
-	app.generate('./Generado/'+ nombreapp + '.solidity');
-%]

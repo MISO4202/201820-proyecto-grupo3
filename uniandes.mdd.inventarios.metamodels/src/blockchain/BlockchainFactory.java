@@ -193,6 +193,15 @@ public interface BlockchainFactory extends EFactory {
 	Else createElse();
 
 	/**
+	 * Returns a new object of class '<em>Retorno</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Retorno</em>'.
+	 * @generated
+	 */
+	Retorno createRetorno();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

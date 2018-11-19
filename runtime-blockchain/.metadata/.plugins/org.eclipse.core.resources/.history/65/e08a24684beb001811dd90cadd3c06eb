@@ -1,0 +1,92 @@
+pragma solidity ^0.4.0;
+
+[%for (smc in SmartContract.all) { %]
+contract [%=smc.name%] {
+ 	[%for (ent in smc.entidades) { %]
+		struct [%=ent.name%] {
+		  [%for (attr in ent.atributos) { 
+		    if(attr.tipodato.name=='int'){%]
+		    [%='uint'%] [%=attr.name%][%}else{%]
+		    [%=attr.tipodato.name%] [%=attr.name%][%}
+		  %]
+			 
+		[%}%]
+		}
+		[%for (est in smc.estado) { 
+		var attrId=ent.atributos.select(at | at.isId=true).first(); 
+		%]
+		mapping ([%=attrId.tipodato.name%] => [%=est.tipodato.name%] ) public [%=est.name%];
+		[%}%]
+		[%for (ope in smc.operaciones) { %]
+		function [%=ope.name%] ([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %][%=par.tipodato.name%] [%=par.name%][%i++;%][%if(i<>cantpar){%],[%}%][%}%]){
+			[%for (line in ope.lineas) {
+				var izq; var der; var ope;
+				 if(line.isKindOf(ExpresionBinaria)){%]
+			[%=getExpresionBinariaAux(line)%]; 
+				 [%}else if(line.isTypeOf(If)){%]
+			if( [%=getExpresion(line.expresionlogica)%]){
+				[%for (body in line.lineas){%]
+					[%=getExpresion(body)%]
+				[%}%]
+			}[%if(line.elseLines.size()>0){%]else{	
+				[%for (body in line.elseLines.lineas){%]
+					[%=getExpresion(body)%]
+				[%}%]	
+			[%}%]
+			}	 	
+			[%}else{%]
+			[%=getValue(line)%];				 
+				 [%}
+				%]
+				
+			[%}%]
+		}
+		[%}%]
+[%}%] 
+}
+	
+[%}%]
+
+[%
+operation getValue (line:Linea) : String {
+	if(line.isTypeOf(ExpresionNumerica) or line.isTypeOf(ExpresionTexto) or line.isTypeOf(ExpresionBoolean)){
+		if(line.isTypeOf(ExpresionTexto)){
+			return ' "'+line.value.asString()+ '"';
+		}else{
+			return line.value.asString();
+		}
+	}else if(line.isTypeOf(ExpresionReferenciada)){
+		return line.referencia.name;
+	}else if(line.isTypeOf(Variable)){
+	    return "memory " + line.name + " = " + line.tipodato.name;
+	}
+}
+
+operation getOperador(line:Linea) : String{
+		var ope;
+		if(line.isTypeOf(ExpresionAritmetica)){
+				ope=line.operador.asString();
+	  	}else if (line.isTypeOf(ExpresionLogica)){
+	  			ope=line.operador.asString();
+	  	}else if(line.isTypeOf(ExpresionRelacional)){
+	  			ope=".";
+	  	} 
+	  	return ope;
+}
+
+operation  getExpresion (line: Linea) : String {
+	if(not(line.isKindOf(ExpresionBinaria))){
+		return getValue(line);
+	}else{
+		if(getOperador(line)=="PUT"){
+			return " "+ getExpresion(line.Izq)+ "[" + getExpresion(line.Der)+"]";
+		}else if(getOperador(line)=="GET"){
+			return getExpresion(line.Izq)+ "[" + getExpresion(line.Der)+"]";
+		}else{
+			return " "+ getExpresion(line.Izq)+" "+ getOperador(line)+" "+getExpresion(line.Der)+" ";
+		}
+		
+	}	
+}
+
+%]

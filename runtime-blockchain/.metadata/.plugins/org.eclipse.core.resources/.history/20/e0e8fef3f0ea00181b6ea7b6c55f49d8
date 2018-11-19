@@ -1,0 +1,95 @@
+pragma solidity ^0.4.0;
+
+[%for (smc in SmartContract.all) { %]
+contract [%=smc.name%] {
+ 	[%for (ent in smc.entidades) { %]
+		struct [%=ent.name%] {
+		  [%for (attr in ent.atributos) { 
+		    if(attr.tipodato.name=='int'){%]
+		    [%='uint'%] [%=attr.name%][%}else{%]
+		    [%=attr.tipodato.name%] [%=attr.name%][%}
+		  %]
+			 
+		[%}%]
+		}
+		[%for (est in smc.estado) { 
+		var attrId=ent.atributos.select(at | at.isId=true).first(); 
+		%]
+		mapping ([%=attrId.tipodato.name%] => [%=est.tipodato.name%] ) public [%=est.name%];
+		[%}%]
+		[%for (ope in smc.operaciones) { %]
+		function [%=ope.name%] ([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %][%=par.tipodato.name%] [%=par.name%][%i++;%][%if(i<>cantpar){%],[%}%][%}%]){
+			[%for (line in ope.lineas) {
+				var izq; var der; var ope;
+				 if(line.isKindOf(ExpresionBinaria)){%]
+			[%=getExpresionBinariaAux(line)%]; 
+				 [%}else{%]
+			[%=getValue(line)%];				 
+				 [%}
+				%]
+				
+			[%}%]
+		}
+		[%}%]
+[%}%] 
+}
+	
+[%}%]
+
+[%
+operation getValue (line:Linea) : String {
+	if(line.isTypeOf(ExpresionNumerica) or line.isTypeOf(ExpresionTexto) or line.isTypeOf(ExpresionBoolean)){
+		if(line.isTypeOf(ExpresionTexto)){
+			return ' "'+line.value.asString()+ '"';
+		}else{
+			return line.value.asString();
+		}
+	}else if(line.isTypeOf(ExpresionReferenciada)){
+		return line.referencia.name;
+	}else if(line.isTypeOf(Variable)){
+	    return "memory " + line.name + " = " + line.tipodato.name;
+	}
+}
+
+operation getOperador(line:Linea) : String{
+		var ope;
+		if(line.isTypeOf(ExpresionAritmetica)){
+				ope=line.operador.asString();
+	  	}else if (line.isTypeOf(ExpresionLogica)){
+	  			ope=line.OperadorLogico.asString();
+	  	}else if(line.isTypeOf(ExpresionRelacional)){
+	  			ope=".";
+	  	} 
+	  	return ope;
+}
+
+operation  getExpresionBinariaAux (line: Linea) : String {
+	if(not(line.isKindOf(ExpresionBinaria))){
+		return getValue(line);
+	}else if(line.isTypeOf(If)){
+		line.expresionlogica.println();
+		return line.lineas.println();
+	}else{
+		if(getOperador(line)=="PUT"){
+			return " "+ getExpresionBinariaAux(line.Izq)+ "[" + getExpresionBinariaAux(line.Der)+"]";
+		}else if(getOperador(line)=="GET"){
+			return getExpresionBinariaAux(line.Izq)+ "[" + getExpresionBinariaAux(line.Der)+"]";
+		}else{
+			return " "+ getExpresionBinariaAux(line.Izq)+" "+ getOperador(line)+" "+getExpresionBinariaAux(line.Der)+" ";
+		}
+		
+	}	
+}
+
+operation  getExpresionValue (line : Linea) :  String {
+	if(line.isTypeOf(ExpresionNumerica) or line.isTypeOf(ExpresionTexto) or line.isTypeOf(ExpresionBoolean)){
+		return line.value.asString();
+	}else if(line.isTypeOf(ExpresionReferenciada))
+	{
+		return line.referencia.name;
+	}else{
+		return "";
+	}
+}
+
+%]

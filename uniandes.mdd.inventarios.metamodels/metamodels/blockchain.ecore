@@ -15,6 +15,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Atributo" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tipodato" lowerBound="1"
         eType="#//TipoDato"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SmartContract">
     <eStructuralFeatures xsi:type="ecore:EReference" name="entidades" upperBound="-1"
@@ -54,23 +55,24 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="OperadorLogico">
-    <eLiterals name="IGUAL_IGUAL"/>
-    <eLiterals name="DIFERENTE" value="1"/>
-    <eLiterals name="MAYORQUE" value="2"/>
-    <eLiterals name="MENORQUE" value="3"/>
-    <eLiterals name="MAYORIGUAL" value="4"/>
-    <eLiterals name="MENORIGUAL" value="5"/>
-    <eLiterals name="AND" value="7"/>
-    <eLiterals name="OR" value="8"/>
+    <eLiterals name="IGUAL_IGUAL" literal="=="/>
+    <eLiterals name="DIFERENTE" value="1" literal="!="/>
+    <eLiterals name="MAYORQUE" value="2" literal=">"/>
+    <eLiterals name="MENORQUE" value="3" literal="&lt;"/>
+    <eLiterals name="MAYORIGUAL" value="4" literal=">="/>
+    <eLiterals name="MENORIGUAL" value="5" literal="&lt;="/>
+    <eLiterals name="AND" value="7" literal="&amp;&amp;"/>
+    <eLiterals name="OR" value="8" literal="||"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Operador">
-    <eLiterals name="MAS"/>
-    <eLiterals name="MENOS" value="1"/>
-    <eLiterals name="PRODUCTO" value="2"/>
-    <eLiterals name="DIVISION" value="3"/>
-    <eLiterals name="IGUAL" value="4"/>
+    <eLiterals name="MAS" literal="+"/>
+    <eLiterals name="MENOS" value="1" literal="-"/>
+    <eLiterals name="PRODUCTO" value="2" literal="*"/>
+    <eLiterals name="DIVISION" value="3" literal="/"/>
+    <eLiterals name="IGUAL" value="4" literal="="/>
     <eLiterals name="GET" value="5"/>
     <eLiterals name="DELETE" value="6"/>
+    <eLiterals name="PUT" value="7" literal="PUT"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExpresionAritmetica" eSuperTypes="#//ExpresionBinaria">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operador" eType="#//Operador"/>
@@ -80,10 +82,10 @@
         eType="#//TipoDato"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DatoPrimitivo">
-    <eLiterals name="STRING"/>
-    <eLiterals name="NUMERICO" value="1"/>
-    <eLiterals name="BOOLEAN" value="2"/>
-    <eLiterals name="ADDRESS" value="3"/>
+    <eLiterals name="STRING" literal="String"/>
+    <eLiterals name="NUMERICO" value="1" literal="uint"/>
+    <eLiterals name="BOOLEAN" value="2" literal="false"/>
+    <eLiterals name="ADDRESS" value="3" literal="address"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Mapa" eSuperTypes="#//TipoDato">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tipoDatoKey" lowerBound="1"
@@ -96,7 +98,8 @@
         eType="#//ExpresionLogica" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lineas" upperBound="-1"
         eType="#//Linea" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="else" eType="#//Else" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elseLines" eType="#//Else"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expresion" abstract="true" interface="true"
       eSuperTypes="#//Linea"/>
@@ -118,7 +121,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operadorRelacional" eType="#//OperadorRelacion"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="OperadorRelacion">
-    <eLiterals name="PUNTO"/>
+    <eLiterals name="PUNTO" literal="."/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExpresionBinaria" abstract="true" eSuperTypes="#//Expresion">
     <eStructuralFeatures xsi:type="ecore:EReference" name="izq" lowerBound="1" eType="#//Expresion"
@@ -132,6 +135,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Else">
     <eStructuralFeatures xsi:type="ecore:EReference" name="lineas" upperBound="-1"
+        eType="#//Linea" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Retorno" eSuperTypes="#//Sentencia">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lineaRetorno" upperBound="-1"
         eType="#//Linea" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

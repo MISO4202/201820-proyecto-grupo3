@@ -248,6 +248,14 @@ public class BlockchainSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case BlockchainPackage.RETORNO: {
+				Retorno retorno = (Retorno)theEObject;
+				T result = caseRetorno(retorno);
+				if (result == null) result = caseSentencia(retorno);
+				if (result == null) result = caseLinea(retorno);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -624,6 +632,21 @@ public class BlockchainSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseElse(Else object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Retorno</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Retorno</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRetorno(Retorno object) {
 		return null;
 	}
 

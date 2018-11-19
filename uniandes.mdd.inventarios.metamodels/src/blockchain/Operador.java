@@ -26,7 +26,7 @@ public enum Operador implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MAS(0, "MAS", "MAS"),
+	MAS(0, "MAS", "+"),
 
 	/**
 	 * The '<em><b>MENOS</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum Operador implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MENOS(1, "MENOS", "MENOS"),
+	MENOS(1, "MENOS", "-"),
 
 	/**
 	 * The '<em><b>PRODUCTO</b></em>' literal object.
@@ -46,7 +46,7 @@ public enum Operador implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	PRODUCTO(2, "PRODUCTO", "PRODUCTO"),
+	PRODUCTO(2, "PRODUCTO", "*"),
 
 	/**
 	 * The '<em><b>DIVISION</b></em>' literal object.
@@ -56,7 +56,7 @@ public enum Operador implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DIVISION(3, "DIVISION", "DIVISION"),
+	DIVISION(3, "DIVISION", "/"),
 
 	/**
 	 * The '<em><b>IGUAL</b></em>' literal object.
@@ -66,7 +66,7 @@ public enum Operador implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	IGUAL(4, "IGUAL", "IGUAL"),
+	IGUAL(4, "IGUAL", "="),
 
 	/**
 	 * The '<em><b>GET</b></em>' literal object.
@@ -86,7 +86,15 @@ public enum Operador implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DELETE(6, "DELETE", "DELETE");
+	DELETE(6, "DELETE", "DELETE"), /**
+	 * The '<em><b>PUT</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #PUT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	PUT(7, "PUT", "PUT");
 
 	/**
 	 * The '<em><b>MAS</b></em>' literal value.
@@ -97,7 +105,7 @@ public enum Operador implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MAS
-	 * @model
+	 * @model literal="+"
 	 * @generated
 	 * @ordered
 	 */
@@ -112,7 +120,7 @@ public enum Operador implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MENOS
-	 * @model
+	 * @model literal="-"
 	 * @generated
 	 * @ordered
 	 */
@@ -127,7 +135,7 @@ public enum Operador implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #PRODUCTO
-	 * @model
+	 * @model literal="*"
 	 * @generated
 	 * @ordered
 	 */
@@ -142,7 +150,7 @@ public enum Operador implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #DIVISION
-	 * @model
+	 * @model literal="/"
 	 * @generated
 	 * @ordered
 	 */
@@ -157,7 +165,7 @@ public enum Operador implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #IGUAL
-	 * @model
+	 * @model literal="="
 	 * @generated
 	 * @ordered
 	 */
@@ -194,6 +202,21 @@ public enum Operador implements Enumerator {
 	public static final int DELETE_VALUE = 6;
 
 	/**
+	 * The '<em><b>PUT</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>PUT</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #PUT
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int PUT_VALUE = 7;
+
+	/**
 	 * An array of all the '<em><b>Operador</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -208,6 +231,7 @@ public enum Operador implements Enumerator {
 			IGUAL,
 			GET,
 			DELETE,
+			PUT,
 		};
 
 	/**
@@ -271,6 +295,7 @@ public enum Operador implements Enumerator {
 			case IGUAL_VALUE: return IGUAL;
 			case GET_VALUE: return GET;
 			case DELETE_VALUE: return DELETE;
+			case PUT_VALUE: return PUT;
 		}
 		return null;
 	}

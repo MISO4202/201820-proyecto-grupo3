@@ -26,7 +26,7 @@ public enum DatoPrimitivo implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	STRING(0, "STRING", "STRING"),
+	STRING(0, "STRING", "String"),
 
 	/**
 	 * The '<em><b>NUMERICO</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum DatoPrimitivo implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NUMERICO(1, "NUMERICO", "NUMERICO"),
+	NUMERICO(1, "NUMERICO", "uint"),
 
 	/**
 	 * The '<em><b>BOOLEAN</b></em>' literal object.
@@ -46,7 +46,7 @@ public enum DatoPrimitivo implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BOOLEAN(2, "BOOLEAN", "BOOLEAN"),
+	BOOLEAN(2, "BOOLEAN", "false"),
 
 	/**
 	 * The '<em><b>ADDRESS</b></em>' literal object.
@@ -56,7 +56,7 @@ public enum DatoPrimitivo implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ADDRESS(3, "ADDRESS", "ADDRESS");
+	ADDRESS(3, "ADDRESS", "address");
 
 	/**
 	 * The '<em><b>STRING</b></em>' literal value.
@@ -67,7 +67,7 @@ public enum DatoPrimitivo implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #STRING
-	 * @model
+	 * @model literal="String"
 	 * @generated
 	 * @ordered
 	 */
@@ -82,7 +82,7 @@ public enum DatoPrimitivo implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #NUMERICO
-	 * @model
+	 * @model literal="uint"
 	 * @generated
 	 * @ordered
 	 */
@@ -97,7 +97,7 @@ public enum DatoPrimitivo implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #BOOLEAN
-	 * @model
+	 * @model literal="false"
 	 * @generated
 	 * @ordered
 	 */
@@ -112,7 +112,7 @@ public enum DatoPrimitivo implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #ADDRESS
-	 * @model
+	 * @model literal="address"
 	 * @generated
 	 * @ordered
 	 */

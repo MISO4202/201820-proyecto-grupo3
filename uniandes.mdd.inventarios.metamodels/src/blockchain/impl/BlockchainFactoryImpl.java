@@ -76,6 +76,7 @@ public class BlockchainFactoryImpl extends EFactoryImpl implements BlockchainFac
 			case BlockchainPackage.EXPRESION_REFERENCIADA: return createExpresionReferenciada();
 			case BlockchainPackage.EXPRESION_RELACIONAL: return createExpresionRelacional();
 			case BlockchainPackage.ELSE: return createElse();
+			case BlockchainPackage.RETORNO: return createRetorno();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -311,6 +312,16 @@ public class BlockchainFactoryImpl extends EFactoryImpl implements BlockchainFac
 	public Else createElse() {
 		ElseImpl else_ = new ElseImpl();
 		return else_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Retorno createRetorno() {
+		RetornoImpl retorno = new RetornoImpl();
+		return retorno;
 	}
 
 	/**

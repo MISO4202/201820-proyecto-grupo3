@@ -20,16 +20,15 @@
 
    <delete dir="${generado.location}" failonerror="true" />
 
-
-<antcall target="m2t" />
+<antcall target="transM2T"/>
 
 </target>
 
-<target name="m2t">
+<target name="transM2T">
 
 <echo>Corriendo toBlockchain.EGL</echo>
 
-<epsilon.emf.loadModel name="AutoMarket" modelfile="${models.location}/AutoMarket.blockchain" metamodeluri="${blockchain.metamodel.uri}" read="true" store="true" />
+<epsilon.emf.loadModel name="AutoMarket" modelfile="${models.location}/AutoMarket.blockchain" metamodeluri="${blockchain.metamodel.uri}" read="true" store="false" />
 
 <epsilon.egl src="${transformaciones.location}/toBlockchain.egl">
 

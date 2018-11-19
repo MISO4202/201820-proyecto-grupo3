@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link blockchain.impl.IfImpl#getExpresionlogica <em>Expresionlogica</em>}</li>
  *   <li>{@link blockchain.impl.IfImpl#getLineas <em>Lineas</em>}</li>
- *   <li>{@link blockchain.impl.IfImpl#getElse <em>Else</em>}</li>
+ *   <li>{@link blockchain.impl.IfImpl#getElseLines <em>Else Lines</em>}</li>
  * </ul>
  *
  * @generated
@@ -61,14 +61,14 @@ public class IfImpl extends MinimalEObjectImpl.Container implements If {
 	protected EList<Linea> lineas;
 
 	/**
-	 * The cached value of the '{@link #getElse() <em>Else</em>}' containment reference.
+	 * The cached value of the '{@link #getElseLines() <em>Else Lines</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getElse()
+	 * @see #getElseLines()
 	 * @generated
 	 * @ordered
 	 */
-	protected Else else_;
+	protected Else elseLines;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -149,8 +149,8 @@ public class IfImpl extends MinimalEObjectImpl.Container implements If {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Else getElse() {
-		return else_;
+	public Else getElseLines() {
+		return elseLines;
 	}
 
 	/**
@@ -158,11 +158,11 @@ public class IfImpl extends MinimalEObjectImpl.Container implements If {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetElse(Else newElse, NotificationChain msgs) {
-		Else oldElse = else_;
-		else_ = newElse;
+	public NotificationChain basicSetElseLines(Else newElseLines, NotificationChain msgs) {
+		Else oldElseLines = elseLines;
+		elseLines = newElseLines;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BlockchainPackage.IF__ELSE, oldElse, newElse);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BlockchainPackage.IF__ELSE_LINES, oldElseLines, newElseLines);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -173,18 +173,18 @@ public class IfImpl extends MinimalEObjectImpl.Container implements If {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setElse(Else newElse) {
-		if (newElse != else_) {
+	public void setElseLines(Else newElseLines) {
+		if (newElseLines != elseLines) {
 			NotificationChain msgs = null;
-			if (else_ != null)
-				msgs = ((InternalEObject)else_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BlockchainPackage.IF__ELSE, null, msgs);
-			if (newElse != null)
-				msgs = ((InternalEObject)newElse).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BlockchainPackage.IF__ELSE, null, msgs);
-			msgs = basicSetElse(newElse, msgs);
+			if (elseLines != null)
+				msgs = ((InternalEObject)elseLines).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BlockchainPackage.IF__ELSE_LINES, null, msgs);
+			if (newElseLines != null)
+				msgs = ((InternalEObject)newElseLines).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BlockchainPackage.IF__ELSE_LINES, null, msgs);
+			msgs = basicSetElseLines(newElseLines, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.IF__ELSE, newElse, newElse));
+			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.IF__ELSE_LINES, newElseLines, newElseLines));
 	}
 
 	/**
@@ -199,8 +199,8 @@ public class IfImpl extends MinimalEObjectImpl.Container implements If {
 				return basicSetExpresionlogica(null, msgs);
 			case BlockchainPackage.IF__LINEAS:
 				return ((InternalEList<?>)getLineas()).basicRemove(otherEnd, msgs);
-			case BlockchainPackage.IF__ELSE:
-				return basicSetElse(null, msgs);
+			case BlockchainPackage.IF__ELSE_LINES:
+				return basicSetElseLines(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -217,8 +217,8 @@ public class IfImpl extends MinimalEObjectImpl.Container implements If {
 				return getExpresionlogica();
 			case BlockchainPackage.IF__LINEAS:
 				return getLineas();
-			case BlockchainPackage.IF__ELSE:
-				return getElse();
+			case BlockchainPackage.IF__ELSE_LINES:
+				return getElseLines();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -239,8 +239,8 @@ public class IfImpl extends MinimalEObjectImpl.Container implements If {
 				getLineas().clear();
 				getLineas().addAll((Collection<? extends Linea>)newValue);
 				return;
-			case BlockchainPackage.IF__ELSE:
-				setElse((Else)newValue);
+			case BlockchainPackage.IF__ELSE_LINES:
+				setElseLines((Else)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -260,8 +260,8 @@ public class IfImpl extends MinimalEObjectImpl.Container implements If {
 			case BlockchainPackage.IF__LINEAS:
 				getLineas().clear();
 				return;
-			case BlockchainPackage.IF__ELSE:
-				setElse((Else)null);
+			case BlockchainPackage.IF__ELSE_LINES:
+				setElseLines((Else)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -279,8 +279,8 @@ public class IfImpl extends MinimalEObjectImpl.Container implements If {
 				return expresionlogica != null;
 			case BlockchainPackage.IF__LINEAS:
 				return lineas != null && !lineas.isEmpty();
-			case BlockchainPackage.IF__ELSE:
-				return else_ != null;
+			case BlockchainPackage.IF__ELSE_LINES:
+				return elseLines != null;
 		}
 		return super.eIsSet(featureID);
 	}

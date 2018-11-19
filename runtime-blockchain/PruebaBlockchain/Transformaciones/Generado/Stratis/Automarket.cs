@@ -43,12 +43,12 @@ public class AutoMarket : SmartContract
     	}
 	
 		public void ConsultarVehiculo (string Placa){
-			Vehiculos[Placa]; 
+			;				 
 				
 		}
 	
 		public void CalcularCostos (int PrecioVehiculo,int ImpuestoVehiculo,int ValorTraspaso,int ComisionRunt){
-			    PrecioVehiculo * 0.19  +  PrecioVehiculo * ImpuestoVehiculo   + ValorTraspaso  + ComisionRunt ; 
+			;				 
 				
 		}
 	

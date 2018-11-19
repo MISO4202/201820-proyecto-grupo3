@@ -1,9 +1,0 @@
-pragma solidity ^0.4.0;
-
-
-contract [% app.allInstances.first().smartcontract.%] 
-[%for (con in app.all.SmartContract ) { %]
-		
-[%}%]
-	
- 

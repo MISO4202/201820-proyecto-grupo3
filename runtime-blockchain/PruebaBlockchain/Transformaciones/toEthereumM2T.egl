@@ -20,24 +20,34 @@ contract [%=smc.name%] {
 		[%for (ope in smc.operaciones) { %]
 		function [%=ope.name%] ([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %][%=par.tipodato.name%] [%=par.name%][%i++;%][%if(i<>cantpar){%],[%}%][%}%])[%if(ope.retorno.size()>0){%] [%=getRetorno(ope)%][%} %]{
 			[%for (line in ope.lineas) {
-				var izq; var der; var ope;
+				var izq; var der;
 				 if(line.isKindOf(ExpresionBinaria)){%]
 			[%=getExpresion(line)%]; 
 				 [%}else if(line.isTypeOf(If)){%]
 			if( [%=getExpresion(line.expresionlogica)%]){
 				[%for (body in line.lineas){%]
-					[%=getExpresion(body)%]
+				[%=getExpresion(body)%];
 				[%}%]
 			}[%if(line.elseLines.size()>0){%]else{	
 				[%for (body in line.elseLines.lineas){%]
-					[%=getExpresion(body)%]
+				[%=getExpresion(body)%];
 				[%}%]	
 			[%}%]
 			}	 	
-			[%}else{%]
-			[%=getValue(line)%];				 
-				 [%}
-				%]
+			[%}else if(not (line.isTypeOf(Retorno))){%]
+			[%=getValue(line)%];
+			[%}else{
+				if(line.isTypeOf(Retorno)){
+					if(line.lineaRetorno.size()>0){%]
+			[%=getLineaRetorno(line)%];	
+					[%}
+				}
+			%]
+				
+								 
+			[%}
+			
+			%]
 				
 			[%}%]
 		}
@@ -48,7 +58,12 @@ contract [%=smc.name%] {
 [%}%]
 
 [%
-
+operation getLineaRetorno(line: Linea) : String {
+	for (ret in line.lineaRetorno){
+		return "return " + getExpresion(ret);
+	}
+	
+}
 operation getRetorno(ope: Operacion) : String{
   if(ope.retorno.isUndefined()){
   	return "";

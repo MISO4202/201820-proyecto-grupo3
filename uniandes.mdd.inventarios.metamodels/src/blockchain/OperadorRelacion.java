@@ -26,7 +26,7 @@ public enum OperadorRelacion implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	PUNTO(0, "PUNTO", "PUNTO");
+	PUNTO(0, "PUNTO", ".");
 
 	/**
 	 * The '<em><b>PUNTO</b></em>' literal value.
@@ -37,7 +37,7 @@ public enum OperadorRelacion implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #PUNTO
-	 * @model
+	 * @model literal="."
 	 * @generated
 	 * @ordered
 	 */
