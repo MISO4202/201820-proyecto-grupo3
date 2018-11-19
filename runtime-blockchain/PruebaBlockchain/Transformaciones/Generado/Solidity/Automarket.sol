@@ -22,7 +22,9 @@ contract AutoMarket {
 		}
 		function CalcularCostos (int PrecioVehiculo,int ImpuestoVehiculo,int ValorTraspaso,int ComisionRunt) : uint {
 			return     PrecioVehiculo * 0.19  +  PrecioVehiculo * ImpuestoVehiculo   + ValorTraspaso  + ComisionRunt ;	
-						
+				
+								 
+				
 		}
 		function CrearVehiculo (string Marca,string Modelo,string Linea,string Placa,int Cilindraje,int Precio) {
 			memory vehiculo = Vehiculo;
