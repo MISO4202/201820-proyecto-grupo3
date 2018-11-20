@@ -29,16 +29,14 @@ public enum DatoPrimitivo implements Enumerator {
 	STRING(0, "STRING", "String"),
 
 	/**
-	 * The '<em><b>NUMERICO</b></em>' literal object.
+	 * The '<em><b>INT</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #NUMERICO_VALUE
+	 * @see #INT_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	NUMERICO(1, "NUMERICO", "uint"),
-
-	/**
+	INT(1, "INT", "int"), /**
 	 * The '<em><b>BOOLEAN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,7 +54,15 @@ public enum DatoPrimitivo implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ADDRESS(3, "ADDRESS", "address");
+	ADDRESS(3, "ADDRESS", "address"), /**
+	 * The '<em><b>DOUBLE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #DOUBLE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	DOUBLE(4, "DOUBLE", "double");
 
 	/**
 	 * The '<em><b>STRING</b></em>' literal value.
@@ -74,19 +80,19 @@ public enum DatoPrimitivo implements Enumerator {
 	public static final int STRING_VALUE = 0;
 
 	/**
-	 * The '<em><b>NUMERICO</b></em>' literal value.
+	 * The '<em><b>INT</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>NUMERICO</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>INT</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #NUMERICO
-	 * @model literal="uint"
+	 * @see #INT
+	 * @model literal="int"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int NUMERICO_VALUE = 1;
+	public static final int INT_VALUE = 1;
 
 	/**
 	 * The '<em><b>BOOLEAN</b></em>' literal value.
@@ -119,6 +125,21 @@ public enum DatoPrimitivo implements Enumerator {
 	public static final int ADDRESS_VALUE = 3;
 
 	/**
+	 * The '<em><b>DOUBLE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>DOUBLE</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #DOUBLE
+	 * @model literal="double"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int DOUBLE_VALUE = 4;
+
+	/**
 	 * An array of all the '<em><b>Dato Primitivo</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -127,9 +148,10 @@ public enum DatoPrimitivo implements Enumerator {
 	private static final DatoPrimitivo[] VALUES_ARRAY =
 		new DatoPrimitivo[] {
 			STRING,
-			NUMERICO,
+			INT,
 			BOOLEAN,
 			ADDRESS,
+			DOUBLE,
 		};
 
 	/**
@@ -187,9 +209,10 @@ public enum DatoPrimitivo implements Enumerator {
 	public static DatoPrimitivo get(int value) {
 		switch (value) {
 			case STRING_VALUE: return STRING;
-			case NUMERICO_VALUE: return NUMERICO;
+			case INT_VALUE: return INT;
 			case BOOLEAN_VALUE: return BOOLEAN;
 			case ADDRESS_VALUE: return ADDRESS;
+			case DOUBLE_VALUE: return DOUBLE;
 		}
 		return null;
 	}

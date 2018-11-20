@@ -21,7 +21,7 @@ Linea returns Linea:
 	Expresion | Variable | Condicional | Retorno;
 
 Expresion returns Expresion:
-	ExpresionLogica | ExpresionAritmetica | ExpresionNumerica | ExpresionTexto | ExpresionBoolean| ExpresionReferenciada | ExpresionRelacional ;
+	ExpresionLogica | ExpresionAritmetica | ExpresionNumericaInt | ExpresionTexto | ExpresionBoolean| ExpresionReferenciada | ExpresionRelacional | ExpresionNumericaDouble ;
 
 
 
@@ -122,12 +122,18 @@ Else returns Else:
 		 '}'
 		;
 	
-ExpresionNumerica returns ExpresionNumerica:
-	{ExpresionNumerica}
+ExpresionNumericaInt returns ExpresionNumericaInt:
+	{ExpresionNumericaInt}
 	'ExpNum'
-	(value=EDouble)?
+	(value=EInt)?
 	;
 
+ExpresionNumericaDouble returns ExpresionNumericaDouble:
+	{ExpresionNumericaDouble}
+	'ExpNumDouble'
+	(value=EDouble)?
+	;
+	
 ExpresionTexto returns ExpresionTexto:
 	{ExpresionTexto}
 	'ExpTex'
@@ -194,4 +200,4 @@ Mapa returns Mapa:
 
 
 enum DatoPrimitivo returns DatoPrimitivo:
-				STRING = 'String' | NUMERICO = 'uint' | BOOLEAN = 'Boolean' | ADDRESS = 'ADDRESS';
+				STRING = 'String' | INT = 'Integer' | BOOLEAN = 'Boolean' | ADDRESS = 'ADDRESS' | DOUBLE = 'Double';

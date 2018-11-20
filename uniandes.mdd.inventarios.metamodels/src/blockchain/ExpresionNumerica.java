@@ -29,12 +29,12 @@ public interface ExpresionNumerica extends Expresion {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(double)
+	 * @see #setValue(int)
 	 * @see blockchain.BlockchainPackage#getExpresionNumerica_Value()
 	 * @model
 	 * @generated
 	 */
-	double getValue();
+	int getValue();
 
 	/**
 	 * Sets the value of the '{@link blockchain.ExpresionNumerica#getValue <em>Value</em>}' attribute.
@@ -44,6 +44,6 @@ public interface ExpresionNumerica extends Expresion {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(double value);
+	void setValue(int value);
 
 } // ExpresionNumerica

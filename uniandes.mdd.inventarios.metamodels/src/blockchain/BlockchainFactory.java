@@ -139,13 +139,13 @@ public interface BlockchainFactory extends EFactory {
 	If createIf();
 
 	/**
-	 * Returns a new object of class '<em>Expresion Numerica</em>'.
+	 * Returns a new object of class '<em>Expresion Numerica Double</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Expresion Numerica</em>'.
+	 * @return a new object of class '<em>Expresion Numerica Double</em>'.
 	 * @generated
 	 */
-	ExpresionNumerica createExpresionNumerica();
+	ExpresionNumericaDouble createExpresionNumericaDouble();
 
 	/**
 	 * Returns a new object of class '<em>Expresion Texto</em>'.
@@ -200,6 +200,15 @@ public interface BlockchainFactory extends EFactory {
 	 * @generated
 	 */
 	Retorno createRetorno();
+
+	/**
+	 * Returns a new object of class '<em>Expresion Numerica Int</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Expresion Numerica Int</em>'.
+	 * @generated
+	 */
+	ExpresionNumericaInt createExpresionNumericaInt();
 
 	/**
 	 * Returns the package supported by this factory.

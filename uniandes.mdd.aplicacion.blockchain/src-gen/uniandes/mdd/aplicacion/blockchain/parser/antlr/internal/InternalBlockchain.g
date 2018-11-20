@@ -317,11 +317,11 @@ ruleExpresion returns [EObject current=null]
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getExpresionAccess().getExpresionNumericaParserRuleCall_2());
+			newCompositeNode(grammarAccess.getExpresionAccess().getExpresionNumericaIntParserRuleCall_2());
 		}
-		this_ExpresionNumerica_2=ruleExpresionNumerica
+		this_ExpresionNumericaInt_2=ruleExpresionNumericaInt
 		{
-			$current = $this_ExpresionNumerica_2.current;
+			$current = $this_ExpresionNumericaInt_2.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
@@ -358,6 +358,15 @@ ruleExpresion returns [EObject current=null]
 		this_ExpresionRelacional_6=ruleExpresionRelacional
 		{
 			$current = $this_ExpresionRelacional_6.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getExpresionAccess().getExpresionNumericaDoubleParserRuleCall_7());
+		}
+		this_ExpresionNumericaDouble_7=ruleExpresionNumericaDouble
+		{
+			$current = $this_ExpresionNumericaDouble_7.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
@@ -1453,15 +1462,15 @@ ruleElse returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleExpresionNumerica
-entryRuleExpresionNumerica returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getExpresionNumericaRule()); }
-	iv_ruleExpresionNumerica=ruleExpresionNumerica
-	{ $current=$iv_ruleExpresionNumerica.current; }
+// Entry rule entryRuleExpresionNumericaInt
+entryRuleExpresionNumericaInt returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getExpresionNumericaIntRule()); }
+	iv_ruleExpresionNumericaInt=ruleExpresionNumericaInt
+	{ $current=$iv_ruleExpresionNumericaInt.current; }
 	EOF;
 
-// Rule ExpresionNumerica
-ruleExpresionNumerica returns [EObject current=null]
+// Rule ExpresionNumericaInt
+ruleExpresionNumericaInt returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -1472,23 +1481,72 @@ ruleExpresionNumerica returns [EObject current=null]
 		(
 			{
 				$current = forceCreateModelElement(
-					grammarAccess.getExpresionNumericaAccess().getExpresionNumericaAction_0(),
+					grammarAccess.getExpresionNumericaIntAccess().getExpresionNumericaIntAction_0(),
 					$current);
 			}
 		)
 		otherlv_1='ExpNum'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getExpresionNumericaAccess().getExpNumKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getExpresionNumericaIntAccess().getExpNumKeyword_1());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getExpresionNumericaAccess().getValueEDoubleParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getExpresionNumericaIntAccess().getValueEIntParserRuleCall_2_0());
+				}
+				lv_value_2_0=ruleEInt
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getExpresionNumericaIntRule());
+					}
+					set(
+						$current,
+						"value",
+						lv_value_2_0,
+						"uniandes.mdd.aplicacion.blockchain.Blockchain.EInt");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+	)
+;
+
+// Entry rule entryRuleExpresionNumericaDouble
+entryRuleExpresionNumericaDouble returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getExpresionNumericaDoubleRule()); }
+	iv_ruleExpresionNumericaDouble=ruleExpresionNumericaDouble
+	{ $current=$iv_ruleExpresionNumericaDouble.current; }
+	EOF;
+
+// Rule ExpresionNumericaDouble
+ruleExpresionNumericaDouble returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getExpresionNumericaDoubleAccess().getExpresionNumericaDoubleAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='ExpNumDouble'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getExpresionNumericaDoubleAccess().getExpNumDoubleKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getExpresionNumericaDoubleAccess().getValueEDoubleParserRuleCall_2_0());
 				}
 				lv_value_2_0=ruleEDouble
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getExpresionNumericaRule());
+						$current = createModelElementForParent(grammarAccess.getExpresionNumericaDoubleRule());
 					}
 					set(
 						$current,
@@ -2250,10 +2308,10 @@ ruleDatoPrimitivo returns [Enumerator current=null]
 		)
 		    |
 		(
-			enumLiteral_1='uint'
+			enumLiteral_1='Integer'
 			{
-				$current = grammarAccess.getDatoPrimitivoAccess().getNUMERICOEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getDatoPrimitivoAccess().getNUMERICOEnumLiteralDeclaration_1());
+				$current = grammarAccess.getDatoPrimitivoAccess().getINTEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getDatoPrimitivoAccess().getINTEnumLiteralDeclaration_1());
 			}
 		)
 		    |
@@ -2270,6 +2328,14 @@ ruleDatoPrimitivo returns [Enumerator current=null]
 			{
 				$current = grammarAccess.getDatoPrimitivoAccess().getADDRESSEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_3, grammarAccess.getDatoPrimitivoAccess().getADDRESSEnumLiteralDeclaration_3());
+			}
+		)
+		    |
+		(
+			enumLiteral_4='Double'
+			{
+				$current = grammarAccess.getDatoPrimitivoAccess().getDOUBLEEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_4, grammarAccess.getDatoPrimitivoAccess().getDOUBLEEnumLiteralDeclaration_4());
 			}
 		)
 	)

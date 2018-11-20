@@ -63,7 +63,8 @@ public class BlockchainParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVariableAccess().getGroup(), "rule__Variable__Group__0");
 					put(grammarAccess.getCondicionalAccess().getGroup(), "rule__Condicional__Group__0");
 					put(grammarAccess.getElseAccess().getGroup(), "rule__Else__Group__0");
-					put(grammarAccess.getExpresionNumericaAccess().getGroup(), "rule__ExpresionNumerica__Group__0");
+					put(grammarAccess.getExpresionNumericaIntAccess().getGroup(), "rule__ExpresionNumericaInt__Group__0");
+					put(grammarAccess.getExpresionNumericaDoubleAccess().getGroup(), "rule__ExpresionNumericaDouble__Group__0");
 					put(grammarAccess.getExpresionTextoAccess().getGroup(), "rule__ExpresionTexto__Group__0");
 					put(grammarAccess.getExpresionBooleanAccess().getGroup(), "rule__ExpresionBoolean__Group__0");
 					put(grammarAccess.getExpresionReferenciadaAccess().getGroup(), "rule__ExpresionReferenciada__Group__0");
@@ -113,7 +114,8 @@ public class BlockchainParser extends AbstractContentAssistParser {
 					put(grammarAccess.getCondicionalAccess().getLineasAssignment_3(), "rule__Condicional__LineasAssignment_3");
 					put(grammarAccess.getCondicionalAccess().getElseLinesAssignment_5(), "rule__Condicional__ElseLinesAssignment_5");
 					put(grammarAccess.getElseAccess().getLineasAssignment_2(), "rule__Else__LineasAssignment_2");
-					put(grammarAccess.getExpresionNumericaAccess().getValueAssignment_2(), "rule__ExpresionNumerica__ValueAssignment_2");
+					put(grammarAccess.getExpresionNumericaIntAccess().getValueAssignment_2(), "rule__ExpresionNumericaInt__ValueAssignment_2");
+					put(grammarAccess.getExpresionNumericaDoubleAccess().getValueAssignment_2(), "rule__ExpresionNumericaDouble__ValueAssignment_2");
 					put(grammarAccess.getExpresionTextoAccess().getValueAssignment_2(), "rule__ExpresionTexto__ValueAssignment_2");
 					put(grammarAccess.getExpresionBooleanAccess().getValueAssignment_2(), "rule__ExpresionBoolean__ValueAssignment_2");
 					put(grammarAccess.getExpresionReferenciadaAccess().getIdAssignment_2_1(), "rule__ExpresionReferenciada__IdAssignment_2_1");

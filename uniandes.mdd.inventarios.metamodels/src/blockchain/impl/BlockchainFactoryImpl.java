@@ -70,13 +70,14 @@ public class BlockchainFactoryImpl extends EFactoryImpl implements BlockchainFac
 			case BlockchainPackage.VARIABLE: return createVariable();
 			case BlockchainPackage.MAPA: return createMapa();
 			case BlockchainPackage.IF: return createIf();
-			case BlockchainPackage.EXPRESION_NUMERICA: return createExpresionNumerica();
+			case BlockchainPackage.EXPRESION_NUMERICA_DOUBLE: return createExpresionNumericaDouble();
 			case BlockchainPackage.EXPRESION_TEXTO: return createExpresionTexto();
 			case BlockchainPackage.EXPRESION_BOOLEAN: return createExpresionBoolean();
 			case BlockchainPackage.EXPRESION_REFERENCIADA: return createExpresionReferenciada();
 			case BlockchainPackage.EXPRESION_RELACIONAL: return createExpresionRelacional();
 			case BlockchainPackage.ELSE: return createElse();
 			case BlockchainPackage.RETORNO: return createRetorno();
+			case BlockchainPackage.EXPRESION_NUMERICA_INT: return createExpresionNumericaInt();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -259,9 +260,9 @@ public class BlockchainFactoryImpl extends EFactoryImpl implements BlockchainFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExpresionNumerica createExpresionNumerica() {
-		ExpresionNumericaImpl expresionNumerica = new ExpresionNumericaImpl();
-		return expresionNumerica;
+	public ExpresionNumericaDouble createExpresionNumericaDouble() {
+		ExpresionNumericaDoubleImpl expresionNumericaDouble = new ExpresionNumericaDoubleImpl();
+		return expresionNumericaDouble;
 	}
 
 	/**
@@ -322,6 +323,16 @@ public class BlockchainFactoryImpl extends EFactoryImpl implements BlockchainFac
 	public Retorno createRetorno() {
 		RetornoImpl retorno = new RetornoImpl();
 		return retorno;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExpresionNumericaInt createExpresionNumericaInt() {
+		ExpresionNumericaIntImpl expresionNumericaInt = new ExpresionNumericaIntImpl();
+		return expresionNumericaInt;
 	}
 
 	/**

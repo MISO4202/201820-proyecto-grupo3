@@ -15,7 +15,8 @@ import blockchain.ExpresionAritmetica;
 import blockchain.ExpresionBinaria;
 import blockchain.ExpresionBoolean;
 import blockchain.ExpresionLogica;
-import blockchain.ExpresionNumerica;
+import blockchain.ExpresionNumericaDouble;
+import blockchain.ExpresionNumericaInt;
 import blockchain.ExpresionReferenciada;
 import blockchain.ExpresionRelacional;
 import blockchain.ExpresionTexto;
@@ -167,7 +168,7 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass expresionNumericaEClass = null;
+	private EClass expresionNumericaDoubleEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -231,6 +232,13 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * @generated
 	 */
 	private EClass retornoEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass expresionNumericaIntEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -704,8 +712,8 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getExpresionNumerica() {
-		return expresionNumericaEClass;
+	public EClass getExpresionNumericaDouble() {
+		return expresionNumericaDoubleEClass;
 	}
 
 	/**
@@ -713,8 +721,8 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getExpresionNumerica_Value() {
-		return (EAttribute)expresionNumericaEClass.getEStructuralFeatures().get(0);
+	public EAttribute getExpresionNumericaDouble_Value() {
+		return (EAttribute)expresionNumericaDoubleEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -893,6 +901,24 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getExpresionNumericaInt() {
+		return expresionNumericaIntEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExpresionNumericaInt_Value() {
+		return (EAttribute)expresionNumericaIntEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getOperadorLogico() {
 		return operadorLogicoEEnum;
 	}
@@ -1010,8 +1036,8 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 
 		expresionEClass = createEClass(EXPRESION);
 
-		expresionNumericaEClass = createEClass(EXPRESION_NUMERICA);
-		createEAttribute(expresionNumericaEClass, EXPRESION_NUMERICA__VALUE);
+		expresionNumericaDoubleEClass = createEClass(EXPRESION_NUMERICA_DOUBLE);
+		createEAttribute(expresionNumericaDoubleEClass, EXPRESION_NUMERICA_DOUBLE__VALUE);
 
 		expresionTextoEClass = createEClass(EXPRESION_TEXTO);
 		createEAttribute(expresionTextoEClass, EXPRESION_TEXTO__VALUE);
@@ -1040,6 +1066,9 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 
 		retornoEClass = createEClass(RETORNO);
 		createEReference(retornoEClass, RETORNO__LINEA_RETORNO);
+
+		expresionNumericaIntEClass = createEClass(EXPRESION_NUMERICA_INT);
+		createEAttribute(expresionNumericaIntEClass, EXPRESION_NUMERICA_INT__VALUE);
 
 		// Create enums
 		operadorLogicoEEnum = createEEnum(OPERADOR_LOGICO);
@@ -1089,13 +1118,14 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 		mapaEClass.getESuperTypes().add(this.getTipoDato());
 		ifEClass.getESuperTypes().add(this.getSentencia());
 		expresionEClass.getESuperTypes().add(this.getLinea());
-		expresionNumericaEClass.getESuperTypes().add(this.getExpresion());
+		expresionNumericaDoubleEClass.getESuperTypes().add(this.getExpresion());
 		expresionTextoEClass.getESuperTypes().add(this.getExpresion());
 		expresionBooleanEClass.getESuperTypes().add(this.getExpresion());
 		expresionReferenciadaEClass.getESuperTypes().add(this.getExpresion());
 		expresionRelacionalEClass.getESuperTypes().add(this.getExpresionBinaria());
 		expresionBinariaEClass.getESuperTypes().add(this.getExpresion());
 		retornoEClass.getESuperTypes().add(this.getSentencia());
+		expresionNumericaIntEClass.getESuperTypes().add(this.getExpresion());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(aplicacionEClass, Aplicacion.class, "Aplicacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1156,8 +1186,8 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 
 		initEClass(expresionEClass, Expresion.class, "Expresion", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(expresionNumericaEClass, ExpresionNumerica.class, "ExpresionNumerica", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getExpresionNumerica_Value(), ecorePackage.getEDouble(), "value", null, 0, 1, ExpresionNumerica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(expresionNumericaDoubleEClass, ExpresionNumericaDouble.class, "ExpresionNumericaDouble", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExpresionNumericaDouble_Value(), ecorePackage.getEDouble(), "value", null, 0, 1, ExpresionNumericaDouble.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(expresionTextoEClass, ExpresionTexto.class, "ExpresionTexto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExpresionTexto_Value(), ecorePackage.getEString(), "value", null, 0, 1, ExpresionTexto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1187,6 +1217,9 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 		initEClass(retornoEClass, Retorno.class, "Retorno", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRetorno_LineaRetorno(), this.getLinea(), null, "lineaRetorno", null, 0, -1, Retorno.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(expresionNumericaIntEClass, ExpresionNumericaInt.class, "ExpresionNumericaInt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExpresionNumericaInt_Value(), ecorePackage.getEInt(), "value", null, 0, 1, ExpresionNumericaInt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(operadorLogicoEEnum, OperadorLogico.class, "OperadorLogico");
 		addEEnumLiteral(operadorLogicoEEnum, OperadorLogico.IGUAL_IGUAL);
@@ -1210,9 +1243,10 @@ public class BlockchainPackageImpl extends EPackageImpl implements BlockchainPac
 
 		initEEnum(datoPrimitivoEEnum, DatoPrimitivo.class, "DatoPrimitivo");
 		addEEnumLiteral(datoPrimitivoEEnum, DatoPrimitivo.STRING);
-		addEEnumLiteral(datoPrimitivoEEnum, DatoPrimitivo.NUMERICO);
+		addEEnumLiteral(datoPrimitivoEEnum, DatoPrimitivo.INT);
 		addEEnumLiteral(datoPrimitivoEEnum, DatoPrimitivo.BOOLEAN);
 		addEEnumLiteral(datoPrimitivoEEnum, DatoPrimitivo.ADDRESS);
+		addEEnumLiteral(datoPrimitivoEEnum, DatoPrimitivo.DOUBLE);
 
 		initEEnum(operadorRelacionEEnum, OperadorRelacion.class, "OperadorRelacion");
 		addEEnumLiteral(operadorRelacionEEnum, OperadorRelacion.PUNTO);

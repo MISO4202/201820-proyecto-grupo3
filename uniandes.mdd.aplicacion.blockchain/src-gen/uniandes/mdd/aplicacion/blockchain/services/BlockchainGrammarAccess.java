@@ -158,19 +158,20 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cExpresionLogicaParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cExpresionAritmeticaParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cExpresionNumericaParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cExpresionNumericaIntParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cExpresionTextoParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cExpresionBooleanParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		private final RuleCall cExpresionReferenciadaParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		private final RuleCall cExpresionRelacionalParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cExpresionNumericaDoubleParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		
 		//Expresion:
-		//	ExpresionLogica | ExpresionAritmetica | ExpresionNumerica | ExpresionTexto | ExpresionBoolean | ExpresionReferenciada
-		//	| ExpresionRelacional;
+		//	ExpresionLogica | ExpresionAritmetica | ExpresionNumericaInt | ExpresionTexto | ExpresionBoolean |
+		//	ExpresionReferenciada | ExpresionRelacional | ExpresionNumericaDouble;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//ExpresionLogica | ExpresionAritmetica | ExpresionNumerica | ExpresionTexto | ExpresionBoolean | ExpresionReferenciada |
-		//ExpresionRelacional
+		//ExpresionLogica | ExpresionAritmetica | ExpresionNumericaInt | ExpresionTexto | ExpresionBoolean | ExpresionReferenciada
+		//| ExpresionRelacional | ExpresionNumericaDouble
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//ExpresionLogica
@@ -179,8 +180,8 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		//ExpresionAritmetica
 		public RuleCall getExpresionAritmeticaParserRuleCall_1() { return cExpresionAritmeticaParserRuleCall_1; }
 		
-		//ExpresionNumerica
-		public RuleCall getExpresionNumericaParserRuleCall_2() { return cExpresionNumericaParserRuleCall_2; }
+		//ExpresionNumericaInt
+		public RuleCall getExpresionNumericaIntParserRuleCall_2() { return cExpresionNumericaIntParserRuleCall_2; }
 		
 		//ExpresionTexto
 		public RuleCall getExpresionTextoParserRuleCall_3() { return cExpresionTextoParserRuleCall_3; }
@@ -193,6 +194,9 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//ExpresionRelacional
 		public RuleCall getExpresionRelacionalParserRuleCall_6() { return cExpresionRelacionalParserRuleCall_6; }
+		
+		//ExpresionNumericaDouble
+		public RuleCall getExpresionNumericaDoubleParserRuleCall_7() { return cExpresionNumericaDoubleParserRuleCall_7; }
 	}
 	public class NamedElementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.NamedElement");
@@ -877,28 +881,57 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
-	public class ExpresionNumericaElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.ExpresionNumerica");
+	public class ExpresionNumericaIntElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.ExpresionNumericaInt");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cExpresionNumericaAction_0 = (Action)cGroup.eContents().get(0);
+		private final Action cExpresionNumericaIntAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cExpNumKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cValueEDoubleParserRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		private final RuleCall cValueEIntParserRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
 		
-		//ExpresionNumerica:
-		//	{ExpresionNumerica}
+		//ExpresionNumericaInt:
+		//	{ExpresionNumericaInt}
 		//	'ExpNum'
-		//	value=EDouble?;
+		//	value=EInt?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{ExpresionNumerica} 'ExpNum' value=EDouble?
+		//{ExpresionNumericaInt} 'ExpNum' value=EInt?
 		public Group getGroup() { return cGroup; }
 		
-		//{ExpresionNumerica}
-		public Action getExpresionNumericaAction_0() { return cExpresionNumericaAction_0; }
+		//{ExpresionNumericaInt}
+		public Action getExpresionNumericaIntAction_0() { return cExpresionNumericaIntAction_0; }
 		
 		//'ExpNum'
 		public Keyword getExpNumKeyword_1() { return cExpNumKeyword_1; }
+		
+		//value=EInt?
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+		
+		//EInt
+		public RuleCall getValueEIntParserRuleCall_2_0() { return cValueEIntParserRuleCall_2_0; }
+	}
+	public class ExpresionNumericaDoubleElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uniandes.mdd.aplicacion.blockchain.Blockchain.ExpresionNumericaDouble");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cExpresionNumericaDoubleAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cExpNumDoubleKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValueEDoubleParserRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		
+		//ExpresionNumericaDouble:
+		//	{ExpresionNumericaDouble}
+		//	'ExpNumDouble'
+		//	value=EDouble?;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{ExpresionNumericaDouble} 'ExpNumDouble' value=EDouble?
+		public Group getGroup() { return cGroup; }
+		
+		//{ExpresionNumericaDouble}
+		public Action getExpresionNumericaDoubleAction_0() { return cExpresionNumericaDoubleAction_0; }
+		
+		//'ExpNumDouble'
+		public Keyword getExpNumDoubleKeyword_1() { return cExpNumDoubleKeyword_1; }
 		
 		//value=EDouble?
 		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
@@ -1436,18 +1469,20 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cSTRINGEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cSTRINGStringKeyword_0_0 = (Keyword)cSTRINGEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cNUMERICOEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cNUMERICOUintKeyword_1_0 = (Keyword)cNUMERICOEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cINTEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cINTIntegerKeyword_1_0 = (Keyword)cINTEnumLiteralDeclaration_1.eContents().get(0);
 		private final EnumLiteralDeclaration cBOOLEANEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
 		private final Keyword cBOOLEANBooleanKeyword_2_0 = (Keyword)cBOOLEANEnumLiteralDeclaration_2.eContents().get(0);
 		private final EnumLiteralDeclaration cADDRESSEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
 		private final Keyword cADDRESSADDRESSKeyword_3_0 = (Keyword)cADDRESSEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cDOUBLEEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cDOUBLEDoubleKeyword_4_0 = (Keyword)cDOUBLEEnumLiteralDeclaration_4.eContents().get(0);
 		
 		//enum DatoPrimitivo:
-		//	STRING='String' | NUMERICO='uint' | BOOLEAN='Boolean' | ADDRESS;
+		//	STRING='String' | INT='Integer' | BOOLEAN='Boolean' | ADDRESS | DOUBLE='Double';
 		public EnumRule getRule() { return rule; }
 		
-		//STRING='String' | NUMERICO='uint' | BOOLEAN='Boolean' | ADDRESS
+		//STRING='String' | INT='Integer' | BOOLEAN='Boolean' | ADDRESS | DOUBLE='Double'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//STRING='String'
@@ -1456,11 +1491,11 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		//'String'
 		public Keyword getSTRINGStringKeyword_0_0() { return cSTRINGStringKeyword_0_0; }
 		
-		//NUMERICO='uint'
-		public EnumLiteralDeclaration getNUMERICOEnumLiteralDeclaration_1() { return cNUMERICOEnumLiteralDeclaration_1; }
+		//INT='Integer'
+		public EnumLiteralDeclaration getINTEnumLiteralDeclaration_1() { return cINTEnumLiteralDeclaration_1; }
 		
-		//'uint'
-		public Keyword getNUMERICOUintKeyword_1_0() { return cNUMERICOUintKeyword_1_0; }
+		//'Integer'
+		public Keyword getINTIntegerKeyword_1_0() { return cINTIntegerKeyword_1_0; }
 		
 		//BOOLEAN='Boolean'
 		public EnumLiteralDeclaration getBOOLEANEnumLiteralDeclaration_2() { return cBOOLEANEnumLiteralDeclaration_2; }
@@ -1473,6 +1508,12 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'ADDRESS'
 		public Keyword getADDRESSADDRESSKeyword_3_0() { return cADDRESSADDRESSKeyword_3_0; }
+		
+		//DOUBLE='Double'
+		public EnumLiteralDeclaration getDOUBLEEnumLiteralDeclaration_4() { return cDOUBLEEnumLiteralDeclaration_4; }
+		
+		//'Double'
+		public Keyword getDOUBLEDoubleKeyword_4_0() { return cDOUBLEDoubleKeyword_4_0; }
 	}
 	
 	private final AplicacionElements pAplicacion;
@@ -1493,7 +1534,8 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	private final VariableElements pVariable;
 	private final CondicionalElements pCondicional;
 	private final ElseElements pElse;
-	private final ExpresionNumericaElements pExpresionNumerica;
+	private final ExpresionNumericaIntElements pExpresionNumericaInt;
+	private final ExpresionNumericaDoubleElements pExpresionNumericaDouble;
 	private final ExpresionTextoElements pExpresionTexto;
 	private final ExpresionBooleanElements pExpresionBoolean;
 	private final ExpresionReferenciadaElements pExpresionReferenciada;
@@ -1535,7 +1577,8 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVariable = new VariableElements();
 		this.pCondicional = new CondicionalElements();
 		this.pElse = new ElseElements();
-		this.pExpresionNumerica = new ExpresionNumericaElements();
+		this.pExpresionNumericaInt = new ExpresionNumericaIntElements();
+		this.pExpresionNumericaDouble = new ExpresionNumericaDoubleElements();
 		this.pExpresionTexto = new ExpresionTextoElements();
 		this.pExpresionBoolean = new ExpresionBooleanElements();
 		this.pExpresionReferenciada = new ExpresionReferenciadaElements();
@@ -1613,8 +1656,8 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Expresion:
-	//	ExpresionLogica | ExpresionAritmetica | ExpresionNumerica | ExpresionTexto | ExpresionBoolean | ExpresionReferenciada
-	//	| ExpresionRelacional;
+	//	ExpresionLogica | ExpresionAritmetica | ExpresionNumericaInt | ExpresionTexto | ExpresionBoolean |
+	//	ExpresionReferenciada | ExpresionRelacional | ExpresionNumericaDouble;
 	public ExpresionElements getExpresionAccess() {
 		return pExpresion;
 	}
@@ -1788,16 +1831,28 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 		return getElseAccess().getRule();
 	}
 	
-	//ExpresionNumerica:
-	//	{ExpresionNumerica}
+	//ExpresionNumericaInt:
+	//	{ExpresionNumericaInt}
 	//	'ExpNum'
-	//	value=EDouble?;
-	public ExpresionNumericaElements getExpresionNumericaAccess() {
-		return pExpresionNumerica;
+	//	value=EInt?;
+	public ExpresionNumericaIntElements getExpresionNumericaIntAccess() {
+		return pExpresionNumericaInt;
 	}
 	
-	public ParserRule getExpresionNumericaRule() {
-		return getExpresionNumericaAccess().getRule();
+	public ParserRule getExpresionNumericaIntRule() {
+		return getExpresionNumericaIntAccess().getRule();
+	}
+	
+	//ExpresionNumericaDouble:
+	//	{ExpresionNumericaDouble}
+	//	'ExpNumDouble'
+	//	value=EDouble?;
+	public ExpresionNumericaDoubleElements getExpresionNumericaDoubleAccess() {
+		return pExpresionNumericaDouble;
+	}
+	
+	public ParserRule getExpresionNumericaDoubleRule() {
+		return getExpresionNumericaDoubleAccess().getRule();
 	}
 	
 	//ExpresionTexto:
@@ -1941,7 +1996,7 @@ public class BlockchainGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//enum DatoPrimitivo:
-	//	STRING='String' | NUMERICO='uint' | BOOLEAN='Boolean' | ADDRESS;
+	//	STRING='String' | INT='Integer' | BOOLEAN='Boolean' | ADDRESS | DOUBLE='Double';
 	public DatoPrimitivoElements getDatoPrimitivoAccess() {
 		return eDatoPrimitivo;
 	}

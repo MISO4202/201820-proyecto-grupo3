@@ -950,14 +950,14 @@ public interface BlockchainPackage extends EPackage {
 	int IF_OPERATION_COUNT = SENTENCIA_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link blockchain.impl.ExpresionNumericaImpl <em>Expresion Numerica</em>}' class.
+	 * The meta object id for the '{@link blockchain.impl.ExpresionNumericaDoubleImpl <em>Expresion Numerica Double</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see blockchain.impl.ExpresionNumericaImpl
-	 * @see blockchain.impl.BlockchainPackageImpl#getExpresionNumerica()
+	 * @see blockchain.impl.ExpresionNumericaDoubleImpl
+	 * @see blockchain.impl.BlockchainPackageImpl#getExpresionNumericaDouble()
 	 * @generated
 	 */
-	int EXPRESION_NUMERICA = 16;
+	int EXPRESION_NUMERICA_DOUBLE = 16;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -966,25 +966,25 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_NUMERICA__VALUE = EXPRESION_FEATURE_COUNT + 0;
+	int EXPRESION_NUMERICA_DOUBLE__VALUE = EXPRESION_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Expresion Numerica</em>' class.
+	 * The number of structural features of the '<em>Expresion Numerica Double</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_NUMERICA_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 1;
+	int EXPRESION_NUMERICA_DOUBLE_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Expresion Numerica</em>' class.
+	 * The number of operations of the '<em>Expresion Numerica Double</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESION_NUMERICA_OPERATION_COUNT = EXPRESION_OPERATION_COUNT + 0;
+	int EXPRESION_NUMERICA_DOUBLE_OPERATION_COUNT = EXPRESION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link blockchain.impl.ExpresionTextoImpl <em>Expresion Texto</em>}' class.
@@ -1236,6 +1236,43 @@ public interface BlockchainPackage extends EPackage {
 	int RETORNO_OPERATION_COUNT = SENTENCIA_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link blockchain.impl.ExpresionNumericaIntImpl <em>Expresion Numerica Int</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see blockchain.impl.ExpresionNumericaIntImpl
+	 * @see blockchain.impl.BlockchainPackageImpl#getExpresionNumericaInt()
+	 * @generated
+	 */
+	int EXPRESION_NUMERICA_INT = 26;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESION_NUMERICA_INT__VALUE = EXPRESION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Expresion Numerica Int</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESION_NUMERICA_INT_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Expresion Numerica Int</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESION_NUMERICA_INT_OPERATION_COUNT = EXPRESION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link blockchain.OperadorLogico <em>Operador Logico</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1243,7 +1280,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getOperadorLogico()
 	 * @generated
 	 */
-	int OPERADOR_LOGICO = 26;
+	int OPERADOR_LOGICO = 27;
 
 	/**
 	 * The meta object id for the '{@link blockchain.Operador <em>Operador</em>}' enum.
@@ -1253,7 +1290,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getOperador()
 	 * @generated
 	 */
-	int OPERADOR = 27;
+	int OPERADOR = 28;
 
 	/**
 	 * The meta object id for the '{@link blockchain.DatoPrimitivo <em>Dato Primitivo</em>}' enum.
@@ -1263,7 +1300,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getDatoPrimitivo()
 	 * @generated
 	 */
-	int DATO_PRIMITIVO = 28;
+	int DATO_PRIMITIVO = 29;
 
 	/**
 	 * The meta object id for the '{@link blockchain.OperadorRelacion <em>Operador Relacion</em>}' enum.
@@ -1273,7 +1310,7 @@ public interface BlockchainPackage extends EPackage {
 	 * @see blockchain.impl.BlockchainPackageImpl#getOperadorRelacion()
 	 * @generated
 	 */
-	int OPERADOR_RELACION = 29;
+	int OPERADOR_RELACION = 30;
 
 
 	/**
@@ -1723,25 +1760,25 @@ public interface BlockchainPackage extends EPackage {
 	EClass getExpresion();
 
 	/**
-	 * Returns the meta object for class '{@link blockchain.ExpresionNumerica <em>Expresion Numerica</em>}'.
+	 * Returns the meta object for class '{@link blockchain.ExpresionNumericaDouble <em>Expresion Numerica Double</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Expresion Numerica</em>'.
-	 * @see blockchain.ExpresionNumerica
+	 * @return the meta object for class '<em>Expresion Numerica Double</em>'.
+	 * @see blockchain.ExpresionNumericaDouble
 	 * @generated
 	 */
-	EClass getExpresionNumerica();
+	EClass getExpresionNumericaDouble();
 
 	/**
-	 * Returns the meta object for the attribute '{@link blockchain.ExpresionNumerica#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link blockchain.ExpresionNumericaDouble#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see blockchain.ExpresionNumerica#getValue()
-	 * @see #getExpresionNumerica()
+	 * @see blockchain.ExpresionNumericaDouble#getValue()
+	 * @see #getExpresionNumericaDouble()
 	 * @generated
 	 */
-	EAttribute getExpresionNumerica_Value();
+	EAttribute getExpresionNumericaDouble_Value();
 
 	/**
 	 * Returns the meta object for class '{@link blockchain.ExpresionTexto <em>Expresion Texto</em>}'.
@@ -1942,6 +1979,27 @@ public interface BlockchainPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRetorno_LineaRetorno();
+
+	/**
+	 * Returns the meta object for class '{@link blockchain.ExpresionNumericaInt <em>Expresion Numerica Int</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Expresion Numerica Int</em>'.
+	 * @see blockchain.ExpresionNumericaInt
+	 * @generated
+	 */
+	EClass getExpresionNumericaInt();
+
+	/**
+	 * Returns the meta object for the attribute '{@link blockchain.ExpresionNumericaInt#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see blockchain.ExpresionNumericaInt#getValue()
+	 * @see #getExpresionNumericaInt()
+	 * @generated
+	 */
+	EAttribute getExpresionNumericaInt_Value();
 
 	/**
 	 * Returns the meta object for enum '{@link blockchain.OperadorLogico <em>Operador Logico</em>}'.
@@ -2375,14 +2433,14 @@ public interface BlockchainPackage extends EPackage {
 		EClass EXPRESION = eINSTANCE.getExpresion();
 
 		/**
-		 * The meta object literal for the '{@link blockchain.impl.ExpresionNumericaImpl <em>Expresion Numerica</em>}' class.
+		 * The meta object literal for the '{@link blockchain.impl.ExpresionNumericaDoubleImpl <em>Expresion Numerica Double</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see blockchain.impl.ExpresionNumericaImpl
-		 * @see blockchain.impl.BlockchainPackageImpl#getExpresionNumerica()
+		 * @see blockchain.impl.ExpresionNumericaDoubleImpl
+		 * @see blockchain.impl.BlockchainPackageImpl#getExpresionNumericaDouble()
 		 * @generated
 		 */
-		EClass EXPRESION_NUMERICA = eINSTANCE.getExpresionNumerica();
+		EClass EXPRESION_NUMERICA_DOUBLE = eINSTANCE.getExpresionNumericaDouble();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -2390,7 +2448,7 @@ public interface BlockchainPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXPRESION_NUMERICA__VALUE = eINSTANCE.getExpresionNumerica_Value();
+		EAttribute EXPRESION_NUMERICA_DOUBLE__VALUE = eINSTANCE.getExpresionNumericaDouble_Value();
 
 		/**
 		 * The meta object literal for the '{@link blockchain.impl.ExpresionTextoImpl <em>Expresion Texto</em>}' class.
@@ -2561,6 +2619,24 @@ public interface BlockchainPackage extends EPackage {
 		 * @generated
 		 */
 		EReference RETORNO__LINEA_RETORNO = eINSTANCE.getRetorno_LineaRetorno();
+
+		/**
+		 * The meta object literal for the '{@link blockchain.impl.ExpresionNumericaIntImpl <em>Expresion Numerica Int</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see blockchain.impl.ExpresionNumericaIntImpl
+		 * @see blockchain.impl.BlockchainPackageImpl#getExpresionNumericaInt()
+		 * @generated
+		 */
+		EClass EXPRESION_NUMERICA_INT = eINSTANCE.getExpresionNumericaInt();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXPRESION_NUMERICA_INT__VALUE = eINSTANCE.getExpresionNumericaInt_Value();
 
 		/**
 		 * The meta object literal for the '{@link blockchain.OperadorLogico <em>Operador Logico</em>}' enum.

@@ -82,9 +82,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DatoPrimitivo">
     <eLiterals name="STRING" literal="String"/>
-    <eLiterals name="NUMERICO" value="1" literal="uint"/>
+    <eLiterals name="INT" value="1" literal="int"/>
     <eLiterals name="BOOLEAN" value="2" literal="false"/>
     <eLiterals name="ADDRESS" value="3" literal="address"/>
+    <eLiterals name="DOUBLE" value="4" literal="double"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Mapa" eSuperTypes="#//TipoDato">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tipoDatoKey" lowerBound="1"
@@ -102,7 +103,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expresion" abstract="true" interface="true"
       eSuperTypes="#//Linea"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ExpresionNumerica" eSuperTypes="#//Expresion">
+  <eClassifiers xsi:type="ecore:EClass" name="ExpresionNumericaDouble" eSuperTypes="#//Expresion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExpresionTexto" eSuperTypes="#//Expresion">
@@ -139,5 +140,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Retorno" eSuperTypes="#//Sentencia">
     <eStructuralFeatures xsi:type="ecore:EReference" name="lineaRetorno" upperBound="-1"
         eType="#//Linea" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpresionNumericaInt" eSuperTypes="#//Expresion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -181,11 +181,11 @@ public class BlockchainSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case BlockchainPackage.EXPRESION_NUMERICA: {
-				ExpresionNumerica expresionNumerica = (ExpresionNumerica)theEObject;
-				T result = caseExpresionNumerica(expresionNumerica);
-				if (result == null) result = caseExpresion(expresionNumerica);
-				if (result == null) result = caseLinea(expresionNumerica);
+			case BlockchainPackage.EXPRESION_NUMERICA_DOUBLE: {
+				ExpresionNumericaDouble expresionNumericaDouble = (ExpresionNumericaDouble)theEObject;
+				T result = caseExpresionNumericaDouble(expresionNumericaDouble);
+				if (result == null) result = caseExpresion(expresionNumericaDouble);
+				if (result == null) result = caseLinea(expresionNumericaDouble);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -253,6 +253,14 @@ public class BlockchainSwitch<T> extends Switch<T> {
 				T result = caseRetorno(retorno);
 				if (result == null) result = caseSentencia(retorno);
 				if (result == null) result = caseLinea(retorno);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BlockchainPackage.EXPRESION_NUMERICA_INT: {
+				ExpresionNumericaInt expresionNumericaInt = (ExpresionNumericaInt)theEObject;
+				T result = caseExpresionNumericaInt(expresionNumericaInt);
+				if (result == null) result = caseExpresion(expresionNumericaInt);
+				if (result == null) result = caseLinea(expresionNumericaInt);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -501,17 +509,17 @@ public class BlockchainSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Expresion Numerica</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Expresion Numerica Double</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Expresion Numerica</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Expresion Numerica Double</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseExpresionNumerica(ExpresionNumerica object) {
+	public T caseExpresionNumericaDouble(ExpresionNumericaDouble object) {
 		return null;
 	}
 
@@ -647,6 +655,21 @@ public class BlockchainSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRetorno(Retorno object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Expresion Numerica Int</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Expresion Numerica Int</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExpresionNumericaInt(ExpresionNumericaInt object) {
 		return null;
 	}
 

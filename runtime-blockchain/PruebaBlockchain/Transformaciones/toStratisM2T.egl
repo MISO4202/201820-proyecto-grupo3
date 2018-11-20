@@ -68,7 +68,7 @@ operation getEstado(est:Estado) : String{
 	}
 }
 operation getValue (line:Linea) : String {
-	if(line.isTypeOf(ExpresionNumerica) or line.isTypeOf(ExpresionTexto) or line.isTypeOf(ExpresionBoolean)){
+	if(line.isTypeOf(ExpresionNumericaInt) or line.isTypeOf(ExpresionTexto) or line.isTypeOf(ExpresionBoolean) or line.isTypeOf(ExpresionNumericaDouble)){
 		if(line.isTypeOf(ExpresionTexto)){
 			return ' "'+line.value.asString()+ '"';
 		}else{

@@ -28,9 +28,10 @@
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="blockchain.ecore#//DatoPrimitivo">
       <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//DatoPrimitivo/STRING"/>
-      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//DatoPrimitivo/NUMERICO"/>
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//DatoPrimitivo/INT"/>
       <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//DatoPrimitivo/BOOLEAN"/>
       <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//DatoPrimitivo/ADDRESS"/>
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//DatoPrimitivo/DOUBLE"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="blockchain.ecore#//OperadorRelacion">
       <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//OperadorRelacion/PUNTO"/>
@@ -91,8 +92,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//If/elseLines"/>
     </genClasses>
     <genClasses image="false" ecoreClass="blockchain.ecore#//Expresion"/>
-    <genClasses ecoreClass="blockchain.ecore#//ExpresionNumerica">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//ExpresionNumerica/value"/>
+    <genClasses ecoreClass="blockchain.ecore#//ExpresionNumericaDouble">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//ExpresionNumericaDouble/value"/>
     </genClasses>
     <genClasses ecoreClass="blockchain.ecore#//ExpresionTexto">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//ExpresionTexto/value"/>
@@ -120,6 +121,9 @@
     </genClasses>
     <genClasses ecoreClass="blockchain.ecore#//Retorno">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Retorno/lineaRetorno"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//ExpresionNumericaInt">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//ExpresionNumericaInt/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

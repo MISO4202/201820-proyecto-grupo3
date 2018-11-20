@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalBlockchainParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Aplicacion'", "'{'", "'tipodato'", "'}'", "'SmartContract'", "'Entidad'", "'Operacion'", "'isUd='", "'('", "','", "')'", "':'", "'Estado'", "'true'", "'false'", "'ExpLog'", "'ExpArit'", "'var'", "'if'", "'else'", "'ExpNum'", "'ExpTex'", "'ExpBool'", "'ExpRef'", "'id'", "'ExpRel'", "'return'", "'-'", "'.'", "'E'", "'e'", "'Map'", "'<'", "'>'", "'=='", "'!='", "'>='", "'<='", "'&&'", "'||'", "'+'", "'*'", "'/'", "'='", "'GET'", "'DELETE'", "'PUT'", "'String'", "'uint'", "'Boolean'", "'ADDRESS'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Aplicacion'", "'{'", "'tipodato'", "'}'", "'SmartContract'", "'Entidad'", "'Operacion'", "'isUd='", "'('", "','", "')'", "':'", "'Estado'", "'true'", "'false'", "'ExpLog'", "'ExpArit'", "'var'", "'if'", "'else'", "'ExpNum'", "'ExpNumDouble'", "'ExpTex'", "'ExpBool'", "'ExpRef'", "'id'", "'ExpRel'", "'return'", "'-'", "'.'", "'E'", "'e'", "'Map'", "'<'", "'>'", "'=='", "'!='", "'>='", "'<='", "'&&'", "'||'", "'+'", "'*'", "'/'", "'='", "'GET'", "'DELETE'", "'PUT'", "'String'", "'Integer'", "'Boolean'", "'ADDRESS'", "'Double'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -56,6 +56,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
     public static final int T__23=23;
     public static final int T__24=24;
     public static final int T__25=25;
+    public static final int T__62=62;
+    public static final int T__63=63;
     public static final int T__20=20;
     public static final int T__21=21;
     public static final int RULE_STRING=4;
@@ -484,15 +486,16 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                 break;
             case RULE_STRING:
             case RULE_ID:
-            case 58:
             case 59:
             case 60:
             case 61:
+            case 62:
+            case 63:
                 {
                 alt4=2;
                 }
                 break;
-            case 42:
+            case 43:
                 {
                 alt4=3;
                 }
@@ -647,7 +650,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
             case 32:
             case 33:
             case 34:
-            case 36:
+            case 35:
+            case 37:
                 {
                 alt5=1;
                 }
@@ -662,7 +666,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                 alt5=3;
                 }
                 break;
-            case 37:
+            case 38:
                 {
                 alt5=4;
                 }
@@ -806,7 +810,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpresion"
-    // InternalBlockchain.g:293:1: ruleExpresion returns [EObject current=null] : (this_ExpresionLogica_0= ruleExpresionLogica | this_ExpresionAritmetica_1= ruleExpresionAritmetica | this_ExpresionNumerica_2= ruleExpresionNumerica | this_ExpresionTexto_3= ruleExpresionTexto | this_ExpresionBoolean_4= ruleExpresionBoolean | this_ExpresionReferenciada_5= ruleExpresionReferenciada | this_ExpresionRelacional_6= ruleExpresionRelacional ) ;
+    // InternalBlockchain.g:293:1: ruleExpresion returns [EObject current=null] : (this_ExpresionLogica_0= ruleExpresionLogica | this_ExpresionAritmetica_1= ruleExpresionAritmetica | this_ExpresionNumericaInt_2= ruleExpresionNumericaInt | this_ExpresionTexto_3= ruleExpresionTexto | this_ExpresionBoolean_4= ruleExpresionBoolean | this_ExpresionReferenciada_5= ruleExpresionReferenciada | this_ExpresionRelacional_6= ruleExpresionRelacional | this_ExpresionNumericaDouble_7= ruleExpresionNumericaDouble ) ;
     public final EObject ruleExpresion() throws RecognitionException {
         EObject current = null;
 
@@ -814,7 +818,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
         EObject this_ExpresionAritmetica_1 = null;
 
-        EObject this_ExpresionNumerica_2 = null;
+        EObject this_ExpresionNumericaInt_2 = null;
 
         EObject this_ExpresionTexto_3 = null;
 
@@ -824,16 +828,18 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
         EObject this_ExpresionRelacional_6 = null;
 
+        EObject this_ExpresionNumericaDouble_7 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalBlockchain.g:299:2: ( (this_ExpresionLogica_0= ruleExpresionLogica | this_ExpresionAritmetica_1= ruleExpresionAritmetica | this_ExpresionNumerica_2= ruleExpresionNumerica | this_ExpresionTexto_3= ruleExpresionTexto | this_ExpresionBoolean_4= ruleExpresionBoolean | this_ExpresionReferenciada_5= ruleExpresionReferenciada | this_ExpresionRelacional_6= ruleExpresionRelacional ) )
-            // InternalBlockchain.g:300:2: (this_ExpresionLogica_0= ruleExpresionLogica | this_ExpresionAritmetica_1= ruleExpresionAritmetica | this_ExpresionNumerica_2= ruleExpresionNumerica | this_ExpresionTexto_3= ruleExpresionTexto | this_ExpresionBoolean_4= ruleExpresionBoolean | this_ExpresionReferenciada_5= ruleExpresionReferenciada | this_ExpresionRelacional_6= ruleExpresionRelacional )
+            // InternalBlockchain.g:299:2: ( (this_ExpresionLogica_0= ruleExpresionLogica | this_ExpresionAritmetica_1= ruleExpresionAritmetica | this_ExpresionNumericaInt_2= ruleExpresionNumericaInt | this_ExpresionTexto_3= ruleExpresionTexto | this_ExpresionBoolean_4= ruleExpresionBoolean | this_ExpresionReferenciada_5= ruleExpresionReferenciada | this_ExpresionRelacional_6= ruleExpresionRelacional | this_ExpresionNumericaDouble_7= ruleExpresionNumericaDouble ) )
+            // InternalBlockchain.g:300:2: (this_ExpresionLogica_0= ruleExpresionLogica | this_ExpresionAritmetica_1= ruleExpresionAritmetica | this_ExpresionNumericaInt_2= ruleExpresionNumericaInt | this_ExpresionTexto_3= ruleExpresionTexto | this_ExpresionBoolean_4= ruleExpresionBoolean | this_ExpresionReferenciada_5= ruleExpresionReferenciada | this_ExpresionRelacional_6= ruleExpresionRelacional | this_ExpresionNumericaDouble_7= ruleExpresionNumericaDouble )
             {
-            // InternalBlockchain.g:300:2: (this_ExpresionLogica_0= ruleExpresionLogica | this_ExpresionAritmetica_1= ruleExpresionAritmetica | this_ExpresionNumerica_2= ruleExpresionNumerica | this_ExpresionTexto_3= ruleExpresionTexto | this_ExpresionBoolean_4= ruleExpresionBoolean | this_ExpresionReferenciada_5= ruleExpresionReferenciada | this_ExpresionRelacional_6= ruleExpresionRelacional )
-            int alt6=7;
+            // InternalBlockchain.g:300:2: (this_ExpresionLogica_0= ruleExpresionLogica | this_ExpresionAritmetica_1= ruleExpresionAritmetica | this_ExpresionNumericaInt_2= ruleExpresionNumericaInt | this_ExpresionTexto_3= ruleExpresionTexto | this_ExpresionBoolean_4= ruleExpresionBoolean | this_ExpresionReferenciada_5= ruleExpresionReferenciada | this_ExpresionRelacional_6= ruleExpresionRelacional | this_ExpresionNumericaDouble_7= ruleExpresionNumericaDouble )
+            int alt6=8;
             switch ( input.LA(1) ) {
             case 26:
                 {
@@ -850,24 +856,29 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                 alt6=3;
                 }
                 break;
-            case 32:
+            case 33:
                 {
                 alt6=4;
                 }
                 break;
-            case 33:
+            case 34:
                 {
                 alt6=5;
                 }
                 break;
-            case 34:
+            case 35:
                 {
                 alt6=6;
                 }
                 break;
-            case 36:
+            case 37:
                 {
                 alt6=7;
+                }
+                break;
+            case 32:
+                {
+                alt6=8;
                 }
                 break;
             default:
@@ -915,18 +926,18 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalBlockchain.g:319:3: this_ExpresionNumerica_2= ruleExpresionNumerica
+                    // InternalBlockchain.g:319:3: this_ExpresionNumericaInt_2= ruleExpresionNumericaInt
                     {
 
-                    			newCompositeNode(grammarAccess.getExpresionAccess().getExpresionNumericaParserRuleCall_2());
+                    			newCompositeNode(grammarAccess.getExpresionAccess().getExpresionNumericaIntParserRuleCall_2());
                     		
                     pushFollow(FOLLOW_2);
-                    this_ExpresionNumerica_2=ruleExpresionNumerica();
+                    this_ExpresionNumericaInt_2=ruleExpresionNumericaInt();
 
                     state._fsp--;
 
 
-                    			current = this_ExpresionNumerica_2;
+                    			current = this_ExpresionNumericaInt_2;
                     			afterParserOrEnumRuleCall();
                     		
 
@@ -1004,6 +1015,24 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
+                case 8 :
+                    // InternalBlockchain.g:364:3: this_ExpresionNumericaDouble_7= ruleExpresionNumericaDouble
+                    {
+
+                    			newCompositeNode(grammarAccess.getExpresionAccess().getExpresionNumericaDoubleParserRuleCall_7());
+                    		
+                    pushFollow(FOLLOW_2);
+                    this_ExpresionNumericaDouble_7=ruleExpresionNumericaDouble();
+
+                    state._fsp--;
+
+
+                    			current = this_ExpresionNumericaDouble_7;
+                    			afterParserOrEnumRuleCall();
+                    		
+
+                    }
+                    break;
 
             }
 
@@ -1027,7 +1056,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSmartContract"
-    // InternalBlockchain.g:367:1: entryRuleSmartContract returns [EObject current=null] : iv_ruleSmartContract= ruleSmartContract EOF ;
+    // InternalBlockchain.g:376:1: entryRuleSmartContract returns [EObject current=null] : iv_ruleSmartContract= ruleSmartContract EOF ;
     public final EObject entryRuleSmartContract() throws RecognitionException {
         EObject current = null;
 
@@ -1035,8 +1064,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:367:54: (iv_ruleSmartContract= ruleSmartContract EOF )
-            // InternalBlockchain.g:368:2: iv_ruleSmartContract= ruleSmartContract EOF
+            // InternalBlockchain.g:376:54: (iv_ruleSmartContract= ruleSmartContract EOF )
+            // InternalBlockchain.g:377:2: iv_ruleSmartContract= ruleSmartContract EOF
             {
              newCompositeNode(grammarAccess.getSmartContractRule()); 
             pushFollow(FOLLOW_1);
@@ -1063,7 +1092,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSmartContract"
-    // InternalBlockchain.g:374:1: ruleSmartContract returns [EObject current=null] : (otherlv_0= 'SmartContract' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( ( (lv_entidades_3_0= ruleEntidad ) ) ( (lv_entidades_4_0= ruleEntidad ) )* )? ( ( (lv_estado_5_0= ruleEstado ) ) ( (lv_estado_6_0= ruleEstado ) )* )? ( ( (lv_operaciones_7_0= ruleOperacion ) ) ( (lv_operaciones_8_0= ruleOperacion ) )* )? otherlv_9= '}' ) ;
+    // InternalBlockchain.g:383:1: ruleSmartContract returns [EObject current=null] : (otherlv_0= 'SmartContract' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( ( (lv_entidades_3_0= ruleEntidad ) ) ( (lv_entidades_4_0= ruleEntidad ) )* )? ( ( (lv_estado_5_0= ruleEstado ) ) ( (lv_estado_6_0= ruleEstado ) )* )? ( ( (lv_operaciones_7_0= ruleOperacion ) ) ( (lv_operaciones_8_0= ruleOperacion ) )* )? otherlv_9= '}' ) ;
     public final EObject ruleSmartContract() throws RecognitionException {
         EObject current = null;
 
@@ -1089,21 +1118,21 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:380:2: ( (otherlv_0= 'SmartContract' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( ( (lv_entidades_3_0= ruleEntidad ) ) ( (lv_entidades_4_0= ruleEntidad ) )* )? ( ( (lv_estado_5_0= ruleEstado ) ) ( (lv_estado_6_0= ruleEstado ) )* )? ( ( (lv_operaciones_7_0= ruleOperacion ) ) ( (lv_operaciones_8_0= ruleOperacion ) )* )? otherlv_9= '}' ) )
-            // InternalBlockchain.g:381:2: (otherlv_0= 'SmartContract' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( ( (lv_entidades_3_0= ruleEntidad ) ) ( (lv_entidades_4_0= ruleEntidad ) )* )? ( ( (lv_estado_5_0= ruleEstado ) ) ( (lv_estado_6_0= ruleEstado ) )* )? ( ( (lv_operaciones_7_0= ruleOperacion ) ) ( (lv_operaciones_8_0= ruleOperacion ) )* )? otherlv_9= '}' )
+            // InternalBlockchain.g:389:2: ( (otherlv_0= 'SmartContract' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( ( (lv_entidades_3_0= ruleEntidad ) ) ( (lv_entidades_4_0= ruleEntidad ) )* )? ( ( (lv_estado_5_0= ruleEstado ) ) ( (lv_estado_6_0= ruleEstado ) )* )? ( ( (lv_operaciones_7_0= ruleOperacion ) ) ( (lv_operaciones_8_0= ruleOperacion ) )* )? otherlv_9= '}' ) )
+            // InternalBlockchain.g:390:2: (otherlv_0= 'SmartContract' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( ( (lv_entidades_3_0= ruleEntidad ) ) ( (lv_entidades_4_0= ruleEntidad ) )* )? ( ( (lv_estado_5_0= ruleEstado ) ) ( (lv_estado_6_0= ruleEstado ) )* )? ( ( (lv_operaciones_7_0= ruleOperacion ) ) ( (lv_operaciones_8_0= ruleOperacion ) )* )? otherlv_9= '}' )
             {
-            // InternalBlockchain.g:381:2: (otherlv_0= 'SmartContract' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( ( (lv_entidades_3_0= ruleEntidad ) ) ( (lv_entidades_4_0= ruleEntidad ) )* )? ( ( (lv_estado_5_0= ruleEstado ) ) ( (lv_estado_6_0= ruleEstado ) )* )? ( ( (lv_operaciones_7_0= ruleOperacion ) ) ( (lv_operaciones_8_0= ruleOperacion ) )* )? otherlv_9= '}' )
-            // InternalBlockchain.g:382:3: otherlv_0= 'SmartContract' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( ( (lv_entidades_3_0= ruleEntidad ) ) ( (lv_entidades_4_0= ruleEntidad ) )* )? ( ( (lv_estado_5_0= ruleEstado ) ) ( (lv_estado_6_0= ruleEstado ) )* )? ( ( (lv_operaciones_7_0= ruleOperacion ) ) ( (lv_operaciones_8_0= ruleOperacion ) )* )? otherlv_9= '}'
+            // InternalBlockchain.g:390:2: (otherlv_0= 'SmartContract' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( ( (lv_entidades_3_0= ruleEntidad ) ) ( (lv_entidades_4_0= ruleEntidad ) )* )? ( ( (lv_estado_5_0= ruleEstado ) ) ( (lv_estado_6_0= ruleEstado ) )* )? ( ( (lv_operaciones_7_0= ruleOperacion ) ) ( (lv_operaciones_8_0= ruleOperacion ) )* )? otherlv_9= '}' )
+            // InternalBlockchain.g:391:3: otherlv_0= 'SmartContract' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( ( (lv_entidades_3_0= ruleEntidad ) ) ( (lv_entidades_4_0= ruleEntidad ) )* )? ( ( (lv_estado_5_0= ruleEstado ) ) ( (lv_estado_6_0= ruleEstado ) )* )? ( ( (lv_operaciones_7_0= ruleOperacion ) ) ( (lv_operaciones_8_0= ruleOperacion ) )* )? otherlv_9= '}'
             {
             otherlv_0=(Token)match(input,15,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getSmartContractAccess().getSmartContractKeyword_0());
             		
-            // InternalBlockchain.g:386:3: ( (lv_name_1_0= ruleEString ) )
-            // InternalBlockchain.g:387:4: (lv_name_1_0= ruleEString )
+            // InternalBlockchain.g:395:3: ( (lv_name_1_0= ruleEString ) )
+            // InternalBlockchain.g:396:4: (lv_name_1_0= ruleEString )
             {
-            // InternalBlockchain.g:387:4: (lv_name_1_0= ruleEString )
-            // InternalBlockchain.g:388:5: lv_name_1_0= ruleEString
+            // InternalBlockchain.g:396:4: (lv_name_1_0= ruleEString )
+            // InternalBlockchain.g:397:5: lv_name_1_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getSmartContractAccess().getNameEStringParserRuleCall_1_0());
@@ -1134,7 +1163,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getSmartContractAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalBlockchain.g:409:3: ( ( (lv_entidades_3_0= ruleEntidad ) ) ( (lv_entidades_4_0= ruleEntidad ) )* )?
+            // InternalBlockchain.g:418:3: ( ( (lv_entidades_3_0= ruleEntidad ) ) ( (lv_entidades_4_0= ruleEntidad ) )* )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1143,13 +1172,13 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
             }
             switch (alt8) {
                 case 1 :
-                    // InternalBlockchain.g:410:4: ( (lv_entidades_3_0= ruleEntidad ) ) ( (lv_entidades_4_0= ruleEntidad ) )*
+                    // InternalBlockchain.g:419:4: ( (lv_entidades_3_0= ruleEntidad ) ) ( (lv_entidades_4_0= ruleEntidad ) )*
                     {
-                    // InternalBlockchain.g:410:4: ( (lv_entidades_3_0= ruleEntidad ) )
-                    // InternalBlockchain.g:411:5: (lv_entidades_3_0= ruleEntidad )
+                    // InternalBlockchain.g:419:4: ( (lv_entidades_3_0= ruleEntidad ) )
+                    // InternalBlockchain.g:420:5: (lv_entidades_3_0= ruleEntidad )
                     {
-                    // InternalBlockchain.g:411:5: (lv_entidades_3_0= ruleEntidad )
-                    // InternalBlockchain.g:412:6: lv_entidades_3_0= ruleEntidad
+                    // InternalBlockchain.g:420:5: (lv_entidades_3_0= ruleEntidad )
+                    // InternalBlockchain.g:421:6: lv_entidades_3_0= ruleEntidad
                     {
 
                     						newCompositeNode(grammarAccess.getSmartContractAccess().getEntidadesEntidadParserRuleCall_3_0_0());
@@ -1176,7 +1205,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalBlockchain.g:429:4: ( (lv_entidades_4_0= ruleEntidad ) )*
+                    // InternalBlockchain.g:438:4: ( (lv_entidades_4_0= ruleEntidad ) )*
                     loop7:
                     do {
                         int alt7=2;
@@ -1189,10 +1218,10 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // InternalBlockchain.g:430:5: (lv_entidades_4_0= ruleEntidad )
+                    	    // InternalBlockchain.g:439:5: (lv_entidades_4_0= ruleEntidad )
                     	    {
-                    	    // InternalBlockchain.g:430:5: (lv_entidades_4_0= ruleEntidad )
-                    	    // InternalBlockchain.g:431:6: lv_entidades_4_0= ruleEntidad
+                    	    // InternalBlockchain.g:439:5: (lv_entidades_4_0= ruleEntidad )
+                    	    // InternalBlockchain.g:440:6: lv_entidades_4_0= ruleEntidad
                     	    {
 
                     	    						newCompositeNode(grammarAccess.getSmartContractAccess().getEntidadesEntidadParserRuleCall_3_1_0());
@@ -1231,7 +1260,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBlockchain.g:449:3: ( ( (lv_estado_5_0= ruleEstado ) ) ( (lv_estado_6_0= ruleEstado ) )* )?
+            // InternalBlockchain.g:458:3: ( ( (lv_estado_5_0= ruleEstado ) ) ( (lv_estado_6_0= ruleEstado ) )* )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1240,13 +1269,13 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalBlockchain.g:450:4: ( (lv_estado_5_0= ruleEstado ) ) ( (lv_estado_6_0= ruleEstado ) )*
+                    // InternalBlockchain.g:459:4: ( (lv_estado_5_0= ruleEstado ) ) ( (lv_estado_6_0= ruleEstado ) )*
                     {
-                    // InternalBlockchain.g:450:4: ( (lv_estado_5_0= ruleEstado ) )
-                    // InternalBlockchain.g:451:5: (lv_estado_5_0= ruleEstado )
+                    // InternalBlockchain.g:459:4: ( (lv_estado_5_0= ruleEstado ) )
+                    // InternalBlockchain.g:460:5: (lv_estado_5_0= ruleEstado )
                     {
-                    // InternalBlockchain.g:451:5: (lv_estado_5_0= ruleEstado )
-                    // InternalBlockchain.g:452:6: lv_estado_5_0= ruleEstado
+                    // InternalBlockchain.g:460:5: (lv_estado_5_0= ruleEstado )
+                    // InternalBlockchain.g:461:6: lv_estado_5_0= ruleEstado
                     {
 
                     						newCompositeNode(grammarAccess.getSmartContractAccess().getEstadoEstadoParserRuleCall_4_0_0());
@@ -1273,7 +1302,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalBlockchain.g:469:4: ( (lv_estado_6_0= ruleEstado ) )*
+                    // InternalBlockchain.g:478:4: ( (lv_estado_6_0= ruleEstado ) )*
                     loop9:
                     do {
                         int alt9=2;
@@ -1286,10 +1315,10 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // InternalBlockchain.g:470:5: (lv_estado_6_0= ruleEstado )
+                    	    // InternalBlockchain.g:479:5: (lv_estado_6_0= ruleEstado )
                     	    {
-                    	    // InternalBlockchain.g:470:5: (lv_estado_6_0= ruleEstado )
-                    	    // InternalBlockchain.g:471:6: lv_estado_6_0= ruleEstado
+                    	    // InternalBlockchain.g:479:5: (lv_estado_6_0= ruleEstado )
+                    	    // InternalBlockchain.g:480:6: lv_estado_6_0= ruleEstado
                     	    {
 
                     	    						newCompositeNode(grammarAccess.getSmartContractAccess().getEstadoEstadoParserRuleCall_4_1_0());
@@ -1328,7 +1357,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBlockchain.g:489:3: ( ( (lv_operaciones_7_0= ruleOperacion ) ) ( (lv_operaciones_8_0= ruleOperacion ) )* )?
+            // InternalBlockchain.g:498:3: ( ( (lv_operaciones_7_0= ruleOperacion ) ) ( (lv_operaciones_8_0= ruleOperacion ) )* )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1337,13 +1366,13 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
             }
             switch (alt12) {
                 case 1 :
-                    // InternalBlockchain.g:490:4: ( (lv_operaciones_7_0= ruleOperacion ) ) ( (lv_operaciones_8_0= ruleOperacion ) )*
+                    // InternalBlockchain.g:499:4: ( (lv_operaciones_7_0= ruleOperacion ) ) ( (lv_operaciones_8_0= ruleOperacion ) )*
                     {
-                    // InternalBlockchain.g:490:4: ( (lv_operaciones_7_0= ruleOperacion ) )
-                    // InternalBlockchain.g:491:5: (lv_operaciones_7_0= ruleOperacion )
+                    // InternalBlockchain.g:499:4: ( (lv_operaciones_7_0= ruleOperacion ) )
+                    // InternalBlockchain.g:500:5: (lv_operaciones_7_0= ruleOperacion )
                     {
-                    // InternalBlockchain.g:491:5: (lv_operaciones_7_0= ruleOperacion )
-                    // InternalBlockchain.g:492:6: lv_operaciones_7_0= ruleOperacion
+                    // InternalBlockchain.g:500:5: (lv_operaciones_7_0= ruleOperacion )
+                    // InternalBlockchain.g:501:6: lv_operaciones_7_0= ruleOperacion
                     {
 
                     						newCompositeNode(grammarAccess.getSmartContractAccess().getOperacionesOperacionParserRuleCall_5_0_0());
@@ -1370,7 +1399,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalBlockchain.g:509:4: ( (lv_operaciones_8_0= ruleOperacion ) )*
+                    // InternalBlockchain.g:518:4: ( (lv_operaciones_8_0= ruleOperacion ) )*
                     loop11:
                     do {
                         int alt11=2;
@@ -1383,10 +1412,10 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                         switch (alt11) {
                     	case 1 :
-                    	    // InternalBlockchain.g:510:5: (lv_operaciones_8_0= ruleOperacion )
+                    	    // InternalBlockchain.g:519:5: (lv_operaciones_8_0= ruleOperacion )
                     	    {
-                    	    // InternalBlockchain.g:510:5: (lv_operaciones_8_0= ruleOperacion )
-                    	    // InternalBlockchain.g:511:6: lv_operaciones_8_0= ruleOperacion
+                    	    // InternalBlockchain.g:519:5: (lv_operaciones_8_0= ruleOperacion )
+                    	    // InternalBlockchain.g:520:6: lv_operaciones_8_0= ruleOperacion
                     	    {
 
                     	    						newCompositeNode(grammarAccess.getSmartContractAccess().getOperacionesOperacionParserRuleCall_5_1_0());
@@ -1452,7 +1481,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEString"
-    // InternalBlockchain.g:537:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
+    // InternalBlockchain.g:546:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
     public final String entryRuleEString() throws RecognitionException {
         String current = null;
 
@@ -1460,8 +1489,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:537:47: (iv_ruleEString= ruleEString EOF )
-            // InternalBlockchain.g:538:2: iv_ruleEString= ruleEString EOF
+            // InternalBlockchain.g:546:47: (iv_ruleEString= ruleEString EOF )
+            // InternalBlockchain.g:547:2: iv_ruleEString= ruleEString EOF
             {
              newCompositeNode(grammarAccess.getEStringRule()); 
             pushFollow(FOLLOW_1);
@@ -1488,7 +1517,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEString"
-    // InternalBlockchain.g:544:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
+    // InternalBlockchain.g:553:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
     public final AntlrDatatypeRuleToken ruleEString() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1499,10 +1528,10 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:550:2: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
-            // InternalBlockchain.g:551:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            // InternalBlockchain.g:559:2: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
+            // InternalBlockchain.g:560:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
             {
-            // InternalBlockchain.g:551:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            // InternalBlockchain.g:560:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -1520,7 +1549,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
             }
             switch (alt13) {
                 case 1 :
-                    // InternalBlockchain.g:552:3: this_STRING_0= RULE_STRING
+                    // InternalBlockchain.g:561:3: this_STRING_0= RULE_STRING
                     {
                     this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
@@ -1533,7 +1562,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBlockchain.g:560:3: this_ID_1= RULE_ID
+                    // InternalBlockchain.g:569:3: this_ID_1= RULE_ID
                     {
                     this_ID_1=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -1568,7 +1597,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEntidad"
-    // InternalBlockchain.g:571:1: entryRuleEntidad returns [EObject current=null] : iv_ruleEntidad= ruleEntidad EOF ;
+    // InternalBlockchain.g:580:1: entryRuleEntidad returns [EObject current=null] : iv_ruleEntidad= ruleEntidad EOF ;
     public final EObject entryRuleEntidad() throws RecognitionException {
         EObject current = null;
 
@@ -1576,8 +1605,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:571:48: (iv_ruleEntidad= ruleEntidad EOF )
-            // InternalBlockchain.g:572:2: iv_ruleEntidad= ruleEntidad EOF
+            // InternalBlockchain.g:580:48: (iv_ruleEntidad= ruleEntidad EOF )
+            // InternalBlockchain.g:581:2: iv_ruleEntidad= ruleEntidad EOF
             {
              newCompositeNode(grammarAccess.getEntidadRule()); 
             pushFollow(FOLLOW_1);
@@ -1604,7 +1633,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEntidad"
-    // InternalBlockchain.g:578:1: ruleEntidad returns [EObject current=null] : ( () otherlv_1= 'Entidad' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' ( ( (lv_atributos_4_0= ruleAtributo ) ) ( (lv_atributos_5_0= ruleAtributo ) )* )? otherlv_6= '}' ) ;
+    // InternalBlockchain.g:587:1: ruleEntidad returns [EObject current=null] : ( () otherlv_1= 'Entidad' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' ( ( (lv_atributos_4_0= ruleAtributo ) ) ( (lv_atributos_5_0= ruleAtributo ) )* )? otherlv_6= '}' ) ;
     public final EObject ruleEntidad() throws RecognitionException {
         EObject current = null;
 
@@ -1622,14 +1651,14 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:584:2: ( ( () otherlv_1= 'Entidad' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' ( ( (lv_atributos_4_0= ruleAtributo ) ) ( (lv_atributos_5_0= ruleAtributo ) )* )? otherlv_6= '}' ) )
-            // InternalBlockchain.g:585:2: ( () otherlv_1= 'Entidad' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' ( ( (lv_atributos_4_0= ruleAtributo ) ) ( (lv_atributos_5_0= ruleAtributo ) )* )? otherlv_6= '}' )
+            // InternalBlockchain.g:593:2: ( ( () otherlv_1= 'Entidad' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' ( ( (lv_atributos_4_0= ruleAtributo ) ) ( (lv_atributos_5_0= ruleAtributo ) )* )? otherlv_6= '}' ) )
+            // InternalBlockchain.g:594:2: ( () otherlv_1= 'Entidad' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' ( ( (lv_atributos_4_0= ruleAtributo ) ) ( (lv_atributos_5_0= ruleAtributo ) )* )? otherlv_6= '}' )
             {
-            // InternalBlockchain.g:585:2: ( () otherlv_1= 'Entidad' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' ( ( (lv_atributos_4_0= ruleAtributo ) ) ( (lv_atributos_5_0= ruleAtributo ) )* )? otherlv_6= '}' )
-            // InternalBlockchain.g:586:3: () otherlv_1= 'Entidad' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' ( ( (lv_atributos_4_0= ruleAtributo ) ) ( (lv_atributos_5_0= ruleAtributo ) )* )? otherlv_6= '}'
+            // InternalBlockchain.g:594:2: ( () otherlv_1= 'Entidad' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' ( ( (lv_atributos_4_0= ruleAtributo ) ) ( (lv_atributos_5_0= ruleAtributo ) )* )? otherlv_6= '}' )
+            // InternalBlockchain.g:595:3: () otherlv_1= 'Entidad' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' ( ( (lv_atributos_4_0= ruleAtributo ) ) ( (lv_atributos_5_0= ruleAtributo ) )* )? otherlv_6= '}'
             {
-            // InternalBlockchain.g:586:3: ()
-            // InternalBlockchain.g:587:4: 
+            // InternalBlockchain.g:595:3: ()
+            // InternalBlockchain.g:596:4: 
             {
 
             				current = forceCreateModelElement(
@@ -1643,11 +1672,11 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getEntidadAccess().getEntidadKeyword_1());
             		
-            // InternalBlockchain.g:597:3: ( (lv_name_2_0= ruleEString ) )
-            // InternalBlockchain.g:598:4: (lv_name_2_0= ruleEString )
+            // InternalBlockchain.g:606:3: ( (lv_name_2_0= ruleEString ) )
+            // InternalBlockchain.g:607:4: (lv_name_2_0= ruleEString )
             {
-            // InternalBlockchain.g:598:4: (lv_name_2_0= ruleEString )
-            // InternalBlockchain.g:599:5: lv_name_2_0= ruleEString
+            // InternalBlockchain.g:607:4: (lv_name_2_0= ruleEString )
+            // InternalBlockchain.g:608:5: lv_name_2_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getEntidadAccess().getNameEStringParserRuleCall_2_0());
@@ -1678,7 +1707,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_3, grammarAccess.getEntidadAccess().getLeftCurlyBracketKeyword_3());
             		
-            // InternalBlockchain.g:620:3: ( ( (lv_atributos_4_0= ruleAtributo ) ) ( (lv_atributos_5_0= ruleAtributo ) )* )?
+            // InternalBlockchain.g:629:3: ( ( (lv_atributos_4_0= ruleAtributo ) ) ( (lv_atributos_5_0= ruleAtributo ) )* )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -1687,13 +1716,13 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
             }
             switch (alt15) {
                 case 1 :
-                    // InternalBlockchain.g:621:4: ( (lv_atributos_4_0= ruleAtributo ) ) ( (lv_atributos_5_0= ruleAtributo ) )*
+                    // InternalBlockchain.g:630:4: ( (lv_atributos_4_0= ruleAtributo ) ) ( (lv_atributos_5_0= ruleAtributo ) )*
                     {
-                    // InternalBlockchain.g:621:4: ( (lv_atributos_4_0= ruleAtributo ) )
-                    // InternalBlockchain.g:622:5: (lv_atributos_4_0= ruleAtributo )
+                    // InternalBlockchain.g:630:4: ( (lv_atributos_4_0= ruleAtributo ) )
+                    // InternalBlockchain.g:631:5: (lv_atributos_4_0= ruleAtributo )
                     {
-                    // InternalBlockchain.g:622:5: (lv_atributos_4_0= ruleAtributo )
-                    // InternalBlockchain.g:623:6: lv_atributos_4_0= ruleAtributo
+                    // InternalBlockchain.g:631:5: (lv_atributos_4_0= ruleAtributo )
+                    // InternalBlockchain.g:632:6: lv_atributos_4_0= ruleAtributo
                     {
 
                     						newCompositeNode(grammarAccess.getEntidadAccess().getAtributosAtributoParserRuleCall_4_0_0());
@@ -1720,7 +1749,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalBlockchain.g:640:4: ( (lv_atributos_5_0= ruleAtributo ) )*
+                    // InternalBlockchain.g:649:4: ( (lv_atributos_5_0= ruleAtributo ) )*
                     loop14:
                     do {
                         int alt14=2;
@@ -1733,10 +1762,10 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                         switch (alt14) {
                     	case 1 :
-                    	    // InternalBlockchain.g:641:5: (lv_atributos_5_0= ruleAtributo )
+                    	    // InternalBlockchain.g:650:5: (lv_atributos_5_0= ruleAtributo )
                     	    {
-                    	    // InternalBlockchain.g:641:5: (lv_atributos_5_0= ruleAtributo )
-                    	    // InternalBlockchain.g:642:6: lv_atributos_5_0= ruleAtributo
+                    	    // InternalBlockchain.g:650:5: (lv_atributos_5_0= ruleAtributo )
+                    	    // InternalBlockchain.g:651:6: lv_atributos_5_0= ruleAtributo
                     	    {
 
                     	    						newCompositeNode(grammarAccess.getEntidadAccess().getAtributosAtributoParserRuleCall_4_1_0());
@@ -1802,7 +1831,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOperacion"
-    // InternalBlockchain.g:668:1: entryRuleOperacion returns [EObject current=null] : iv_ruleOperacion= ruleOperacion EOF ;
+    // InternalBlockchain.g:677:1: entryRuleOperacion returns [EObject current=null] : iv_ruleOperacion= ruleOperacion EOF ;
     public final EObject entryRuleOperacion() throws RecognitionException {
         EObject current = null;
 
@@ -1810,8 +1839,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:668:50: (iv_ruleOperacion= ruleOperacion EOF )
-            // InternalBlockchain.g:669:2: iv_ruleOperacion= ruleOperacion EOF
+            // InternalBlockchain.g:677:50: (iv_ruleOperacion= ruleOperacion EOF )
+            // InternalBlockchain.g:678:2: iv_ruleOperacion= ruleOperacion EOF
             {
              newCompositeNode(grammarAccess.getOperacionRule()); 
             pushFollow(FOLLOW_1);
@@ -1838,7 +1867,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOperacion"
-    // InternalBlockchain.g:675:1: ruleOperacion returns [EObject current=null] : (otherlv_0= 'Operacion' (otherlv_1= 'isUd=' ( (lv_esUserDefined_2_0= ruleEBoolean ) ) )? ( (lv_name_3_0= ruleEString ) ) otherlv_4= '(' ( ( (lv_parametros_5_0= ruleParametro ) ) (otherlv_6= ',' ( (lv_parametros_7_0= ruleParametro ) ) )* )? otherlv_8= ')' (otherlv_9= ':' ( ( ruleEString ) ) )? otherlv_11= '{' (otherlv_12= '(' )* ( (lv_lineas_13_0= ruleLinea ) )* (otherlv_14= ')' )* otherlv_15= '}' ) ;
+    // InternalBlockchain.g:684:1: ruleOperacion returns [EObject current=null] : (otherlv_0= 'Operacion' (otherlv_1= 'isUd=' ( (lv_esUserDefined_2_0= ruleEBoolean ) ) )? ( (lv_name_3_0= ruleEString ) ) otherlv_4= '(' ( ( (lv_parametros_5_0= ruleParametro ) ) (otherlv_6= ',' ( (lv_parametros_7_0= ruleParametro ) ) )* )? otherlv_8= ')' (otherlv_9= ':' ( ( ruleEString ) ) )? otherlv_11= '{' (otherlv_12= '(' )* ( (lv_lineas_13_0= ruleLinea ) )* (otherlv_14= ')' )* otherlv_15= '}' ) ;
     public final EObject ruleOperacion() throws RecognitionException {
         EObject current = null;
 
@@ -1867,17 +1896,17 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:681:2: ( (otherlv_0= 'Operacion' (otherlv_1= 'isUd=' ( (lv_esUserDefined_2_0= ruleEBoolean ) ) )? ( (lv_name_3_0= ruleEString ) ) otherlv_4= '(' ( ( (lv_parametros_5_0= ruleParametro ) ) (otherlv_6= ',' ( (lv_parametros_7_0= ruleParametro ) ) )* )? otherlv_8= ')' (otherlv_9= ':' ( ( ruleEString ) ) )? otherlv_11= '{' (otherlv_12= '(' )* ( (lv_lineas_13_0= ruleLinea ) )* (otherlv_14= ')' )* otherlv_15= '}' ) )
-            // InternalBlockchain.g:682:2: (otherlv_0= 'Operacion' (otherlv_1= 'isUd=' ( (lv_esUserDefined_2_0= ruleEBoolean ) ) )? ( (lv_name_3_0= ruleEString ) ) otherlv_4= '(' ( ( (lv_parametros_5_0= ruleParametro ) ) (otherlv_6= ',' ( (lv_parametros_7_0= ruleParametro ) ) )* )? otherlv_8= ')' (otherlv_9= ':' ( ( ruleEString ) ) )? otherlv_11= '{' (otherlv_12= '(' )* ( (lv_lineas_13_0= ruleLinea ) )* (otherlv_14= ')' )* otherlv_15= '}' )
+            // InternalBlockchain.g:690:2: ( (otherlv_0= 'Operacion' (otherlv_1= 'isUd=' ( (lv_esUserDefined_2_0= ruleEBoolean ) ) )? ( (lv_name_3_0= ruleEString ) ) otherlv_4= '(' ( ( (lv_parametros_5_0= ruleParametro ) ) (otherlv_6= ',' ( (lv_parametros_7_0= ruleParametro ) ) )* )? otherlv_8= ')' (otherlv_9= ':' ( ( ruleEString ) ) )? otherlv_11= '{' (otherlv_12= '(' )* ( (lv_lineas_13_0= ruleLinea ) )* (otherlv_14= ')' )* otherlv_15= '}' ) )
+            // InternalBlockchain.g:691:2: (otherlv_0= 'Operacion' (otherlv_1= 'isUd=' ( (lv_esUserDefined_2_0= ruleEBoolean ) ) )? ( (lv_name_3_0= ruleEString ) ) otherlv_4= '(' ( ( (lv_parametros_5_0= ruleParametro ) ) (otherlv_6= ',' ( (lv_parametros_7_0= ruleParametro ) ) )* )? otherlv_8= ')' (otherlv_9= ':' ( ( ruleEString ) ) )? otherlv_11= '{' (otherlv_12= '(' )* ( (lv_lineas_13_0= ruleLinea ) )* (otherlv_14= ')' )* otherlv_15= '}' )
             {
-            // InternalBlockchain.g:682:2: (otherlv_0= 'Operacion' (otherlv_1= 'isUd=' ( (lv_esUserDefined_2_0= ruleEBoolean ) ) )? ( (lv_name_3_0= ruleEString ) ) otherlv_4= '(' ( ( (lv_parametros_5_0= ruleParametro ) ) (otherlv_6= ',' ( (lv_parametros_7_0= ruleParametro ) ) )* )? otherlv_8= ')' (otherlv_9= ':' ( ( ruleEString ) ) )? otherlv_11= '{' (otherlv_12= '(' )* ( (lv_lineas_13_0= ruleLinea ) )* (otherlv_14= ')' )* otherlv_15= '}' )
-            // InternalBlockchain.g:683:3: otherlv_0= 'Operacion' (otherlv_1= 'isUd=' ( (lv_esUserDefined_2_0= ruleEBoolean ) ) )? ( (lv_name_3_0= ruleEString ) ) otherlv_4= '(' ( ( (lv_parametros_5_0= ruleParametro ) ) (otherlv_6= ',' ( (lv_parametros_7_0= ruleParametro ) ) )* )? otherlv_8= ')' (otherlv_9= ':' ( ( ruleEString ) ) )? otherlv_11= '{' (otherlv_12= '(' )* ( (lv_lineas_13_0= ruleLinea ) )* (otherlv_14= ')' )* otherlv_15= '}'
+            // InternalBlockchain.g:691:2: (otherlv_0= 'Operacion' (otherlv_1= 'isUd=' ( (lv_esUserDefined_2_0= ruleEBoolean ) ) )? ( (lv_name_3_0= ruleEString ) ) otherlv_4= '(' ( ( (lv_parametros_5_0= ruleParametro ) ) (otherlv_6= ',' ( (lv_parametros_7_0= ruleParametro ) ) )* )? otherlv_8= ')' (otherlv_9= ':' ( ( ruleEString ) ) )? otherlv_11= '{' (otherlv_12= '(' )* ( (lv_lineas_13_0= ruleLinea ) )* (otherlv_14= ')' )* otherlv_15= '}' )
+            // InternalBlockchain.g:692:3: otherlv_0= 'Operacion' (otherlv_1= 'isUd=' ( (lv_esUserDefined_2_0= ruleEBoolean ) ) )? ( (lv_name_3_0= ruleEString ) ) otherlv_4= '(' ( ( (lv_parametros_5_0= ruleParametro ) ) (otherlv_6= ',' ( (lv_parametros_7_0= ruleParametro ) ) )* )? otherlv_8= ')' (otherlv_9= ':' ( ( ruleEString ) ) )? otherlv_11= '{' (otherlv_12= '(' )* ( (lv_lineas_13_0= ruleLinea ) )* (otherlv_14= ')' )* otherlv_15= '}'
             {
             otherlv_0=(Token)match(input,17,FOLLOW_12); 
 
             			newLeafNode(otherlv_0, grammarAccess.getOperacionAccess().getOperacionKeyword_0());
             		
-            // InternalBlockchain.g:687:3: (otherlv_1= 'isUd=' ( (lv_esUserDefined_2_0= ruleEBoolean ) ) )?
+            // InternalBlockchain.g:696:3: (otherlv_1= 'isUd=' ( (lv_esUserDefined_2_0= ruleEBoolean ) ) )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -1886,17 +1915,17 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
             }
             switch (alt16) {
                 case 1 :
-                    // InternalBlockchain.g:688:4: otherlv_1= 'isUd=' ( (lv_esUserDefined_2_0= ruleEBoolean ) )
+                    // InternalBlockchain.g:697:4: otherlv_1= 'isUd=' ( (lv_esUserDefined_2_0= ruleEBoolean ) )
                     {
                     otherlv_1=(Token)match(input,18,FOLLOW_13); 
 
                     				newLeafNode(otherlv_1, grammarAccess.getOperacionAccess().getIsUdKeyword_1_0());
                     			
-                    // InternalBlockchain.g:692:4: ( (lv_esUserDefined_2_0= ruleEBoolean ) )
-                    // InternalBlockchain.g:693:5: (lv_esUserDefined_2_0= ruleEBoolean )
+                    // InternalBlockchain.g:701:4: ( (lv_esUserDefined_2_0= ruleEBoolean ) )
+                    // InternalBlockchain.g:702:5: (lv_esUserDefined_2_0= ruleEBoolean )
                     {
-                    // InternalBlockchain.g:693:5: (lv_esUserDefined_2_0= ruleEBoolean )
-                    // InternalBlockchain.g:694:6: lv_esUserDefined_2_0= ruleEBoolean
+                    // InternalBlockchain.g:702:5: (lv_esUserDefined_2_0= ruleEBoolean )
+                    // InternalBlockchain.g:703:6: lv_esUserDefined_2_0= ruleEBoolean
                     {
 
                     						newCompositeNode(grammarAccess.getOperacionAccess().getEsUserDefinedEBooleanParserRuleCall_1_1_0());
@@ -1929,11 +1958,11 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBlockchain.g:712:3: ( (lv_name_3_0= ruleEString ) )
-            // InternalBlockchain.g:713:4: (lv_name_3_0= ruleEString )
+            // InternalBlockchain.g:721:3: ( (lv_name_3_0= ruleEString ) )
+            // InternalBlockchain.g:722:4: (lv_name_3_0= ruleEString )
             {
-            // InternalBlockchain.g:713:4: (lv_name_3_0= ruleEString )
-            // InternalBlockchain.g:714:5: lv_name_3_0= ruleEString
+            // InternalBlockchain.g:722:4: (lv_name_3_0= ruleEString )
+            // InternalBlockchain.g:723:5: lv_name_3_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getOperacionAccess().getNameEStringParserRuleCall_2_0());
@@ -1964,7 +1993,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_4, grammarAccess.getOperacionAccess().getLeftParenthesisKeyword_3());
             		
-            // InternalBlockchain.g:735:3: ( ( (lv_parametros_5_0= ruleParametro ) ) (otherlv_6= ',' ( (lv_parametros_7_0= ruleParametro ) ) )* )?
+            // InternalBlockchain.g:744:3: ( ( (lv_parametros_5_0= ruleParametro ) ) (otherlv_6= ',' ( (lv_parametros_7_0= ruleParametro ) ) )* )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -1973,13 +2002,13 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
             }
             switch (alt18) {
                 case 1 :
-                    // InternalBlockchain.g:736:4: ( (lv_parametros_5_0= ruleParametro ) ) (otherlv_6= ',' ( (lv_parametros_7_0= ruleParametro ) ) )*
+                    // InternalBlockchain.g:745:4: ( (lv_parametros_5_0= ruleParametro ) ) (otherlv_6= ',' ( (lv_parametros_7_0= ruleParametro ) ) )*
                     {
-                    // InternalBlockchain.g:736:4: ( (lv_parametros_5_0= ruleParametro ) )
-                    // InternalBlockchain.g:737:5: (lv_parametros_5_0= ruleParametro )
+                    // InternalBlockchain.g:745:4: ( (lv_parametros_5_0= ruleParametro ) )
+                    // InternalBlockchain.g:746:5: (lv_parametros_5_0= ruleParametro )
                     {
-                    // InternalBlockchain.g:737:5: (lv_parametros_5_0= ruleParametro )
-                    // InternalBlockchain.g:738:6: lv_parametros_5_0= ruleParametro
+                    // InternalBlockchain.g:746:5: (lv_parametros_5_0= ruleParametro )
+                    // InternalBlockchain.g:747:6: lv_parametros_5_0= ruleParametro
                     {
 
                     						newCompositeNode(grammarAccess.getOperacionAccess().getParametrosParametroParserRuleCall_4_0_0());
@@ -2006,7 +2035,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalBlockchain.g:755:4: (otherlv_6= ',' ( (lv_parametros_7_0= ruleParametro ) ) )*
+                    // InternalBlockchain.g:764:4: (otherlv_6= ',' ( (lv_parametros_7_0= ruleParametro ) ) )*
                     loop17:
                     do {
                         int alt17=2;
@@ -2019,17 +2048,17 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                         switch (alt17) {
                     	case 1 :
-                    	    // InternalBlockchain.g:756:5: otherlv_6= ',' ( (lv_parametros_7_0= ruleParametro ) )
+                    	    // InternalBlockchain.g:765:5: otherlv_6= ',' ( (lv_parametros_7_0= ruleParametro ) )
                     	    {
                     	    otherlv_6=(Token)match(input,20,FOLLOW_3); 
 
                     	    					newLeafNode(otherlv_6, grammarAccess.getOperacionAccess().getCommaKeyword_4_1_0());
                     	    				
-                    	    // InternalBlockchain.g:760:5: ( (lv_parametros_7_0= ruleParametro ) )
-                    	    // InternalBlockchain.g:761:6: (lv_parametros_7_0= ruleParametro )
+                    	    // InternalBlockchain.g:769:5: ( (lv_parametros_7_0= ruleParametro ) )
+                    	    // InternalBlockchain.g:770:6: (lv_parametros_7_0= ruleParametro )
                     	    {
-                    	    // InternalBlockchain.g:761:6: (lv_parametros_7_0= ruleParametro )
-                    	    // InternalBlockchain.g:762:7: lv_parametros_7_0= ruleParametro
+                    	    // InternalBlockchain.g:770:6: (lv_parametros_7_0= ruleParametro )
+                    	    // InternalBlockchain.g:771:7: lv_parametros_7_0= ruleParametro
                     	    {
 
                     	    							newCompositeNode(grammarAccess.getOperacionAccess().getParametrosParametroParserRuleCall_4_1_1_0());
@@ -2075,7 +2104,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_8, grammarAccess.getOperacionAccess().getRightParenthesisKeyword_5());
             		
-            // InternalBlockchain.g:785:3: (otherlv_9= ':' ( ( ruleEString ) ) )?
+            // InternalBlockchain.g:794:3: (otherlv_9= ':' ( ( ruleEString ) ) )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -2084,17 +2113,17 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
             }
             switch (alt19) {
                 case 1 :
-                    // InternalBlockchain.g:786:4: otherlv_9= ':' ( ( ruleEString ) )
+                    // InternalBlockchain.g:795:4: otherlv_9= ':' ( ( ruleEString ) )
                     {
                     otherlv_9=(Token)match(input,22,FOLLOW_3); 
 
                     				newLeafNode(otherlv_9, grammarAccess.getOperacionAccess().getColonKeyword_6_0());
                     			
-                    // InternalBlockchain.g:790:4: ( ( ruleEString ) )
-                    // InternalBlockchain.g:791:5: ( ruleEString )
+                    // InternalBlockchain.g:799:4: ( ( ruleEString ) )
+                    // InternalBlockchain.g:800:5: ( ruleEString )
                     {
-                    // InternalBlockchain.g:791:5: ( ruleEString )
-                    // InternalBlockchain.g:792:6: ruleEString
+                    // InternalBlockchain.g:800:5: ( ruleEString )
+                    // InternalBlockchain.g:801:6: ruleEString
                     {
 
                     						if (current==null) {
@@ -2128,7 +2157,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_11, grammarAccess.getOperacionAccess().getLeftCurlyBracketKeyword_7());
             		
-            // InternalBlockchain.g:811:3: (otherlv_12= '(' )*
+            // InternalBlockchain.g:820:3: (otherlv_12= '(' )*
             loop20:
             do {
                 int alt20=2;
@@ -2141,7 +2170,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                 switch (alt20) {
             	case 1 :
-            	    // InternalBlockchain.g:812:4: otherlv_12= '('
+            	    // InternalBlockchain.g:821:4: otherlv_12= '('
             	    {
             	    otherlv_12=(Token)match(input,19,FOLLOW_18); 
 
@@ -2156,23 +2185,23 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalBlockchain.g:817:3: ( (lv_lineas_13_0= ruleLinea ) )*
+            // InternalBlockchain.g:826:3: ( (lv_lineas_13_0= ruleLinea ) )*
             loop21:
             do {
                 int alt21=2;
                 int LA21_0 = input.LA(1);
 
-                if ( ((LA21_0>=26 && LA21_0<=29)||(LA21_0>=31 && LA21_0<=34)||(LA21_0>=36 && LA21_0<=37)) ) {
+                if ( ((LA21_0>=26 && LA21_0<=29)||(LA21_0>=31 && LA21_0<=35)||(LA21_0>=37 && LA21_0<=38)) ) {
                     alt21=1;
                 }
 
 
                 switch (alt21) {
             	case 1 :
-            	    // InternalBlockchain.g:818:4: (lv_lineas_13_0= ruleLinea )
+            	    // InternalBlockchain.g:827:4: (lv_lineas_13_0= ruleLinea )
             	    {
-            	    // InternalBlockchain.g:818:4: (lv_lineas_13_0= ruleLinea )
-            	    // InternalBlockchain.g:819:5: lv_lineas_13_0= ruleLinea
+            	    // InternalBlockchain.g:827:4: (lv_lineas_13_0= ruleLinea )
+            	    // InternalBlockchain.g:828:5: lv_lineas_13_0= ruleLinea
             	    {
 
             	    					newCompositeNode(grammarAccess.getOperacionAccess().getLineasLineaParserRuleCall_9_0());
@@ -2205,7 +2234,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalBlockchain.g:836:3: (otherlv_14= ')' )*
+            // InternalBlockchain.g:845:3: (otherlv_14= ')' )*
             loop22:
             do {
                 int alt22=2;
@@ -2218,7 +2247,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                 switch (alt22) {
             	case 1 :
-            	    // InternalBlockchain.g:837:4: otherlv_14= ')'
+            	    // InternalBlockchain.g:846:4: otherlv_14= ')'
             	    {
             	    otherlv_14=(Token)match(input,21,FOLLOW_20); 
 
@@ -2260,7 +2289,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEstado"
-    // InternalBlockchain.g:850:1: entryRuleEstado returns [EObject current=null] : iv_ruleEstado= ruleEstado EOF ;
+    // InternalBlockchain.g:859:1: entryRuleEstado returns [EObject current=null] : iv_ruleEstado= ruleEstado EOF ;
     public final EObject entryRuleEstado() throws RecognitionException {
         EObject current = null;
 
@@ -2268,8 +2297,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:850:47: (iv_ruleEstado= ruleEstado EOF )
-            // InternalBlockchain.g:851:2: iv_ruleEstado= ruleEstado EOF
+            // InternalBlockchain.g:859:47: (iv_ruleEstado= ruleEstado EOF )
+            // InternalBlockchain.g:860:2: iv_ruleEstado= ruleEstado EOF
             {
              newCompositeNode(grammarAccess.getEstadoRule()); 
             pushFollow(FOLLOW_1);
@@ -2296,7 +2325,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEstado"
-    // InternalBlockchain.g:857:1: ruleEstado returns [EObject current=null] : (otherlv_0= 'Estado' ( ( ruleEString ) ) ( (lv_name_2_0= ruleEString ) ) ) ;
+    // InternalBlockchain.g:866:1: ruleEstado returns [EObject current=null] : (otherlv_0= 'Estado' ( ( ruleEString ) ) ( (lv_name_2_0= ruleEString ) ) ) ;
     public final EObject ruleEstado() throws RecognitionException {
         EObject current = null;
 
@@ -2308,21 +2337,21 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:863:2: ( (otherlv_0= 'Estado' ( ( ruleEString ) ) ( (lv_name_2_0= ruleEString ) ) ) )
-            // InternalBlockchain.g:864:2: (otherlv_0= 'Estado' ( ( ruleEString ) ) ( (lv_name_2_0= ruleEString ) ) )
+            // InternalBlockchain.g:872:2: ( (otherlv_0= 'Estado' ( ( ruleEString ) ) ( (lv_name_2_0= ruleEString ) ) ) )
+            // InternalBlockchain.g:873:2: (otherlv_0= 'Estado' ( ( ruleEString ) ) ( (lv_name_2_0= ruleEString ) ) )
             {
-            // InternalBlockchain.g:864:2: (otherlv_0= 'Estado' ( ( ruleEString ) ) ( (lv_name_2_0= ruleEString ) ) )
-            // InternalBlockchain.g:865:3: otherlv_0= 'Estado' ( ( ruleEString ) ) ( (lv_name_2_0= ruleEString ) )
+            // InternalBlockchain.g:873:2: (otherlv_0= 'Estado' ( ( ruleEString ) ) ( (lv_name_2_0= ruleEString ) ) )
+            // InternalBlockchain.g:874:3: otherlv_0= 'Estado' ( ( ruleEString ) ) ( (lv_name_2_0= ruleEString ) )
             {
             otherlv_0=(Token)match(input,23,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getEstadoAccess().getEstadoKeyword_0());
             		
-            // InternalBlockchain.g:869:3: ( ( ruleEString ) )
-            // InternalBlockchain.g:870:4: ( ruleEString )
+            // InternalBlockchain.g:878:3: ( ( ruleEString ) )
+            // InternalBlockchain.g:879:4: ( ruleEString )
             {
-            // InternalBlockchain.g:870:4: ( ruleEString )
-            // InternalBlockchain.g:871:5: ruleEString
+            // InternalBlockchain.g:879:4: ( ruleEString )
+            // InternalBlockchain.g:880:5: ruleEString
             {
 
             					if (current==null) {
@@ -2346,11 +2375,11 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBlockchain.g:885:3: ( (lv_name_2_0= ruleEString ) )
-            // InternalBlockchain.g:886:4: (lv_name_2_0= ruleEString )
+            // InternalBlockchain.g:894:3: ( (lv_name_2_0= ruleEString ) )
+            // InternalBlockchain.g:895:4: (lv_name_2_0= ruleEString )
             {
-            // InternalBlockchain.g:886:4: (lv_name_2_0= ruleEString )
-            // InternalBlockchain.g:887:5: lv_name_2_0= ruleEString
+            // InternalBlockchain.g:895:4: (lv_name_2_0= ruleEString )
+            // InternalBlockchain.g:896:5: lv_name_2_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getEstadoAccess().getNameEStringParserRuleCall_2_0());
@@ -2400,7 +2429,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAtributo"
-    // InternalBlockchain.g:908:1: entryRuleAtributo returns [EObject current=null] : iv_ruleAtributo= ruleAtributo EOF ;
+    // InternalBlockchain.g:917:1: entryRuleAtributo returns [EObject current=null] : iv_ruleAtributo= ruleAtributo EOF ;
     public final EObject entryRuleAtributo() throws RecognitionException {
         EObject current = null;
 
@@ -2408,8 +2437,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:908:49: (iv_ruleAtributo= ruleAtributo EOF )
-            // InternalBlockchain.g:909:2: iv_ruleAtributo= ruleAtributo EOF
+            // InternalBlockchain.g:917:49: (iv_ruleAtributo= ruleAtributo EOF )
+            // InternalBlockchain.g:918:2: iv_ruleAtributo= ruleAtributo EOF
             {
              newCompositeNode(grammarAccess.getAtributoRule()); 
             pushFollow(FOLLOW_1);
@@ -2436,7 +2465,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAtributo"
-    // InternalBlockchain.g:915:1: ruleAtributo returns [EObject current=null] : ( ( ( ruleEString ) ) ( (lv_name_1_0= ruleEString ) ) ) ;
+    // InternalBlockchain.g:924:1: ruleAtributo returns [EObject current=null] : ( ( ( ruleEString ) ) ( (lv_name_1_0= ruleEString ) ) ) ;
     public final EObject ruleAtributo() throws RecognitionException {
         EObject current = null;
 
@@ -2447,17 +2476,17 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:921:2: ( ( ( ( ruleEString ) ) ( (lv_name_1_0= ruleEString ) ) ) )
-            // InternalBlockchain.g:922:2: ( ( ( ruleEString ) ) ( (lv_name_1_0= ruleEString ) ) )
+            // InternalBlockchain.g:930:2: ( ( ( ( ruleEString ) ) ( (lv_name_1_0= ruleEString ) ) ) )
+            // InternalBlockchain.g:931:2: ( ( ( ruleEString ) ) ( (lv_name_1_0= ruleEString ) ) )
             {
-            // InternalBlockchain.g:922:2: ( ( ( ruleEString ) ) ( (lv_name_1_0= ruleEString ) ) )
-            // InternalBlockchain.g:923:3: ( ( ruleEString ) ) ( (lv_name_1_0= ruleEString ) )
+            // InternalBlockchain.g:931:2: ( ( ( ruleEString ) ) ( (lv_name_1_0= ruleEString ) ) )
+            // InternalBlockchain.g:932:3: ( ( ruleEString ) ) ( (lv_name_1_0= ruleEString ) )
             {
-            // InternalBlockchain.g:923:3: ( ( ruleEString ) )
-            // InternalBlockchain.g:924:4: ( ruleEString )
+            // InternalBlockchain.g:932:3: ( ( ruleEString ) )
+            // InternalBlockchain.g:933:4: ( ruleEString )
             {
-            // InternalBlockchain.g:924:4: ( ruleEString )
-            // InternalBlockchain.g:925:5: ruleEString
+            // InternalBlockchain.g:933:4: ( ruleEString )
+            // InternalBlockchain.g:934:5: ruleEString
             {
 
             					if (current==null) {
@@ -2481,11 +2510,11 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBlockchain.g:939:3: ( (lv_name_1_0= ruleEString ) )
-            // InternalBlockchain.g:940:4: (lv_name_1_0= ruleEString )
+            // InternalBlockchain.g:948:3: ( (lv_name_1_0= ruleEString ) )
+            // InternalBlockchain.g:949:4: (lv_name_1_0= ruleEString )
             {
-            // InternalBlockchain.g:940:4: (lv_name_1_0= ruleEString )
-            // InternalBlockchain.g:941:5: lv_name_1_0= ruleEString
+            // InternalBlockchain.g:949:4: (lv_name_1_0= ruleEString )
+            // InternalBlockchain.g:950:5: lv_name_1_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getAtributoAccess().getNameEStringParserRuleCall_1_0());
@@ -2535,7 +2564,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleParametro"
-    // InternalBlockchain.g:962:1: entryRuleParametro returns [EObject current=null] : iv_ruleParametro= ruleParametro EOF ;
+    // InternalBlockchain.g:971:1: entryRuleParametro returns [EObject current=null] : iv_ruleParametro= ruleParametro EOF ;
     public final EObject entryRuleParametro() throws RecognitionException {
         EObject current = null;
 
@@ -2543,8 +2572,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:962:50: (iv_ruleParametro= ruleParametro EOF )
-            // InternalBlockchain.g:963:2: iv_ruleParametro= ruleParametro EOF
+            // InternalBlockchain.g:971:50: (iv_ruleParametro= ruleParametro EOF )
+            // InternalBlockchain.g:972:2: iv_ruleParametro= ruleParametro EOF
             {
              newCompositeNode(grammarAccess.getParametroRule()); 
             pushFollow(FOLLOW_1);
@@ -2571,7 +2600,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleParametro"
-    // InternalBlockchain.g:969:1: ruleParametro returns [EObject current=null] : ( ( ( ruleEString ) ) ( (lv_name_1_0= ruleEString ) ) ) ;
+    // InternalBlockchain.g:978:1: ruleParametro returns [EObject current=null] : ( ( ( ruleEString ) ) ( (lv_name_1_0= ruleEString ) ) ) ;
     public final EObject ruleParametro() throws RecognitionException {
         EObject current = null;
 
@@ -2582,17 +2611,17 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:975:2: ( ( ( ( ruleEString ) ) ( (lv_name_1_0= ruleEString ) ) ) )
-            // InternalBlockchain.g:976:2: ( ( ( ruleEString ) ) ( (lv_name_1_0= ruleEString ) ) )
+            // InternalBlockchain.g:984:2: ( ( ( ( ruleEString ) ) ( (lv_name_1_0= ruleEString ) ) ) )
+            // InternalBlockchain.g:985:2: ( ( ( ruleEString ) ) ( (lv_name_1_0= ruleEString ) ) )
             {
-            // InternalBlockchain.g:976:2: ( ( ( ruleEString ) ) ( (lv_name_1_0= ruleEString ) ) )
-            // InternalBlockchain.g:977:3: ( ( ruleEString ) ) ( (lv_name_1_0= ruleEString ) )
+            // InternalBlockchain.g:985:2: ( ( ( ruleEString ) ) ( (lv_name_1_0= ruleEString ) ) )
+            // InternalBlockchain.g:986:3: ( ( ruleEString ) ) ( (lv_name_1_0= ruleEString ) )
             {
-            // InternalBlockchain.g:977:3: ( ( ruleEString ) )
-            // InternalBlockchain.g:978:4: ( ruleEString )
+            // InternalBlockchain.g:986:3: ( ( ruleEString ) )
+            // InternalBlockchain.g:987:4: ( ruleEString )
             {
-            // InternalBlockchain.g:978:4: ( ruleEString )
-            // InternalBlockchain.g:979:5: ruleEString
+            // InternalBlockchain.g:987:4: ( ruleEString )
+            // InternalBlockchain.g:988:5: ruleEString
             {
 
             					if (current==null) {
@@ -2616,11 +2645,11 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBlockchain.g:993:3: ( (lv_name_1_0= ruleEString ) )
-            // InternalBlockchain.g:994:4: (lv_name_1_0= ruleEString )
+            // InternalBlockchain.g:1002:3: ( (lv_name_1_0= ruleEString ) )
+            // InternalBlockchain.g:1003:4: (lv_name_1_0= ruleEString )
             {
-            // InternalBlockchain.g:994:4: (lv_name_1_0= ruleEString )
-            // InternalBlockchain.g:995:5: lv_name_1_0= ruleEString
+            // InternalBlockchain.g:1003:4: (lv_name_1_0= ruleEString )
+            // InternalBlockchain.g:1004:5: lv_name_1_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getParametroAccess().getNameEStringParserRuleCall_1_0());
@@ -2670,7 +2699,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEBoolean"
-    // InternalBlockchain.g:1016:1: entryRuleEBoolean returns [String current=null] : iv_ruleEBoolean= ruleEBoolean EOF ;
+    // InternalBlockchain.g:1025:1: entryRuleEBoolean returns [String current=null] : iv_ruleEBoolean= ruleEBoolean EOF ;
     public final String entryRuleEBoolean() throws RecognitionException {
         String current = null;
 
@@ -2678,8 +2707,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:1016:48: (iv_ruleEBoolean= ruleEBoolean EOF )
-            // InternalBlockchain.g:1017:2: iv_ruleEBoolean= ruleEBoolean EOF
+            // InternalBlockchain.g:1025:48: (iv_ruleEBoolean= ruleEBoolean EOF )
+            // InternalBlockchain.g:1026:2: iv_ruleEBoolean= ruleEBoolean EOF
             {
              newCompositeNode(grammarAccess.getEBooleanRule()); 
             pushFollow(FOLLOW_1);
@@ -2706,7 +2735,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEBoolean"
-    // InternalBlockchain.g:1023:1: ruleEBoolean returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'true' | kw= 'false' ) ;
+    // InternalBlockchain.g:1032:1: ruleEBoolean returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'true' | kw= 'false' ) ;
     public final AntlrDatatypeRuleToken ruleEBoolean() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2716,10 +2745,10 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:1029:2: ( (kw= 'true' | kw= 'false' ) )
-            // InternalBlockchain.g:1030:2: (kw= 'true' | kw= 'false' )
+            // InternalBlockchain.g:1038:2: ( (kw= 'true' | kw= 'false' ) )
+            // InternalBlockchain.g:1039:2: (kw= 'true' | kw= 'false' )
             {
-            // InternalBlockchain.g:1030:2: (kw= 'true' | kw= 'false' )
+            // InternalBlockchain.g:1039:2: (kw= 'true' | kw= 'false' )
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -2737,7 +2766,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
             }
             switch (alt23) {
                 case 1 :
-                    // InternalBlockchain.g:1031:3: kw= 'true'
+                    // InternalBlockchain.g:1040:3: kw= 'true'
                     {
                     kw=(Token)match(input,24,FOLLOW_2); 
 
@@ -2748,7 +2777,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBlockchain.g:1037:3: kw= 'false'
+                    // InternalBlockchain.g:1046:3: kw= 'false'
                     {
                     kw=(Token)match(input,25,FOLLOW_2); 
 
@@ -2781,7 +2810,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExpresionLogica"
-    // InternalBlockchain.g:1046:1: entryRuleExpresionLogica returns [EObject current=null] : iv_ruleExpresionLogica= ruleExpresionLogica EOF ;
+    // InternalBlockchain.g:1055:1: entryRuleExpresionLogica returns [EObject current=null] : iv_ruleExpresionLogica= ruleExpresionLogica EOF ;
     public final EObject entryRuleExpresionLogica() throws RecognitionException {
         EObject current = null;
 
@@ -2789,8 +2818,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:1046:56: (iv_ruleExpresionLogica= ruleExpresionLogica EOF )
-            // InternalBlockchain.g:1047:2: iv_ruleExpresionLogica= ruleExpresionLogica EOF
+            // InternalBlockchain.g:1055:56: (iv_ruleExpresionLogica= ruleExpresionLogica EOF )
+            // InternalBlockchain.g:1056:2: iv_ruleExpresionLogica= ruleExpresionLogica EOF
             {
              newCompositeNode(grammarAccess.getExpresionLogicaRule()); 
             pushFollow(FOLLOW_1);
@@ -2817,7 +2846,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpresionLogica"
-    // InternalBlockchain.g:1053:1: ruleExpresionLogica returns [EObject current=null] : (otherlv_0= 'ExpLog' (otherlv_1= '(' )* ( (lv_izq_2_0= ruleExpresion ) ) (otherlv_3= ')' )* ( (lv_operador_4_0= ruleOperadorLogico ) )? (otherlv_5= '(' )* ( (lv_der_6_0= ruleExpresion ) ) (otherlv_7= ')' )* ) ;
+    // InternalBlockchain.g:1062:1: ruleExpresionLogica returns [EObject current=null] : (otherlv_0= 'ExpLog' (otherlv_1= '(' )* ( (lv_izq_2_0= ruleExpresion ) ) (otherlv_3= ')' )* ( (lv_operador_4_0= ruleOperadorLogico ) )? (otherlv_5= '(' )* ( (lv_der_6_0= ruleExpresion ) ) (otherlv_7= ')' )* ) ;
     public final EObject ruleExpresionLogica() throws RecognitionException {
         EObject current = null;
 
@@ -2837,17 +2866,17 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:1059:2: ( (otherlv_0= 'ExpLog' (otherlv_1= '(' )* ( (lv_izq_2_0= ruleExpresion ) ) (otherlv_3= ')' )* ( (lv_operador_4_0= ruleOperadorLogico ) )? (otherlv_5= '(' )* ( (lv_der_6_0= ruleExpresion ) ) (otherlv_7= ')' )* ) )
-            // InternalBlockchain.g:1060:2: (otherlv_0= 'ExpLog' (otherlv_1= '(' )* ( (lv_izq_2_0= ruleExpresion ) ) (otherlv_3= ')' )* ( (lv_operador_4_0= ruleOperadorLogico ) )? (otherlv_5= '(' )* ( (lv_der_6_0= ruleExpresion ) ) (otherlv_7= ')' )* )
+            // InternalBlockchain.g:1068:2: ( (otherlv_0= 'ExpLog' (otherlv_1= '(' )* ( (lv_izq_2_0= ruleExpresion ) ) (otherlv_3= ')' )* ( (lv_operador_4_0= ruleOperadorLogico ) )? (otherlv_5= '(' )* ( (lv_der_6_0= ruleExpresion ) ) (otherlv_7= ')' )* ) )
+            // InternalBlockchain.g:1069:2: (otherlv_0= 'ExpLog' (otherlv_1= '(' )* ( (lv_izq_2_0= ruleExpresion ) ) (otherlv_3= ')' )* ( (lv_operador_4_0= ruleOperadorLogico ) )? (otherlv_5= '(' )* ( (lv_der_6_0= ruleExpresion ) ) (otherlv_7= ')' )* )
             {
-            // InternalBlockchain.g:1060:2: (otherlv_0= 'ExpLog' (otherlv_1= '(' )* ( (lv_izq_2_0= ruleExpresion ) ) (otherlv_3= ')' )* ( (lv_operador_4_0= ruleOperadorLogico ) )? (otherlv_5= '(' )* ( (lv_der_6_0= ruleExpresion ) ) (otherlv_7= ')' )* )
-            // InternalBlockchain.g:1061:3: otherlv_0= 'ExpLog' (otherlv_1= '(' )* ( (lv_izq_2_0= ruleExpresion ) ) (otherlv_3= ')' )* ( (lv_operador_4_0= ruleOperadorLogico ) )? (otherlv_5= '(' )* ( (lv_der_6_0= ruleExpresion ) ) (otherlv_7= ')' )*
+            // InternalBlockchain.g:1069:2: (otherlv_0= 'ExpLog' (otherlv_1= '(' )* ( (lv_izq_2_0= ruleExpresion ) ) (otherlv_3= ')' )* ( (lv_operador_4_0= ruleOperadorLogico ) )? (otherlv_5= '(' )* ( (lv_der_6_0= ruleExpresion ) ) (otherlv_7= ')' )* )
+            // InternalBlockchain.g:1070:3: otherlv_0= 'ExpLog' (otherlv_1= '(' )* ( (lv_izq_2_0= ruleExpresion ) ) (otherlv_3= ')' )* ( (lv_operador_4_0= ruleOperadorLogico ) )? (otherlv_5= '(' )* ( (lv_der_6_0= ruleExpresion ) ) (otherlv_7= ')' )*
             {
             otherlv_0=(Token)match(input,26,FOLLOW_21); 
 
             			newLeafNode(otherlv_0, grammarAccess.getExpresionLogicaAccess().getExpLogKeyword_0());
             		
-            // InternalBlockchain.g:1065:3: (otherlv_1= '(' )*
+            // InternalBlockchain.g:1074:3: (otherlv_1= '(' )*
             loop24:
             do {
                 int alt24=2;
@@ -2860,7 +2889,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                 switch (alt24) {
             	case 1 :
-            	    // InternalBlockchain.g:1066:4: otherlv_1= '('
+            	    // InternalBlockchain.g:1075:4: otherlv_1= '('
             	    {
             	    otherlv_1=(Token)match(input,19,FOLLOW_21); 
 
@@ -2875,11 +2904,11 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalBlockchain.g:1071:3: ( (lv_izq_2_0= ruleExpresion ) )
-            // InternalBlockchain.g:1072:4: (lv_izq_2_0= ruleExpresion )
+            // InternalBlockchain.g:1080:3: ( (lv_izq_2_0= ruleExpresion ) )
+            // InternalBlockchain.g:1081:4: (lv_izq_2_0= ruleExpresion )
             {
-            // InternalBlockchain.g:1072:4: (lv_izq_2_0= ruleExpresion )
-            // InternalBlockchain.g:1073:5: lv_izq_2_0= ruleExpresion
+            // InternalBlockchain.g:1081:4: (lv_izq_2_0= ruleExpresion )
+            // InternalBlockchain.g:1082:5: lv_izq_2_0= ruleExpresion
             {
 
             					newCompositeNode(grammarAccess.getExpresionLogicaAccess().getIzqExpresionParserRuleCall_2_0());
@@ -2906,7 +2935,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBlockchain.g:1090:3: (otherlv_3= ')' )*
+            // InternalBlockchain.g:1099:3: (otherlv_3= ')' )*
             loop25:
             do {
                 int alt25=2;
@@ -2919,7 +2948,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                 switch (alt25) {
             	case 1 :
-            	    // InternalBlockchain.g:1091:4: otherlv_3= ')'
+            	    // InternalBlockchain.g:1100:4: otherlv_3= ')'
             	    {
             	    otherlv_3=(Token)match(input,21,FOLLOW_22); 
 
@@ -2934,19 +2963,19 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalBlockchain.g:1096:3: ( (lv_operador_4_0= ruleOperadorLogico ) )?
+            // InternalBlockchain.g:1105:3: ( (lv_operador_4_0= ruleOperadorLogico ) )?
             int alt26=2;
             int LA26_0 = input.LA(1);
 
-            if ( ((LA26_0>=43 && LA26_0<=50)) ) {
+            if ( ((LA26_0>=44 && LA26_0<=51)) ) {
                 alt26=1;
             }
             switch (alt26) {
                 case 1 :
-                    // InternalBlockchain.g:1097:4: (lv_operador_4_0= ruleOperadorLogico )
+                    // InternalBlockchain.g:1106:4: (lv_operador_4_0= ruleOperadorLogico )
                     {
-                    // InternalBlockchain.g:1097:4: (lv_operador_4_0= ruleOperadorLogico )
-                    // InternalBlockchain.g:1098:5: lv_operador_4_0= ruleOperadorLogico
+                    // InternalBlockchain.g:1106:4: (lv_operador_4_0= ruleOperadorLogico )
+                    // InternalBlockchain.g:1107:5: lv_operador_4_0= ruleOperadorLogico
                     {
 
                     					newCompositeNode(grammarAccess.getExpresionLogicaAccess().getOperadorOperadorLogicoEnumRuleCall_4_0());
@@ -2976,7 +3005,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBlockchain.g:1115:3: (otherlv_5= '(' )*
+            // InternalBlockchain.g:1124:3: (otherlv_5= '(' )*
             loop27:
             do {
                 int alt27=2;
@@ -2989,7 +3018,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                 switch (alt27) {
             	case 1 :
-            	    // InternalBlockchain.g:1116:4: otherlv_5= '('
+            	    // InternalBlockchain.g:1125:4: otherlv_5= '('
             	    {
             	    otherlv_5=(Token)match(input,19,FOLLOW_21); 
 
@@ -3004,11 +3033,11 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalBlockchain.g:1121:3: ( (lv_der_6_0= ruleExpresion ) )
-            // InternalBlockchain.g:1122:4: (lv_der_6_0= ruleExpresion )
+            // InternalBlockchain.g:1130:3: ( (lv_der_6_0= ruleExpresion ) )
+            // InternalBlockchain.g:1131:4: (lv_der_6_0= ruleExpresion )
             {
-            // InternalBlockchain.g:1122:4: (lv_der_6_0= ruleExpresion )
-            // InternalBlockchain.g:1123:5: lv_der_6_0= ruleExpresion
+            // InternalBlockchain.g:1131:4: (lv_der_6_0= ruleExpresion )
+            // InternalBlockchain.g:1132:5: lv_der_6_0= ruleExpresion
             {
 
             					newCompositeNode(grammarAccess.getExpresionLogicaAccess().getDerExpresionParserRuleCall_6_0());
@@ -3035,7 +3064,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBlockchain.g:1140:3: (otherlv_7= ')' )*
+            // InternalBlockchain.g:1149:3: (otherlv_7= ')' )*
             loop28:
             do {
                 int alt28=2;
@@ -3048,7 +3077,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                 switch (alt28) {
             	case 1 :
-            	    // InternalBlockchain.g:1141:4: otherlv_7= ')'
+            	    // InternalBlockchain.g:1150:4: otherlv_7= ')'
             	    {
             	    otherlv_7=(Token)match(input,21,FOLLOW_23); 
 
@@ -3086,7 +3115,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExpresionAritmetica"
-    // InternalBlockchain.g:1150:1: entryRuleExpresionAritmetica returns [EObject current=null] : iv_ruleExpresionAritmetica= ruleExpresionAritmetica EOF ;
+    // InternalBlockchain.g:1159:1: entryRuleExpresionAritmetica returns [EObject current=null] : iv_ruleExpresionAritmetica= ruleExpresionAritmetica EOF ;
     public final EObject entryRuleExpresionAritmetica() throws RecognitionException {
         EObject current = null;
 
@@ -3094,8 +3123,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:1150:60: (iv_ruleExpresionAritmetica= ruleExpresionAritmetica EOF )
-            // InternalBlockchain.g:1151:2: iv_ruleExpresionAritmetica= ruleExpresionAritmetica EOF
+            // InternalBlockchain.g:1159:60: (iv_ruleExpresionAritmetica= ruleExpresionAritmetica EOF )
+            // InternalBlockchain.g:1160:2: iv_ruleExpresionAritmetica= ruleExpresionAritmetica EOF
             {
              newCompositeNode(grammarAccess.getExpresionAritmeticaRule()); 
             pushFollow(FOLLOW_1);
@@ -3122,7 +3151,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpresionAritmetica"
-    // InternalBlockchain.g:1157:1: ruleExpresionAritmetica returns [EObject current=null] : ( () otherlv_1= 'ExpArit' (otherlv_2= '(' )* ( (lv_izq_3_0= ruleExpresion ) ) (otherlv_4= ')' )* ( (lv_operador_5_0= ruleOperador ) )? (otherlv_6= '(' )* ( (lv_der_7_0= ruleExpresion ) ) (otherlv_8= ')' )* ) ;
+    // InternalBlockchain.g:1166:1: ruleExpresionAritmetica returns [EObject current=null] : ( () otherlv_1= 'ExpArit' (otherlv_2= '(' )* ( (lv_izq_3_0= ruleExpresion ) ) (otherlv_4= ')' )* ( (lv_operador_5_0= ruleOperador ) )? (otherlv_6= '(' )* ( (lv_der_7_0= ruleExpresion ) ) (otherlv_8= ')' )* ) ;
     public final EObject ruleExpresionAritmetica() throws RecognitionException {
         EObject current = null;
 
@@ -3142,14 +3171,14 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:1163:2: ( ( () otherlv_1= 'ExpArit' (otherlv_2= '(' )* ( (lv_izq_3_0= ruleExpresion ) ) (otherlv_4= ')' )* ( (lv_operador_5_0= ruleOperador ) )? (otherlv_6= '(' )* ( (lv_der_7_0= ruleExpresion ) ) (otherlv_8= ')' )* ) )
-            // InternalBlockchain.g:1164:2: ( () otherlv_1= 'ExpArit' (otherlv_2= '(' )* ( (lv_izq_3_0= ruleExpresion ) ) (otherlv_4= ')' )* ( (lv_operador_5_0= ruleOperador ) )? (otherlv_6= '(' )* ( (lv_der_7_0= ruleExpresion ) ) (otherlv_8= ')' )* )
+            // InternalBlockchain.g:1172:2: ( ( () otherlv_1= 'ExpArit' (otherlv_2= '(' )* ( (lv_izq_3_0= ruleExpresion ) ) (otherlv_4= ')' )* ( (lv_operador_5_0= ruleOperador ) )? (otherlv_6= '(' )* ( (lv_der_7_0= ruleExpresion ) ) (otherlv_8= ')' )* ) )
+            // InternalBlockchain.g:1173:2: ( () otherlv_1= 'ExpArit' (otherlv_2= '(' )* ( (lv_izq_3_0= ruleExpresion ) ) (otherlv_4= ')' )* ( (lv_operador_5_0= ruleOperador ) )? (otherlv_6= '(' )* ( (lv_der_7_0= ruleExpresion ) ) (otherlv_8= ')' )* )
             {
-            // InternalBlockchain.g:1164:2: ( () otherlv_1= 'ExpArit' (otherlv_2= '(' )* ( (lv_izq_3_0= ruleExpresion ) ) (otherlv_4= ')' )* ( (lv_operador_5_0= ruleOperador ) )? (otherlv_6= '(' )* ( (lv_der_7_0= ruleExpresion ) ) (otherlv_8= ')' )* )
-            // InternalBlockchain.g:1165:3: () otherlv_1= 'ExpArit' (otherlv_2= '(' )* ( (lv_izq_3_0= ruleExpresion ) ) (otherlv_4= ')' )* ( (lv_operador_5_0= ruleOperador ) )? (otherlv_6= '(' )* ( (lv_der_7_0= ruleExpresion ) ) (otherlv_8= ')' )*
+            // InternalBlockchain.g:1173:2: ( () otherlv_1= 'ExpArit' (otherlv_2= '(' )* ( (lv_izq_3_0= ruleExpresion ) ) (otherlv_4= ')' )* ( (lv_operador_5_0= ruleOperador ) )? (otherlv_6= '(' )* ( (lv_der_7_0= ruleExpresion ) ) (otherlv_8= ')' )* )
+            // InternalBlockchain.g:1174:3: () otherlv_1= 'ExpArit' (otherlv_2= '(' )* ( (lv_izq_3_0= ruleExpresion ) ) (otherlv_4= ')' )* ( (lv_operador_5_0= ruleOperador ) )? (otherlv_6= '(' )* ( (lv_der_7_0= ruleExpresion ) ) (otherlv_8= ')' )*
             {
-            // InternalBlockchain.g:1165:3: ()
-            // InternalBlockchain.g:1166:4: 
+            // InternalBlockchain.g:1174:3: ()
+            // InternalBlockchain.g:1175:4: 
             {
 
             				current = forceCreateModelElement(
@@ -3163,7 +3192,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getExpresionAritmeticaAccess().getExpAritKeyword_1());
             		
-            // InternalBlockchain.g:1176:3: (otherlv_2= '(' )*
+            // InternalBlockchain.g:1185:3: (otherlv_2= '(' )*
             loop29:
             do {
                 int alt29=2;
@@ -3176,7 +3205,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                 switch (alt29) {
             	case 1 :
-            	    // InternalBlockchain.g:1177:4: otherlv_2= '('
+            	    // InternalBlockchain.g:1186:4: otherlv_2= '('
             	    {
             	    otherlv_2=(Token)match(input,19,FOLLOW_21); 
 
@@ -3191,11 +3220,11 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalBlockchain.g:1182:3: ( (lv_izq_3_0= ruleExpresion ) )
-            // InternalBlockchain.g:1183:4: (lv_izq_3_0= ruleExpresion )
+            // InternalBlockchain.g:1191:3: ( (lv_izq_3_0= ruleExpresion ) )
+            // InternalBlockchain.g:1192:4: (lv_izq_3_0= ruleExpresion )
             {
-            // InternalBlockchain.g:1183:4: (lv_izq_3_0= ruleExpresion )
-            // InternalBlockchain.g:1184:5: lv_izq_3_0= ruleExpresion
+            // InternalBlockchain.g:1192:4: (lv_izq_3_0= ruleExpresion )
+            // InternalBlockchain.g:1193:5: lv_izq_3_0= ruleExpresion
             {
 
             					newCompositeNode(grammarAccess.getExpresionAritmeticaAccess().getIzqExpresionParserRuleCall_3_0());
@@ -3222,7 +3251,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBlockchain.g:1201:3: (otherlv_4= ')' )*
+            // InternalBlockchain.g:1210:3: (otherlv_4= ')' )*
             loop30:
             do {
                 int alt30=2;
@@ -3235,7 +3264,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                 switch (alt30) {
             	case 1 :
-            	    // InternalBlockchain.g:1202:4: otherlv_4= ')'
+            	    // InternalBlockchain.g:1211:4: otherlv_4= ')'
             	    {
             	    otherlv_4=(Token)match(input,21,FOLLOW_24); 
 
@@ -3250,19 +3279,19 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalBlockchain.g:1207:3: ( (lv_operador_5_0= ruleOperador ) )?
+            // InternalBlockchain.g:1216:3: ( (lv_operador_5_0= ruleOperador ) )?
             int alt31=2;
             int LA31_0 = input.LA(1);
 
-            if ( (LA31_0==38||(LA31_0>=51 && LA31_0<=57)) ) {
+            if ( (LA31_0==39||(LA31_0>=52 && LA31_0<=58)) ) {
                 alt31=1;
             }
             switch (alt31) {
                 case 1 :
-                    // InternalBlockchain.g:1208:4: (lv_operador_5_0= ruleOperador )
+                    // InternalBlockchain.g:1217:4: (lv_operador_5_0= ruleOperador )
                     {
-                    // InternalBlockchain.g:1208:4: (lv_operador_5_0= ruleOperador )
-                    // InternalBlockchain.g:1209:5: lv_operador_5_0= ruleOperador
+                    // InternalBlockchain.g:1217:4: (lv_operador_5_0= ruleOperador )
+                    // InternalBlockchain.g:1218:5: lv_operador_5_0= ruleOperador
                     {
 
                     					newCompositeNode(grammarAccess.getExpresionAritmeticaAccess().getOperadorOperadorEnumRuleCall_5_0());
@@ -3292,7 +3321,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBlockchain.g:1226:3: (otherlv_6= '(' )*
+            // InternalBlockchain.g:1235:3: (otherlv_6= '(' )*
             loop32:
             do {
                 int alt32=2;
@@ -3305,7 +3334,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                 switch (alt32) {
             	case 1 :
-            	    // InternalBlockchain.g:1227:4: otherlv_6= '('
+            	    // InternalBlockchain.g:1236:4: otherlv_6= '('
             	    {
             	    otherlv_6=(Token)match(input,19,FOLLOW_21); 
 
@@ -3320,11 +3349,11 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalBlockchain.g:1232:3: ( (lv_der_7_0= ruleExpresion ) )
-            // InternalBlockchain.g:1233:4: (lv_der_7_0= ruleExpresion )
+            // InternalBlockchain.g:1241:3: ( (lv_der_7_0= ruleExpresion ) )
+            // InternalBlockchain.g:1242:4: (lv_der_7_0= ruleExpresion )
             {
-            // InternalBlockchain.g:1233:4: (lv_der_7_0= ruleExpresion )
-            // InternalBlockchain.g:1234:5: lv_der_7_0= ruleExpresion
+            // InternalBlockchain.g:1242:4: (lv_der_7_0= ruleExpresion )
+            // InternalBlockchain.g:1243:5: lv_der_7_0= ruleExpresion
             {
 
             					newCompositeNode(grammarAccess.getExpresionAritmeticaAccess().getDerExpresionParserRuleCall_7_0());
@@ -3351,7 +3380,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBlockchain.g:1251:3: (otherlv_8= ')' )*
+            // InternalBlockchain.g:1260:3: (otherlv_8= ')' )*
             loop33:
             do {
                 int alt33=2;
@@ -3364,7 +3393,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                 switch (alt33) {
             	case 1 :
-            	    // InternalBlockchain.g:1252:4: otherlv_8= ')'
+            	    // InternalBlockchain.g:1261:4: otherlv_8= ')'
             	    {
             	    otherlv_8=(Token)match(input,21,FOLLOW_23); 
 
@@ -3402,7 +3431,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVariable"
-    // InternalBlockchain.g:1261:1: entryRuleVariable returns [EObject current=null] : iv_ruleVariable= ruleVariable EOF ;
+    // InternalBlockchain.g:1270:1: entryRuleVariable returns [EObject current=null] : iv_ruleVariable= ruleVariable EOF ;
     public final EObject entryRuleVariable() throws RecognitionException {
         EObject current = null;
 
@@ -3410,8 +3439,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:1261:49: (iv_ruleVariable= ruleVariable EOF )
-            // InternalBlockchain.g:1262:2: iv_ruleVariable= ruleVariable EOF
+            // InternalBlockchain.g:1270:49: (iv_ruleVariable= ruleVariable EOF )
+            // InternalBlockchain.g:1271:2: iv_ruleVariable= ruleVariable EOF
             {
              newCompositeNode(grammarAccess.getVariableRule()); 
             pushFollow(FOLLOW_1);
@@ -3438,7 +3467,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVariable"
-    // InternalBlockchain.g:1268:1: ruleVariable returns [EObject current=null] : (otherlv_0= 'var' ( ( ruleEString ) ) ( (lv_name_2_0= ruleEString ) )? ) ;
+    // InternalBlockchain.g:1277:1: ruleVariable returns [EObject current=null] : (otherlv_0= 'var' ( ( ruleEString ) ) ( (lv_name_2_0= ruleEString ) )? ) ;
     public final EObject ruleVariable() throws RecognitionException {
         EObject current = null;
 
@@ -3450,21 +3479,21 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:1274:2: ( (otherlv_0= 'var' ( ( ruleEString ) ) ( (lv_name_2_0= ruleEString ) )? ) )
-            // InternalBlockchain.g:1275:2: (otherlv_0= 'var' ( ( ruleEString ) ) ( (lv_name_2_0= ruleEString ) )? )
+            // InternalBlockchain.g:1283:2: ( (otherlv_0= 'var' ( ( ruleEString ) ) ( (lv_name_2_0= ruleEString ) )? ) )
+            // InternalBlockchain.g:1284:2: (otherlv_0= 'var' ( ( ruleEString ) ) ( (lv_name_2_0= ruleEString ) )? )
             {
-            // InternalBlockchain.g:1275:2: (otherlv_0= 'var' ( ( ruleEString ) ) ( (lv_name_2_0= ruleEString ) )? )
-            // InternalBlockchain.g:1276:3: otherlv_0= 'var' ( ( ruleEString ) ) ( (lv_name_2_0= ruleEString ) )?
+            // InternalBlockchain.g:1284:2: (otherlv_0= 'var' ( ( ruleEString ) ) ( (lv_name_2_0= ruleEString ) )? )
+            // InternalBlockchain.g:1285:3: otherlv_0= 'var' ( ( ruleEString ) ) ( (lv_name_2_0= ruleEString ) )?
             {
             otherlv_0=(Token)match(input,28,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getVariableAccess().getVarKeyword_0());
             		
-            // InternalBlockchain.g:1280:3: ( ( ruleEString ) )
-            // InternalBlockchain.g:1281:4: ( ruleEString )
+            // InternalBlockchain.g:1289:3: ( ( ruleEString ) )
+            // InternalBlockchain.g:1290:4: ( ruleEString )
             {
-            // InternalBlockchain.g:1281:4: ( ruleEString )
-            // InternalBlockchain.g:1282:5: ruleEString
+            // InternalBlockchain.g:1290:4: ( ruleEString )
+            // InternalBlockchain.g:1291:5: ruleEString
             {
 
             					if (current==null) {
@@ -3488,7 +3517,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBlockchain.g:1296:3: ( (lv_name_2_0= ruleEString ) )?
+            // InternalBlockchain.g:1305:3: ( (lv_name_2_0= ruleEString ) )?
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -3497,10 +3526,10 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
             }
             switch (alt34) {
                 case 1 :
-                    // InternalBlockchain.g:1297:4: (lv_name_2_0= ruleEString )
+                    // InternalBlockchain.g:1306:4: (lv_name_2_0= ruleEString )
                     {
-                    // InternalBlockchain.g:1297:4: (lv_name_2_0= ruleEString )
-                    // InternalBlockchain.g:1298:5: lv_name_2_0= ruleEString
+                    // InternalBlockchain.g:1306:4: (lv_name_2_0= ruleEString )
+                    // InternalBlockchain.g:1307:5: lv_name_2_0= ruleEString
                     {
 
                     					newCompositeNode(grammarAccess.getVariableAccess().getNameEStringParserRuleCall_2_0());
@@ -3553,7 +3582,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCondicional"
-    // InternalBlockchain.g:1319:1: entryRuleCondicional returns [EObject current=null] : iv_ruleCondicional= ruleCondicional EOF ;
+    // InternalBlockchain.g:1328:1: entryRuleCondicional returns [EObject current=null] : iv_ruleCondicional= ruleCondicional EOF ;
     public final EObject entryRuleCondicional() throws RecognitionException {
         EObject current = null;
 
@@ -3561,8 +3590,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:1319:52: (iv_ruleCondicional= ruleCondicional EOF )
-            // InternalBlockchain.g:1320:2: iv_ruleCondicional= ruleCondicional EOF
+            // InternalBlockchain.g:1328:52: (iv_ruleCondicional= ruleCondicional EOF )
+            // InternalBlockchain.g:1329:2: iv_ruleCondicional= ruleCondicional EOF
             {
              newCompositeNode(grammarAccess.getCondicionalRule()); 
             pushFollow(FOLLOW_1);
@@ -3589,7 +3618,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCondicional"
-    // InternalBlockchain.g:1326:1: ruleCondicional returns [EObject current=null] : (otherlv_0= 'if' ( (lv_expresionlogica_1_0= ruleExpresionLogica ) )? otherlv_2= '{' ( (lv_lineas_3_0= ruleLinea ) )* otherlv_4= '}' ( (lv_elseLines_5_0= ruleElse ) )? ) ;
+    // InternalBlockchain.g:1335:1: ruleCondicional returns [EObject current=null] : (otherlv_0= 'if' ( (lv_expresionlogica_1_0= ruleExpresionLogica ) )? otherlv_2= '{' ( (lv_lineas_3_0= ruleLinea ) )* otherlv_4= '}' ( (lv_elseLines_5_0= ruleElse ) )? ) ;
     public final EObject ruleCondicional() throws RecognitionException {
         EObject current = null;
 
@@ -3607,17 +3636,17 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:1332:2: ( (otherlv_0= 'if' ( (lv_expresionlogica_1_0= ruleExpresionLogica ) )? otherlv_2= '{' ( (lv_lineas_3_0= ruleLinea ) )* otherlv_4= '}' ( (lv_elseLines_5_0= ruleElse ) )? ) )
-            // InternalBlockchain.g:1333:2: (otherlv_0= 'if' ( (lv_expresionlogica_1_0= ruleExpresionLogica ) )? otherlv_2= '{' ( (lv_lineas_3_0= ruleLinea ) )* otherlv_4= '}' ( (lv_elseLines_5_0= ruleElse ) )? )
+            // InternalBlockchain.g:1341:2: ( (otherlv_0= 'if' ( (lv_expresionlogica_1_0= ruleExpresionLogica ) )? otherlv_2= '{' ( (lv_lineas_3_0= ruleLinea ) )* otherlv_4= '}' ( (lv_elseLines_5_0= ruleElse ) )? ) )
+            // InternalBlockchain.g:1342:2: (otherlv_0= 'if' ( (lv_expresionlogica_1_0= ruleExpresionLogica ) )? otherlv_2= '{' ( (lv_lineas_3_0= ruleLinea ) )* otherlv_4= '}' ( (lv_elseLines_5_0= ruleElse ) )? )
             {
-            // InternalBlockchain.g:1333:2: (otherlv_0= 'if' ( (lv_expresionlogica_1_0= ruleExpresionLogica ) )? otherlv_2= '{' ( (lv_lineas_3_0= ruleLinea ) )* otherlv_4= '}' ( (lv_elseLines_5_0= ruleElse ) )? )
-            // InternalBlockchain.g:1334:3: otherlv_0= 'if' ( (lv_expresionlogica_1_0= ruleExpresionLogica ) )? otherlv_2= '{' ( (lv_lineas_3_0= ruleLinea ) )* otherlv_4= '}' ( (lv_elseLines_5_0= ruleElse ) )?
+            // InternalBlockchain.g:1342:2: (otherlv_0= 'if' ( (lv_expresionlogica_1_0= ruleExpresionLogica ) )? otherlv_2= '{' ( (lv_lineas_3_0= ruleLinea ) )* otherlv_4= '}' ( (lv_elseLines_5_0= ruleElse ) )? )
+            // InternalBlockchain.g:1343:3: otherlv_0= 'if' ( (lv_expresionlogica_1_0= ruleExpresionLogica ) )? otherlv_2= '{' ( (lv_lineas_3_0= ruleLinea ) )* otherlv_4= '}' ( (lv_elseLines_5_0= ruleElse ) )?
             {
             otherlv_0=(Token)match(input,29,FOLLOW_26); 
 
             			newLeafNode(otherlv_0, grammarAccess.getCondicionalAccess().getIfKeyword_0());
             		
-            // InternalBlockchain.g:1338:3: ( (lv_expresionlogica_1_0= ruleExpresionLogica ) )?
+            // InternalBlockchain.g:1347:3: ( (lv_expresionlogica_1_0= ruleExpresionLogica ) )?
             int alt35=2;
             int LA35_0 = input.LA(1);
 
@@ -3626,10 +3655,10 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
             }
             switch (alt35) {
                 case 1 :
-                    // InternalBlockchain.g:1339:4: (lv_expresionlogica_1_0= ruleExpresionLogica )
+                    // InternalBlockchain.g:1348:4: (lv_expresionlogica_1_0= ruleExpresionLogica )
                     {
-                    // InternalBlockchain.g:1339:4: (lv_expresionlogica_1_0= ruleExpresionLogica )
-                    // InternalBlockchain.g:1340:5: lv_expresionlogica_1_0= ruleExpresionLogica
+                    // InternalBlockchain.g:1348:4: (lv_expresionlogica_1_0= ruleExpresionLogica )
+                    // InternalBlockchain.g:1349:5: lv_expresionlogica_1_0= ruleExpresionLogica
                     {
 
                     					newCompositeNode(grammarAccess.getCondicionalAccess().getExpresionlogicaExpresionLogicaParserRuleCall_1_0());
@@ -3663,23 +3692,23 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getCondicionalAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalBlockchain.g:1361:3: ( (lv_lineas_3_0= ruleLinea ) )*
+            // InternalBlockchain.g:1370:3: ( (lv_lineas_3_0= ruleLinea ) )*
             loop36:
             do {
                 int alt36=2;
                 int LA36_0 = input.LA(1);
 
-                if ( ((LA36_0>=26 && LA36_0<=29)||(LA36_0>=31 && LA36_0<=34)||(LA36_0>=36 && LA36_0<=37)) ) {
+                if ( ((LA36_0>=26 && LA36_0<=29)||(LA36_0>=31 && LA36_0<=35)||(LA36_0>=37 && LA36_0<=38)) ) {
                     alt36=1;
                 }
 
 
                 switch (alt36) {
             	case 1 :
-            	    // InternalBlockchain.g:1362:4: (lv_lineas_3_0= ruleLinea )
+            	    // InternalBlockchain.g:1371:4: (lv_lineas_3_0= ruleLinea )
             	    {
-            	    // InternalBlockchain.g:1362:4: (lv_lineas_3_0= ruleLinea )
-            	    // InternalBlockchain.g:1363:5: lv_lineas_3_0= ruleLinea
+            	    // InternalBlockchain.g:1371:4: (lv_lineas_3_0= ruleLinea )
+            	    // InternalBlockchain.g:1372:5: lv_lineas_3_0= ruleLinea
             	    {
 
             	    					newCompositeNode(grammarAccess.getCondicionalAccess().getLineasLineaParserRuleCall_3_0());
@@ -3716,7 +3745,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_4, grammarAccess.getCondicionalAccess().getRightCurlyBracketKeyword_4());
             		
-            // InternalBlockchain.g:1384:3: ( (lv_elseLines_5_0= ruleElse ) )?
+            // InternalBlockchain.g:1393:3: ( (lv_elseLines_5_0= ruleElse ) )?
             int alt37=2;
             int LA37_0 = input.LA(1);
 
@@ -3725,10 +3754,10 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
             }
             switch (alt37) {
                 case 1 :
-                    // InternalBlockchain.g:1385:4: (lv_elseLines_5_0= ruleElse )
+                    // InternalBlockchain.g:1394:4: (lv_elseLines_5_0= ruleElse )
                     {
-                    // InternalBlockchain.g:1385:4: (lv_elseLines_5_0= ruleElse )
-                    // InternalBlockchain.g:1386:5: lv_elseLines_5_0= ruleElse
+                    // InternalBlockchain.g:1394:4: (lv_elseLines_5_0= ruleElse )
+                    // InternalBlockchain.g:1395:5: lv_elseLines_5_0= ruleElse
                     {
 
                     					newCompositeNode(grammarAccess.getCondicionalAccess().getElseLinesElseParserRuleCall_5_0());
@@ -3781,7 +3810,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleElse"
-    // InternalBlockchain.g:1407:1: entryRuleElse returns [EObject current=null] : iv_ruleElse= ruleElse EOF ;
+    // InternalBlockchain.g:1416:1: entryRuleElse returns [EObject current=null] : iv_ruleElse= ruleElse EOF ;
     public final EObject entryRuleElse() throws RecognitionException {
         EObject current = null;
 
@@ -3789,8 +3818,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:1407:45: (iv_ruleElse= ruleElse EOF )
-            // InternalBlockchain.g:1408:2: iv_ruleElse= ruleElse EOF
+            // InternalBlockchain.g:1416:45: (iv_ruleElse= ruleElse EOF )
+            // InternalBlockchain.g:1417:2: iv_ruleElse= ruleElse EOF
             {
              newCompositeNode(grammarAccess.getElseRule()); 
             pushFollow(FOLLOW_1);
@@ -3817,7 +3846,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleElse"
-    // InternalBlockchain.g:1414:1: ruleElse returns [EObject current=null] : (otherlv_0= 'else' otherlv_1= '{' ( (lv_lineas_2_0= ruleLinea ) )* otherlv_3= '}' ) ;
+    // InternalBlockchain.g:1423:1: ruleElse returns [EObject current=null] : (otherlv_0= 'else' otherlv_1= '{' ( (lv_lineas_2_0= ruleLinea ) )* otherlv_3= '}' ) ;
     public final EObject ruleElse() throws RecognitionException {
         EObject current = null;
 
@@ -3831,11 +3860,11 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:1420:2: ( (otherlv_0= 'else' otherlv_1= '{' ( (lv_lineas_2_0= ruleLinea ) )* otherlv_3= '}' ) )
-            // InternalBlockchain.g:1421:2: (otherlv_0= 'else' otherlv_1= '{' ( (lv_lineas_2_0= ruleLinea ) )* otherlv_3= '}' )
+            // InternalBlockchain.g:1429:2: ( (otherlv_0= 'else' otherlv_1= '{' ( (lv_lineas_2_0= ruleLinea ) )* otherlv_3= '}' ) )
+            // InternalBlockchain.g:1430:2: (otherlv_0= 'else' otherlv_1= '{' ( (lv_lineas_2_0= ruleLinea ) )* otherlv_3= '}' )
             {
-            // InternalBlockchain.g:1421:2: (otherlv_0= 'else' otherlv_1= '{' ( (lv_lineas_2_0= ruleLinea ) )* otherlv_3= '}' )
-            // InternalBlockchain.g:1422:3: otherlv_0= 'else' otherlv_1= '{' ( (lv_lineas_2_0= ruleLinea ) )* otherlv_3= '}'
+            // InternalBlockchain.g:1430:2: (otherlv_0= 'else' otherlv_1= '{' ( (lv_lineas_2_0= ruleLinea ) )* otherlv_3= '}' )
+            // InternalBlockchain.g:1431:3: otherlv_0= 'else' otherlv_1= '{' ( (lv_lineas_2_0= ruleLinea ) )* otherlv_3= '}'
             {
             otherlv_0=(Token)match(input,30,FOLLOW_4); 
 
@@ -3845,23 +3874,23 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getElseAccess().getLeftCurlyBracketKeyword_1());
             		
-            // InternalBlockchain.g:1430:3: ( (lv_lineas_2_0= ruleLinea ) )*
+            // InternalBlockchain.g:1439:3: ( (lv_lineas_2_0= ruleLinea ) )*
             loop38:
             do {
                 int alt38=2;
                 int LA38_0 = input.LA(1);
 
-                if ( ((LA38_0>=26 && LA38_0<=29)||(LA38_0>=31 && LA38_0<=34)||(LA38_0>=36 && LA38_0<=37)) ) {
+                if ( ((LA38_0>=26 && LA38_0<=29)||(LA38_0>=31 && LA38_0<=35)||(LA38_0>=37 && LA38_0<=38)) ) {
                     alt38=1;
                 }
 
 
                 switch (alt38) {
             	case 1 :
-            	    // InternalBlockchain.g:1431:4: (lv_lineas_2_0= ruleLinea )
+            	    // InternalBlockchain.g:1440:4: (lv_lineas_2_0= ruleLinea )
             	    {
-            	    // InternalBlockchain.g:1431:4: (lv_lineas_2_0= ruleLinea )
-            	    // InternalBlockchain.g:1432:5: lv_lineas_2_0= ruleLinea
+            	    // InternalBlockchain.g:1440:4: (lv_lineas_2_0= ruleLinea )
+            	    // InternalBlockchain.g:1441:5: lv_lineas_2_0= ruleLinea
             	    {
 
             	    					newCompositeNode(grammarAccess.getElseAccess().getLineasLineaParserRuleCall_2_0());
@@ -3920,25 +3949,25 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleElse"
 
 
-    // $ANTLR start "entryRuleExpresionNumerica"
-    // InternalBlockchain.g:1457:1: entryRuleExpresionNumerica returns [EObject current=null] : iv_ruleExpresionNumerica= ruleExpresionNumerica EOF ;
-    public final EObject entryRuleExpresionNumerica() throws RecognitionException {
+    // $ANTLR start "entryRuleExpresionNumericaInt"
+    // InternalBlockchain.g:1466:1: entryRuleExpresionNumericaInt returns [EObject current=null] : iv_ruleExpresionNumericaInt= ruleExpresionNumericaInt EOF ;
+    public final EObject entryRuleExpresionNumericaInt() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleExpresionNumerica = null;
+        EObject iv_ruleExpresionNumericaInt = null;
 
 
         try {
-            // InternalBlockchain.g:1457:58: (iv_ruleExpresionNumerica= ruleExpresionNumerica EOF )
-            // InternalBlockchain.g:1458:2: iv_ruleExpresionNumerica= ruleExpresionNumerica EOF
+            // InternalBlockchain.g:1466:61: (iv_ruleExpresionNumericaInt= ruleExpresionNumericaInt EOF )
+            // InternalBlockchain.g:1467:2: iv_ruleExpresionNumericaInt= ruleExpresionNumericaInt EOF
             {
-             newCompositeNode(grammarAccess.getExpresionNumericaRule()); 
+             newCompositeNode(grammarAccess.getExpresionNumericaIntRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleExpresionNumerica=ruleExpresionNumerica();
+            iv_ruleExpresionNumericaInt=ruleExpresionNumericaInt();
 
             state._fsp--;
 
-             current =iv_ruleExpresionNumerica; 
+             current =iv_ruleExpresionNumericaInt; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -3953,12 +3982,12 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleExpresionNumerica"
+    // $ANTLR end "entryRuleExpresionNumericaInt"
 
 
-    // $ANTLR start "ruleExpresionNumerica"
-    // InternalBlockchain.g:1464:1: ruleExpresionNumerica returns [EObject current=null] : ( () otherlv_1= 'ExpNum' ( (lv_value_2_0= ruleEDouble ) )? ) ;
-    public final EObject ruleExpresionNumerica() throws RecognitionException {
+    // $ANTLR start "ruleExpresionNumericaInt"
+    // InternalBlockchain.g:1473:1: ruleExpresionNumericaInt returns [EObject current=null] : ( () otherlv_1= 'ExpNum' ( (lv_value_2_0= ruleEInt ) )? ) ;
+    public final EObject ruleExpresionNumericaInt() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
@@ -3969,18 +3998,18 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:1470:2: ( ( () otherlv_1= 'ExpNum' ( (lv_value_2_0= ruleEDouble ) )? ) )
-            // InternalBlockchain.g:1471:2: ( () otherlv_1= 'ExpNum' ( (lv_value_2_0= ruleEDouble ) )? )
+            // InternalBlockchain.g:1479:2: ( ( () otherlv_1= 'ExpNum' ( (lv_value_2_0= ruleEInt ) )? ) )
+            // InternalBlockchain.g:1480:2: ( () otherlv_1= 'ExpNum' ( (lv_value_2_0= ruleEInt ) )? )
             {
-            // InternalBlockchain.g:1471:2: ( () otherlv_1= 'ExpNum' ( (lv_value_2_0= ruleEDouble ) )? )
-            // InternalBlockchain.g:1472:3: () otherlv_1= 'ExpNum' ( (lv_value_2_0= ruleEDouble ) )?
+            // InternalBlockchain.g:1480:2: ( () otherlv_1= 'ExpNum' ( (lv_value_2_0= ruleEInt ) )? )
+            // InternalBlockchain.g:1481:3: () otherlv_1= 'ExpNum' ( (lv_value_2_0= ruleEInt ) )?
             {
-            // InternalBlockchain.g:1472:3: ()
-            // InternalBlockchain.g:1473:4: 
+            // InternalBlockchain.g:1481:3: ()
+            // InternalBlockchain.g:1482:4: 
             {
 
             				current = forceCreateModelElement(
-            					grammarAccess.getExpresionNumericaAccess().getExpresionNumericaAction_0(),
+            					grammarAccess.getExpresionNumericaIntAccess().getExpresionNumericaIntAction_0(),
             					current);
             			
 
@@ -3988,45 +4017,186 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             otherlv_1=(Token)match(input,31,FOLLOW_29); 
 
-            			newLeafNode(otherlv_1, grammarAccess.getExpresionNumericaAccess().getExpNumKeyword_1());
+            			newLeafNode(otherlv_1, grammarAccess.getExpresionNumericaIntAccess().getExpNumKeyword_1());
             		
-            // InternalBlockchain.g:1483:3: ( (lv_value_2_0= ruleEDouble ) )?
+            // InternalBlockchain.g:1492:3: ( (lv_value_2_0= ruleEInt ) )?
             int alt39=2;
-            switch ( input.LA(1) ) {
-                case 38:
-                    {
-                    int LA39_1 = input.LA(2);
+            int LA39_0 = input.LA(1);
 
-                    if ( (LA39_1==RULE_INT||LA39_1==39) ) {
-                        alt39=1;
+            if ( (LA39_0==39) ) {
+                int LA39_1 = input.LA(2);
+
+                if ( (LA39_1==RULE_INT) ) {
+                    alt39=1;
+                }
+            }
+            else if ( (LA39_0==RULE_INT) ) {
+                alt39=1;
+            }
+            switch (alt39) {
+                case 1 :
+                    // InternalBlockchain.g:1493:4: (lv_value_2_0= ruleEInt )
+                    {
+                    // InternalBlockchain.g:1493:4: (lv_value_2_0= ruleEInt )
+                    // InternalBlockchain.g:1494:5: lv_value_2_0= ruleEInt
+                    {
+
+                    					newCompositeNode(grammarAccess.getExpresionNumericaIntAccess().getValueEIntParserRuleCall_2_0());
+                    				
+                    pushFollow(FOLLOW_2);
+                    lv_value_2_0=ruleEInt();
+
+                    state._fsp--;
+
+
+                    					if (current==null) {
+                    						current = createModelElementForParent(grammarAccess.getExpresionNumericaIntRule());
+                    					}
+                    					set(
+                    						current,
+                    						"value",
+                    						lv_value_2_0,
+                    						"uniandes.mdd.aplicacion.blockchain.Blockchain.EInt");
+                    					afterParserOrEnumRuleCall();
+                    				
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleExpresionNumericaInt"
+
+
+    // $ANTLR start "entryRuleExpresionNumericaDouble"
+    // InternalBlockchain.g:1515:1: entryRuleExpresionNumericaDouble returns [EObject current=null] : iv_ruleExpresionNumericaDouble= ruleExpresionNumericaDouble EOF ;
+    public final EObject entryRuleExpresionNumericaDouble() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleExpresionNumericaDouble = null;
+
+
+        try {
+            // InternalBlockchain.g:1515:64: (iv_ruleExpresionNumericaDouble= ruleExpresionNumericaDouble EOF )
+            // InternalBlockchain.g:1516:2: iv_ruleExpresionNumericaDouble= ruleExpresionNumericaDouble EOF
+            {
+             newCompositeNode(grammarAccess.getExpresionNumericaDoubleRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleExpresionNumericaDouble=ruleExpresionNumericaDouble();
+
+            state._fsp--;
+
+             current =iv_ruleExpresionNumericaDouble; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleExpresionNumericaDouble"
+
+
+    // $ANTLR start "ruleExpresionNumericaDouble"
+    // InternalBlockchain.g:1522:1: ruleExpresionNumericaDouble returns [EObject current=null] : ( () otherlv_1= 'ExpNumDouble' ( (lv_value_2_0= ruleEDouble ) )? ) ;
+    public final EObject ruleExpresionNumericaDouble() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_1=null;
+        AntlrDatatypeRuleToken lv_value_2_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalBlockchain.g:1528:2: ( ( () otherlv_1= 'ExpNumDouble' ( (lv_value_2_0= ruleEDouble ) )? ) )
+            // InternalBlockchain.g:1529:2: ( () otherlv_1= 'ExpNumDouble' ( (lv_value_2_0= ruleEDouble ) )? )
+            {
+            // InternalBlockchain.g:1529:2: ( () otherlv_1= 'ExpNumDouble' ( (lv_value_2_0= ruleEDouble ) )? )
+            // InternalBlockchain.g:1530:3: () otherlv_1= 'ExpNumDouble' ( (lv_value_2_0= ruleEDouble ) )?
+            {
+            // InternalBlockchain.g:1530:3: ()
+            // InternalBlockchain.g:1531:4: 
+            {
+
+            				current = forceCreateModelElement(
+            					grammarAccess.getExpresionNumericaDoubleAccess().getExpresionNumericaDoubleAction_0(),
+            					current);
+            			
+
+            }
+
+            otherlv_1=(Token)match(input,32,FOLLOW_30); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getExpresionNumericaDoubleAccess().getExpNumDoubleKeyword_1());
+            		
+            // InternalBlockchain.g:1541:3: ( (lv_value_2_0= ruleEDouble ) )?
+            int alt40=2;
+            switch ( input.LA(1) ) {
+                case 39:
+                    {
+                    int LA40_1 = input.LA(2);
+
+                    if ( (LA40_1==RULE_INT||LA40_1==40) ) {
+                        alt40=1;
                     }
                     }
                     break;
                 case RULE_INT:
                     {
-                    alt39=1;
+                    alt40=1;
                     }
                     break;
-                case 39:
+                case 40:
                     {
-                    int LA39_3 = input.LA(2);
+                    int LA40_3 = input.LA(2);
 
-                    if ( (LA39_3==RULE_INT) ) {
-                        alt39=1;
+                    if ( (LA40_3==RULE_INT) ) {
+                        alt40=1;
                     }
                     }
                     break;
             }
 
-            switch (alt39) {
+            switch (alt40) {
                 case 1 :
-                    // InternalBlockchain.g:1484:4: (lv_value_2_0= ruleEDouble )
+                    // InternalBlockchain.g:1542:4: (lv_value_2_0= ruleEDouble )
                     {
-                    // InternalBlockchain.g:1484:4: (lv_value_2_0= ruleEDouble )
-                    // InternalBlockchain.g:1485:5: lv_value_2_0= ruleEDouble
+                    // InternalBlockchain.g:1542:4: (lv_value_2_0= ruleEDouble )
+                    // InternalBlockchain.g:1543:5: lv_value_2_0= ruleEDouble
                     {
 
-                    					newCompositeNode(grammarAccess.getExpresionNumericaAccess().getValueEDoubleParserRuleCall_2_0());
+                    					newCompositeNode(grammarAccess.getExpresionNumericaDoubleAccess().getValueEDoubleParserRuleCall_2_0());
                     				
                     pushFollow(FOLLOW_2);
                     lv_value_2_0=ruleEDouble();
@@ -4035,7 +4205,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
                     					if (current==null) {
-                    						current = createModelElementForParent(grammarAccess.getExpresionNumericaRule());
+                    						current = createModelElementForParent(grammarAccess.getExpresionNumericaDoubleRule());
                     					}
                     					set(
                     						current,
@@ -4072,11 +4242,11 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleExpresionNumerica"
+    // $ANTLR end "ruleExpresionNumericaDouble"
 
 
     // $ANTLR start "entryRuleExpresionTexto"
-    // InternalBlockchain.g:1506:1: entryRuleExpresionTexto returns [EObject current=null] : iv_ruleExpresionTexto= ruleExpresionTexto EOF ;
+    // InternalBlockchain.g:1564:1: entryRuleExpresionTexto returns [EObject current=null] : iv_ruleExpresionTexto= ruleExpresionTexto EOF ;
     public final EObject entryRuleExpresionTexto() throws RecognitionException {
         EObject current = null;
 
@@ -4084,8 +4254,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:1506:55: (iv_ruleExpresionTexto= ruleExpresionTexto EOF )
-            // InternalBlockchain.g:1507:2: iv_ruleExpresionTexto= ruleExpresionTexto EOF
+            // InternalBlockchain.g:1564:55: (iv_ruleExpresionTexto= ruleExpresionTexto EOF )
+            // InternalBlockchain.g:1565:2: iv_ruleExpresionTexto= ruleExpresionTexto EOF
             {
              newCompositeNode(grammarAccess.getExpresionTextoRule()); 
             pushFollow(FOLLOW_1);
@@ -4112,7 +4282,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpresionTexto"
-    // InternalBlockchain.g:1513:1: ruleExpresionTexto returns [EObject current=null] : ( () otherlv_1= 'ExpTex' ( (lv_value_2_0= ruleEString ) )? ) ;
+    // InternalBlockchain.g:1571:1: ruleExpresionTexto returns [EObject current=null] : ( () otherlv_1= 'ExpTex' ( (lv_value_2_0= ruleEString ) )? ) ;
     public final EObject ruleExpresionTexto() throws RecognitionException {
         EObject current = null;
 
@@ -4124,14 +4294,14 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:1519:2: ( ( () otherlv_1= 'ExpTex' ( (lv_value_2_0= ruleEString ) )? ) )
-            // InternalBlockchain.g:1520:2: ( () otherlv_1= 'ExpTex' ( (lv_value_2_0= ruleEString ) )? )
+            // InternalBlockchain.g:1577:2: ( ( () otherlv_1= 'ExpTex' ( (lv_value_2_0= ruleEString ) )? ) )
+            // InternalBlockchain.g:1578:2: ( () otherlv_1= 'ExpTex' ( (lv_value_2_0= ruleEString ) )? )
             {
-            // InternalBlockchain.g:1520:2: ( () otherlv_1= 'ExpTex' ( (lv_value_2_0= ruleEString ) )? )
-            // InternalBlockchain.g:1521:3: () otherlv_1= 'ExpTex' ( (lv_value_2_0= ruleEString ) )?
+            // InternalBlockchain.g:1578:2: ( () otherlv_1= 'ExpTex' ( (lv_value_2_0= ruleEString ) )? )
+            // InternalBlockchain.g:1579:3: () otherlv_1= 'ExpTex' ( (lv_value_2_0= ruleEString ) )?
             {
-            // InternalBlockchain.g:1521:3: ()
-            // InternalBlockchain.g:1522:4: 
+            // InternalBlockchain.g:1579:3: ()
+            // InternalBlockchain.g:1580:4: 
             {
 
             				current = forceCreateModelElement(
@@ -4141,23 +4311,23 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,32,FOLLOW_25); 
+            otherlv_1=(Token)match(input,33,FOLLOW_25); 
 
             			newLeafNode(otherlv_1, grammarAccess.getExpresionTextoAccess().getExpTexKeyword_1());
             		
-            // InternalBlockchain.g:1532:3: ( (lv_value_2_0= ruleEString ) )?
-            int alt40=2;
-            int LA40_0 = input.LA(1);
+            // InternalBlockchain.g:1590:3: ( (lv_value_2_0= ruleEString ) )?
+            int alt41=2;
+            int LA41_0 = input.LA(1);
 
-            if ( ((LA40_0>=RULE_STRING && LA40_0<=RULE_ID)) ) {
-                alt40=1;
+            if ( ((LA41_0>=RULE_STRING && LA41_0<=RULE_ID)) ) {
+                alt41=1;
             }
-            switch (alt40) {
+            switch (alt41) {
                 case 1 :
-                    // InternalBlockchain.g:1533:4: (lv_value_2_0= ruleEString )
+                    // InternalBlockchain.g:1591:4: (lv_value_2_0= ruleEString )
                     {
-                    // InternalBlockchain.g:1533:4: (lv_value_2_0= ruleEString )
-                    // InternalBlockchain.g:1534:5: lv_value_2_0= ruleEString
+                    // InternalBlockchain.g:1591:4: (lv_value_2_0= ruleEString )
+                    // InternalBlockchain.g:1592:5: lv_value_2_0= ruleEString
                     {
 
                     					newCompositeNode(grammarAccess.getExpresionTextoAccess().getValueEStringParserRuleCall_2_0());
@@ -4210,7 +4380,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExpresionBoolean"
-    // InternalBlockchain.g:1555:1: entryRuleExpresionBoolean returns [EObject current=null] : iv_ruleExpresionBoolean= ruleExpresionBoolean EOF ;
+    // InternalBlockchain.g:1613:1: entryRuleExpresionBoolean returns [EObject current=null] : iv_ruleExpresionBoolean= ruleExpresionBoolean EOF ;
     public final EObject entryRuleExpresionBoolean() throws RecognitionException {
         EObject current = null;
 
@@ -4218,8 +4388,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:1555:57: (iv_ruleExpresionBoolean= ruleExpresionBoolean EOF )
-            // InternalBlockchain.g:1556:2: iv_ruleExpresionBoolean= ruleExpresionBoolean EOF
+            // InternalBlockchain.g:1613:57: (iv_ruleExpresionBoolean= ruleExpresionBoolean EOF )
+            // InternalBlockchain.g:1614:2: iv_ruleExpresionBoolean= ruleExpresionBoolean EOF
             {
              newCompositeNode(grammarAccess.getExpresionBooleanRule()); 
             pushFollow(FOLLOW_1);
@@ -4246,7 +4416,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpresionBoolean"
-    // InternalBlockchain.g:1562:1: ruleExpresionBoolean returns [EObject current=null] : ( () otherlv_1= 'ExpBool' ( (lv_value_2_0= ruleEBoolean ) )? ) ;
+    // InternalBlockchain.g:1620:1: ruleExpresionBoolean returns [EObject current=null] : ( () otherlv_1= 'ExpBool' ( (lv_value_2_0= ruleEBoolean ) )? ) ;
     public final EObject ruleExpresionBoolean() throws RecognitionException {
         EObject current = null;
 
@@ -4258,14 +4428,14 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:1568:2: ( ( () otherlv_1= 'ExpBool' ( (lv_value_2_0= ruleEBoolean ) )? ) )
-            // InternalBlockchain.g:1569:2: ( () otherlv_1= 'ExpBool' ( (lv_value_2_0= ruleEBoolean ) )? )
+            // InternalBlockchain.g:1626:2: ( ( () otherlv_1= 'ExpBool' ( (lv_value_2_0= ruleEBoolean ) )? ) )
+            // InternalBlockchain.g:1627:2: ( () otherlv_1= 'ExpBool' ( (lv_value_2_0= ruleEBoolean ) )? )
             {
-            // InternalBlockchain.g:1569:2: ( () otherlv_1= 'ExpBool' ( (lv_value_2_0= ruleEBoolean ) )? )
-            // InternalBlockchain.g:1570:3: () otherlv_1= 'ExpBool' ( (lv_value_2_0= ruleEBoolean ) )?
+            // InternalBlockchain.g:1627:2: ( () otherlv_1= 'ExpBool' ( (lv_value_2_0= ruleEBoolean ) )? )
+            // InternalBlockchain.g:1628:3: () otherlv_1= 'ExpBool' ( (lv_value_2_0= ruleEBoolean ) )?
             {
-            // InternalBlockchain.g:1570:3: ()
-            // InternalBlockchain.g:1571:4: 
+            // InternalBlockchain.g:1628:3: ()
+            // InternalBlockchain.g:1629:4: 
             {
 
             				current = forceCreateModelElement(
@@ -4275,23 +4445,23 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,33,FOLLOW_30); 
+            otherlv_1=(Token)match(input,34,FOLLOW_31); 
 
             			newLeafNode(otherlv_1, grammarAccess.getExpresionBooleanAccess().getExpBoolKeyword_1());
             		
-            // InternalBlockchain.g:1581:3: ( (lv_value_2_0= ruleEBoolean ) )?
-            int alt41=2;
-            int LA41_0 = input.LA(1);
+            // InternalBlockchain.g:1639:3: ( (lv_value_2_0= ruleEBoolean ) )?
+            int alt42=2;
+            int LA42_0 = input.LA(1);
 
-            if ( ((LA41_0>=24 && LA41_0<=25)) ) {
-                alt41=1;
+            if ( ((LA42_0>=24 && LA42_0<=25)) ) {
+                alt42=1;
             }
-            switch (alt41) {
+            switch (alt42) {
                 case 1 :
-                    // InternalBlockchain.g:1582:4: (lv_value_2_0= ruleEBoolean )
+                    // InternalBlockchain.g:1640:4: (lv_value_2_0= ruleEBoolean )
                     {
-                    // InternalBlockchain.g:1582:4: (lv_value_2_0= ruleEBoolean )
-                    // InternalBlockchain.g:1583:5: lv_value_2_0= ruleEBoolean
+                    // InternalBlockchain.g:1640:4: (lv_value_2_0= ruleEBoolean )
+                    // InternalBlockchain.g:1641:5: lv_value_2_0= ruleEBoolean
                     {
 
                     					newCompositeNode(grammarAccess.getExpresionBooleanAccess().getValueEBooleanParserRuleCall_2_0());
@@ -4344,7 +4514,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExpresionReferenciada"
-    // InternalBlockchain.g:1604:1: entryRuleExpresionReferenciada returns [EObject current=null] : iv_ruleExpresionReferenciada= ruleExpresionReferenciada EOF ;
+    // InternalBlockchain.g:1662:1: entryRuleExpresionReferenciada returns [EObject current=null] : iv_ruleExpresionReferenciada= ruleExpresionReferenciada EOF ;
     public final EObject entryRuleExpresionReferenciada() throws RecognitionException {
         EObject current = null;
 
@@ -4352,8 +4522,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:1604:62: (iv_ruleExpresionReferenciada= ruleExpresionReferenciada EOF )
-            // InternalBlockchain.g:1605:2: iv_ruleExpresionReferenciada= ruleExpresionReferenciada EOF
+            // InternalBlockchain.g:1662:62: (iv_ruleExpresionReferenciada= ruleExpresionReferenciada EOF )
+            // InternalBlockchain.g:1663:2: iv_ruleExpresionReferenciada= ruleExpresionReferenciada EOF
             {
              newCompositeNode(grammarAccess.getExpresionReferenciadaRule()); 
             pushFollow(FOLLOW_1);
@@ -4380,7 +4550,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpresionReferenciada"
-    // InternalBlockchain.g:1611:1: ruleExpresionReferenciada returns [EObject current=null] : (otherlv_0= 'ExpRef' otherlv_1= '{' (otherlv_2= 'id' ( (lv_id_3_0= ruleEInt ) ) )? ( ( ruleEString ) ) otherlv_5= '}' ) ;
+    // InternalBlockchain.g:1669:1: ruleExpresionReferenciada returns [EObject current=null] : (otherlv_0= 'ExpRef' otherlv_1= '{' (otherlv_2= 'id' ( (lv_id_3_0= ruleEInt ) ) )? ( ( ruleEString ) ) otherlv_5= '}' ) ;
     public final EObject ruleExpresionReferenciada() throws RecognitionException {
         EObject current = null;
 
@@ -4395,40 +4565,40 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:1617:2: ( (otherlv_0= 'ExpRef' otherlv_1= '{' (otherlv_2= 'id' ( (lv_id_3_0= ruleEInt ) ) )? ( ( ruleEString ) ) otherlv_5= '}' ) )
-            // InternalBlockchain.g:1618:2: (otherlv_0= 'ExpRef' otherlv_1= '{' (otherlv_2= 'id' ( (lv_id_3_0= ruleEInt ) ) )? ( ( ruleEString ) ) otherlv_5= '}' )
+            // InternalBlockchain.g:1675:2: ( (otherlv_0= 'ExpRef' otherlv_1= '{' (otherlv_2= 'id' ( (lv_id_3_0= ruleEInt ) ) )? ( ( ruleEString ) ) otherlv_5= '}' ) )
+            // InternalBlockchain.g:1676:2: (otherlv_0= 'ExpRef' otherlv_1= '{' (otherlv_2= 'id' ( (lv_id_3_0= ruleEInt ) ) )? ( ( ruleEString ) ) otherlv_5= '}' )
             {
-            // InternalBlockchain.g:1618:2: (otherlv_0= 'ExpRef' otherlv_1= '{' (otherlv_2= 'id' ( (lv_id_3_0= ruleEInt ) ) )? ( ( ruleEString ) ) otherlv_5= '}' )
-            // InternalBlockchain.g:1619:3: otherlv_0= 'ExpRef' otherlv_1= '{' (otherlv_2= 'id' ( (lv_id_3_0= ruleEInt ) ) )? ( ( ruleEString ) ) otherlv_5= '}'
+            // InternalBlockchain.g:1676:2: (otherlv_0= 'ExpRef' otherlv_1= '{' (otherlv_2= 'id' ( (lv_id_3_0= ruleEInt ) ) )? ( ( ruleEString ) ) otherlv_5= '}' )
+            // InternalBlockchain.g:1677:3: otherlv_0= 'ExpRef' otherlv_1= '{' (otherlv_2= 'id' ( (lv_id_3_0= ruleEInt ) ) )? ( ( ruleEString ) ) otherlv_5= '}'
             {
-            otherlv_0=(Token)match(input,34,FOLLOW_4); 
+            otherlv_0=(Token)match(input,35,FOLLOW_4); 
 
             			newLeafNode(otherlv_0, grammarAccess.getExpresionReferenciadaAccess().getExpRefKeyword_0());
             		
-            otherlv_1=(Token)match(input,12,FOLLOW_31); 
+            otherlv_1=(Token)match(input,12,FOLLOW_32); 
 
             			newLeafNode(otherlv_1, grammarAccess.getExpresionReferenciadaAccess().getLeftCurlyBracketKeyword_1());
             		
-            // InternalBlockchain.g:1627:3: (otherlv_2= 'id' ( (lv_id_3_0= ruleEInt ) ) )?
-            int alt42=2;
-            int LA42_0 = input.LA(1);
+            // InternalBlockchain.g:1685:3: (otherlv_2= 'id' ( (lv_id_3_0= ruleEInt ) ) )?
+            int alt43=2;
+            int LA43_0 = input.LA(1);
 
-            if ( (LA42_0==35) ) {
-                alt42=1;
+            if ( (LA43_0==36) ) {
+                alt43=1;
             }
-            switch (alt42) {
+            switch (alt43) {
                 case 1 :
-                    // InternalBlockchain.g:1628:4: otherlv_2= 'id' ( (lv_id_3_0= ruleEInt ) )
+                    // InternalBlockchain.g:1686:4: otherlv_2= 'id' ( (lv_id_3_0= ruleEInt ) )
                     {
-                    otherlv_2=(Token)match(input,35,FOLLOW_32); 
+                    otherlv_2=(Token)match(input,36,FOLLOW_33); 
 
                     				newLeafNode(otherlv_2, grammarAccess.getExpresionReferenciadaAccess().getIdKeyword_2_0());
                     			
-                    // InternalBlockchain.g:1632:4: ( (lv_id_3_0= ruleEInt ) )
-                    // InternalBlockchain.g:1633:5: (lv_id_3_0= ruleEInt )
+                    // InternalBlockchain.g:1690:4: ( (lv_id_3_0= ruleEInt ) )
+                    // InternalBlockchain.g:1691:5: (lv_id_3_0= ruleEInt )
                     {
-                    // InternalBlockchain.g:1633:5: (lv_id_3_0= ruleEInt )
-                    // InternalBlockchain.g:1634:6: lv_id_3_0= ruleEInt
+                    // InternalBlockchain.g:1691:5: (lv_id_3_0= ruleEInt )
+                    // InternalBlockchain.g:1692:6: lv_id_3_0= ruleEInt
                     {
 
                     						newCompositeNode(grammarAccess.getExpresionReferenciadaAccess().getIdEIntParserRuleCall_2_1_0());
@@ -4461,11 +4631,11 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBlockchain.g:1652:3: ( ( ruleEString ) )
-            // InternalBlockchain.g:1653:4: ( ruleEString )
+            // InternalBlockchain.g:1710:3: ( ( ruleEString ) )
+            // InternalBlockchain.g:1711:4: ( ruleEString )
             {
-            // InternalBlockchain.g:1653:4: ( ruleEString )
-            // InternalBlockchain.g:1654:5: ruleEString
+            // InternalBlockchain.g:1711:4: ( ruleEString )
+            // InternalBlockchain.g:1712:5: ruleEString
             {
 
             					if (current==null) {
@@ -4475,7 +4645,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getExpresionReferenciadaAccess().getReferenciaNamedElementCrossReference_3_0());
             				
-            pushFollow(FOLLOW_33);
+            pushFollow(FOLLOW_34);
             ruleEString();
 
             state._fsp--;
@@ -4516,7 +4686,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExpresionRelacional"
-    // InternalBlockchain.g:1676:1: entryRuleExpresionRelacional returns [EObject current=null] : iv_ruleExpresionRelacional= ruleExpresionRelacional EOF ;
+    // InternalBlockchain.g:1734:1: entryRuleExpresionRelacional returns [EObject current=null] : iv_ruleExpresionRelacional= ruleExpresionRelacional EOF ;
     public final EObject entryRuleExpresionRelacional() throws RecognitionException {
         EObject current = null;
 
@@ -4524,8 +4694,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:1676:60: (iv_ruleExpresionRelacional= ruleExpresionRelacional EOF )
-            // InternalBlockchain.g:1677:2: iv_ruleExpresionRelacional= ruleExpresionRelacional EOF
+            // InternalBlockchain.g:1734:60: (iv_ruleExpresionRelacional= ruleExpresionRelacional EOF )
+            // InternalBlockchain.g:1735:2: iv_ruleExpresionRelacional= ruleExpresionRelacional EOF
             {
              newCompositeNode(grammarAccess.getExpresionRelacionalRule()); 
             pushFollow(FOLLOW_1);
@@ -4552,7 +4722,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpresionRelacional"
-    // InternalBlockchain.g:1683:1: ruleExpresionRelacional returns [EObject current=null] : (otherlv_0= 'ExpRel' ( (lv_izq_1_0= ruleExpresion ) ) ( (lv_operadorRelacional_2_0= ruleOperadorRelacion ) )? ( (lv_der_3_0= ruleExpresion ) ) ) ;
+    // InternalBlockchain.g:1741:1: ruleExpresionRelacional returns [EObject current=null] : (otherlv_0= 'ExpRel' ( (lv_izq_1_0= ruleExpresion ) ) ( (lv_operadorRelacional_2_0= ruleOperadorRelacion ) )? ( (lv_der_3_0= ruleExpresion ) ) ) ;
     public final EObject ruleExpresionRelacional() throws RecognitionException {
         EObject current = null;
 
@@ -4568,26 +4738,26 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:1689:2: ( (otherlv_0= 'ExpRel' ( (lv_izq_1_0= ruleExpresion ) ) ( (lv_operadorRelacional_2_0= ruleOperadorRelacion ) )? ( (lv_der_3_0= ruleExpresion ) ) ) )
-            // InternalBlockchain.g:1690:2: (otherlv_0= 'ExpRel' ( (lv_izq_1_0= ruleExpresion ) ) ( (lv_operadorRelacional_2_0= ruleOperadorRelacion ) )? ( (lv_der_3_0= ruleExpresion ) ) )
+            // InternalBlockchain.g:1747:2: ( (otherlv_0= 'ExpRel' ( (lv_izq_1_0= ruleExpresion ) ) ( (lv_operadorRelacional_2_0= ruleOperadorRelacion ) )? ( (lv_der_3_0= ruleExpresion ) ) ) )
+            // InternalBlockchain.g:1748:2: (otherlv_0= 'ExpRel' ( (lv_izq_1_0= ruleExpresion ) ) ( (lv_operadorRelacional_2_0= ruleOperadorRelacion ) )? ( (lv_der_3_0= ruleExpresion ) ) )
             {
-            // InternalBlockchain.g:1690:2: (otherlv_0= 'ExpRel' ( (lv_izq_1_0= ruleExpresion ) ) ( (lv_operadorRelacional_2_0= ruleOperadorRelacion ) )? ( (lv_der_3_0= ruleExpresion ) ) )
-            // InternalBlockchain.g:1691:3: otherlv_0= 'ExpRel' ( (lv_izq_1_0= ruleExpresion ) ) ( (lv_operadorRelacional_2_0= ruleOperadorRelacion ) )? ( (lv_der_3_0= ruleExpresion ) )
+            // InternalBlockchain.g:1748:2: (otherlv_0= 'ExpRel' ( (lv_izq_1_0= ruleExpresion ) ) ( (lv_operadorRelacional_2_0= ruleOperadorRelacion ) )? ( (lv_der_3_0= ruleExpresion ) ) )
+            // InternalBlockchain.g:1749:3: otherlv_0= 'ExpRel' ( (lv_izq_1_0= ruleExpresion ) ) ( (lv_operadorRelacional_2_0= ruleOperadorRelacion ) )? ( (lv_der_3_0= ruleExpresion ) )
             {
-            otherlv_0=(Token)match(input,36,FOLLOW_34); 
+            otherlv_0=(Token)match(input,37,FOLLOW_35); 
 
             			newLeafNode(otherlv_0, grammarAccess.getExpresionRelacionalAccess().getExpRelKeyword_0());
             		
-            // InternalBlockchain.g:1695:3: ( (lv_izq_1_0= ruleExpresion ) )
-            // InternalBlockchain.g:1696:4: (lv_izq_1_0= ruleExpresion )
+            // InternalBlockchain.g:1753:3: ( (lv_izq_1_0= ruleExpresion ) )
+            // InternalBlockchain.g:1754:4: (lv_izq_1_0= ruleExpresion )
             {
-            // InternalBlockchain.g:1696:4: (lv_izq_1_0= ruleExpresion )
-            // InternalBlockchain.g:1697:5: lv_izq_1_0= ruleExpresion
+            // InternalBlockchain.g:1754:4: (lv_izq_1_0= ruleExpresion )
+            // InternalBlockchain.g:1755:5: lv_izq_1_0= ruleExpresion
             {
 
             					newCompositeNode(grammarAccess.getExpresionRelacionalAccess().getIzqExpresionParserRuleCall_1_0());
             				
-            pushFollow(FOLLOW_35);
+            pushFollow(FOLLOW_36);
             lv_izq_1_0=ruleExpresion();
 
             state._fsp--;
@@ -4609,24 +4779,24 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBlockchain.g:1714:3: ( (lv_operadorRelacional_2_0= ruleOperadorRelacion ) )?
-            int alt43=2;
-            int LA43_0 = input.LA(1);
+            // InternalBlockchain.g:1772:3: ( (lv_operadorRelacional_2_0= ruleOperadorRelacion ) )?
+            int alt44=2;
+            int LA44_0 = input.LA(1);
 
-            if ( (LA43_0==39) ) {
-                alt43=1;
+            if ( (LA44_0==40) ) {
+                alt44=1;
             }
-            switch (alt43) {
+            switch (alt44) {
                 case 1 :
-                    // InternalBlockchain.g:1715:4: (lv_operadorRelacional_2_0= ruleOperadorRelacion )
+                    // InternalBlockchain.g:1773:4: (lv_operadorRelacional_2_0= ruleOperadorRelacion )
                     {
-                    // InternalBlockchain.g:1715:4: (lv_operadorRelacional_2_0= ruleOperadorRelacion )
-                    // InternalBlockchain.g:1716:5: lv_operadorRelacional_2_0= ruleOperadorRelacion
+                    // InternalBlockchain.g:1773:4: (lv_operadorRelacional_2_0= ruleOperadorRelacion )
+                    // InternalBlockchain.g:1774:5: lv_operadorRelacional_2_0= ruleOperadorRelacion
                     {
 
                     					newCompositeNode(grammarAccess.getExpresionRelacionalAccess().getOperadorRelacionalOperadorRelacionEnumRuleCall_2_0());
                     				
-                    pushFollow(FOLLOW_34);
+                    pushFollow(FOLLOW_35);
                     lv_operadorRelacional_2_0=ruleOperadorRelacion();
 
                     state._fsp--;
@@ -4651,11 +4821,11 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBlockchain.g:1733:3: ( (lv_der_3_0= ruleExpresion ) )
-            // InternalBlockchain.g:1734:4: (lv_der_3_0= ruleExpresion )
+            // InternalBlockchain.g:1791:3: ( (lv_der_3_0= ruleExpresion ) )
+            // InternalBlockchain.g:1792:4: (lv_der_3_0= ruleExpresion )
             {
-            // InternalBlockchain.g:1734:4: (lv_der_3_0= ruleExpresion )
-            // InternalBlockchain.g:1735:5: lv_der_3_0= ruleExpresion
+            // InternalBlockchain.g:1792:4: (lv_der_3_0= ruleExpresion )
+            // InternalBlockchain.g:1793:5: lv_der_3_0= ruleExpresion
             {
 
             					newCompositeNode(grammarAccess.getExpresionRelacionalAccess().getDerExpresionParserRuleCall_3_0());
@@ -4705,7 +4875,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRetorno"
-    // InternalBlockchain.g:1756:1: entryRuleRetorno returns [EObject current=null] : iv_ruleRetorno= ruleRetorno EOF ;
+    // InternalBlockchain.g:1814:1: entryRuleRetorno returns [EObject current=null] : iv_ruleRetorno= ruleRetorno EOF ;
     public final EObject entryRuleRetorno() throws RecognitionException {
         EObject current = null;
 
@@ -4713,8 +4883,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:1756:48: (iv_ruleRetorno= ruleRetorno EOF )
-            // InternalBlockchain.g:1757:2: iv_ruleRetorno= ruleRetorno EOF
+            // InternalBlockchain.g:1814:48: (iv_ruleRetorno= ruleRetorno EOF )
+            // InternalBlockchain.g:1815:2: iv_ruleRetorno= ruleRetorno EOF
             {
              newCompositeNode(grammarAccess.getRetornoRule()); 
             pushFollow(FOLLOW_1);
@@ -4741,7 +4911,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRetorno"
-    // InternalBlockchain.g:1763:1: ruleRetorno returns [EObject current=null] : (otherlv_0= 'return' otherlv_1= '{' ( (lv_lineaRetorno_2_0= ruleLinea ) )* otherlv_3= '}' ) ;
+    // InternalBlockchain.g:1821:1: ruleRetorno returns [EObject current=null] : (otherlv_0= 'return' otherlv_1= '{' ( (lv_lineaRetorno_2_0= ruleLinea ) )* otherlv_3= '}' ) ;
     public final EObject ruleRetorno() throws RecognitionException {
         EObject current = null;
 
@@ -4755,13 +4925,13 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:1769:2: ( (otherlv_0= 'return' otherlv_1= '{' ( (lv_lineaRetorno_2_0= ruleLinea ) )* otherlv_3= '}' ) )
-            // InternalBlockchain.g:1770:2: (otherlv_0= 'return' otherlv_1= '{' ( (lv_lineaRetorno_2_0= ruleLinea ) )* otherlv_3= '}' )
+            // InternalBlockchain.g:1827:2: ( (otherlv_0= 'return' otherlv_1= '{' ( (lv_lineaRetorno_2_0= ruleLinea ) )* otherlv_3= '}' ) )
+            // InternalBlockchain.g:1828:2: (otherlv_0= 'return' otherlv_1= '{' ( (lv_lineaRetorno_2_0= ruleLinea ) )* otherlv_3= '}' )
             {
-            // InternalBlockchain.g:1770:2: (otherlv_0= 'return' otherlv_1= '{' ( (lv_lineaRetorno_2_0= ruleLinea ) )* otherlv_3= '}' )
-            // InternalBlockchain.g:1771:3: otherlv_0= 'return' otherlv_1= '{' ( (lv_lineaRetorno_2_0= ruleLinea ) )* otherlv_3= '}'
+            // InternalBlockchain.g:1828:2: (otherlv_0= 'return' otherlv_1= '{' ( (lv_lineaRetorno_2_0= ruleLinea ) )* otherlv_3= '}' )
+            // InternalBlockchain.g:1829:3: otherlv_0= 'return' otherlv_1= '{' ( (lv_lineaRetorno_2_0= ruleLinea ) )* otherlv_3= '}'
             {
-            otherlv_0=(Token)match(input,37,FOLLOW_4); 
+            otherlv_0=(Token)match(input,38,FOLLOW_4); 
 
             			newLeafNode(otherlv_0, grammarAccess.getRetornoAccess().getReturnKeyword_0());
             		
@@ -4769,23 +4939,23 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getRetornoAccess().getLeftCurlyBracketKeyword_1());
             		
-            // InternalBlockchain.g:1779:3: ( (lv_lineaRetorno_2_0= ruleLinea ) )*
-            loop44:
+            // InternalBlockchain.g:1837:3: ( (lv_lineaRetorno_2_0= ruleLinea ) )*
+            loop45:
             do {
-                int alt44=2;
-                int LA44_0 = input.LA(1);
+                int alt45=2;
+                int LA45_0 = input.LA(1);
 
-                if ( ((LA44_0>=26 && LA44_0<=29)||(LA44_0>=31 && LA44_0<=34)||(LA44_0>=36 && LA44_0<=37)) ) {
-                    alt44=1;
+                if ( ((LA45_0>=26 && LA45_0<=29)||(LA45_0>=31 && LA45_0<=35)||(LA45_0>=37 && LA45_0<=38)) ) {
+                    alt45=1;
                 }
 
 
-                switch (alt44) {
+                switch (alt45) {
             	case 1 :
-            	    // InternalBlockchain.g:1780:4: (lv_lineaRetorno_2_0= ruleLinea )
+            	    // InternalBlockchain.g:1838:4: (lv_lineaRetorno_2_0= ruleLinea )
             	    {
-            	    // InternalBlockchain.g:1780:4: (lv_lineaRetorno_2_0= ruleLinea )
-            	    // InternalBlockchain.g:1781:5: lv_lineaRetorno_2_0= ruleLinea
+            	    // InternalBlockchain.g:1838:4: (lv_lineaRetorno_2_0= ruleLinea )
+            	    // InternalBlockchain.g:1839:5: lv_lineaRetorno_2_0= ruleLinea
             	    {
 
             	    					newCompositeNode(grammarAccess.getRetornoAccess().getLineaRetornoLineaParserRuleCall_2_0());
@@ -4814,7 +4984,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop44;
+            	    break loop45;
                 }
             } while (true);
 
@@ -4845,7 +5015,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEDouble"
-    // InternalBlockchain.g:1806:1: entryRuleEDouble returns [String current=null] : iv_ruleEDouble= ruleEDouble EOF ;
+    // InternalBlockchain.g:1864:1: entryRuleEDouble returns [String current=null] : iv_ruleEDouble= ruleEDouble EOF ;
     public final String entryRuleEDouble() throws RecognitionException {
         String current = null;
 
@@ -4853,8 +5023,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:1806:47: (iv_ruleEDouble= ruleEDouble EOF )
-            // InternalBlockchain.g:1807:2: iv_ruleEDouble= ruleEDouble EOF
+            // InternalBlockchain.g:1864:47: (iv_ruleEDouble= ruleEDouble EOF )
+            // InternalBlockchain.g:1865:2: iv_ruleEDouble= ruleEDouble EOF
             {
              newCompositeNode(grammarAccess.getEDoubleRule()); 
             pushFollow(FOLLOW_1);
@@ -4881,7 +5051,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEDouble"
-    // InternalBlockchain.g:1813:1: ruleEDouble returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? ) ;
+    // InternalBlockchain.g:1871:1: ruleEDouble returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? ) ;
     public final AntlrDatatypeRuleToken ruleEDouble() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4894,24 +5064,24 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:1819:2: ( ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? ) )
-            // InternalBlockchain.g:1820:2: ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? )
+            // InternalBlockchain.g:1877:2: ( ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? ) )
+            // InternalBlockchain.g:1878:2: ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? )
             {
-            // InternalBlockchain.g:1820:2: ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? )
-            // InternalBlockchain.g:1821:3: (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )?
+            // InternalBlockchain.g:1878:2: ( (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )? )
+            // InternalBlockchain.g:1879:3: (kw= '-' )? (this_INT_1= RULE_INT )? kw= '.' this_INT_3= RULE_INT ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )?
             {
-            // InternalBlockchain.g:1821:3: (kw= '-' )?
-            int alt45=2;
-            int LA45_0 = input.LA(1);
+            // InternalBlockchain.g:1879:3: (kw= '-' )?
+            int alt46=2;
+            int LA46_0 = input.LA(1);
 
-            if ( (LA45_0==38) ) {
-                alt45=1;
+            if ( (LA46_0==39) ) {
+                alt46=1;
             }
-            switch (alt45) {
+            switch (alt46) {
                 case 1 :
-                    // InternalBlockchain.g:1822:4: kw= '-'
+                    // InternalBlockchain.g:1880:4: kw= '-'
                     {
-                    kw=(Token)match(input,38,FOLLOW_36); 
+                    kw=(Token)match(input,39,FOLLOW_37); 
 
                     				current.merge(kw);
                     				newLeafNode(kw, grammarAccess.getEDoubleAccess().getHyphenMinusKeyword_0());
@@ -4922,18 +5092,18 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBlockchain.g:1828:3: (this_INT_1= RULE_INT )?
-            int alt46=2;
-            int LA46_0 = input.LA(1);
+            // InternalBlockchain.g:1886:3: (this_INT_1= RULE_INT )?
+            int alt47=2;
+            int LA47_0 = input.LA(1);
 
-            if ( (LA46_0==RULE_INT) ) {
-                alt46=1;
+            if ( (LA47_0==RULE_INT) ) {
+                alt47=1;
             }
-            switch (alt46) {
+            switch (alt47) {
                 case 1 :
-                    // InternalBlockchain.g:1829:4: this_INT_1= RULE_INT
+                    // InternalBlockchain.g:1887:4: this_INT_1= RULE_INT
                     {
-                    this_INT_1=(Token)match(input,RULE_INT,FOLLOW_37); 
+                    this_INT_1=(Token)match(input,RULE_INT,FOLLOW_38); 
 
                     				current.merge(this_INT_1);
                     			
@@ -4946,50 +5116,50 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            kw=(Token)match(input,39,FOLLOW_38); 
+            kw=(Token)match(input,40,FOLLOW_39); 
 
             			current.merge(kw);
             			newLeafNode(kw, grammarAccess.getEDoubleAccess().getFullStopKeyword_2());
             		
-            this_INT_3=(Token)match(input,RULE_INT,FOLLOW_39); 
+            this_INT_3=(Token)match(input,RULE_INT,FOLLOW_40); 
 
             			current.merge(this_INT_3);
             		
 
             			newLeafNode(this_INT_3, grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_3());
             		
-            // InternalBlockchain.g:1849:3: ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )?
-            int alt49=2;
-            int LA49_0 = input.LA(1);
+            // InternalBlockchain.g:1907:3: ( (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT )?
+            int alt50=2;
+            int LA50_0 = input.LA(1);
 
-            if ( ((LA49_0>=40 && LA49_0<=41)) ) {
-                alt49=1;
+            if ( ((LA50_0>=41 && LA50_0<=42)) ) {
+                alt50=1;
             }
-            switch (alt49) {
+            switch (alt50) {
                 case 1 :
-                    // InternalBlockchain.g:1850:4: (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT
+                    // InternalBlockchain.g:1908:4: (kw= 'E' | kw= 'e' ) (kw= '-' )? this_INT_7= RULE_INT
                     {
-                    // InternalBlockchain.g:1850:4: (kw= 'E' | kw= 'e' )
-                    int alt47=2;
-                    int LA47_0 = input.LA(1);
+                    // InternalBlockchain.g:1908:4: (kw= 'E' | kw= 'e' )
+                    int alt48=2;
+                    int LA48_0 = input.LA(1);
 
-                    if ( (LA47_0==40) ) {
-                        alt47=1;
+                    if ( (LA48_0==41) ) {
+                        alt48=1;
                     }
-                    else if ( (LA47_0==41) ) {
-                        alt47=2;
+                    else if ( (LA48_0==42) ) {
+                        alt48=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 47, 0, input);
+                            new NoViableAltException("", 48, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt47) {
+                    switch (alt48) {
                         case 1 :
-                            // InternalBlockchain.g:1851:5: kw= 'E'
+                            // InternalBlockchain.g:1909:5: kw= 'E'
                             {
-                            kw=(Token)match(input,40,FOLLOW_32); 
+                            kw=(Token)match(input,41,FOLLOW_33); 
 
                             					current.merge(kw);
                             					newLeafNode(kw, grammarAccess.getEDoubleAccess().getEKeyword_4_0_0());
@@ -4998,9 +5168,9 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalBlockchain.g:1857:5: kw= 'e'
+                            // InternalBlockchain.g:1915:5: kw= 'e'
                             {
-                            kw=(Token)match(input,41,FOLLOW_32); 
+                            kw=(Token)match(input,42,FOLLOW_33); 
 
                             					current.merge(kw);
                             					newLeafNode(kw, grammarAccess.getEDoubleAccess().getEKeyword_4_0_1());
@@ -5011,18 +5181,18 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalBlockchain.g:1863:4: (kw= '-' )?
-                    int alt48=2;
-                    int LA48_0 = input.LA(1);
+                    // InternalBlockchain.g:1921:4: (kw= '-' )?
+                    int alt49=2;
+                    int LA49_0 = input.LA(1);
 
-                    if ( (LA48_0==38) ) {
-                        alt48=1;
+                    if ( (LA49_0==39) ) {
+                        alt49=1;
                     }
-                    switch (alt48) {
+                    switch (alt49) {
                         case 1 :
-                            // InternalBlockchain.g:1864:5: kw= '-'
+                            // InternalBlockchain.g:1922:5: kw= '-'
                             {
-                            kw=(Token)match(input,38,FOLLOW_38); 
+                            kw=(Token)match(input,39,FOLLOW_39); 
 
                             					current.merge(kw);
                             					newLeafNode(kw, grammarAccess.getEDoubleAccess().getHyphenMinusKeyword_4_1());
@@ -5069,7 +5239,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEInt"
-    // InternalBlockchain.g:1882:1: entryRuleEInt returns [String current=null] : iv_ruleEInt= ruleEInt EOF ;
+    // InternalBlockchain.g:1940:1: entryRuleEInt returns [String current=null] : iv_ruleEInt= ruleEInt EOF ;
     public final String entryRuleEInt() throws RecognitionException {
         String current = null;
 
@@ -5077,8 +5247,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:1882:44: (iv_ruleEInt= ruleEInt EOF )
-            // InternalBlockchain.g:1883:2: iv_ruleEInt= ruleEInt EOF
+            // InternalBlockchain.g:1940:44: (iv_ruleEInt= ruleEInt EOF )
+            // InternalBlockchain.g:1941:2: iv_ruleEInt= ruleEInt EOF
             {
              newCompositeNode(grammarAccess.getEIntRule()); 
             pushFollow(FOLLOW_1);
@@ -5105,7 +5275,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEInt"
-    // InternalBlockchain.g:1889:1: ruleEInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_INT_1= RULE_INT ) ;
+    // InternalBlockchain.g:1947:1: ruleEInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_INT_1= RULE_INT ) ;
     public final AntlrDatatypeRuleToken ruleEInt() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5116,24 +5286,24 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:1895:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) )
-            // InternalBlockchain.g:1896:2: ( (kw= '-' )? this_INT_1= RULE_INT )
+            // InternalBlockchain.g:1953:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) )
+            // InternalBlockchain.g:1954:2: ( (kw= '-' )? this_INT_1= RULE_INT )
             {
-            // InternalBlockchain.g:1896:2: ( (kw= '-' )? this_INT_1= RULE_INT )
-            // InternalBlockchain.g:1897:3: (kw= '-' )? this_INT_1= RULE_INT
+            // InternalBlockchain.g:1954:2: ( (kw= '-' )? this_INT_1= RULE_INT )
+            // InternalBlockchain.g:1955:3: (kw= '-' )? this_INT_1= RULE_INT
             {
-            // InternalBlockchain.g:1897:3: (kw= '-' )?
-            int alt50=2;
-            int LA50_0 = input.LA(1);
+            // InternalBlockchain.g:1955:3: (kw= '-' )?
+            int alt51=2;
+            int LA51_0 = input.LA(1);
 
-            if ( (LA50_0==38) ) {
-                alt50=1;
+            if ( (LA51_0==39) ) {
+                alt51=1;
             }
-            switch (alt50) {
+            switch (alt51) {
                 case 1 :
-                    // InternalBlockchain.g:1898:4: kw= '-'
+                    // InternalBlockchain.g:1956:4: kw= '-'
                     {
-                    kw=(Token)match(input,38,FOLLOW_38); 
+                    kw=(Token)match(input,39,FOLLOW_39); 
 
                     				current.merge(kw);
                     				newLeafNode(kw, grammarAccess.getEIntAccess().getHyphenMinusKeyword_0());
@@ -5174,7 +5344,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePrimitivo"
-    // InternalBlockchain.g:1915:1: entryRulePrimitivo returns [EObject current=null] : iv_rulePrimitivo= rulePrimitivo EOF ;
+    // InternalBlockchain.g:1973:1: entryRulePrimitivo returns [EObject current=null] : iv_rulePrimitivo= rulePrimitivo EOF ;
     public final EObject entryRulePrimitivo() throws RecognitionException {
         EObject current = null;
 
@@ -5182,8 +5352,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:1915:50: (iv_rulePrimitivo= rulePrimitivo EOF )
-            // InternalBlockchain.g:1916:2: iv_rulePrimitivo= rulePrimitivo EOF
+            // InternalBlockchain.g:1973:50: (iv_rulePrimitivo= rulePrimitivo EOF )
+            // InternalBlockchain.g:1974:2: iv_rulePrimitivo= rulePrimitivo EOF
             {
              newCompositeNode(grammarAccess.getPrimitivoRule()); 
             pushFollow(FOLLOW_1);
@@ -5210,7 +5380,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePrimitivo"
-    // InternalBlockchain.g:1922:1: rulePrimitivo returns [EObject current=null] : ( () ( (lv_tipo_1_0= ruleDatoPrimitivo ) )? ( (lv_name_2_0= ruleEString ) ) ) ;
+    // InternalBlockchain.g:1980:1: rulePrimitivo returns [EObject current=null] : ( () ( (lv_tipo_1_0= ruleDatoPrimitivo ) )? ( (lv_name_2_0= ruleEString ) ) ) ;
     public final EObject rulePrimitivo() throws RecognitionException {
         EObject current = null;
 
@@ -5223,14 +5393,14 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:1928:2: ( ( () ( (lv_tipo_1_0= ruleDatoPrimitivo ) )? ( (lv_name_2_0= ruleEString ) ) ) )
-            // InternalBlockchain.g:1929:2: ( () ( (lv_tipo_1_0= ruleDatoPrimitivo ) )? ( (lv_name_2_0= ruleEString ) ) )
+            // InternalBlockchain.g:1986:2: ( ( () ( (lv_tipo_1_0= ruleDatoPrimitivo ) )? ( (lv_name_2_0= ruleEString ) ) ) )
+            // InternalBlockchain.g:1987:2: ( () ( (lv_tipo_1_0= ruleDatoPrimitivo ) )? ( (lv_name_2_0= ruleEString ) ) )
             {
-            // InternalBlockchain.g:1929:2: ( () ( (lv_tipo_1_0= ruleDatoPrimitivo ) )? ( (lv_name_2_0= ruleEString ) ) )
-            // InternalBlockchain.g:1930:3: () ( (lv_tipo_1_0= ruleDatoPrimitivo ) )? ( (lv_name_2_0= ruleEString ) )
+            // InternalBlockchain.g:1987:2: ( () ( (lv_tipo_1_0= ruleDatoPrimitivo ) )? ( (lv_name_2_0= ruleEString ) ) )
+            // InternalBlockchain.g:1988:3: () ( (lv_tipo_1_0= ruleDatoPrimitivo ) )? ( (lv_name_2_0= ruleEString ) )
             {
-            // InternalBlockchain.g:1930:3: ()
-            // InternalBlockchain.g:1931:4: 
+            // InternalBlockchain.g:1988:3: ()
+            // InternalBlockchain.g:1989:4: 
             {
 
             				current = forceCreateModelElement(
@@ -5240,19 +5410,19 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBlockchain.g:1937:3: ( (lv_tipo_1_0= ruleDatoPrimitivo ) )?
-            int alt51=2;
-            int LA51_0 = input.LA(1);
+            // InternalBlockchain.g:1995:3: ( (lv_tipo_1_0= ruleDatoPrimitivo ) )?
+            int alt52=2;
+            int LA52_0 = input.LA(1);
 
-            if ( ((LA51_0>=58 && LA51_0<=61)) ) {
-                alt51=1;
+            if ( ((LA52_0>=59 && LA52_0<=63)) ) {
+                alt52=1;
             }
-            switch (alt51) {
+            switch (alt52) {
                 case 1 :
-                    // InternalBlockchain.g:1938:4: (lv_tipo_1_0= ruleDatoPrimitivo )
+                    // InternalBlockchain.g:1996:4: (lv_tipo_1_0= ruleDatoPrimitivo )
                     {
-                    // InternalBlockchain.g:1938:4: (lv_tipo_1_0= ruleDatoPrimitivo )
-                    // InternalBlockchain.g:1939:5: lv_tipo_1_0= ruleDatoPrimitivo
+                    // InternalBlockchain.g:1996:4: (lv_tipo_1_0= ruleDatoPrimitivo )
+                    // InternalBlockchain.g:1997:5: lv_tipo_1_0= ruleDatoPrimitivo
                     {
 
                     					newCompositeNode(grammarAccess.getPrimitivoAccess().getTipoDatoPrimitivoEnumRuleCall_1_0());
@@ -5282,11 +5452,11 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBlockchain.g:1956:3: ( (lv_name_2_0= ruleEString ) )
-            // InternalBlockchain.g:1957:4: (lv_name_2_0= ruleEString )
+            // InternalBlockchain.g:2014:3: ( (lv_name_2_0= ruleEString ) )
+            // InternalBlockchain.g:2015:4: (lv_name_2_0= ruleEString )
             {
-            // InternalBlockchain.g:1957:4: (lv_name_2_0= ruleEString )
-            // InternalBlockchain.g:1958:5: lv_name_2_0= ruleEString
+            // InternalBlockchain.g:2015:4: (lv_name_2_0= ruleEString )
+            // InternalBlockchain.g:2016:5: lv_name_2_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getPrimitivoAccess().getNameEStringParserRuleCall_2_0());
@@ -5336,7 +5506,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMapa"
-    // InternalBlockchain.g:1979:1: entryRuleMapa returns [EObject current=null] : iv_ruleMapa= ruleMapa EOF ;
+    // InternalBlockchain.g:2037:1: entryRuleMapa returns [EObject current=null] : iv_ruleMapa= ruleMapa EOF ;
     public final EObject entryRuleMapa() throws RecognitionException {
         EObject current = null;
 
@@ -5344,8 +5514,8 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBlockchain.g:1979:45: (iv_ruleMapa= ruleMapa EOF )
-            // InternalBlockchain.g:1980:2: iv_ruleMapa= ruleMapa EOF
+            // InternalBlockchain.g:2037:45: (iv_ruleMapa= ruleMapa EOF )
+            // InternalBlockchain.g:2038:2: iv_ruleMapa= ruleMapa EOF
             {
              newCompositeNode(grammarAccess.getMapaRule()); 
             pushFollow(FOLLOW_1);
@@ -5372,7 +5542,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMapa"
-    // InternalBlockchain.g:1986:1: ruleMapa returns [EObject current=null] : (otherlv_0= 'Map' otherlv_1= '<' ( ( ruleEString ) ) otherlv_3= ',' ( ( ruleEString ) ) otherlv_5= '>' otherlv_6= ':' ( (lv_name_7_0= ruleEString ) ) ) ;
+    // InternalBlockchain.g:2044:1: ruleMapa returns [EObject current=null] : (otherlv_0= 'Map' otherlv_1= '<' ( ( ruleEString ) ) otherlv_3= ',' ( ( ruleEString ) ) otherlv_5= '>' otherlv_6= ':' ( (lv_name_7_0= ruleEString ) ) ) ;
     public final EObject ruleMapa() throws RecognitionException {
         EObject current = null;
 
@@ -5388,25 +5558,25 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:1992:2: ( (otherlv_0= 'Map' otherlv_1= '<' ( ( ruleEString ) ) otherlv_3= ',' ( ( ruleEString ) ) otherlv_5= '>' otherlv_6= ':' ( (lv_name_7_0= ruleEString ) ) ) )
-            // InternalBlockchain.g:1993:2: (otherlv_0= 'Map' otherlv_1= '<' ( ( ruleEString ) ) otherlv_3= ',' ( ( ruleEString ) ) otherlv_5= '>' otherlv_6= ':' ( (lv_name_7_0= ruleEString ) ) )
+            // InternalBlockchain.g:2050:2: ( (otherlv_0= 'Map' otherlv_1= '<' ( ( ruleEString ) ) otherlv_3= ',' ( ( ruleEString ) ) otherlv_5= '>' otherlv_6= ':' ( (lv_name_7_0= ruleEString ) ) ) )
+            // InternalBlockchain.g:2051:2: (otherlv_0= 'Map' otherlv_1= '<' ( ( ruleEString ) ) otherlv_3= ',' ( ( ruleEString ) ) otherlv_5= '>' otherlv_6= ':' ( (lv_name_7_0= ruleEString ) ) )
             {
-            // InternalBlockchain.g:1993:2: (otherlv_0= 'Map' otherlv_1= '<' ( ( ruleEString ) ) otherlv_3= ',' ( ( ruleEString ) ) otherlv_5= '>' otherlv_6= ':' ( (lv_name_7_0= ruleEString ) ) )
-            // InternalBlockchain.g:1994:3: otherlv_0= 'Map' otherlv_1= '<' ( ( ruleEString ) ) otherlv_3= ',' ( ( ruleEString ) ) otherlv_5= '>' otherlv_6= ':' ( (lv_name_7_0= ruleEString ) )
+            // InternalBlockchain.g:2051:2: (otherlv_0= 'Map' otherlv_1= '<' ( ( ruleEString ) ) otherlv_3= ',' ( ( ruleEString ) ) otherlv_5= '>' otherlv_6= ':' ( (lv_name_7_0= ruleEString ) ) )
+            // InternalBlockchain.g:2052:3: otherlv_0= 'Map' otherlv_1= '<' ( ( ruleEString ) ) otherlv_3= ',' ( ( ruleEString ) ) otherlv_5= '>' otherlv_6= ':' ( (lv_name_7_0= ruleEString ) )
             {
-            otherlv_0=(Token)match(input,42,FOLLOW_40); 
+            otherlv_0=(Token)match(input,43,FOLLOW_41); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMapaAccess().getMapKeyword_0());
             		
-            otherlv_1=(Token)match(input,43,FOLLOW_3); 
+            otherlv_1=(Token)match(input,44,FOLLOW_3); 
 
             			newLeafNode(otherlv_1, grammarAccess.getMapaAccess().getLessThanSignKeyword_1());
             		
-            // InternalBlockchain.g:2002:3: ( ( ruleEString ) )
-            // InternalBlockchain.g:2003:4: ( ruleEString )
+            // InternalBlockchain.g:2060:3: ( ( ruleEString ) )
+            // InternalBlockchain.g:2061:4: ( ruleEString )
             {
-            // InternalBlockchain.g:2003:4: ( ruleEString )
-            // InternalBlockchain.g:2004:5: ruleEString
+            // InternalBlockchain.g:2061:4: ( ruleEString )
+            // InternalBlockchain.g:2062:5: ruleEString
             {
 
             					if (current==null) {
@@ -5416,7 +5586,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getMapaAccess().getTipoDatoKeyTipoDatoCrossReference_2_0());
             				
-            pushFollow(FOLLOW_41);
+            pushFollow(FOLLOW_42);
             ruleEString();
 
             state._fsp--;
@@ -5434,11 +5604,11 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_3, grammarAccess.getMapaAccess().getCommaKeyword_3());
             		
-            // InternalBlockchain.g:2022:3: ( ( ruleEString ) )
-            // InternalBlockchain.g:2023:4: ( ruleEString )
+            // InternalBlockchain.g:2080:3: ( ( ruleEString ) )
+            // InternalBlockchain.g:2081:4: ( ruleEString )
             {
-            // InternalBlockchain.g:2023:4: ( ruleEString )
-            // InternalBlockchain.g:2024:5: ruleEString
+            // InternalBlockchain.g:2081:4: ( ruleEString )
+            // InternalBlockchain.g:2082:5: ruleEString
             {
 
             					if (current==null) {
@@ -5448,7 +5618,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getMapaAccess().getTipoDatoValueTipoDatoCrossReference_4_0());
             				
-            pushFollow(FOLLOW_42);
+            pushFollow(FOLLOW_43);
             ruleEString();
 
             state._fsp--;
@@ -5462,7 +5632,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,44,FOLLOW_43); 
+            otherlv_5=(Token)match(input,45,FOLLOW_44); 
 
             			newLeafNode(otherlv_5, grammarAccess.getMapaAccess().getGreaterThanSignKeyword_5());
             		
@@ -5470,11 +5640,11 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_6, grammarAccess.getMapaAccess().getColonKeyword_6());
             		
-            // InternalBlockchain.g:2046:3: ( (lv_name_7_0= ruleEString ) )
-            // InternalBlockchain.g:2047:4: (lv_name_7_0= ruleEString )
+            // InternalBlockchain.g:2104:3: ( (lv_name_7_0= ruleEString ) )
+            // InternalBlockchain.g:2105:4: (lv_name_7_0= ruleEString )
             {
-            // InternalBlockchain.g:2047:4: (lv_name_7_0= ruleEString )
-            // InternalBlockchain.g:2048:5: lv_name_7_0= ruleEString
+            // InternalBlockchain.g:2105:4: (lv_name_7_0= ruleEString )
+            // InternalBlockchain.g:2106:5: lv_name_7_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getMapaAccess().getNameEStringParserRuleCall_7_0());
@@ -5524,7 +5694,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOperadorLogico"
-    // InternalBlockchain.g:2069:1: ruleOperadorLogico returns [Enumerator current=null] : ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '>' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '<=' ) | (enumLiteral_6= '&&' ) | (enumLiteral_7= '||' ) ) ;
+    // InternalBlockchain.g:2127:1: ruleOperadorLogico returns [Enumerator current=null] : ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '>' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '<=' ) | (enumLiteral_6= '&&' ) | (enumLiteral_7= '||' ) ) ;
     public final Enumerator ruleOperadorLogico() throws RecognitionException {
         Enumerator current = null;
 
@@ -5541,67 +5711,67 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:2075:2: ( ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '>' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '<=' ) | (enumLiteral_6= '&&' ) | (enumLiteral_7= '||' ) ) )
-            // InternalBlockchain.g:2076:2: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '>' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '<=' ) | (enumLiteral_6= '&&' ) | (enumLiteral_7= '||' ) )
+            // InternalBlockchain.g:2133:2: ( ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '>' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '<=' ) | (enumLiteral_6= '&&' ) | (enumLiteral_7= '||' ) ) )
+            // InternalBlockchain.g:2134:2: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '>' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '<=' ) | (enumLiteral_6= '&&' ) | (enumLiteral_7= '||' ) )
             {
-            // InternalBlockchain.g:2076:2: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '>' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '<=' ) | (enumLiteral_6= '&&' ) | (enumLiteral_7= '||' ) )
-            int alt52=8;
+            // InternalBlockchain.g:2134:2: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '>' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '<=' ) | (enumLiteral_6= '&&' ) | (enumLiteral_7= '||' ) )
+            int alt53=8;
             switch ( input.LA(1) ) {
-            case 45:
-                {
-                alt52=1;
-                }
-                break;
             case 46:
                 {
-                alt52=2;
-                }
-                break;
-            case 44:
-                {
-                alt52=3;
-                }
-                break;
-            case 43:
-                {
-                alt52=4;
+                alt53=1;
                 }
                 break;
             case 47:
                 {
-                alt52=5;
+                alt53=2;
+                }
+                break;
+            case 45:
+                {
+                alt53=3;
+                }
+                break;
+            case 44:
+                {
+                alt53=4;
                 }
                 break;
             case 48:
                 {
-                alt52=6;
+                alt53=5;
                 }
                 break;
             case 49:
                 {
-                alt52=7;
+                alt53=6;
                 }
                 break;
             case 50:
                 {
-                alt52=8;
+                alt53=7;
+                }
+                break;
+            case 51:
+                {
+                alt53=8;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 52, 0, input);
+                    new NoViableAltException("", 53, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt52) {
+            switch (alt53) {
                 case 1 :
-                    // InternalBlockchain.g:2077:3: (enumLiteral_0= '==' )
+                    // InternalBlockchain.g:2135:3: (enumLiteral_0= '==' )
                     {
-                    // InternalBlockchain.g:2077:3: (enumLiteral_0= '==' )
-                    // InternalBlockchain.g:2078:4: enumLiteral_0= '=='
+                    // InternalBlockchain.g:2135:3: (enumLiteral_0= '==' )
+                    // InternalBlockchain.g:2136:4: enumLiteral_0= '=='
                     {
-                    enumLiteral_0=(Token)match(input,45,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,46,FOLLOW_2); 
 
                     				current = grammarAccess.getOperadorLogicoAccess().getIGUAL_IGUALEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getOperadorLogicoAccess().getIGUAL_IGUALEnumLiteralDeclaration_0());
@@ -5613,12 +5783,12 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBlockchain.g:2085:3: (enumLiteral_1= '!=' )
+                    // InternalBlockchain.g:2143:3: (enumLiteral_1= '!=' )
                     {
-                    // InternalBlockchain.g:2085:3: (enumLiteral_1= '!=' )
-                    // InternalBlockchain.g:2086:4: enumLiteral_1= '!='
+                    // InternalBlockchain.g:2143:3: (enumLiteral_1= '!=' )
+                    // InternalBlockchain.g:2144:4: enumLiteral_1= '!='
                     {
-                    enumLiteral_1=(Token)match(input,46,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,47,FOLLOW_2); 
 
                     				current = grammarAccess.getOperadorLogicoAccess().getDIFERENTEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getOperadorLogicoAccess().getDIFERENTEEnumLiteralDeclaration_1());
@@ -5630,12 +5800,12 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalBlockchain.g:2093:3: (enumLiteral_2= '>' )
+                    // InternalBlockchain.g:2151:3: (enumLiteral_2= '>' )
                     {
-                    // InternalBlockchain.g:2093:3: (enumLiteral_2= '>' )
-                    // InternalBlockchain.g:2094:4: enumLiteral_2= '>'
+                    // InternalBlockchain.g:2151:3: (enumLiteral_2= '>' )
+                    // InternalBlockchain.g:2152:4: enumLiteral_2= '>'
                     {
-                    enumLiteral_2=(Token)match(input,44,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,45,FOLLOW_2); 
 
                     				current = grammarAccess.getOperadorLogicoAccess().getMAYORQUEEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getOperadorLogicoAccess().getMAYORQUEEnumLiteralDeclaration_2());
@@ -5647,12 +5817,12 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalBlockchain.g:2101:3: (enumLiteral_3= '<' )
+                    // InternalBlockchain.g:2159:3: (enumLiteral_3= '<' )
                     {
-                    // InternalBlockchain.g:2101:3: (enumLiteral_3= '<' )
-                    // InternalBlockchain.g:2102:4: enumLiteral_3= '<'
+                    // InternalBlockchain.g:2159:3: (enumLiteral_3= '<' )
+                    // InternalBlockchain.g:2160:4: enumLiteral_3= '<'
                     {
-                    enumLiteral_3=(Token)match(input,43,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,44,FOLLOW_2); 
 
                     				current = grammarAccess.getOperadorLogicoAccess().getMENORQUEEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getOperadorLogicoAccess().getMENORQUEEnumLiteralDeclaration_3());
@@ -5664,12 +5834,12 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalBlockchain.g:2109:3: (enumLiteral_4= '>=' )
+                    // InternalBlockchain.g:2167:3: (enumLiteral_4= '>=' )
                     {
-                    // InternalBlockchain.g:2109:3: (enumLiteral_4= '>=' )
-                    // InternalBlockchain.g:2110:4: enumLiteral_4= '>='
+                    // InternalBlockchain.g:2167:3: (enumLiteral_4= '>=' )
+                    // InternalBlockchain.g:2168:4: enumLiteral_4= '>='
                     {
-                    enumLiteral_4=(Token)match(input,47,FOLLOW_2); 
+                    enumLiteral_4=(Token)match(input,48,FOLLOW_2); 
 
                     				current = grammarAccess.getOperadorLogicoAccess().getMAYORIGUALEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_4, grammarAccess.getOperadorLogicoAccess().getMAYORIGUALEnumLiteralDeclaration_4());
@@ -5681,12 +5851,12 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalBlockchain.g:2117:3: (enumLiteral_5= '<=' )
+                    // InternalBlockchain.g:2175:3: (enumLiteral_5= '<=' )
                     {
-                    // InternalBlockchain.g:2117:3: (enumLiteral_5= '<=' )
-                    // InternalBlockchain.g:2118:4: enumLiteral_5= '<='
+                    // InternalBlockchain.g:2175:3: (enumLiteral_5= '<=' )
+                    // InternalBlockchain.g:2176:4: enumLiteral_5= '<='
                     {
-                    enumLiteral_5=(Token)match(input,48,FOLLOW_2); 
+                    enumLiteral_5=(Token)match(input,49,FOLLOW_2); 
 
                     				current = grammarAccess.getOperadorLogicoAccess().getMENORIGUALEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_5, grammarAccess.getOperadorLogicoAccess().getMENORIGUALEnumLiteralDeclaration_5());
@@ -5698,12 +5868,12 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalBlockchain.g:2125:3: (enumLiteral_6= '&&' )
+                    // InternalBlockchain.g:2183:3: (enumLiteral_6= '&&' )
                     {
-                    // InternalBlockchain.g:2125:3: (enumLiteral_6= '&&' )
-                    // InternalBlockchain.g:2126:4: enumLiteral_6= '&&'
+                    // InternalBlockchain.g:2183:3: (enumLiteral_6= '&&' )
+                    // InternalBlockchain.g:2184:4: enumLiteral_6= '&&'
                     {
-                    enumLiteral_6=(Token)match(input,49,FOLLOW_2); 
+                    enumLiteral_6=(Token)match(input,50,FOLLOW_2); 
 
                     				current = grammarAccess.getOperadorLogicoAccess().getANDEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_6, grammarAccess.getOperadorLogicoAccess().getANDEnumLiteralDeclaration_6());
@@ -5715,12 +5885,12 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalBlockchain.g:2133:3: (enumLiteral_7= '||' )
+                    // InternalBlockchain.g:2191:3: (enumLiteral_7= '||' )
                     {
-                    // InternalBlockchain.g:2133:3: (enumLiteral_7= '||' )
-                    // InternalBlockchain.g:2134:4: enumLiteral_7= '||'
+                    // InternalBlockchain.g:2191:3: (enumLiteral_7= '||' )
+                    // InternalBlockchain.g:2192:4: enumLiteral_7= '||'
                     {
-                    enumLiteral_7=(Token)match(input,50,FOLLOW_2); 
+                    enumLiteral_7=(Token)match(input,51,FOLLOW_2); 
 
                     				current = grammarAccess.getOperadorLogicoAccess().getOREnumLiteralDeclaration_7().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_7, grammarAccess.getOperadorLogicoAccess().getOREnumLiteralDeclaration_7());
@@ -5754,7 +5924,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOperador"
-    // InternalBlockchain.g:2144:1: ruleOperador returns [Enumerator current=null] : ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) | (enumLiteral_2= '*' ) | (enumLiteral_3= '/' ) | (enumLiteral_4= '=' ) | (enumLiteral_5= 'GET' ) | (enumLiteral_6= 'DELETE' ) | (enumLiteral_7= 'PUT' ) ) ;
+    // InternalBlockchain.g:2202:1: ruleOperador returns [Enumerator current=null] : ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) | (enumLiteral_2= '*' ) | (enumLiteral_3= '/' ) | (enumLiteral_4= '=' ) | (enumLiteral_5= 'GET' ) | (enumLiteral_6= 'DELETE' ) | (enumLiteral_7= 'PUT' ) ) ;
     public final Enumerator ruleOperador() throws RecognitionException {
         Enumerator current = null;
 
@@ -5771,67 +5941,67 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:2150:2: ( ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) | (enumLiteral_2= '*' ) | (enumLiteral_3= '/' ) | (enumLiteral_4= '=' ) | (enumLiteral_5= 'GET' ) | (enumLiteral_6= 'DELETE' ) | (enumLiteral_7= 'PUT' ) ) )
-            // InternalBlockchain.g:2151:2: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) | (enumLiteral_2= '*' ) | (enumLiteral_3= '/' ) | (enumLiteral_4= '=' ) | (enumLiteral_5= 'GET' ) | (enumLiteral_6= 'DELETE' ) | (enumLiteral_7= 'PUT' ) )
+            // InternalBlockchain.g:2208:2: ( ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) | (enumLiteral_2= '*' ) | (enumLiteral_3= '/' ) | (enumLiteral_4= '=' ) | (enumLiteral_5= 'GET' ) | (enumLiteral_6= 'DELETE' ) | (enumLiteral_7= 'PUT' ) ) )
+            // InternalBlockchain.g:2209:2: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) | (enumLiteral_2= '*' ) | (enumLiteral_3= '/' ) | (enumLiteral_4= '=' ) | (enumLiteral_5= 'GET' ) | (enumLiteral_6= 'DELETE' ) | (enumLiteral_7= 'PUT' ) )
             {
-            // InternalBlockchain.g:2151:2: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) | (enumLiteral_2= '*' ) | (enumLiteral_3= '/' ) | (enumLiteral_4= '=' ) | (enumLiteral_5= 'GET' ) | (enumLiteral_6= 'DELETE' ) | (enumLiteral_7= 'PUT' ) )
-            int alt53=8;
+            // InternalBlockchain.g:2209:2: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) | (enumLiteral_2= '*' ) | (enumLiteral_3= '/' ) | (enumLiteral_4= '=' ) | (enumLiteral_5= 'GET' ) | (enumLiteral_6= 'DELETE' ) | (enumLiteral_7= 'PUT' ) )
+            int alt54=8;
             switch ( input.LA(1) ) {
-            case 51:
-                {
-                alt53=1;
-                }
-                break;
-            case 38:
-                {
-                alt53=2;
-                }
-                break;
             case 52:
                 {
-                alt53=3;
+                alt54=1;
+                }
+                break;
+            case 39:
+                {
+                alt54=2;
                 }
                 break;
             case 53:
                 {
-                alt53=4;
+                alt54=3;
                 }
                 break;
             case 54:
                 {
-                alt53=5;
+                alt54=4;
                 }
                 break;
             case 55:
                 {
-                alt53=6;
+                alt54=5;
                 }
                 break;
             case 56:
                 {
-                alt53=7;
+                alt54=6;
                 }
                 break;
             case 57:
                 {
-                alt53=8;
+                alt54=7;
+                }
+                break;
+            case 58:
+                {
+                alt54=8;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 53, 0, input);
+                    new NoViableAltException("", 54, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt53) {
+            switch (alt54) {
                 case 1 :
-                    // InternalBlockchain.g:2152:3: (enumLiteral_0= '+' )
+                    // InternalBlockchain.g:2210:3: (enumLiteral_0= '+' )
                     {
-                    // InternalBlockchain.g:2152:3: (enumLiteral_0= '+' )
-                    // InternalBlockchain.g:2153:4: enumLiteral_0= '+'
+                    // InternalBlockchain.g:2210:3: (enumLiteral_0= '+' )
+                    // InternalBlockchain.g:2211:4: enumLiteral_0= '+'
                     {
-                    enumLiteral_0=(Token)match(input,51,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,52,FOLLOW_2); 
 
                     				current = grammarAccess.getOperadorAccess().getMASEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getOperadorAccess().getMASEnumLiteralDeclaration_0());
@@ -5843,12 +6013,12 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBlockchain.g:2160:3: (enumLiteral_1= '-' )
+                    // InternalBlockchain.g:2218:3: (enumLiteral_1= '-' )
                     {
-                    // InternalBlockchain.g:2160:3: (enumLiteral_1= '-' )
-                    // InternalBlockchain.g:2161:4: enumLiteral_1= '-'
+                    // InternalBlockchain.g:2218:3: (enumLiteral_1= '-' )
+                    // InternalBlockchain.g:2219:4: enumLiteral_1= '-'
                     {
-                    enumLiteral_1=(Token)match(input,38,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,39,FOLLOW_2); 
 
                     				current = grammarAccess.getOperadorAccess().getMENOSEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getOperadorAccess().getMENOSEnumLiteralDeclaration_1());
@@ -5860,12 +6030,12 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalBlockchain.g:2168:3: (enumLiteral_2= '*' )
+                    // InternalBlockchain.g:2226:3: (enumLiteral_2= '*' )
                     {
-                    // InternalBlockchain.g:2168:3: (enumLiteral_2= '*' )
-                    // InternalBlockchain.g:2169:4: enumLiteral_2= '*'
+                    // InternalBlockchain.g:2226:3: (enumLiteral_2= '*' )
+                    // InternalBlockchain.g:2227:4: enumLiteral_2= '*'
                     {
-                    enumLiteral_2=(Token)match(input,52,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,53,FOLLOW_2); 
 
                     				current = grammarAccess.getOperadorAccess().getPRODUCTOEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getOperadorAccess().getPRODUCTOEnumLiteralDeclaration_2());
@@ -5877,12 +6047,12 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalBlockchain.g:2176:3: (enumLiteral_3= '/' )
+                    // InternalBlockchain.g:2234:3: (enumLiteral_3= '/' )
                     {
-                    // InternalBlockchain.g:2176:3: (enumLiteral_3= '/' )
-                    // InternalBlockchain.g:2177:4: enumLiteral_3= '/'
+                    // InternalBlockchain.g:2234:3: (enumLiteral_3= '/' )
+                    // InternalBlockchain.g:2235:4: enumLiteral_3= '/'
                     {
-                    enumLiteral_3=(Token)match(input,53,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,54,FOLLOW_2); 
 
                     				current = grammarAccess.getOperadorAccess().getDIVISIONEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getOperadorAccess().getDIVISIONEnumLiteralDeclaration_3());
@@ -5894,12 +6064,12 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalBlockchain.g:2184:3: (enumLiteral_4= '=' )
+                    // InternalBlockchain.g:2242:3: (enumLiteral_4= '=' )
                     {
-                    // InternalBlockchain.g:2184:3: (enumLiteral_4= '=' )
-                    // InternalBlockchain.g:2185:4: enumLiteral_4= '='
+                    // InternalBlockchain.g:2242:3: (enumLiteral_4= '=' )
+                    // InternalBlockchain.g:2243:4: enumLiteral_4= '='
                     {
-                    enumLiteral_4=(Token)match(input,54,FOLLOW_2); 
+                    enumLiteral_4=(Token)match(input,55,FOLLOW_2); 
 
                     				current = grammarAccess.getOperadorAccess().getIGUALEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_4, grammarAccess.getOperadorAccess().getIGUALEnumLiteralDeclaration_4());
@@ -5911,12 +6081,12 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalBlockchain.g:2192:3: (enumLiteral_5= 'GET' )
+                    // InternalBlockchain.g:2250:3: (enumLiteral_5= 'GET' )
                     {
-                    // InternalBlockchain.g:2192:3: (enumLiteral_5= 'GET' )
-                    // InternalBlockchain.g:2193:4: enumLiteral_5= 'GET'
+                    // InternalBlockchain.g:2250:3: (enumLiteral_5= 'GET' )
+                    // InternalBlockchain.g:2251:4: enumLiteral_5= 'GET'
                     {
-                    enumLiteral_5=(Token)match(input,55,FOLLOW_2); 
+                    enumLiteral_5=(Token)match(input,56,FOLLOW_2); 
 
                     				current = grammarAccess.getOperadorAccess().getGETEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_5, grammarAccess.getOperadorAccess().getGETEnumLiteralDeclaration_5());
@@ -5928,12 +6098,12 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalBlockchain.g:2200:3: (enumLiteral_6= 'DELETE' )
+                    // InternalBlockchain.g:2258:3: (enumLiteral_6= 'DELETE' )
                     {
-                    // InternalBlockchain.g:2200:3: (enumLiteral_6= 'DELETE' )
-                    // InternalBlockchain.g:2201:4: enumLiteral_6= 'DELETE'
+                    // InternalBlockchain.g:2258:3: (enumLiteral_6= 'DELETE' )
+                    // InternalBlockchain.g:2259:4: enumLiteral_6= 'DELETE'
                     {
-                    enumLiteral_6=(Token)match(input,56,FOLLOW_2); 
+                    enumLiteral_6=(Token)match(input,57,FOLLOW_2); 
 
                     				current = grammarAccess.getOperadorAccess().getDELETEEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_6, grammarAccess.getOperadorAccess().getDELETEEnumLiteralDeclaration_6());
@@ -5945,12 +6115,12 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalBlockchain.g:2208:3: (enumLiteral_7= 'PUT' )
+                    // InternalBlockchain.g:2266:3: (enumLiteral_7= 'PUT' )
                     {
-                    // InternalBlockchain.g:2208:3: (enumLiteral_7= 'PUT' )
-                    // InternalBlockchain.g:2209:4: enumLiteral_7= 'PUT'
+                    // InternalBlockchain.g:2266:3: (enumLiteral_7= 'PUT' )
+                    // InternalBlockchain.g:2267:4: enumLiteral_7= 'PUT'
                     {
-                    enumLiteral_7=(Token)match(input,57,FOLLOW_2); 
+                    enumLiteral_7=(Token)match(input,58,FOLLOW_2); 
 
                     				current = grammarAccess.getOperadorAccess().getPUTEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_7, grammarAccess.getOperadorAccess().getPUTEnumLiteralDeclaration_7());
@@ -5984,7 +6154,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOperadorRelacion"
-    // InternalBlockchain.g:2219:1: ruleOperadorRelacion returns [Enumerator current=null] : (enumLiteral_0= '.' ) ;
+    // InternalBlockchain.g:2277:1: ruleOperadorRelacion returns [Enumerator current=null] : (enumLiteral_0= '.' ) ;
     public final Enumerator ruleOperadorRelacion() throws RecognitionException {
         Enumerator current = null;
 
@@ -5994,13 +6164,13 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBlockchain.g:2225:2: ( (enumLiteral_0= '.' ) )
-            // InternalBlockchain.g:2226:2: (enumLiteral_0= '.' )
+            // InternalBlockchain.g:2283:2: ( (enumLiteral_0= '.' ) )
+            // InternalBlockchain.g:2284:2: (enumLiteral_0= '.' )
             {
-            // InternalBlockchain.g:2226:2: (enumLiteral_0= '.' )
-            // InternalBlockchain.g:2227:3: enumLiteral_0= '.'
+            // InternalBlockchain.g:2284:2: (enumLiteral_0= '.' )
+            // InternalBlockchain.g:2285:3: enumLiteral_0= '.'
             {
-            enumLiteral_0=(Token)match(input,39,FOLLOW_2); 
+            enumLiteral_0=(Token)match(input,40,FOLLOW_2); 
 
             			current = grammarAccess.getOperadorRelacionAccess().getPUNTOEnumLiteralDeclaration().getEnumLiteral().getInstance();
             			newLeafNode(enumLiteral_0, grammarAccess.getOperadorRelacionAccess().getPUNTOEnumLiteralDeclaration());
@@ -6028,7 +6198,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDatoPrimitivo"
-    // InternalBlockchain.g:2236:1: ruleDatoPrimitivo returns [Enumerator current=null] : ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'uint' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'ADDRESS' ) ) ;
+    // InternalBlockchain.g:2294:1: ruleDatoPrimitivo returns [Enumerator current=null] : ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'ADDRESS' ) | (enumLiteral_4= 'Double' ) ) ;
     public final Enumerator ruleDatoPrimitivo() throws RecognitionException {
         Enumerator current = null;
 
@@ -6036,52 +6206,58 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
         Token enumLiteral_1=null;
         Token enumLiteral_2=null;
         Token enumLiteral_3=null;
+        Token enumLiteral_4=null;
 
 
         	enterRule();
 
         try {
-            // InternalBlockchain.g:2242:2: ( ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'uint' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'ADDRESS' ) ) )
-            // InternalBlockchain.g:2243:2: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'uint' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'ADDRESS' ) )
+            // InternalBlockchain.g:2300:2: ( ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'ADDRESS' ) | (enumLiteral_4= 'Double' ) ) )
+            // InternalBlockchain.g:2301:2: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'ADDRESS' ) | (enumLiteral_4= 'Double' ) )
             {
-            // InternalBlockchain.g:2243:2: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'uint' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'ADDRESS' ) )
-            int alt54=4;
+            // InternalBlockchain.g:2301:2: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'ADDRESS' ) | (enumLiteral_4= 'Double' ) )
+            int alt55=5;
             switch ( input.LA(1) ) {
-            case 58:
-                {
-                alt54=1;
-                }
-                break;
             case 59:
                 {
-                alt54=2;
+                alt55=1;
                 }
                 break;
             case 60:
                 {
-                alt54=3;
+                alt55=2;
                 }
                 break;
             case 61:
                 {
-                alt54=4;
+                alt55=3;
+                }
+                break;
+            case 62:
+                {
+                alt55=4;
+                }
+                break;
+            case 63:
+                {
+                alt55=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 54, 0, input);
+                    new NoViableAltException("", 55, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt54) {
+            switch (alt55) {
                 case 1 :
-                    // InternalBlockchain.g:2244:3: (enumLiteral_0= 'String' )
+                    // InternalBlockchain.g:2302:3: (enumLiteral_0= 'String' )
                     {
-                    // InternalBlockchain.g:2244:3: (enumLiteral_0= 'String' )
-                    // InternalBlockchain.g:2245:4: enumLiteral_0= 'String'
+                    // InternalBlockchain.g:2302:3: (enumLiteral_0= 'String' )
+                    // InternalBlockchain.g:2303:4: enumLiteral_0= 'String'
                     {
-                    enumLiteral_0=(Token)match(input,58,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,59,FOLLOW_2); 
 
                     				current = grammarAccess.getDatoPrimitivoAccess().getSTRINGEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getDatoPrimitivoAccess().getSTRINGEnumLiteralDeclaration_0());
@@ -6093,15 +6269,15 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBlockchain.g:2252:3: (enumLiteral_1= 'uint' )
+                    // InternalBlockchain.g:2310:3: (enumLiteral_1= 'Integer' )
                     {
-                    // InternalBlockchain.g:2252:3: (enumLiteral_1= 'uint' )
-                    // InternalBlockchain.g:2253:4: enumLiteral_1= 'uint'
+                    // InternalBlockchain.g:2310:3: (enumLiteral_1= 'Integer' )
+                    // InternalBlockchain.g:2311:4: enumLiteral_1= 'Integer'
                     {
-                    enumLiteral_1=(Token)match(input,59,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,60,FOLLOW_2); 
 
-                    				current = grammarAccess.getDatoPrimitivoAccess().getNUMERICOEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-                    				newLeafNode(enumLiteral_1, grammarAccess.getDatoPrimitivoAccess().getNUMERICOEnumLiteralDeclaration_1());
+                    				current = grammarAccess.getDatoPrimitivoAccess().getINTEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+                    				newLeafNode(enumLiteral_1, grammarAccess.getDatoPrimitivoAccess().getINTEnumLiteralDeclaration_1());
                     			
 
                     }
@@ -6110,12 +6286,12 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalBlockchain.g:2260:3: (enumLiteral_2= 'Boolean' )
+                    // InternalBlockchain.g:2318:3: (enumLiteral_2= 'Boolean' )
                     {
-                    // InternalBlockchain.g:2260:3: (enumLiteral_2= 'Boolean' )
-                    // InternalBlockchain.g:2261:4: enumLiteral_2= 'Boolean'
+                    // InternalBlockchain.g:2318:3: (enumLiteral_2= 'Boolean' )
+                    // InternalBlockchain.g:2319:4: enumLiteral_2= 'Boolean'
                     {
-                    enumLiteral_2=(Token)match(input,60,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,61,FOLLOW_2); 
 
                     				current = grammarAccess.getDatoPrimitivoAccess().getBOOLEANEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getDatoPrimitivoAccess().getBOOLEANEnumLiteralDeclaration_2());
@@ -6127,15 +6303,32 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalBlockchain.g:2268:3: (enumLiteral_3= 'ADDRESS' )
+                    // InternalBlockchain.g:2326:3: (enumLiteral_3= 'ADDRESS' )
                     {
-                    // InternalBlockchain.g:2268:3: (enumLiteral_3= 'ADDRESS' )
-                    // InternalBlockchain.g:2269:4: enumLiteral_3= 'ADDRESS'
+                    // InternalBlockchain.g:2326:3: (enumLiteral_3= 'ADDRESS' )
+                    // InternalBlockchain.g:2327:4: enumLiteral_3= 'ADDRESS'
                     {
-                    enumLiteral_3=(Token)match(input,61,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,62,FOLLOW_2); 
 
                     				current = grammarAccess.getDatoPrimitivoAccess().getADDRESSEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getDatoPrimitivoAccess().getADDRESSEnumLiteralDeclaration_3());
+                    			
+
+                    }
+
+
+                    }
+                    break;
+                case 5 :
+                    // InternalBlockchain.g:2334:3: (enumLiteral_4= 'Double' )
+                    {
+                    // InternalBlockchain.g:2334:3: (enumLiteral_4= 'Double' )
+                    // InternalBlockchain.g:2335:4: enumLiteral_4= 'Double'
+                    {
+                    enumLiteral_4=(Token)match(input,63,FOLLOW_2); 
+
+                    				current = grammarAccess.getDatoPrimitivoAccess().getDOUBLEEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+                    				newLeafNode(enumLiteral_4, grammarAccess.getDatoPrimitivoAccess().getDOUBLEEnumLiteralDeclaration_4());
                     			
 
                     }
@@ -6174,7 +6367,7 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000030L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x000000000000E000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x3C00040000010030L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0xF800080000010030L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000006000L});
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000834000L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000824000L});
@@ -6186,31 +6379,32 @@ public class InternalBlockchainParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000200030L});
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000300000L});
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000401000L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x00000037BC284000L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x00000037BC204000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000006FBC284000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000006FBC204000L});
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000204000L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x000000178C080000L});
-    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0007F8178C280000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000002F8C080000L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x000FF02F8C280000L});
     public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x03F800578C280000L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x07F000AF8C280000L});
     public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000000032L});
     public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000004001000L});
-    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x00000037BC004000L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000006FBC004000L});
     public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x000000C000000042L});
-    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000003000002L});
-    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000800000030L});
-    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000004000000040L});
-    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x000000178C000000L});
-    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x000000978C000000L});
-    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000008000000040L});
-    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000030000000002L});
-    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000008000000042L});
+    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000018000000042L});
+    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000003000002L});
+    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000001000000030L});
+    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000008000000040L});
+    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000002F8C000000L});
+    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000012F8C000000L});
+    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000010000000040L});
+    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000060000000002L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000000000400000L});
 
 }

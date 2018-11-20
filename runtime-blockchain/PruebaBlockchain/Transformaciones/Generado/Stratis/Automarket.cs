@@ -15,7 +15,7 @@ public class AutoMarket : SmartContract
 		public bool Nuevo; 
 		public string Comentarios; 
 	}
-	public AutoMarket (ISmartContractState smartContractState, ulong durationBlocks)
+	public AutoMarket (ISmartContractState smartContractState)
     : base(smartContractState)
     {
         
@@ -34,20 +34,33 @@ public class AutoMarket : SmartContract
            	return PersistentState.GetStructMapping<Vehiculo>("VehiculosCaros");
        	}
     }
-	public ISmartContractMapping<Vehiculo> VehiculosBaratos
+	
+    public ISmartContractMapping<Vehiculo> VehiculosBaratos
     {
         get
-       	{
-           	return PersistentState.GetStructMapping<Vehiculo>("VehiculosBaratos");
-       	}
+        {
+            return PersistentState.GetStructMapping<Vehiculo>("VehiculosBaratos");
+        }
+    }
+
+    public String Brand
+    {
+        get
+        {
+            return PersistentState.GetString("Brand");
+        }
+        private set
+        {
+            PersistentState.SetString("Brand", value);
+        }
+    }
+
+    public string ConsultarVehiculo (Address Placa){
+        return Brand = Vehiculos[Placa].Marca;
     }
 	
-	public string ConsultarVehiculo (Address Placa){
-			return Vehiculos[Placa].Marca;	
-	}
-	
 	public int CalcularCostos (int PrecioVehiculo,int ImpuestoVehiculo,int ValorTraspaso,int ComisionRunt){
-			return ((((PrecioVehiculo * 0.19) + (PrecioVehiculo * ImpuestoVehiculo)) + ValorTraspaso) + ComisionRunt);	
+			return (((PrecioVehiculo + (PrecioVehiculo * ImpuestoVehiculo)) + ValorTraspaso) + ComisionRunt);	
 	}
 	
 	public void CrearVehiculo (string Marca,string Modelo,string Linea,Address Placa,int Cilindraje,int Precio){
@@ -61,7 +74,7 @@ public class AutoMarket : SmartContract
 			vehiculo.Nuevo = true; 
 			vehiculo.Comentarios =  "SinComentarios"; 
 			Vehiculos[Placa] = vehiculo; 
-			if(((Precio >= 1.0E8) || ((Marca ==  "Ferrari") && (Marca !=  "Renault")))){
+			if((Precio >= 100000000)){
 				VehiculosCaros[Placa] = vehiculo;
 			}else{	
 				VehiculosBaratos[Placa] = vehiculo;

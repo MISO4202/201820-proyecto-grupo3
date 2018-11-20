@@ -3,7 +3,7 @@
 package blockchain.impl;
 
 import blockchain.BlockchainPackage;
-import blockchain.ExpresionNumerica;
+import blockchain.ExpresionNumericaInt;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,18 +14,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Expresion Numerica</b></em>'.
+ * An implementation of the model object '<em><b>Expresion Numerica Int</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link blockchain.impl.ExpresionNumericaImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link blockchain.impl.ExpresionNumericaIntImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ExpresionNumericaImpl extends MinimalEObjectImpl.Container implements ExpresionNumerica {
+public class ExpresionNumericaIntImpl extends MinimalEObjectImpl.Container implements ExpresionNumericaInt {
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ public class ExpresionNumericaImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double VALUE_EDEFAULT = 0.0;
+	protected static final int VALUE_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -44,14 +44,14 @@ public class ExpresionNumericaImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected double value = VALUE_EDEFAULT;
+	protected int value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ExpresionNumericaImpl() {
+	protected ExpresionNumericaIntImpl() {
 		super();
 	}
 
@@ -62,7 +62,7 @@ public class ExpresionNumericaImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BlockchainPackage.Literals.EXPRESION_NUMERICA;
+		return BlockchainPackage.Literals.EXPRESION_NUMERICA_INT;
 	}
 
 	/**
@@ -70,7 +70,7 @@ public class ExpresionNumericaImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getValue() {
+	public int getValue() {
 		return value;
 	}
 
@@ -79,11 +79,11 @@ public class ExpresionNumericaImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(double newValue) {
-		double oldValue = value;
+	public void setValue(int newValue) {
+		int oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.EXPRESION_NUMERICA__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, BlockchainPackage.EXPRESION_NUMERICA_INT__VALUE, oldValue, value));
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class ExpresionNumericaImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case BlockchainPackage.EXPRESION_NUMERICA__VALUE:
+			case BlockchainPackage.EXPRESION_NUMERICA_INT__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -108,8 +108,8 @@ public class ExpresionNumericaImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case BlockchainPackage.EXPRESION_NUMERICA__VALUE:
-				setValue((Double)newValue);
+			case BlockchainPackage.EXPRESION_NUMERICA_INT__VALUE:
+				setValue((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -123,7 +123,7 @@ public class ExpresionNumericaImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case BlockchainPackage.EXPRESION_NUMERICA__VALUE:
+			case BlockchainPackage.EXPRESION_NUMERICA_INT__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
 		}
@@ -138,7 +138,7 @@ public class ExpresionNumericaImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case BlockchainPackage.EXPRESION_NUMERICA__VALUE:
+			case BlockchainPackage.EXPRESION_NUMERICA_INT__VALUE:
 				return value != VALUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -160,4 +160,4 @@ public class ExpresionNumericaImpl extends MinimalEObjectImpl.Container implemen
 		return result.toString();
 	}
 
-} //ExpresionNumericaImpl
+} //ExpresionNumericaIntImpl

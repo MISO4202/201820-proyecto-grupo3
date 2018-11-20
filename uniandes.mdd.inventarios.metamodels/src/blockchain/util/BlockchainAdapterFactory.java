@@ -132,8 +132,8 @@ public class BlockchainAdapterFactory extends AdapterFactoryImpl {
 				return createExpresionAdapter();
 			}
 			@Override
-			public Adapter caseExpresionNumerica(ExpresionNumerica object) {
-				return createExpresionNumericaAdapter();
+			public Adapter caseExpresionNumericaDouble(ExpresionNumericaDouble object) {
+				return createExpresionNumericaDoubleAdapter();
 			}
 			@Override
 			public Adapter caseExpresionTexto(ExpresionTexto object) {
@@ -170,6 +170,10 @@ public class BlockchainAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseRetorno(Retorno object) {
 				return createRetornoAdapter();
+			}
+			@Override
+			public Adapter caseExpresionNumericaInt(ExpresionNumericaInt object) {
+				return createExpresionNumericaIntAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -416,16 +420,16 @@ public class BlockchainAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link blockchain.ExpresionNumerica <em>Expresion Numerica</em>}'.
+	 * Creates a new adapter for an object of class '{@link blockchain.ExpresionNumericaDouble <em>Expresion Numerica Double</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see blockchain.ExpresionNumerica
+	 * @see blockchain.ExpresionNumericaDouble
 	 * @generated
 	 */
-	public Adapter createExpresionNumericaAdapter() {
+	public Adapter createExpresionNumericaDoubleAdapter() {
 		return null;
 	}
 
@@ -552,6 +556,20 @@ public class BlockchainAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRetornoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link blockchain.ExpresionNumericaInt <em>Expresion Numerica Int</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see blockchain.ExpresionNumericaInt
+	 * @generated
+	 */
+	public Adapter createExpresionNumericaIntAdapter() {
 		return null;
 	}
 

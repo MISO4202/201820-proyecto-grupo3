@@ -12,7 +12,8 @@ import blockchain.Estado;
 import blockchain.ExpresionAritmetica;
 import blockchain.ExpresionBoolean;
 import blockchain.ExpresionLogica;
-import blockchain.ExpresionNumerica;
+import blockchain.ExpresionNumericaDouble;
+import blockchain.ExpresionNumericaInt;
 import blockchain.ExpresionReferenciada;
 import blockchain.ExpresionRelacional;
 import blockchain.ExpresionTexto;
@@ -75,8 +76,11 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case BlockchainPackage.EXPRESION_LOGICA:
 				sequence_ExpresionLogica(context, (ExpresionLogica) semanticObject); 
 				return; 
-			case BlockchainPackage.EXPRESION_NUMERICA:
-				sequence_ExpresionNumerica(context, (ExpresionNumerica) semanticObject); 
+			case BlockchainPackage.EXPRESION_NUMERICA_DOUBLE:
+				sequence_ExpresionNumericaDouble(context, (ExpresionNumericaDouble) semanticObject); 
+				return; 
+			case BlockchainPackage.EXPRESION_NUMERICA_INT:
+				sequence_ExpresionNumericaInt(context, (ExpresionNumericaInt) semanticObject); 
 				return; 
 			case BlockchainPackage.EXPRESION_REFERENCIADA:
 				sequence_ExpresionReferenciada(context, (ExpresionReferenciada) semanticObject); 
@@ -254,14 +258,28 @@ public class BlockchainSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Linea returns ExpresionNumerica
-	 *     Expresion returns ExpresionNumerica
-	 *     ExpresionNumerica returns ExpresionNumerica
+	 *     Linea returns ExpresionNumericaDouble
+	 *     Expresion returns ExpresionNumericaDouble
+	 *     ExpresionNumericaDouble returns ExpresionNumericaDouble
 	 *
 	 * Constraint:
 	 *     value=EDouble?
 	 */
-	protected void sequence_ExpresionNumerica(ISerializationContext context, ExpresionNumerica semanticObject) {
+	protected void sequence_ExpresionNumericaDouble(ISerializationContext context, ExpresionNumericaDouble semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Linea returns ExpresionNumericaInt
+	 *     Expresion returns ExpresionNumericaInt
+	 *     ExpresionNumericaInt returns ExpresionNumericaInt
+	 *
+	 * Constraint:
+	 *     value=EInt?
+	 */
+	protected void sequence_ExpresionNumericaInt(ISerializationContext context, ExpresionNumericaInt semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
