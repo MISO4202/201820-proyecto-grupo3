@@ -4,60 +4,71 @@ using System;
 
 
 [%
-for (smc in SmartContract.all) { %]
+for (smc in SmartContract.all.first()) { %]
 public class [%=smc.name%] : SmartContract 
 {
  	[%for (ent in smc.entidades) { %]
 	public struct [%=ent.name%] {
 	[%for (attr in ent.atributos) { %]
-		public [%=attr.tipodato.name%] [%=attr.name%]; 
+		public [%if(attr.tipodato.name.asString()=="address"){%][%="Address"%][%}else{%][%=attr.tipodato.name%][%}%] [%=attr.name%]; 
 		[%}%]
-		}
-		public Inventario(ISmartContractState smartContractState, ulong durationBlocks)
-    	: base(smartContractState)
-    	{
+	}
+	public [%=smc.name%] (ISmartContractState smartContractState, ulong durationBlocks)
+    : base(smartContractState)
+    {
         
-    	}
-		[%for (est in smc.estado) { %]
-		public ISmartContractMapping<[%=ent.name%]> [%=est.name%]
-    	{
-        	get
-        	{
-            	return PersistentState.GetStructMapping<[%=ent.name%]>>("[%=est.name%]");
-        	}
-    	}
-		[%}%]
-		[%for (ope in smc.operaciones) { %]	
-		public void [%=ope.name%] ([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %][%=par.tipodato.name%] [%=par.name%][%i++;%][%if(i<>cantpar){%],[%}%][%}%]){
-			[%for (line in ope.lineas) {
-				var izq; var der; var ope;
-				 if(line.isKindOf(ExpresionBinaria)){%]
+    }
+	[%for (est in smc.estado) { %]
+	public ISmartContractMapping<[%=ent.name%]> [%=est.name%]
+    {
+        get
+       	{
+           	return PersistentState.GetStructMapping<[%=ent.name%]>("[%=est.name%]");
+       	}
+    }
+	[%}%]
+	[%for (ope in smc.operaciones) { %]	
+	public [%if(ope.retorno.size()>0){%][%=getRetorno(ope)%][%}%] [%=ope.name%] ([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %][%=par.tipodato.name%] [%=par.name%][%i++;%][%if(i<>cantpar){%],[%}%][%}%]){
+		[%for (line in ope.lineas) {
+			if(line.isKindOf(ExpresionBinaria)){%]
 			[%=getExpresion(line)%]; 
 				 [%}else if(line.isTypeOf(If)){%]
 			if( [%=getExpresion(line.expresionlogica)%]){
 				[%for (body in line.lineas){%]
-					[%=getExpresion(body)%]
+				[%=getExpresion(body)%];
 				[%}%]
 			}[%if(line.elseLines.size()>0){%]else{	
 				[%for (body in line.elseLines.lineas){%]
-					[%=getExpresion(body)%]
+				[%=getExpresion(body)%];
 				[%}%]	
 			[%}%]
 			}	 	
-			[%}else{%]
-			[%=getValue(line)%];				 
-				 [%}
-				%]
-				
-			[%}%]
-		}
+			[%}else if(not (line.isTypeOf(Retorno))){%]
+			[%=getValue(line)%];
+			[%}else{
+				if(line.isTypeOf(Retorno)){
+					if(line.lineaRetorno.size()>0){%]
+			[%=getLineaRetorno(line)%];	
+					[%}
+				}				 
+			}%]
 		[%}%]
+	}
+	[%}%]
 [%}%] 
 }
 	
 [%}%]
 
 [%
+
+operation getEstado(est:Estado) : String{
+	if(est.tipodato.tipo.asString=="ADDRESS"){
+		return "public static read only Address" + est.name + ";";
+	}else{
+		return est.tipodato.name + " " + est.name + ";";
+	}
+}
 operation getValue (line:Linea) : String {
 	if(line.isTypeOf(ExpresionNumerica) or line.isTypeOf(ExpresionTexto) or line.isTypeOf(ExpresionBoolean)){
 		if(line.isTypeOf(ExpresionTexto)){
@@ -68,7 +79,7 @@ operation getValue (line:Linea) : String {
 	}else if(line.isTypeOf(ExpresionReferenciada)){
 		return line.referencia.name;
 	}else if(line.isTypeOf(Variable)){
-	    return "memory " + line.name + " = " + line.tipodato.name;
+	    return line.tipodato.name + " " + line.name + " = new " + line.tipodato.name + "()" ;
 	}
 }
 
@@ -84,15 +95,39 @@ operation getOperador(line:Linea) : String{
 	  	return ope;
 }
 
+operation getRetorno(ope: Operacion) : String{
+  if(ope.retorno.isUndefined()){
+  	return "void";
+  }else{
+  	return ope.retorno.name.asString();
+  }
+}
+
+operation getLineaRetorno(line: Linea) : String {
+	for (ret in line.lineaRetorno){
+		return "return " + getExpresion(ret);
+	}
+	
+}
+
 operation  getExpresion (line: Linea) : String {
 	if(not(line.isKindOf(ExpresionBinaria))){
 		return getValue(line);
 	}else{
-		if(getOperador(line)=="PUT"){
-			return " "+ getExpresion(line.Izq)+ "[" + getExpresion(line.Der)+"]";
-		}else if(getOperador(line)=="GET"){
-			return getExpresion(line.Izq)+ "[" + getExpresion(line.Der)+"]";
-		}else{
+		if(line.isTypeOf(ExpresionAritmetica)){
+			if(getOperador(line)=="PUT"){
+				return " "+ getExpresion(line.Izq)+ "[" + getExpresion(line.Der)+"]";
+			}else if(getOperador(line)=="GET"){
+				return getExpresion(line.Izq)+ "[" + getExpresion(line.Der)+"]";
+			}else if(line.operador.asString <> "="){
+				return "( "+ getExpresion(line.Izq)+" "+ getOperador(line)+" "+getExpresion(line.Der)+" )";
+			}else{
+				return " "+ getExpresion(line.Izq)+" "+ getOperador(line)+" "+getExpresion(line.Der)+" ";
+			}
+		}else if(line.isTypeOf(ExpresionLogica)){
+			return "( "+ getExpresion(line.Izq)+" "+ getOperador(line)+" "+getExpresion(line.Der)+" )"; 
+		}
+		else{
 			return " "+ getExpresion(line.Izq)+" "+ getOperador(line)+" "+getExpresion(line.Der)+" ";
 		}
 		

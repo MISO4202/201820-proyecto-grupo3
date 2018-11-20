@@ -40,13 +40,8 @@ contract [%=smc.name%] {
 					if(line.lineaRetorno.size()>0){%]
 			[%=getLineaRetorno(line)%];	
 					[%}
-				}
-			%]
-				
-								 
-			[%}
-			
-			%]
+				}				 
+			}%]
 				
 			[%}%]
 		}
@@ -88,7 +83,9 @@ operation getValue (line:Linea) : String {
 	}else if(line.isTypeOf(ExpresionReferenciada)){
 		return line.referencia.name;
 	}else if(line.isTypeOf(Variable)){
-	    return line.tipodato.name + " memory " + line.name;
+	    return " "+ line.tipodato.name + " memory " + line.name;
+	}else{
+		return "";
 	}
 }
 

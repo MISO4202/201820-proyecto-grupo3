@@ -17,17 +17,13 @@ contract AutoMarket {
 		function ConsultarVehiculo (string Placa) public returns (Vehiculo){
 			return  Vehiculos[Placa] . Marca ;	
 				
-								 
-				
 		}
 		function CalcularCostos (int PrecioVehiculo,int ImpuestoVehiculo,int ValorTraspaso,int ComisionRunt) public returns (int){
 			return ( ( ( ( PrecioVehiculo * 0.19 ) + ( PrecioVehiculo * ImpuestoVehiculo ) ) + ValorTraspaso ) + ComisionRunt );	
 				
-								 
-				
 		}
 		function CrearVehiculo (string Marca,string Modelo,string Linea,string Placa,int Cilindraje,int Precio) {
-			Vehiculo memory vehiculo;
+			 Vehiculo memory vehiculo;
 				
 			  vehiculo . Marca  = Marca ; 
 				
@@ -56,7 +52,7 @@ contract AutoMarket {
 				
 		}
 		function ActualizarVehiculo (string Placa,int Cilindraje,int Precio) {
-			Vehiculo memory vehiculo;
+			 Vehiculo memory vehiculo;
 				
 			  vehiculo . Cilindraje  = Cilindraje ; 
 				
