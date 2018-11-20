@@ -42,42 +42,40 @@ public class AutoMarket : SmartContract
        	}
     }
 	
-	public String ConsultarVehiculo (string Placa){
-			return  Vehiculos[Placa] . Marca ;	
+	public string ConsultarVehiculo (Address Placa){
+			return Vehiculos[Placa].Marca;	
 	}
 	
-	public double CalcularCostos (int PrecioVehiculo,int ImpuestoVehiculo,int ValorTraspaso,int ComisionRunt){
-			return ( ( ( ( PrecioVehiculo * (19/100) ) + ( PrecioVehiculo * ImpuestoVehiculo ) ) + ValorTraspaso ) + ComisionRunt );	
+	public int CalcularCostos (int PrecioVehiculo,int ImpuestoVehiculo,int ValorTraspaso,int ComisionRunt){
+			return ((((PrecioVehiculo * 0.19) + (PrecioVehiculo * ImpuestoVehiculo)) + ValorTraspaso) + ComisionRunt);	
 	}
 	
 	public void CrearVehiculo (string Marca,string Modelo,string Linea,Address Placa,int Cilindraje,int Precio){
 			Vehiculo vehiculo = new Vehiculo();
-			  vehiculo . Marca  = Marca ; 
-			  vehiculo . Modelo  = Modelo ; 
-			  vehiculo . Linea  = Linea ; 
-			  vehiculo . Cilindraje  = Cilindraje ; 
-			  vehiculo . Placa  = Placa ; 
-			  vehiculo . Precio  = Precio ; 
-			  vehiculo . Nuevo  = true ; 
-			  vehiculo . Comentarios  =  "SinComentarios" ; 
-			  Vehiculos[Placa] = vehiculo ; 
-			if( ( ( Precio >= 1.0E8 ) || ( ( Marca ==  "Ferrari" ) && ( Marca !=  "Renault" ) ) )){
-				 VehiculosCaros[Placa] = vehiculo ;
+			vehiculo.Marca = Marca; 
+			vehiculo.Modelo = Modelo; 
+			vehiculo.Linea = Linea; 
+			vehiculo.Cilindraje = Cilindraje; 
+			vehiculo.Placa = Placa; 
+			vehiculo.Precio = Precio; 
+			vehiculo.Nuevo = true; 
+			vehiculo.Comentarios =  "SinComentarios"; 
+			Vehiculos[Placa] = vehiculo; 
+			if(((Precio >= 1.0E8) || ((Marca ==  "Ferrari") && (Marca !=  "Renault")))){
+				VehiculosCaros[Placa] = vehiculo;
 			}else{	
-				 VehiculosBaratos[Placa] = vehiculo ;
+				VehiculosBaratos[Placa] = vehiculo;
 	
 			}	 	
 	}
 	
 	public void ActualizarVehiculo (Address Placa,int Cilindraje,int Precio){
 			Vehiculo vehiculo = new Vehiculo();
-			  vehiculo . Cilindraje  = Cilindraje ; 
-			  vehiculo . Placa  = Placa ; 
-			  vehiculo . Precio  = Precio ; 
-			  vehiculo . Nuevo  = true ; 
-			  Vehiculos[Placa] = vehiculo ; 
+			vehiculo.Cilindraje = Cilindraje; 
+			vehiculo.Placa = Placa; 
+			vehiculo.Precio = Precio; 
+			vehiculo.Nuevo = true; 
+			Vehiculos[Placa] = vehiculo; 
 	}
  
 }
-	
-

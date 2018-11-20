@@ -14,7 +14,7 @@ contract AutoMarket {
 		mapping (address => Vehiculo) publicVehiculos;
 		mapping (address => Vehiculo) publicVehiculosCaros;
 		mapping (address => Vehiculo) publicVehiculosBaratos;
-		function ConsultarVehiculo (string Placa) public returns (Vehiculo){
+		function ConsultarVehiculo (address Placa) public returns (string){
 			return  Vehiculos[Placa] . Marca ;	
 				
 		}
@@ -22,7 +22,7 @@ contract AutoMarket {
 			return ( ( ( ( PrecioVehiculo * 0.19 ) + ( PrecioVehiculo * ImpuestoVehiculo ) ) + ValorTraspaso ) + ComisionRunt );	
 				
 		}
-		function CrearVehiculo (string Marca,string Modelo,string Linea,string Placa,int Cilindraje,int Precio) {
+		function CrearVehiculo (string Marca,string Modelo,string Linea,address Placa,int Cilindraje,int Precio) {
 			 Vehiculo memory vehiculo;
 				
 			  vehiculo . Marca  = Marca ; 
@@ -51,7 +51,7 @@ contract AutoMarket {
 			}	 	
 				
 		}
-		function ActualizarVehiculo (string Placa,int Cilindraje,int Precio) {
+		function ActualizarVehiculo (address Placa,int Cilindraje,int Precio) {
 			 Vehiculo memory vehiculo;
 				
 			  vehiculo . Cilindraje  = Cilindraje ; 

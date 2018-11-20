@@ -101,7 +101,7 @@ public class BlockchainSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Ambiguous syntax:
-	 *     ('if' '{' '}') | ('return' '{' '}')
+	 *     ('return' '{' '}') | ('if' '{' '}')
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) (rule start)

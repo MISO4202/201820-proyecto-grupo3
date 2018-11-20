@@ -7,8 +7,8 @@ contract TestAutoMarket {
 	function testConsultarVehiculo (){
 		AutoMarket smartContract = AutoMarket(DeployedAddresses.AutoMarket());
 		
-		smartContract.ConsultarVehiculo(new string());
-		smartContract.ConsultarVehiculo( "Test");
+		smartContract.ConsultarVehiculo(new address());
+		smartContract.ConsultarVehiculo( new Primitivo [name=address, tipo=address]());
 		
 		Assert.isTrue(true);
 	}
@@ -23,16 +23,16 @@ contract TestAutoMarket {
 	function testCrearVehiculo (){
 		AutoMarket smartContract = AutoMarket(DeployedAddresses.AutoMarket());
 		
-		smartContract.CrearVehiculo(new string(),new string(),new string(),new string(),new uint(),new uint());
-		smartContract.CrearVehiculo( "Test", "Test", "Test", "Test", 0, 0);
+		smartContract.CrearVehiculo(new string(),new string(),new string(),new address(),new uint(),new uint());
+		smartContract.CrearVehiculo( "Test", "Test", "Test", new Primitivo [name=address, tipo=address](), 0, 0);
 		
 		Assert.isTrue(true);
 	}
 	function testActualizarVehiculo (){
 		AutoMarket smartContract = AutoMarket(DeployedAddresses.AutoMarket());
 		
-		smartContract.ActualizarVehiculo(new string(),new uint(),new uint());
-		smartContract.ActualizarVehiculo( "Test", 0, 0);
+		smartContract.ActualizarVehiculo(new address(),new uint(),new uint());
+		smartContract.ActualizarVehiculo( new Primitivo [name=address, tipo=address](), 0, 0);
 		
 		Assert.isTrue(true);
 	}

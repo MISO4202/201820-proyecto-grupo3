@@ -17,8 +17,8 @@ namespace TestAutomarket {
 		public void TestConsultarVehiculo (){
 			AutoMarket smartContract = new AutoMarket();
 			
-			smartContract.ConsultarVehiculo( default(string));
-			smartContract.ConsultarVehiculo( "Test");
+			smartContract.ConsultarVehiculo( default(address));
+			smartContract.ConsultarVehiculo( new Primitivo [name=address, tipo=address]());
 			
 			Assert.IsTrue(true);
 		}
@@ -35,8 +35,8 @@ namespace TestAutomarket {
 		public void TestCrearVehiculo (){
 			AutoMarket smartContract = new AutoMarket();
 			
-			smartContract.CrearVehiculo( default(string), default(string), default(string), default(string), default(int), default(int));
-			smartContract.CrearVehiculo( "Test", "Test", "Test", "Test", 0, 0);
+			smartContract.CrearVehiculo( default(string), default(string), default(string), default(address), default(int), default(int));
+			smartContract.CrearVehiculo( "Test", "Test", "Test", new Primitivo [name=address, tipo=address](), 0, 0);
 			
 			Assert.IsTrue(true);
 		}
@@ -44,8 +44,8 @@ namespace TestAutomarket {
 		public void TestActualizarVehiculo (){
 			AutoMarket smartContract = new AutoMarket();
 			
-			smartContract.ActualizarVehiculo( default(string), default(int), default(int));
-			smartContract.ActualizarVehiculo( "Test", 0, 0);
+			smartContract.ActualizarVehiculo( default(address), default(int), default(int));
+			smartContract.ActualizarVehiculo( new Primitivo [name=address, tipo=address](), 0, 0);
 			
 			Assert.IsTrue(true);
 		}

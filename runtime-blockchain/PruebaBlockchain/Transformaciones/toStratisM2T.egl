@@ -28,12 +28,12 @@ public class [%=smc.name%] : SmartContract
     }
 	[%}%]
 	[%for (ope in smc.operaciones) { %]	
-	public [%if(ope.retorno.size()>0){%][%=getRetorno(ope)%][%}%] [%=ope.name%] ([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %][%=par.tipodato.name%] [%=par.name%][%i++;%][%if(i<>cantpar){%],[%}%][%}%]){
+	public [%if(ope.retorno.size()>0){%][%=getRetorno(ope)%][%}%] [%=ope.name%] ([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %][%if(par.tipodato.name.asString()=="address"){%][%="Address"%][%}else{%][%=par.tipodato.name%][%}%] [%=par.name%][%i++;%][%if(i<>cantpar){%],[%}%][%}%]){
 		[%for (line in ope.lineas) {
 			if(line.isKindOf(ExpresionBinaria)){%]
 			[%=getExpresion(line)%]; 
 				 [%}else if(line.isTypeOf(If)){%]
-			if( [%=getExpresion(line.expresionlogica)%]){
+			if([%=getExpresion(line.expresionlogica)%]){
 				[%for (body in line.lineas){%]
 				[%=getExpresion(body)%];
 				[%}%]
@@ -57,9 +57,7 @@ public class [%=smc.name%] : SmartContract
 	[%}%]
 [%}%] 
 }
-	
 [%}%]
-
 [%
 
 operation getEstado(est:Estado) : String{
@@ -116,24 +114,25 @@ operation  getExpresion (line: Linea) : String {
 	}else{
 		if(line.isTypeOf(ExpresionAritmetica)){
 			if(getOperador(line)=="PUT"){
-				return " "+ getExpresion(line.Izq)+ "[" + getExpresion(line.Der)+"]";
+				return getExpresion(line.Izq)+ "[" + getExpresion(line.Der)+"]";
 			}else if(getOperador(line)=="GET"){
 				return getExpresion(line.Izq)+ "[" + getExpresion(line.Der)+"]";
 			}else if(line.operador.asString <> "="){
-				return "( "+ getExpresion(line.Izq)+" "+ getOperador(line)+" "+getExpresion(line.Der)+" )";
+				return "("+ getExpresion(line.Izq)+" "+ getOperador(line)+" "+getExpresion(line.Der)+")";
 			}else{
-				return " "+ getExpresion(line.Izq)+" "+ getOperador(line)+" "+getExpresion(line.Der)+" ";
+				return getExpresion(line.Izq)+" "+ getOperador(line)+" "+getExpresion(line.Der);
 			}
 		}else if(line.isTypeOf(ExpresionLogica)){
-			return "( "+ getExpresion(line.Izq)+" "+ getOperador(line)+" "+getExpresion(line.Der)+" )"; 
+			return "("+ getExpresion(line.Izq)+" "+ getOperador(line)+" "+getExpresion(line.Der)+")"; 
+		}
+		else if(getOperador(line)=="."){
+			return getExpresion(line.Izq)+getOperador(line)+getExpresion(line.Der);
 		}
 		else{
-			return " "+ getExpresion(line.Izq)+" "+ getOperador(line)+" "+getExpresion(line.Der)+" ";
+			return getExpresion(line.Izq)+" "+ getOperador(line)+" "+getExpresion(line.Der);
 		}
 		
 	}	
 }
 
 %]
-
- 
