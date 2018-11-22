@@ -20,22 +20,42 @@
 
    <delete dir="${generado.location}" failonerror="true" />
 
-<antcall target="transM2T"/>
+<antcall target="transM2TAutomarket"/>
+
+<antcall target="transM2TPerrera"/>
 
 </target>
 
-<target name="transM2T">
+<target name="transM2TAutomarket">
 
-<echo>Corriendo toBlockchain.EGL</echo>
+<echo>Corriendo toBlockchain.EGL para AutoMarket</echo>
 
 <epsilon.emf.loadModel name="AutoMarket" modelfile="${models.location}/AutoMarket.blockchain" metamodeluri="${blockchain.metamodel.uri}" read="true" store="false" />
 
+
 <epsilon.egl src="${transformaciones.location}/toBlockchain.egl">
 
-  <model ref="AutoMarket" />
+  	<model ref="AutoMarket" />
 
   </epsilon.egl>
 
   </target>
+	
+<target name="transM2TPerrera">
+
+	<echo>Corriendo toBlockchain.EGL para Perrera</echo>
+
+
+	<epsilon.emf.loadModel name="perrera" modelfile="${models.location}/perrera.blockchain" metamodeluri="${blockchain.metamodel.uri}" read="true" store="false" />
+
+	<epsilon.egl src="${transformaciones.location}/toBlockchain.egl">
+
+		<model ref="perrera" />
+
+	  </epsilon.egl>
+
+</target>
+	
+<eclipse.refreshLocal resource="${basedir}" depth="-1" />
 
 </project>

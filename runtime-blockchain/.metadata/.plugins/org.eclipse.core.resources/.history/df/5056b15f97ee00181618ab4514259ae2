@@ -1,0 +1,40 @@
+pragma solidity ^0.4.0;
+import "remix_tests.sol";
+import "[%=app%].sol";
+
+
+[%for (smc in SmartContract.all) { %]
+contract Test[%=smc.name%] {
+	[%for (ope in smc.operaciones) { %]
+	function test[%=ope.name%] (){
+		[%=smc.name%] smartContract = [%=smc.name%]();
+		
+		smartContract.[%=ope.name%]([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %] [%=getTestData(par)%] [%i++;%][%if(i<>cantpar){%],[%}%][%}%]);
+		
+		Assert.isTrue(true);
+	}
+	[%}%]
+[%}%]
+}
+[%
+operation getTestData (parametro:Parametro) : String {
+	var result = "";
+	if(parametro.tipodato.isTypeOf(Primitivo)){
+	    parametro.tipodato.tipo.println();
+		if(parametro.tipodato.tipo.asString()=='address'){
+			result = "0x0fC8Fff9aA5077B938A8FEfFF76bA39A3F5f4f70";
+		}else if(parametro.tipodato.tipo.asString()=='String'){
+			result = "\"Test\"";
+ 		}else if(parametro.tipodato.tipo.asString()=='Boolean'){
+			result = "false";
+		}else if(parametro.tipodato.tipo.asString()=='int'){
+			result = "2650";
+		}
+ 	}else{
+ 		result = "";
+ 	}
+ 	return result;
+}
+
+
+%]

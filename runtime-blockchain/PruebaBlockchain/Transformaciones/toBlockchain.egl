@@ -7,19 +7,19 @@
 	}
 	//Generación de los archivos para las unit test de Solidity
 	var app:Template:= TemplateFactory.load('unitTestEthereum.egl');
-	for(nameapp in Aplicacion.all.flatten()){
+	for(nameapp in Aplicacion.all){
 		app.populate('app', nameapp.name);
-		app.generate('./Generado/Solidity/test'+ nameapp.name + '.sol');
+		app.generate('./Generado/Solidity/'+nameapp.name +'_test.sol');
 	}
 	//Generación de los archivos para Stratis
 	var app:Template:= TemplateFactory.load('toStratisM2T.egl');
-	for(nameapp in Aplicacion.all.flatten()){
+	for(nameapp in Aplicacion.all){
 		app.populate('app', nameapp.name);
 		app.generate('./Generado/Stratis/'+ nameapp.name + '.cs');
 	}
 	//Generación de los archivos para las pruebas unitarias de Stratis
 	var app:Template:= TemplateFactory.load('unitTestStratis.egl');
-	for(nameapp in Aplicacion.all.flatten()){
+	for(nameapp in Aplicacion.all){
 		app.populate('app', nameapp.name);
 		app.generate('./Generado/Stratis/test'+ nameapp.name + '.cs');
 	}

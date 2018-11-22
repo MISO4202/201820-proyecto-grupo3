@@ -1,0 +1,39 @@
+import "truffle/Assert.sol";
+import "truffle/DeployedAddresses.sol";
+import "../contracts/[%=app%].sol";
+
+
+[%for (smc in SmartContract.all) { %]
+contract Test[%=smc.name%] {
+	[%for (ope in smc.operaciones) { %]
+	function test[%=ope.name%] (){
+		[%=smc.name%] smartContract = [%=smc.name%]();
+		
+		smartContract.[%=ope.name%]([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %] [%=getTestData(par)%] [%i++;%][%if(i<>cantpar){%],[%}%][%}%]);
+		
+		Assert.isTrue(true);
+	}
+	[%}%]
+[%}%]
+}
+[%
+operation getTestData (parametro:Parametro) : String {
+	var result = "";
+	if(parametro.tipodato.isTypeOf(Primitivo)){
+		if(parametro.tipodato.tipo=='ADDRESS'){
+			result = "0x0fC8Fff9aA5077B938A8FEfFF76bA39A3F5f4f70";
+		}else if(parametro.tipodato.tipo=='STRING'){
+			result = "\"Test\"";
+ 		}else if(parametro.tipodato.name=='BOOLEAN'){
+			result = "false";
+		}else if(parametro.tipodato.name=='INT'){
+			result = "2650";
+		}
+ 	}else{
+ 		result = "";
+ 	}
+ 	return result;
+}
+
+
+%]

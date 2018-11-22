@@ -4,7 +4,7 @@ using System;
 
 
 [%
-for (smc in SmartContract.all.first()) { %]
+for (smc in SmartContract.all) { %]
 public class [%=smc.name%] : SmartContract 
 {
  	[%for (ent in smc.entidades) { %]
@@ -13,19 +13,15 @@ public class [%=smc.name%] : SmartContract
 		public [%if(attr.tipodato.name.asString()=="address"){%][%="Address"%][%}else{%][%=attr.tipodato.name%][%}%] [%=attr.name%]; 
 		[%}%]
 	}
-	public [%=smc.name%] (ISmartContractState smartContractState, ulong durationBlocks)
+	public [%=smc.name%] (ISmartContractState smartContractState)
     : base(smartContractState)
     {
         
     }
 	[%for (est in smc.estado) { %]
-	public ISmartContractMapping<[%=ent.name%]> [%=est.name%]
-    {
-        get
-       	{
-           	return PersistentState.GetStructMapping<[%=ent.name%]>("[%=est.name%]");
-       	}
-    }
+	
+    [%=getEstado(est)%]
+    
 	[%}%]
 	[%for (ope in smc.operaciones) { %]	
 	public [%if(ope.retorno.size()>0){%][%=getRetorno(ope)%][%}%] [%=ope.name%] ([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %][%if(par.tipodato.name.asString()=="address"){%][%="Address"%][%}else{%][%=par.tipodato.name%][%}%] [%=par.name%][%i++;%][%if(i<>cantpar){%],[%}%][%}%]){
@@ -61,10 +57,50 @@ public class [%=smc.name%] : SmartContract
 [%
 
 operation getEstado(est:Estado) : String{
-	if(est.tipodato.tipo.asString=="ADDRESS"){
-		return "public static read only Address" + est.name + ";";
+	if(est.tipodato.isTypeOf(Primitivo)){
+		if(est.tipodato.tipo.asString()=="ADDRESS"){
+	return "public Address" + est.name + "{\n"+
+		"    { \n"+ 
+	    "      	get \n"+
+		"	      {\n"+ 
+		'		      	  return PersistentState.GetAddress ("' + est.name + '");\n' 
+	+   "		     }\n" +
+	    "      	private set \n"+
+		"	      {\n"+ 
+		'		      	  PersistentState.SetAddress ("' + est.name + '", value);\n' 
+	+   "		     }\n" +
+ 
+		"	   }";	
+		}else{
+	return "public " + est.tipodato.tipo + " " +  est.name + "\n"+
+		"    { \n"+ 
+	    "      	get \n"+
+		"	      {\n"+ 
+		"		      	  return PersistentState.Get"+est.tipodato.tipo + '("' + est.name + '");\n' 
+	+   "		     }\n" +
+	    "      	private set \n"+
+		"	      {\n"+ 
+		"		      	  PersistentState.Set"+est.tipodato.tipo + '("' + est.name + '", value);\n' 
+	+   "		     }\n" +				 
+		"	   }";
+		}
+	}
+	else if(est.tipodato.isTypeOf(Mapa)){
+	return "public ISmartContractMapping <" + est.tipodato.tipoDatoValue.name + "> " +  est.name + "\n"+
+		"    { \n"+ 
+	    "      	get \n"+
+		"	      {\n"+ 
+		"		      	  return PersistentState.GetStructMapping<"+est.tipodato.tipoDatoValue.name+ '> ("' + est.name + '");\n' 
+	+   "		     }\n" + 
+		"	   }";
 	}else{
-		return est.tipodato.name + " " + est.name + ";";
+		return "public " + est.tipodato.name + " " +  est.name + "\n"+
+		"    { \n"+ 
+	    "      	get \n"+
+		"	      {\n"+ 
+		"		      	  return PersistentState.Get"+est.tipodato.name+ '("' + est.name + '");\n' 
+	+   "		     }\n" + 
+		"	   }";
 	}
 }
 operation getValue (line:Linea) : String {

@@ -1,0 +1,147 @@
+using Stratis.SmartContracts;
+using System.Linq;
+using System;
+
+
+[%
+for (smc in SmartContract.all.first()) { %]
+public class [%=smc.name%] : SmartContract 
+{
+ 	[%for (ent in smc.entidades) { %]
+	public struct [%=ent.name%] {
+	[%for (attr in ent.atributos) { %]
+		public [%if(attr.tipodato.name.asString()=="address"){%][%="Address"%][%}else{%][%=attr.tipodato.name%][%}%] [%=attr.name%]; 
+		[%}%]
+	}
+	public [%=smc.name%] (ISmartContractState smartContractState)
+    : base(smartContractState)
+    {
+        
+    }
+	[%for (est in smc.estado) { %]
+	
+    [%=getEstado(est)%]
+    
+	[%}%]
+	[%for (ope in smc.operaciones) { %]	
+	public [%if(ope.retorno.size()>0){%][%=getRetorno(ope)%][%}%] [%=ope.name%] ([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %][%if(par.tipodato.name.asString()=="address"){%][%="Address"%][%}else{%][%=par.tipodato.name%][%}%] [%=par.name%][%i++;%][%if(i<>cantpar){%],[%}%][%}%]){
+		[%for (line in ope.lineas) {
+			if(line.isKindOf(ExpresionBinaria)){%]
+			[%=getExpresion(line)%]; 
+				 [%}else if(line.isTypeOf(If)){%]
+			if([%=getExpresion(line.expresionlogica)%]){
+				[%for (body in line.lineas){%]
+				[%=getExpresion(body)%];
+				[%}%]
+			}[%if(line.elseLines.size()>0){%]else{	
+				[%for (body in line.elseLines.lineas){%]
+				[%=getExpresion(body)%];
+				[%}%]	
+			[%}%]
+			}	 	
+			[%}else if(not (line.isTypeOf(Retorno))){%]
+			[%=getValue(line)%];
+			[%}else{
+				if(line.isTypeOf(Retorno)){
+					if(line.lineaRetorno.size()>0){%]
+			[%=getLineaRetorno(line)%];	
+					[%}
+				}				 
+			}%]
+		[%}%]
+	}
+	[%}%]
+[%}%] 
+}
+[%}%]
+[%
+
+operation getEstado(est:Estado) : String{
+	if(est.tipodato.isTypeOf(Primitivo)){
+		if(est.tipodato.tipo.asString()=="ADDRESS"){
+			return "public static read only Address" + est.name + ";";
+		}else{
+		  return est.tipodato.name + " " + est.name + ";";
+		}
+	}
+	else if(est.tipodato.isTypeOf(Mapa)){
+	return "public ISmartContractMapping <" + est.tipodato.tipoDatoValue + "> " +  est.name + 
+		"{"+ 
+			"get"+
+			"{"+ 
+				"return PersistentState.GetStructMapping< "+est.tipodato.tipoDatoValue+ "> (" + est.name + ");" 
+		  + "}" + 
+		 "}";
+	}else{
+		return est.tipodato.name + " " + est.name + ";";
+	}
+}
+operation getValue (line:Linea) : String {
+	if(line.isTypeOf(ExpresionNumericaInt) or line.isTypeOf(ExpresionTexto) or line.isTypeOf(ExpresionBoolean) or line.isTypeOf(ExpresionNumericaDouble)){
+		if(line.isTypeOf(ExpresionTexto)){
+			return ' "'+line.value.asString()+ '"';
+		}else{
+			return line.value.asString();
+		}
+	}else if(line.isTypeOf(ExpresionReferenciada)){
+		return line.referencia.name;
+	}else if(line.isTypeOf(Variable)){
+	    return line.tipodato.name + " " + line.name + " = new " + line.tipodato.name + "()" ;
+	}
+}
+
+operation getOperador(line:Linea) : String{
+		var ope;
+		if(line.isTypeOf(ExpresionAritmetica)){
+				ope=line.operador.asString();
+	  	}else if (line.isTypeOf(ExpresionLogica)){
+	  			ope=line.operador.asString();
+	  	}else if(line.isTypeOf(ExpresionRelacional)){
+	  			ope=".";
+	  	} 
+	  	return ope;
+}
+
+operation getRetorno(ope: Operacion) : String{
+  if(ope.retorno.isUndefined()){
+  	return "void";
+  }else{
+  	return ope.retorno.name.asString();
+  }
+}
+
+operation getLineaRetorno(line: Linea) : String {
+	for (ret in line.lineaRetorno){
+		return "return " + getExpresion(ret);
+	}
+	
+}
+
+operation  getExpresion (line: Linea) : String {
+	if(not(line.isKindOf(ExpresionBinaria))){
+		return getValue(line);
+	}else{
+		if(line.isTypeOf(ExpresionAritmetica)){
+			if(getOperador(line)=="PUT"){
+				return getExpresion(line.Izq)+ "[" + getExpresion(line.Der)+"]";
+			}else if(getOperador(line)=="GET"){
+				return getExpresion(line.Izq)+ "[" + getExpresion(line.Der)+"]";
+			}else if(line.operador.asString <> "="){
+				return "("+ getExpresion(line.Izq)+" "+ getOperador(line)+" "+getExpresion(line.Der)+")";
+			}else{
+				return getExpresion(line.Izq)+" "+ getOperador(line)+" "+getExpresion(line.Der);
+			}
+		}else if(line.isTypeOf(ExpresionLogica)){
+			return "("+ getExpresion(line.Izq)+" "+ getOperador(line)+" "+getExpresion(line.Der)+")"; 
+		}
+		else if(getOperador(line)=="."){
+			return getExpresion(line.Izq)+getOperador(line)+getExpresion(line.Der);
+		}
+		else{
+			return getExpresion(line.Izq)+" "+ getOperador(line)+" "+getExpresion(line.Der);
+		}
+		
+	}	
+}
+
+%]

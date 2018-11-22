@@ -1,17 +1,23 @@
 pragma solidity ^0.4.0;
 
-[%for (smc in SmartContract.all) { %]
+[%for (smc in SmartContract.all) { 
+//se crea el contrato de acuerdo al nombre del modelo
+%]
+
 contract [%=smc.name%] {
- 	[%for (ent in smc.entidades) { %]
+ 	[%for (ent in smc.entidades) { 
+ 		//se crean las entidades con sus respectivos atributos de acuerdo al modelo de entrada%]
 		struct [%=ent.name%] {[%for (attr in ent.atributos) {%] 
 			[%=attr.tipodato.name%] [%=attr.name%];[%}%]
 		
 		}
 		[%for (est in smc.estado) {  
-		%]
+		//se crean los estados de acuerdo al modelo de entrada%]
 		[%=getEstado(est)%]
 		[%}%]
-		[%for (ope in smc.operaciones) { %]
+		[%for (ope in smc.operaciones) { 
+		//se crean las funciones y sus operaciones de acuerdo al modelo de entrada
+		%]
 		function [%=ope.name%] ([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %][%=par.tipodato.name%] [%=par.name%][%i++;%][%if(i<>cantpar){%],[%}%][%}%]) public[%if(ope.retorno.size()>0){%] [%=getRetorno(ope)%][%}%]{
 			[%for (line in ope.lineas) {
 				 if(line.isKindOf(ExpresionBinaria)){%]

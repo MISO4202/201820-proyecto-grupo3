@@ -13,8 +13,9 @@ Aplicacion Automarket{
 		Estado MapaVehiculos Vehiculos
 		Estado MapaVehiculos VehiculosCaros
 		Estado MapaVehiculos VehiculosBaratos
-		Operacion isUd=false ConsultarVehiculo (address Placa) : string { 		
-			return {ExpRel ExpArit ExpRef {Vehiculos} GET ExpRef {Placa} . ExpRef{"Vehiculo.Marca"}}	 
+		Estado string Coste
+		Operacion isUd=false ConsultarVehiculo (address Placa) : string { 			
+			return {ExpRel ExpArit ExpRef {Vehiculos} GET ExpRef {Placa} . ExpRef{"Vehiculo.Marca"} }	 
 		}
 		Operacion isUd=false CalcularCostos (int PrecioVehiculo,int ImpuestoVehiculo, int ValorTraspaso, int ComisionRunt) : int {
 			return {ExpArit (ExpArit (ExpArit (ExpRef{PrecioVehiculo} + (ExpArit (ExpRef{PrecioVehiculo} * ExpRef{ImpuestoVehiculo}))
@@ -32,7 +33,7 @@ Aplicacion Automarket{
 			ExpArit (ExpRel ExpRef{vehiculo}.ExpRef{"Vehiculo.Nuevo"} = ExpBool true)
 			ExpArit (ExpRel ExpRef{vehiculo}.ExpRef{"Vehiculo.Comentarios"} = ExpTex "SinComentarios")
 			ExpArit (ExpArit ExpRef {Vehiculos} PUT ExpRef {Placa}) = ExpRef {vehiculo}
-			if ExpLog ((ExpRef{Precio}>= ExpNum 100000000))
+			if ExpLog ((ExpRef{Precio}>= ExpNum 1000000000))
 			{
 				ExpArit (ExpArit ExpRef {VehiculosCaros} GET ExpRef {Placa}) = ExpRef {vehiculo}
 			}else{
