@@ -1,0 +1,100 @@
+using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Stratis.SmartContracts;
+using System.Collections.Generic;
+
+namespace Automarket.Tests {
+
+	[TestClass]
+	public class Test_AutoMarketTests {
+
+        private static readonly Address CoinbaseAddress = (Address)"Sj2p6ZRHdLvywyi43HYoE4bu2TF1nvavjR";
+        private static readonly Address ContractOwnerAddress = (Address)"STpNXhJY6yrX4oh5LUeFbcBGxGCVxfV1ac";
+        private static readonly Address ContractAddress = (Address)"SkNHV22dsvWdVb6Mi8uSGRbA8q9YSpezbw";
+
+        private const ulong ContractDeployBlockNumber = 1;
+        private const ulong Duration = 20u;
+        private const ulong GasLimit = 10000;
+
+        private Dictionary<Address, ulong> BlockchainBalances;
+
+        private IList<Address> SampleAddresses = new List<Address> {
+            new Address("SeMvVcDKTLBrxVua5GXmdF8qBYTbJZt4NJ"),
+            new Address("Sipqve53hyjzTo2oU7PUozpT1XcmATnkTn"),
+            new Address("SXTtiQq2S4LrjWj2QMnpFfRJuzHGkfxuCE"),
+            new Address("STCutNQ1haZT472aYnuBYcqbyH7QiDMNox"),
+            new Address("ScBovGKDLrSyjRqJVGjXWLrdpTufWKFzne")
+        };
+
+        private TestSmartContractState SmartContractState;
+		[TestInitialize]
+	    public void Initialize()
+	    {
+            BlockchainBalances = new Dictionary<Address, ulong>();
+            var block = new TestBlock
+            {
+                Coinbase = CoinbaseAddress,
+                Number = ContractDeployBlockNumber
+            };
+            var message = new TestMessage
+            {
+                ContractAddress = ContractAddress,
+                GasLimit = (Gas)GasLimit,
+                Sender = ContractOwnerAddress,
+                Value = 0u
+            };
+            var getContractBalance = new Func<ulong>(() => BlockchainBalances[ContractAddress]);
+            var persistentState = new TestPersistentState();
+
+            var internalTransactionExecutor = new TestInternalTransactionExecutor(BlockchainBalances, ContractAddress, SampleAddresses);
+            var gasMeter = new TestGasMeter((Gas)GasLimit);
+            var hashHelper = new TestInternalHashHelper();
+
+            this.SmartContractState = new TestSmartContractState(
+                block,
+                message,
+                persistentState,
+                gasMeter,
+                internalTransactionExecutor,
+                getContractBalance,
+                hashHelper
+            );
+        }
+	    
+		[TestMethod]
+		public void TestCrearVehiculo (){
+			AutoMarket smartContract = new AutoMarket(SmartContractState);
+			
+			smartContract.CrearVehiculo( "Test", "Test", "Test", (Address)"0x0fC8Fff9aA5077B938A8FEfFF76bA39A3F5f4f70", 2650, 2650);
+			
+			Assert.IsTrue(true);
+		}
+        [TestMethod]
+        public void TestConsultarVehiculo()
+        {
+            AutoMarket smartContract = new AutoMarket(SmartContractState);
+
+            smartContract.ConsultarVehiculo((Address)"0x0fC8Fff9aA5077B938A8FEfFF76bA39A3F5f4f70");
+
+            Assert.IsTrue(true);
+        }
+        [TestMethod]
+        public void TestCalcularCostos()
+        {
+            AutoMarket smartContract = new AutoMarket(SmartContractState);
+
+            smartContract.CalcularCostos(2650, 2650, 2650, 2650);
+
+            Assert.IsTrue(true);
+        }
+        [TestMethod]
+        public void TestActualizarVehiculo()
+        {
+            AutoMarket smartContract = new AutoMarket(SmartContractState);
+
+            smartContract.ActualizarVehiculo((Address)"0x0fC8Fff9aA5077B938A8FEfFF76bA39A3F5f4f70", 2650, 2650);
+
+            Assert.IsTrue(true);
+        }
+    }
+}

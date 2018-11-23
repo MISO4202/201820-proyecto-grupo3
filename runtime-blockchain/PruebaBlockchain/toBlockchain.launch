@@ -7,7 +7,6 @@
 <intAttribute key="generateTo" value="1"/>
 <listAttribute key="models">
 <listEntry value="#Thu Nov 22 17:14:51 COT 2018&#13;&#10;isMetamodelFileBased=false&#13;&#10;name=AutoMarket&#13;&#10;readOnLoad=true&#13;&#10;storeOnDisposal=false&#13;&#10;aliases=AutoMarket&#13;&#10;cached=true&#13;&#10;fileBasedMetamodelUri=&#13;&#10;metamodelUri=http\://www.example.org/blockchain&#13;&#10;modelUri=platform\:/resource/PruebaBlockchain/Models/AutoMarket.blockchain&#13;&#10;reuseUnmodifiedFileBasedMetamodels=true&#13;&#10;type=EMF&#13;&#10;modelFile=/PruebaBlockchain/Models/AutoMarket.blockchain&#13;&#10;expand=true&#13;&#10;metamodelFile="/>
-<listEntry value="#Thu Nov 22 17:19:34 COT 2018&#13;&#10;isMetamodelFileBased=false&#13;&#10;name=perrera&#13;&#10;readOnLoad=true&#13;&#10;storeOnDisposal=false&#13;&#10;aliases=perrera&#13;&#10;cached=true&#13;&#10;fileBasedMetamodelUri=&#13;&#10;metamodelUri=http\://www.example.org/blockchain&#13;&#10;modelUri=platform\:/resource/PruebaBlockchain/Models/perrera.blockchain&#13;&#10;reuseUnmodifiedFileBasedMetamodels=true&#13;&#10;type=EMF&#13;&#10;modelFile=/PruebaBlockchain/Models/perrera.blockchain&#13;&#10;expand=true&#13;&#10;metamodelFile="/>
 </listAttribute>
 <stringAttribute key="outputDirPath" value=""/>
 <stringAttribute key="outputFilePath" value=""/>

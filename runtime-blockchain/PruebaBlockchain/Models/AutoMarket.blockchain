@@ -13,15 +13,9 @@ Aplicacion Automarket{
 		Estado MapaVehiculos Vehiculos
 		Estado MapaVehiculos VehiculosCaros
 		Estado MapaVehiculos VehiculosBaratos
-		Estado string Coste
-		Operacion isUd=false ConsultarVehiculo (address Placa) : string { 			
-			return {ExpRel ExpArit ExpRef {Vehiculos} GET ExpRef {Placa} . ExpRef{"Vehiculo.Marca"} }	 
-		}
-		Operacion isUd=false CalcularCostos (int PrecioVehiculo,int ImpuestoVehiculo, int ValorTraspaso, int ComisionRunt) : int {
-			return {ExpArit (ExpArit (ExpArit (ExpRef{PrecioVehiculo} + (ExpArit (ExpRef{PrecioVehiculo} * ExpRef{ImpuestoVehiculo}))
-				+ ExpRef{ValorTraspaso}) + ExpRef{ComisionRunt})}
-				
-		}
+		Estado string Prueba
+		
+		
 		Operacion isUd=false CrearVehiculo (string Marca, string Modelo, string Linea, address Placa, int Cilindraje, int Precio){
 			var Vehiculo vehiculo
 			ExpArit (ExpRel ExpRef{vehiculo}.ExpRef{"Vehiculo.Marca"} = ExpRef {Marca})
@@ -40,6 +34,15 @@ Aplicacion Automarket{
 				ExpArit (ExpArit ExpRef {VehiculosBaratos} GET ExpRef {Placa}) = ExpRef {vehiculo}
 			}
 		}
+		Operacion isUd=false ConsultarVehiculo (address Placa) : string { 			
+			return {ExpRel ExpArit ExpRef {Vehiculos} GET ExpRef {Placa} . ExpRef{"Vehiculo.Marca"} }	 
+		}
+		Operacion isUd=false CalcularCostos (int PrecioVehiculo,int ImpuestoVehiculo, int ValorTraspaso, int ComisionRunt) : int {
+			return {ExpArit (ExpArit (ExpArit (ExpRef{PrecioVehiculo} + (ExpArit (ExpRef{PrecioVehiculo} * ExpRef{ImpuestoVehiculo}))
+				+ ExpRef{ValorTraspaso}) + ExpRef{ComisionRunt})}
+				
+		}
+		
 		Operacion isUd=false ActualizarVehiculo (address Placa, int Cilindraje, int Precio){
 			var Vehiculo vehiculo
 			ExpArit (ExpRel ExpRef{vehiculo}.ExpRef{"Vehiculo.Cilindraje"} = ExpRef {Cilindraje})

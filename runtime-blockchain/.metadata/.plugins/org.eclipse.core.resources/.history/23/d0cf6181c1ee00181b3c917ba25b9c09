@@ -1,0 +1,45 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Stratis.SmartContracts;
+using System;
+using System.Collections.Generic;
+
+namespace Test[%=app%] {
+
+[%for (smc in SmartContract.all) { %]
+	[TestClass]
+	public class Test[%=smc.name%] {
+	
+		[TestInitialize]
+	    public void Initialize()
+	    {
+	    }
+	    
+		[%for (ope in smc.operaciones) { %]
+		[TestMethod]
+		public void Test[%=ope.name%] (){
+			[%=smc.name%] smartContract = new [%=smc.name%]();
+			
+			smartContract.[%=ope.name%]([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %] default([%=par.tipodato.name%])[%i++;%][%if(i<>cantpar){%],[%}%][%}%]);
+			smartContract.[%=ope.name%]([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %] [%=getTestData(par)%] [%i++;%][%if(i<>cantpar){%],[%}%][%}%]);
+			
+			Assert.IsTrue(true);
+		}
+		[%}%]
+	[%}%]
+	}
+}
+[%
+operation getTestData (parametro:Parametro) : String {
+	var result = "";
+	if(parametro.tipodato.name=='int'){
+		result = "0";
+	}else if(parametro.tipodato.name=='string'){
+		result = "\"Test\"";
+ 	}else if(parametro.tipodato.name=='bool'){
+		result = "False";
+ 	}else{
+ 		result = "new "+parametro.tipodato+"()";
+ 	}
+ 	return result;
+}
+%]

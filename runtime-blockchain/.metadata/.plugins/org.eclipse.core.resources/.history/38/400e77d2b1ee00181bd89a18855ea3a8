@@ -1,0 +1,53 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Stratis.SmartContracts;
+using System;
+using System.Collections.Generic;
+
+namespace TestAutomarket {
+
+	[TestClass]
+	public class TestAutoMarket {
+	
+		[TestInitialize]
+	    public void Initialize()
+	    {
+	    }
+	    
+		[TestMethod]
+		public void TestConsultarVehiculo (){
+			AutoMarket smartContract = new AutoMarket();
+			
+			smartContract.ConsultarVehiculo( default(address));
+			smartContract.ConsultarVehiculo( new blockchain.impl.PrimitivoImpl@f67aa1 (name: address) (tipo: address)());
+			
+			Assert.IsTrue(true);
+		}
+		[TestMethod]
+		public void TestCalcularCostos (){
+			AutoMarket smartContract = new AutoMarket();
+			
+			smartContract.CalcularCostos( default(int), default(int), default(int), default(int));
+			smartContract.CalcularCostos( 0, 0, 0, 0);
+			
+			Assert.IsTrue(true);
+		}
+		[TestMethod]
+		public void TestCrearVehiculo (){
+			AutoMarket smartContract = new AutoMarket();
+			
+			smartContract.CrearVehiculo( default(string), default(string), default(string), default(address), default(int), default(int));
+			smartContract.CrearVehiculo( "Test", "Test", "Test", new blockchain.impl.PrimitivoImpl@f67aa1 (name: address) (tipo: address)(), 0, 0);
+			
+			Assert.IsTrue(true);
+		}
+		[TestMethod]
+		public void TestActualizarVehiculo (){
+			AutoMarket smartContract = new AutoMarket();
+			
+			smartContract.ActualizarVehiculo( default(address), default(int), default(int));
+			smartContract.ActualizarVehiculo( new blockchain.impl.PrimitivoImpl@f67aa1 (name: address) (tipo: address)(), 0, 0);
+			
+			Assert.IsTrue(true);
+		}
+	}
+}

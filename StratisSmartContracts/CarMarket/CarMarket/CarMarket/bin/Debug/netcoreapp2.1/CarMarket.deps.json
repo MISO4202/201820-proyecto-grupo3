@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "7fb278bae6b696986d9c445eefbb99ad4110ed4a"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "CarMarket/1.0.0": {
+        "dependencies": {
+          "Stratis.SmartContracts": "0.4.0-alpha"
+        },
+        "runtime": {
+          "CarMarket.dll": {}
+        }
+      },
+      "Stratis.SmartContracts/0.4.0-alpha": {
+        "runtime": {
+          "lib/netcoreapp2.1/Stratis.SmartContracts.dll": {
+            "assemblyVersion": "0.4.0.0",
+            "fileVersion": "0.4.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CarMarket/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Stratis.SmartContracts/0.4.0-alpha": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-v9fjGE8sLR1xWpXsixSOXG3yjxgUBE6BMVgHfBdt5YxAgiuVC953ck41nofJRMf8GINxeeE5bCiD/P+gi4rp+A==",
+      "path": "stratis.smartcontracts/0.4.0-alpha",
+      "hashPath": "stratis.smartcontracts.0.4.0-alpha.nupkg.sha512"
+    }
+  }
+}

@@ -7,6 +7,17 @@ using System;
 for (smc in SmartContract.all) { %]
 public class [%=smc.name%] : SmartContract 
 {
+	public Address Owner
+    {
+        get
+        {
+            return PersistentState.GetAddress("Owner");
+        }
+        private set
+        {
+            PersistentState.SetAddress("Owner", value);
+        }
+    }
  	[%for (ent in smc.entidades) { %]
 	public struct [%=ent.name%] {
 	[%for (attr in ent.atributos) { %]
@@ -16,7 +27,7 @@ public class [%=smc.name%] : SmartContract
 	public [%=smc.name%] (ISmartContractState smartContractState)
     : base(smartContractState)
     {
-        
+       Owner = Message.Sender; 
     }
 	[%for (est in smc.estado) { %]
 	

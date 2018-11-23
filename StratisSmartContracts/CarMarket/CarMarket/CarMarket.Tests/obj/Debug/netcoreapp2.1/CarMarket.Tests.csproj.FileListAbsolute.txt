@@ -1,0 +1,17 @@
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket.Tests\bin\Debug\netcoreapp2.1\CarMarket.Tests.deps.json
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket.Tests\bin\Debug\netcoreapp2.1\CarMarket.Tests.runtimeconfig.json
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket.Tests\bin\Debug\netcoreapp2.1\CarMarket.Tests.runtimeconfig.dev.json
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket.Tests\bin\Debug\netcoreapp2.1\CarMarket.Tests.dll
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket.Tests\bin\Debug\netcoreapp2.1\CarMarket.Tests.pdb
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket.Tests\bin\Debug\netcoreapp2.1\CarMarket.dll
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket.Tests\bin\Debug\netcoreapp2.1\CarMarket.pdb
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket.Tests\obj\Debug\netcoreapp2.1\CarMarket.Tests.csprojAssemblyReference.cache
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket.Tests\obj\Debug\netcoreapp2.1\CarMarket.Tests.csproj.CoreCompileInputs.cache
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket.Tests\obj\Debug\netcoreapp2.1\CarMarket.Tests.AssemblyInfoInputs.cache
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket.Tests\obj\Debug\netcoreapp2.1\CarMarket.Tests.AssemblyInfo.cs
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket.Tests\obj\Debug\netcoreapp2.1\CarMarket.Tests.csproj.CopyComplete
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket.Tests\obj\Debug\netcoreapp2.1\CarMarket.Tests.dll
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket.Tests\obj\Debug\netcoreapp2.1\CarMarket.Tests.pdb

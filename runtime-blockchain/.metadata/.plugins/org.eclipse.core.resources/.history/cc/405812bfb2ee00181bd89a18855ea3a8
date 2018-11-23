@@ -1,0 +1,44 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Stratis.SmartContracts;
+using System;
+using System.Collections.Generic;
+
+namespace TestInventarioPerros {
+
+	[TestClass]
+	public class TestPerrera {
+	
+		[TestInitialize]
+	    public void Initialize()
+	    {
+	    }
+	    
+		[TestMethod]
+		public void TestConsultarPerro (){
+			Perrera smartContract = new Perrera();
+			
+			smartContract.ConsultarPerro( default(address));
+			smartContract.ConsultarPerro( new Primitivo [name=address, tipo=address]());
+			
+			Assert.IsTrue(true);
+		}
+		[TestMethod]
+		public void TestCrearPerro (){
+			Perrera smartContract = new Perrera();
+			
+			smartContract.CrearPerro( default(string), default(address), default(int), default(int));
+			smartContract.CrearPerro( "Test", new Primitivo [name=address, tipo=address](), 0, 0);
+			
+			Assert.IsTrue(true);
+		}
+		[TestMethod]
+		public void TestActualizarPerro (){
+			Perrera smartContract = new Perrera();
+			
+			smartContract.ActualizarPerro( default(address), default(int), default(int));
+			smartContract.ActualizarPerro( new Primitivo [name=address, tipo=address](), 0, 0);
+			
+			Assert.IsTrue(true);
+		}
+	}
+}

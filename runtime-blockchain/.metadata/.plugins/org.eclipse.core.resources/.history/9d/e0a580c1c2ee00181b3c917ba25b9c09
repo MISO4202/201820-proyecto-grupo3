@@ -1,0 +1,50 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Stratis.SmartContracts;
+using System;
+using System.Collections.Generic;
+
+namespace [%=app%].Tests {
+
+[%for (smc in SmartContract.all) { %]
+	[TestClass]
+	public class [%=smc.name%]Tests {
+		private static readonly Address direccionContrato = (Address) "0x0fC8Fff9aA5077B938A8FEfFF76bA39A3F5f4f70";
+		
+		[TestInitialize]
+	    public void Initialize()
+	    {
+	    }
+	    
+		[%for (ope in smc.operaciones) { %]
+		[TestMethod]
+		public void Test[%=ope.name%] (){
+			[%=smc.name%] smartContract = new [%=smc.name%]();
+			
+			smartContract.[%=ope.name%]([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %] default([%=par.tipodato.name%])[%i++;%][%if(i<>cantpar){%],[%}%][%}%]);
+			smartContract.[%=ope.name%]([%var i=0;var cantpar=ope.parametros.size();for (par in ope.parametros) { %] [%=getTestData(par)%] [%i++;%][%if(i<>cantpar){%],[%}%][%}%]);
+			
+			Assert.IsTrue(true);
+		}
+		[%}%]
+	[%}%]
+	}
+}
+[%
+operation getTestData (parametro:Parametro) : String {
+	var result = "";
+	if(parametro.tipodato.isTypeOf(Primitivo)){
+		if(parametro.tipodato.tipo.asString()=='address'){
+			result = "0x0fC8Fff9aA5077B938A8FEfFF76bA39A3F5f4f70";
+		}else if(parametro.tipodato.tipo.asString()=='String'){
+			result = "\"Test\"";
+ 		}else if(parametro.tipodato.tipo.asString()=='Boolean'){
+			result = "false";
+		}else if(parametro.tipodato.tipo.asString()=='int'){
+			result = "2650";
+		}
+ 	}else{
+ 		result = "";
+ 	}
+ 	return result;
+}
+%]

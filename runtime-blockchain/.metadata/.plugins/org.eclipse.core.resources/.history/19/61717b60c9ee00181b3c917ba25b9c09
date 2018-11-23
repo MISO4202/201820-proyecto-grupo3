@@ -1,0 +1,50 @@
+using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Stratis.SmartContracts;
+using System.Collections.Generic;
+
+namespace Automarket.Tests {
+
+	[TestClass]
+	public class test_AutoMarketTests {
+		
+		private TestSmartContractState SmartContractState;
+		[TestInitialize]
+	    public void Initialize()
+	    {
+	    }
+	    
+		[TestMethod]
+		public void TestCrearVehiculo (){
+			AutoMarket smartContract = new AutoMarket(SmartContractState);
+			
+			smartContract.CrearVehiculo( "Test", "Test", "Test", (Address)"0x0fC8Fff9aA5077B938A8FEfFF76bA39A3F5f4f70", 2650, 2650);
+			
+			Assert.IsTrue(true);
+		}
+		[TestMethod]
+		public void TestConsultarVehiculo (){
+			AutoMarket smartContract = new AutoMarket(SmartContractState);
+			
+			smartContract.ConsultarVehiculo( (Address)"0x0fC8Fff9aA5077B938A8FEfFF76bA39A3F5f4f70");
+			
+			Assert.IsTrue(true);
+		}
+		[TestMethod]
+		public void TestCalcularCostos (){
+			AutoMarket smartContract = new AutoMarket(SmartContractState);
+			
+			smartContract.CalcularCostos( 2650, 2650, 2650, 2650);
+			
+			Assert.IsTrue(true);
+		}
+		[TestMethod]
+		public void TestActualizarVehiculo (){
+			AutoMarket smartContract = new AutoMarket(SmartContractState);
+			
+			smartContract.ActualizarVehiculo( (Address)"0x0fC8Fff9aA5077B938A8FEfFF76bA39A3F5f4f70", 2650, 2650);
+			
+			Assert.IsTrue(true);
+		}
+	}
+}

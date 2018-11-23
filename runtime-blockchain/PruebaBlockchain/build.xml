@@ -2,7 +2,7 @@
 
 <project default="build">
 
-<property name="generado.location" location="${basedir}/Transformaciones/Generado"/>
+<property name="generado.location" location="${basedir}/Generado"/>
 
 <property name="transformaciones.location" location="${basedir}/Transformaciones"/>
 
@@ -16,9 +16,9 @@
 
 <target name="build">
 
-  <echo>Borrando el contenido de la carpeta generado</echo>
+<echo>Borrando el contenido de la carpeta generado</echo>
 
-   <delete dir="${generado.location}" failonerror="true" />
+<delete dir="${generado.location}" failonerror="true" />
 
 <antcall target="transM2TAutomarket"/>
 
@@ -32,7 +32,6 @@
 
 <epsilon.emf.loadModel name="AutoMarket" modelfile="${models.location}/AutoMarket.blockchain" metamodeluri="${blockchain.metamodel.uri}" read="true" store="false" />
 
-
 <epsilon.egl src="${transformaciones.location}/toBlockchain.egl">
 
   	<model ref="AutoMarket" />
@@ -43,16 +42,16 @@
 	
 <target name="transM2TPerrera">
 
-	<echo>Corriendo toBlockchain.EGL para Perrera</echo>
+<echo>Corriendo toBlockchain.EGL para Perrera</echo>
 
 
-	<epsilon.emf.loadModel name="perrera" modelfile="${models.location}/perrera.blockchain" metamodeluri="${blockchain.metamodel.uri}" read="true" store="false" />
+<epsilon.emf.loadModel name="perrera" modelfile="${models.location}/perrera.blockchain" metamodeluri="${blockchain.metamodel.uri}" read="true" store="false" />
 
-	<epsilon.egl src="${transformaciones.location}/toBlockchain.egl">
+<epsilon.egl src="${transformaciones.location}/Perrera.egl">
 
-		<model ref="perrera" />
+<model ref="perrera" />
 
-	  </epsilon.egl>
+</epsilon.egl>
 
 </target>
 	

@@ -14,7 +14,7 @@ Aplicacion InventarioPerros
     	Estado MapaPerros Perros
     	Estado MapaPerros PerrosJovenes
         Estado MapaPerros PerrosViejos
-        Operacion isUd=false ConsultarPerro (address Placa) : Perro
+        Operacion isUd=false ConsultarPerro (address Placa) : string
         {
         	return {ExpRel ExpArit ExpRef{Perros} GET ExpRef {Placa} . ExpRef{"Perro.Nombre"}} 
         }
@@ -47,5 +47,5 @@ Aplicacion InventarioPerros
     tipodato Integer int
     tipodato Boolean bool
     tipodato ADDRESS address
-    tipodato Map <string,string> : MapaPerros
+    tipodato Map <address,"Perrera.Perro"> : MapaPerros
 }

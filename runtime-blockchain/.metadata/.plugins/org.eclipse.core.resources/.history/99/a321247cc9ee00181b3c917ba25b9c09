@@ -1,0 +1,42 @@
+using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Stratis.SmartContracts;
+using System.Collections.Generic;
+
+namespace InventarioPerros.Tests {
+
+	[TestClass]
+	public class Test_PerreraTests {
+		
+		private TestSmartContractState SmartContractState;
+		[TestInitialize]
+	    public void Initialize()
+	    {
+	    }
+	    
+		[TestMethod]
+		public void TestConsultarPerro (){
+			Perrera smartContract = new Perrera(SmartContractState);
+			
+			smartContract.ConsultarPerro( (Address)"0x0fC8Fff9aA5077B938A8FEfFF76bA39A3F5f4f70");
+			
+			Assert.IsTrue(true);
+		}
+		[TestMethod]
+		public void TestCrearPerro (){
+			Perrera smartContract = new Perrera(SmartContractState);
+			
+			smartContract.CrearPerro( "Test", (Address)"0x0fC8Fff9aA5077B938A8FEfFF76bA39A3F5f4f70", 2650, 2650);
+			
+			Assert.IsTrue(true);
+		}
+		[TestMethod]
+		public void TestActualizarPerro (){
+			Perrera smartContract = new Perrera(SmartContractState);
+			
+			smartContract.ActualizarPerro( (Address)"0x0fC8Fff9aA5077B938A8FEfFF76bA39A3F5f4f70", 2650, 2650);
+			
+			Assert.IsTrue(true);
+		}
+	}
+}

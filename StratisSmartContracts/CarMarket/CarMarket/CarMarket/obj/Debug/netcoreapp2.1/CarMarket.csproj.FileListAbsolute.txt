@@ -1,0 +1,9 @@
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket\bin\Debug\netcoreapp2.1\CarMarket.deps.json
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket\bin\Debug\netcoreapp2.1\CarMarket.dll
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket\bin\Debug\netcoreapp2.1\CarMarket.pdb
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket\obj\Debug\netcoreapp2.1\CarMarket.csprojAssemblyReference.cache
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket\obj\Debug\netcoreapp2.1\CarMarket.csproj.CoreCompileInputs.cache
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket\obj\Debug\netcoreapp2.1\CarMarket.AssemblyInfoInputs.cache
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket\obj\Debug\netcoreapp2.1\CarMarket.AssemblyInfo.cs
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket\obj\Debug\netcoreapp2.1\CarMarket.dll
+C:\Users\ale_v\Desktop\Blockchain\201820-proyecto-grupo3\StratisSmartContracts\CarMarket\CarMarket\CarMarket\obj\Debug\netcoreapp2.1\CarMarket.pdb
