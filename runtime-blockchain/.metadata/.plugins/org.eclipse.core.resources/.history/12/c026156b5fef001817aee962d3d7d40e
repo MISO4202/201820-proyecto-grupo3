@@ -1,0 +1,42 @@
+pragma solidity ^0.4.0;
+import "remix_tests.sol";
+import "./Automarket.sol";
+
+
+contract TestAutoMarket {
+	function testOperacionUsuario (){
+		AutoMarket smartContract = new AutoMarket();
+		
+		smartContract.OperacionUsuario();
+		
+		Assert.ok(true,"true");
+	}
+	function testCrearVehiculo (){
+		AutoMarket smartContract = new AutoMarket();
+		
+		smartContract.CrearVehiculo( "Test", "Test", "Test", 0x0fC8Fff9aA5077B938A8FEfFF76bA39A3F5f4f70, 2650, 2650);
+		
+		Assert.ok(true,"true");
+	}
+	function testConsultarVehiculo (){
+		AutoMarket smartContract = new AutoMarket();
+		
+		smartContract.ConsultarVehiculo( 0x0fC8Fff9aA5077B938A8FEfFF76bA39A3F5f4f70);
+		
+		Assert.ok(true,"true");
+	}
+	function testCalcularCostos (){
+		AutoMarket smartContract = new AutoMarket();
+		
+		smartContract.CalcularCostos( 2650, 2650, 2650, 2650);
+		
+		Assert.ok(true,"true");
+	}
+	function testActualizarVehiculo (){
+		AutoMarket smartContract = new AutoMarket();
+		
+		smartContract.ActualizarVehiculo( 0x0fC8Fff9aA5077B938A8FEfFF76bA39A3F5f4f70, 2650, 2650);
+		
+		Assert.ok(true,"true");
+	}
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project default="build">
+
+<property name="generado.location" location="${basedir}/Generado"/>
+
+<property name="transformaciones.location" location="${basedir}/Transformaciones"/>
+
+<property name="models.location" location="${basedir}/Models"/>
+
+<property name="metamodels.location" location="${/uniandes.mdd.inventarios.metamodels}/metamodels"/>
+
+<property name="At.metamodel.location" location="${metamodels.location}/blockchain.ecore" />
+
+<property name="blockchain.metamodel.uri" value="http://www.example.org/blockchain" />
+
+<target name="build">
+
+<echo>Borrando el contenido de la carpeta generado</echo>
+
+<delete dir="${generado.location}" failonerror="true" />
+
+<antcall target="transM2TAutomarket"/>
+
+<antcall target="transM2TPerrera"/>
+
+</target>
+
+<target name="transM2TAutomarket">
+
+<echo>Corriendo toBlockchain.EGL para AutoMarket</echo>
+
+<epsilon.emf.loadModel name="AutoMarket" modelfile="${models.location}/AutoMarket.blockchain" metamodeluri="${blockchain.metamodel.uri}" read="true" store="false" />
+	
+<epsilon.egl src="${transformaciones.location}/toBlockchain.egl">
+
+<model ref="AutoMarket" />
+
+ </epsilon.egl>
+
+ </target>
+	
+<target name="transM2TPerrera">
+
+<echo>Corriendo toBlockchain.EGL para Perrera</echo>
+
+
+<epsilon.emf.loadModel name="perrera" modelfile="${models.location}/perrera.blockchain" metamodeluri="${blockchain.metamodel.uri}" read="true" store="false" />
+
+<epsilon.egl src="${transformaciones.location}/Perrera.egl">
+
+<model ref="perrera" />
+
+</epsilon.egl>
+
+</target>
+
+</project>

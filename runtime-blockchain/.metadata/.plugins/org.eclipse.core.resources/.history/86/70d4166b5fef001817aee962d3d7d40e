@@ -1,0 +1,47 @@
+pragma solidity ^0.4.0;
+
+
+contract Perrera {
+		struct Perro { 
+			string Raza; 
+			address Placa; 
+			string Nombre; 
+			int Edad; 
+			int Precio; 
+			bool Nuevo; 
+			string Comentarios;		
+		}
+		mapping (address => Perro) public Perros;
+		mapping (address => Perro) public PerrosJovenes;
+		mapping (address => Perro) public PerrosViejos;
+		string pruebaCambioCadena;
+		function OperacionUsuario () public {
+		}
+		function ConsultarPerro (address Placa) public returns(string){
+			return Perros[Placa].Nombre;	
+		}
+		function CrearPerro (string Raza,address Placa,int Edad,int Precio) public {
+			 Perro memory perro;
+			 perro.Raza = Raza ; 
+			 perro.Placa = Placa ; 
+			 perro.Edad = Edad ; 
+			 perro.Precio = Precio ; 
+			 perro.Nuevo = true ; 
+			 perro.Comentarios =  "SinComentarios" ; 
+			if((perro.Nuevo == true)){
+				 PerrosJovenes[Placa] = perro ;
+			}else{	
+				 PerrosViejos[Placa] = perro ;
+			}	 	
+			  Perros[Placa] = perro ; 
+		}
+		function ActualizarPerro (address Placa,int Edad,int Precio) public {
+			 Perro memory perro;
+			 perro = Perros[Placa] ; 
+			 perro.Edad = Edad ; 
+			 perro.Precio = Precio ; 
+			 perro.Nuevo = true ; 
+		}
+ 
+}
+

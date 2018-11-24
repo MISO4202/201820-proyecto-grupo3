@@ -1,0 +1,51 @@
+Aplicacion InventarioPerros
+{
+	 SmartContract Perrera
+    { 
+    	Entidad Perro {
+    		string Raza
+    		address Placa
+    		string Nombre
+    		int Edad
+    		int Precio
+    		bool Nuevo
+    		string Comentarios
+    	}
+    	Estado MapaPerros Perros
+    	Estado MapaPerros PerrosJovenes
+        Estado MapaPerros PerrosViejos
+        Operacion isUd=false ConsultarPerro (address Placa) : string
+        {
+        	return {ExpRel ExpArit ExpRef{Perros} GET ExpRef {Placa} . ExpRef{"Perro.Nombre"}} 
+        }
+        Operacion isUd=false CrearPerro(string Raza, address Placa, int Edad, int Precio)
+        {
+        	var Perro perro
+            ExpArit (ExpRel ExpRef{perro}.ExpRef{"Perro.Raza"} = ExpRef {Raza})
+			ExpArit (ExpRel ExpRef{perro}.ExpRef{"Perro.Placa"} = ExpRef {Placa})
+			ExpArit (ExpRel ExpRef{perro}.ExpRef{"Perro.Edad"} = ExpRef {Edad})
+			ExpArit (ExpRel ExpRef{perro}.ExpRef{"Perro.Precio"} = ExpRef {Precio})
+			ExpArit (ExpRel ExpRef{perro}.ExpRef{"Perro.Nuevo"} = ExpBool true)
+			ExpArit (ExpRel ExpRef{perro}.ExpRef{"Perro.Comentarios"} = ExpTex "SinComentarios")
+			if ExpLog ((ExpRel ExpRef{perro}. ExpRef {"Perro.Nuevo"} == ExpBool true))
+			{
+				ExpArit (ExpArit ExpRef {PerrosJovenes} GET ExpRef {Placa}) = ExpRef {perro}
+			}else{
+				ExpArit (ExpArit ExpRef {PerrosViejos} GET ExpRef {Placa}) = ExpRef {perro}
+			}
+			ExpArit (ExpArit ExpRef {Perros} PUT ExpRef {Placa}) = ExpRef {perro}
+        }
+        Operacion isUd=false ActualizarPerro(address Placa,int Edad, int Precio){
+        	var Perro perro
+        	ExpArit ExpRef{perro} = ExpArit ExpRef{Perros} GET ExpRef {Placa}
+        	ExpArit ExpRel ExpRef{perro}.ExpRef{"Perro.Edad"} = ExpRef{Edad}
+        	ExpArit ExpRel ExpRef{perro}.ExpRef{"Perro.Precio"} = ExpRef{Precio}
+        	ExpArit ExpRel ExpRef{perro}.ExpRef{"Perro.Nuevo"} = ExpBool false
+        }
+    }
+    tipodato String string
+    tipodato Integer int
+    tipodato Boolean bool
+    tipodato ADDRESS address
+    tipodato Map <address,"Perrera.Perro"> : MapaPerros
+}

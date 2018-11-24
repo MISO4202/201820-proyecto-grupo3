@@ -8,7 +8,7 @@
 
 <property name="models.location" location="${basedir}/Models"/>
 
-<property name="metamodels.location" location="${/uniandes.mdd.inventarios.metamodels}/metamodels"/>
+<property name="metamodels.location" location="${./uniandes.mdd.inventarios.metamodels}/metamodels"/>
 
 <property name="At.metamodel.location" location="${metamodels.location}/blockchain.ecore" />
 
@@ -29,32 +29,29 @@
 <target name="transM2TAutomarket">
 
 <echo>Corriendo toBlockchain.EGL para AutoMarket</echo>
-
+	
 <epsilon.emf.loadModel name="AutoMarket" modelfile="${models.location}/AutoMarket.blockchain" metamodeluri="${blockchain.metamodel.uri}" read="true" store="false" />
-
+	
 <epsilon.egl src="${transformaciones.location}/toBlockchain.egl">
 
-  	<model ref="AutoMarket" />
+<model ref="AutoMarket" />
 
-  </epsilon.egl>
+ </epsilon.egl>
 
-  </target>
+ </target>
 	
 <target name="transM2TPerrera">
 
 <echo>Corriendo toBlockchain.EGL para Perrera</echo>
-
-
+	
 <epsilon.emf.loadModel name="perrera" modelfile="${models.location}/perrera.blockchain" metamodeluri="${blockchain.metamodel.uri}" read="true" store="false" />
 
-<epsilon.egl src="${transformaciones.location}/Perrera.egl">
+<epsilon.egl src="${transformaciones.location}/toBlockchain.egl">
 
 <model ref="perrera" />
 
 </epsilon.egl>
 
 </target>
-	
-<eclipse.refreshLocal resource="${basedir}" depth="-1" />
 
 </project>

@@ -14,6 +14,8 @@ Aplicacion InventarioPerros
     	Estado MapaPerros Perros
     	Estado MapaPerros PerrosJovenes
         Estado MapaPerros PerrosViejos
+       
+		
         Operacion isUd=false ConsultarPerro (address Placa) : string
         {
         	return {ExpRel ExpArit ExpRef{Perros} GET ExpRef {Placa} . ExpRef{"Perro.Nombre"}} 
